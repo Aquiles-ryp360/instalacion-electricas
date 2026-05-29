@@ -19,9 +19,19 @@ instalacion-electricas/
 │     ├─ rne-em010.md
 │     └─ plantilla-ficha-norma.md
 ├─ proyecto-casa/
+│  ├─ 00-guia-edicion/
+│  ├─ 01-memoria-descriptiva/
+│  ├─ 02-calculos-justificativos/
+│  ├─ 03-especificaciones-tecnicas/
+│  ├─ 04-montaje/
+│  ├─ 05-cronograma/
+│  ├─ 06-metrados/
+│  ├─ 07-planos/
 │  ├─ datos-vivienda.md
 │  ├─ cargas-electricas.md
 │  └─ evidencias/
+├─ herramientas/
+│  └─ calculadora-instalacion-casa.html
 ├─ materiales/
 │  ├─ normas/
 │  ├─ proyecto-guia-red-primaria/
@@ -38,6 +48,14 @@ instalacion-electricas/
 3. Llevar los requisitos aplicables a `normativas/matriz-cumplimiento.md`.
 4. Recién despues completar los datos de la casa, cargas electricas y evidencias.
 5. Usar `materiales/proyecto-guia-red-primaria/` solo como referencia de formato, porque corresponde a una red primaria y no a una instalacion interior domiciliaria.
+
+## Proyecto domiciliario editable
+
+El proyecto listo para completar esta en `proyecto-casa/`.
+
+- Guia de edicion: `proyecto-casa/00-guia-edicion/README.md`.
+- Entregable maestro: `proyecto-casa/proyecto-domiciliario-completo.md`.
+- Calculadora de cargas: abrir `herramientas/calculadora-instalacion-casa.html` en el navegador.
 
 ## Normas base para revisar
 
