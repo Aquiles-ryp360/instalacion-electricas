@@ -22,6 +22,11 @@ instalacion-electricas/
 │  ├─ datos-vivienda.md
 │  ├─ cargas-electricas.md
 │  └─ evidencias/
+├─ materiales/
+│  ├─ normas/
+│  ├─ proyecto-guia-red-primaria/
+│  ├─ fotos-clase/
+│  └─ otros-referencia/
 └─ entregables/
    └─ primera-unidad.md
 ```
@@ -32,10 +37,10 @@ instalacion-electricas/
 2. Resumir cada norma usando la plantilla de `normativas/fichas/plantilla-ficha-norma.md`.
 3. Llevar los requisitos aplicables a `normativas/matriz-cumplimiento.md`.
 4. Recién despues completar los datos de la casa, cargas electricas y evidencias.
+5. Usar `materiales/proyecto-guia-red-primaria/` solo como referencia de formato, porque corresponde a una red primaria y no a una instalacion interior domiciliaria.
 
 ## Normas base para revisar
 
 - Codigo Nacional de Electricidad - Utilizacion.
 - Reglamento Nacional de Edificaciones, Norma EM.010 Instalaciones Electricas Interiores.
 - Normas tecnicas peruanas aplicables a materiales, canalizaciones, puesta a tierra, tableros, conductores y tomacorrientes, si el docente las solicita.
-
