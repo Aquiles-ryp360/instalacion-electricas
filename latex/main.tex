@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\headheight}{15pt}
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+\sisetup{output-decimal-marker={.}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Instalaciones Electricas I}
+\rhead{Proyecto domiciliario}
+\cfoot{\thepage}
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\centering}
+  {CAPITULO \Roman{chapter}}
+  {0.5em}
+  {\Large}
+
+\newcommand{\editar}[1]{\textcolor{red}{\textbf{EDITAR AQUI:} #1}}
+\newcommand{\rutaPlanos}{planos/}
+
+\begin{document}
+
+\input{capitulos/00-portada}
+
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\listoffigures
+\clearpage
+
+\pagenumbering{arabic}
+\input{capitulos/01-memoria-descriptiva}
+\input{capitulos/02-calculos-justificativos}
+\input{capitulos/03-especificaciones-materiales}
+\input{capitulos/04-especificaciones-montaje}
+\input{capitulos/05-cronograma}
+\input{capitulos/06-metrado}
+\input{capitulos/07-planos}
+\input{capitulos/08-anexos}
+
+\end{document}

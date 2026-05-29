@@ -1,0 +1,14 @@
+# LaTeX auxiliary files
+latex/build/*.aux
+latex/build/*.log
+latex/build/*.out
+latex/build/*.toc
+latex/build/*.lot
+latex/build/*.lof
+latex/build/*.fls
+latex/build/*.fdb_latexmk
+latex/build/*.synctex.gz
+
+# Keep compiled PDF
+!latex/build/main.pdf
+

@@ -1,0 +1,264 @@
+\chapter{CALCULOS JUSTIFICATIVOS}
+
+\section{Normas aplicables}
+
+Para definir los criterios y premisas de diseno se consideran:
+
+\begin{itemize}
+  \item Codigo Nacional de Electricidad -- Utilizacion.
+  \item RNE EM.010 Instalaciones Electricas Interiores.
+  \item Criterios del curso de Instalaciones Electricas I.
+  \item Requisitos de la empresa distribuidora, si se incluye acometida o medidor.
+\end{itemize}
+
+\textbf{Pendiente:} \editar{completar numerales exactos cuando el grupo revise las normas.}
+
+\section{Caracteristicas electricas del sistema}
+
+\begin{table}[H]
+\centering
+\caption{Caracteristicas electricas adoptadas}
+\label{tab:caracteristicas-electricas}
+\begin{tabular}{p{7cm}p{5cm}}
+\toprule
+\textbf{Parametro} & \textbf{Valor preliminar} \\
+\midrule
+Tension nominal & 220 V \\
+Frecuencia & 60 Hz \\
+Sistema & Monofasico \\
+Factor de potencia adoptado & 0.90 \\
+Tipo de instalacion & Interior domiciliaria \\
+Material de conductor & Cobre \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Levantamiento de cargas}
+
+El levantamiento se realiza por ambiente. Para cada carga se registra cantidad, potencia unitaria y circuito asignado.
+
+\begin{equation}
+P_\text{total por carga}=N \times P_\text{unitaria}
+\end{equation}
+
+\begin{equation}
+P_\text{instalada total}=\sum P_\text{cargas}
+\end{equation}
+
+{\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{c p{2cm} p{2.6cm} p{2.3cm} c r r p{1.3cm}}
+\caption{Levantamiento de cargas por ambiente}\label{tab:levantamiento-cargas}\\
+\toprule
+\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} \\
+\midrule
+\endhead
+1 & Sala & Luminaria LED & Alumbrado & \editar{} & \editar{} & \editar{} & C1 \\
+2 & Sala & Tomacorriente doble & Tomacorrientes & \editar{} & \editar{} & \editar{} & C2 \\
+3 & Cocina & Tomacorrientes cocina & Cocina/lavanderia & \editar{} & \editar{} & \editar{} & C3 \\
+4 & Dormitorio 1 & Luminaria LED & Alumbrado & \editar{} & \editar{} & \editar{} & C1 \\
+5 & Dormitorio 1 & Tomacorriente doble & Tomacorrientes & \editar{} & \editar{} & \editar{} & C2 \\
+6 & Bano & Luminaria & Alumbrado & \editar{} & \editar{} & \editar{} & C1 \\
+7 & Lavanderia & Lavadora & Cocina/lavanderia & \editar{} & \editar{} & \editar{} & C4 \\
+8 & \editar{Ambiente} & Carga especial & Especial & \editar{} & \editar{} & \editar{} & C5 \\
+\bottomrule
+\end{longtable}
+}
+
+\section{Maxima demanda}
+
+Para el mini proyecto se puede estimar la demanda con un factor de demanda o simultaneidad definido por el docente.
+
+\begin{equation}
+MD=P_\text{instalada}\times f_d
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{Factores de demanda preliminares}
+\label{tab:factores-demanda}
+\begin{tabular}{p{7cm}c}
+\toprule
+\textbf{Tipo de carga} & \textbf{Factor preliminar} \\
+\midrule
+Alumbrado & 1.00 \\
+Tomacorrientes generales & 0.70 \\
+Cocina/lavanderia & 0.80 \\
+Cargas especiales & 1.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Nota:} \editar{reemplazar estos factores si el docente entrega una tabla especifica.}
+
+\section{Corriente de diseno}
+
+Para sistema monofasico:
+
+\begin{equation}
+I=\frac{P}{V \times fp}
+\end{equation}
+
+Donde:
+
+\begin{itemize}
+  \item $I$: corriente en amperios.
+  \item $P$: potencia demandada en watts.
+  \item $V$: tension en volts.
+  \item $fp$: factor de potencia.
+\end{itemize}
+
+\section{Seleccion de circuitos}
+
+\begin{table}[H]
+\centering
+\caption{Separacion preliminar de circuitos}
+\label{tab:circuitos}
+\begin{tabularx}{\textwidth}{p{2cm}p{5cm}X}
+\toprule
+\textbf{Circuito} & \textbf{Uso} & \textbf{Criterio} \\
+\midrule
+C1 & Alumbrado & Separar luminarias de tomacorrientes. \\
+C2 & Tomacorrientes generales & Dormitorios, sala, comedor y circulacion. \\
+C3 & Cocina & Tomacorrientes de mayor uso o cargas de cocina. \\
+C4 & Lavanderia & Lavadora, plancha u otras cargas. \\
+C5 & Carga especial & Ducha electrica, terma, horno, bomba u otra carga definida. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Seleccion de conductor}
+
+La seleccion final debe verificarse con tablas del CNE-U segun tipo de conductor, aislamiento, canalizacion, temperatura y agrupamiento.
+
+\begin{table}[H]
+\centering
+\caption{Seleccion preliminar de conductores}
+\label{tab:conductores}
+\begin{tabular}{r p{5cm} p{5cm}}
+\toprule
+\textbf{Corriente de diseno} & \textbf{Conductor cobre sugerido} & \textbf{Uso tipico} \\
+\midrule
+Hasta 10 A & 1.5 mm2 & Alumbrado \\
+Hasta 16 A & 2.5 mm2 & Tomacorrientes generales \\
+Hasta 25 A & 4 mm2 & Cargas medianas \\
+Hasta 32 A & 6 mm2 & Cargas especiales \\
+Hasta 40 A & 10 mm2 & Alimentador o carga mayor \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Pendiente:} \editar{ajustar segun tabla normativa revisada y criterio del docente.}
+
+\section{Seleccion de interruptor termomagnetico}
+
+El criterio general de coordinacion entre carga, proteccion y conductor es:
+
+\begin{equation}
+I_b \leq I_n \leq I_z
+\end{equation}
+
+Donde:
+
+\begin{itemize}
+  \item $I_b$: corriente de diseno del circuito.
+  \item $I_n$: corriente nominal del interruptor.
+  \item $I_z$: capacidad admisible del conductor.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Protecciones preliminares}
+\label{tab:protecciones}
+\begin{tabular}{p{6cm}p{6cm}}
+\toprule
+\textbf{Circuito} & \textbf{Proteccion preliminar} \\
+\midrule
+Alumbrado & 10 A \\
+Tomacorrientes generales & 16 A o 20 A segun carga y conductor \\
+Cocina/lavanderia & 20 A o 25 A segun carga y conductor \\
+Carga especial & Segun placa del equipo \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Verificacion de caida de tension}
+
+Formula simplificada monofasica:
+
+\begin{equation}
+\Delta V=\frac{2 \times L \times I \times \rho}{S}
+\end{equation}
+
+\begin{equation}
+\%\Delta V=\frac{\Delta V}{V}\times 100
+\end{equation}
+
+Donde:
+
+\begin{itemize}
+  \item $L$: longitud del circuito en metros.
+  \item $I$: corriente en amperios.
+  \item $\rho$: resistividad del cobre, valor referencial 0.0175 ohm mm2/m.
+  \item $S$: seccion del conductor en mm2.
+  \item $V$: tension del sistema.
+\end{itemize}
+
+\textbf{Pendiente:} \editar{verificar limite permitido con CNE-U o criterio del docente.}
+
+\section{Puesta a tierra}
+
+Elementos minimos a definir:
+
+\begin{itemize}
+  \item Electrodo o varilla de puesta a tierra.
+  \item Conductor de puesta a tierra.
+  \item Barra de tierra en tablero.
+  \item Conexion de conductor de proteccion a tomacorrientes con tierra.
+  \item Medicion o valor objetivo de resistencia de puesta a tierra, si el curso lo exige.
+\end{itemize}
+
+\section{Cuadro resumen de calculos}
+
+{\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{p{1.2cm}p{2.2cm}r r r r p{1.8cm}r p{1.7cm}}
+\caption{Resumen de calculos por circuito}\label{tab:resumen-calculos}\\
+\toprule
+\textbf{Circuito} & \textbf{Uso} & \textbf{Pot. W} & \textbf{Factor} & \textbf{Dem. W} & \textbf{I A} & \textbf{Conductor} & \textbf{Caida \%} & \textbf{Proteccion} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Circuito} & \textbf{Uso} & \textbf{Pot. W} & \textbf{Factor} & \textbf{Dem. W} & \textbf{I A} & \textbf{Conductor} & \textbf{Caida \%} & \textbf{Proteccion} \\
+\midrule
+\endhead
+C1 & Alumbrado & \editar{} & 1.00 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
+C2 & Tomacorrientes & \editar{} & 0.70 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
+C3 & Cocina & \editar{} & 0.80 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
+C4 & Lavanderia & \editar{} & 0.80 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
+C5 & Especial & \editar{} & 1.00 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
+\bottomrule
+\end{longtable}
+}
+
+\section{Resultado general}
+
+\begin{table}[H]
+\centering
+\caption{Resultado general de demanda}
+\label{tab:resultado-general}
+\begin{tabular}{p{8cm}p{4cm}}
+\toprule
+\textbf{Concepto} & \textbf{Valor} \\
+\midrule
+Potencia instalada total & \editar{W} \\
+Maxima demanda total & \editar{W} \\
+Maxima demanda total & \editar{kW} \\
+Corriente total estimada & \editar{A} \\
+\bottomrule
+\end{tabular}
+\end{table}
