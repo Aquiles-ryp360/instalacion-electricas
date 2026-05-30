@@ -1,69 +1,42 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-
-% Ajustamos los márgenes. El margen izquierdo es más grande (ej. 6cm) 
-% para dejar espacio al diseño amarillo de tu PDF de fondo.
-\usepackage[left=6cm, right=2.5cm, top=3cm, bottom=3cm]{geometry} 
-
-\usepackage{graphicx}
-\usepackage{eso-pic} % Paquete fundamental para poner la imagen de fondo
-\usepackage{array}
-
-% Usamos una fuente sin serifas (Arial/Helvetica) para un look más moderno y similar a la foto
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-
-\begin{document}
-
-\begin{titlepage}
-% --- INSERCIÓN DEL FONDO ---
-% Cambia "fondo.pdf" por el nombre exacto de tu archivo subido
-\AddToShipoutPictureBG*{%
-  \AtPageLowerLeft{%
-    \includegraphics[width=\paperwidth,height=\paperheight]{FONDO DE MI PROYECTO.pdf}%
+\newcommand{\PortadaFondo}{%
+\IfFileExists{capitulos/FONDO DE MI PROYECTO.pdf}{%
+  \AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+      \includegraphics[width=\paperwidth,height=\paperheight]{capitulos/FONDO DE MI PROYECTO.pdf}%
+    }%
   }%
+}{}%
 }
 
+\PortadaFondo
+
+\begin{titlepage}
 \centering
 
-% --- ENCABEZADOS (Equivalente al Título Superior de la imagen) ---
-{\Large \textbf{UNIVERSIDAD NACIONAL DEL ALTIPLANO}}\\[0.4cm]
-{\large \textbf{FACULTAD DE INGENIERIA MECANICA ELECTRICA,}}\\[0.1cm]
-{\large \textbf{ELECTRONICA Y SISTEMAS}}\\[0.4cm]
-{\large \textbf{CARRERA PROFESIONAL DE INGENIERIA}}\\[0.1cm]
-{\large \textbf{MECANICA ELECTRICA}}\\[1.5cm]
+{\Large \textbf{UNIVERSIDAD NACIONAL DEL ALTIPLANO}\\[0.3cm]}
+{\large \textbf{FACULTAD DE INGENIERIA MECANICA ELECTRICA, ELECTRONICA Y SISTEMAS}\\[0.3cm]}
+{\large \textbf{CARRERA PROFESIONAL DE INGENIERIA MECANICA ELECTRICA}\\[1.2cm]}
 
-% --- TÍTULOS CENTRALES (Equivalente al Subtítulo de la imagen) ---
-{\Large \textbf{CURSO: INSTALACIONES ELÉCTRICAS I}}\\[1.2cm]
+{\Large \textbf{CURSO: INSTALACIONES ELÉCTRICAS I}\\[1.2cm]}
 
-{\LARGE \textbf{INFORME ACADEMICO DE INSTALACIONES}}\\[0.2cm]
-{\LARGE \textbf{ELÉCTRICAS RESIDENCIALES}}\\[0.6cm]
-{\Large \textbf{Vivienda unifamiliar de 3 pisos}}\\[1.5cm]
+{\LARGE \textbf{INFORME ACADEMICO DE INSTALACIONES ELÉCTRICAS RESIDENCIALES}\\[0.4cm]}
+{\large \textbf{Vivienda unifamiliar de 3 pisos}\\[1.2cm]}
 
-% --- SECCIÓN DE DATOS (Alineado similar a "UBICACIÓN" en la imagen) ---
-\vspace{0.5cm}
-\begin{center}
-% Ajusta los anchos (4.5cm y 7.5cm) si el texto se corta o necesitas más espacio
-\begin{tabular}{@{} >{\bfseries}p{4.5cm} @{\textbf{ : }} p{7.5cm} @{}}
-Docente & Docente del curso \\
-Integrante & Renzo Gabriel Mamani Galindo \\
-Ubicación & Jr. Lima S/N, Capachica, Puno \\
-Zona & Urbana \\
-Tipo de vivienda & Unifamiliar \\
-Número de pisos & 3 pisos \\
-Área construida & 40 m2 por piso \\
-Material predominante & Ladrillo, hormigón y cemento \\
-Fecha & 03 de junio \\
+\begin{tabular}{>{\bfseries}p{5cm}p{8cm}}
+Docente: & Docente del curso \\
+Integrante: & Renzo Gabriel Mamani Galindo \\
+Ubicación: & Jr. Lima S/N, Capachica, Puno \\
+Zona: & Urbana \\
+Tipo de vivienda: & Unifamiliar \\
+Número de pisos: & 3 pisos \\
+Área construida: & 40 m2 por piso \\
+Material predominante: & Ladrillo, hormigón y cemento \\
+Fecha: & 03 de junio \\
 \end{tabular}
-\end{center}
 
 \vfill
 
-% --- PIE DE PÁGINA ---
-{\large \textbf{Puno -- Perú}}\\[0.2cm]
-{\large \textbf{2026}}
+{\large Puno -- Perú\\}
+{\large 2026}
 
 \end{titlepage}
-
-\end{document}
