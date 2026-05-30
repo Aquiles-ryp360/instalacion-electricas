@@ -1,162 +1,253 @@
 \chapter{CALCULOS JUSTIFICATIVOS}
 
-\section{Normas aplicables}
+\section{Calculo de la demanda maxima}
 
-Para definir los criterios y premisas de diseno se consideran:
+\subsection{Premisas de calculo}
 
-\begin{itemize}
-  \item Codigo Nacional de Electricidad -- Utilizacion.
-  \item RNE EM.010 Instalaciones Electricas Interiores.
-  \item Criterios del curso de Instalaciones Electricas I.
-  \item Requisitos de la empresa distribuidora, si se incluye acometida o medidor.
-\end{itemize}
+Para el presente trabajo se adopta una metodologia simplificada por circuitos. La potencia instalada se estima a partir de cargas tipicas residenciales y la maxima demanda se obtiene aplicando factores de demanda preliminares acordes con el tipo de carga.
 
-\textbf{Criterio:} Los calculos son preliminares y se justifican con criterios del CNE-U y EM.010 aplicables a instalaciones interiores.
-
-\section{Caracteristicas electricas del sistema}
-
-\begin{table}[H]
-\centering
-\caption{Caracteristicas electricas adoptadas}
-\label{tab:caracteristicas-electricas}
-\begin{tabular}{p{7cm}p{5cm}}
-\toprule
-\textbf{Parametro} & \textbf{Valor preliminar} \\
-\midrule
-Tension nominal & 220 V \\
-Frecuencia & 60 Hz \\
-Sistema & Monofasico \\
-Factor de potencia adoptado & 0.90 \\
-Tipo de instalacion & Interior domiciliaria \\
-Material de conductor & Cobre \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Levantamiento de cargas}
-
-El levantamiento se realiza por ambiente. Para cada carga se registra cantidad, potencia unitaria y circuito asignado.
+\subsection{Formula general}
 
 \begin{equation}
-P_\text{total por carga}=N \times P_\text{unitaria}
+P_{inst} = \sum P_i
 \end{equation}
 
 \begin{equation}
-P_\text{instalada total}=\sum P_\text{cargas}
+P_{dem} = \sum (P_i \times f_{d,i})
 \end{equation}
 
-{\scriptsize
-\setlength{\tabcolsep}{2pt}
-\begin{longtable}{c p{2cm} p{2.6cm} p{2.3cm} c r r p{1.3cm}}
-\caption{Levantamiento de cargas por ambiente}\label{tab:levantamiento-cargas}\\
-\toprule
-\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} \\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} \\
-\midrule
-\endhead
-1 & Sala & Luminaria LED & Alumbrado & 2 & 18 & 36 & C1 \\
-2 & Sala & Tomacorriente doble & Tomacorrientes & 3 & 180 & 540 & C2 \\
-3 & Cocina & Tomacorrientes cocina & Cocina/lavanderia & 3 & 300 & 900 & C3 \\
-4 & Dormitorios & Luminaria LED & Alumbrado & 6 & 18 & 108 & C1 \\
-5 & Dormitorios & Tomacorriente doble & Tomacorrientes & 6 & 180 & 1080 & C2 \\
-6 & Bano y escalera & Luminaria LED & Alumbrado & 4 & 18 & 72 & C1 \\
-7 & Lavanderia & Lavadora & Cocina/lavanderia & 1 & 600 & 600 & C4 \\
-8 & Bano & Terma o ducha electrica & Especial & 1 & 3500 & 3500 & C5 \\
-\bottomrule
-\end{longtable}
-}
-
-\section{Maxima demanda}
-
-Para el mini proyecto se puede estimar la demanda con un factor de demanda o simultaneidad definido por el docente.
-
 \begin{equation}
-MD=P_\text{instalada}\times f_d
-\end{equation}
-
-\begin{table}[H]
-\centering
-\caption{Factores de demanda preliminares}
-\label{tab:factores-demanda}
-\begin{tabular}{p{7cm}c}
-\toprule
-\textbf{Tipo de carga} & \textbf{Factor preliminar} \\
-\midrule
-Alumbrado & 1.00 \\
-Tomacorrientes generales & 0.70 \\
-Cocina/lavanderia & 0.80 \\
-Cargas especiales & 1.00 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\textbf{Nota:} Los factores son preliminares para fines academicos y pueden ajustarse segun indicacion del docente.
-
-\section{Corriente de diseno}
-
-Para sistema monofasico:
-
-\begin{equation}
-I=\frac{P}{V \times fp}
+I_{dem} = \frac{P_{dem}}{V \times fp}
 \end{equation}
 
 Donde:
 
 \begin{itemize}
-  \item $I$: corriente en amperios.
-  \item $P$: potencia demandada en watts.
-  \item $V$: tension en volts.
+  \item $P_{inst}$: potencia instalada total.
+  \item $P_{dem}$: potencia de demanda total.
+  \item $P_i$: potencia instalada por circuito.
+  \item $f_{d,i}$: factor de demanda del circuito.
+  \item $I_{dem}$: corriente demandada.
+  \item $V$: tension nominal.
   \item $fp$: factor de potencia.
 \end{itemize}
 
-\section{Seleccion de circuitos}
+\subsection{Cuadro de cargas por circuito}
 
 \begin{table}[H]
 \centering
-\caption{Separacion preliminar de circuitos}
-\label{tab:circuitos}
-\begin{tabularx}{\textwidth}{p{2cm}p{5cm}X}
+\caption{Cuadro de cargas por circuito}
+\label{tab:cuadro-cargas-circuito}
+\begin{tabularx}{\textwidth}{p{1.6cm}p{4.2cm}r r r r X}
 \toprule
-\textbf{Circuito} & \textbf{Uso} & \textbf{Criterio} \\
+\textbf{Circuito} & \textbf{Uso} & \textbf{Pot. inst. W} & \textbf{Factor} & \textbf{Pot. dem. W} & \textbf{Corriente A} & \textbf{Observacion} \\
 \midrule
-C1 & Alumbrado & Separar luminarias de tomacorrientes. \\
-C2 & Tomacorrientes generales & Dormitorios, sala, comedor y circulacion. \\
-C3 & Cocina & Tomacorrientes de mayor uso o cargas de cocina. \\
-C4 & Lavanderia & Lavadora, plancha u otras cargas. \\
-C5 & Carga especial & Ducha electrica, terma, horno, bomba u otra carga definida. \\
+C1 & Alumbrado general & 132 & 1.00 & 132 & 0.67 & Incluye sala, dormitorios, bano, lavanderia y circulaciones \\
+C2 & Tomacorrientes generales & 2520 & 0.70 & 1764 & 8.91 & Incluye sala-comedor, dormitorios, bano y lavanderia \\
+C3 & Cocina & 1200 & 0.80 & 960 & 4.85 & Tomacorrientes para pequenos artefactos y refrigeracion \\
+C4 & Lavanderia & 360 & 0.80 & 288 & 1.45 & Tomacorrientes y apoyo de servicio \\
+C5 & Carga especial & 750 & 1.00 & 750 & 3.79 & Bomba de agua o carga de servicio equivalente \\
+\textbf{Total} &  & \textbf{4962} &  & \textbf{3894} & \textbf{19.67} &  \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Seleccion de conductor}
+\subsection{Levantamiento de cargas por ambiente}
 
-La seleccion final debe verificarse con tablas del CNE-U segun tipo de conductor, aislamiento, canalizacion, temperatura y agrupamiento.
+\small
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{c p{2.6cm} p{2.8cm} p{2cm} c r r p{1.2cm} p{3cm}}
+\caption{Levantamiento de cargas por ambiente}\label{tab:levantamiento-cargas}\\
+\toprule
+\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} & \textbf{Observacion} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} & \textbf{Observacion} \\
+\midrule
+\endhead
+1 & Sala-comedor & Luminaria LED & Alumbrado & 2 & 12 & 24 & C1 & Iluminacion general del area social \\
+2 & Sala-comedor & Tomacorriente doble & Tomacorrientes & 4 & 180 & 720 & C2 & Uso general y equipos domesticos ligeros \\
+3 & Cocina & Luminaria LED & Alumbrado & 2 & 12 & 24 & C1 & Apoyo visual en ambiente de trabajo \\
+4 & Cocina & Tomacorriente de pequeno artefacto & Tomacorrientes & 4 & 300 & 1200 & C3 & Refrigeradora, licuadora, microondas y similares \\
+5 & Dormitorio principal & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Iluminacion puntual \\
+6 & Dormitorio principal & Tomacorriente doble & Tomacorrientes & 3 & 180 & 540 & C2 & Carga de uso comun \\
+7 & Dormitorio secundario 1 & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Iluminacion puntual \\
+8 & Dormitorio secundario 1 & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C2 & Carga de uso comun \\
+9 & Dormitorio secundario 2 & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Iluminacion puntual \\
+10 & Dormitorio secundario 2 & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C2 & Carga de uso comun \\
+11 & Bano & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Instalar fuera de zonas de contacto directo con agua \\
+12 & Bano & Tomacorriente protegido & Tomacorrientes & 1 & 180 & 180 & C2 & Debe contar con proteccion y ubicacion adecuada \\
+13 & Lavanderia & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Area de servicio \\
+14 & Lavanderia & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C4 & Lavadora y apoyo de planchado o servicio \\
+15 & Area tecnica & Bomba de agua o carga especial & Especial & 1 & 750 & 750 & C5 & Circuito dedicado \\
+16 & Circulaciones & Luminaria LED & Alumbrado & 2 & 12 & 24 & C1 & Escalera y pasadizos \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Interpretacion de la demanda}
+
+La demanda total estimada de 3894 W equivale aproximadamente a 3.89 kW. Con una tension de 220 V y factor de potencia de 0.90, la corriente demandada es cercana a 19.67 A. En una propuesta academica para vivienda, este valor justifica un interruptor general de 32 A o 40 A, segun el criterio de reserva adoptado y la longitud del alimentador.
+
+\section{Diseno del tablero electrico general y tableros de distribucion}
+
+\subsection{Criterio general de sectorizacion}
+
+Dada la existencia de tres niveles, la instalacion puede resolverse con un tablero general y tableros de distribucion por nivel funcional, con el fin de reducir recorridos, organizar los circuitos y facilitar mantenimiento. Para fines academicos se propone la siguiente estructura:
+
+\begin{table}[H]
+\centering
+\caption{Propuesta de tableros de distribucion}
+\label{tab:tableros-distribucion}
+\begin{tabularx}{\textwidth}{p{2.2cm}p{4.8cm}p{4.5cm}X}
+\toprule
+\textbf{Elemento} & \textbf{Ubicacion propuesta} & \textbf{Funcion} & \textbf{Comentario tecnico} \\
+\midrule
+TG-01 & Primer piso, cerca del ingreso principal & Recibir el suministro, cortar la energia general y alimentar los tableros secundarios & Debe permanecer accesible y señalizado \\
+TD-01 & Zona central de la vivienda, asociada a los niveles habitables & Distribuir circuitos de alumbrado y tomacorrientes generales & Sectoriza las cargas de uso diario \\
+TD-02 & Tercer piso o area de servicio & Distribuir lavanderia y carga especial & Reduce longitud de circuito y mejora ordenamiento \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Propuesta de componentes del tablero general}
+
+\begin{table}[H]
+\centering
+\caption{Componentes basicos del tablero general}
+\label{tab:componentes-tablero}
+\begin{tabularx}{\textwidth}{p{4cm}X}
+\toprule
+\textbf{Componente} & \textbf{Especificacion academica} \\
+\midrule
+Gabinete & Empotrado o superficial, grado de proteccion apto para interior residencial \\
+Interruptor general & 2 polos, 40 A, curva residencial, maniobra manual \\
+Interruptor diferencial & 2 polos, 40 A, 30 mA, tipo para proteccion de personas \\
+Proteccion contra sobretensiones & Opcional como mejora academica, tipo 2 si el docente la solicita \\
+Barra de neutro & Aislada y rotulada \\
+Barra de tierra & Con conexion franca al sistema de puesta a tierra \\
+Reserva & Espacios libres para ampliacion futura \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Distribucion funcional de los tableros}
+
+\begin{table}[H]
+\centering
+\caption{Distribucion funcional de los tableros}
+\label{tab:funcion-tableros}
+\begin{tabularx}{\textwidth}{p{2cm}p{4cm}p{3cm}X}
+\toprule
+\textbf{Tablero} & \textbf{Circuitos alojados} & \textbf{Nivel de carga} & \textbf{Observacion} \\
+\midrule
+TG-01 & Alimentacion general y derivacion a TD-01 y TD-02 & Bajo a medio & Solo seccionamiento y proteccion principal \\
+TD-01 & C1, C2 y C3 & Medio & Atiende alumbrado, tomacorrientes generales y cocina \\
+TD-02 & C4 y C5 & Bajo a medio & Atiende lavanderia y carga especial \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Criterio de dimensionamiento del tablero}
+
+Para el nivel de carga estimado, un tablero principal de 8 a 12 modulos utiles resulta suficiente, siempre que se reserve espacio para mantenimiento o ampliacion. En caso de emplear dos tableros de distribucion, cada uno debe contar con barra de neutro, barra de tierra y rotulacion individual de circuitos.
+
+\section{Distribucion de circuitos}
+
+\subsection{Circuitos propuestos}
+
+\begin{table}[H]
+\centering
+\caption{Circuitos propuestos}
+\label{tab:circuitos-propuestos}
+\begin{tabularx}{\textwidth}{p{1.5cm}p{3.2cm}p{4cm}p{4cm}X}
+\toprule
+\textbf{Circuito} & \textbf{Uso} & \textbf{Ambientes atendidos} & \textbf{Proteccion preliminar} & \textbf{Conductores preliminares} \\
+\midrule
+C1 & Alumbrado general & Sala-comedor, cocina, dormitorios, bano, lavanderia y circulaciones & 10 A, 2 polos & 3 x 1.5 mm2 Cu \\
+C2 & Tomacorrientes generales & Sala-comedor, dormitorios y bano & 16 A, 2 polos & 3 x 2.5 mm2 Cu \\
+C3 & Cocina & Tomacorrientes de pequenos artefactos y refrigeracion & 20 A, 2 polos & 3 x 2.5 mm2 Cu o 4 mm2 Cu si la longitud lo exige \\
+C4 & Lavanderia & Lavadora y tomacorrientes de servicio & 16 A, 2 polos & 3 x 2.5 mm2 Cu \\
+C5 & Carga especial & Bomba de agua o equipo de servicio equivalente & 16 A, 2 polos & 3 x 2.5 mm2 Cu \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Criterios de distribucion por ambiente}
+
+\begin{itemize}
+  \item La sala-comedor concentra los puntos de uso social y varios tomacorrientes generales.
+  \item La cocina se separa por su mayor exigencia de carga y por la presencia de equipos de uso discontinuo.
+  \item Los dormitorios comparten un circuito de tomacorrientes generales por similitud de uso.
+  \item El bano debe incorporar tomacorriente protegido y ubicacion fuera de zonas de salpicadura directa.
+  \item La lavanderia se separa por la presencia de equipos con uso especial.
+  \item La carga especial se reserva en circuito independiente para garantizar maniobra y proteccion selectiva.
+\end{itemize}
+
+\subsection{Observaciones de seguridad}
+
+\begin{itemize}
+  \item Los circuitos de tomacorrientes deben contar con conductor de proteccion.
+  \item En ambientes humedos se recomienda tomacorriente con tapa o grado de proteccion adecuado.
+  \item Los puntos de luz deben disponer de caja, derivacion accesible y conexion firme.
+  \item Las cargas especiales no deben compartirse con tomacorrientes generales.
+\end{itemize}
+
+\section{Seleccion de conductores y dispositivos de proteccion}
+
+\subsection{Criterio de seleccion}
+
+La seleccion preliminar de conductores se realiza por capacidad de corriente, uso residencial tipico y reserva de seguridad. Debe verificarse, en un desarrollo posterior, la caida de tension, la temperatura ambiente, la forma de instalacion y la agrupacion de conductores.
+
+\subsection{Seleccion preliminar de conductores}
 
 \begin{table}[H]
 \centering
 \caption{Seleccion preliminar de conductores}
-\label{tab:conductores}
-\begin{tabular}{r p{5cm} p{5cm}}
+\label{tab:seleccion-conductores}
+\begin{tabularx}{\textwidth}{p{4.2cm}p{3.4cm}p{2.6cm}X}
 \toprule
-\textbf{Corriente de diseno} & \textbf{Conductor cobre sugerido} & \textbf{Uso tipico} \\
+\textbf{Tramo o circuito} & \textbf{Seccion propuesta} & \textbf{Material} & \textbf{Uso tecnico} \\
 \midrule
-Hasta 10 A & 1.5 mm2 & Alumbrado \\
-Hasta 16 A & 2.5 mm2 & Tomacorrientes generales \\
-Hasta 25 A & 4 mm2 & Cargas medianas \\
-Hasta 32 A & 6 mm2 & Cargas especiales \\
-Hasta 40 A & 10 mm2 & Alimentador o carga mayor \\
+Alimentacion general desde acometida a tablero general & 2 x 10 mm2 Cu + PE & Cobre & Reserva adecuada para corriente general y crecimiento futuro \\
+Derivacion a TD-01 & 2 x 6 mm2 Cu + PE & Cobre & Alimentacion de circuito sectorizado \\
+Derivacion a TD-02 & 2 x 6 mm2 Cu + PE & Cobre & Alimentacion de circuito sectorizado \\
+C1 alumbrado & 3 x 1.5 mm2 Cu & Cobre & Circuito de iluminacion \\
+C2 tomacorrientes generales & 3 x 2.5 mm2 Cu & Cobre & Cargas domesticas generales \\
+C3 cocina & 3 x 2.5 mm2 Cu & Cobre & Cargas de pequeno artefacto \\
+C4 lavanderia & 3 x 2.5 mm2 Cu & Cobre & Lavadora y servicio \\
+C5 carga especial & 3 x 2.5 mm2 Cu & Cobre & Bomba de agua o equipo equivalente \\
+Puesta a tierra & 6 mm2 Cu minimo, sujeto a criterio final & Cobre & Conexion principal entre barra de tierra y electrodo \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
-\textbf{Criterio:} La seleccion final debe verificarse con tablas del CNE-U y condiciones reales de instalacion.
+\subsection{Protecciones preliminares}
 
-\section{Seleccion de interruptor termomagnetico}
+\begin{table}[H]
+\centering
+\caption{Protecciones preliminares}
+\label{tab:protecciones-preliminares}
+\begin{tabularx}{\textwidth}{p{4cm}p{5cm}X}
+\toprule
+\textbf{Circuito} & \textbf{Interruptor termomagnetico propuesto} & \textbf{Observacion} \\
+\midrule
+Alimentacion general & 2P, 40 A & Proteccion y seccionamiento principal \\
+TD-01 & 2P, 25 A & Proteccion del subtablero \\
+TD-02 & 2P, 25 A & Proteccion del subtablero \\
+C1 alumbrado & 2P, 10 A & Proteccion por baja carga y conductores de 1.5 mm2 \\
+C2 tomacorrientes generales & 2P, 16 A & Proteccion residencial tipica \\
+C3 cocina & 2P, 20 A & Mayor demanda por pequenos artefactos \\
+C4 lavanderia & 2P, 16 A & Equipo de uso continuo parcial \\
+C5 carga especial & 2P, 16 A & Circuito dedicado \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-El criterio general de coordinacion entre carga, proteccion y conductor es:
+\subsection{Coordinacion conductor-proteccion}
+
+La relacion basica entre corriente de diseno, corriente nominal del interruptor y capacidad del conductor debe mantener el criterio:
 
 \begin{equation}
 I_b \leq I_n \leq I_z
@@ -166,99 +257,62 @@ Donde:
 
 \begin{itemize}
   \item $I_b$: corriente de diseno del circuito.
-  \item $I_n$: corriente nominal del interruptor.
+  \item $I_n$: corriente nominal de la proteccion.
   \item $I_z$: capacidad admisible del conductor.
 \end{itemize}
 
-\begin{table}[H]
-\centering
-\caption{Protecciones preliminares}
-\label{tab:protecciones}
-\begin{tabular}{p{6cm}p{6cm}}
-\toprule
-\textbf{Circuito} & \textbf{Proteccion preliminar} \\
-\midrule
-Alumbrado & 10 A \\
-Tomacorrientes generales & 16 A o 20 A segun carga y conductor \\
-Cocina/lavanderia & 20 A o 25 A segun carga y conductor \\
-Carga especial & Segun placa del equipo \\
-\bottomrule
-\end{tabular}
-\end{table}
+Con esta relacion se evita que el dispositivo de proteccion permita una sobrecarga superior a la capacidad del conductor, reduciendo el riesgo de sobretemperatura.
 
-\section{Verificacion de caida de tension}
-
-Formula simplificada monofasica:
-
-\begin{equation}
-\Delta V=\frac{2 \times L \times I \times \rho}{S}
-\end{equation}
-
-\begin{equation}
-\%\Delta V=\frac{\Delta V}{V}\times 100
-\end{equation}
-
-Donde:
+\subsection{Observaciones tecnicas adicionales}
 
 \begin{itemize}
-  \item $L$: longitud del circuito en metros.
-  \item $I$: corriente en amperios.
-  \item $\rho$: resistividad del cobre, valor referencial 0.0175 ohm mm2/m.
-  \item $S$: seccion del conductor en mm2.
-  \item $V$: tension del sistema.
+  \item En circuitos de cocina y lavanderia se recomienda prever reservas de capacidad por el uso de electrodomesticos portatiles.
+  \item Si la longitud de algun circuito supera de manera significativa el recorrido previsto, la seccion debera incrementarse para controlar la caida de tension.
+  \item La seleccion final debe contrastarse con tablas del fabricante y con el criterio del CNE-U para instalacion en tuberia o canalizacion equivalente.
 \end{itemize}
 
-\textbf{Criterio:} Se adopta como referencia mantener la caida de tension dentro de valores aceptables para instalaciones interiores, sujeto a verificacion final.
+\section{Sistema de puesta a tierra}
 
-\section{Puesta a tierra}
+\subsection{Funcion del sistema}
 
-Elementos minimos a definir:
+El sistema de puesta a tierra tiene por finalidad establecer una referencia de potencial y facilitar la derivacion de corrientes de falla, reduciendo el riesgo de choque electrico por contacto indirecto. En viviendas, este sistema debe estar integrado a tomacorrientes, carcasas metalicas y barras de tierra del tablero.
 
-\begin{itemize}
-  \item Electrodo o varilla de puesta a tierra.
-  \item Conductor de puesta a tierra.
-  \item Barra de tierra en tablero.
-  \item Conexion de conductor de proteccion a tomacorrientes con tierra.
-  \item Medicion o valor objetivo de resistencia de puesta a tierra, si el curso lo exige.
-\end{itemize}
-
-\section{Cuadro resumen de calculos}
-
-{\scriptsize
-\setlength{\tabcolsep}{2pt}
-\begin{longtable}{p{1.2cm}p{2.2cm}r r r r p{1.8cm}r p{1.7cm}}
-\caption{Resumen de calculos por circuito}\label{tab:resumen-calculos}\\
-\toprule
-\textbf{Circuito} & \textbf{Uso} & \textbf{Pot. W} & \textbf{Factor} & \textbf{Dem. W} & \textbf{I A} & \textbf{Conductor} & \textbf{Caida \%} & \textbf{Proteccion} \\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Circuito} & \textbf{Uso} & \textbf{Pot. W} & \textbf{Factor} & \textbf{Dem. W} & \textbf{I A} & \textbf{Conductor} & \textbf{Caida \%} & \textbf{Proteccion} \\
-\midrule
-\endhead
-C1 & Alumbrado & 216 & 1.00 & 216 & 0.98 & 1.5 mm2 Cu & 1.5 & 10 A \\
-C2 & Tomacorrientes & 1620 & 0.70 & 1134 & 5.15 & 2.5 mm2 Cu & 2.0 & 16 A \\
-C3 & Cocina & 900 & 0.80 & 720 & 3.27 & 2.5 mm2 Cu & 1.8 & 20 A \\
-C4 & Lavanderia & 600 & 0.80 & 480 & 2.18 & 2.5 mm2 Cu & 1.5 & 20 A \\
-C5 & Especial & 3500 & 1.00 & 3500 & 15.91 & 4 mm2 Cu & 2.0 & 25 A \\
-\bottomrule
-\end{longtable}
-}
-
-\section{Resultado general}
+\subsection{Componentes minimos}
 
 \begin{table}[H]
 \centering
-\caption{Resultado general de demanda}
-\label{tab:resultado-general}
-\begin{tabular}{p{8cm}p{4cm}}
+\caption{Componentes minimos del sistema de puesta a tierra}
+\label{tab:componentes-puesta-tierra}
+\begin{tabularx}{\textwidth}{p{4cm}X}
 \toprule
-\textbf{Concepto} & \textbf{Valor} \\
+\textbf{Componente} & \textbf{Especificacion academica} \\
 \midrule
-Potencia instalada total & 6836 W \\
-Maxima demanda total & 6050 W \\
-Maxima demanda total & 6.05 kW \\
-Corriente total estimada & 27.5 A \\
+Electrodo de puesta a tierra & Varilla copperweld o equivalente, instalada en zona accesible para inspeccion \\
+Caja de registro & Permite inspeccion y mantenimiento del electrodo \\
+Conductor principal de tierra & Cobre de seccion adecuada, conectado a la barra de tierra del tablero \\
+Barra de tierra & Barra independiente, rotulada y unida a los conductores de proteccion \\
+Conductores de proteccion & Conectan tomacorrientes y partes metalicas accesibles con la barra de tierra \\
+Conectores & Abrazaderas o conectores certificados para uniones firmes y durables \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
+
+\subsection{Criterio de dimensionamiento}
+
+Para una propuesta academica residencial se adopta como criterio preliminar:
+
+\begin{itemize}
+  \item Conductor principal de puesta a tierra: 6 mm2 Cu minimo.
+  \item Conductores de proteccion de circuitos derivados: 2.5 mm2 Cu como referencia minima para tomacorrientes.
+  \item Continuidad metalica entre barra de tierra, electrodo y equipos conectados.
+  \item Medicion de resistencia de puesta a tierra en una fase posterior del proyecto, si se ejecutara.
+\end{itemize}
+
+\subsection{Recomendaciones de instalacion}
+
+\begin{itemize}
+  \item El electrodo debe quedar protegido contra deterioro mecanico y corrosivo.
+  \item La barra de tierra debe ubicarse dentro del tablero o en gabinete adyacente.
+  \item La puesta a tierra no debe compartirse con conductores de neutro en el interior del tablero, salvo la configuracion especifica del sistema y el criterio normativo aplicable.
+  \item Toda conexion debe quedar firme, accesible y rotulada.
+\end{itemize}
