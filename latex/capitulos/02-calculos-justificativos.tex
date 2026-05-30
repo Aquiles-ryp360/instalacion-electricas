@@ -37,12 +37,13 @@ Donde:
 \begin{landscape}
 \begin{table}[H]
 \centering
-\small
+\scriptsize
+\setlength{\tabcolsep}{4pt}
 \caption{Cuadro de cargas por circuito}
 \label{tab:cuadro-cargas-circuito}
-\begin{tabularx}{\textwidth}{p{1.2cm}p{3.2cm}r r r r >{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{L{1.3cm}L{2.9cm}r r r r Y}
 \toprule
-\textbf{Circuito} & \textbf{Uso} & \textbf{Pot. inst. W} & \textbf{Factor} & \textbf{Pot. dem. W} & \textbf{Corriente A} & \textbf{Observación} \\
+\textbf{Cto.} & \textbf{Uso} & \textbf{Pot. inst. W} & \textbf{Factor} & \textbf{Pot. dem. W} & \textbf{Corriente A} & \textbf{Observación} \\
 \midrule
 C1 & Alumbrado general & 132 & 1.00 & 132 & 0.67 & Incluye sala, dormitorios, baño, lavandería y circulaciones \\
 C2 & Tomacorrientes generales & 2520 & 0.70 & 1764 & 8.91 & Incluye sala-comedor, dormitorios, baño y lavandería \\
@@ -58,37 +59,36 @@ C5 & Carga especial & 750 & 1.00 & 750 & 3.79 & Bomba de agua o carga de servici
 \subsection{Levantamiento de cargas por ambiente}
 
 \begin{landscape}
-\small
-\setlength{\tabcolsep}{2pt}
-\begin{longtable}{c p{2.2cm} p{2.5cm} p{1.8cm} c r r p{1.0cm} p{2.5cm}}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{c L{2.3cm} L{2.6cm} L{2.2cm} c r r L{1.0cm} L{2.4cm}}
 \caption{Levantamiento de cargas por ambiente}\label{tab:levantamiento-cargas}\\
 \toprule
-\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} & \textbf{Observación} \\
+\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Cto.} & \textbf{Observación} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} & \textbf{Observación} \\
+\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Cto.} & \textbf{Observación} \\
 \midrule
 \endhead
 1 & Sala-comedor & Luminaria LED & Alumbrado & 2 & 12 & 24 & C1 & Iluminación general del área social \\
-2 & Sala-comedor & Tomacorriente doble & Tomacorrientes & 4 & 180 & 720 & C2 & Uso general y equipos domesticos ligeros \\
+2 & Sala-comedor & Tomacorriente doble & Tomacorrientes & 4 & 180 & 720 & C2 & Uso general y equipos domésticos ligeros \\
 3 & Cocina & Luminaria LED & Alumbrado & 2 & 12 & 24 & C1 & Apoyo visual en ambiente de trabajo \\
-4 & Cocina & Tomacorriente de pequeno artefacto & Tomacorrientes & 4 & 300 & 1200 & C3 & Refrigeradora, licuadora, microondas y similares \\
+4 & Cocina & Tomacorriente de pequeño artefacto & Tomacorrientes & 4 & 300 & 1200 & C3 & Refrigeradora, licuadora, microondas y similares \\
 5 & Dormitorio principal & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Iluminación puntual \\
-6 & Dormitorio principal & Tomacorriente doble & Tomacorrientes & 3 & 180 & 540 & C2 & Carga de uso comun \\
+6 & Dormitorio principal & Tomacorriente doble & Tomacorrientes & 3 & 180 & 540 & C2 & Carga de uso común \\
 7 & Dormitorio secundario 1 & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Iluminación puntual \\
-8 & Dormitorio secundario 1 & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C2 & Carga de uso comun \\
+8 & Dormitorio secundario 1 & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C2 & Carga de uso común \\
 9 & Dormitorio secundario 2 & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Iluminación puntual \\
-10 & Dormitorio secundario 2 & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C2 & Carga de uso comun \\
+10 & Dormitorio secundario 2 & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C2 & Carga de uso común \\
 11 & Baño & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Instalar fuera de zonas de contacto directo con agua \\
 12 & Baño & Tomacorriente protegido & Tomacorrientes & 1 & 180 & 180 & C2 & Debe contar con protección y ubicación adecuada \\
 13 & Lavandería & Luminaria LED & Alumbrado & 1 & 12 & 12 & C1 & Área de servicio \\
 14 & Lavandería & Tomacorriente doble & Tomacorrientes & 2 & 180 & 360 & C4 & Lavadora y apoyo de planchado o servicio \\
-15 & Área tecnica & Bomba de agua o carga especial & Especial & 1 & 750 & 750 & C5 & Circuito dedicado \\
+15 & Área técnica & Bomba de agua o carga especial & Especial & 1 & 750 & 750 & C5 & Circuito dedicado \\
 16 & Circulaciones & Luminaria LED & Alumbrado & 2 & 12 & 24 & C1 & Escalera y pasadizos \\
 \bottomrule
 \end{longtable}
-\normalsize
 \end{landscape}
 
 \subsection{Interpretacion de la demanda}
@@ -106,7 +106,7 @@ Dada la existencia de tres niveles, la instalación puede resolverse con un tabl
 \small
 \caption{Propuesta de tableros de distribución}
 \label{tab:tableros-distribucion}
-\begin{tabularx}{\textwidth}{p{1.6cm}p{4.1cm}p{3.8cm}>{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{L{2.0cm}L{4.0cm}L{3.6cm}Y}
 \toprule
 \textbf{Elemento} & \textbf{Ubicación propuesta} & \textbf{Función} & \textbf{Comentario técnico} \\
 \midrule
@@ -124,7 +124,7 @@ TD-02 & Tercer piso o área de servicio & Distribuir lavandería y carga especia
 \small
 \caption{Componentes basicos del tablero general}
 \label{tab:componentes-tablero}
-\begin{tabularx}{\textwidth}{p{3.4cm}>{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{L{3.4cm}Y}
 \toprule
 \textbf{Componente} & \textbf{Especificacion académica} \\
 \midrule
@@ -146,7 +146,7 @@ Reserva & Espacios libres para ampliacion futura \\
 \small
 \caption{Distribución funcional de los tableros}
 \label{tab:funcion-tableros}
-\begin{tabularx}{\textwidth}{p{1.7cm}p{3.5cm}p{2.6cm}>{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{L{1.7cm}L{3.5cm}L{2.6cm}Y}
 \toprule
 \textbf{Tablero} & \textbf{Circuitos alojados} & \textbf{Nivel de carga} & \textbf{Observación} \\
 \midrule
@@ -156,7 +156,6 @@ TD-02 & C4 y C5 & Bajo a medio & Atiende lavandería y carga especial \\
 \bottomrule
 \end{tabularx}
 \end{table}
-\end{landscape}
 
 \subsection{Criterio de dimensionamiento del tablero}
 
@@ -171,7 +170,7 @@ Para el nivel de carga estimado, un tablero principal de 8 a 12 modulos utiles r
 \small
 \caption{Circuitos propuestos}
 \label{tab:circuitos-propuestos}
-\begin{tabularx}{\textwidth}{p{1.3cm}p{2.8cm}p{3.4cm}p{3.4cm}>{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{L{1.6cm}L{2.7cm}L{3.2cm}L{3.2cm}Y}
 \toprule
 \textbf{Circuito} & \textbf{Uso} & \textbf{Ambientes atendidos} & \textbf{Protección preliminar} & \textbf{Conductores preliminares} \\
 \midrule
@@ -183,7 +182,6 @@ C5 & Carga especial & Bomba de agua o equipo de servicio equivalente & 16 A, 2 p
 \bottomrule
 \end{tabularx}
 \end{table}
-\end{landscape}
 
 \subsection{Criterios de distribución por ambiente}
 
@@ -218,7 +216,7 @@ La selección preliminar de conductores se realiza por capacidad de corriente, u
 \small
 \caption{Selección preliminar de conductores}
 \label{tab:seleccion-conductores}
-\begin{tabularx}{\textwidth}{p{3.5cm}p{3.0cm}p{2.2cm}>{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{L{3.5cm}L{3.0cm}L{2.2cm}Y}
 \toprule
 \textbf{Tramo o circuito} & \textbf{Sección propuesta} & \textbf{Material} & \textbf{Uso técnico} \\
 \midrule
@@ -234,7 +232,6 @@ Puesta a tierra & 6 mm2 Cu minimo, sujeto a criterio final & Cobre & Conexión p
 \bottomrule
 \end{tabularx}
 \end{table}
-\end{landscape}
 
 \subsection{Protecciónes preliminares}
 
@@ -244,7 +241,7 @@ Puesta a tierra & 6 mm2 Cu minimo, sujeto a criterio final & Cobre & Conexión p
 \small
 \caption{Protecciónes preliminares}
 \label{tab:protecciones-preliminares}
-\begin{tabularx}{\textwidth}{p{4cm}p{5cm}X}
+\begin{tabularx}{\textwidth}{L{4cm}L{5cm}Y}
 \toprule
 \textbf{Circuito} & \textbf{Interruptor termomagnetico propuesto} & \textbf{Observación} \\
 \midrule
@@ -300,7 +297,7 @@ El sistema de puesta a tierra tiene por finalidad establecer una referencia de p
 \small
 \caption{Componentes minimos del sistema de puesta a tierra}
 \label{tab:componentes-puesta-tierra}
-\begin{tabularx}{\textwidth}{p{3.2cm}>{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{p{4.0cm}>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Componente} & \textbf{Especificacion académica} \\
 \midrule

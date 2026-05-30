@@ -9,6 +9,7 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{ragged2e}
 \usepackage{float}
 \usepackage{pdflscape}
 \usepackage{hyperref}
@@ -48,6 +49,9 @@
 
 \newcommand{\editar}[1]{\textcolor{red}{\textbf{EDITAR AQUI:} #1}}
 \newcommand{\rutaPlanos}{planos/}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
 
 \begin{document}
 
