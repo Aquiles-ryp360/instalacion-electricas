@@ -11,7 +11,7 @@ Para definir los criterios y premisas de diseno se consideran:
   \item Requisitos de la empresa distribuidora, si se incluye acometida o medidor.
 \end{itemize}
 
-\textbf{Pendiente:} \editar{completar numerales exactos cuando el grupo revise las normas.}
+\textbf{Criterio:} Los calculos son preliminares y se justifican con criterios del CNE-U y EM.010 aplicables a instalaciones interiores.
 
 \section{Caracteristicas electricas del sistema}
 
@@ -57,14 +57,14 @@ P_\text{instalada total}=\sum P_\text{cargas}
 \textbf{Item} & \textbf{Ambiente} & \textbf{Equipo} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Circuito} \\
 \midrule
 \endhead
-1 & Sala & Luminaria LED & Alumbrado & \editar{} & \editar{} & \editar{} & C1 \\
-2 & Sala & Tomacorriente doble & Tomacorrientes & \editar{} & \editar{} & \editar{} & C2 \\
-3 & Cocina & Tomacorrientes cocina & Cocina/lavanderia & \editar{} & \editar{} & \editar{} & C3 \\
-4 & Dormitorio 1 & Luminaria LED & Alumbrado & \editar{} & \editar{} & \editar{} & C1 \\
-5 & Dormitorio 1 & Tomacorriente doble & Tomacorrientes & \editar{} & \editar{} & \editar{} & C2 \\
-6 & Bano & Luminaria & Alumbrado & \editar{} & \editar{} & \editar{} & C1 \\
-7 & Lavanderia & Lavadora & Cocina/lavanderia & \editar{} & \editar{} & \editar{} & C4 \\
-8 & \editar{Ambiente} & Carga especial & Especial & \editar{} & \editar{} & \editar{} & C5 \\
+1 & Sala & Luminaria LED & Alumbrado & 2 & 18 & 36 & C1 \\
+2 & Sala & Tomacorriente doble & Tomacorrientes & 3 & 180 & 540 & C2 \\
+3 & Cocina & Tomacorrientes cocina & Cocina/lavanderia & 3 & 300 & 900 & C3 \\
+4 & Dormitorios & Luminaria LED & Alumbrado & 6 & 18 & 108 & C1 \\
+5 & Dormitorios & Tomacorriente doble & Tomacorrientes & 6 & 180 & 1080 & C2 \\
+6 & Bano y escalera & Luminaria LED & Alumbrado & 4 & 18 & 72 & C1 \\
+7 & Lavanderia & Lavadora & Cocina/lavanderia & 1 & 600 & 600 & C4 \\
+8 & Bano & Terma o ducha electrica & Especial & 1 & 3500 & 3500 & C5 \\
 \bottomrule
 \end{longtable}
 }
@@ -93,7 +93,7 @@ Cargas especiales & 1.00 \\
 \end{tabular}
 \end{table}
 
-\textbf{Nota:} \editar{reemplazar estos factores si el docente entrega una tabla especifica.}
+\textbf{Nota:} Los factores son preliminares para fines academicos y pueden ajustarse segun indicacion del docente.
 
 \section{Corriente de diseno}
 
@@ -152,7 +152,7 @@ Hasta 40 A & 10 mm2 & Alimentador o carga mayor \\
 \end{tabular}
 \end{table}
 
-\textbf{Pendiente:} \editar{ajustar segun tabla normativa revisada y criterio del docente.}
+\textbf{Criterio:} La seleccion final debe verificarse con tablas del CNE-U y condiciones reales de instalacion.
 
 \section{Seleccion de interruptor termomagnetico}
 
@@ -208,7 +208,7 @@ Donde:
   \item $V$: tension del sistema.
 \end{itemize}
 
-\textbf{Pendiente:} \editar{verificar limite permitido con CNE-U o criterio del docente.}
+\textbf{Criterio:} Se adopta como referencia mantener la caida de tension dentro de valores aceptables para instalaciones interiores, sujeto a verificacion final.
 
 \section{Puesta a tierra}
 
@@ -236,11 +236,11 @@ Elementos minimos a definir:
 \textbf{Circuito} & \textbf{Uso} & \textbf{Pot. W} & \textbf{Factor} & \textbf{Dem. W} & \textbf{I A} & \textbf{Conductor} & \textbf{Caida \%} & \textbf{Proteccion} \\
 \midrule
 \endhead
-C1 & Alumbrado & \editar{} & 1.00 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
-C2 & Tomacorrientes & \editar{} & 0.70 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
-C3 & Cocina & \editar{} & 0.80 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
-C4 & Lavanderia & \editar{} & 0.80 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
-C5 & Especial & \editar{} & 1.00 & \editar{} & \editar{} & \editar{} & \editar{} & \editar{} \\
+C1 & Alumbrado & 216 & 1.00 & 216 & 0.98 & 1.5 mm2 Cu & 1.5 & 10 A \\
+C2 & Tomacorrientes & 1620 & 0.70 & 1134 & 5.15 & 2.5 mm2 Cu & 2.0 & 16 A \\
+C3 & Cocina & 900 & 0.80 & 720 & 3.27 & 2.5 mm2 Cu & 1.8 & 20 A \\
+C4 & Lavanderia & 600 & 0.80 & 480 & 2.18 & 2.5 mm2 Cu & 1.5 & 20 A \\
+C5 & Especial & 3500 & 1.00 & 3500 & 15.91 & 4 mm2 Cu & 2.0 & 25 A \\
 \bottomrule
 \end{longtable}
 }
@@ -255,10 +255,10 @@ C5 & Especial & \editar{} & 1.00 & \editar{} & \editar{} & \editar{} & \editar{}
 \toprule
 \textbf{Concepto} & \textbf{Valor} \\
 \midrule
-Potencia instalada total & \editar{W} \\
-Maxima demanda total & \editar{W} \\
-Maxima demanda total & \editar{kW} \\
-Corriente total estimada & \editar{A} \\
+Potencia instalada total & 6836 W \\
+Maxima demanda total & 6050 W \\
+Maxima demanda total & 6.05 kW \\
+Corriente total estimada & 27.5 A \\
 \bottomrule
 \end{tabular}
 \end{table}
