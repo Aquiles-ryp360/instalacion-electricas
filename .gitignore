@@ -12,3 +12,12 @@ latex/build/*.synctex.gz
 # Keep compiled PDF
 !latex/build/main.pdf
 
+# Raw source archives copied locally
+S.U. ARICATO_PHRA-SANDIA.rar
+
+# Office and AutoCAD temporary files
+~$*
+*.bak
+*.dwl
+*.dwl2
+plot.log
