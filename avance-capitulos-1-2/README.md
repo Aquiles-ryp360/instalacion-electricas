@@ -17,10 +17,13 @@ Separar el avance de trabajo de los archivos finales del proyecto. Aqui se puede
 |---|---|
 | `plan-de-trabajo.md` | Plan de avance para organizar tareas, responsables y entregables |
 | `pautas-vivienda-2-pisos.md` | Pautas iniciales para cambiar el proyecto a una vivienda propia de 2 pisos |
+| `respuestas-cuestionario-aquiles.md` | Respuestas registradas del cuestionario y supuestos adoptados |
 | `capitulo-1-memoria-descriptiva.md` | Desarrollo del Capitulo I: memoria descriptiva |
 | `capitulo-2-calculos-justificativos.md` | Desarrollo del Capitulo II: calculos justificativos |
 | `latex/cuestionario-capitulo-1.tex` | Cuestionario en LaTeX para levantar datos del Capitulo I |
 | `latex/build/cuestionario-capitulo-1.pdf` | PDF compilado del cuestionario |
+| `latex/planificacion-vivienda-aquiles.tex` | Planificacion ya respondida con datos de la vivienda |
+| `latex/build/planificacion-vivienda-aquiles.pdf` | PDF compilado de la planificacion respondida |
 | `normativa-extraida/` | Paginas normativas extraidas para sustentar el avance |
 
 ## Criterio de trabajo
