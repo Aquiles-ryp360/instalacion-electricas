@@ -43,10 +43,18 @@
 \cfoot{\thepage}
 
 \titleformat{\chapter}[display]
+  {\normalfont\centering\thispagestyle{empty}}
+  {\vspace*{\fill}\LARGE\bfseries CAPÍTULO \Roman{chapter}}
+  {1em}
+  {\rule{\textwidth}{2pt}\vspace{1em}\Huge\bfseries}
+  [\vspace{1em}\rule{\textwidth}{2pt}\vspace*{\fill}\clearpage]
+
+\titleformat{name=\chapter,numberless}[display]
   {\normalfont\bfseries\centering}
-  {CAPITULO \Roman{chapter}}
-  {0.5em}
+  {}
+  {0pt}
   {\Large}
+
 
 \newcommand{\editar}[1]{\textcolor{red}{\textbf{EDITAR AQUI:} #1}}
 \newcommand{\rutaPlanos}{planos/}
