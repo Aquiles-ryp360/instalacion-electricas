@@ -19,6 +19,9 @@ Separar el avance de trabajo de los archivos finales del proyecto. Aqui se puede
 | `pautas-vivienda-2-pisos.md` | Pautas iniciales para cambiar el proyecto a una vivienda propia de 2 pisos |
 | `capitulo-1-memoria-descriptiva.md` | Desarrollo del Capitulo I: memoria descriptiva |
 | `capitulo-2-calculos-justificativos.md` | Desarrollo del Capitulo II: calculos justificativos |
+| `latex/cuestionario-capitulo-1.tex` | Cuestionario en LaTeX para levantar datos del Capitulo I |
+| `latex/build/cuestionario-capitulo-1.pdf` | PDF compilado del cuestionario |
+| `normativa-extraida/` | Paginas normativas extraidas para sustentar el avance |
 
 ## Criterio de trabajo
 
@@ -30,3 +33,7 @@ Separar el avance de trabajo de los archivos finales del proyecto. Aqui se puede
 ## Nuevo criterio de avance
 
 El proyecto ya no debe desarrollarse sobre la vivienda de referencia del companero. Para el avance personal se trabajara con una vivienda modelo propia de 2 pisos, descrita en `pautas-vivienda-2-pisos.md`.
+
+## Revision normativa
+
+La revision normativa se hara desde los PDFs locales del repositorio. Cuando el texto sea extraible se usara busqueda por terminos; cuando el PDF este escaneado, cifrado o no permita copiar texto, se extraera la pagina como imagen para revision visual.

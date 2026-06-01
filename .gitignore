@@ -12,6 +12,14 @@ latex/build/*.synctex.gz
 # Keep compiled PDF
 !latex/build/main.pdf
 
+# Avance LaTeX auxiliary files
+avance-capitulos-1-2/latex/build/*.aux
+avance-capitulos-1-2/latex/build/*.log
+avance-capitulos-1-2/latex/build/*.out
+
+# Keep compiled advance PDFs
+!avance-capitulos-1-2/latex/build/*.pdf
+
 # Raw source archives copied locally
 S.U. ARICATO_PHRA-SANDIA.rar
 
