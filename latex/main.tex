@@ -19,7 +19,7 @@
 \usepackage{siunitx}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
-\usepackage{titlesec}
+\usepackage[explicit]{titlesec}
 
 \geometry{left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \setlength{\parindent}{0pt}
@@ -42,18 +42,40 @@
 \rhead{Proyecto domiciliario}
 \cfoot{\thepage}
 
+\newcommand{\PortadaCapitulo}[1]{%
+  \vspace*{\fill}%
+  \begin{center}
+    {\LARGE\bfseries CAPÍTULO \Roman{chapter}\par}
+    \vspace{1.2cm}
+    \rule{0.78\textwidth}{1.5pt}\par
+    \vspace{0.9cm}
+    \begin{minipage}{0.92\textwidth}
+      \Centering
+      \pretolerance=10000
+      \tolerance=10000
+      \hyphenpenalty=10000
+      \exhyphenpenalty=10000
+      \emergencystretch=2em
+      {\LARGE\bfseries #1\par}
+    \end{minipage}\par
+    \vspace{0.9cm}
+    \rule{0.78\textwidth}{1.5pt}
+  \end{center}%
+  \vspace*{\fill}%
+  \clearpage
+}
+
 \titleformat{\chapter}[display]
-  {\normalfont\centering\thispagestyle{empty}}
-  {\vspace*{\fill}\LARGE\bfseries CAPÍTULO \Roman{chapter}}
-  {1em}
-  {\rule{\textwidth}{2pt}\vspace{1em}\Huge\bfseries}
-  [\vspace{1em}\rule{\textwidth}{2pt}\vspace*{\fill}\clearpage]
+  {\normalfont\thispagestyle{empty}}
+  {}
+  {0pt}
+  {\PortadaCapitulo{#1}}
 
 \titleformat{name=\chapter,numberless}[display]
   {\normalfont\bfseries\centering}
   {}
   {0pt}
-  {\Large}
+  {\Large #1}
 
 
 \newcommand{\editar}[1]{\textcolor{red}{\textbf{EDITAR AQUI:} #1}}
