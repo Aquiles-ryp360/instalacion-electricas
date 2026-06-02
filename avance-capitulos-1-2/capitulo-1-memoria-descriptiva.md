@@ -23,13 +23,13 @@ Presentar la descripcion general del mini proyecto de instalacion electrica domi
 | Dato | Valor actual | Estado |
 |---|---|---|
 | Ubicacion | Avenida Horacio con Jr. Marineros, manzana F7, lotes 11 y 12 | Definido |
-| Distrito | San Miguel | Por confirmar |
-| Provincia | San Roman, referencia Juliaca | Por confirmar |
+| Distrito | San Miguel | Definido |
+| Provincia | San Román | Definido |
 | Departamento | Puno | Definido |
-| Tipo de vivienda | Unifamiliar para fines academicos; vivienda real usada por mas de una familia | Definido con observacion |
+| Tipo de vivienda | Unifamiliar (casa grande) | Definido |
 | Numero de pisos | 2 pisos | Definido para el avance |
-| Area construida | Pendiente de croquis o medida aproximada | Pendiente |
-| Sistema electrico | Monofasico, 220 V, 60 Hz | Por confirmar |
+| Area construida | Por definir (el primer piso tiene menos área que el segundo) | En proceso |
+| Sistema electrico | Monofasico, 220 V, 60 Hz | Definido |
 | Empresa distribuidora | Electro Puno | Definido |
 | Material predominante | Ladrillo y concreto | Definido |
 | Numero de miembros | 7 miembros | Definido para el avance |
