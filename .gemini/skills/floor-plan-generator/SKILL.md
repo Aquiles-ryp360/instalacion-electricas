@@ -31,3 +31,9 @@ This skill allows the agent to generate AI-based floor plans based on room requi
 
 ## Output Format
 Render the floor plan list and explain the constraints checked. Emphasize that they can run the graphical visualizer locally.
+
+## Original Repository Reference
+The core solver and logic of this skill is based on the following repository:
+- **Repository URL:** [z-aqib/Floor-Plan-Generator-Using-AI](https://github.com/z-aqib/Floor-Plan-Generator-Using-AI)
+- **Local Clone Path:** [Floor-Plan-Generator-Using-AI](file:///C:/Users/renzo/Floor-Plan-Generator-Using-AI)
+
