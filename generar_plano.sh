@@ -6,10 +6,11 @@
 # Salir inmediatamente si algún comando falla
 set -e
 
-SCRIPT_DIR="proyecto-casa/07-planos/generator"
+SCRIPT_DIR="herramientas/ia-cad-casas"
 VENV_DIR="$SCRIPT_DIR/.venv"
-INPUT_FILE="$SCRIPT_DIR/layout_example.json"
-OUTPUT_FILE="proyecto-casa/07-planos/IE-01-ubicacion-arquitectura.dxf"
+INPUT_FILE="$SCRIPT_DIR/data/layout_example.json"
+OUTPUT_DXF="$SCRIPT_DIR/output/plan_distribucion.dxf"
+OUTPUT_PDF="$SCRIPT_DIR/output/plan_distribucion.pdf"
 
 echo "=========================================================="
 echo "   Iniciando Generador Automático de Planos CAD 2D"
@@ -35,14 +36,28 @@ source "$VENV_DIR/bin/activate"
 echo "Asegurando dependencias (ezdxf)..."
 pip install --quiet ezdxf
 
-# 5. Ejecutar generador de planos
-echo "Ejecutando script de generación..."
-python3 "$SCRIPT_DIR/dxf_generator.py" --input "$INPUT_FILE" --output "$OUTPUT_FILE"
+# 5. Ejecutar generador de planos (DXF)
+echo "Ejecutando script de generación DXF..."
+python3 "$SCRIPT_DIR/scripts/dxf_generator.py" --input "$INPUT_FILE" --output "$OUTPUT_DXF"
+
+# 6. Ejecutar QCAD headless para renderizar a PDF
+if command -v qcad &> /dev/null; then
+    echo "Ejecutando QCAD headless para renderizar a PDF..."
+    # Se usa realpath para obtener rutas absolutas y evitar problemas de resolución en QCAD
+    ABS_OUTPUT_DXF=$(realpath "$OUTPUT_DXF")
+    ABS_OUTPUT_PDF=$(realpath "$OUTPUT_PDF")
+    ABS_SCRIPT=$(realpath "$SCRIPT_DIR/cad-scripts/dxf2pdf.js")
+    # Se usa -platform offscreen para ejecutarse en servidores Linux sin display/X11 y -quit para salir tras terminar
+    qcad -no-gui -platform offscreen -quit -autostart "$ABS_SCRIPT" -input "$ABS_OUTPUT_DXF" -output "$ABS_OUTPUT_PDF"
+else
+    echo "Advertencia: QCAD no se encuentra en el PATH. No se pudo generar el PDF automáticamente."
+fi
 
 echo "=========================================================="
-echo "   ¡Plano CAD 2D generado con éxito!"
-echo "   Archivo de salida: $OUTPUT_FILE"
-echo "   Puedes abrirlo en Linux usando QCAD o LibreCAD:"
-echo "      qcad \"$OUTPUT_FILE\""
-echo "      librecad \"$OUTPUT_FILE\""
+echo "   ¡Proceso finalizado con éxito!"
+echo "   - Archivo DXF: $OUTPUT_DXF"
+echo "   - Archivo PDF: $OUTPUT_PDF"
+echo "   Puedes ver el DXF en Linux usando QCAD o LibreCAD:"
+echo "      qcad \"$OUTPUT_DXF\""
+echo "      librecad \"$OUTPUT_DXF\""
 echo "=========================================================="
