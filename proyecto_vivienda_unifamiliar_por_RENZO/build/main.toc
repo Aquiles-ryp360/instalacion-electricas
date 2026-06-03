@@ -79,9 +79,9 @@
 \contentsline {subsection}{\numberline {7.1.4}IE-03: Tomacorrientes - Segundo Piso}{51}{subsection.7.1.4}%
 \contentsline {subsection}{\numberline {7.1.5}IE-04: Circuitos y Canalizaciones - Tercer Piso}{54}{subsection.7.1.5}%
 \contentsline {subsection}{\numberline {7.1.6}IE-05: Diagrama Unifilar y Cuadro de Cargas}{57}{subsection.7.1.6}%
-\contentsline {subsection}{\numberline {7.1.7}IE-06: Puesta a Tierra y Detalles de Conexión}{60}{subsection.7.1.7}%
-\contentsline {section}{\numberline {7.2}Detalles sugeridos}{63}{section.7.2}%
-\contentsline {chapter}{\numberline {8}CONCLUSIONES, RECOMENDACIONES Y BIBLIOGRAFIA}{64}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{65}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Recomendaciones}{65}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Bibliografia}{66}{section.8.3}%
+\contentsline {subsection}{\numberline {7.1.7}IE-06: Puesta a Tierra y Detalles de Conexión}{59}{subsection.7.1.7}%
+\contentsline {section}{\numberline {7.2}Detalles sugeridos}{61}{section.7.2}%
+\contentsline {chapter}{\numberline {8}CONCLUSIONES, RECOMENDACIONES Y BIBLIOGRAFIA}{62}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{63}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Recomendaciones}{63}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Bibliografia}{64}{section.8.3}%

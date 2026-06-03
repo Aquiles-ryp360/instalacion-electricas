@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  3 JUN 2026 01:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  3 JUN 2026 06:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,16 +831,16 @@ Overfull \vbox (469.99149pt too high) has occurred while \output is active []
 
 
 [43 <./planos/primer-piso.pdf>]
-<planos/segundo-piso.pdf, id=771, 289.08pt x 447.94458pt>
+<planos/segundo-piso.pdf, id=771, 289.08pt x 447.93523pt>
 File: planos/segundo-piso.pdf Graphic file (type pdf)
 <use planos/segundo-piso.pdf>
 Package pdftex.def Info: planos/segundo-piso.pdf  used on input line 64.
-(pdftex.def)             Requested size: 595.37662pt x 922.61893pt.
+(pdftex.def)             Requested size: 595.37662pt x 922.59967pt.
  [44
 
 
 ]
-Overfull \vbox (508.43396pt too high) has occurred while \output is active []
+Overfull \vbox (508.4147pt too high) has occurred while \output is active []
 
 
 [45 <./planos/segundo-piso.pdf>]
@@ -859,78 +859,71 @@ Overfull \vbox (508.43396pt too high) has occurred while \output is active []
 [47 <./planos/tercer-piso.pdf>] [48
 
 ]
-<planos/IE-02-alumbrado.pdf, id=795, 381.31825pt x 346.89601pt>
+<planos/IE-02-alumbrado.pdf, id=795, 289.08pt x 443.25601pt>
 File: planos/IE-02-alumbrado.pdf Graphic file (type pdf)
 <use planos/IE-02-alumbrado.pdf>
 Package pdftex.def Info: planos/IE-02-alumbrado.pdf  used on input line 87.
-(pdftex.def)             Requested size: 595.37662pt x 541.63727pt.
+(pdftex.def)             Requested size: 595.37662pt x 912.96204pt.
  [49
 
 ]
-Overfull \vbox (128.1188pt too high) has occurred while \output is active []
+Overfull \vbox (499.44357pt too high) has occurred while \output is active []
 
 
 [50 <./planos/IE-02-alumbrado.pdf>] [51
 
 ]
-<planos/IE-03-tomacorrientes.pdf, id=810, 368.87212pt x 346.89601pt>
+<planos/IE-03-tomacorrientes.pdf, id=810, 289.08pt x 445.8563pt>
 File: planos/IE-03-tomacorrientes.pdf Graphic file (type pdf)
 <use planos/IE-03-tomacorrientes.pdf>
 Package pdftex.def Info: planos/IE-03-tomacorrientes.pdf  used on input line 10
 0.
-(pdftex.def)             Requested size: 595.37662pt x 559.9941pt.
+(pdftex.def)             Requested size: 595.37662pt x 918.31776pt.
  [52
 
 ]
-Overfull \vbox (146.47563pt too high) has occurred while \output is active []
+Overfull \vbox (504.7993pt too high) has occurred while \output is active []
 
 
 [53 <./planos/IE-03-tomacorrientes.pdf>] [54
 
 ]
-<planos/IE-04-circuitos-canalizaciones.pdf, id=824, 366.28966pt x 346.89601pt>
+<planos/IE-04-circuitos-canalizaciones.pdf, id=824, 289.08pt x 413.01013pt>
 File: planos/IE-04-circuitos-canalizaciones.pdf Graphic file (type pdf)
 <use planos/IE-04-circuitos-canalizaciones.pdf>
 Package pdftex.def Info: planos/IE-04-circuitos-canalizaciones.pdf  used on inp
 ut line 113.
-(pdftex.def)             Requested size: 595.37662pt x 563.91106pt.
+(pdftex.def)             Requested size: 595.37662pt x 850.6654pt.
  [55
 
 ]
-Overfull \vbox (150.3926pt too high) has occurred while \output is active []
+Overfull \vbox (437.14694pt too high) has occurred while \output is active []
 
 
 [56 <./planos/IE-04-circuitos-canalizaciones.pdf>] [57
 
 ]
-<planos/IE-05-unifilar-cuadro-cargas.pdf, id=839, 574.54652pt x 682.22879pt>
+<planos/IE-05-unifilar-cuadro-cargas.pdf, id=839, 504.576pt x 346.89601pt>
 File: planos/IE-05-unifilar-cuadro-cargas.pdf Graphic file (type pdf)
 <use planos/IE-05-unifilar-cuadro-cargas.pdf>
 Package pdftex.def Info: planos/IE-05-unifilar-cuadro-cargas.pdf  used on input
  line 126.
-(pdftex.def)             Requested size: 595.37662pt x 707.01321pt.
+(pdftex.def)             Requested size: 595.37662pt x 409.32845pt.
  [58
 
-]
-Overfull \vbox (292.82825pt too high) has occurred while \output is active []
-
-
-[59 <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [60
+ <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [59
 
 ]
-<planos/IE-06-puesta-tierra.pdf, id=958, 574.54652pt x 682.22879pt>
+<planos/IE-06-puesta-tierra.pdf, id=849, 504.576pt x 346.89601pt>
 File: planos/IE-06-puesta-tierra.pdf Graphic file (type pdf)
 <use planos/IE-06-puesta-tierra.pdf>
 Package pdftex.def Info: planos/IE-06-puesta-tierra.pdf  used on input line 139
 .
-(pdftex.def)             Requested size: 595.37662pt x 707.01321pt.
- [61
+(pdftex.def)             Requested size: 595.37662pt x 409.32845pt.
+ [60
 
-]
-Overfull \vbox (292.82825pt too high) has occurred while \output is active []
-
-
-[62 <./planos/IE-06-puesta-tierra.pdf>]) (capitulos/08-anexos.tex [63
+ <./planos/IE-06-puesta-tierra.pdf>])
+(capitulos/08-anexos.tex [61
 
 ]
 Cap\'{\i }tulo 8.
@@ -949,11 +942,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
  \T1/cmr/bx/n/20.74 BIBLIOGRAFIA 
  []
 
-[64
+[62
 
-] [65
+] [63
 
-]) [66]
+]) [64]
 (C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
 build\main.aux
 LaTeX Info: Redefining \. on input line 11.
@@ -967,8 +960,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AB8C415F0EA5FF47580771AE2F29DA72;16576.
  ) 
 Here is how much of TeX's memory you used:
- 17720 strings out of 474479
- 345403 string characters out of 5743591
+ 17718 strings out of 474479
+ 345389 string characters out of 5743591
  1953542 words of memory out of 5000000
  39546 multiletter control sequences out of 15000+600000
  573788 words of font info for 68 fonts, out of 8000000 for 9000
@@ -995,9 +988,9 @@ blic/amsfonts/cm/cmmi8.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmr12.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifa
-miliar_por_RENZO\build\main.pdf (72 pages, 874432 bytes).
+miliar_por_RENZO\build\main.pdf (70 pages, 866914 bytes).
 PDF statistics:
- 1756 PDF objects out of 2073 (max. 8388607)
- 211 named destinations out of 1000 (max. 500000)
+ 1537 PDF objects out of 1728 (max. 8388607)
+ 209 named destinations out of 1000 (max. 500000)
  739 words of extra memory for PDF output out of 10000 (max. 10000000)
 
