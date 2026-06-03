@@ -68,9 +68,9 @@
     {
       "id": "R8",
       "name": "Cuarto con cama 2",
-      "x": 7.5,
+      "x": 9.0,
       "y": 0.0,
-      "width": 7.5,
+      "width": 6.0,
       "height": 3.0
     }
   ],
@@ -79,47 +79,47 @@
       "id": "D1",
       "room_from": "Pasadizo",
       "room_to": "Cocina grande",
-      "x": 5.0,
+      "x": 5.2,
+      "y": 4.5,
+      "width": 0.8,
+      "orientation": "horizontal",
+      "swing": "top-left"
+    },
+    {
+      "id": "D2",
+      "room_from": "Pasadizo",
+      "room_to": "Oficina varios",
+      "x": 6.0,
       "y": 4.5,
       "width": 0.8,
       "orientation": "horizontal",
       "swing": "top-right"
     },
     {
-      "id": "D2",
-      "room_from": "Pasadizo",
-      "room_to": "Oficina varios",
-      "x": 6.2,
-      "y": 4.5,
-      "width": 0.8,
-      "orientation": "horizontal",
-      "swing": "top-left"
-    },
-    {
       "id": "D3",
       "room_from": "Pasadizo",
       "room_to": "Cuarto con cama 1",
-      "x": 9.2,
+      "x": 9.0,
       "y": 4.5,
       "width": 0.8,
       "orientation": "horizontal",
-      "swing": "top-left"
+      "swing": "top-right"
     },
     {
       "id": "D4",
       "room_from": "Pasadizo",
       "room_to": "Sala",
-      "x": 12.2,
+      "x": 12.0,
       "y": 4.5,
       "width": 0.8,
       "orientation": "horizontal",
-      "swing": "top-left"
+      "swing": "top-right"
     },
     {
       "id": "D5",
       "room_from": "Pasadizo",
       "room_to": "Baño",
-      "x": 6.2,
+      "x": 6.7,
       "y": 3.0,
       "width": 0.8,
       "orientation": "horizontal",
@@ -129,11 +129,11 @@
       "id": "D6",
       "room_from": "Pasadizo",
       "room_to": "Cuarto con cama 2",
-      "x": 7.7,
+      "x": 9.0,
       "y": 3.0,
       "width": 0.8,
       "orientation": "horizontal",
-      "swing": "bottom-left"
+      "swing": "bottom-right"
     }
   ],
   "windows": [
