@@ -1,12 +1,12 @@
 {
-  "project": "Casa de Aquiles - Plano electrico preliminar Piso 1 v4",
+  "project": "Casa de Aquiles - Plano electrico Piso 1 v4",
   "base_architectural": "Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/piso1_v3.dxf",
   "source_layout": "Avanze-Proyecto-Aquiles/trabajo-cad-casa/layouts/layout_aquiles_piso1_v3.json",
-  "status": "preliminar corregido - sin luz en tierra y garage techado acortado",
+  "status": "listo para presentacion",
   "floor": "Piso 1",
   "title": {
-    "text": "PLANO ELECTRICO PRELIMINAR - PISO 1 V4",
-    "subtitle": "Casa de Aquiles - garaje techado acortado y area sin techo sin luminaria",
+    "text": "PLANO ELECTRICO - PISO 1 V4",
+    "subtitle": "Casa de Aquiles - primer nivel",
     "x": 7.5,
     "y": 10.85,
     "height": 0.28
@@ -21,10 +21,10 @@
   "circuit_summary": [
     {"id": "C1", "label": "Alumbrado primer piso"},
     {"id": "C2", "label": "Tomacorrientes primer piso"},
-    {"id": "C3", "label": "Cocina auxiliar 1P / por confirmar"},
+    {"id": "C3", "label": "Toma especial cocina bajo escalera"},
     {"id": "C8", "label": "Bomba de agua exterior"},
-    {"id": "TG", "label": "Tablero general en punto azul"},
-    {"id": "M", "label": "Medidor en punto rojo"}
+    {"id": "TG", "label": "Tablero general"},
+    {"id": "M", "label": "Medidor"}
   ],
   "luminarias": [
     {"id": "L-P1-01", "x": 0.9, "y": 5.9, "circuit": "C1", "label": "C1"},
@@ -46,7 +46,7 @@
     {"id": "T-P1-05", "x": 8.2, "y": 8.60, "circuit": "C2", "label": "C2", "kind": "tierra"},
     {"id": "T-P1-06", "x": 10.0, "y": 8.60, "circuit": "C2", "label": "C2", "kind": "tierra"},
     {"id": "T-P1-07", "x": 14.35, "y": 8.0, "circuit": "C2", "label": "C2", "kind": "tierra"},
-    {"id": "T-P1-09", "x": 4.05, "y": 4.85, "circuit": "C3", "label": "C3\ncocina aux.\npor confirmar", "kind": "especial"}
+    {"id": "T-P1-09", "x": 4.05, "y": 4.85, "circuit": "C3", "label": "C3\ncocina", "label_dx": 0.45, "label_dy": -0.65, "kind": "especial"}
   ],
   "tableros": [
     {
@@ -73,31 +73,20 @@
       "x": -0.55,
       "y": 1.0,
       "circuit": "C8",
-      "label": "C8 bomba exterior\n(subterranea ref.)"
+      "label": "C8",
+      "label_dx": 0.35,
+      "label_dy": -0.30
     }
   ],
   "rutas": [
-    {"id": "R-P1-M", "circuit": "", "label": "Alimentador M-TG", "points": [[15.45, 4.75], [14.35, 4.75]]},
+    {"id": "R-P1-M", "circuit": "", "label": "", "points": [[15.45, 4.75], [14.35, 4.75]]},
     {"id": "R-P1-C1-A", "circuit": "C1", "label": "", "points": [[14.35, 4.75], [14.35, 6.80], [12.0, 6.80], [6.0, 6.80], [0.90, 6.80], [0.90, 5.90]]},
     {"id": "R-P1-C1-B", "circuit": "C1", "label": "", "points": [[14.35, 4.75], [14.35, 2.25], [11.0, 2.25]]},
     {"id": "R-P1-C2-A", "circuit": "C2", "label": "", "points": [[14.35, 4.75], [14.35, 8.0], [14.35, 8.60], [10.0, 8.60], [8.2, 8.60], [4.0, 8.60]]},
     {"id": "R-P1-C2-B", "circuit": "C2", "label": "", "points": [[14.35, 4.75], [14.35, 2.0], [14.35, 0.35], [12.0, 0.35], [8.0, 0.35]]},
     {"id": "R-P1-C3", "circuit": "C3", "label": "", "points": [[14.35, 4.75], [10.0, 4.75], [8.0, 4.75], [4.05, 4.75], [4.05, 4.85]]},
-    {"id": "R-P1-C8", "circuit": "C8", "label": "C8 bomba exterior (subterranea ref.)", "points": [[14.35, 4.75], [14.35, 0.85], [8.0, 0.85], [3.0, 0.85], [-0.55, 0.85], [-0.55, 1.0]]},
-    {"id": "R-P1-LIMIT", "circuit": "", "label": "Limite techo garaje", "points": [[7.0, 0.0], [7.0, 4.5]]}
+    {"id": "R-P1-C8", "circuit": "C8", "label": "C8 bomba exterior", "points": [[14.35, 4.75], [14.35, 0.85], [8.0, 0.85], [3.0, 0.85], [-0.55, 0.85], [-0.55, 1.0]]},
+    {"id": "R-P1-LIMIT", "circuit": "", "label": "Limite de techo", "label_x": 7.25, "label_y": 2.35, "points": [[7.0, 0.0], [7.0, 4.5]]}
   ],
-  "notes": [
-    {
-      "x": 17.0,
-      "y": 2.65,
-      "height": 0.12,
-      "text": "Notas:\n- TG y medidor se mantienen segun revision v2.\n- Garaje techado acortado hasta 8m desde ingreso.\n- Se elimino luminaria e interruptor de area de tierra sin techo.\n- Rutas ortogonales preliminares."
-    },
-    {
-      "x": 4.5,
-      "y": 2.0,
-      "height": 0.13,
-      "text": "Area sin techo / tierra\n(sin luminaria interior)"
-    }
-  ]
+  "notes": []
 }

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Overlay electrico preliminar sobre un DXF arquitectonico existente."""
+"""Overlay electrico sobre un DXF arquitectonico existente."""
 
 import argparse
 import json
 import math
 import os
 import sys
+from pathlib import Path
 
 try:
     import ezdxf
@@ -63,6 +64,88 @@ for circuit, rgb in {
         "true_color": rgb,
         "lineweight": 18,
     }
+
+
+DGE_LIBRARY_JSON = Path(__file__).resolve().parents[2] / "simbologia-ia" / "simbologia_normativa_dge.json"
+DGE_SYMBOLS = None
+
+
+def load_dge_symbols():
+    global DGE_SYMBOLS
+    if DGE_SYMBOLS is not None:
+        return DGE_SYMBOLS
+    DGE_SYMBOLS = {}
+    if not DGE_LIBRARY_JSON.exists():
+        return DGE_SYMBOLS
+    with open(DGE_LIBRARY_JSON, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    for symbol in data.get("simbolos", []):
+        block_name = symbol.get("block_name")
+        if block_name:
+            DGE_SYMBOLS[block_name] = symbol.get("primitivas", [])
+    return DGE_SYMBOLS
+
+
+def transform_point(x, y, ox, oy, scale=1.0, rotation=0.0):
+    angle = math.radians(rotation)
+    cos_a = math.cos(angle)
+    sin_a = math.sin(angle)
+    sx = float(x) * scale
+    sy = float(y) * scale
+    return (ox + sx * cos_a - sy * sin_a, oy + sx * sin_a + sy * cos_a)
+
+
+def add_dge_symbol(msp, block_name, x, y, scale=1.0, layer="ELEC_TEXTOS", rotation=0.0):
+    primitives = load_dge_symbols().get(block_name)
+    if not primitives:
+        return False
+
+    def point(px, py):
+        return transform_point(px, py, x, y, scale, rotation)
+
+    for prim in primitives:
+        kind = prim.get("tipo")
+        if kind == "linea":
+            msp.add_line(
+                point(prim["x1"], prim["y1"]),
+                point(prim["x2"], prim["y2"]),
+                dxfattribs={"layer": layer},
+            )
+        elif kind in {"circulo", "circulo_relleno", "punto"}:
+            cx = prim.get("cx", prim.get("x", 0.0))
+            cy = prim.get("cy", prim.get("y", 0.0))
+            radius = abs(float(prim.get("r", 0.02)) * scale)
+            msp.add_circle(point(cx, cy), radius, dxfattribs={"layer": layer})
+        elif kind in {"rectangulo", "rectangulo_relleno"}:
+            x0 = float(prim["x"])
+            y0 = float(prim["y"])
+            w = float(prim["w"])
+            h = float(prim["h"])
+            pts = [
+                point(x0, y0),
+                point(x0 + w, y0),
+                point(x0 + w, y0 + h),
+                point(x0, y0 + h),
+                point(x0, y0),
+            ]
+            msp.add_lwpolyline(pts, dxfattribs={"layer": layer})
+        elif kind == "arco":
+            center = point(prim["cx"], prim["cy"])
+            radius = abs(float(prim["r"]) * scale)
+            start = float(prim["ang_ini"]) + rotation
+            end = float(prim["ang_fin"]) + rotation
+            msp.add_arc(center, radius, start, end, dxfattribs={"layer": layer})
+        elif kind == "texto":
+            text = msp.add_text(
+                str(prim.get("contenido", "")),
+                dxfattribs={
+                    "layer": layer,
+                    "height": float(prim.get("h", 0.12)) * scale,
+                    "rotation": rotation,
+                },
+            )
+            text.set_placement(point(prim.get("x", 0.0), prim.get("y", 0.0)), align=TextEntityAlignment.MIDDLE_CENTER)
+    return True
 
 
 def read_json(path):
@@ -128,6 +211,8 @@ def layer_for_circuit(circuit, default_layer="ELEC_CANALIZACION"):
 def draw_label(msp, item, default_text, x, y, height=0.14, dx=0.0, dy=-0.36):
     label = item.get("label", default_text)
     if label:
+        dx = float(item.get("label_dx", dx))
+        dy = float(item.get("label_dy", dy))
         add_multiline(msp, label, x + dx, y + dy, height=height, layer="ELEC_TEXTOS")
 
 
@@ -135,9 +220,10 @@ def draw_luminaire(msp, item):
     x, y = float(item["x"]), float(item["y"])
     r = float(item.get("size", 0.18))
     layer = "ELEC_LUMINARIAS"
-    msp.add_circle((x, y), r, dxfattribs={"layer": layer})
-    msp.add_line((x - r * 0.70, y), (x + r * 0.70, y), dxfattribs={"layer": layer})
-    msp.add_line((x, y - r * 0.70), (x, y + r * 0.70), dxfattribs={"layer": layer})
+    if not add_dge_symbol(msp, "DGE_09_93_51_SALIDA_TECHO", x, y, scale=r / 0.18, layer=layer):
+        msp.add_circle((x, y), r, dxfattribs={"layer": layer})
+        msp.add_line((x - r * 0.70, y), (x + r * 0.70, y), dxfattribs={"layer": layer})
+        msp.add_line((x, y - r * 0.70), (x, y + r * 0.70), dxfattribs={"layer": layer})
     draw_label(msp, item, item.get("circuit", ""), x, y)
 
 
@@ -145,11 +231,13 @@ def draw_switch(msp, item):
     x, y = float(item["x"]), float(item["y"])
     r = float(item.get("size", 0.12))
     layer = "ELEC_INTERRUPTORES"
-    msp.add_circle((x, y), r, dxfattribs={"layer": layer})
-    msp.add_line((x, y), (x + r * 1.6, y + r * 1.1), dxfattribs={"layer": layer})
-    symbol = "S3" if item.get("kind") == "conmutado" else "S"
-    add_text(msp, symbol, x, y + 0.23, height=0.13, layer="ELEC_TEXTOS")
-    draw_label(msp, item, item.get("circuit", ""), x, y, dy=-0.30)
+    block = "DGE_09_93_32_INTERRUPTOR_CONMUTADO" if item.get("kind") == "conmutado" else "DGE_09_93_30_INTERRUPTOR_UNIPOLAR"
+    if not add_dge_symbol(msp, block, x, y, scale=r / 0.09, layer=layer):
+        msp.add_circle((x, y), r, dxfattribs={"layer": layer})
+        msp.add_line((x, y), (x + r * 1.6, y + r * 1.1), dxfattribs={"layer": layer})
+        symbol = "S3" if item.get("kind") == "conmutado" else "S"
+        add_text(msp, symbol, x, y + 0.23, height=0.13, layer="ELEC_TEXTOS")
+    draw_label(msp, item, item.get("circuit", ""), x, y, dy=-0.52)
 
 
 def draw_outlet(msp, item):
@@ -158,15 +246,17 @@ def draw_outlet(msp, item):
     circuit = item.get("circuit", "")
     layer = "ELEC_TOMACORRIENTES"
     kind = item.get("kind", "doble")
-    if kind in {"especial", "bomba"}:
-        pts = [(x, y + r * 1.25), (x + r * 1.25, y), (x, y - r * 1.25), (x - r * 1.25, y), (x, y + r * 1.25)]
-        msp.add_lwpolyline(pts, dxfattribs={"layer": layer})
-    else:
-        msp.add_circle((x, y), r, dxfattribs={"layer": layer})
-    msp.add_line((x - r * 0.55, y - r * 0.15), (x + r * 0.55, y - r * 0.15), dxfattribs={"layer": layer})
-    msp.add_line((x - r * 0.55, y + r * 0.20), (x + r * 0.55, y + r * 0.20), dxfattribs={"layer": layer})
-    if kind == "tierra":
-        msp.add_line((x, y - r * 0.95), (x, y - r * 0.35), dxfattribs={"layer": layer})
+    block = "DGE_09_93_18_SALIDA_COCINA" if kind in {"especial", "cocina"} else "DGE_09_93_17_TOMACORRIENTE_TIERRA"
+    if not add_dge_symbol(msp, block, x, y, scale=r / 0.13, layer=layer):
+        if kind in {"especial", "bomba"}:
+            pts = [(x, y + r * 1.25), (x + r * 1.25, y), (x, y - r * 1.25), (x - r * 1.25, y), (x, y + r * 1.25)]
+            msp.add_lwpolyline(pts, dxfattribs={"layer": layer})
+        else:
+            msp.add_circle((x, y), r, dxfattribs={"layer": layer})
+        msp.add_line((x - r * 0.55, y - r * 0.15), (x + r * 0.55, y - r * 0.15), dxfattribs={"layer": layer})
+        msp.add_line((x - r * 0.55, y + r * 0.20), (x + r * 0.55, y + r * 0.20), dxfattribs={"layer": layer})
+        if kind == "tierra":
+            msp.add_line((x, y - r * 0.95), (x, y - r * 0.35), dxfattribs={"layer": layer})
     draw_label(msp, item, circuit, x, y)
 
 
@@ -174,8 +264,9 @@ def draw_panel(msp, item):
     x, y = float(item["x"]), float(item["y"])
     w, h = float(item.get("width", 0.55)), float(item.get("height", 0.38))
     layer = "ELEC_TABLERO"
-    rect = [(x - w / 2, y - h / 2), (x + w / 2, y - h / 2), (x + w / 2, y + h / 2), (x - w / 2, y + h / 2), (x - w / 2, y - h / 2)]
-    msp.add_lwpolyline(rect, dxfattribs={"layer": layer})
+    if not add_dge_symbol(msp, "DGE_09_91_17_TABLERO_EMPOTRADO", x, y, scale=max(w / 0.50, h / 0.30), layer=layer):
+        rect = [(x - w / 2, y - h / 2), (x + w / 2, y - h / 2), (x + w / 2, y + h / 2), (x - w / 2, y + h / 2), (x - w / 2, y - h / 2)]
+        msp.add_lwpolyline(rect, dxfattribs={"layer": layer})
     add_text(msp, item.get("label", "TG"), x, y, height=0.16, layer="ELEC_TEXTOS")
     if item.get("note"):
         add_multiline(msp, item["note"], x, y - 0.55, height=0.12, layer="ELEC_TEXTOS")
@@ -222,8 +313,14 @@ def draw_route(msp, item):
     msp.add_lwpolyline(points, dxfattribs=attribs)
     label = item.get("label", item.get("circuit", ""))
     if label:
-        mid = points[len(points) // 2]
-        add_multiline(msp, label, mid[0], mid[1] + 0.18, height=0.12, layer="ELEC_TEXTOS")
+        if "label_x" in item and "label_y" in item:
+            label_x = float(item["label_x"])
+            label_y = float(item["label_y"])
+        else:
+            mid = points[len(points) // 2]
+            label_x = mid[0] + float(item.get("label_dx", 0.0))
+            label_y = mid[1] + float(item.get("label_dy", 0.18))
+        add_multiline(msp, label, label_x, label_y, height=0.12, layer="ELEC_TEXTOS")
 
 
 def draw_legend_box(msp, x, y, width, height, title):
@@ -274,7 +371,7 @@ def draw_title(msp, data):
         return
     x = float(title.get("x", 7.5))
     y = float(title.get("y", 10.7))
-    add_text(msp, title.get("text", "PLANO ELECTRICO PRELIMINAR"), x, y, height=float(title.get("height", 0.28)), layer="ELEC_TEXTOS")
+    add_text(msp, title.get("text", "PLANO ELECTRICO"), x, y, height=float(title.get("height", 0.28)), layer="ELEC_TEXTOS")
     subtitle = title.get("subtitle")
     if subtitle:
         add_text(msp, subtitle, x, y - 0.36, height=0.16, layer="ELEC_TEXTOS")
