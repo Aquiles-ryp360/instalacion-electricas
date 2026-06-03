@@ -1,59 +1,39 @@
 \chapter{PLANOS Y LAMINAS DE DETALLE}
 
-Los planos deben colocarse en la carpeta:
+\section{Relacion de planos}
 
-\begin{center}
-\texttt{latex/planos/}
-\end{center}
-
-Cuando cada plano exista en PDF o imagen, debe guardarse con el nombre indicado y actualizarse el estado de la tabla.
+Los planos finales del informe se integran desde la carpeta \texttt{planos/}. Las laminas electricas IE-02, IE-03 e IE-04 fueron regeneradas con base en los planos arquitectonicos CAD version 3 y con datos electricos documentados en \texttt{electricos/data/}.
 
 \begin{landscape}
-\begin{longtable}{L{1.6cm}L{3.3cm}L{4.3cm}L{1.8cm}}
-\caption{Relacion de planos requeridos}\label{tab:planos}\\
+\begin{longtable}{L{1.6cm}L{4.1cm}L{4.6cm}L{2.1cm}}
+\caption{Relacion de planos del proyecto}\label{tab:planos}\\
 \toprule
-\textbf{Codigo} & \textbf{Plano} & \textbf{Archivo esperado} & \textbf{Estado} \\
+\textbf{Codigo} & \textbf{Plano} & \textbf{Archivo} & \textbf{Estado} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Codigo} & \textbf{Plano} & \textbf{Archivo esperado} & \textbf{Estado} \\
+\textbf{Codigo} & \textbf{Plano} & \textbf{Archivo} & \textbf{Estado} \\
 \midrule
 \endhead
-IE-Avance & Avance del plano eléctrico & \shortstack[l]{AVANCE DEL PLANO\\ELECTRICO1.pdf} & Entregado \\
-IE-01 & Ubicación y arquitectura/croquis & \shortstack[l]{IE-01-ubicacion-\\arquitectura.pdf} & Pendiente \\
-IE-02 & Alumbrado & \shortstack[l]{IE-02-\\alumbrado.pdf} & Pendiente \\
-IE-03 & Tomacorrientes & \shortstack[l]{IE-03-\\tomacorrientes.pdf} & Pendiente \\
-IE-04 & Circuitos y canalizaciones & \shortstack[l]{IE-04-circuitos-\\canalizaciones.pdf} & Pendiente \\
-IE-05 & Diagrama unifilar y cuadro de cargas & \shortstack[l]{IE-05-unifilar-\\cuadro-cargas.pdf} & Pendiente \\
-IE-06 & Puesta a tierra & \shortstack[l]{IE-06-\\puesta-tierra.pdf} & Pendiente \\
+IE-01 & Arquitectura referencial por niveles & \shortstack[l]{primer-piso.pdf\\segundo-piso.pdf\\tercer-piso.pdf} & Generado \\
+IE-02 & Alumbrado, interruptores y conmutadores & IE-02-alumbrado.pdf & Generado \\
+IE-03 & Tomacorrientes generales y especiales & IE-03-tomacorrientes.pdf & Generado \\
+IE-04 & Circuitos, canalizaciones, tableros, medidor y puesta a tierra & IE-04-circuitos-canalizaciones.pdf & Generado \\
+IE-05 & Diagrama unifilar y cuadro de cargas & IE-05-unifilar-cuadro-cargas.pdf & Generado \\
+IE-06 & Puesta a tierra & IE-06-puesta-tierra.pdf & Generado \\
 \bottomrule
 \end{longtable}
 \end{landscape}
 
-\section{Planos a insertar}
+\section{Planos de arquitectura}
 
-\subsection{Avance del plano eléctrico (IE-02/IE-03)}
-
-A continuación se presenta el avance del plano eléctrico correspondiente al diseño de los circuitos de alumbrado, tomacorrientes y cuadro de cargas de la vivienda.
-
-\begin{landscape}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1.35\textwidth]{planos/AVANCE DEL PLANO ELECTRICO1.pdf}
-  \caption{Avance del plano eléctrico de la vivienda (Alumbrado y Tomacorrientes)}
-  \label{fig:avance-plano}
-\end{figure}
-\end{landscape}
-
-\subsection{IE-01: Ubicación y arquitectura}
-
-A continuación, se presentan los planos de distribución arquitectónica de la vivienda para cada uno de los tres pisos, generados mediante la herramienta local.
+La arquitectura base se toma de los archivos \texttt{primer\_piso\_v3.dxf}, \texttt{segundo\_piso\_v3.dxf} y \texttt{tercer\_piso\_v3.dxf}. Estos planos se muestran como referencia de distribucion espacial.
 
 \begin{landscape}
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.35\textwidth]{planos/primer-piso.pdf}
-  \caption{Plano de Distribución Arquitectónica - Primer Piso}
+  \caption{Distribucion arquitectonica referencial - primer piso}
   \label{fig:arq-primer-piso}
 \end{figure}
 \end{landscape}
@@ -62,7 +42,7 @@ A continuación, se presentan los planos de distribución arquitectónica de la 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.35\textwidth]{planos/segundo-piso.pdf}
-  \caption{Plano de Distribución Arquitectónica - Segundo Piso}
+  \caption{Distribucion arquitectonica referencial - segundo piso}
   \label{fig:arq-segundo-piso}
 \end{figure}
 \end{landscape}
@@ -71,83 +51,80 @@ A continuación, se presentan los planos de distribución arquitectónica de la 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.35\textwidth]{planos/tercer-piso.pdf}
-  \caption{Plano de Distribución Arquitectónica - Tercer Piso}
+  \caption{Distribucion arquitectonica referencial - tercer piso}
   \label{fig:arq-tercer-piso}
 \end{figure}
 \end{landscape}
 
+\section{Planos electricos generados}
 
-\subsection{IE-02: Alumbrado - Primer Piso}
+\subsection{IE-02: Alumbrado}
 
-A continuación se presenta el diseño eléctrico para el primer nivel de la vivienda unifamiliar, conteniendo la distribución de luminarias LED, interruptores simples y de conmutación (tres vías) y canalizaciones en losa de techo.
-
-\begin{landscape}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1.35\textwidth]{planos/IE-02-alumbrado.pdf}
-  \caption{Plano de Instalaciones Eléctricas (Alumbrado e Iluminación) - Primer Piso}
-  \label{fig:alumbrado-primer-piso}
-\end{figure}
-\end{landscape}
-
-\subsection{IE-03: Tomacorrientes - Segundo Piso}
-
-A continuación se presenta el diseño de tomacorrientes generales, tomacorrientes dedicados para la cocina (C3) y toma protegida GFCI para baño, con puesta a tierra y canalizaciones en piso.
+La lamina IE-02 presenta los tres niveles con luminarias de techo, interruptores simples, interruptores conmutados en escaleras y etiquetas de circuito. El alumbrado se sectoriza como C1 para primer piso, C4 para segundo piso y C6 para tercer piso.
 
 \begin{landscape}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1.35\textwidth]{planos/IE-03-tomacorrientes.pdf}
-  \caption{Plano de Instalaciones Eléctricas (Tomacorrientes y Fuerza) - Segundo Piso}
-  \label{fig:tomacorrientes-segundo-piso}
+  \includegraphics[width=1.75\textwidth]{planos/IE-02-alumbrado.pdf}
+  \caption{IE-02 - Plano de alumbrado e interruptores}
+  \label{fig:ie02-alumbrado}
 \end{figure}
 \end{landscape}
 
-\subsection{IE-04: Circuitos y Canalizaciones - Tercer Piso}
+\subsection{IE-03: Tomacorrientes}
 
-A continuación se presenta el diseño eléctrico del tercer piso, correspondiente a los dormitorios 4 y 5, la lavandería (C4) y la bomba de agua especial (C5).
+La lamina IE-03 presenta tomacorrientes dobles con puesta a tierra, tomacorrientes protegidos en banos, puntos de cocina, lavanderia y bomba. Los circuitos de tomacorrientes se identifican como C2, C3, C5, C7, C8 y C9.
 
 \begin{landscape}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1.35\textwidth]{planos/IE-04-circuitos-canalizaciones.pdf}
-  \caption{Plano de Instalaciones Eléctricas (Canalizaciones y Cargas) - Tercer Piso}
-  \label{fig:circuitos-tercer-piso}
+  \includegraphics[width=1.75\textwidth]{planos/IE-03-tomacorrientes.pdf}
+  \caption{IE-03 - Plano de tomacorrientes y cargas especiales}
+  \label{fig:ie03-tomacorrientes}
 \end{figure}
 \end{landscape}
 
-\subsection{IE-05: Diagrama Unifilar y Cuadro de Cargas}
+\subsection{IE-04: Circuitos y canalizaciones}
 
-A continuación se presenta el diagrama unifilar general de la vivienda unifamiliar, detallando las capacidades de interrupción de los termomagnéticos y diferenciales para el tablero general TG-01 y los tableros secundarios de distribución TD-01 y TD-02.
+La lamina IE-04 muestra la superposicion integral de puntos electricos, rutas de canalizacion, tablero general TG-01, tableros TD-01 y TD-02, medidor referencial y punto de puesta a tierra. Las canalizaciones se codifican por circuito mediante capas especificas.
+
+\begin{landscape}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.75\textwidth]{planos/IE-04-circuitos-canalizaciones.pdf}
+  \caption{IE-04 - Plano de circuitos, canalizaciones, tableros y puesta a tierra}
+  \label{fig:ie04-circuitos-canalizaciones}
+\end{figure}
+\end{landscape}
+
+\section{Diagramas complementarios}
+
+\subsection{IE-05: Diagrama unifilar y cuadro de cargas}
+
+El diagrama unifilar representa la alimentacion principal, protecciones, tablero general y tableros de distribucion. Debe leerse junto con el cuadro de cargas actualizado del capitulo de calculos.
 
 \begin{landscape}
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.35\textwidth]{planos/IE-05-unifilar-cuadro-cargas.pdf}
-  \caption{Diagrama Unifilar General de la Vivienda y Subtableros}
+  \caption{IE-05 - Diagrama unifilar general y cuadro de cargas}
   \label{fig:diagrama-unifilar-gral}
 \end{figure}
 \end{landscape}
 
-\subsection{IE-06: Puesta a Tierra y Detalles de Conexión}
+\subsection{IE-06: Puesta a tierra}
 
-Se detalla la conexión de puesta a tierra desde la barra del tablero general TG-01 hasta el electrodo vertical en el pozo de tierra.
+La lamina IE-06 detalla de forma referencial la conexion desde la barra de tierra del tablero hasta el electrodo. La resistencia final debe verificarse mediante medicion en campo.
 
 \begin{landscape}
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.35\textwidth]{planos/IE-06-puesta-tierra.pdf}
-  \caption{Esquema Referencial de Puesta a Tierra y Conexión de Electrodo}
+  \caption{IE-06 - Esquema referencial de puesta a tierra}
   \label{fig:puesta-tierra-detalle}
 \end{figure}
 \end{landscape}
 
-\section{Detalles sugeridos}
+\section{Simbologia documentada}
 
-\begin{itemize}
-  \item Simbologia eléctrica usada.
-  \item Leyenda de circuitos.
-  \item Altura de interruptores y tomacorrientes, si el docente lo pide.
-  \item Detalle del tablero.
-  \item Detalle de puesta a tierra.
-\end{itemize}
+La simbologia grafica usada en los planos incluye luminaria de techo, interruptor simple, interruptor conmutado, tomacorriente doble con tierra, tomacorriente protegido, tomacorriente especial, tablero, medidor, puesta a tierra y canalizacion por circuito. La leyenda de cada lamina identifica los simbolos y los circuitos C1 a C9.
