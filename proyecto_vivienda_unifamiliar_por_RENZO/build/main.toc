@@ -1,0 +1,87 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}MEMORIA DESCRIPTIVA}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduccion}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivo general}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Objetivos especificos}{2}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Marco teorico}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Instalaciones eléctricas residenciales}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Codigo Nacional de Electricidad -- Utilizacion}{3}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Norma EM.010 Instalaciones Eléctricas Interiores}{3}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Normas Tecnicas Peruanas aplicables}{4}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Criterios técnicos de seguridad}{4}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Memoria descriptiva del proyecto}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Generalidades}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Alcance del proyecto}{5}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Condiciones de diseño adoptadas}{5}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Criterio arquitectonico general}{6}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Restricciones del trabajo}{6}{subsection.1.4.5}%
+\contentsline {section}{\numberline {1.5}Distribución de ambientes por piso}{6}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Ambientes principales}{6}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Circulaciones complementarias}{7}{subsection.1.5.2}%
+\contentsline {chapter}{\numberline {2}CALCULOS JUSTIFICATIVOS}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cálculo de la demanda máxima}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Premisas de cálculo}{9}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Formula general}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Cuadro de cargas por circuito}{9}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Levantamiento de cargas por ambiente}{11}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Interpretacion de la demanda}{13}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Diseño del tablero eléctrico general y tableros de distribución}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Criterio general de sectorizacion}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Propuesta de componentes del tablero general}{14}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Distribución funciónal de los tableros}{14}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Criterio de dimensionamiento del tablero}{14}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Distribución de circuitos}{15}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Circuitos propuestos}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Criterios de distribución por ambiente}{15}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Observaciónes de seguridad}{15}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Selección de conductores y dispositivos de protección}{16}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Criterio de selección}{16}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Selección preliminar de conductores}{16}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Protecciónes preliminares}{16}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Coordinacion conductor-protección}{18}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Observaciónes tecnicas adicionales}{18}{subsection.2.4.5}%
+\contentsline {section}{\numberline {2.5}Sistema de puesta a tierra}{18}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Función del sistema}{18}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Componentes minimos}{19}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Criterio de dimensionamiento}{19}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Recomendaciones de instalación}{19}{subsection.2.5.4}%
+\contentsline {chapter}{\numberline {3}ESPECIFICACIONES TECNICAS DE SUMINISTRO DE MATERIALES}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Alcance}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Conductores eléctricos}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Canalizaciones}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Tablero eléctrico}{23}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Interruptores y protecciones}{23}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Tomacorrientes e interruptores}{23}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Luminarias}{24}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Sistema de puesta a tierra}{24}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Cuadro de especificaciones}{24}{section.3.9}%
+\contentsline {chapter}{\numberline {4}ESPECIFICACIONES TECNICAS DE MONTAJE}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Alcance}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Replanteo}{27}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Canalizaciones y cajas}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Cableado}{27}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Tablero}{28}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Puesta a tierra}{28}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Pruebas}{28}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Seguridad}{28}{section.4.8}%
+\contentsline {chapter}{\numberline {5}CRONOGRAMA}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Alcance académico}{30}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Criterio de referencia}{30}{section.5.2}%
+\contentsline {chapter}{\numberline {6}METRADO}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Alcance}{32}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Nota tecnica}{34}{section.6.2}%
+\contentsline {chapter}{\numberline {7}PLANOS Y LAMINAS DE DETALLE}{35}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Planos a insertar}{38}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Avance del plano eléctrico (IE-02/IE-03)}{38}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}IE-01: Ubicación y arquitectura}{41}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}IE-02: Alumbrado}{48}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}IE-03: Tomacorrientes}{48}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}IE-04: Circuitos y canalizaciones}{48}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}IE-05: Diagrama unifilar y cuadro de cargas}{48}{subsection.7.1.6}%
+\contentsline {subsection}{\numberline {7.1.7}IE-06: Puesta a tierra}{48}{subsection.7.1.7}%
+\contentsline {section}{\numberline {7.2}Detalles sugeridos}{48}{section.7.2}%
+\contentsline {chapter}{\numberline {8}CONCLUSIONES, RECOMENDACIONES Y BIBLIOGRAFIA}{49}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{50}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Recomendaciones}{50}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Bibliografia}{51}{section.8.3}%

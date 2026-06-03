@@ -46,6 +46,16 @@ def validate_layout(data):
                 if field not in window:
                     raise ValueError(f"Ventana en índice {i} no tiene el campo requerido '{field}'.")
 
+    # Validar escaleras si existen
+    if "stairs" in data:
+        if not isinstance(data["stairs"], list):
+            raise ValueError("La sección 'stairs' debe ser una lista.")
+        for i, stair in enumerate(data["stairs"]):
+            required = ["x1", "y1", "x2", "y2"]
+            for field in required:
+                if field not in stair:
+                    raise ValueError(f"Escalera en índice {i} no tiene el campo requerido '{field}'.")
+
 def draw_dimension(msp, start, end, offset, label, direction="horizontal"):
     """
     Dibuja una cota arquitectónica simple con líneas de extensión y marcas oblicuas (ticks).
@@ -215,6 +225,7 @@ def main():
     doc.layers.new("TEXTOS", dxfattribs={'color': 2})
     doc.layers.new("COTAS", dxfattribs={'color': 8})
     doc.layers.new("MARCO", dxfattribs={'color': 7, 'lineweight': 50}) # Marco grueso
+    doc.layers.new("ESCALERAS", dxfattribs={'color': 5})
     
     # 1. Dibujar habitaciones y muros
     # Para evitar dibujar líneas duplicadas entre habitaciones adyacentes,
@@ -303,6 +314,27 @@ def main():
     if "windows" in data:
         for window in data["windows"]:
             draw_window(msp, window)
+
+    # 4b. Dibujar Escaleras
+    if "stairs" in data:
+        for stair in data["stairs"]:
+            x1, y1 = stair["x1"], stair["y1"]
+            x2, y2 = stair["x2"], stair["y2"]
+            steps = stair.get("steps", 6)
+            
+            # Contorno de la escalera
+            msp.add_line((x1, y1), (x1, y2), dxfattribs={'layer': 'ESCALERAS'})
+            msp.add_line((x2, y1), (x2, y2), dxfattribs={'layer': 'ESCALERAS'})
+            msp.add_line((x1, y1), (x2, y1), dxfattribs={'layer': 'ESCALERAS'})
+            msp.add_line((x1, y2), (x2, y2), dxfattribs={'layer': 'ESCALERAS'})
+            
+            # Pasos
+            width = x2 - x1
+            height = y2 - y1
+            step_h = height / steps
+            for i in range(1, steps):
+                y_curr = y1 + i * step_h
+                msp.add_line((x1, y_curr), (x2, y_curr), dxfattribs={'layer': 'ESCALERAS'})
             
     # 5. Dibujar Cotas generales externas
     limit_w = data["dimensions"]["width"]
@@ -372,6 +404,32 @@ def main():
     except Exception as e:
         print(f"Error al guardar el archivo DXF: {e}", file=sys.stderr)
         sys.exit(1)
+
+    # Renderizar PDF automáticamente usando matplotlib
+    pdf_output = args.output.replace('.dxf', '.pdf')
+    try:
+        import matplotlib.pyplot as plt
+        from ezdxf.addons.drawing import RenderContext, Frontend
+        from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
+        
+        print(f"Renderizando PDF con matplotlib: '{pdf_output}'...")
+        # Volver a cargar el documento para asegurar consistencia
+        doc_render = ezdxf.readfile(args.output)
+        msp_render = doc_render.modelspace()
+        
+        fig = plt.figure(figsize=(11.69, 8.27))  # A4 horizontal en pulgadas
+        ax = fig.add_axes([0, 0, 1, 1])
+        ax.axis('off')
+        
+        ctx = RenderContext(doc_render)
+        out = MatplotlibBackend(ax)
+        Frontend(ctx, out).draw_layout(msp_render, finalize=True)
+        
+        fig.savefig(pdf_output, dpi=300, bbox_inches='tight', pad_inches=0)
+        plt.close(fig)
+        print("¡Renderizado PDF completado con éxito!")
+    except Exception as re:
+        print(f"Advertencia: No se pudo generar el PDF automáticamente: {re}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()
