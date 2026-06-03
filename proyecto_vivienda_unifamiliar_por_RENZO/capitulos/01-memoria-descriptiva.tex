@@ -1,180 +1,120 @@
-\chapter{MEMORIA DESCRIPTIVA}
+﻿\chapter{MEMORIA DESCRIPTIVA}
 
 \section{Introduccion}
 
-El presente informe académico desarrolla la propuesta básica de una instalación eléctrica residencial para una vivienda unifamiliar de tres pisos ubicada en Jr. Lima S/N, distrito de Capachica, provincia y departamento de Puno. El trabajo se formula para el curso de Instalaciones Eléctricas I de la Escuela Profesional de Ingeniería Mecánica Eléctrica, con un enfoque técnico universitario orientado a la seguridad, funcionalidad, continuidad de servicio y cumplimiento normativo.
+El presente informe desarrolla la propuesta academica de instalaciones electricas interiores para una vivienda unifamiliar de tres niveles ubicada en Jr. Lima S/N, distrito de Capachica, provincia y departamento de Puno. El proyecto corresponde al curso de Instalaciones Electricas I y se formula con criterios de seguridad, funcionalidad, facilidad de mantenimiento y coherencia con el Codigo Nacional de Electricidad -- Utilizacion (CNE-U) y la Norma EM.010 del Reglamento Nacional de Edificaciones.
 
-La propuesta se sustenta en criterios generales del Codigo Nacional de Electricidad -- Utilizacion (CNE-U), la Norma EM.010 Instalaciones Eléctricas Interiores del Reglamento Nacional de Edificaciones (RNE) y Normas Tecnicas Peruanas (NTP) aplicables a conductores, interruptores automaticos, dispositivos diferenciales y verificación de instalaciones en viviendas. Debido a que el proyecto es exclusivamente académico, no se desarrolla financiamiento ni cronograma de ejecucion.
+La propuesta considera suministro monofasico de 220 V, 60 Hz, tablero general, tableros de distribucion, circuitos derivados, canalizaciones empotradas, protecciones termomagneticas y diferenciales, medidor referencial y sistema de puesta a tierra.
+
+\section{Datos generales del proyecto}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Datos generales de la vivienda}
+\label{tab:datos-generales-vivienda}
+\begin{tabularx}{\textwidth}{L{5.2cm}Y}
+\toprule
+\textbf{Parametro} & \textbf{Descripcion} \\
+\midrule
+Propietario & Renzo Gabriel Mamani Galindo \\
+Uso & Vivienda unifamiliar \\
+Ubicacion & Jr. Lima S/N, Capachica, Puno \\
+Niveles & Tres niveles \\
+Area techada referencial & 120 m2, considerando 40 m2 por nivel \\
+Sistema electrico & Monofasico, 220 V, 60 Hz \\
+Normas de referencia & CNE-U, RNE EM.010 y NTP aplicables \\
+Estado del diseno & Academico preliminar, sujeto a verificacion en obra \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \section{Objetivos}
 
 \subsection{Objetivo general}
 
-Desarrollar una propuesta tecnica y académica de instalación eléctrica residencial para una vivienda unifamiliar de tres pisos, considerando el cálculo de demanda, la selección de circuitos, conductores, protecciones, tablero eléctrico y sistema de puesta a tierra, bajo criterios de seguridad y normativa peruana vigente.
+Desarrollar una propuesta tecnica de instalaciones electricas interiores para la vivienda, integrando memoria descriptiva, calculos justificativos, planos electricos, cuadros de cargas y criterios de seguridad residencial.
 
 \subsection{Objetivos especificos}
 
 \begin{itemize}
-  \item Identificar los ambientes funciónales de la vivienda y su distribución por niveles.
-  \item Estimar la demanda máxima de la instalación eléctrica residencial.
-  \item Proponer la configuracion del tablero eléctrico general y tableros de distribución.
-  \item Definir la distribución de circuitos de alumbrado, tomacorrientes y cargas especiales.
-  \item Seleccionar conductores y dispositivos de protección de manera preliminar.
-  \item Describir los elementos basicos del sistema de puesta a tierra.
-  \item Sustentar tecnicamente la propuesta con normativa peruana aplicable.
+  \item Identificar los ambientes funcionales de la vivienda y su distribucion por nivel.
+  \item Definir una sectorizacion de circuitos acorde con una vivienda de tres pisos.
+  \item Ubicar luminarias, interruptores, tomacorrientes, tableros y cargas especiales sobre la arquitectura existente.
+  \item Dimensionar preliminarmente conductores y dispositivos de proteccion.
+  \item Documentar los criterios graficos y tecnicos usados en los planos electricos.
 \end{itemize}
 
-\section{Marco teorico}
+\section{Distribucion arquitectonica considerada}
 
-\subsection{Instalaciones eléctricas residenciales}
-
-Una instalación eléctrica residencial es el conjunto de conductores, canalizaciones, equipos de maniobra, protección y punto(s) de utilizacion destinados a suministrar energia eléctrica a una vivienda. Su diseño debe garantizar que la energia llegue a los equipos de forma segura, continua y con niveles aceptables de tensión, minimizando riesgos de choque eléctrico, sobrecarga, cortocircuito, incendio y deterioro prematuro de los materiales.
-
-En una vivienda unifamiliar, la instalación se organiza normalmente en circuitos derivados para alumbrado, tomacorrientes y cargas especificas. La sectorizacion por circuitos facilita la operación, el mantenimiento y la localizacion de fallas. Asimismo, permite coordinar adecuadamente la capacidad de los conductores con la protección termomagnetica y, cuando corresponde, con dispositivos diferenciales para protección de personas.
-
-\subsection{Codigo Nacional de Electricidad -- Utilizacion}
-
-El CNE-U establece reglas preventivas para salvaguardar la seguridad de las personas, la propiedad y el ambiente frente a los peligros derivados del uso de la electricidad. Su aplicación en instalaciones residenciales comprende criterios para:
-
-\begin{itemize}
-  \item Dimensionamiento de conductores.
-  \item Protección contra sobrecorrientes.
-  \item Protección contra contactos directos e indirectos.
-  \item Identificacion y uso de conductores.
-  \item Canalizaciones y accesorios.
-  \item Puesta a tierra y conductores de protección.
-  \item Tableros y seccionamiento de circuitos.
-\end{itemize}
-
-Para este proyecto, el CNE-U se toma como base principal para justificar la separacion de circuitos, la coordinacion entre conductor y protección, y la inclusion de un sistema de puesta a tierra.
-
-\subsection{Norma EM.010 Instalaciones Eléctricas Interiores}
-
-La Norma EM.010 del RNE define el alcance de las instalaciones eléctricas interiores desde la acometida hasta los puntos de utilizacion. En terminos generales, comprende acometidas, alimentadores, subalimentadores, tableros, subtableros, circuitos derivados, sistemas de protección y control, medicion, registro y puesta a tierra.
-
-Para el caso de viviendas, la EM.010 exige que el proyecto mantenga condiciones de seguridad y funcionalidad, y que la instalación se desarrolle conforme a los criterios del CNE-U. En consecuencia, esta norma respalda la ubicación del tablero, la sectorizacion de circuitos, la protección de tomacorrientes en ambientes humedos y la configuracion básica de la instalación interior.
-
-\subsection{Normas Tecnicas Peruanas aplicables}
-
-Las NTP constituyen documentos técnicos de referencia que estandarizan productos, procesos y metodos de verificación. En instalación eléctrica residencial son utiles, entre otras, las siguientes referencias:
-
-\begin{itemize}
-  \item NTP 370.252: cables aislados con compuesto termoplastico y termoestable para tensiones hasta 450/750 V.
-  \item NTP 370.053: seguridad eléctrica, selección de materiales eléctricos y conductores de protección de cobre.
-  \item NTP 370.304: instalaciones eléctricas en edificaciones para viviendas, verificación inicial y periodica.
-  \item NTP-IEC 60898-1: interruptores automaticos para protección contra sobrecorrientes en instalaciones domesticas.
-  \item NTP-IEC 61008-1: interruptores automaticos para operar por corriente diferencial residual.
-  \item NTP-IEC 60669-1: interruptores para instalaciones eléctricas fijas domesticas y similares.
-\end{itemize}
-
-En el ambito peruano, INACAL es la entidad encargada de aprobar las NTP y su consulta complementa la interpretacion tecnica de materiales y dispositivos utilizados en viviendas.
-
-\subsection{Criterios técnicos de seguridad}
-
-Para el diseño académico se adoptan los siguientes criterios:
-
-\begin{itemize}
-  \item Separacion de alumbrado, tomacorrientes y cargas especiales.
-  \item Protección termomagnetica compatible con la corriente de diseño.
-  \item Protección diferencial de 30 mA para aumentar la seguridad de las personas.
-  \item Conductores de cobre con aislamiento apto para instalaciones interiores.
-  \item Identificacion de neutro, fase y conductor de protección.
-  \item Puesta a tierra para reducir la tensión de contacto en fallas.
-  \item Reserva de capacidad en el tablero para ampliaciones menores.
-\end{itemize}
-
-\section{Memoria descriptiva del proyecto}
-
-\subsection{Generalidades}
-
-El proyecto corresponde al diseño preliminar de la instalación eléctrica interior de una vivienda unifamiliar de tres niveles, construida en mamposteria de ladrillo con elementos de hormigón y cemento. La edificacion tiene un área aproximada de 40 m2 por piso y se ubica en una zona urbana de Capachica, provincia de Puno.
-
-La instalación se concibe para un suministro monofásico de 220 V, 60 Hz, acorde con el tipo de vivienda y con el criterio académico empleado en el curso. La propuesta considera tableros de distribución, circuitos derivados, canalizaciones empotradas, sistema de protección contra sobrecorrientes, protección diferencial y sistema de puesta a tierra.
-
-\subsection{Alcance del proyecto}
-
-El alcance del trabajo es exclusivamente académico. En consecuencia:
-
-\begin{itemize}
-  \item No se desarrolla presupuesto de obra.
-  \item No se desarrolla cronograma de ejecucion.
-  \item No se realiza metrados constructivos detallados para compra real.
-  \item No se emite plano certificado para ejecucion.
-\end{itemize}
-
-La finalidad del informe es demostrar la aplicación metodologica de los criterios de instalaciones eléctricas residenciales y dejar una base tecnica ordenada para un eventual desarrollo de planos o expediente técnico.
-
-\subsection{Condiciones de diseño adoptadas}
+La arquitectura base fue tomada de los planos CAD version 3 generados en el proyecto. Los ambientes reconocidos son los siguientes:
 
 \begin{table}[H]
 \centering
 \small
-\caption{Condiciones de diseño adoptadas}
-\label{tab:condiciones-diseno}
-\begin{tabular}{L{6.2cm}>{\centering\arraybackslash}p{4cm}}
+\caption{Ambientes reconocidos por nivel}
+\label{tab:ambientes-reconocidos}
+\begin{tabularx}{\textwidth}{L{2.4cm}Y}
 \toprule
-\textbf{Parametro} & \textbf{Valor adoptado} \\
+\textbf{Nivel} & \textbf{Ambientes considerados} \\
 \midrule
-Tensión nominal & 220 V \\
-Frecuencia & 60 Hz \\
-Sistema & Monofásico \\
-Factor de potencia referencial & 0.90 \\
-Material de conductor & Cobre \\
-Tipo de instalación & Interior residencial empotrada \\
-Zona & Urbana \\
-Uso & Vivienda unifamiliar \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsection{Criterio arquitectonico general}
-
-La vivienda se organiza en tres niveles. Por el tamano del lote y el metraje construido, el diseño prioriza la reduccion de longitudes de circuito, la facilidad de mantenimiento y el ordenamiento de las cargas por función. La ubicación del tablero general se propone en el primer piso, cerca del ingreso y en zona accesible para maniobra, inspeccion y corte de emergencia.
-
-\subsection{Restricciones del trabajo}
-
-Este documento no sustituye un expediente técnico para construccion ni una revision firmada por profesional habilitado. Toda dimension, sección o protección propuesta tiene caracter preliminar y debe verificarse con los planos arquitectonicos definitivos, las tablas del fabricante y los requisitos de la empresa distribuidora local.
-
-\section{Distribución de ambientes por piso}
-
-Se consideran siete ambientes principales y circulaciones complementarias. Las circulaciones, escaleras y pasadizos se describen como áreas de apoyo y no incrementan el número de ambientes principales declarados en el proyecto.
-
-\subsection{Ambientes principales}
-
-\begin{table}[H]
-\centering
-\small
-\caption{Distribución de ambientes principales por piso}
-\label{tab:ambientes-principales}
-\begin{tabularx}{\textwidth}{p{3.1cm}p{1.8cm}p{5.2cm}>{\raggedright\arraybackslash}X}
-\toprule
-\textbf{Ambiente} & \textbf{Nivel} & \textbf{Funcion eléctrica} & \textbf{Observación} \\
-\midrule
-Sala-comedor & 1er piso & Alumbrado y TCs. & Área social de uso continuo \\
-Cocina & 1er piso & Alumbrado, TCs. y carga domestica & Requiere circuitos con mayor criterio de protección \\
-Dormitorio principal & 2do piso & Alumbrado y TCs. & Uso privado \\
-Dormitorio secundario 1 & 2do piso & Alumbrado y TCs. & Uso privado \\
-Dormitorio secundario 2 & 3er piso & Alumbrado y TCs. & Uso privado o visitas \\
-Baño & 1er y 2do piso & Alumbrado y TC protegido & Ambito de humedad, exige mayor seguridad \\
-Lavandería & 3er piso & Alumbrado, TCs. y carga especial & Puede alojar lavadora o bomba auxiliar \\
+Primer piso & Tienda o ambiente frontal, cocina, pasadizo longitudinal y escalera. \\
+Segundo piso & Dormitorio principal, dormitorio 3, sala/hall, bano y escalera. \\
+Tercer piso & Dormitorio 4, dormitorio 5, pasadizo/vestibulo, bano/lavanderia y escalera. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{Circulaciones complementarias}
+El ambiente frontal del primer piso se rotula como tienda en el plano arquitectonico. Para efectos electricos se lo considera ambiente de uso frecuente, por lo que se le asignan luminarias y tomacorrientes suficientes para uso social o comercial ligero. Su uso final debe confirmarse en obra.
+
+\section{Criterio de sectorizacion electrica}
+
+La version anterior del proyecto concentraba las cargas en pocos circuitos. Para mejorar claridad, mantenimiento y lectura de planos, se adopta una sectorizacion por nivel y por cargas especiales. Esta propuesta evita mezclar alumbrado y tomacorrientes de toda la vivienda en un unico circuito general.
 
 \begin{table}[H]
 \centering
 \small
-\caption{Áreas complementarias y criterio de instalación}
-\label{tab:circulaciones}
-\begin{tabularx}{\textwidth}{p{3.4cm}p{2.2cm}>{\raggedright\arraybackslash}X}
+\caption{Sectorizacion electrica adoptada}
+\label{tab:sectorizacion-adoptada}
+\begin{tabularx}{\textwidth}{L{1.4cm}L{4.4cm}Y}
 \toprule
-\textbf{Área complementaria} & \textbf{Nivel} & \textbf{Criterio de instalación} \\
+\textbf{Circuito} & \textbf{Uso} & \textbf{Criterio} \\
 \midrule
-Escalera & Los tres niveles & Alumbrado de paso con control local o conmutado \\
-Pasadizos & Los tres niveles & Puntos de luz para seguridad de circulacion \\
-Hall de acceso & 1er piso & Punto de corte y maniobra de la instalación \\
+C1 & Alumbrado del primer piso & Atiende tienda, cocina, pasadizo y escalera del primer nivel. \\
+C2 & Tomacorrientes generales del primer piso & Atiende tienda y tomacorriente auxiliar del pasadizo. \\
+C3 & Cocina & Circuito independiente para tomacorrientes de pequenos artefactos y refrigeracion. \\
+C4 & Alumbrado del segundo piso & Atiende dormitorios, hall, bano y escalera del segundo nivel. \\
+C5 & Tomacorrientes generales del segundo piso & Atiende dormitorios, hall y tomacorriente protegido de bano. \\
+C6 & Alumbrado del tercer piso & Atiende dormitorios, pasadizo, bano/lavanderia y escalera. \\
+C7 & Tomacorrientes generales del tercer piso & Atiende dormitorios y tomacorriente protegido de bano. \\
+C8 & Lavanderia & Circuito dedicado para lavadora y tomacorriente de servicio. \\
+C9 & Bomba de agua & Circuito dedicado para bomba o carga de servicio equivalente. \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\section{Tableros, medidor y puesta a tierra}
+
+Se propone ubicar el tablero general TG-01 en el primer piso, cerca del ingreso y en zona accesible. El medidor se representa de forma referencial en fachada o ingreso. Por la existencia de tres niveles, se consideran dos tableros de distribucion: TD-01 asociado al segundo piso y TD-02 asociado al tercer piso y cargas de servicio.
+
+\begin{itemize}
+  \item \textbf{TG-01:} tablero general de corte y proteccion principal.
+  \item \textbf{TD-01:} tablero de distribucion para el segundo nivel.
+  \item \textbf{TD-02:} tablero de distribucion para el tercer nivel, lavanderia y bomba.
+  \item \textbf{M:} medidor referencial en fachada o zona de ingreso.
+  \item \textbf{PT:} puesta a tierra referencial, su ubicacion final debe validarse en campo.
+\end{itemize}
+
+\section{Criterios de ubicacion de puntos}
+
+Los puntos electricos se distribuyen con criterio preliminar sobre los ambientes existentes. Las luminarias se ubican preferentemente al centro de ambientes pequenos y se duplican en ambientes alargados o de uso frecuente. Los interruptores se colocan cerca de accesos, evitando quedar detras de puertas. Los tomacorrientes se distribuyen en muros utiles, con proteccion especial en banos y circuitos independientes para cocina, lavanderia y bomba.
+
+\section{Observaciones y datos por confirmar}
+
+\begin{itemize}
+  \item Confirmar si el ambiente frontal del primer piso funcionara como tienda, sala o dormitorio.
+  \item Confirmar ubicacion definitiva del medidor con la empresa distribuidora.
+  \item Confirmar ubicacion final de TG-01, TD-01 y TD-02 en obra.
+  \item Verificar recorridos reales de canalizacion antes de ejecutar.
+  \item Verificar potencia real de bomba, lavadora y equipos de cocina.
+\end{itemize}
