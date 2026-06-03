@@ -1,0 +1,40 @@
+========================================================================
+LISTA DE IMPRESIÓN - ENTREGABLE 3 DE JUNIO
+========================================================================
+Curso: Instalaciones Eléctricas I
+Estudiante: Renzo Gabriel Mamani Galindo
+
+A continuación se detallan los archivos contenidos en la carpeta 
+"Para_Imprimir" que debes imprimir para la entrega del avance:
+
+1. Informe_Vivienda_Renzo_3_Junio.pdf
+   - Contenido: Portada, Memoria Descriptiva y Cálculos de Máxima Demanda.
+   - Formato: Impresión en papel tamaño A4 (doble cara recomendado).
+   - Páginas: 14 páginas en total.
+
+2. planos_electricos (Láminas individuales):
+   Recomendación: Imprimir en tamaño de lámina (A1 o A2, según pida el 
+   docente o escala de los dibujos). Consulta con tu centro de impresión.
+
+   a) plano_electrico_primer_piso.pdf
+      - Plano de Alumbrado y Tomacorrientes del Primer Piso.
+   
+   b) plano_electrico_segundo_piso.pdf
+      - Plano de Alumbrado y Tomacorrientes del Segundo Piso.
+   
+   c) plano_electrico_tercer_piso.pdf
+      - Plano de Alumbrado y Tomacorrientes del Tercer Piso.
+   
+   d) IE_05_unifilar_cuadro_cargas.pdf
+      - Diagrama Unifilar del Tablero General, Subtableros y Cuadro de Cargas.
+   
+   e) IE_06_puesta_tierra.pdf
+      - Detalle constructivo del pozo de puesta a tierra y conexiones.
+   
+   f) IE_07_simbologia_detalles.pdf
+      - Lámina de Leyenda, Simbología normalizada y Especificaciones de montaje.
+
+3. AVANCE_DEL_PLANO_ELECTRICO1.pdf
+   - Plano general en PDF exportado del AutoCAD. Opcional si el docente 
+     desea ver la lámina completa en un solo archivo antes de las divisiones.
+========================================================================
