@@ -279,18 +279,31 @@ def main():
             dim_y = y_center - 0.25
         
         # 3. Dibujar etiquetas de textos en el centro de las habitaciones
-        # Nombre de la habitación
-        msp.add_text(
-            room["name"].upper(), 
-            dxfattribs={'layer': 'TEXTOS', 'height': 0.22}
-        ).set_placement((x_center, text_y), align=TextEntityAlignment.MIDDLE_CENTER)
+        # Solo se dibuja si el nombre no está vacío y no empieza con guión bajo (útil para corredores auxiliares o vestíbulos)
+        if room["name"] and not room["name"].startswith("_"):
+            # Nombre de la habitación
+            msp.add_text(
+                room["name"].upper(), 
+                dxfattribs={'layer': 'TEXTOS', 'height': 0.22}
+            ).set_placement((x_center, text_y), align=TextEntityAlignment.MIDDLE_CENTER)
+            
+            # Dimensiones de la habitación (e.g. 4.00 x 4.00 m)
+            dim_text = f"{rw:.2f} x {rh:.2f} m"
+            msp.add_text(
+                dim_text, 
+                dxfattribs={'layer': 'TEXTOS', 'height': 0.15}
+            ).set_placement((x_center, dim_y), align=TextEntityAlignment.MIDDLE_CENTER)
         
-        # Dimensiones de la habitación (e.g. 4.00 x 4.00 m)
-        dim_text = f"{rw:.2f} x {rh:.2f} m"
-        msp.add_text(
-            dim_text, 
-            dxfattribs={'layer': 'TEXTOS', 'height': 0.15}
-        ).set_placement((x_center, dim_y), align=TextEntityAlignment.MIDDLE_CENTER)
+    # Cargar y remover los muros ignorados (ej. uniones libres de pasadizos o arcos de paso)
+    ignored_walls = set()
+    if "ignored_walls" in data:
+        for p in data["ignored_walls"]:
+            p1, p2 = p
+            seg = tuple(sorted([tuple(p1), tuple(p2)]))
+            ignored_walls.add(seg)
+            
+    # Quitar de la lista de muros
+    walls = walls - ignored_walls
         
     # Dibujar los muros en la capa MUROS (como líneas dobles para representar espesor de muro)
     for start, end in walls:

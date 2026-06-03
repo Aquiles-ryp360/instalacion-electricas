@@ -54,8 +54,24 @@
       "name": "Pasadizo",
       "x": 0.0,
       "y": 3.0,
-      "width": 15.0,
+      "width": 7.5,
       "height": 1.5
+    },
+    {
+      "id": "R6_2",
+      "name": "_Pasadizo2",
+      "x": 9.0,
+      "y": 3.0,
+      "width": 6.0,
+      "height": 1.5
+    },
+    {
+      "id": "R6_3",
+      "name": "_Lobby",
+      "x": 7.5,
+      "y": 0.0,
+      "width": 1.5,
+      "height": 4.5
     },
     {
       "id": "R7",
@@ -119,10 +135,10 @@
       "id": "D5",
       "room_from": "Pasadizo",
       "room_to": "Baño",
-      "x": 6.7,
-      "y": 3.0,
+      "x": 7.5,
+      "y": 2.2,
       "width": 0.8,
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "swing": "bottom-left"
     },
     {
@@ -130,9 +146,9 @@
       "room_from": "Pasadizo",
       "room_to": "Cuarto con cama 2",
       "x": 9.0,
-      "y": 3.0,
+      "y": 2.2,
       "width": 0.8,
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "swing": "bottom-right"
     }
   ],
@@ -193,5 +209,9 @@
       "width": 0.8,
       "orientation": "horizontal"
     }
+  ],
+  "ignored_walls": [
+    [[7.5, 3.0], [7.5, 4.5]],
+    [[9.0, 3.0], [9.0, 4.5]]
   ]
 }
