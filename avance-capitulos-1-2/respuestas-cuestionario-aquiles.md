@@ -8,15 +8,15 @@
 | Docente / ingeniero | Pendiente de completar | Pendiente |
 | Fecha de avance | 01 de junio de 2026 | Definido |
 | Direccion o referencia | Avenida Horacio con Jr. Marineros, manzana F7, lotes 11 y 12 | Definido |
-| Distrito | San Miguel | Por confirmar |
-| Provincia | San Roman, referencia Juliaca | Por confirmar |
+| Distrito | San Miguel | Definido |
+| Provincia | San Román | Definido |
 | Departamento | Puno | Definido |
 | Zona | Urbana | Definido |
-| Tipo de vivienda real | Vivienda usada por mas de una familia | Observacion |
+| Tipo de vivienda real | Vivienda unifamiliar (casa grande) | Definido |
 | Alcance academico adoptado | Vivienda unifamiliar para 7 miembros | Definido |
 | Material predominante | Ladrillo y concreto | Definido |
-| Area del primer piso | Desconocida | Observacion |
-| Area del segundo piso | Desconocida; se asumira similar al primer piso, dividido por ambientes | Observacion |
+| Area del primer piso | Por definir (el primer piso tiene menos área construida que el segundo) | En proceso |
+| Area del segundo piso | Por definir (aproximadamente 42.56 m² construidos, terreno total 134.18 m²) | En proceso |
 | Empresa distribuidora | Electro Puno | Definido |
 | Sistema asumido | Monofasico, 220 V, 60 Hz | Preliminar |
 
