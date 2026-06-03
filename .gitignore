@@ -29,3 +29,12 @@ S.U. ARICATO_PHRA-SANDIA.rar
 *.dwl
 *.dwl2
 plot.log
+
+# Python virtual environments and cache
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+

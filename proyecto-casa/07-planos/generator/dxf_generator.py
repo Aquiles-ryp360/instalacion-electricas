@@ -1,0 +1,341 @@
+#!/usr/bin/env python3
+import argparse
+import json
+import os
+import sys
+from ezdxf.enums import TextEntityAlignment
+
+
+def validate_layout(data):
+    if not isinstance(data, dict):
+        raise ValueError("El archivo JSON debe contener un objeto/diccionario raíz.")
+    if "dimensions" not in data:
+        raise ValueError("Falta la sección 'dimensions' en el JSON.")
+    if "rooms" not in data or not isinstance(data["rooms"], list):
+        raise ValueError("Falta la lista 'rooms' en el JSON.")
+    
+    # Validar dimensiones
+    dims = data["dimensions"]
+    if "width" not in dims or "height" not in dims:
+        raise ValueError("La sección 'dimensions' debe tener 'width' y 'height'.")
+        
+    # Validar habitaciones
+    for i, room in enumerate(data["rooms"]):
+        required = ["name", "x", "y", "width", "height"]
+        for field in required:
+            if field not in room:
+                raise ValueError(f"Habitación en índice {i} no tiene el campo requerido '{field}'.")
+                
+    # Validar puertas si existen
+    if "doors" in data:
+        if not isinstance(data["doors"], list):
+            raise ValueError("La sección 'doors' debe ser una lista.")
+        for i, door in enumerate(data["doors"]):
+            required = ["x", "y", "width", "orientation", "swing"]
+            for field in required:
+                if field not in door:
+                    raise ValueError(f"Puerta en índice {i} no tiene el campo requerido '{field}'.")
+                    
+    # Validar ventanas si existen
+    if "windows" in data:
+        if not isinstance(data["windows"], list):
+            raise ValueError("La sección 'windows' debe ser una lista.")
+        for i, window in enumerate(data["windows"]):
+            required = ["x", "y", "width", "orientation"]
+            for field in required:
+                if field not in window:
+                    raise ValueError(f"Ventana en índice {i} no tiene el campo requerido '{field}'.")
+
+def draw_dimension(msp, start, end, offset, label, direction="horizontal"):
+    """
+    Dibuja una cota arquitectónica simple con líneas de extensión y marcas oblicuas (ticks).
+    """
+    layer = "COTAS"
+    x1, y1 = start
+    x2, y2 = end
+    
+    if direction == "horizontal":
+        y_dim = y1 + offset
+        # Línea de cota principal
+        msp.add_line((x1, y_dim), (x2, y_dim), dxfattribs={'layer': layer})
+        # Líneas de extensión
+        msp.add_line((x1, y1), (x1, y_dim + (0.1 if offset > 0 else -0.1)), dxfattribs={'layer': layer})
+        msp.add_line((x2, y2), (x2, y_dim + (0.1 if offset > 0 else -0.1)), dxfattribs={'layer': layer})
+        # Marcas oblicuas (ticks)
+        tick_len = 0.12
+        msp.add_line((x1 - tick_len, y_dim - tick_len), (x1 + tick_len, y_dim + tick_len), dxfattribs={'layer': layer})
+        msp.add_line((x2 - tick_len, y_dim - tick_len), (x2 + tick_len, y_dim + tick_len), dxfattribs={'layer': layer})
+        # Texto de cota
+        text_y = y_dim + 0.15 if offset > 0 else y_dim - 0.35
+        msp.add_text(label, dxfattribs={'layer': layer, 'height': 0.18}).set_placement(((x1 + x2)/2, text_y), align=TextEntityAlignment.MIDDLE_CENTER)
+    else: # vertical
+        x_dim = x1 + offset
+        # Línea de cota principal
+        msp.add_line((x_dim, y1), (x_dim, y2), dxfattribs={'layer': layer})
+        # Líneas de extensión
+        msp.add_line((x1, y1), (x_dim + (0.1 if offset > 0 else -0.1), y1), dxfattribs={'layer': layer})
+        msp.add_line((x2, y2), (x_dim + (0.1 if offset > 0 else -0.1), y2), dxfattribs={'layer': layer})
+        # Marcas oblicuas
+        tick_len = 0.12
+        msp.add_line((x_dim - tick_len, y1 - tick_len), (x_dim + tick_len, y1 + tick_len), dxfattribs={'layer': layer})
+        msp.add_line((x_dim - tick_len, y2 - tick_len), (x_dim + tick_len, y2 + tick_len), dxfattribs={'layer': layer})
+        # Texto de cota (rotado 90 grados)
+        text_x = x_dim + 0.15 if offset > 0 else x_dim - 0.35
+        msp.add_text(label, dxfattribs={'layer': layer, 'height': 0.18, 'rotation': 90}).set_placement((text_x, (y1 + y2)/2), align=TextEntityAlignment.MIDDLE_CENTER)
+
+def draw_door(msp, door):
+    """
+    Dibuja una puerta con su hoja abierta y la trayectoria del arco de giro.
+    """
+    layer = "PUERTAS"
+    x = door["x"]
+    y = door["y"]
+    w = door["width"]
+    ori = door["orientation"]
+    swing = door["swing"]
+    
+    if ori == "horizontal":
+        if swing == "top-right":
+            # Hinge at (x, y), leaf goes up, arc starts at (x + w, y) to (x, y + w)
+            msp.add_line((x, y), (x, y + w), dxfattribs={'layer': layer})
+            msp.add_arc((x, y), w, 0, 90, dxfattribs={'layer': layer})
+        elif swing == "top-left":
+            # Hinge at (x + w, y), leaf goes up, arc starts at (x + w, y + w) to (x, y)
+            msp.add_line((x + w, y), (x + w, y + w), dxfattribs={'layer': layer})
+            msp.add_arc((x + w, y), w, 90, 180, dxfattribs={'layer': layer})
+        elif swing == "bottom-right":
+            # Hinge at (x, y), leaf goes down, arc starts at (x, y - w) to (x + w, y)
+            msp.add_line((x, y), (x, y - w), dxfattribs={'layer': layer})
+            msp.add_arc((x, y), w, 270, 360, dxfattribs={'layer': layer})
+        elif swing == "bottom-left":
+            # Hinge at (x + w, y), leaf goes down, arc starts at (x, y) to (x + w, y - w)
+            msp.add_line((x + w, y), (x + w, y - w), dxfattribs={'layer': layer})
+            msp.add_arc((x + w, y), w, 180, 270, dxfattribs={'layer': layer})
+    else: # vertical
+        if swing == "top-right":
+            # Hinge at (x, y), leaf goes right, arc starts at (x + w, y) to (x, y + w)
+            msp.add_line((x, y), (x + w, y), dxfattribs={'layer': layer})
+            msp.add_arc((x, y), w, 0, 90, dxfattribs={'layer': layer})
+        elif swing == "top-left":
+            # Hinge at (x, y), leaf goes left, arc starts at (x, y + w) to (x - w, y)
+            msp.add_line((x, y), (x - w, y), dxfattribs={'layer': layer})
+            msp.add_arc((x, y), w, 90, 180, dxfattribs={'layer': layer})
+        elif swing == "bottom-right":
+            # Hinge at (x, y + w), leaf goes right, arc starts at (x, y) to (x + w, y + w)
+            msp.add_line((x, y + w), (x + w, y + w), dxfattribs={'layer': layer})
+            msp.add_arc((x, y + w), w, 270, 360, dxfattribs={'layer': layer})
+        elif swing == "bottom-left":
+            # Hinge at (x, y + w), leaf goes left, arc starts at (x - w, y + w) to (x, y)
+            msp.add_line((x, y + w), (x - w, y + w), dxfattribs={'layer': layer})
+            msp.add_arc((x, y + w), w, 180, 270, dxfattribs={'layer': layer})
+
+def draw_window(msp, window):
+    """
+    Dibuja una ventana como un rectángulo estrecho con una línea central.
+    """
+    layer = "VENTANAS"
+    x = window["x"]
+    y = window["y"]
+    w = window["width"]
+    ori = window["orientation"]
+    thick = 0.15 # Espesor de ventana estándar (espesor del muro)
+    
+    if ori == "horizontal":
+        # Marco exterior de la ventana
+        x1, y1 = x, y - thick/2
+        x2, y2 = x + w, y + thick/2
+        # Dibujar líneas del rectángulo
+        msp.add_line((x1, y1), (x2, y1), dxfattribs={'layer': layer})
+        msp.add_line((x2, y1), (x2, y2), dxfattribs={'layer': layer})
+        msp.add_line((x2, y2), (x1, y2), dxfattribs={'layer': layer})
+        msp.add_line((x1, y2), (x1, y1), dxfattribs={'layer': layer})
+        # Línea central de vidrio
+        msp.add_line((x1, y), (x2, y), dxfattribs={'layer': layer})
+    else: # vertical
+        x1, y1 = x - thick/2, y
+        x2, y2 = x + thick/2, y + w
+        # Dibujar líneas del rectángulo
+        msp.add_line((x1, y1), (x2, y1), dxfattribs={'layer': layer})
+        msp.add_line((x2, y1), (x2, y2), dxfattribs={'layer': layer})
+        msp.add_line((x2, y2), (x1, y2), dxfattribs={'layer': layer})
+        msp.add_line((x1, y2), (x1, y1), dxfattribs={'layer': layer})
+        # Línea central de vidrio
+        msp.add_line((x, y1), (x, y2), dxfattribs={'layer': layer})
+
+def main():
+    parser = argparse.ArgumentParser(description="Generador automático de planos DXF a partir de JSON")
+    parser.add_argument("--input", default="layout_example.json", help="Ruta del archivo JSON de entrada")
+    parser.add_argument("--output", default="plan_distribucion.dxf", help="Ruta del archivo DXF de salida")
+    args = parser.parse_args()
+    
+    # Resolver rutas relativas al directorio del script si es necesario
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    input_path = args.input
+    if not os.path.isabs(input_path) and not os.path.exists(input_path):
+        # Intentar ruta relativa al script
+        possible_path = os.path.join(script_dir, args.input)
+        if os.path.exists(possible_path):
+            input_path = possible_path
+            
+    if not os.path.exists(input_path):
+        print(f"Error: El archivo de entrada '{args.input}' no existe.", file=sys.stderr)
+        sys.exit(1)
+        
+    try:
+        with open(input_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"Error al leer/analizar el archivo JSON: {e}", file=sys.stderr)
+        sys.exit(1)
+        
+    try:
+        validate_layout(data)
+    except ValueError as ve:
+        print(f"Error de validación del diseño: {ve}", file=sys.stderr)
+        sys.exit(1)
+        
+    try:
+        import ezdxf
+    except ImportError:
+        print("Error: La librería 'ezdxf' no está instalada. Ejecute 'pip install ezdxf'.", file=sys.stderr)
+        sys.exit(1)
+        
+    print(f"Generando plano CAD para el proyecto: '{data.get('project', 'Sin nombre')}'...")
+    
+    # Crear un nuevo dibujo DXF (formato R2010 es compatible con la mayoría de visores)
+    doc = ezdxf.new("R2010", setup=True)
+    msp = doc.modelspace()
+    
+    # Crear y configurar capas con colores estandarizados
+    # Colores ACI (AutoCAD Color Index): 7=Blanco/Negro, 1=Rojo, 4=Cian, 2=Amarillo, 8=Gris
+    doc.layers.new("MUROS", dxfattribs={'color': 7, 'lineweight': 35}) # Grosor de línea 0.35 mm
+    doc.layers.new("PUERTAS", dxfattribs={'color': 1})
+    doc.layers.new("VENTANAS", dxfattribs={'color': 4})
+    doc.layers.new("TEXTOS", dxfattribs={'color': 2})
+    doc.layers.new("COTAS", dxfattribs={'color': 8})
+    doc.layers.new("MARCO", dxfattribs={'color': 7, 'lineweight': 50}) # Marco grueso
+    
+    # 1. Dibujar habitaciones y muros
+    # Para evitar dibujar líneas duplicadas entre habitaciones adyacentes,
+    # recopilamos todos los segmentos de muro únicos.
+    walls = set()
+    
+    for room in data["rooms"]:
+        rx, ry = room["x"], room["y"]
+        rw, rh = room["width"], room["height"]
+        
+        # Segmentos de la habitación (ordenados para evitar duplicados semánticos)
+        # Cada segmento se representa como ((x1, y1), (x2, y2)) ordenados
+        seg_bottom = tuple(sorted([(rx, ry), (rx + rw, ry)]))
+        seg_top = tuple(sorted([(rx, ry + rh), (rx + rw, ry + rh)]))
+        seg_left = tuple(sorted([(rx, ry), (rx, ry + rh)]))
+        seg_right = tuple(sorted([(rx + rw, ry), (rx + rw, ry + rh)]))
+        
+        walls.add(seg_bottom)
+        walls.add(seg_top)
+        walls.add(seg_left)
+        walls.add(seg_right)
+        
+        # 2. Dibujar etiquetas de textos en el centro de las habitaciones
+        x_center = rx + rw / 2
+        y_center = ry + rh / 2
+        
+        # Nombre de la habitación
+        msp.add_text(
+            room["name"].upper(), 
+            dxfattribs={'layer': 'TEXTOS', 'height': 0.22}
+        ).set_placement((x_center, y_center), align=TextEntityAlignment.MIDDLE_CENTER)
+        
+        # Dimensiones de la habitación (e.g. 4.00 x 4.00 m)
+        dim_text = f"{rw:.2f} x {rh:.2f} m"
+        msp.add_text(
+            dim_text, 
+            dxfattribs={'layer': 'TEXTOS', 'height': 0.15}
+        ).set_placement((x_center, y_center - 0.25), align=TextEntityAlignment.MIDDLE_CENTER)
+        
+    # Dibujar los muros en la capa MUROS
+    for start, end in walls:
+        msp.add_line(start, end, dxfattribs={'layer': 'MUROS'})
+        
+    # 3. Dibujar Puertas
+    if "doors" in data:
+        for door in data["doors"]:
+            draw_door(msp, door)
+            
+    # 4. Dibujar Ventanas
+    if "windows" in data:
+        for window in data["windows"]:
+            draw_window(msp, window)
+            
+    # 5. Dibujar Cotas generales externas
+    limit_w = data["dimensions"]["width"]
+    limit_h = data["dimensions"]["height"]
+    
+    # Cota de ancho total (abajo)
+    draw_dimension(msp, (0.0, 0.0), (limit_w, 0.0), -1.0, f"ANCHO TOTAL: {limit_w:.2f} m", "horizontal")
+    # Cota de alto total (izquierda)
+    draw_dimension(msp, (0.0, 0.0), (0.0, limit_h), -1.0, f"ALTO TOTAL: {limit_h:.2f} m", "vertical")
+    
+    # 6. Dibujar Marco y Bloque de Título (Title Block)
+    margin = 2.0
+    # Línea de marco exterior
+    mx1, my1 = -margin, -margin
+    mx2, my2 = limit_w + margin, limit_h + margin
+    
+    # Rectángulo del marco
+    msp.add_line((mx1, my1), (mx2, my1), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((mx2, my1), (mx2, my2), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((mx2, my2), (mx1, my2), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((mx1, my2), (mx1, my1), dxfattribs={'layer': 'MARCO'})
+    
+    # Rectángulo interno del marco (doble línea decorativa)
+    offset_m = 0.08
+    imx1, imy1 = mx1 + offset_m, my1 + offset_m
+    imx2, imy2 = mx2 - offset_m, my2 - offset_m
+    msp.add_line((imx1, imy1), (imx2, imy1), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((imx2, imy1), (imx2, imy2), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((imx2, imy2), (imx1, imy2), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((imx1, imy2), (imx1, imy1), dxfattribs={'layer': 'MARCO'})
+    
+    # Cajetín de Título (Bottom-Right, del marco interno)
+    c_w = 4.8
+    c_h = 1.6
+    cx1 = imx2 - c_w
+    cy1 = imy1
+    cx2 = imx2
+    cy2 = imy1 + c_h
+    
+    # Bordes del cajetín
+    msp.add_line((cx1, cy1), (cx1, cy2), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((cx1, cy2), (cx2, cy2), dxfattribs={'layer': 'MARCO'})
+    
+    # Líneas divisorias internas del cajetín
+    msp.add_line((cx1, cy1 + 0.4), (cx2, cy1 + 0.4), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((cx1, cy1 + 0.8), (cx2, cy1 + 0.8), dxfattribs={'layer': 'MARCO'})
+    msp.add_line((cx1, cy1 + 1.2), (cx2, cy1 + 1.2), dxfattribs={'layer': 'MARCO'})
+    
+    # Textos del cajetín
+    author = data.get("author", "ESTUDIANTE")
+    project_name = data.get("project", "PROYECTO CAD")
+    date_str = data.get("date", "2026-06-03")
+    
+    # Línea 4 (superior): Universidad
+    msp.add_text("UNAP - ESCUELA INGENIERIA MECANICA ELECTRICA", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 1.35)})
+    # Línea 3: Nombre del proyecto
+    msp.add_text(f"PROY: {project_name.upper()}", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 0.95)})
+    # Línea 2: Autor / Estudiante
+    msp.add_text(f"DIB: {author.upper()}", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 0.55)})
+    # Línea 1: Fecha y Escala
+    msp.add_text(f"FECHA: {date_str}   |   ESC: S/E (MTS)", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'insert': (cx1 + 0.1, cy1 + 0.15)})
+    
+    # Guardar archivo DXF
+    try:
+        doc.saveas(args.output)
+        print(f"¡Éxito! Plano guardado en: '{args.output}'")
+    except Exception as e:
+        print(f"Error al guardar el archivo DXF: {e}", file=sys.stderr)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
