@@ -36,16 +36,15 @@ Donde $P_{inst}$ es la potencia instalada, $P_{dem}$ es la potencia demandada, $
 
 \section{Cuadro de cargas por circuito}
 
-\begin{landscape}
 \begin{table}[H]
 \centering
-\scriptsize
-\setlength{\tabcolsep}{4pt}
+\small
+\setlength{\tabcolsep}{3pt}
 \caption{Cuadro de cargas por circuito (6 Circuitos)}
 \label{tab:cuadro-cargas-circuito}
-\begin{tabularx}{\textwidth}{L{1.0cm}L{4.1cm}r r r r L{2.5cm}Y}
+\begin{tabularx}{\textwidth}{l Y c r c r Y Y}
 \toprule
-\textbf{Cto.} & \textbf{Uso} & \textbf{Puntos} & \textbf{Pot. inst. W} & \textbf{Factor} & \textbf{Pot. dem. W} & \textbf{Proteccion} & \textbf{Conductor} \\
+\textbf{Cto.} & \textbf{Uso} & \textbf{Ptos.} & \textbf{P. Inst. (W)} & \textbf{F.D.} & \textbf{P. Dem. (W)} & \textbf{Protección} & \textbf{Conductor} \\
 \midrule
 C1 & Alumbrado primer piso & 5 & 250 & 1.00 & 250 & 2P-10A & 3 x 1.5 mm2 Cu \\
 C2 & Tomacorrientes primer piso & 6 & 1080 & 0.70 & 756 & 2P-16A & 3 x 2.5 mm2 Cu \\
@@ -57,23 +56,19 @@ C6 & Tomacorrientes tercer piso & 10 & 1800 & 0.70 & 1260 & 2P-16A & 3 x 2.5 mm2
 \bottomrule
 \end{tabularx}
 \end{table}
-\end{landscape}
 
 \section{Levantamiento de cargas por ambiente}
 
-\begin{landscape}
-\scriptsize
+\begin{table}[H]
+\centering
+\small
 \setlength{\tabcolsep}{3pt}
-\begin{longtable}{c L{2.6cm} L{3.2cm} L{2.4cm} c r r L{1.0cm} L{3.2cm}}
-\caption{Levantamiento de cargas por ambiente}\label{tab:levantamiento-cargas}\\
+\caption{Levantamiento de cargas por ambiente}
+\label{tab:levantamiento-cargas}
+\begin{tabularx}{\textwidth}{c c Y c c r r c Y}
 \toprule
-\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Cto.} & \textbf{Observacion} \\
+\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Cto.} & \textbf{Observación} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Cto.} & \textbf{Observacion} \\
-\midrule
-\endhead
 1 & Primer piso & Luminaria LED & Alumbrado & 5 & 50 & 250 & C1 & Tienda (1), Cocina (1), Pasadizo (2) y Escalera (1) \\
 2 & Primer piso & Tomacorriente doble con tierra & Tomacorrientes & 6 & 180 & 1080 & C2 & Tienda (2) y Cocina (4) \\
 3 & Segundo piso & Luminaria LED & Alumbrado & 6 & 50 & 300 & C3 & Dorm. Principal (2), Dorm. 3 (1), Sala (1), Baño (1) y Escalera (1) \\
@@ -81,8 +76,8 @@ C6 & Tomacorrientes tercer piso & 10 & 1800 & 0.70 & 1260 & 2P-16A & 3 x 2.5 mm2
 5 & Tercer piso & Luminaria LED & Alumbrado & 7 & 50 & 350 & C5 & Dorm. 4 (2), Dorm. 5 (2), Pasadizo (1), Baño (1) y Escalera (1) \\
 6 & Tercer piso & Tomacorriente doble con tierra & Tomacorrientes & 10 & 180 & 1800 & C6 & Dorm. 4 (5) y Dorm. 5 (5) \\
 \bottomrule
-\end{longtable}
-\end{landscape}
+\end{tabularx}
+\end{table}
 
 \section{Interpretacion de la demanda maxima}
 
@@ -114,15 +109,15 @@ TD-02 & Tercer piso, pasadizo longitudinal & C5 y C6 & Subtablero para el contro
 
 \section{Protecciones preliminares}
 
-\begin{landscape}
 \begin{table}[H]
 \centering
 \small
+\setlength{\tabcolsep}{3pt}
 \caption{Protecciones preliminares por circuito}
 \label{tab:protecciones-preliminares}
-\begin{tabularx}{\textwidth}{L{1.4cm}L{4.6cm}L{3.0cm}L{3.0cm}Y}
+\begin{tabularx}{\textwidth}{l Y Y Y Y}
 \toprule
-\textbf{Cto.} & \textbf{Uso} & \textbf{Interruptor} & \textbf{Conductor} & \textbf{Observacion} \\
+\textbf{Cto.} & \textbf{Uso} & \textbf{Interruptor} & \textbf{Conductor} & \textbf{Observación} \\
 \midrule
 General & Alimentacion principal & 2P-32A & 2 x 10 mm2 Cu + PE & Llave general termomagnetica \\
 - & ID General & 2P-40A / 30mA & - & Interruptor diferencial general \\
@@ -135,7 +130,6 @@ C6 & Tomacorrientes tercer piso & 2P-16A / ID-25A & 3 x 2.5 mm2 Cu & Con protect
 \bottomrule
 \end{tabularx}
 \end{table}
-\end{landscape}
 
 \section{Coordinacion conductor-proteccion}
 
