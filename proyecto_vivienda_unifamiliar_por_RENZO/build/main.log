@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  2 JUN 2026 22:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  2 JUN 2026 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,41 +819,41 @@ Overfull \vbox (7.56422pt too high) has occurred while \output is active []
 [40 <./planos/AVANCE DEL PLANO ELECTRICO1.pdf>] [41
 
 ]
-<planos/primer-piso.pdf, id=748, 289.08pt x 413.24667pt>
+<planos/primer-piso.pdf, id=748, 289.08pt x 429.28021pt>
 File: planos/primer-piso.pdf Graphic file (type pdf)
 <use planos/primer-piso.pdf>
 Package pdftex.def Info: planos/primer-piso.pdf  used on input line 55.
-(pdftex.def)             Requested size: 595.37662pt x 851.1526pt.
+(pdftex.def)             Requested size: 595.37662pt x 884.17645pt.
  [42
 
 ]
-Overfull \vbox (436.96764pt too high) has occurred while \output is active []
+Overfull \vbox (469.99149pt too high) has occurred while \output is active []
 
 
 [43 <./planos/primer-piso.pdf>]
-<planos/segundo-piso.pdf, id=759, 289.08pt x 429.77654pt>
+<planos/segundo-piso.pdf, id=759, 289.08pt x 447.94458pt>
 File: planos/segundo-piso.pdf Graphic file (type pdf)
 <use planos/segundo-piso.pdf>
 Package pdftex.def Info: planos/segundo-piso.pdf  used on input line 64.
-(pdftex.def)             Requested size: 595.37662pt x 885.19872pt.
+(pdftex.def)             Requested size: 595.37662pt x 922.61893pt.
  [44
 
 
 ]
-Overfull \vbox (471.01375pt too high) has occurred while \output is active []
+Overfull \vbox (508.43396pt too high) has occurred while \output is active []
 
 
 [45 <./planos/segundo-piso.pdf>]
-<planos/tercer-piso.pdf, id=769, 289.08pt x 429.77654pt>
+<planos/tercer-piso.pdf, id=769, 289.08pt x 447.94458pt>
 File: planos/tercer-piso.pdf Graphic file (type pdf)
 <use planos/tercer-piso.pdf>
 Package pdftex.def Info: planos/tercer-piso.pdf  used on input line 73.
-(pdftex.def)             Requested size: 595.37662pt x 885.19872pt.
+(pdftex.def)             Requested size: 595.37662pt x 922.61893pt.
  [46
 
 
 ]
-Overfull \vbox (471.01375pt too high) has occurred while \output is active []
+Overfull \vbox (508.43396pt too high) has occurred while \output is active []
 
 
 [47 <./planos/tercer-piso.pdf>]) (capitulos/08-anexos.tex [48
@@ -921,7 +921,7 @@ blic/amsfonts/cm/cmmi8.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmr12.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifa
-miliar_por_RENZO\build\main.pdf (57 pages, 625058 bytes).
+miliar_por_RENZO\build\main.pdf (57 pages, 626650 bytes).
 PDF statistics:
  1458 PDF objects out of 1728 (max. 8388607)
  191 named destinations out of 1000 (max. 500000)
