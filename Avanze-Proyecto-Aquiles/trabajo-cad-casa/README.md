@@ -7,19 +7,21 @@ Esta carpeta contiene el espacio de trabajo específico para el diseño y la mod
 ## 1. Fuentes de Entrada Utilizadas
 
 ### Croquis Real de la Vivienda
-- **Imagen Base:** [20260602_195759.jpg.jpeg](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/Full-Imagenes/Croquis-de-plano de la casa/20260602_195759.jpg.jpeg)
-- **Descripción:** Dibujo a mano alzada en cuaderno cuadriculado que representa la distribución del Segundo Piso (Piso 2) de la casa.
+- **Imagen Base Original:** [20260602_195759.jpg.jpeg](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/Full-Imagenes/Croquis-de-plano de la casa/20260602_195759.jpg.jpeg)
+- **Imagen de Croquis Limpio (v3):** [Piso 2 croquis limpio.png](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/Full-Imagenes/Croquis-de-plano de la casa/Piso%202%20croquis%20limpio.png)
+- **Descripción:** Dibujos que representan la distribución del Segundo Piso (Piso 2) de la casa. La versión v3 es un calco directo del croquis digital limpio.
 - **Plantilla de Referencia Estética (No de Distribución):** [prefabricadascasasdemadera_com.jpg](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/Full-Imagenes/Plantillas-como-deve-verse-el-cad/prefabricadascasasdemadera_com.jpg) (usada para calificar grosores de muros, puertas y representación de ventanas).
 
 ---
 
 ## 2. Interpretación de Medidas y Supuestos
 
-- **Cuadrícula del Cuaderno:** Se identificó que cada celda del cuaderno en el croquis equivale a **0.75 metros**.
+- **Cuadrícula del Cuaderno:** Se identificó que cada celda de la rejilla equivale a **0.75 metros**.
 - **Dimensiones Exteriores:** El segundo piso mide **15.00 m de ancho** por **9.00 m de alto**.
 - **Muros (Espesor):** En el croquis se dibujan como líneas simples. En el plano CAD (desde v2) se asume un espesor estándar de **0.15 m** (muro de ladrillo tarrajeado) con representación de doble línea, según la plantilla estética.
-- **Escalera:** El croquis muestra un espacio de 4 cuadrículas (3.0m) para la escalera. Se asume que es una **escalera tipo U** de dos tramos simétricos con un descanso (desembarque) de 1.20m al fondo y llegada al Pasadizo a nivel de Y=4.5m. En el plano se redujo su ancho a **2.40 m** para que sea realista.
-- **Cocina grande:** Se asume un ancho de **3.60 m** en Y=4.5m para albergar adecuadamente las cargas de la cocina (microondas, waflera, cocina, refrigeradora).
+- **Escalera:** El croquis limpio muestra un espacio de 4 cuadrículas (**3.00 m**) para la escalera, modelada como una escalera tipo U de dos tramos con descanso de 1.20m al fondo.
+- **Ambientes (Fila Superior):** Cocina grande, Oficina varios y Dormitorio 1 (cada uno de 3.00 m x 4.50 m).
+- **Ambientes (Fila Inferior):** Baño (1.50 m x 3.00 m, 2 cuadrículas de ancho) y Dormitorio 2 (7.50 m x 3.00 m, 10 cuadrículas de ancho).
 - **Zonas Libres:** El área del primer piso en el extremo inferior izquierdo es un patio/jardín abierto, por lo que el espacio homólogo en el segundo piso se representa vacío (vacío sobre patio).
 
 ---

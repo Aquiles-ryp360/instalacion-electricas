@@ -1,5 +1,5 @@
 {
-  "project": "Casa de Aquiles - Segundo Piso (Limpieza y Detalle v3)",
+  "project": "Casa de Aquiles - Segundo Piso (Croquis Limpio Calcado)",
   "author": "Aquiles Taylor Ramos Yapo",
   "date": "2026-06-03",
   "units": "meters",
@@ -14,20 +14,20 @@
       "name": "Escalera",
       "x": 0.0,
       "y": 4.5,
-      "width": 2.4,
+      "width": 3.0,
       "height": 4.5
     },
     {
       "id": "R2",
       "name": "Cocina grande",
-      "x": 2.4,
+      "x": 3.0,
       "y": 4.5,
-      "width": 3.6,
+      "width": 3.0,
       "height": 4.5
     },
     {
       "id": "R3",
-      "name": "Cuarto varios",
+      "name": "Oficina varios",
       "x": 6.0,
       "y": 4.5,
       "width": 3.0,
@@ -51,7 +51,7 @@
     },
     {
       "id": "R6",
-      "name": "Pasadiso",
+      "name": "Pasadizo",
       "x": 0.0,
       "y": 3.0,
       "width": 15.0,
@@ -62,24 +62,24 @@
       "name": "Baño",
       "x": 6.0,
       "y": 0.0,
-      "width": 2.4,
+      "width": 1.5,
       "height": 3.0
     },
     {
       "id": "R8",
       "name": "Cuarto con cama 2",
-      "x": 8.4,
+      "x": 7.5,
       "y": 0.0,
-      "width": 6.6,
+      "width": 7.5,
       "height": 3.0
     }
   ],
   "doors": [
     {
       "id": "D1",
-      "room_from": "Pasadiso",
+      "room_from": "Pasadizo",
       "room_to": "Cocina grande",
-      "x": 3.5,
+      "x": 5.0,
       "y": 4.5,
       "width": 0.8,
       "orientation": "horizontal",
@@ -87,9 +87,9 @@
     },
     {
       "id": "D2",
-      "room_from": "Pasadiso",
-      "room_to": "Cuarto varios",
-      "x": 7.0,
+      "room_from": "Pasadizo",
+      "room_to": "Oficina varios",
+      "x": 6.2,
       "y": 4.5,
       "width": 0.8,
       "orientation": "horizontal",
@@ -97,9 +97,9 @@
     },
     {
       "id": "D3",
-      "room_from": "Pasadiso",
+      "room_from": "Pasadizo",
       "room_to": "Cuarto con cama 1",
-      "x": 10.0,
+      "x": 9.2,
       "y": 4.5,
       "width": 0.8,
       "orientation": "horizontal",
@@ -107,19 +107,19 @@
     },
     {
       "id": "D4",
-      "room_from": "Pasadiso",
+      "room_from": "Pasadizo",
       "room_to": "Sala",
-      "x": 13.0,
+      "x": 12.2,
       "y": 4.5,
       "width": 0.8,
       "orientation": "horizontal",
-      "swing": "top-right"
+      "swing": "top-left"
     },
     {
       "id": "D5",
-      "room_from": "Pasadiso",
+      "room_from": "Pasadizo",
       "room_to": "Baño",
-      "x": 6.8,
+      "x": 6.2,
       "y": 3.0,
       "width": 0.8,
       "orientation": "horizontal",
@@ -127,9 +127,9 @@
     },
     {
       "id": "D6",
-      "room_from": "Pasadiso",
+      "room_from": "Pasadizo",
       "room_to": "Cuarto con cama 2",
-      "x": 9.5,
+      "x": 7.7,
       "y": 3.0,
       "width": 0.8,
       "orientation": "horizontal",
@@ -139,75 +139,59 @@
   "windows": [
     {
       "id": "W1",
-      "room": "Cocina grande",
-      "x": 3.6,
-      "y": 9.0,
-      "width": 1.4,
-      "orientation": "horizontal"
+      "room": "Escalera",
+      "x": 0.0,
+      "y": 6.0,
+      "width": 1.5,
+      "orientation": "vertical"
     },
     {
       "id": "W2",
-      "room": "Cuarto varios",
-      "x": 7.0,
-      "y": 9.0,
-      "width": 1.4,
-      "orientation": "horizontal"
+      "room": "Cocina grande",
+      "x": 3.0,
+      "y": 7.0,
+      "width": 1.5,
+      "orientation": "vertical"
     },
     {
       "id": "W3",
-      "room": "Cuarto con cama 1",
-      "x": 10.0,
+      "room": "Cocina grande",
+      "x": 4.0,
       "y": 9.0,
-      "width": 1.4,
+      "width": 1.5,
       "orientation": "horizontal"
     },
     {
       "id": "W4",
       "room": "Sala",
-      "x": 13.5,
-      "y": 9.0,
-      "width": 1.6,
-      "orientation": "horizontal"
+      "x": 15.0,
+      "y": 5.5,
+      "width": 1.5,
+      "orientation": "vertical"
     },
     {
       "id": "W5",
-      "room": "Sala",
+      "room": "Cuarto con cama 2",
       "x": 15.0,
-      "y": 6.5,
-      "width": 1.4,
+      "y": 1.0,
+      "width": 1.5,
       "orientation": "vertical"
     },
     {
       "id": "W6",
-      "room": "Baño",
-      "x": 7.0,
+      "room": "Cuarto con cama 2",
+      "x": 9.0,
       "y": 0.0,
-      "width": 0.8,
+      "width": 5.0,
       "orientation": "horizontal"
     },
     {
       "id": "W7",
-      "room": "Cuarto con cama 2",
-      "x": 11.5,
+      "room": "Baño",
+      "x": 6.5,
       "y": 0.0,
-      "width": 1.8,
+      "width": 0.8,
       "orientation": "horizontal"
-    },
-    {
-      "id": "W8",
-      "room": "Pasadiso",
-      "x": 0.0,
-      "y": 3.5,
-      "width": 1.0,
-      "orientation": "vertical"
-    },
-    {
-      "id": "W9",
-      "room": "Escalera",
-      "x": 0.0,
-      "y": 6.5,
-      "width": 1.2,
-      "orientation": "vertical"
     }
   ]
 }
