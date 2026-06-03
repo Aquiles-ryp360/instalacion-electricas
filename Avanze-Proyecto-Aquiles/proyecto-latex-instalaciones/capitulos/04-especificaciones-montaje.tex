@@ -1,3 +1,76 @@
-\chapter{Especificaciones de montaje}
+\chapter*{ESPECIFICACIONES DE MONTAJE}
+\addcontentsline{toc}{chapter}{ESPECIFICACIONES DE MONTAJE}
 
-% Pendiente de desarrollo en la siguiente fase.
+% NO COMPILAR - BORRADOR PRELIMINAR.
+% Este contenido se conserva como material de trabajo, pero no pertenece al alcance
+% actual. La fase activa solo desarrolla Memoria Descriptiva y Calculos Justificativos.
+\iffalse
+
+\section{INSTALACION DE CANALIZACIONES}
+
+\subsection{TUBERIAS EMPOTRADAS EN MUROS Y COLUMNAS}
+Para la instalacion de tuberias en muros de ladrillo se deberan seguir las siguientes pautas constructivas:
+\begin{itemize}
+  \item \textbf{Canaleteado:} Las canaletas se ejecutaran utilizando amoladora con disco de corte para ladrillo y martillo/cincel, prohibiendose el uso de herramientas pesadas que comprometan la estabilidad estructural del muro.
+  \item \textbf{Profundidad:} Las tuberias deben quedar recubiertas con una capa minima de \(15\text{ mm}\) de mortero o tarrajeo para evitar fisuras.
+  \item \textbf{Curvas:} Se emplearan curvas de fabrica de \(90^\circ\) unidas con pegamento PVC, limitando el numero a un maximo de 3 curvas de \(90^\circ\) entre caja y caja.
+\end{itemize}
+
+\subsection{TUBERIAS EN LOSAS DE CONCRETO}
+\begin{itemize}
+  \item Las tuberias se fijaran firmemente sobre la malla de acero de refuerzo antes del vaciado del concreto, empleando alambre galvanizado.
+  \item Se evitaran cruces de tuberias en zonas de alta concentracion de esfuerzos como encuentros de vigas y columnas.
+  \item Todas las uniones seran verificadas para asegurar hermeticidad frente a la lechada de cemento durante el vaciado.
+\end{itemize}
+
+\section{INSTALACION DE CAJAS Y ALTURAS REGLAMENTARIAS}
+
+Las cajas de salida e interruptores deben quedar perfectamente niveladas y enrasadas con el tarrajeo o acabado definitivo del muro (tolerancia maxima de embutido de \(6\text{ mm}\)). Se definen las siguientes alturas de montaje medidas desde el nivel de piso terminado (N.P.T.) al eje de la caja:
+
+\begin{center}
+\begin{tabular}{l c l}
+\toprule
+\textbf{Dispositivo / Salida} & \textbf{Altura (m)} & \textbf{Observaciones} \\
+\midrule
+Tablero General (TG) & 1.50 m & Medido al borde superior del gabinete \\
+Interruptores de pared & 1.20 m & Cerca de las puertas, lado opuesto a bisagras \\
+Tomacorrientes generales & 0.30 m & Bipolar doble con linea de tierra \\
+Tomacorrientes sobre mesa & 1.10 m & En cocina amplia y zona de servicio \\
+Tomacorrientes de bano & 1.10 m & Protegido contra salpicaduras \\
+Cajas de paso & 1.80 m o techo & Ubicaciones accesibles para registro \\
+Centros de alumbrado & Techo / Losa & Centrados en los ambientes \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{CABLEADO Y CONEXIONADO}
+
+El paso de los conductores por el interior de las tuberias se realizara una vez concluido el tarrajeo de muros, vaciado de techos y cuando la obra civil este completamente seca.
+\begin{itemize}
+  \item \textbf{Guia de traccion:} Se utilizara cinta guia (wincha de acero o nylon) introduciendo los cables en un solo sentido sin realizar esfuerzos excesivos que puedan danar el aislamiento.
+  \item \textbf{Lubricacion:} Se utilizara exclusivamente talco industrial o estearina como lubricante de arrastre. Queda prohibido el uso de grasas, aceites o jabon comercial.
+  \item \textbf{Empalmes:} Se realizaran unicamente dentro de las cajas de paso u octogonales. Los empalmes se haran mediante uniones firmes soldadas o con conectores a presion, aislados con cinta vulcanizada y protegidos exteriormente con cinta aislante de PVC.
+\end{itemize}
+
+\section{CONSTRUCCION DEL POZO DE PUESTA A TIERRA}
+
+El pozo de puesta a tierra vertical se ejecutara de acuerdo a las siguientes especificaciones constructivas:
+\begin{enumerate}
+  \item \textbf{Excavacion:} Se realizara una excavacion cilindrica o cuadrada de \(0.80\text{ m}\) de diametro y una profundidad minima de \(2.60\text{ m}\).
+  \item \textbf{Preparacion del terreno:} El terreno extraido se cernira y mezclara con aditivos quimicos conductivos (dosis de gel o sales especiales) para reducir la resistencia especifica del suelo.
+  \item \textbf{Instalacion del electrodo:} Se colocara la varilla de copperweld de \(3/4'' \times 2.40\text{ m}\) de forma perfectamente vertical en el centro del pozo.
+  \item \textbf{Relleno y compactacion:} Se rellenara el pozo compactando la tierra tratada por capas de \(0.30\text{ m}\), humedeciendo abundantemente cada capa.
+  \item \textbf{Conexion:} El conductor de cobre desnudo de \(10\text{ mm}^2\) se unira a la varilla mediante una abrazadera de bronce tipo perno en U.
+  \item \textbf{Caja de registro:} En la parte superior se colocara una caja de concreto prefabricada con tapa, la cual albergara la conexion y permitira realizar las mediciones del protocolo de pruebas.
+\end{enumerate}
+
+\section{PRUEBAS DE PUESTA EN SERVICIO}
+
+Una vez terminada la instalacion, el contratista o estudiante realizara las siguientes pruebas en presencia del supervisor:
+\begin{itemize}
+  \item \textbf{Prueba de continuidad:} Verificacion de la continuidad electrica en todos los circuitos de alumbrado y conductores de puesta a tierra.
+  \item \textbf{Medicion de aislamiento:} Utilizando un megometro de 500 V DC, se medira la resistencia de aislamiento entre conductores activos y entre conductor activo y tierra. Los valores deben ser superiores a 1.0 M\(\Omega\).
+  \item \textbf{Medicion de la puesta a tierra:} Utilizando un telurimetro, se medira la resistencia del pozo a tierra mediante el metodo de caida de potencial, la cual debe arrojar un valor menor a 15 Ohmios.
+  \item \textbf{Prueba de disparo diferencial:} Verificacion del funcionamiento de los interruptores diferenciales mediante el boton de prueba (Test) integrado.
+\end{itemize}
+\fi
