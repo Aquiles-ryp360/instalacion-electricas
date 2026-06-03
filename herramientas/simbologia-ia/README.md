@@ -16,6 +16,34 @@ Este directorio contiene las especificaciones y lineamientos técnicos para la m
 
 ---
 
+## 🎨 Catálogo DXF y Regeneración de la Biblioteca
+
+Disponemos de un catálogo tipo catálogo A0/A1 con todos los símbolos dibujados vectorialmente según la Norma DGE:
+* **Catálogo Vectorial DXF:** [simbologia_dge_completa.dxf](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/simbologia-ia/salidas/simbologia_dge_completa.dxf)
+* **Catálogo Renderizado PDF:** [simbologia_dge_completa.pdf](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/simbologia-ia/salidas/simbologia_dge_completa.pdf)
+* **Reporte de Auditoría de Símbolos:** [revision_visual_simbologia_dge.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/simbologia-ia/revision_visual_simbologia_dge.md)
+* **Script Generador Portátil:** [generar_simbologia_dge_dxf.py](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/simbologia-ia/scripts/generar_simbologia_dge_dxf.py)
+
+### ¿Cómo regenerar la biblioteca sin editar a mano?
+Ejecuta el script generador utilizando el entorno de Python virtual del repositorio:
+```bash
+herramientas/ia-cad-casas/.venv/bin/python herramientas/simbologia-ia/scripts/generar_simbologia_dge_dxf.py
+```
+Este comando leerá la especificación geométrica del JSON, creará los bloques vectoriales ordenados por capas y reescribirá la lámina catálogo en formato DXF y PDF.
+
+### ¿Cómo usar los bloques en planos eléctricos?
+Cada símbolo en el catálogo se define como un `BLOCK` de AutoCAD/QCAD. Los nombres siguen la estructura `DGE_[Codigo]_[Nombre]`, por ejemplo:
+* `DGE_09_93_28_INTERRUPTOR`
+* `DGE_09_93_17_TOMACORRIENTE_TIERRA`
+* `DGE_09_93_69_TERMA`
+
+Al diseñar un plano eléctrico en formato JSON:
+1. Define las coordenadas del componente (X, Y).
+2. Asigna la propiedad de bloque correspondiente mediante su identificador único.
+3. El compilador de planos importará automáticamente el bloque desde esta biblioteca y lo insertará a escala en la capa CAD correspondiente, garantizando el cumplimiento normativo DGE.
+
+---
+
 ## ⚡ Estándar de Simbología Eléctrica
 
 La simbología gráfica utilizada en el repositorio está normalizada en metros sobre el espacio del modelo y responde a los requisitos del Código Nacional de Electricidad - Utilización (CNE-U) de Perú y la RM N° 091-2002-EM/VME:

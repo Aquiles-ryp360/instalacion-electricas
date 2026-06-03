@@ -38,3 +38,6 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Temporary rendering files
+herramientas/simbologia-ia/temp/
+
