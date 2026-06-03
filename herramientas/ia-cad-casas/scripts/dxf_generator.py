@@ -220,6 +220,7 @@ def main():
     # Para evitar dibujar líneas duplicadas entre habitaciones adyacentes,
     # recopilamos todos los segmentos de muro únicos.
     walls = set()
+    wall_thickness = 0.15  # Espesor estándar de muros (15 cm)
     
     for room in data["rooms"]:
         rx, ry = room["x"], room["y"]
@@ -237,26 +238,61 @@ def main():
         walls.add(seg_left)
         walls.add(seg_right)
         
-        # 2. Dibujar etiquetas de textos en el centro de las habitaciones
+        # 2. Dibujar detalles de Escalera si corresponde
         x_center = rx + rw / 2
         y_center = ry + rh / 2
         
+        if "escalera" in room["name"].lower():
+            # Escalera tipo U con descanso al fondo (superior)
+            landing_depth = 1.2
+            # Línea central divisoria (ojo)
+            msp.add_line((x_center, ry), (x_center, ry + rh - landing_depth), dxfattribs={'layer': 'MUROS'})
+            # Línea de inicio del descanso
+            msp.add_line((rx, ry + rh - landing_depth), (rx + rw, ry + rh - landing_depth), dxfattribs={'layer': 'MUROS'})
+            
+            # Dibujar escalones (huellas)
+            num_steps = 9
+            tread_depth = (rh - landing_depth) / num_steps
+            for i in range(1, num_steps):
+                y_step = ry + i * tread_depth
+                # Paso izquierdo
+                msp.add_line((rx, y_step), (x_center, y_step), dxfattribs={'layer': 'MUROS'})
+                # Paso derecho
+                msp.add_line((x_center, y_step), (rx + rw, y_step), dxfattribs={'layer': 'MUROS'})
+                
+            # Desplazar textos al descanso (landing) para evitar solapamientos
+            text_y = ry + rh - (landing_depth / 2)
+            dim_y = text_y - 0.25
+        else:
+            text_y = y_center
+            dim_y = y_center - 0.25
+        
+        # 3. Dibujar etiquetas de textos en el centro de las habitaciones
         # Nombre de la habitación
         msp.add_text(
             room["name"].upper(), 
             dxfattribs={'layer': 'TEXTOS', 'height': 0.22}
-        ).set_placement((x_center, y_center), align=TextEntityAlignment.MIDDLE_CENTER)
+        ).set_placement((x_center, text_y), align=TextEntityAlignment.MIDDLE_CENTER)
         
         # Dimensiones de la habitación (e.g. 4.00 x 4.00 m)
         dim_text = f"{rw:.2f} x {rh:.2f} m"
         msp.add_text(
             dim_text, 
             dxfattribs={'layer': 'TEXTOS', 'height': 0.15}
-        ).set_placement((x_center, y_center - 0.25), align=TextEntityAlignment.MIDDLE_CENTER)
+        ).set_placement((x_center, dim_y), align=TextEntityAlignment.MIDDLE_CENTER)
         
-    # Dibujar los muros en la capa MUROS
+    # Dibujar los muros en la capa MUROS (como líneas dobles para representar espesor de muro)
     for start, end in walls:
-        msp.add_line(start, end, dxfattribs={'layer': 'MUROS'})
+        x1, y1 = start
+        x2, y2 = end
+        if abs(x1 - x2) < 1e-5: # Muro vertical
+            msp.add_line((x1 - wall_thickness/2, y1), (x1 - wall_thickness/2, y2), dxfattribs={'layer': 'MUROS'})
+            msp.add_line((x1 + wall_thickness/2, y1), (x1 + wall_thickness/2, y2), dxfattribs={'layer': 'MUROS'})
+        elif abs(y1 - y2) < 1e-5: # Muro horizontal
+            msp.add_line((x1, y1 - wall_thickness/2), (x2, y1 - wall_thickness/2), dxfattribs={'layer': 'MUROS'})
+            msp.add_line((x1, y1 + wall_thickness/2), (x2, y1 + wall_thickness/2), dxfattribs={'layer': 'MUROS'})
+        else:
+            msp.add_line(start, end, dxfattribs={'layer': 'MUROS'})
         
     # 3. Dibujar Puertas
     if "doors" in data:
@@ -278,7 +314,7 @@ def main():
     draw_dimension(msp, (0.0, 0.0), (0.0, limit_h), -1.0, f"ALTO TOTAL: {limit_h:.2f} m", "vertical")
     
     # 6. Dibujar Marco y Bloque de Título (Title Block)
-    margin = 2.0
+    margin = data.get("dimensions", {}).get("margin", 1.5)
     # Línea de marco exterior
     mx1, my1 = -margin, -margin
     mx2, my2 = limit_w + margin, limit_h + margin

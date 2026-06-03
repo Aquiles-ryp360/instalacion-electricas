@@ -17,26 +17,38 @@ Sirve para simplificar la creación de planos de distribución arquitectónica (
 
 ---
 
-## 4. Estructura de Datos y Flujo de Croquis
-* **Dónde colocar futuros croquis/imágenes**: Los bocetos hechos a mano, fotos de medidas o planos del catastro deben guardarse en la carpeta [input/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/proyecto-casa/00-herramientas/ia-cad-casas/input/).
-* **Dónde colocar datos estructurados**: Las medidas interpretadas de las habitaciones en metros, puertas y ventanas se escriben en [data/layout_example.json](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/proyecto-casa/00-herramientas/ia-cad-casas/data/layout_example.json).
+## 4. Estructura de Datos y Flujo de Trabajo
+* **Carpeta de la Herramienta:** `herramientas/ia-cad-casas/`
+* **Datos de Ejemplo:** [data/layout_example.json](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/ia-cad-casas/data/layout_example.json)
+* **Script Generador Python:** [scripts/dxf_generator.py](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/ia-cad-casas/scripts/dxf_generator.py)
+* **Script de Renderizado JS (QCAD):** [cad-scripts/dxf2pdf.js](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/ia-cad-casas/cad-scripts/dxf2pdf.js)
+* **Salidas de Ejemplo:** [output/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/ia-cad-casas/output/)
 
 ---
 
 ## 5. ¿Cómo se genera el archivo DXF y PDF?
-Desde la raíz del repositorio, simplemente ejecuta el comando automatizado:
+El script `generar_plano.sh` es ahora un lanzador portátil y paramétrico. Puedes llamarlo desde cualquier directorio (incluyendo la raíz del repositorio):
 
+### Ejecución con valores por defecto (Ejemplo)
 ```bash
-./generar_plano.sh
+./herramientas/ia-cad-casas/generar_plano.sh
+```
+Esto tomará el layout de ejemplo y guardará `plan_distribucion.dxf` y `plan_distribucion.pdf` en la carpeta `output/` del módulo.
+
+### Ejecución con parámetros personalizados (Caso de Estudio)
+Puedes pasarle un JSON de entrada y rutas de salida personalizadas:
+```bash
+./herramientas/ia-cad-casas/generar_plano.sh \
+  Avanze-Proyecto-Aquiles/trabajo-cad-casa/layouts/layout_aquiles_v3.json \
+  Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/croquis_aquiles_v3.dxf \
+  Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/croquis_aquiles_v3.pdf
 ```
 
-Este script:
-1. Activa el entorno virtual de Python local.
-2. Instala la librería `ezdxf` si no está presente.
-3. Llama a `scripts/dxf_generator.py` para procesar el JSON y generar el archivo DXF.
-4. Llama a QCAD en modo headless (`-no-gui -platform offscreen`) para ejecutar `cad-scripts/dxf2pdf.js`, el cual abre el DXF, auto-ajusta el dibujo a una hoja A4 horizontal y lo exporta a PDF.
-
-Los archivos generados se guardan en la carpeta [output/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/proyecto-casa/00-herramientas/ia-cad-casas/output/).
+El script se encarga automáticamente de:
+1. Activar el entorno virtual de Python local.
+2. Instalar la librería `ezdxf` si no está presente en el entorno virtual.
+3. Llamar a `scripts/dxf_generator.py` para procesar el JSON y escribir el archivo DXF.
+4. Invocar QCAD en modo headless (`-no-gui -platform offscreen`) para ejecutar `cad-scripts/dxf2pdf.js`, el cual abre el DXF, auto-ajusta el dibujo a una hoja A4 horizontal y lo exporta a PDF vectorial.
 
 ---
 
@@ -44,7 +56,7 @@ Los archivos generados se guardan en la carpeta [output/](file:///home/kimdokja/
 Para abrir el plano DXF generado en la interfaz gráfica de QCAD, ejecuta en tu terminal:
 
 ```bash
-qcad proyecto-casa/00-herramientas/ia-cad-casas/output/plan_distribucion.dxf
+qcad herramientas/ia-cad-casas/output/plan_distribucion.dxf
 ```
 Desde QCAD podrás usar comandos avanzados de edición, configurar el orden de capas o añadir simbología eléctrica.
 
@@ -52,7 +64,7 @@ Desde QCAD podrás usar comandos avanzados de edición, configurar el orden de c
 LibreCAD es una alternativa muy ligera para abrir y validar el dibujo DXF:
 
 ```bash
-librecad proyecto-casa/00-herramientas/ia-cad-casas/output/plan_distribucion.dxf
+librecad herramientas/ia-cad-casas/output/plan_distribucion.dxf
 ```
 Es ideal como visor y validador rápido de que los bloques y capas se exportaron con los colores y coordenadas correctas.
 
@@ -61,10 +73,11 @@ Es ideal como visor y validador rápido de que los bloques y capas se exportaron
 ## 8. Arquitectura Técnica del Módulo
 
 ### Qué hace Python:
-* **Lectura e interpretación**: Carga y procesa el archivo JSON en `data/`.
+* **Lectura e interpretación**: Carga y procesa el archivo JSON de entrada.
 * **Validación**: Comprueba que los ambientes no contengan datos inválidos o falten campos requeridos.
+* **Muros de Doble Línea**: Genera automáticamente muros de doble trazo de espesor **0.15m (15 cm)**.
+* **Generación de Escaleras**: Detecta habitaciones con la palabra `"escalera"` en su nombre y dibuja automáticamente los peldaños de subida/bajada y el descanso superior de 1.20m.
 * **Escritura DXF**: Usa `ezdxf` para estructurar el archivo vectorial organizándolo en capas (`MUROS`, `PUERTAS`, `VENTANAS`, `TEXTOS`, `COTAS`, `MARCO`).
-* **Orquestación**: Llama a los procesos secundarios del sistema (QCAD) a través de scripts de bash.
 
 ### Qué hace QCAD:
 * **Motor CAD de Renderizado**: QCAD actúa como el motor que procesa las entidades del DXF y calcula los límites matemáticos del plano (`getBoundingBox`).
@@ -73,28 +86,15 @@ Es ideal como visor y validador rápido de que los bloques y capas se exportaron
 
 ---
 
-## 9. ¿Por qué DXF es el formato maestro inicial?
-* **Compatibilidad Universal**: DXF (Drawing Exchange Format) es un estándar abierto que se puede leer en QCAD, LibreCAD, AutoCAD, Revit, SolidWorks y cualquier otro software CAD.
-* **Manipulación por código**: Es un formato de texto ASCII fácil de analizar, escribir y validar mediante librerías de programación, al contrario del formato binario cerrado de `.dwg`.
-
----
-
-## 10. Cómo mover un plano generado al informe o entregables finales
-La carpeta de desarrollo de la herramienta es `proyecto-casa/00-herramientas/ia-cad-casas/`. Cuando generes un plano útil para tu avance académico y desees que forme parte de los entregables del informe, debes copiarlo al directorio final:
+## 9. Cómo mover un plano generado al informe o entregables finales
+La carpeta de desarrollo de la herramienta es `herramientas/ia-cad-casas/`. Cuando generes un plano útil para tu avance académico y desees que forme parte de los entregables del informe, debes copiarlo al directorio final:
 
 ```bash
 # Copiar el archivo DXF final
-cp proyecto-casa/00-herramientas/ia-cad-casas/output/plan_distribucion.dxf proyecto-casa/07-planos/IE-01-ubicacion-arquitectura.dxf
+cp Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/croquis_aquiles_v3.dxf proyecto-casa/07-planos/IE-01-ubicacion-arquitectura.dxf
 
 # Copiar el PDF final generado por QCAD
-cp proyecto-casa/00-herramientas/ia-cad-casas/output/plan_distribucion.pdf proyecto-casa/07-planos/IE-01-ubicacion-arquitectura.pdf
+cp Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/croquis_aquiles_v3.pdf proyecto-casa/07-planos/IE-01-ubicacion-arquitectura.pdf
 ```
 
-Esto mantiene la separación limpia: el código vive en `00-herramientas/`, y el material definitivo del informe académico se almacena en `07-planos/`.
-
----
-
-## 11. Futuro y Segunda Fase (Lo que no se incluye aún)
-* **IA/OCR**: Lectura automatizada de bocetos escaneados mediante reconocimiento de bordes o LLM (se implementará en la siguiente fase).
-* **Esquemas Eléctricos**: Dibujo automatizado de puntos de luz, tomacorrientes e interruptores sobre el plano de distribución base.
-* **DWG Nativo**: Exportación o guardado automático directo en DWG desde la consola.
+Esto mantiene la separación limpia: el código vive en `herramientas/`, y el material definitivo del informe académico se almacena en `proyecto-casa/07-planos/`.

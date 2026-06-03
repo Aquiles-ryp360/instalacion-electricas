@@ -22,11 +22,11 @@ El repositorio alberga el avance y desarrollo de las propuestas de instalación 
 * **Ubicación:** Av. Horacio con Jr. Marineros, Mz F7, Lotes 11 y 12, San Miguel, San Román, Puno (Zona Urbana).
 * **Estado:** Avances y borradores del capítulo I y II en desarrollo.
 * **Archivos clave (Carpeta de Aporte):**
-  * [avance-capitulos-1-2/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/avance-capitulos-1-2): Directorio principal de aportes del proyecto de 2 pisos.
-  * [avance-capitulos-1-2/capitulo-1-memoria-descriptiva.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/avance-capitulos-1-2/capitulo-1-memoria-descriptiva.md): Borrador de la memoria descriptiva.
-  * [avance-capitulos-1-2/capitulo-2-calculos-justificativos.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/avance-capitulos-1-2/capitulo-2-calculos-justificativos.md): Borrador de los cálculos justificativos (demanda eléctrica).
-  * [avance-capitulos-1-2/respuestas-cuestionario-aquiles.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/avance-capitulos-1-2/respuestas-cuestionario-aquiles.md): Cuestionario de datos y parámetros técnicos consolidado.
-  * [avance-capitulos-1-2/latex/planificacion-vivienda-aquiles.tex](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/avance-capitulos-1-2/latex/planificacion-vivienda-aquiles.tex): Documento de planificación inicial compilable en LaTeX.
+  * [Avanze-Proyecto-Aquiles/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles): Directorio principal de aportes del proyecto de 2 pisos.
+  * [Avanze-Proyecto-Aquiles/capitulo-1-memoria-descriptiva.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/capitulo-1-memoria-descriptiva.md): Borrador de la memoria descriptiva.
+  * [Avanze-Proyecto-Aquiles/capitulo-2-calculos-justificativos.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/capitulo-2-calculos-justificativos.md): Borrador de los cálculos justificativos (demanda eléctrica).
+  * [Avanze-Proyecto-Aquiles/respuestas-cuestionario-aquiles.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/respuestas-cuestionario-aquiles.md): Cuestionario de datos y parámetros técnicos consolidado.
+  * [Avanze-Proyecto-Aquiles/trabajo-cad-casa/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/trabajo-cad-casa): Zona de trabajo CAD específica para la vivienda de Aquiles.
 
 ---
 
@@ -34,29 +34,31 @@ El repositorio alberga el avance y desarrollo de las propuestas de instalación 
 
 ```text
 instalacion-electricas/
-├── avance-capitulos-1-2/         # Carpeta de aportes para el proyecto de 2 pisos (Aquiles)
-│   ├── Capturas-de-medidas-de-la-casa/ # Evidencias del catastro y medidas de la vivienda
+├── Avanze-Proyecto-Aquiles/       # Carpeta de aportes para el proyecto de 2 pisos (Aquiles)
+│   ├── Full-Imagenes/            # Croquis originales y plantillas visuales CAD
+│   ├── trabajo-cad-casa/         # Modelación CAD de la vivienda (layouts y salidas)
 │   ├── latex/                    # Documentación LaTeX del avance de 2 pisos
 │   ├── capitulo-1-memoria-descriptiva.md
 │   ├── capitulo-2-calculos-justificativos.md
 │   └── respuestas-cuestionario-aquiles.md
 │
+├── herramientas/                 # Utilidades y automatizaciones del proyecto
+│   ├── ia-cad-casas/             # Motor de generación automática de planos DXF/PDF
+│   └── calculadora-instalacion-casa.html # Calculadora HTML interactiva de cargas
+│
 ├── latex/                        # Compilación LaTeX del proyecto de 3 pisos (Gael Renzo)
 │   ├── build/                    # PDF generado final (main.pdf)
-│   ├── capitulos/                # Archivos .tex de cada capítulo (Portada, Memoria, Criterios, etc.)
+│   ├── capitulos/                # Archivos .tex de cada capítulo (Portada, Memoria, etc.)
 │   ├── planos/                   # Planos y esquemas eléctricos en formato PDF y CAD (.dwg)
 │   └── main.tex                  # Archivo principal de compilación LaTeX
 │
 ├── materiales/                   # Normativas e información de referencia técnica
 │   ├── normas/                   # Normativas nacionales en PDF (CNE-U, RNE, etc.)
 │   ├── proyecto-guia-red-primaria/ # Ejemplos de formato de proyectos guía
-│   └── INSTALACIONES ELECTRICAS DVD 28.02-23/ # Material didáctico de referencia, simulaciones y planos modelo
-│
-├── herramientas/                 # Utilidades de desarrollo
-│   └── calculadora-instalacion-casa.html # Calculadora HTML interactiva de cargas eléctricas domiciliarias
+│   └── INSTALACIONES ELECTRICAS DVD 28.02-23/ # Planos modelo y material didáctico
 │
 ├── normativas/                   # Resúmenes técnicos y fichas normativas base (CNE-U, RNE EM.010)
-├── proyecto-casa/                # Estructura de plantilla inicial del proyecto
+├── proyecto-casa/                # Estructura del proyecto final domiciliario (07-planos)
 └── README.md                     # Este archivo informativo
 ```
 

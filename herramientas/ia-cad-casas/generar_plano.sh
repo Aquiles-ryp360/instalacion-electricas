@@ -1,19 +1,29 @@
 #!/bin/bash
-
 # Generador de Planos CAD 2D - Script Automatizado para Linux
-# Ejecuta este script desde la raíz del repositorio
+# Puede ejecutarse desde cualquier directorio.
 
 # Salir inmediatamente si algún comando falla
 set -e
 
-SCRIPT_DIR="herramientas/ia-cad-casas"
+# Obtener la ruta absoluta de la carpeta donde se encuentra este script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV_DIR="$SCRIPT_DIR/.venv"
-INPUT_FILE="$SCRIPT_DIR/data/layout_example.json"
-OUTPUT_DXF="$SCRIPT_DIR/output/plan_distribucion.dxf"
-OUTPUT_PDF="$SCRIPT_DIR/output/plan_distribucion.pdf"
+
+# Valores por defecto (se pueden pasar como argumentos)
+INPUT_FILE="${1:-$SCRIPT_DIR/data/layout_example.json}"
+OUTPUT_DXF="${2:-$SCRIPT_DIR/output/plan_distribucion.dxf}"
+OUTPUT_PDF="${3:-$SCRIPT_DIR/output/plan_distribucion.pdf}"
+
+# Asegurar que existan los directorios de salida
+mkdir -p "$(dirname "$OUTPUT_DXF")"
+mkdir -p "$(dirname "$OUTPUT_PDF")"
 
 echo "=========================================================="
 echo "   Iniciando Generador Automático de Planos CAD 2D"
+echo "=========================================================="
+echo "   - Entrada: $INPUT_FILE"
+echo "   - Salida DXF: $OUTPUT_DXF"
+echo "   - Salida PDF: $OUTPUT_PDF"
 echo "=========================================================="
 
 # 1. Comprobar si Python 3 está instalado
@@ -43,11 +53,9 @@ python3 "$SCRIPT_DIR/scripts/dxf_generator.py" --input "$INPUT_FILE" --output "$
 # 6. Ejecutar QCAD headless para renderizar a PDF
 if command -v qcad &> /dev/null; then
     echo "Ejecutando QCAD headless para renderizar a PDF..."
-    # Se usa realpath para obtener rutas absolutas y evitar problemas de resolución en QCAD
     ABS_OUTPUT_DXF=$(realpath "$OUTPUT_DXF")
     ABS_OUTPUT_PDF=$(realpath "$OUTPUT_PDF")
     ABS_SCRIPT=$(realpath "$SCRIPT_DIR/cad-scripts/dxf2pdf.js")
-    # Se usa -platform offscreen para ejecutarse en servidores Linux sin display/X11 y -quit para salir tras terminar
     qcad -no-gui -platform offscreen -quit -autostart "$ABS_SCRIPT" -input "$ABS_OUTPUT_DXF" -output "$ABS_OUTPUT_PDF"
 else
     echo "Advertencia: QCAD no se encuentra en el PATH. No se pudo generar el PDF automáticamente."
@@ -55,8 +63,6 @@ fi
 
 echo "=========================================================="
 echo "   ¡Proceso finalizado con éxito!"
-echo "   - Archivo DXF: $OUTPUT_DXF"
-echo "   - Archivo PDF: $OUTPUT_PDF"
 echo "   Puedes ver el DXF en Linux usando QCAD o LibreCAD:"
 echo "      qcad \"$OUTPUT_DXF\""
 echo "      librecad \"$OUTPUT_DXF\""
