@@ -237,19 +237,55 @@ def draw_switch(msp, x, y, label="S", layer="ELEC", color=3, radius=0.08):
     msp.add_text(label, dxfattribs={'layer': layer, 'height': 0.10, 'color': color}).set_placement((x + 0.15, y + radius + 0.10))
 
 def draw_conduit(msp, p1, p2, layer="ELEC_CONDUIT", color=3):
-    # Curve conduit represented by an arc or direct line for simplicity, or 3-point spline
-    # Direct line in dashed pattern is standard in simple CAD overlays
+    # Curve conduit represented by a dashed line
     msp.add_line(p1, p2, dxfattribs={'layer': layer, 'color': color, 'linetype': 'DASHED'})
 
+# Unified Legend Drawer
+def draw_unified_legend(msp, leg_x, leg_y):
+    # Outer box for Legend
+    msp.add_lwpolyline([(leg_x, leg_y - 0.7), (leg_x + 2.5, leg_y - 0.7), (leg_x + 2.5, leg_y + 1.8), (leg_x, leg_y + 1.8)], close=True, dxfattribs={'layer': 'TEXTOS', 'color': 8})
+    
+    # Legend header
+    msp.add_text("LEYENDA ELÉCTRICA", dxfattribs={'layer': 'TEXTOS', 'height': 0.11, 'color': 7}).set_placement((leg_x + 0.1, leg_y + 1.6))
+    
+    # Light symbol
+    draw_electric_center(msp, leg_x + 0.2, leg_y + 1.25, symbol_text="L", layer="TEXTOS", color=3, radius=0.09)
+    msp.add_text("Pto. Luz LED (12W)", dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 1.2))
+    
+    # Switch
+    draw_switch(msp, leg_x + 0.2, leg_y + 0.95, label="S", layer="TEXTOS", color=3, radius=0.05)
+    msp.add_text("Interruptor Simple", dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.90))
+    
+    # Conmutación S3
+    draw_switch(msp, leg_x + 0.2, leg_y + 0.65, label="S3", layer="TEXTOS", color=3, radius=0.05)
+    msp.add_text("Interruptor Conmutado", dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.60))
+    
+    # TC
+    draw_electric_center(msp, leg_x + 0.2, leg_y + 0.35, symbol_text="TC", layer="TEXTOS", color=6, radius=0.09)
+    msp.add_text("T/C Doble Gral (H=0.3m)", dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.30))
+    
+    # TD / TG box
+    msp.add_lwpolyline([(leg_x + 0.1, leg_y + 0.0), (leg_x + 0.3, leg_y + 0.0), (leg_x + 0.3, leg_y + 0.2), (leg_x + 0.1, leg_y + 0.2)], close=True, dxfattribs={'layer': 'TEXTOS', 'color': 1})
+    msp.add_text("Tablero General/Dist.", dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.05))
+    
+    # Conduit Alumbrado (Dashed green)
+    msp.add_line((leg_x + 0.1, leg_y - 0.2), (leg_x + 0.3, leg_y - 0.2), dxfattribs={'layer': 'TEXTOS', 'color': 3, 'linetype': 'DASHED'})
+    msp.add_text("Canaliz. Techo (Alum)", dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((leg_x + 0.5, leg_y - 0.25))
+    
+    # Conduit Tomacorriente (Dashed magenta)
+    msp.add_line((leg_x + 0.1, leg_y - 0.5), (leg_x + 0.3, leg_y - 0.5), dxfattribs={'layer': 'TEXTOS', 'color': 6, 'linetype': 'DASHED'})
+    msp.add_text("Canaliz. Piso (T/C)", dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((leg_x + 0.5, leg_y - 0.55))
+
+
 # ====================================================
-# FLOOR 1: ALUMBRADO (IE-02-alumbrado)
+# FLOOR 1: ALUMBRADO Y TOMACORRIENTES (IE-02)
 # ====================================================
 def build_floor1_electrical():
     layout_path = os.path.join(layouts_dir, "primer_piso_v3.json")
     with open(layout_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     
-    data["project"] = "Plano Alumbrado - Primer Piso (IE-02)"
+    data["project"] = "Plano Elec. 1er Piso (IE-02)"
     doc = ezdxf.new("R2010", setup=True)
     msp = doc.modelspace()
     
@@ -261,7 +297,8 @@ def build_floor1_electrical():
     doc.layers.new("MARCO", dxfattribs={'color': 7})
     doc.layers.new("ESCALERAS", dxfattribs={'color': 8})
     doc.layers.new("COTAS", dxfattribs={'color': 8})
-    doc.layers.new("ELEC_ALUMBRADO", dxfattribs={'color': 3}) # Green for alumbrado
+    doc.layers.new("ELEC_ALUMBRADO", dxfattribs={'color': 3}) # Green
+    doc.layers.new("ELEC_TOMACORRIENTES", dxfattribs={'color': 6}) # Magenta
     doc.layers.new("ELEC_CONDUIT", dxfattribs={'color': 3})
     
     # Base layout
@@ -272,7 +309,7 @@ def build_floor1_electrical():
     msp.add_lwpolyline([(tg_x - 0.1, tg_y - 0.2), (tg_x + 0.1, tg_y - 0.2), (tg_x + 0.1, tg_y + 0.2), (tg_x - 0.1, tg_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_ALUMBRADO', 'color': 1}) # Red TG-01
     msp.add_text("TG-01", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.11, 'color': 1}).set_placement((tg_x - 0.4, tg_y - 0.05))
     
-    # Lights (Centro de Luz)
+    # 5 Lights (Centro de Luz)
     lights = {
         "Tienda": (1.5, 1.75),
         "Cocina": (1.5, 5.25),
@@ -296,65 +333,60 @@ def build_floor1_electrical():
     for sw_name, (pos, lbl) in switches.items():
         draw_switch(msp, pos[0], pos[1], label=lbl, layer="ELEC_ALUMBRADO", color=3)
         
-    # Conduits
-    # Connect TG-01 to Pasadizo_1 light
+    # Conduits for lighting
     draw_conduit(msp, (tg_x, tg_y), lights["Pasadizo_1"], color=3)
-    # Connect Pasadizo_1 to Tienda light
     draw_conduit(msp, lights["Pasadizo_1"], lights["Tienda"], color=3)
-    # Connect Tienda light to S_Tienda switch
     draw_conduit(msp, lights["Tienda"], (2.8, 2.3), color=3)
-    # Connect Pasadizo_1 light to Pasadizo_2 light
     draw_conduit(msp, lights["Pasadizo_1"], lights["Pasadizo_2"], color=3)
-    # Connect Pasadizo_2 light to Cocina light
     draw_conduit(msp, lights["Pasadizo_2"], lights["Cocina"], color=3)
-    # Connect Cocina light to S_Cocina switch
     draw_conduit(msp, lights["Cocina"], (2.8, 5.8), color=3)
-    # Connect Pasadizo_2 light to Escalera light
     draw_conduit(msp, lights["Pasadizo_2"], lights["Escalera"], color=3)
-    # Connect Escalera light to S3_Escalera switch
     draw_conduit(msp, lights["Escalera"], (2.2, 7.2), color=3)
-    # Connect Pasadizo_1 light to S3_Pasa1 switch
     draw_conduit(msp, lights["Pasadizo_1"], (3.2, 0.5), color=3)
-    # Connect Pasadizo_2 light to S3_Pasa2 switch
     draw_conduit(msp, lights["Pasadizo_2"], (3.2, 6.5), color=3)
     
-    # Legend panel on the left/bottom margins to make it look highly professional
-    leg_x, leg_y = -1.2, 0.5
-    msp.add_text("LEYENDA ALUMBRADO", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.12, 'color': 7}).set_placement((leg_x, leg_y + 1.2))
+    # 6 Outlets
+    tcs = {
+        "Tienda_TC1": (0.5, 1.0),
+        "Tienda_TC2": (2.5, 1.0),
+        "Cocina_TC1": (0.5, 4.5),
+        "Cocina_TC2": (0.5, 6.0),
+        "Cocina_TC3": (2.5, 4.5),
+        "Cocina_TC4": (2.5, 6.0)
+    }
     
-    # Light symbol in legend
-    draw_electric_center(msp, leg_x + 0.2, leg_y + 0.8, symbol_text="L", layer="ELEC_ALUMBRADO", color=3, radius=0.10)
-    msp.add_text("Pto. Luz LED (12W)", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.75))
+    for tc_name, (tx, ty) in tcs.items():
+        draw_electric_center(msp, tx, ty, symbol_text="TC", layer="ELEC_TOMACORRIENTES", color=6, radius=0.13)
+        
+    # Conduits for outlets (C2) - Ring layout loop
+    draw_conduit(msp, (tg_x, tg_y), tcs["Tienda_TC2"], color=6)
+    draw_conduit(msp, tcs["Tienda_TC2"], tcs["Tienda_TC1"], color=6)
+    draw_conduit(msp, tcs["Tienda_TC1"], tcs["Cocina_TC1"], color=6)
+    draw_conduit(msp, tcs["Cocina_TC1"], tcs["Cocina_TC2"], color=6)
+    draw_conduit(msp, tcs["Cocina_TC2"], tcs["Cocina_TC4"], color=6)
+    draw_conduit(msp, tcs["Cocina_TC4"], tcs["Cocina_TC3"], color=6)
+    draw_conduit(msp, tcs["Cocina_TC3"], (tg_x, tg_y), color=6)
     
-    # Switch simple
-    draw_switch(msp, leg_x + 0.2, leg_y + 0.5, label="S", layer="ELEC_ALUMBRADO", color=3, radius=0.06)
-    msp.add_text("Interruptor Simple", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.45))
-    
-    # Switch conmutado
-    draw_switch(msp, leg_x + 0.2, leg_y + 0.2, label="S3", layer="ELEC_ALUMBRADO", color=3, radius=0.06)
-    msp.add_text("Interruptor 3-Vias (Conmutación)", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.15))
-    
-    # Conduit line
-    msp.add_line((leg_x + 0.1, leg_y - 0.1), (leg_x + 0.3, leg_y - 0.1), dxfattribs={'layer': 'ELEC_ALUMBRADO', 'color': 3, 'linetype': 'DASHED'})
-    msp.add_text("Canalización Techo (PVC 3/4\")", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y - 0.15))
+    # Legend
+    draw_unified_legend(msp, -1.2, 0.5)
 
     out_dxf = os.path.join(planos_electricos_dir, "plano_electrico_primer_piso.dxf")
     doc.saveas(out_dxf)
     render_dxf_to_pdf_and_svg(out_dxf)
     
     # Copy to report directory
-    shutil.copy2(out_dxf.replace('.dxf', '.pdf'), os.path.join(planos_report_dir, "IE-02-alumbrado.pdf"))
-    print("Primer Piso Electrical Alumbrado compiled.")
+    shutil.copy2(out_dxf.replace('.dxf', '.pdf'), os.path.join(planos_report_dir, "IE-02-primer-piso.pdf"))
+    print("Primer Piso Electrical compiled.")
 
 # ====================================================
-# FLOOR 2: TOMACORRIENTES (IE-03-tomacorrientes)
+# FLOOR 2: ALUMBRADO Y TOMACORRIENTES (IE-03)
 # ====================================================
 def build_floor2_electrical():
     layout_path = os.path.join(layouts_dir, "segundo_piso_v3.json")
     with open(layout_path, "r", encoding="utf-8") as f:
         data = json.load(f)
         
-    data["project"] = "Plano Tomacorrientes - Segundo Piso (IE-03)"
+    data["project"] = "Plano Elec. 2do Piso (IE-03)"
     doc = ezdxf.new("R2010", setup=True)
     msp = doc.modelspace()
     
@@ -366,7 +398,8 @@ def build_floor2_electrical():
     doc.layers.new("MARCO", dxfattribs={'color': 7})
     doc.layers.new("ESCALERAS", dxfattribs={'color': 8})
     doc.layers.new("COTAS", dxfattribs={'color': 8})
-    doc.layers.new("ELEC_TOMACORRIENTES", dxfattribs={'color': 6}) # Magenta for tomacorrientes
+    doc.layers.new("ELEC_ALUMBRADO", dxfattribs={'color': 3})
+    doc.layers.new("ELEC_TOMACORRIENTES", dxfattribs={'color': 6})
     doc.layers.new("ELEC_CONDUIT", dxfattribs={'color': 6})
     
     draw_base_architecture(msp, data)
@@ -376,74 +409,94 @@ def build_floor2_electrical():
     msp.add_lwpolyline([(td_x - 0.1, td_y - 0.2), (td_x + 0.1, td_y - 0.2), (td_x + 0.1, td_y + 0.2), (td_x - 0.1, td_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'color': 1}) # Red TD-01
     msp.add_text("TD-01", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.11, 'color': 1}).set_placement((td_x - 0.4, td_y - 0.05))
     
-    # Draw double tomacorrientes (circles with "TC" text inside)
+    # 6 Lights (Centro de Luz)
+    lights = {
+        "Dorm_Prin_1": (1.5, 2.0),
+        "Dorm_Prin_2": (3.0, 2.0),
+        "Dorm_3": (1.5, 5.75),
+        "Sala": (3.75, 5.75),
+        "Bano": (3.75, 8.25),
+        "Escalera": (1.25, 8.25)
+    }
+    for l_name, (lx, ly) in lights.items():
+        draw_electric_center(msp, lx, ly, symbol_text="L", layer="ELEC_ALUMBRADO", color=3, radius=0.14)
+        
+    # Switches
+    switches = {
+        "S_DormPrin": ((0.8, 3.8), "S"),
+        "S_Dorm3": ((0.8, 4.2), "S"),
+        "S_Sala": ((3.2, 4.2), "S"),
+        "S_Bano": ((3.2, 7.2), "S"),
+        "S3_Escalera": ((2.2, 7.7), "S3")
+    }
+    for sw_name, (pos, lbl) in switches.items():
+        draw_switch(msp, pos[0], pos[1], label=lbl, layer="ELEC_ALUMBRADO", color=3)
+        
+    # Conduits for lighting
+    draw_conduit(msp, (td_x, td_y), lights["Sala"], color=3)
+    draw_conduit(msp, lights["Sala"], lights["Bano"], color=3)
+    draw_conduit(msp, lights["Sala"], lights["Dorm_3"], color=3)
+    draw_conduit(msp, lights["Dorm_3"], lights["Dorm_Prin_2"], color=3)
+    draw_conduit(msp, lights["Dorm_Prin_2"], lights["Dorm_Prin_1"], color=3)
+    draw_conduit(msp, lights["Bano"], lights["Escalera"], color=3)
+    draw_conduit(msp, lights["Escalera"], (2.2, 7.7), color=3)
+    draw_conduit(msp, lights["Dorm_Prin_1"], (0.8, 3.8), color=3)
+    draw_conduit(msp, lights["Dorm_3"], (0.8, 4.2), color=3)
+    draw_conduit(msp, lights["Sala"], (3.2, 4.2), color=3)
+    draw_conduit(msp, lights["Bano"], (3.2, 7.2), color=3)
+
+    # 11 Outlets (Dorm principal 4, Dorm 3 4, Sala 3)
     tcs = {
-        "Dorm_Prin_1": (0.3, 1.0),
-        "Dorm_Prin_2": (2.25, 0.3),
-        "Dorm_Prin_3": (4.2, 2.0),
-        "Dorm_3_1": (0.3, 5.5),
-        "Dorm_3_2": (2.7, 6.0),
-        "Sala_1": (4.2, 5.5),
-        "Sala_2": (3.2, 4.2),
-        "Bano_GFCI": (4.2, 8.2) # GFCI near basin
+        "Dorm_Prin_1": (0.5, 1.0),
+        "Dorm_Prin_2": (4.0, 1.0),
+        "Dorm_Prin_3": (1.5, 0.5),
+        "Dorm_Prin_4": (3.0, 3.5),
+        "Dorm_3_1": (0.5, 4.5),
+        "Dorm_3_2": (0.5, 6.5),
+        "Dorm_3_3": (2.5, 4.5),
+        "Dorm_3_4": (2.5, 6.5),
+        "Sala_1": (4.0, 4.5),
+        "Sala_2": (4.0, 6.5),
+        "Sala_3": (3.2, 5.5)
     }
     
     for tc_name, (tx, ty) in tcs.items():
-        is_gfci = "GFCI" in tc_name
-        lbl = "GFCI" if is_gfci else "TC"
-        col = 1 if is_gfci else 6
-        draw_electric_center(msp, tx, ty, symbol_text=lbl, layer="ELEC_TOMACORRIENTES", color=col, radius=0.13)
+        draw_electric_center(msp, tx, ty, symbol_text="TC", layer="ELEC_TOMACORRIENTES", color=6, radius=0.13)
         
-    # Conduits connecting tomacorrientes in a floor loop back to TD-01
-    # Connect TD-01 to Sala_2, then to Dorm_Prin_3, Dorm_Prin_2, Dorm_Prin_1, Dorm_3_1, Dorm_3_2, Sala_1, and back to TD-01
-    draw_conduit(msp, (td_x, td_y), tcs["Sala_2"], color=6)
-    draw_conduit(msp, tcs["Sala_2"], tcs["Dorm_Prin_3"], color=6)
-    draw_conduit(msp, tcs["Dorm_Prin_3"], tcs["Dorm_Prin_2"], color=6)
-    draw_conduit(msp, tcs["Dorm_Prin_2"], tcs["Dorm_Prin_1"], color=6)
-    draw_conduit(msp, tcs["Dorm_Prin_1"], tcs["Dorm_3_1"], color=6)
-    draw_conduit(msp, tcs["Dorm_3_1"], tcs["Dorm_3_2"], color=6)
-    draw_conduit(msp, tcs["Dorm_3_2"], tcs["Sala_1"], color=6)
-    draw_conduit(msp, tcs["Sala_1"], (td_x, td_y), color=6)
-    # Baño GFCI separately to TD-01
-    draw_conduit(msp, tcs["Bano_GFCI"], (td_x, td_y), color=6)
+    # Conduits for tomacorrientes (C4) - Ring layout loop
+    draw_conduit(msp, (td_x, td_y), tcs["Sala_3"], color=6)
+    draw_conduit(msp, tcs["Sala_3"], tcs["Sala_1"], color=6)
+    draw_conduit(msp, tcs["Sala_1"], tcs["Sala_2"], color=6)
+    draw_conduit(msp, tcs["Sala_2"], tcs["Dorm_3_4"], color=6)
+    draw_conduit(msp, tcs["Dorm_3_4"], tcs["Dorm_3_2"], color=6)
+    draw_conduit(msp, tcs["Dorm_3_2"], tcs["Dorm_3_1"], color=6)
+    draw_conduit(msp, tcs["Dorm_3_1"], tcs["Dorm_3_3"], color=6)
+    draw_conduit(msp, tcs["Dorm_3_3"], tcs["Dorm_Prin_4"], color=6)
+    draw_conduit(msp, tcs["Dorm_Prin_4"], tcs["Dorm_Prin_2"], color=6)
+    draw_conduit(msp, tcs["Dorm_Prin_2"], tcs["Dorm_Prin_3"], color=6)
+    draw_conduit(msp, tcs["Dorm_Prin_3"], tcs["Dorm_Prin_1"], color=6)
+    draw_conduit(msp, tcs["Dorm_Prin_1"], (td_x, td_y), color=6)
     
     # Legend
-    leg_x, leg_y = -1.2, 0.5
-    msp.add_text("LEYENDA TOMACORRIENTES", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.12, 'color': 7}).set_placement((leg_x, leg_y + 1.2))
-    
-    # TC simple
-    draw_electric_center(msp, leg_x + 0.2, leg_y + 0.8, symbol_text="TC", layer="ELEC_TOMACORRIENTES", color=6, radius=0.09)
-    msp.add_text("T/C Doble General (Piso, H=0.30)", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.75))
-    
-    # GFCI
-    draw_electric_center(msp, leg_x + 0.2, leg_y + 0.5, symbol_text="GFCI", layer="ELEC_TOMACORRIENTES", color=1, radius=0.09)
-    msp.add_text("T/C Protegido GFCI (Baño, H=1.10)", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.45))
-    
-    # TD
-    msp.add_lwpolyline([(leg_x + 0.1, leg_y + 0.1), (leg_x + 0.3, leg_y + 0.1), (leg_x + 0.3, leg_y + 0.3), (leg_x + 0.1, leg_y + 0.3)], close=True, dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'color': 1})
-    msp.add_text("Tablero de Distribución", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.15))
-    
-    # Conduit line
-    msp.add_line((leg_x + 0.1, leg_y - 0.15), (leg_x + 0.3, leg_y - 0.15), dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'color': 6, 'linetype': 'DASHED'})
-    msp.add_text("Canalización Piso (PVC 3/4\")", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y - 0.20))
+    draw_unified_legend(msp, -1.2, 0.5)
 
     out_dxf = os.path.join(planos_electricos_dir, "plano_electrico_segundo_piso.dxf")
     doc.saveas(out_dxf)
     render_dxf_to_pdf_and_svg(out_dxf)
     
     # Copy to report directory
-    shutil.copy2(out_dxf.replace('.dxf', '.pdf'), os.path.join(planos_report_dir, "IE-03-tomacorrientes.pdf"))
-    print("Segundo Piso Electrical Tomacorrientes compiled.")
+    shutil.copy2(out_dxf.replace('.dxf', '.pdf'), os.path.join(planos_report_dir, "IE-03-segundo-piso.pdf"))
+    print("Segundo Piso Electrical compiled.")
 
 # ====================================================
-# FLOOR 3: CARGAS & CANALIZACIONES (IE-04-circuitos-canalizaciones)
+# FLOOR 3: ALUMBRADO Y TOMACORRIENTES (IE-04)
 # ====================================================
 def build_floor3_electrical():
     layout_path = os.path.join(layouts_dir, "tercer_piso_v3.json")
     with open(layout_path, "r", encoding="utf-8") as f:
         data = json.load(f)
         
-    data["project"] = "Plano Cargas/Canalizaciones - Tercer Piso (IE-04)"
+    data["project"] = "Plano Elec. 3er Piso (IE-04)"
     doc = ezdxf.new("R2010", setup=True)
     msp = doc.modelspace()
     
@@ -455,72 +508,91 @@ def build_floor3_electrical():
     doc.layers.new("MARCO", dxfattribs={'color': 7})
     doc.layers.new("ESCALERAS", dxfattribs={'color': 8})
     doc.layers.new("COTAS", dxfattribs={'color': 8})
-    doc.layers.new("ELEC_CARGAS", dxfattribs={'color': 5}) # Blue for charges & conduits
+    doc.layers.new("ELEC_ALUMBRADO", dxfattribs={'color': 3})
+    doc.layers.new("ELEC_TOMACORRIENTES", dxfattribs={'color': 6})
     doc.layers.new("ELEC_CONDUIT", dxfattribs={'color': 5})
     
     draw_base_architecture(msp, data)
     
     # Add Tablero de Distribución TD-02 on the left wall of Pasadizo
     td_x, td_y = 0.2, 8.0
-    msp.add_lwpolyline([(td_x - 0.1, td_y - 0.2), (td_x + 0.1, td_y - 0.2), (td_x + 0.1, td_y + 0.2), (td_x - 0.1, td_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_CARGAS', 'color': 1}) # Red TD-02
-    msp.add_text("TD-02", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.11, 'color': 1}).set_placement((td_x + 0.2, td_y - 0.05))
+    msp.add_lwpolyline([(td_x - 0.1, td_y - 0.2), (td_x + 0.1, td_y - 0.2), (td_x + 0.1, td_y + 0.2), (td_x - 0.1, td_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_ALUMBRADO', 'color': 1}) # Red TD-02
+    msp.add_text("TD-02", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.11, 'color': 1}).set_placement((td_x + 0.2, td_y - 0.05))
     
-    # Outlets and special loads
+    # 7 Lights (Centro de Luz)
+    lights = {
+        "Dorm_4_1": (1.12, 2.5),
+        "Dorm_4_2": (1.12, 5.5),
+        "Dorm_5_1": (3.37, 2.5),
+        "Dorm_5_2": (3.37, 5.5),
+        "Pasadizo": (1.0, 8.25),
+        "Bano": (3.37, 8.25),
+        "Escalera": (1.0, 7.75)
+    }
+    
+    for l_name, (lx, ly) in lights.items():
+        draw_electric_center(msp, lx, ly, symbol_text="L", layer="ELEC_ALUMBRADO", color=3, radius=0.14)
+        
+    # Switches
+    switches = {
+        "S_Dorm4": ((0.8, 7.2), "S"),
+        "S_Dorm5": ((2.5, 7.2), "S"),
+        "S_Bano": ((3.0, 7.2), "S"),
+        "S_Pasa": ((1.5, 8.2), "S"),
+        "S3_Esc": ((0.8, 7.7), "S3")
+    }
+    for sw_name, (pos, lbl) in switches.items():
+        draw_switch(msp, pos[0], pos[1], label=lbl, layer="ELEC_ALUMBRADO", color=3)
+        
+    # Conduits for lighting
+    draw_conduit(msp, (td_x, td_y), lights["Pasadizo"], color=3)
+    draw_conduit(msp, lights["Pasadizo"], lights["Bano"], color=3)
+    draw_conduit(msp, lights["Pasadizo"], lights["Escalera"], color=3)
+    draw_conduit(msp, lights["Pasadizo"], lights["Dorm_4_2"], color=3)
+    draw_conduit(msp, lights["Dorm_4_2"], lights["Dorm_4_1"], color=3)
+    draw_conduit(msp, lights["Bano"], lights["Dorm_5_2"], color=3)
+    draw_conduit(msp, lights["Dorm_5_2"], lights["Dorm_5_1"], color=3)
+    
+    # 10 Outlets (Dorm 4 has 5, Dorm 5 has 5)
     tcs = {
-        "Dorm_4_1": (0.3, 3.5),
-        "Dorm_4_2": (2.0, 5.0),
-        "Dorm_5_1": (2.5, 3.5),
-        "Dorm_5_2": (4.2, 5.0),
-        "Bano_GFCI": (4.2, 8.2),
-        "Lavand_TC": (3.37, 8.0), # Washer outlet
-        "BOMBA": (1.0, 8.2) # Special pump load
+        "Dorm_4_1": (0.5, 1.5),
+        "Dorm_4_2": (0.5, 3.5),
+        "Dorm_4_3": (0.5, 5.5),
+        "Dorm_4_4": (1.8, 2.0),
+        "Dorm_4_5": (1.8, 5.0),
+        "Dorm_5_1": (4.0, 1.5),
+        "Dorm_5_2": (4.0, 3.5),
+        "Dorm_5_3": (4.0, 5.5),
+        "Dorm_5_4": (2.7, 2.0),
+        "Dorm_5_5": (2.7, 5.0)
     }
     
     for name, (tx, ty) in tcs.items():
-        if name == "BOMBA":
-            # Draw special load (square B)
-            msp.add_lwpolyline([(tx - 0.15, ty - 0.15), (tx + 0.15, ty - 0.15), (tx + 0.15, ty + 0.15), (tx - 0.15, ty + 0.15)], close=True, dxfattribs={'layer': 'ELEC_CARGAS', 'color': 1})
-            msp.add_text("B", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.16, 'color': 1}).set_placement((tx, ty), align=TextEntityAlignment.MIDDLE_CENTER)
-            msp.add_text("BOMBA DE AGUA", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.08, 'color': 7}).set_placement((tx - 0.4, ty - 0.3))
-        else:
-            is_gfci = "GFCI" in name
-            lbl = "GFCI" if is_gfci else "TC"
-            col = 1 if is_gfci else 5
-            draw_electric_center(msp, tx, ty, symbol_text=lbl, layer="ELEC_CARGAS", color=col, radius=0.13)
+        draw_electric_center(msp, tx, ty, symbol_text="TC", layer="ELEC_TOMACORRIENTES", color=6, radius=0.13)
             
-    # Conduits
-    draw_conduit(msp, (td_x, td_y), tcs["BOMBA"], color=5)
-    draw_conduit(msp, (td_x, td_y), tcs["Dorm_4_2"], color=5)
-    draw_conduit(msp, tcs["Dorm_4_2"], tcs["Dorm_4_1"], color=5)
-    draw_conduit(msp, (td_x, td_y), tcs["Dorm_5_2"], color=5)
-    draw_conduit(msp, tcs["Dorm_5_2"], tcs["Dorm_5_1"], color=5)
-    draw_conduit(msp, (td_x, td_y), tcs["Lavand_TC"], color=5)
-    draw_conduit(msp, tcs["Lavand_TC"], tcs["Bano_GFCI"], color=5)
+    # Conduits for outlets (C6) - Ring layout loop
+    draw_conduit(msp, (td_x, td_y), tcs["Dorm_4_3"], color=6)
+    draw_conduit(msp, tcs["Dorm_4_3"], tcs["Dorm_4_2"], color=6)
+    draw_conduit(msp, tcs["Dorm_4_2"], tcs["Dorm_4_1"], color=6)
+    draw_conduit(msp, tcs["Dorm_4_1"], tcs["Dorm_4_4"], color=6)
+    draw_conduit(msp, tcs["Dorm_4_4"], tcs["Dorm_4_5"], color=6)
+    draw_conduit(msp, tcs["Dorm_4_5"], tcs["Dorm_5_5"], color=6)
+    draw_conduit(msp, tcs["Dorm_5_5"], tcs["Dorm_5_4"], color=6)
+    draw_conduit(msp, tcs["Dorm_5_4"], tcs["Dorm_5_1"], color=6)
+    draw_conduit(msp, tcs["Dorm_5_1"], tcs["Dorm_5_2"], color=6)
+    draw_conduit(msp, tcs["Dorm_5_2"], tcs["Dorm_5_3"], color=6)
+    draw_conduit(msp, tcs["Dorm_5_3"], (td_x, td_y), color=6)
     
     # Legend
-    leg_x, leg_y = -1.2, 0.5
-    msp.add_text("LEYENDA CARGAS / SERVICIOS", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.11, 'color': 7}).set_placement((leg_x, leg_y + 1.2))
-    
-    # TC
-    draw_electric_center(msp, leg_x + 0.2, leg_y + 0.8, symbol_text="TC", layer="ELEC_CARGAS", color=5, radius=0.09)
-    msp.add_text("T/C Doble General", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.75))
-    
-    # Special load
-    msp.add_lwpolyline([(leg_x + 0.1, leg_y + 0.4), (leg_x + 0.3, leg_y + 0.4), (leg_x + 0.3, leg_y + 0.6), (leg_x + 0.1, leg_y + 0.6)], close=True, dxfattribs={'layer': 'ELEC_CARGAS', 'color': 1})
-    msp.add_text("B", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.10, 'color': 1}).set_placement((leg_x + 0.2, leg_y + 0.5), align=TextEntityAlignment.MIDDLE_CENTER)
-    msp.add_text("Carga Especial Bomba (0.75kW)", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.45))
-    
-    # Conduit line
-    msp.add_line((leg_x + 0.1, leg_y + 0.25), (leg_x + 0.3, leg_y + 0.25), dxfattribs={'layer': 'ELEC_CARGAS', 'color': 5, 'linetype': 'DASHED'})
-    msp.add_text("Canalización Piso/Techo (PVC 3/4\")", dxfattribs={'layer': 'ELEC_CARGAS', 'height': 0.10, 'color': 7}).set_placement((leg_x + 0.5, leg_y + 0.20))
+    draw_unified_legend(msp, -1.2, 0.5)
 
     out_dxf = os.path.join(planos_electricos_dir, "plano_electrico_tercer_piso.dxf")
     doc.saveas(out_dxf)
     render_dxf_to_pdf_and_svg(out_dxf)
     
     # Copy to report directory
-    shutil.copy2(out_dxf.replace('.dxf', '.pdf'), os.path.join(planos_report_dir, "IE-04-circuitos-canalizaciones.pdf"))
-    print("Tercer Piso Electrical Canalizaciones/Cargas compiled.")
+    shutil.copy2(out_dxf.replace('.dxf', '.pdf'), os.path.join(planos_report_dir, "IE-04-tercer-piso.pdf"))
+    print("Tercer Piso Electrical compiled.")
 
 # ====================================================
 # DIAGRAMA UNIFILAR (IE-05-unifilar-cuadro-cargas)
@@ -536,7 +608,6 @@ def build_diagrama_unifilar():
     doc.layers.new("MARCO", dxfattribs={'color': 7})
     
     # Frame and title block
-    # Frame width 14, height 9
     mx1, my1 = -1.5, -1.5
     mx2, my2 = 14.5, 9.5
     
@@ -583,29 +654,29 @@ def build_diagrama_unifilar():
     # Main Breaker Symbol (box/termomagnetic)
     msp.add_lwpolyline([(0.85, 5.4), (1.15, 5.4), (1.15, 5.8), (0.85, 5.8)], close=True, dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
     msp.add_text("ITM General", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((1.3, 5.65))
-    msp.add_text("2P, 40A, 10kA", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((1.3, 5.5))
+    msp.add_text("2P, 32A, 10kA", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((1.3, 5.5))
     
     # Connect Main Breaker to Differential Breaker
     msp.add_line((1.0, 5.4), (1.0, 4.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
     
-    # Differential Breaker Symbol (box with oval/circle or labeled ID)
+    # Differential Breaker Symbol (box with ID label)
     msp.add_lwpolyline([(0.85, 4.4), (1.15, 4.4), (1.15, 4.8), (0.85, 4.8)], close=True, dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
     msp.add_text("ID General", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((1.3, 4.65))
     msp.add_text("2P, 40A, 30mA", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((1.3, 4.50))
     
     # Connect to TG Busbar (horizontal thick line)
     msp.add_line((1.0, 4.4), (1.0, 3.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
-    msp.add_line((0.5, 3.8), (11.0, 3.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7, 'lineweight': 50})
+    msp.add_line((0.5, 3.8), (12.0, 3.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7, 'lineweight': 50})
     msp.add_text("BARRA DE COBRE TABLERO GENERAL TG-01", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'color': 7}).set_placement((0.5, 4.0))
     
-    # Branch feeders: C1 to C5
-    # Let's draw 5 vertical lines branching down at X = 1, 3, 5, 7, 9
+    # Branch feeders: C1 to C6
     ctos = [
-        {"x": 1.5, "lbl": "C1", "name": "Alumbrado", "itm": "2P, 10A", "cond": "3x1.5mm2", "desc": "Luz LED (132 W)"},
-        {"x": 3.8, "lbl": "C2", "name": "Tomacorrientes Gral.", "itm": "2P, 16A", "cond": "3x2.5mm2", "desc": "TCs Sala/Dorm (2520 W)"},
-        {"x": 6.1, "lbl": "C3", "name": "Cocina Especial", "itm": "2P, 20A", "cond": "3x2.5mm2", "desc": "Micro/Refri (1200 W)"},
-        {"x": 8.4, "lbl": "C4", "name": "Lavandería", "itm": "2P, 16A", "cond": "3x2.5mm2", "desc": "Lavadora (360 W)"},
-        {"x": 10.7, "lbl": "C5", "name": "Bomba de Agua", "itm": "2P, 16A", "cond": "3x2.5mm2", "desc": "Motor 1HP (750 W)"}
+        {"x": 1.5, "lbl": "C1", "name": "Alum. 1er Piso", "itm": "2P, 10A", "cond": "3x1.5mm2", "desc": "Luz LED (250 W)"},
+        {"x": 3.4, "lbl": "C2", "name": "T/C 1er Piso", "itm": "2P, 16A", "cond": "3x2.5mm2", "desc": "Tomacorrientes (1080 W)"},
+        {"x": 5.3, "lbl": "C3", "name": "Alum. 2do Piso", "itm": "2P, 10A", "cond": "3x1.5mm2", "desc": "Luz LED (300 W)"},
+        {"x": 7.2, "lbl": "C4", "name": "T/C 2do Piso", "itm": "2P, 16A", "cond": "3x2.5mm2", "desc": "Tomacorrientes (1980 W)"},
+        {"x": 9.1, "lbl": "C5", "name": "Alum. 3er Piso", "itm": "2P, 10A", "cond": "3x1.5mm2", "desc": "Luz LED (350 W)"},
+        {"x": 11.0, "lbl": "C6", "name": "T/C 3er Piso", "itm": "2P, 16A", "cond": "3x2.5mm2", "desc": "Tomacorrientes (1800 W)"}
     ]
     
     for c in ctos:
@@ -626,15 +697,14 @@ def build_diagrama_unifilar():
         msp.add_text(c["desc"], dxfattribs={'layer': 'TEXTOS', 'height': 0.08, 'color': 7}).set_placement((cx, 1.4), align=TextEntityAlignment.MIDDLE_CENTER)
 
     # 3. Load Schedule Table (Cuadro de Cargas) at the bottom
-    # We will draw a neat grid from Y = -0.8 to Y = 0.8, X = 0.0 to X = 11.5
-    ty1, ty2 = -0.9, 0.8
+    ty1, ty2 = -1.2, 0.8
     tx1, tx2 = 0.0, 11.5
     
     # Outer box
     msp.add_lwpolyline([(tx1, ty1), (tx2, ty1), (tx2, ty2), (tx1, ty2)], close=True, dxfattribs={'layer': 'TABLAS', 'color': 8})
     
     # Title of table
-    msp.add_text("CUADRO DE CARGAS DE INSTALACIÓN ELÉCTRICA", dxfattribs={'layer': 'TEXTOS', 'height': 0.13, 'color': 7}).set_placement((tx1 + 0.2, ty2 + 0.1))
+    msp.add_text("CUADRO DE CARGAS DE INSTALACIÓN ELÉCTRICA (C1 - C6)", dxfattribs={'layer': 'TEXTOS', 'height': 0.13, 'color': 7}).set_placement((tx1 + 0.2, ty2 + 0.1))
     
     # Headers
     cols = [
@@ -659,12 +729,13 @@ def build_diagrama_unifilar():
             
     # Table rows
     rows_data = [
-        ["C1", "Alumbrado General (LED)", "132", "1.00", "132", "2P-10A", "3 x 1.5 mm2 Cu (PVC 3/4\")"],
-        ["C2", "Tomacorrientes Generales", "2,520", "0.70", "1,764", "2P-16A", "3 x 2.5 mm2 Cu (PVC 3/4\")"],
-        ["C3", "Tomacorrientes Especial Cocina", "1,200", "0.80", "960", "2P-20A", "3 x 2.5 mm2 Cu (PVC 3/4\")"],
-        ["C4", "Servicio Lavandería", "360", "0.80", "288", "2P-16A", "3 x 2.5 mm2 Cu (PVC 3/4\")"],
-        ["C5", "Bomba de Agua (Servicio)", "750", "1.00", "750", "2P-16A", "3 x 2.5 mm2 Cu (PVC 3/4\")"],
-        ["Total", "MÁXIMA DEMANDA ESTIMADA", "4,962", "-", "3,894 W", "Idem: 19.67 A", "Llave Gral: 2P-40A"]
+        ["C1", "Alumbrado 1er Piso (LED)", "250", "1.00", "250", "2P-10A", "3 x 1.5 mm2 Cu (PVC 3/4\")"],
+        ["C2", "Tomacorrientes 1er Piso", "1,080", "0.70", "756", "2P-16A", "3 x 2.5 mm2 Cu (PVC 3/4\")"],
+        ["C3", "Alumbrado 2do Piso (LED)", "300", "1.00", "300", "2P-10A", "3 x 1.5 mm2 Cu (PVC 3/4\")"],
+        ["C4", "Tomacorrientes 2do Piso", "1,980", "0.70", "1,386", "2P-16A", "3 x 2.5 mm2 Cu (PVC 3/4\")"],
+        ["C5", "Alumbrado 3er Piso (LED)", "350", "1.00", "350", "2P-10A", "3 x 1.5 mm2 Cu (PVC 3/4\")"],
+        ["C6", "Tomacorrientes 3er Piso", "1,800", "0.70", "1,260", "2P-16A", "3 x 2.5 mm2 Cu (PVC 3/4\")"],
+        ["Total", "MÁXIMA DEMANDA ESTIMADA", "5,760", "-", "4,302 W", "Idem: 21.73 A", "Llave Gral: 2P-32A"]
     ]
     
     y_curr = ty2 - 0.35
@@ -732,12 +803,10 @@ def build_puesta_a_tierra():
     msp.add_text("DETALLE CONSTRUCTIVO DE POZO DE PUESTA A TIERRA", dxfattribs={'layer': 'TEXTOS', 'height': 0.28, 'color': 7}).set_placement((0.0, 8.5))
     
     # Draw concrete cover (Tapa de registro) at top
-    # Box from X = 2.0 to 4.0, Y = 6.8 to 7.2
     msp.add_lwpolyline([(2.0, 6.8), (4.0, 6.8), (4.0, 7.2), (2.0, 7.2)], close=True, dxfattribs={'layer': 'POZO', 'color': 7})
     msp.add_text("TAPA DE CONCRETO 0.40 x 0.40 m", dxfattribs={'layer': 'TEXTOS', 'height': 0.11, 'color': 7}).set_placement((4.2, 7.0))
     
-    # Draw pit main body (pozo de tierra)
-    # Pit from X = 2.2 to 3.8, Y = 2.0 to 6.8
+    # Draw pit main body
     msp.add_line((2.2, 6.8), (2.2, 2.0), dxfattribs={'layer': 'POZO', 'color': 8})
     msp.add_line((3.8, 6.8), (3.8, 2.0), dxfattribs={'layer': 'POZO', 'color': 8})
     msp.add_line((2.2, 2.0), (3.8, 2.0), dxfattribs={'layer': 'POZO', 'color': 8})
@@ -745,20 +814,19 @@ def build_puesta_a_tierra():
     # Labeled dimension of the pit
     msp.add_text("Diámetro del Pozo: 0.80 m / Altura: 2.40 m", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((4.2, 4.5))
     
-    # Draw copper electrode (bar de cobre en el centro)
-    # X = 3.0, Y = 1.0 to 7.0 (height 6.0 representing rod)
+    # Draw copper electrode
     msp.add_line((3.0, 1.0), (3.0, 7.0), dxfattribs={'layer': 'POZO', 'color': 1, 'lineweight': 40}) # Red for copper rod
     msp.add_text("ELECTRODO DE COBRE 3/4\" x 2.40 m", dxfattribs={'layer': 'TEXTOS', 'height': 0.11, 'color': 7}).set_placement((3.2, 3.5))
     
-    # Split-bolt copper connector at top of the rod
+    # Split-bolt copper connector
     msp.add_circle((3.0, 6.9), 0.08, dxfattribs={'layer': 'POZO', 'color': 1})
     msp.add_text("Conector Split-Bolt de Bronce", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((3.2, 6.8))
     
-    # Copper wire going from connector to ground busbar
+    # Copper wire
     msp.add_line((3.0, 6.9), (1.5, 7.8), dxfattribs={'layer': 'POZO', 'color': 1, 'linetype': 'DASHED'})
     msp.add_text("Cable de Cobre de Protección (10 mm2)", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((0.2, 7.5))
     
-    # Soil filling (Tierra de chacra c/ aditivo gel)
+    # Soil filling
     msp.add_text("Relleno: Tierra de cultivo tratada", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((4.2, 2.8))
     msp.add_text("con aditivos de conductividad (Bentonita/Gel)", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'color': 7}).set_placement((4.2, 2.5))
     

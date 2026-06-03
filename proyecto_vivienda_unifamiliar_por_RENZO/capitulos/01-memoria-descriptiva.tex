@@ -1,4 +1,4 @@
-﻿\chapter{MEMORIA DESCRIPTIVA}
+\chapter{MEMORIA DESCRIPTIVA}
 
 \section{Introduccion}
 
@@ -39,8 +39,8 @@ Desarrollar una propuesta tecnica de instalaciones electricas interiores para la
 
 \begin{itemize}
   \item Identificar los ambientes funcionales de la vivienda y su distribucion por nivel.
-  \item Definir una sectorizacion de circuitos acorde con una vivienda de tres pisos.
-  \item Ubicar luminarias, interruptores, tomacorrientes, tableros y cargas especiales sobre la arquitectura existente.
+  \item Definir una sectorizacion de circuitos acorde con una vivienda de tres pisos, separando alumbrado y tomacorrientes.
+  \item Ubicar luminarias, interruptores, tomacorrientes, y tableros sobre la arquitectura existente.
   \item Dimensionar preliminarmente conductores y dispositivos de proteccion.
   \item Documentar los criterios graficos y tecnicos usados en los planos electricos.
 \end{itemize}
@@ -60,7 +60,7 @@ La arquitectura base fue tomada de los planos CAD version 3 generados en el proy
 \midrule
 Primer piso & Tienda o ambiente frontal, cocina, pasadizo longitudinal y escalera. \\
 Segundo piso & Dormitorio principal, dormitorio 3, sala/hall, bano y escalera. \\
-Tercer piso & Dormitorio 4, dormitorio 5, pasadizo/vestibulo, bano/lavanderia y escalera. \\
+Tercer piso & Dormitorio 4, dormitorio 5, pasadizo/vestibulo, bano y escalera. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -69,7 +69,7 @@ El ambiente frontal del primer piso se rotula como tienda en el plano arquitecto
 
 \section{Criterio de sectorizacion electrica}
 
-La version anterior del proyecto concentraba las cargas en pocos circuitos. Para mejorar claridad, mantenimiento y lectura de planos, se adopta una sectorizacion por nivel y por cargas especiales. Esta propuesta evita mezclar alumbrado y tomacorrientes de toda la vivienda en un unico circuito general.
+Para mejorar claridad, mantenimiento y lectura de planos, se adopta una sectorizacion por nivel en 6 circuitos. Cada piso cuenta con un circuito exclusivo para alumbrado (C1, C3, C5) y otro exclusivo para tomacorrientes generales (C2, C4, C6). Se han eliminado todos los circuitos especiales (lavanderia, motores o bombas) para simplificar la instalacion y ajustarse exclusivamente al levantamiento real de puntos.
 
 \begin{table}[H]
 \centering
@@ -80,34 +80,31 @@ La version anterior del proyecto concentraba las cargas en pocos circuitos. Para
 \toprule
 \textbf{Circuito} & \textbf{Uso} & \textbf{Criterio} \\
 \midrule
-C1 & Alumbrado del primer piso & Atiende tienda, cocina, pasadizo y escalera del primer nivel. \\
-C2 & Tomacorrientes generales del primer piso & Atiende tienda y tomacorriente auxiliar del pasadizo. \\
-C3 & Cocina & Circuito independiente para tomacorrientes de pequenos artefactos y refrigeracion. \\
-C4 & Alumbrado del segundo piso & Atiende dormitorios, hall, bano y escalera del segundo nivel. \\
-C5 & Tomacorrientes generales del segundo piso & Atiende dormitorios, hall y tomacorriente protegido de bano. \\
-C6 & Alumbrado del tercer piso & Atiende dormitorios, pasadizo, bano/lavanderia y escalera. \\
-C7 & Tomacorrientes generales del tercer piso & Atiende dormitorios y tomacorriente protegido de bano. \\
-C8 & Lavanderia & Circuito dedicado para lavadora y tomacorriente de servicio. \\
-C9 & Bomba de agua & Circuito dedicado para bomba o carga de servicio equivalente. \\
+C1 & Alumbrado del primer piso & Atiende tienda, cocina, pasadizo y escalera (5 puntos de luz). \\
+C2 & Tomacorrientes del primer piso & Atiende tienda (2 tomas) y cocina (4 tomas). Total: 6 puntos dobles. \\
+C3 & Alumbrado del segundo piso & Atiende dormitorios, hall, bano y escalera (6 puntos de luz). \\
+C4 & Tomacorrientes del segundo piso & Atiende dormitorios (8 tomas) y sala (3 tomas). Total: 11 puntos dobles. \\
+C5 & Alumbrado del tercer piso & Atiende dormitorios, pasadizo, bano y escalera (7 puntos de luz). \\
+C6 & Tomacorrientes del tercer piso & Atiende dormitorio 4 (5 tomas) y dormitorio 5 (5 tomas). Total: 10 puntos dobles. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \section{Tableros, medidor y puesta a tierra}
 
-Se propone ubicar el tablero general TG-01 en el primer piso, cerca del ingreso y en zona accesible. El medidor se representa de forma referencial en fachada o ingreso. Por la existencia de tres niveles, se consideran dos tableros de distribucion: TD-01 asociado al segundo piso y TD-02 asociado al tercer piso y cargas de servicio.
+Se propone ubicar el tablero general TG-01 en el primer piso, cerca del ingreso y en zona accesible. El medidor se representa de forma referencial en fachada o ingreso. Por la existencia de tres niveles, se consideran dos tableros de distribucion secundarios: TD-01 asociado al segundo piso y TD-02 asociado al tercer piso.
 
 \begin{itemize}
-  \item \textbf{TG-01:} tablero general de corte y proteccion principal.
+  \item \textbf{TG-01:} tablero general de corte y proteccion principal del primer piso.
   \item \textbf{TD-01:} tablero de distribucion para el segundo nivel.
-  \item \textbf{TD-02:} tablero de distribucion para el tercer nivel, lavanderia y bomba.
+  \item \textbf{TD-02:} tablero de distribucion para el tercer nivel.
   \item \textbf{M:} medidor referencial en fachada o zona de ingreso.
-  \item \textbf{PT:} puesta a tierra referencial, su ubicacion final debe validarse en campo.
+  \item \textbf{PT:} puesta a tierra referencial conectada al TG-01.
 \end{itemize}
 
 \section{Criterios de ubicacion de puntos}
 
-Los puntos electricos se distribuyen con criterio preliminar sobre los ambientes existentes. Las luminarias se ubican preferentemente al centro de ambientes pequenos y se duplican en ambientes alargados o de uso frecuente. Los interruptores se colocan cerca de accesos, evitando quedar detras de puertas. Los tomacorrientes se distribuyen en muros utiles, con proteccion especial en banos y circuitos independientes para cocina, lavanderia y bomba.
+Los puntos electricos se distribuyen con criterio preliminar sobre los ambientes existentes. Las luminarias se ubican preferentemente al centro de ambientes y se duplican en ambientes alargados o de uso frecuente (como el pasadizo del primer piso y los dormitorios principales). Los interruptores se colocan cerca de accesos, evitando quedar detras de puertas. Los tomacorrientes se distribuyen en muros utiles con conexion a tierra para seguridad del usuario.
 
 \section{Observaciones y datos por confirmar}
 
@@ -116,5 +113,4 @@ Los puntos electricos se distribuyen con criterio preliminar sobre los ambientes
   \item Confirmar ubicacion definitiva del medidor con la empresa distribuidora.
   \item Confirmar ubicacion final de TG-01, TD-01 y TD-02 en obra.
   \item Verificar recorridos reales de canalizacion antes de ejecutar.
-  \item Verificar potencia real de bomba, lavadora y equipos de cocina.
 \end{itemize}
