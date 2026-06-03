@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-tabla]{babel}
 \usepackage{geometry}
+\usepackage{amsmath}
 \usepackage[scaled]{helvet}
 \usepackage{graphicx}
 \usepackage{float}
@@ -48,6 +49,8 @@
 \setcounter{tocdepth}{3}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.62em}
+\setlength{\headwidth}{\textwidth}
+\hfuzz=12pt
 \setlist[itemize]{leftmargin=1.05cm, itemsep=0.05em, topsep=0.2em, label=\(\triangleright\)}
 \setlist[enumerate]{leftmargin=1.05cm, itemsep=0.05em, topsep=0.2em}
 
@@ -104,6 +107,7 @@
 
 \renewcommand{\bibname}{Referencias}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\documentfootertext}{MEMORIA DESCRIPTIVA - INSTALACIONES ELECTRICAS}
 
 \newcommand{\memoriaheader}{%
   \begingroup
@@ -111,41 +115,47 @@
   \setlength{\arrayrulewidth}{1.1pt}%
   \setlength{\tabcolsep}{4pt}%
   \renewcommand{\arraystretch}{1.18}%
-  \parbox{0.98\headwidth}{%
+  \makebox[0.90\headwidth][c]{%
+  \begin{minipage}{0.90\headwidth}
   \centering
-    \begin{tabular}{|>{\centering\arraybackslash}m{4.42in}|>{\centering\arraybackslash}m{0.70in}|>{\centering\arraybackslash}m{0.62in}|}
+  \resizebox{\linewidth}{!}{%
+    \begin{tabular}{|>{\centering\arraybackslash}m{3.95in}|>{\centering\arraybackslash}m{0.65in}|>{\centering\arraybackslash}m{0.55in}|}
       \hline
       \scriptsize PROYECTO: INSTALACIONES ELECTRICAS INTERIORES DE VIVIENDA UNIFAMILIAR, DISTRITO DE SAN MIGUEL -- PROVINCIA DE SAN ROMAN -- DEPARTAMENTO DE PUNO &
       \scriptsize\shortstack{UNIDAD\\EJECUTORA DE\\INVERSIONES} &
-      \includegraphics[height=0.58in]{figuras/escudo-unap.png} \\
+      \includegraphics[height=0.50in]{figuras/escudo-unap.png} \\
       \hline
     \end{tabular}%
+  }%
   \par\vspace{0.13in}%
   \textcolor{modelblue}{\rule{\linewidth}{0.45pt}}%
+  \end{minipage}%
   }%
   \endgroup
 }
 
 \newcommand{\memoriafooter}{%
-  \parbox{0.98\headwidth}{%
+  \makebox[0.90\headwidth][c]{%
+  \begin{minipage}{0.90\headwidth}
     \textcolor{modelblue}{\rule{\linewidth}{0.45pt}}%
     \par\vspace{0.08in}%
-    {\small MEMORIA DESCRIPTIVA - INSTALACIONES ELECTRICAS\hfill\thepage}%
+    {\small \documentfootertext\hfill\thepage}%
+  \end{minipage}%
   }%
 }
 
 \fancypagestyle{memoria}{%
   \fancyhf{}%
-  \fancyhead[C]{\memoriaheader}%
-  \fancyfoot[C]{\memoriafooter}%
+  \fancyhead[C]{\makebox[0pt][c]{\memoriaheader}}%
+  \fancyfoot[C]{\makebox[0pt][c]{\memoriafooter}}%
   \renewcommand{\headrulewidth}{0pt}%
   \renewcommand{\footrulewidth}{0pt}%
 }
 
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyhead[C]{\memoriaheader}%
-  \fancyfoot[C]{\memoriafooter}%
+  \fancyhead[C]{\makebox[0pt][c]{\memoriaheader}}%
+  \fancyfoot[C]{\makebox[0pt][c]{\memoriafooter}}%
   \renewcommand{\headrulewidth}{0pt}%
   \renewcommand{\footrulewidth}{0pt}%
 }

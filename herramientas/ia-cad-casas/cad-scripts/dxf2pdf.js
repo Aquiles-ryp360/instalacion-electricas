@@ -49,10 +49,16 @@ function main() {
     var printTool = new Print(undefined, doc, view);
 
     // 5. Configurar tamaño de papel (A4 Landscape)
-    doc.setVariable("PageSettings/PaperWidth", 297);  // Horizontal
-    doc.setVariable("PageSettings/PaperHeight", 210); // Vertical
+    doc.setVariable("UnitSettings/PaperUnit", RS.Millimeter);
+    doc.setVariable("PageSettings/PaperWidth", 210);
+    doc.setVariable("PageSettings/PaperHeight", 297);
     doc.setVariable("PageSettings/PageOrientation", "Landscape");
-    doc.setVariable("PageSettings/PaperUnit", RS.Millimeter);
+    doc.setVariable("ColorSettings/ColorMode", "FullColor");
+    doc.setVariable("ColorSettings/BackgroundColor", new RColor("white"));
+    doc.setVariable("MultiPageSettings/Rows", 1);
+    doc.setVariable("MultiPageSettings/Columns", 1);
+    doc.setVariable("MultiPageSettings/PrintCropMarks", false);
+    doc.setVariable("PageTagSettings/EnablePageTags", false);
     
     // Auto-ajustar el dibujo al papel y centrar (métodos estáticos de la clase Print)
     Print.autoFitDrawing(di, false);

@@ -1,12 +1,12 @@
-# Mini Proyecto: Instalaciones Eléctricas Domiciliarias
+# Proyecto: Instalaciones Eléctricas Domiciliarias Interiores
 
-Repositorio grupal para la organización, cálculo, diseño y compilación del informe académico de instalaciones eléctricas domiciliarias interiores, desarrollado para el curso de **Instalaciones Eléctricas I** (UNAP).
+Repositorio grupal para la organización, cálculo, diseño y compilación del expediente técnico-académico de instalaciones eléctricas domiciliarias interiores, desarrollado para el curso de **Instalaciones Eléctricas I** (UNAP).
 
 ---
 
 ## 👥 Integrantes y Proyectos
 
-El repositorio alberga el avance y desarrollo de las propuestas de instalación eléctrica domiciliaria de los dos integrantes:
+El repositorio alberga el desarrollo de las propuestas de instalación eléctrica domiciliaria de los dos integrantes:
 
 ### 1. Renzo Gabriel Mamani Galindo (Proyecto 3 Pisos)
 * **Vivienda:** Unifamiliar de 3 pisos, área construida de 40 m² por piso.
@@ -20,13 +20,13 @@ El repositorio alberga el avance y desarrollo de las propuestas de instalación 
 ### 2. Aquiles Taylor Ramos Yapo (Proyecto 2 Pisos)
 * **Vivienda:** Unifamiliar (casa grande) de 2 pisos, terreno de 134.18 m² (segundo piso de aprox. 42.56 m² construidos, primer piso con menor área construida).
 * **Ubicación:** Av. Horacio con Jr. Marineros, Mz F7, Lotes 11 y 12, San Miguel, San Román, Puno (Zona Urbana).
-* **Estado:** Avances y borradores del capítulo I y II en desarrollo.
+* **Estado:** Expediente y planos sincronizados en la versión **v4**.
 * **Archivos clave (Carpeta de Aporte):**
-  * [Avanze-Proyecto-Aquiles/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles): Directorio principal de aportes del proyecto de 2 pisos.
-  * [Avanze-Proyecto-Aquiles/capitulo-1-memoria-descriptiva.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/capitulo-1-memoria-descriptiva.md): Borrador de la memoria descriptiva.
-  * [Avanze-Proyecto-Aquiles/capitulo-2-calculos-justificativos.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/capitulo-2-calculos-justificativos.md): Borrador de los cálculos justificativos (demanda eléctrica).
-  * [Avanze-Proyecto-Aquiles/respuestas-cuestionario-aquiles.md](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/respuestas-cuestionario-aquiles.md): Cuestionario de datos y parámetros técnicos consolidado.
-  * [Avanze-Proyecto-Aquiles/trabajo-cad-casa/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/trabajo-cad-casa): Zona de trabajo CAD específica para la vivienda de Aquiles.
+  * [Avanze-Proyecto-Aquiles/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles): Directorio principal de aportes.
+  * [proyecto-latex-instalaciones/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/proyecto-latex-instalaciones): Directorio del proyecto LaTeX aislado.
+  * [proyecto-latex-instalaciones/build/main.pdf](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/proyecto-latex-instalaciones/build/main.pdf): PDF del expediente técnico de 2 pisos compilado (Memoria descriptiva y cálculos).
+  * [herramientas/calculos-electricos-vivienda/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/calculos-electricos-vivienda): Motor de cálculo de cargas en Python.
+  * [trabajo-cad-casa/electricos/](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos): Planos DXF/PDF y documentación de revisiones del primer y segundo piso.
 
 ---
 
@@ -37,13 +37,12 @@ instalacion-electricas/
 ├── Avanze-Proyecto-Aquiles/       # Carpeta de aportes para el proyecto de 2 pisos (Aquiles)
 │   ├── Full-Imagenes/            # Croquis originales y plantillas visuales CAD
 │   ├── trabajo-cad-casa/         # Modelación CAD de la vivienda (layouts y salidas)
-│   ├── latex/                    # Documentación LaTeX del avance de 2 pisos
-│   ├── capitulo-1-memoria-descriptiva.md
-│   ├── capitulo-2-calculos-justificativos.md
-│   └── respuestas-cuestionario-aquiles.md
+│   │   └── electricos/           # Datos JSON, planos finales DXF/PDF y revisiones
+│   └── proyecto-latex-instalaciones/ # Expediente técnico en LaTeX (2 pisos)
 │
 ├── herramientas/                 # Utilidades y automatizaciones del proyecto
 │   ├── ia-cad-casas/             # Motor de generación automática de planos DXF/PDF
+│   ├── calculos-electricos-vivienda/ # Motor de cálculo de cargas y demanda máxima
 │   └── calculadora-instalacion-casa.html # Calculadora HTML interactiva de cargas
 │
 ├── latex/                        # Compilación LaTeX del proyecto de 3 pisos (Gael Renzo)
@@ -66,16 +65,50 @@ instalacion-electricas/
 
 ## 🛠️ Herramientas y Compilación
 
-### Compilación del Informe LaTeX (Proyecto 3 Pisos)
-Para compilar el informe y regenerar el documento final en PDF (`latex/build/main.pdf`), ejecuta los siguientes comandos desde la terminal dentro de la carpeta `latex/`:
+### Compilación del Informe LaTeX
 
+#### 1. Proyecto 3 Pisos (Renzo Mamani)
+Ejecuta desde el directorio `latex/`:
 ```bash
 pdflatex -interaction=nonstopmode -output-directory=build main.tex
 pdflatex -interaction=nonstopmode -output-directory=build main.tex
 ```
+El PDF final se genera en `latex/build/main.pdf`.
 
-### Calculadora de Cargas
-La calculadora interactiva está en [calculadora-instalacion-casa.html](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/calculadora-instalacion-casa.html). Puedes abrirla en tu navegador para realizar estimaciones rápidas de demanda máxima por áreas y circuitos.
+#### 2. Proyecto 2 Pisos (Aquiles Ramos)
+Ejecuta desde el directorio `Avanze-Proyecto-Aquiles/proyecto-latex-instalaciones/`:
+```bash
+pdflatex -interaction=nonstopmode -output-directory=build main.tex
+pdflatex -interaction=nonstopmode -output-directory=build main.tex
+```
+El PDF final se genera en `Avanze-Proyecto-Aquiles/proyecto-latex-instalaciones/build/main.pdf`.
+
+### Motor de Cálculo de Cargas y Demanda Máxima
+Para actualizar los cálculos justificativos y regenerar las tablas LaTeX para el proyecto de 2 pisos, edite el JSON [proyecto_aquiles_base.json](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/calculos-electricos-vivienda/data/proyecto_aquiles_base.json) y luego ejecute desde la raíz del repositorio:
+```bash
+python3 herramientas/calculos-electricos-vivienda/scripts/calcular_instalacion.py
+```
+Esto actualizará los archivos de salida en `herramientas/calculos-electricos-vivienda/output/` automáticamente.
+
+### Superposición Eléctrica y Planos CAD
+Para aplicar la simbología y circuitos eléctricos sobre la arquitectura base, ejecute desde la raíz:
+```bash
+herramientas/ia-cad-casas/.venv/bin/python \
+  herramientas/ia-cad-casas/scripts/electrical_overlay.py \
+  --base Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/piso1_v3.dxf \
+  --electrical Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/data/electrico_piso1_v4.json \
+  --output Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/salidas/electrico_piso1_v4.dxf
+```
+Para exportarlo a PDF usando QCAD en modo headless:
+```bash
+qcad -no-gui -platform offscreen -quit \
+  -autostart "$(realpath herramientas/ia-cad-casas/cad-scripts/dxf2pdf.js)" \
+  -input "$(realpath Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/salidas/electrico_piso1_v4.dxf)" \
+  -output "$(realpath Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/salidas/electrico_piso1_v4.pdf)"
+```
+
+### Calculadora de Cargas Interactiva
+La calculadora interactiva está en [calculadora-instalacion-casa.html](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/calculadora-instalacion-casa.html). Puedes abrirla en tu navegador para realizar estimaciones rápidas de demanda máxima.
 
 ---
 

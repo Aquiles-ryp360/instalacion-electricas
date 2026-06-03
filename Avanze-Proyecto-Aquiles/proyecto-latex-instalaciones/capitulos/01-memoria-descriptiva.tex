@@ -1,9 +1,5 @@
-\phantomsection
+\chapter*{MEMORIA DESCRIPTIVA}
 \addcontentsline{toc}{chapter}{MEMORIA DESCRIPTIVA}
-\begin{center}
-{\color{headingred}\bfseries\Large\uline{MEMORIA DESCRIPTIVA}}
-\end{center}
-\vspace{0.55em}
 
 \section{GENERALIDADES}
 
@@ -40,220 +36,201 @@ Zona & : & Urbana \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.70\textwidth]{figuras/catastro-aquiles.png}
-
-{\itshape Imagen 1: Referencia catastral de la zona de ubicacion de la vivienda.}
+\caption{Referencia catastral de la zona de ubicacion de la vivienda.}
 \end{figure}
-
-\textbf{Dato por confirmar:} direccion final normalizada, lote aplicable al expediente, coordenadas del predio y referencia catastral definitiva.
 
 \subsubsection{CONDICIONES CLIMATOLOGICAS}
 
-La zona del proyecto corresponde al ambito urbano altoandino del departamento de Puno. Para el diseno electrico se deberan considerar condiciones ambientales propias de la region, tales como temperatura baja, temporada de lluvias, humedad en recorridos exteriores y exposicion de elementos ubicados fuera de la vivienda.
+La zona del proyecto corresponde al ambito urbano altoandino del departamento de Puno, en el distrito de San Miguel, a una altitud promedio de \textbf{3,825 m.s.n.m.} La topografia es predominantemente plana. Para el diseno electrico se consideran las condiciones ambientales de la region, resumidas en la siguiente tabla (Fuente de informacion climatologica: SENAMHI / TuTiempo.net):
 
-Para esta fase no se fija una altitud ni una tabla climatologica definitiva, porque no se ha validado una fuente especifica para el punto exacto del predio. En el desarrollo final se debera confirmar la informacion climatologica con una fuente tecnica o institucional, especialmente para especificar equipos, canalizaciones exteriores y elementos del sistema de puesta a tierra.
+\begin{center}
+\begin{small}
+\begin{tabular}{l c c}
+\toprule
+\textbf{Parametro Climatologico} & \textbf{Semestre Mayo - Octubre} & \textbf{Semestre Noviembre - Abril} \\
+\midrule
+Clima Predominante & Frigido y Seco & Frigido y Lluvioso \\
+Temperatura Minima & \(-3^\circ\text{C}\) & \(0^\circ\text{C}\) \\
+Temperatura Maxima & \(17^\circ\text{C}\) & \(19^\circ\text{C}\) \\
+Temperatura Media & \(8^\circ\text{C}\) & \(14^\circ\text{C}\) \\
+Velocidad del Viento & 90 km/h & 70 km/h \\
+\bottomrule
+\end{tabular}
+\end{small}
+\end{center}
+
+Las bajas temperaturas y lluvias estacionales se consideran para la seleccion de las cubiertas protectoras de los conductores y el grado de hermeticidad de las canalizaciones y cajas.
 
 \subsubsection{DATOS DE COORDENADAS}
 
+Las coordenadas geograficas de referencia para la vivienda unifamiliar son:
+
 \begin{center}
 \begin{tabular}{p{2.20in}c p{2.65in}}
-Coordenadas del predio & : & Por confirmar \\
+Coordenadas del predio & : & -15.485122, -70.126588 (Sujeto a validacion en obra) \\
 \end{tabular}
 \end{center}
-
-Las capturas catastrales disponibles sirven como referencia visual de ubicacion, pero no reemplazan una coordenada verificada para el expediente.
 
 \subsection{OBJETIVOS}
 
 \subsubsection{OBJETIVO GENERAL}
 
-Satisfacer las necesidades de energia electrica de la vivienda unifamiliar, mediante una instalacion interior ordenada, segura y compatible con la distribucion arquitectonica disponible.
+Satisfacer las necesidades de energia electrica de la vivienda unifamiliar de dos pisos, mediante una instalacion interior segura, funcional y compatible con la distribucion arquitectonica disponible.
 
 \subsubsection{OBJETIVOS ESPECIFICOS}
 
 \begin{itemize}
-  \item Desarrollar el planteamiento tecnico de las instalaciones electricas interiores de la vivienda.
-  \item Identificar los ambientes y cargas principales considerados en el proyecto.
-  \item Establecer la organizacion preliminar del tablero general y de los circuitos derivados.
-  \item Definir criterios generales para alumbrado, tomacorrientes, canalizaciones y puesta a tierra.
-  \item Precisar los datos que deben confirmarse antes de desarrollar calculos, especificaciones, metrados y planos electricos definitivos.
+  \item Desarrollar el planteamiento tecnico de las instalaciones electricas interiores de la vivienda de dos niveles.
+  \item Identificar los ambientes, tomacorrientes y cargas principales (incluyendo bomba de agua y lavadora).
+  \item Establecer la organizacion preliminar del tablero general y de los circuitos derivados de alumbrado, tomacorrientes y cocina.
+  \item Definir criterios para la instalacion del sistema de puesta a tierra y la proteccion de las personas.
+  \item Sustentar tecnicamente el dimensionamiento y especificaciones en los capitulos de calculo posteriores.
 \end{itemize}
 
 \subsection{ALCANCES DEL PROYECTO}
 
-El proyecto comprende el diseno de las instalaciones electricas interiores en baja tension para una vivienda unifamiliar de dos pisos. El alcance se desarrolla sobre la base de los croquis arquitectonicos disponibles y de la interpretacion CAD vigente en la carpeta de trabajo del caso Aquiles.
-
-Los componentes a ejecutarse en el sistema de utilizacion en baja tension son los siguientes:
+El proyecto comprende el diseno preliminar de las instalaciones electricas interiores en baja tension para una vivienda unifamiliar de dos pisos. El area del terreno se considera preliminarmente como \(134.18\text{ m}^2\), mientras que las areas techadas por piso se encuentran pendientes de confirmacion con Aquiles y con los planos arquitectonicos regularizados. Para los calculos se evaluara un escenario provisional, sin tratarlo como area definitiva de obra. Los componentes a ejecutarse en el sistema son:
 
 \begin{itemize}
-  \item Alimentacion electrica desde el punto de suministro o medicion hasta el tablero general.
-  \item Instalacion de tablero general de distribucion.
-  \item Instalacion de interruptores, tomacorrientes y salidas de alumbrado.
-  \item Ejecucion de circuitos derivados para alumbrado interior.
-  \item Ejecucion de circuitos derivados para tomacorrientes de uso general.
-  \item Circuitos para cocina, zona de servicio, lavadora, bomba de agua u otras cargas que los calculos justifiquen.
-  \item Suministro e instalacion de canalizaciones, cajas y accesorios.
-  \item Instalacion del sistema de puesta a tierra de proteccion.
-  \item Elaboracion de planos electricos, diagrama unifilar, cuadro de cargas y detalles en fases posteriores.
+  \item Alimentacion electrica monofasica desde el punto de suministro de la empresa concesionaria local hasta el Tablero General.
+  \item Conexión de alimentación general en baja tensión (no requiere subestación ni transformador de distribución propio).
+  \item Instalacion de un Tablero General (TG) de distribucion empotrado en el primer nivel.
+  \item Canalizaciones empotradas en paredes y losas mediante tuberias de PVC rigido clase pesada.
+  \item Salidas de alumbrado general con tecnologia LED de alta eficiencia.
+  \item Salidas de tomacorrientes con contacto de tierra y proteccion diferencial.
+  \item Circuitos derivados para cargas especiales (cocina del segundo piso, lavadora y bomba de agua exterior de 1 HP asociada al pozo de agua).
+  \item Sistema de puesta a tierra de proteccion con un solo pozo de tierra vertical en patio o jardin.
 \end{itemize}
 
-Sobre la base de lo descrito en la presente Memoria Descriptiva, la ejecucion de cualquier obra debera realizarse siguiendo las recomendaciones del Codigo Nacional de Electricidad -- Utilizacion, la Norma Tecnica EM.010 del Reglamento Nacional de Edificaciones y las especificaciones de los fabricantes de equipos y accesorios.
+Todos los equipos y componentes de la instalacion estaran proyectados para funcionar de manera eficiente a la altitud de la zona, considerando los factores de correccion por altitud.
 
 \subsection{NORMAS DE APLICACION}
 
-El proyecto de Instalaciones Electricas debe estar diseñado bajo los requisitos de los siguientes estandares y normas nacionales aplicables:
+El proyecto de Instalaciones Electricas se disena bajo los requisitos de los siguientes estandares y normas nacionales aplicables:
 
 \begin{itemize}
-  \item Codigo Nacional de Electricidad -- Utilizacion.
-  \item Norma Tecnica EM.010 Instalaciones Electricas Interiores del Reglamento Nacional de Edificaciones.
-  \item Criterios de la empresa concesionaria Electro Puno S.A.A. para suministro residencial, sujetos a confirmacion documental.
-  \item Normas graficas y simbologia electrica que se definiran en el capitulo de planos.
-  \item Especificaciones tecnicas de los fabricantes de materiales, equipos y accesorios.
+  \item Codigo Nacional de Electricidad -- Utilizacion (RM N\(^\circ\) 0037-2006-MEM/DM).
+  \item Norma Tecnica EM.010 Instalaciones Electricas Interiores del Reglamento Nacional de Edificaciones (RM N\(^\circ\) 083-2019-VIVIENDA).
+  \item Norma DGE ``Simbolos Graficos en Electricidad'' (RM N\(^\circ\) 091-2002-EM/VME).
+  \item Estándar IEEE Std 142 (Grounding of Industrial and Commercial Power Systems).
+  \item Criterios de la empresa concesionaria Electro Puno S.A.A.
+  \item Sistema Legal de Unidades de Medida del Peru (SLUMP).
 \end{itemize}
 
-Los articulos, numerales y reglas especificas deberan citarse en los capitulos de calculo, especificaciones y planos una vez verificados en los archivos normativos del repositorio.
+Los articulos, numerales y reglas especificas del CNE-U se citaran en el capitulo de calculos justificativos para sustentar cada seccion de conductor e interruptor.
 
 \section{DESCRIPCION DEL PROYECTO}
 
 \subsection{ALIMENTADORES PRINCIPALES}
 
-El alimentador principal suministrara energia desde el punto de medicion o entrega de la concesionaria hasta el tablero general de la vivienda. De manera preliminar, el sistema se considera monofasico, 220 V, 60 Hz, con suministro de Electro Puno S.A.A.
-
-La ruta, tipo de acometida, ubicacion del medidor, calibre del alimentador y proteccion principal no se definen en esta memoria. Estos datos deberan calcularse y representarse en el diagrama unifilar y en los planos electricos.
-
-\textbf{Dato por confirmar:} punto exacto de suministro, potencia contratada si existiera, condicion del medidor, tipo de acometida y recorrido del alimentador principal.
+El alimentador principal suministrara energia en baja tension desde el punto de suministro (medidor) de la concesionaria Electro Puno S.A.A. hasta el Tablero General de la vivienda. El sistema sera monofasico, con una tension nominal de \textbf{220 V} y una frecuencia de \textbf{60 Hz}.
+La seccion final del conductor alimentador y el diametro de la tuberia de proteccion se dimensionaran en el capitulo de calculos justificativos para controlar la capacidad termica y la caida de tension.
 
 \subsection{TABLERO ELECTRICO GENERAL}
 
-El tablero electrico general distribuira la energia electrica hacia los circuitos derivados de la vivienda. Se recomienda ubicarlo en el primer piso, en una zona seca, accesible, visible para operacion y mantenimiento, y alejada de humedad directa.
-
-El tablero debera contener la proteccion general y las protecciones de cada circuito derivado. La capacidad nominal, numero de polos, reserva de espacios, barras, interruptores y esquema definitivo se estableceran en el capitulo de calculos justificativos.
-
-\textbf{Dato por confirmar:} ubicacion exacta del tablero general en el plano arquitectonico.
+El Tablero General (TG) centralizara las protecciones de la vivienda. Se preve ubicarlo empotrado en la pared del primer piso, en una zona accesible y de facil maniobra. El gabinete sera metalico o de resina plastica autoextinguible con grado de proteccion minimo IP40, equipado con barras de cobre para fases, neutro y tierra. Albergara el interruptor general termomagnetico, interruptores diferenciales de alta sensibilidad y los interruptores termomagneticos de los circuitos derivados, cuyas capacidades se determinaran en los calculos justificativos.
 
 \subsection{ALIMENTADORES SECUNDARIOS}
 
-En caso de que el proyecto requiera subtableros o alimentaciones independientes hacia zonas especificas, estos se definiran como alimentadores secundarios. Para la vivienda actual no se adopta todavia un subtablero como solucion definitiva; se evaluara si el tablero general puede atender directamente todos los circuitos derivados o si conviene sectorizar por piso.
+Dada la distribucion de la vivienda, se evaluara en la fase de calculos si el tablero general atiende directamente todos los circuitos derivados de ambos pisos o si conviene incorporar un subtablero secundario en el segundo nivel para simplificar los recorridos de las tuberias.
 
 \subsubsection{CANALIZACIONES}
 
-Las canalizaciones interiores podran ser empotradas, superficiales o mixtas, segun el estado constructivo de la vivienda, los recorridos disponibles y la compatibilizacion con muros, losas y acabados. En ambientes interiores se priorizara una instalacion ordenada, protegida y registrable mediante cajas adecuadas.
-
-En exteriores, zonas de humedad o recorridos expuestos, la canalizacion debera seleccionarse con criterio de proteccion mecanica y ambiental. La especificacion final del tipo de tuberia y accesorios corresponde al capitulo de especificaciones tecnicas.
-
-\textbf{Dato por confirmar:} si la instalacion sera nueva empotrada, superficial sobre vivienda existente o mixta.
+\paragraph{Instalacion Empotrada:} Las canalizaciones interiores seran totalmente empotradas en losas de techo, columnas y muros de ladrillo, utilizando tuberias PVC pesadas y cajas de fierro galvanizado de dimensiones normalizadas.
+\paragraph{Canalizacion Subterranea:} Para el recorrido exterior hacia la bomba de agua del pozo, se preve una canalizacion subterranea con tuberia de PVC-P, protegida mecanicamente y senalizada mediante cinta plastica de advertencia.
+\paragraph{Buzones y Registros:} Se proyecta una caja de paso exterior de concreto para facilitar las uniones y el mantenimiento del circuito de la bomba exterior.
 
 \subsubsection{CABLES ALIMENTADORES}
 
-Los cables alimentadores y conductores de circuitos se seleccionaran por capacidad de corriente, caida de tension, temperatura, tipo de canalizacion, longitud de recorrido y proteccion asociada. En esta fase no se asignan secciones definitivas.
-
-Los conductores deberan ser de cobre, con aislamiento adecuado para instalaciones interiores de baja tension y con identificacion de fase, neutro y conductor de proteccion segun corresponda.
+Los conductores de los circuitos seran de cobre electrolitico de alta conductividad, con aislamiento termoplastico retardante de la llama y libre de halogenos. Las secciones nominales de los cables se calcularan en el capitulo 2 basandose en la capacidad de corriente de las cargas y los limites normativos de caida de tension. No se permitiran empalmes dentro de las tuberias; el cableado se ejecutara de forma continua de caja a caja.
 
 \subsubsection{UNIONES Y EMPALMES DE CONDUCTORES}
 
-Las uniones y empalmes deberan ejecutarse solamente en cajas accesibles, con elementos adecuados para garantizar continuidad mecanica, continuidad electrica y aislamiento equivalente al conductor. No se deberan dejar empalmes ocultos dentro de tuberias o tramos no registrables.
+Las uniones mecanicas de los conductores se realizaran exclusivamente dentro de las cajas de salida o de paso, empleando conectores aislantes a presion o conectores tipo split-bolt de cobre, asegurando continuidad electrica y cubriendose con cintas protectoras adecuadas, segun se detalla en las especificaciones.
 
 \subsubsection{UNIONES Y EMPALMES DENTRO DE CANALIZACIONES}
 
-No se admitiran empalmes dentro de canalizaciones cerradas. Todo empalme requerido debera resolverse en caja de paso, caja de salida, tablero o punto de registro diseñado para tal fin.
+Se prohibe realizar cualquier empalme o union de conductores dentro de las tuberias o canalizaciones cerradas.
 
 \subsection{TABLEROS ELECTRICOS DE DISTRIBUCION}
 
-El proyecto considera inicialmente un tablero general para toda la vivienda. Si en la fase de calculos se justifica una distribucion por pisos o por zonas, podran incorporarse subtableros, siempre que queden representados en el diagrama unifilar y en los planos.
+Los tableros contaran con interruptores automaticos termomagneticos para la desconexion ante sobrecargas y cortocircuitos, y con interruptores diferenciales de alta sensibilidad para proteccion contra fugas de corriente.
 
 \subsubsection{INTERRUPTORES TERMOMAGNETICOS}
 
-Seran automaticos, de operacion manual en estado estable y desenganche automatico ante sobrecarga o cortocircuito. La capacidad nominal de cada interruptor se definira segun la corriente de diseño, capacidad de los conductores y condiciones de la instalacion.
+Seran del tipo riel DIN, con disparo magnetico (para cortocircuitos) y termico (para sobrecargas). Su calibre nominal y capacidad de ruptura minima se justificaran mediante los calculos de corriente de diseno y corriente de cortocircuito en el capitulo 2.
 
 \subsubsection{INTERRUPTORES DIFERENCIALES}
 
-Se considerara proteccion diferencial en los circuitos que correspondan por seguridad de personas, especialmente tomacorrientes, zonas humedas y circuitos de uso residencial. La sensibilidad y ubicacion de estas protecciones se definiran en el esquema del tablero.
+Los circuitos de tomacorrientes y zonas humedas estaran protegidos por interruptores diferenciales con una corriente residual de disparo de \textbf{30 mA} y tiempo de respuesta menor a 30 ms, para garantizar la proteccion de las personas contra contactos electricos.
 
 \subsection{CIRCUITOS DERIVADOS}
 
-Los circuitos derivados atenderan las salidas de alumbrado, tomacorrientes y cargas especificas de la vivienda. Como criterio preliminar, se evaluaran circuitos separados para alumbrado del primer piso, tomacorrientes generales del primer piso, cocina del primer piso, alumbrado del segundo piso, tomacorrientes generales del segundo piso, cocina amplia o zona de servicio, lavadora y bomba de agua exterior asociada al pozo.
-
-Esta sectorizacion proviene de las respuestas preliminares del cuestionario y sera revisada en los calculos justificativos. No constituye aun el numero definitivo de circuitos.
+La vivienda se proyecta con circuitos independientes para alumbrado, tomacorrientes generales y circuitos dedicados para cocina, lavadora y bomba de agua exterior. El numero definitivo y la distribucion de los circuitos se justificaran en el cuadro de cargas del capitulo 2 de acuerdo con el levantamiento de cargas.
 
 \subsubsection{TUBOS DE PLASTICO PVC}
 
-Las tuberias de PVC se consideraran para recorridos interiores protegidos, siempre que sean compatibles con el tipo de instalacion y las condiciones de servicio. El diametro, clase y accesorios se definiran por cantidad de conductores, seccion, facilidad de cableado y normativa aplicable.
+Las tuberias empotradas seran de cloruro de polivinilo rigido de clase pesada (\textbf{PVC-P}), retardantes de la llama. Los diametros nominales de las tuberias de los circuitos derivados y del alimentador se determinaran por el metodo del porcentaje de ocupacion de los conductores en el ducto.
 
 \subsubsection{TUBOS METALICOS}
 
-Las tuberias metalicas podran emplearse en tramos expuestos, zonas que requieran mayor proteccion mecanica o recorridos exteriores, si la solucion constructiva lo justifica. Su uso definitivo dependera de la compatibilizacion con arquitectura y condiciones de montaje.
+No se preve el uso de tuberias metalicas, ya que toda la instalacion residencial es empotrada en muros y techos de concreto y ladrillo.
 
 \subsubsection{SOPORTES Y ACCESORIOS}
 
-Los soportes, abrazaderas, conectores, curvas, uniones y demas accesorios deberan asegurar continuidad, fijacion y proteccion de las canalizaciones. En instalaciones superficiales, los soportes deberan ubicarse de manera ordenada y permitir inspeccion visual.
+Las cajas estaran firmemente sujetas a la estructura civil. Las tuberias se fijaran a las cajas mediante conectores y tuercas plasticas para asegurar el acoplamiento mecanico antes del vaciado del concreto.
 
 \subsubsection{CAJAS PARA SALIDAS}
 
-Las cajas para salidas de alumbrado, interruptores y tomacorrientes deberan instalarse en ubicaciones accesibles y coherentes con el uso del ambiente. Su tipo y dimension se definiran segun el numero de conductores, dispositivos y canalizaciones que confluyan en cada punto.
-
-\subsubsection*{CAJAS METALICAS}
-\addcontentsline{toc}{subsubsection}{CAJAS METALICAS}
-
-Las cajas metalicas podran utilizarse cuando el tipo de instalacion, proteccion mecanica o compatibilizacion constructiva lo requiera. Deberan contar con dimensiones adecuadas y permitir la instalacion segura de dispositivos y empalmes.
+Las cajas de salida para alumbrado (octogonales) e interruptores/tomacorrientes (rectangulares) seran de fierro galvanizado pesado de una sola pieza embutida, con espesor de plancha adecuado. Las dimensiones comerciales, espesores y tipos de cajas metalicas se detallan de forma especifica en el capitulo de especificaciones de materiales.
 
 \subsubsection{CAJAS DE PASO}
 
-Se usaran cajas de paso cuando el recorrido, el cambio de direccion, la longitud de canalizacion o la cantidad de conductores lo requiera. Estas cajas deberan quedar registrables y no ocultas por acabados permanentes.
-
-\subsubsection*{TAPAS}
-\addcontentsline{toc}{subsubsection}{TAPAS}
-
-Todas las cajas de paso y empalme deberan contar con tapas adecuadas al tipo de caja y al ambiente donde se instalen.
+Se instalaran cajas de paso metalicas en tramos de tuberia con longitudes extensas o que incluyan multiples curvas, para facilitar el paso de los cables. Todas las cajas de paso llevaran tapas metalicas del mismo material sujetadas con pernos inoxidables para garantizar la proteccion del cableado.
 
 \subsubsection{CINTA AISLANTE}
 
-Los materiales de aislamiento usados en empalmes y terminaciones deberan ser compatibles con la tension de servicio y con el tipo de conductor. Su especificacion final se desarrollara en el capitulo de materiales.
+Sera de PVC autoadhesiva, de alta rigidez dielectrica, especial para empalmes electricos residenciales, cuyas propiedades tecnicas se describen en el capitulo 3.
 
 \subsection{ILUMINACION GENERAL}
 
-El sistema de iluminacion debera cubrir dormitorios, sala, cocina, bano, pasadizos, escalera y zonas de servicio. Las respuestas del cuestionario registran puntos de alumbrado preliminares por ambiente, pero la cantidad final se definira luego de ajustar el plano arquitectonico.
+Se instalaran lamparas y luminarias de tecnologia LED, distribuidas de acuerdo a la funcionalidad de cada ambiente (dormitorios, sala, cocinas, bano y pasadizos).
 
 \subsubsection{NIVEL DE ILUMINACION}
 
-Los niveles de iluminacion se determinaran segun el uso de cada ambiente y la normativa aplicable. En esta fase no se asignan valores definitivos de iluminancia, porque corresponde verificarlos en el desarrollo de calculos y planos.
+Se disenara para cumplir con los niveles de iluminancia establecidos en la Norma EM.010 para viviendas y areas de transito (dormitorios, cocina, bano, pasadizos y escaleras). Los calculos y la caida maxima de tension permitida en el circuito de alumbrado se verificaran en los calculos justificativos del capitulo 2.
 
 \subsubsection{TIPOS DE LAMPARAS UTILIZADAS}
 
-Se considerara el uso de luminarias LED por eficiencia energetica, disponibilidad y bajo consumo. El tipo de luminaria, potencia, temperatura de color, ubicacion y forma de montaje se definiran en planos y especificaciones.
+Se considerara el uso de luminarias LED eficientes de adosar o empotrar, cuyas especificaciones tecnicas se detallan en el capitulo de materiales.
 
 \subsection{TOMACORRIENTES}
 
-Los tomacorrientes se distribuiran segun el uso de cada ambiente. En dormitorios y sala se consideraran puntos de uso general para equipos comunes. En la cocina amplia del segundo piso se deberan evaluar cargas como microondas, lavadora, waflera y otros artefactos de consumo medio o alto.
-
-El bano cuenta con un tomacorriente preliminar, el cual debera ubicarse con criterio de seguridad y proteccion adecuada frente a humedad. No se considera ducha electrica; la informacion disponible indica uso de terma solar.
-
-\textbf{Dato por confirmar:} cantidad final de tomacorrientes en sala, dormitorios, cuarto de usos varios y cocina.
+Los tomacorrientes seran del tipo bipolar doble con contacto de tierra lateral (tipo Schuko) o de alveolos protegidos de acuerdo a las exigencias normativas residenciales, garantizando la proteccion frente a descargas accidentales.
 
 \subsection{SISTEMA DE PUESTA A TIERRA}
 
-La vivienda no cuenta con un sistema de puesta a tierra confirmado. Por seguridad, el proyecto debera incluir puesta a tierra de proteccion para el tablero, tomacorrientes con contacto de tierra y partes metalicas que correspondan.
-
-La ubicacion del pozo, tipo de electrodo, conductor de puesta a tierra, caja de registro y resistencia objetivo se definiran en el capitulo de calculos justificativos y en los detalles de planos.
+Para la seguridad de los usuarios frente a descargas electricas por fallas de aislamiento, el proyecto incluye un sistema de puesta a tierra (S.P.A.T.) integrado a tomacorrientes y cubiertas metalicas del tablero general. Estara constituido por un pozo de tierra vertical con electrodo de cobre.
+El diseno constructivo, dimensionamiento de conductores y calculo de resistencia objetivo se desarrollaran detalladamente en el capitulo de calculos justificativos y en las especificaciones.
 
 \subsection{COLORES EN LOS CONDUCTORES}
 
-La identificacion de conductores debera seguir el criterio normativo aplicable para fase, neutro y conductor de proteccion. En el sistema monofasico previsto, se debera diferenciar claramente el conductor activo, el neutro y el conductor de puesta a tierra.
-
-La codificacion final de colores se precisara en las especificaciones tecnicas y en la leyenda de planos.
+La identificacion de los conductores activos (fases), neutro y tierra se realizara obligatoriamente siguiendo el codigo de colores normado en la Regla 030-036 del Código Nacional de Electricidad - Utilización para sistemas residenciales monofasicos.
 
 \subsection{PRUEBAS ELECTRICAS}
 
-Antes de considerar operativa la instalacion, deberan realizarse pruebas de continuidad, aislamiento, verificacion de polaridad, accionamiento de protecciones y revision del tablero. Estas pruebas se documentaran en el expediente final o en los anexos tecnicos, segun el alcance del curso.
+Una vez concluido el cableado y antes de la conexion de los artefactos de iluminacion y tomacorrientes, se realizaran obligatoriamente pruebas de aislamiento y continuidad de toda la instalacion electrica.
 
 \subsubsection{PRUEBAS DE AISLAMIENTO}
 
-Las pruebas de aislamiento deberan realizarse por circuito y por alimentador antes de conectar cargas definitivas. Los valores admisibles y el procedimiento se definiran segun la normativa aplicable y las recomendaciones del equipo de medicion.
+Las pruebas se ejecutaran siguiendo las reglas del CNE-U. Los valores de resistencia de aislamiento limites y el procedimiento de megado se detallan en el capitulo de especificaciones de montaje.
 
 \subsection{SIMBOLOS}
 
-Los simbolos electricos empleados en planos deberan ser uniformes y reconocibles para alumbrado, interruptores, tomacorrientes, tablero, puesta a tierra, canalizaciones y cargas especiales. La simbologia se desarrollara en el capitulo de planos.
+La simbologia electrica graficada en los planos de la vivienda unifamiliar corresponde integramente a lo estipulado en la Norma Tecnica RM N\(^\circ\) 091-2002-EM/VME del Ministerio de Energia y Minas.
 
 \subsection{CUADRO DE CARGAS Y MAXIMA DEMANDA}
 
-El cuadro de cargas y la maxima demanda se desarrollaran en el capitulo de calculos justificativos. Para esta memoria solo se reconoce que las cargas principales preliminares son alumbrado, tomacorrientes generales, cocina, lavadora, bomba de agua exterior y equipos residenciales comunes.
+Para el calculo de la demanda maxima de la vivienda unifamiliar se consideraran el area techada total, las cargas de alumbrado, tomacorrientes generales y circuitos dedicados para cargas especiales (cocina, lavadora y bomba de agua), de acuerdo con las reglas aplicables de la Seccion 050 del Codigo Nacional de Electricidad - Utilizacion.
 
-No se consigna una potencia instalada ni maxima demanda definitiva en esta fase, porque las areas, cantidades finales de puntos y potencias reales de equipos aun deben confirmarse.
+La potencia instalada, maxima demanda, secciones de conductores, diametros de tuberias y calibres de proteccion se justifican cuantitativamente en el capitulo de Calculos Justificativos. Dado que la cocina electrica y las areas techadas por piso no estan confirmadas, el capitulo 2 evalua escenarios preliminares y no cierra dichos valores como definitivos.

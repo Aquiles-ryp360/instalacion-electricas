@@ -70,7 +70,36 @@ Es ideal como visor y validador rápido de que los bloques y capas se exportaron
 
 ---
 
-## 8. Arquitectura Técnica del Módulo
+## 8. Superposicion electrica sobre una planta existente
+
+El script `scripts/electrical_overlay.py` agrega simbologia electrica preliminar sobre un DXF arquitectonico ya generado. Esta pensado para casos como Aquiles, donde primero se corrige la planta arquitectonica y luego se colocan luminarias, interruptores, tomacorrientes, tablero, medidor, circuitos y leyenda.
+
+Ejemplo:
+
+```bash
+herramientas/ia-cad-casas/.venv/bin/python \
+  herramientas/ia-cad-casas/scripts/electrical_overlay.py \
+  --base Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/piso1_v3.dxf \
+  --electrical Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/data/electrico_piso1_v1.json \
+  --output Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/salidas/electrico_piso1_v1.dxf
+```
+
+El JSON electrico puede incluir `luminarias`, `interruptores`, `tomacorrientes`, `tableros`, `medidores`, `equipos`, `rutas`, `legend`, `circuit_summary` y `notes`. El script remapea las capas arquitectonicas a `ARQ_*` y agrega capas `ELEC_*` para mantener el DXF editable en QCAD/LibreCAD.
+
+Para exportar el PDF se usa el mismo script QCAD:
+
+```bash
+qcad -no-gui -platform offscreen -quit \
+  -autostart "$(realpath herramientas/ia-cad-casas/cad-scripts/dxf2pdf.js)" \
+  -input "$(realpath Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/salidas/electrico_piso1_v1.dxf)" \
+  -output "$(realpath Avanze-Proyecto-Aquiles/trabajo-cad-casa/electricos/salidas/electrico_piso1_v1.pdf)"
+```
+
+Nota: `cad-scripts/dxf2pdf.js` fija una pagina A4 horizontal real y centra el dibujo con QCAD.
+
+---
+
+## 9. Arquitectura Técnica del Módulo
 
 ### Qué hace Python:
 * **Lectura e interpretación**: Carga y procesa el archivo JSON de entrada.
@@ -88,7 +117,7 @@ Es ideal como visor y validador rápido de que los bloques y capas se exportaron
 
 ---
 
-## 9. Cómo mover un plano generado al informe o entregables finales
+## 10. Cómo mover un plano generado al informe o entregables finales
 La carpeta de desarrollo de la herramienta es `herramientas/ia-cad-casas/`. Cuando generes un plano útil para tu avance académico y desees que forme parte de los entregables del informe, debes copiarlo al directorio final:
 
 ```bash
@@ -103,7 +132,7 @@ Esto mantiene la separación limpia: el código vive en `herramientas/`, y el ma
 
 ---
 
-## 10. Campos JSON adicionales
+## 11. Campos JSON adicionales
 
 El formato base sigue siendo compatible con `dimensions`, `rooms`, `doors`, `windows` y `stairs`. Para croquis reales con contornos no rectangulares o huecos de puertas, se agregaron campos opcionales:
 
