@@ -10,6 +10,7 @@ Este directorio contiene las especificaciones y lineamientos técnicos para la m
 ## 📂 Archivos de Simbología y Datos
 
 * **Especificación JSON de Símbolos:** [simbologia_ia.json](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/simbologia-ia/simbologia_ia.json) (Define la biblioteca estándar de símbolos, claves JSON y capas de AutoCAD/QCAD).
+* **Biblioteca Vectorial de la Norma DGE:** [simbologia_normativa_dge.json](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/simbologia-ia/simbologia_normativa_dge.json) (Contiene la definición geométrica vectorial paramétrica de más de 30 símbolos extraídos de la Sección 9 del CNE/DGE para dibujar mediante primitivas CAD).
 * **Compilador 1 (Proyecto Aquiles):** [electrical_overlay.py](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/ia-cad-casas/scripts/electrical_overlay.py) (Procesa plano individual por archivo JSON).
 * **Compilador 2 (Proyecto Renzo):** [electrical_overlay_renzo.py](file:///home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas/herramientas/ia-cad-casas/scripts/electrical_overlay_renzo.py) (Procesa múltiples pisos consolidados en un único archivo JSON).
 

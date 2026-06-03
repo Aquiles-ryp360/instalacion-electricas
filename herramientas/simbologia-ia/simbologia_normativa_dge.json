@@ -1,0 +1,576 @@
+{
+  "norma": "Norma DGE - Símbolos Gráficos en Electricidad (Ministerio de Energía y Minas - Perú)",
+  "seccion": "SECCIÓN 9: Estaciones de generación, subestaciones, líneas de transmisión, redes de distribución e instalaciones en edificaciones",
+  "subseccion": "093: Instalaciones en Edificaciones",
+  "descripcion_general": "Biblioteca geométrica paramétrica que contiene los símbolos oficiales de la norma DGE en formato vectorial para su representación automática en planos CAD 2D. Las coordenadas son relativas al origen (0,0) del centro del símbolo y las unidades están en metros sobre el espacio modelo.",
+  "simbolos": [
+    {
+      "codigo": "09-93-01",
+      "nombre": "Conductor neutro",
+      "categoria": "Identificacion de Conductores",
+      "descripcion": "Trazo oblicuo corto sobre la línea de canalización terminado en un punto relleno en su extremo superior.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.06, "y1": -0.1, "x2": 0.06, "y2": 0.1},
+        {"tipo": "punto", "x": 0.06, "y": 0.1, "r": 0.025}
+      ]
+    },
+    {
+      "codigo": "09-93-02",
+      "nombre": "Conductor de proteccion (Tierra)",
+      "categoria": "Identificacion de Conductores",
+      "descripcion": "Trazo oblicuo corto sobre la línea de canalización terminado en un trazo perpendicular corto en su extremo (forma de T).",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.06, "y1": -0.1, "x2": 0.06, "y2": 0.1},
+        {"tipo": "linea", "x1": 0.02, "y1": 0.13, "x2": 0.1, "y2": 0.07}
+      ]
+    },
+    {
+      "codigo": "09-93-03",
+      "nombre": "Conductor de proteccion y neutro combinado",
+      "categoria": "Identificacion de Conductores",
+      "descripcion": "Trazo oblicuo corto con punto de neutro y trazo de tierra combinados.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.06, "y1": -0.1, "x2": 0.06, "y2": 0.1},
+        {"tipo": "punto", "x": 0.06, "y": 0.1, "r": 0.02},
+        {"tipo": "linea", "x1": 0.02, "y1": 0.13, "x2": 0.1, "y2": 0.07}
+      ]
+    },
+    {
+      "codigo": "09-93-05",
+      "nombre": "Canalizacion hacia arriba (Subida)",
+      "categoria": "Canalizaciones",
+      "descripcion": "Línea que termina en un codo con flecha apuntando arriba a la derecha.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": 0.0, "x2": 0.1, "y2": 0.0},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.0, "x2": 0.25, "y2": 0.15},
+        {"tipo": "linea", "x1": 0.15, "y1": 0.15, "x2": 0.25, "y2": 0.15},
+        {"tipo": "linea", "x1": 0.25, "y1": 0.05, "x2": 0.25, "y2": 0.15}
+      ]
+    },
+    {
+      "codigo": "09-93-06",
+      "nombre": "Canalizacion hacia abajo (Bajada)",
+      "categoria": "Canalizaciones",
+      "descripcion": "Línea que termina en un codo con flecha apuntando abajo a la derecha.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": 0.0, "x2": 0.1, "y2": 0.0},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.0, "x2": 0.25, "y2": -0.15},
+        {"tipo": "linea", "x1": 0.15, "y1": -0.15, "x2": 0.25, "y2": -0.15},
+        {"tipo": "linea", "x1": 0.25, "y1": -0.05, "x2": 0.25, "y2": -0.15}
+      ]
+    },
+    {
+      "codigo": "09-93-07",
+      "nombre": "Canalizacion atravesando verticalmente",
+      "categoria": "Canalizaciones",
+      "descripcion": "Línea inclinada con flechas en ambos extremos que denota paso vertical a través de losa.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": -0.2, "x2": 0.2, "y2": 0.2},
+        {"tipo": "linea", "x1": 0.12, "y1": 0.2, "x2": 0.2, "y2": 0.2},
+        {"tipo": "linea", "x1": 0.2, "y1": 0.12, "x2": 0.2, "y2": 0.2},
+        {"tipo": "linea", "x1": -0.12, "y1": -0.2, "x2": -0.2, "y2": -0.2},
+        {"tipo": "linea", "x1": -0.2, "y1": -0.12, "x2": -0.2, "y2": -0.2}
+      ]
+    },
+    {
+      "codigo": "09-93-08",
+      "nombre": "Caja (Simbolo general)",
+      "categoria": "Canalizaciones",
+      "descripcion": "Círculo vacío que representa una caja de paso de tuberías.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.15}
+      ]
+    },
+    {
+      "codigo": "09-93-09",
+      "nombre": "Caja de conexion o derivacion",
+      "categoria": "Canalizaciones",
+      "descripcion": "Círculo con un punto central relleno que representa caja de empalmes.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.15},
+        {"tipo": "punto", "x": 0.0, "y": 0.0, "r": 0.04}
+      ]
+    },
+    {
+      "codigo": "09-93-10",
+      "nombre": "Terminal de consumidores",
+      "categoria": "Canalizaciones",
+      "descripcion": "Rectángulo vertical atravesado por una línea de distribución.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.12, "y": -0.18, "w": 0.24, "h": 0.36},
+        {"tipo": "linea", "x1": 0.0, "y1": -0.3, "x2": 0.0, "y2": 0.3}
+      ]
+    },
+    {
+      "codigo": "09-93-11",
+      "nombre": "Centro de distribucion (Tablero de distribucion)",
+      "categoria": "Canalizaciones",
+      "descripcion": "Rectángulo horizontal con líneas verticales indicando múltiples canalizaciones.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.25, "y": -0.15, "w": 0.5, "h": 0.3},
+        {"tipo": "linea", "x1": -0.2, "y1": 0.15, "x2": -0.2, "y2": 0.35},
+        {"tipo": "linea", "x1": -0.1, "y1": 0.15, "x2": -0.1, "y2": 0.35},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.15, "x2": 0.0, "y2": 0.35},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.15, "x2": 0.1, "y2": 0.35},
+        {"tipo": "linea", "x1": 0.2, "y1": 0.15, "x2": 0.2, "y2": 0.35},
+        {"tipo": "linea", "x1": 0.0, "y1": -0.15, "x2": 0.0, "y2": -0.35}
+      ]
+    },
+    {
+      "codigo": "09-93-13",
+      "nombre": "Tomacorriente monofasico simple/doble",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Círculo con dos líneas horizontales paralelas internas secantes.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.13},
+        {"tipo": "linea", "x1": -0.09, "y1": -0.04, "x2": 0.09, "y2": -0.04},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.04, "x2": 0.09, "y2": 0.04}
+      ]
+    },
+    {
+      "codigo": "09-93-14",
+      "nombre": "Tomacorriente monofasico en el piso",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Símbolo de tomacorriente monofásico inscrito en un cuadrado exterior.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.18, "y": -0.18, "w": 0.36, "h": 0.36},
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.13},
+        {"tipo": "linea", "x1": -0.09, "y1": -0.04, "x2": 0.09, "y2": -0.04},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.04, "x2": 0.09, "y2": 0.04}
+      ]
+    },
+    {
+      "codigo": "09-93-15",
+      "nombre": "Tomacorriente trifasico",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Círculo con tres líneas horizontales paralelas internas secantes.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.13},
+        {"tipo": "linea", "x1": -0.09, "y1": -0.05, "x2": 0.09, "y2": -0.05},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.0, "x2": 0.09, "y2": 0.0},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.05, "x2": 0.09, "y2": 0.05}
+      ]
+    },
+    {
+      "codigo": "09-93-16",
+      "nombre": "Tomacorriente trifasico en el piso",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Símbolo de tomacorriente trifásico inscrito en un cuadrado exterior.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.18, "y": -0.18, "w": 0.36, "h": 0.36},
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.13},
+        {"tipo": "linea", "x1": -0.09, "y1": -0.05, "x2": 0.09, "y2": -0.05},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.0, "x2": 0.09, "y2": 0.0},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.05, "x2": 0.09, "y2": 0.05}
+      ]
+    },
+    {
+      "codigo": "09-93-17",
+      "nombre": "Tomacorriente monofasico puesto a tierra",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Tomacorriente monofásico con una línea de tierra vertical externa descendente.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.13},
+        {"tipo": "linea", "x1": -0.09, "y1": -0.04, "x2": 0.09, "y2": -0.04},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.04, "x2": 0.09, "y2": 0.04},
+        {"tipo": "linea", "x1": 0.0, "y1": -0.13, "x2": 0.0, "y2": -0.22},
+        {"tipo": "texto", "contenido": "T", "x": 0.22, "y": -0.15, "h": 0.11}
+      ]
+    },
+    {
+      "codigo": "09-93-18",
+      "nombre": "Salida trifasica para cocina",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Tomacorriente trifásico con la letra C rotulada al costado derecho.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.13},
+        {"tipo": "linea", "x1": -0.09, "y1": -0.05, "x2": 0.09, "y2": -0.05},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.0, "x2": 0.09, "y2": 0.0},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.05, "x2": 0.09, "y2": 0.05},
+        {"tipo": "texto", "contenido": "C", "x": 0.22, "y": -0.15, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-19",
+      "nombre": "Tomacorriente monofasico a prueba de agua (PA)",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Tomacorriente monofásico con las letras PA rotuladas al costado derecho.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.13},
+        {"tipo": "linea", "x1": -0.09, "y1": -0.04, "x2": 0.09, "y2": -0.04},
+        {"tipo": "linea", "x1": -0.09, "y1": 0.04, "x2": 0.09, "y2": 0.04},
+        {"tipo": "texto", "contenido": "PA", "x": 0.25, "y": -0.15, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-20",
+      "nombre": "Tomacorriente multiple (Potencia)",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Una base plana horizontal con semicírculo y un número que denota la cantidad de tomas (ej: 3).",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": 0.12, "x2": 0.2, "y2": 0.12},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.0, "y2": 0.0},
+        {"tipo": "arco", "cx": 0.0, "cy": 0.0, "r": 0.1, "ang_ini": 180, "ang_fin": 360},
+        {"tipo": "texto", "contenido": "3", "x": 0.18, "y": 0.18, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-22",
+      "nombre": "Tomacorriente con contacto de proteccion",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Semicírculo con línea en T central saliendo de la base.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": 0.12, "x2": 0.2, "y2": 0.12},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.0, "y2": -0.1},
+        {"tipo": "arco", "cx": 0.0, "cy": 0.0, "r": 0.1, "ang_ini": 180, "ang_fin": 360},
+        {"tipo": "linea", "x1": -0.06, "y1": -0.1, "x2": 0.06, "y2": -0.1}
+      ]
+    },
+    {
+      "codigo": "09-93-24",
+      "nombre": "Tomacorriente con interruptor unipolar",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Semicírculo con línea en T y el símbolo del interruptor saliendo del centro.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": 0.12, "x2": 0.2, "y2": 0.12},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.0, "y2": -0.1},
+        {"tipo": "arco", "cx": 0.0, "cy": 0.0, "r": 0.1, "ang_ini": 180, "ang_fin": 360},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.1, "y2": 0.22},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.22, "x2": 0.18, "y2": 0.14}
+      ]
+    },
+    {
+      "codigo": "09-93-26",
+      "nombre": "Tomacorriente con transformador aislante",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Símbolo de tomacorriente asociado a un círculo secante (representando transformador).",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": 0.12, "x2": 0.2, "y2": 0.12},
+        {"tipo": "arco", "cx": 0.0, "cy": 0.0, "r": 0.1, "ang_ini": 180, "ang_fin": 360},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.0, "y2": 0.0},
+        {"tipo": "circulo", "cx": 0.0, "cy": -0.16, "r": 0.09}
+      ]
+    },
+    {
+      "codigo": "09-93-27",
+      "nombre": "Tomacorriente de telecomunicaciones (Telefono)",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Símbolo de triángulo abierto o conector con la sigla TP.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.15, "y1": -0.1, "x2": 0.15, "y2": -0.1},
+        {"tipo": "linea", "x1": -0.15, "y1": -0.1, "x2": 0.0, "y2": 0.12},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.15, "y2": -0.1},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.0, "y2": 0.22},
+        {"tipo": "texto", "contenido": "TP", "x": 0.2, "y": 0.0, "h": 0.11}
+      ]
+    },
+    {
+      "codigo": "09-93-27-TV",
+      "nombre": "Tomacorriente de television (TV)",
+      "categoria": "Tomacorrientes",
+      "descripcion": "Símbolo de toma de telecomunicaciones con la sigla TV.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.15, "y1": -0.1, "x2": 0.15, "y2": -0.1},
+        {"tipo": "linea", "x1": -0.15, "y1": -0.1, "x2": 0.0, "y2": 0.12},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.15, "y2": -0.1},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.12, "x2": 0.0, "y2": 0.22},
+        {"tipo": "texto", "contenido": "TV", "x": 0.2, "y": 0.0, "h": 0.11}
+      ]
+    },
+    {
+      "codigo": "09-93-28",
+      "nombre": "Interruptor (Simbolo general)",
+      "categoria": "Interruptores",
+      "descripcion": "Círculo pequeño con una línea inclinada (palanca) que representa el mando.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2}
+      ]
+    },
+    {
+      "codigo": "09-93-29",
+      "nombre": "Interruptor con luz piloto",
+      "categoria": "Interruptores",
+      "descripcion": "Círculo de interruptor con una equis (X) en su interior y la palanca oblicua.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "linea", "x1": -0.07, "y1": -0.07, "x2": 0.07, "y2": 0.07},
+        {"tipo": "linea", "x1": -0.07, "y1": 0.07, "x2": 0.07, "y2": -0.07}
+      ]
+    },
+    {
+      "codigo": "09-93-30",
+      "nombre": "Interruptor unipolar",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor simple rotulado con la letra S.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "texto", "contenido": "S", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-31",
+      "nombre": "Interruptor bipolar",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor de doble corte rotulado con S2 y dos palancas en el extremo.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "linea", "x1": 0.2, "y1": 0.2, "x2": 0.26, "y2": 0.12},
+        {"tipo": "linea", "x1": 0.14, "y1": 0.14, "x2": 0.2, "y2": 0.06},
+        {"tipo": "texto", "contenido": "S2", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-32",
+      "nombre": "Interruptor de tres vias (Conmutador)",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor conmutador para control desde dos puntos, rotulado con S3.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "texto", "contenido": "S3", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-33",
+      "nombre": "Interruptor de cuatro vias (Cruzamiento)",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor de cruzamiento para control desde tres o más puntos, rotulado con S4.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "texto", "contenido": "S4", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-37",
+      "nombre": "Interruptor graduador (Dimmer)",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor unipolar con trazo oblicuo y una cuña perpendicular en el extremo.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "linea", "x1": 0.13, "y1": 0.27, "x2": 0.27, "y2": 0.13}
+      ]
+    },
+    {
+      "codigo": "09-93-38",
+      "nombre": "Interruptor unipolar con tirador (Jalador)",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor unipolar rotulado con ST y palanca terminada en flecha hacia abajo.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "linea", "x1": 0.2, "y1": 0.2, "x2": 0.2, "y2": 0.08},
+        {"tipo": "linea", "x1": 0.15, "y1": 0.12, "x2": 0.2, "y2": 0.08},
+        {"tipo": "linea", "x1": 0.25, "y1": 0.12, "x2": 0.2, "y2": 0.08},
+        {"tipo": "texto", "contenido": "ST", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-39",
+      "nombre": "Interruptor de puerta",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor activado por apertura de puerta, rotulado con SP.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "texto", "contenido": "SP", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-41",
+      "nombre": "Interruptor simple a prueba de agua (PA)",
+      "categoria": "Interruptores",
+      "descripcion": "Interruptor simple estanco para intemperie, rotulado con S/PA.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "texto", "contenido": "S/PA", "x": 0.0, "y": -0.23, "h": 0.11}
+      ]
+    },
+    {
+      "codigo": "09-93-42",
+      "nombre": "Pulsador (Contactor de señalizacion)",
+      "categoria": "Interruptores",
+      "descripcion": "Pulsador para timbre o alarma, rotulado con la letra SC.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "texto", "contenido": "SC", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-47",
+      "nombre": "Interruptor horario o de tiempo",
+      "categoria": "Interruptores",
+      "descripcion": "Símbolo de interruptor temporizado, rotulado con St.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.07, "y1": 0.07, "x2": 0.2, "y2": 0.2},
+        {"tipo": "texto", "contenido": "St", "x": 0.0, "y": -0.23, "h": 0.12}
+      ]
+    },
+    {
+      "codigo": "09-93-51",
+      "nombre": "Salida para lampara incandescente en techo",
+      "categoria": "Iluminacion",
+      "descripcion": "Círculo pequeño con cuatro trazos radiales cortos perpendiculares y un punto central.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.1, "x2": 0.0, "y2": 0.17},
+        {"tipo": "linea", "x1": 0.0, "y1": -0.1, "x2": 0.0, "y2": -0.17},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.0, "x2": 0.17, "y2": 0.0},
+        {"tipo": "linea", "x1": -0.1, "y1": 0.0, "x2": -0.17, "y2": 0.0},
+        {"tipo": "punto", "x": 0.0, "y": 0.0, "r": 0.025}
+      ]
+    },
+    {
+      "codigo": "09-93-52",
+      "nombre": "Salida para lampara incandescente en pared (Braquete)",
+      "categoria": "Iluminacion",
+      "descripcion": "Símbolo de lámpara adosado a una línea de soporte que representa la pared.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": -0.15, "x2": 0.2, "y2": -0.15},
+        {"tipo": "linea", "x1": 0.0, "y1": -0.15, "x2": 0.0, "y2": 0.0},
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.1, "x2": 0.0, "y2": 0.17},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.0, "x2": 0.17, "y2": 0.0},
+        {"tipo": "linea", "x1": -0.1, "y1": 0.0, "x2": -0.17, "y2": 0.0},
+        {"tipo": "punto", "x": 0.0, "y": 0.0, "r": 0.025}
+      ]
+    },
+    {
+      "codigo": "09-93-53",
+      "nombre": "Salida empotrada en techo",
+      "categoria": "Iluminacion",
+      "descripcion": "Círculo relleno sólido con cuatro trazos radiales cortos perpendiculares.",
+      "primitivas": [
+        {"tipo": "circulo_relleno", "cx": 0.0, "cy": 0.0, "r": 0.1},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.1, "x2": 0.0, "y2": 0.17},
+        {"tipo": "linea", "x1": 0.0, "y1": -0.1, "x2": 0.0, "y2": -0.17},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.0, "x2": 0.17, "y2": 0.0},
+        {"tipo": "linea", "x1": -0.1, "y1": 0.0, "x2": -0.17, "y2": 0.0}
+      ]
+    },
+    {
+      "codigo": "09-93-55",
+      "nombre": "Salida para artefacto fluorescente en el techo",
+      "categoria": "Iluminacion",
+      "descripcion": "Rectángulo alargado con un círculo vacío centrado en su interior.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.4, "y": -0.1, "w": 0.8, "h": 0.2},
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.06}
+      ]
+    },
+    {
+      "codigo": "09-93-56",
+      "nombre": "Salida para artefacto fluorescente empotrado",
+      "categoria": "Iluminacion",
+      "descripcion": "Rectángulo alargado con un círculo relleno sólido centrado en su interior.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.4, "y": -0.1, "w": 0.8, "h": 0.2},
+        {"tipo": "circulo_relleno", "cx": 0.0, "cy": 0.0, "r": 0.06}
+      ]
+    },
+    {
+      "codigo": "09-93-59",
+      "nombre": "Lampara o luminaria (Simbolo general)",
+      "categoria": "Iluminacion",
+      "descripcion": "Círculo con una cruz (X) en su interior.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.16},
+        {"tipo": "linea", "x1": -0.11, "y1": -0.11, "x2": 0.11, "y2": 0.11},
+        {"tipo": "linea", "x1": -0.11, "y1": 0.11, "x2": 0.11, "y2": -0.11}
+      ]
+    },
+    {
+      "codigo": "09-93-67",
+      "nombre": "Luminaria de alumbrado de emergencia",
+      "categoria": "Iluminacion",
+      "descripcion": "Equis (X) gruesa que denota salida de luz de emergencia.",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.15, "y1": -0.15, "x2": 0.15, "y2": 0.15},
+        {"tipo": "linea", "x1": -0.15, "y1": 0.15, "x2": 0.15, "y2": -0.15}
+      ]
+    },
+    {
+      "codigo": "09-93-68",
+      "nombre": "Bloque autonomo de iluminacion de emergencia",
+      "categoria": "Iluminacion",
+      "descripcion": "Rectángulo con una equis (X) inscrita en su interior.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.2, "y": -0.15, "w": 0.4, "h": 0.3},
+        {"tipo": "linea", "x1": -0.2, "y1": -0.15, "x2": 0.2, "y2": 0.15},
+        {"tipo": "linea", "x1": -0.2, "y1": 0.15, "x2": 0.2, "y2": -0.15}
+      ]
+    },
+    {
+      "codigo": "09-93-69",
+      "nombre": "Calentador de agua (Terma electrica)",
+      "categoria": "Equipos y Varios",
+      "descripcion": "Círculo con líneas verticales paralelas cerradas en su interior.",
+      "primitivas": [
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.2},
+        {"tipo": "linea", "x1": -0.12, "y1": -0.16, "x2": -0.12, "y2": 0.16},
+        {"tipo": "linea", "x1": -0.06, "y1": -0.19, "x2": -0.06, "y2": 0.19},
+        {"tipo": "linea", "x1": 0.0, "y1": -0.2, "x2": 0.0, "y2": 0.2},
+        {"tipo": "linea", "x1": 0.06, "y1": -0.19, "x2": 0.06, "y2": 0.19},
+        {"tipo": "linea", "x1": 0.12, "y1": -0.16, "x2": 0.12, "y2": 0.16}
+      ]
+    },
+    {
+      "codigo": "09-93-70",
+      "nombre": "Ventilador (Extractor)",
+      "categoria": "Equipos y Varios",
+      "descripcion": "Rectángulo cuadrado con el símbolo de infinito (infinito) en su interior.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.2, "y": -0.2, "w": 0.4, "h": 0.4},
+        {"tipo": "arco", "cx": -0.06, "cy": 0.0, "r": 0.06, "ang_ini": 0, "ang_fin": 360},
+        {"tipo": "arco", "cx": 0.06, "cy": 0.0, "r": 0.06, "ang_ini": 0, "ang_fin": 360}
+      ]
+    },
+    {
+      "codigo": "09-93-71",
+      "nombre": "Reloj (Registrador horario)",
+      "categoria": "Equipos y Varios",
+      "descripcion": "Cuadrado exterior con un círculo de reloj de manecillas.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.2, "y": -0.2, "w": 0.4, "h": 0.4},
+        {"tipo": "circulo", "cx": 0.0, "cy": 0.0, "r": 0.15},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.0, "x2": 0.0, "y2": 0.08},
+        {"tipo": "linea", "x1": 0.0, "y1": 0.0, "x2": 0.06, "y2": -0.04}
+      ]
+    },
+    {
+      "codigo": "09-93-72",
+      "nombre": "Cerradura electrica",
+      "categoria": "Equipos y Varios",
+      "descripcion": "Triángulo rectángulo con una línea sinodal ondulada en su interior (bobina).",
+      "primitivas": [
+        {"tipo": "linea", "x1": -0.2, "y1": -0.15, "x2": 0.2, "y2": -0.15},
+        {"tipo": "linea", "x1": -0.2, "y1": -0.15, "x2": 0.2, "y2": 0.15},
+        {"tipo": "linea", "x1": 0.2, "y1": -0.15, "x2": 0.2, "y2": 0.15},
+        {"tipo": "arco", "cx": -0.08, "cy": -0.1, "r": 0.04, "ang_ini": 0, "ang_fin": 180},
+        {"tipo": "arco", "cx": 0.0, "cy": -0.1, "r": 0.04, "ang_ini": 0, "ang_fin": 180},
+        {"tipo": "arco", "cx": 0.08, "cy": -0.1, "r": 0.04, "ang_ini": 0, "ang_fin": 180}
+      ]
+    },
+    {
+      "codigo": "09-93-73",
+      "nombre": "Interfono (Intercomunicador)",
+      "categoria": "Equipos y Varios",
+      "descripcion": "Rectángulo vertical dividido con símbolo de auricular y flechas.",
+      "primitivas": [
+        {"tipo": "rectangulo", "x": -0.15, "y": -0.2, "w": 0.3, "h": 0.4},
+        {"tipo": "linea", "x1": -0.05, "y1": -0.2, "x2": -0.05, "y2": 0.2},
+        {"tipo": "rectangulo", "x": 0.0, "y": -0.1, "w": 0.1, "h": 0.2},
+        {"tipo": "linea", "x1": 0.1, "y1": 0.0, "x2": 0.22, "y2": 0.0},
+        {"tipo": "linea", "x1": 0.18, "y1": 0.06, "x2": 0.22, "y2": 0.0},
+        {"tipo": "linea", "x1": 0.18, "y1": -0.06, "x2": 0.22, "y2": 0.0}
+      ]
+    }
+  ]
+}
