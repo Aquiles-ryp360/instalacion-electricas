@@ -2,7 +2,7 @@
 
 ## Instalaciones eléctricas interiores - vivienda unifamiliar de 3 pisos
 
-Proyecto académico para vivienda de tres niveles en Jr. Lima S/N (Coordenadas: 15°38'32.7"S 69°49'51.8"W), Capachica, Puno. Sistema monofásico 220 V, 60 Hz.
+Proyecto académico para vivienda de tres niveles en Jr. Lima S/N, Capachica, Puno. Sistema monofásico 220 V, 60 Hz.
 
 ## Circuitos y Demanda Adoptados
 

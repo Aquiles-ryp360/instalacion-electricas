@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {1.5}Criterio de sectorizacion electrica}{3}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Tableros, medidor y puesta a tierra}{4}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Criterios de ubicacion de puntos}{4}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Observaciones y datos por confirmar}{5}{section.1.8}%
+\contentsline {section}{\numberline {1.8}Observaciones y datos por confirmar}{4}{section.1.8}%
 \contentsline {chapter}{\numberline {2}CALCULOS JUSTIFICATIVOS}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Alcance del calculo}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Premisas de calculo}{7}{section.2.2}%
@@ -46,18 +46,18 @@
 \contentsline {section}{\numberline {5.2}Criterio de referencia}{26}{section.5.2}%
 \contentsline {chapter}{\numberline {6}METRADO}{27}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Alcance}{28}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Nota tecnica}{30}{section.6.2}%
-\contentsline {chapter}{\numberline {7}PLANOS Y LAMINAS DE DETALLE}{31}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Planos a insertar}{34}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}IE-01: Ubicación y arquitectura}{34}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}IE-02: Alumbrado - Primer Piso}{38}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}IE-03: Tomacorrientes - Segundo Piso}{40}{subsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.1.4}IE-04: Circuitos y Canalizaciones - Tercer Piso}{42}{subsection.7.1.4}%
-\contentsline {subsection}{\numberline {7.1.5}IE-05: Diagrama Unifilar y Cuadro de Cargas}{44}{subsection.7.1.5}%
-\contentsline {subsection}{\numberline {7.1.6}IE-06: Puesta a Tierra y Detalles de Conexión}{46}{subsection.7.1.6}%
-\contentsline {subsection}{\numberline {7.1.7}IE-07: Simbología y Detalles Eléctricos}{48}{subsection.7.1.7}%
-\contentsline {section}{\numberline {7.2}Detalles sugeridos}{50}{section.7.2}%
-\contentsline {chapter}{\numberline {8}CONCLUSIONES, RECOMENDACIONES Y BIBLIOGRAFIA}{51}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{52}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Recomendaciones}{52}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Bibliografia}{53}{section.8.3}%
+\contentsline {section}{\numberline {6.2}Nota tecnica}{31}{section.6.2}%
+\contentsline {chapter}{\numberline {7}PLANOS Y LAMINAS DE DETALLE}{32}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Planos a insertar}{35}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}IE-01: Ubicación y arquitectura}{35}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}IE-02: Instalaciones Eléctricas - Primer Piso}{39}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}IE-03: Instalaciones Eléctricas - Segundo Piso}{41}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}IE-04: Instalaciones Eléctricas - Tercer Piso}{43}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}IE-05: Diagrama Unifilar y Cuadro de Cargas}{45}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}IE-06: Puesta a Tierra y Detalles de Conexión}{47}{subsection.7.1.6}%
+\contentsline {subsection}{\numberline {7.1.7}IE-07: Simbología y Detalles Eléctricos}{49}{subsection.7.1.7}%
+\contentsline {section}{\numberline {7.2}Detalles sugeridos}{51}{section.7.2}%
+\contentsline {chapter}{\numberline {8}CONCLUSIONES, RECOMENDACIONES Y BIBLIOGRAFIA}{52}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{53}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Recomendaciones}{53}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Bibliografia}{54}{section.8.3}%

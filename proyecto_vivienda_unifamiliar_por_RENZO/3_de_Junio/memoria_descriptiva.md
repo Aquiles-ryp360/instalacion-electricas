@@ -2,11 +2,7 @@
 
 ## Instalaciones eléctricas interiores - vivienda unifamiliar de 3 pisos
 
-El proyecto corresponde a una vivienda unifamiliar de tres niveles ubicada en Jr. Lima S/N (Coordenadas: 15°38'32.7"S 69°49'51.8"W), distrito de Capachica, provincia y departamento de Puno. El propietario es Renzo Gabriel Mamani Galindo. El sistema eléctrico considerado es monofásico, 220 V, 60 Hz.
-
-## Ubicación geográfica
-
-El predio está ubicado en Jr. Lima S/N, Capachica, Puno, con coordenadas geográficas: **15°38'32.7"S 69°49'51.8"W**. Se han incorporado las imágenes de la captura catastral y la vista satelital en el informe consolidado.
+El proyecto corresponde a una vivienda unifamiliar de tres niveles ubicada en Jr. Lima S/N, distrito de Capachica, provincia y departamento de Puno. El propietario es Renzo Gabriel Mamani Galindo. El sistema eléctrico considerado es monofásico, 220 V, 60 Hz.
 
 ## Arquitectura considerada
 
