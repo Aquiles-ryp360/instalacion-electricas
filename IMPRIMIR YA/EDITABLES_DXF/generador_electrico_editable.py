@@ -389,6 +389,18 @@ def render_pdf(dxf_path, pdf_path):
     from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
 
     doc = ezdxf.readfile(dxf_path)
+    msp = doc.modelspace()
+    fig = plt.figure(figsize=(23.4, 16.5), dpi=150)
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_aspect("equal")
+    ax.axis("off")
+    ctx = RenderContext(doc)
+    out = MatplotlibBackend(ax)
+    Frontend(ctx, out).draw_layout(msp, finalize=True)
+    fig.savefig(pdf_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
+    plt.close(fig)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Genera overlays electricos residenciales sobre layouts arquitectonicos")
     parser.add_argument("--electrical", required=True)
