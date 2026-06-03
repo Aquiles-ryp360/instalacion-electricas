@@ -76,7 +76,9 @@ Es ideal como visor y validador rápido de que los bloques y capas se exportaron
 * **Lectura e interpretación**: Carga y procesa el archivo JSON de entrada.
 * **Validación**: Comprueba que los ambientes no contengan datos inválidos o falten campos requeridos.
 * **Muros de Doble Línea**: Genera automáticamente muros de doble trazo de espesor **0.15m (15 cm)**.
+* **Muros manuales opcionales**: Permite desactivar los muros derivados de ambientes con `draw_room_walls: false` y dibujar segmentos explícitos en `walls`.
 * **Generación de Escaleras**: Detecta habitaciones con la palabra `"escalera"` en su nombre y dibuja automáticamente los peldaños de subida/bajada y el descanso superior de 1.20m.
+* **Elementos de apoyo visual**: Soporta `hatches`, `fixtures`, `texts` y `custom_dimensions` para tramas, mobiliario básico, notas y cotas adicionales.
 * **Escritura DXF**: Usa `ezdxf` para estructurar el archivo vectorial organizándolo en capas (`MUROS`, `PUERTAS`, `VENTANAS`, `TEXTOS`, `COTAS`, `MARCO`).
 
 ### Qué hace QCAD:
@@ -98,3 +100,41 @@ cp Avanze-Proyecto-Aquiles/trabajo-cad-casa/salidas/croquis_aquiles_v3.pdf proye
 ```
 
 Esto mantiene la separación limpia: el código vive en `herramientas/`, y el material definitivo del informe académico se almacena en `proyecto-casa/07-planos/`.
+
+---
+
+## 10. Campos JSON adicionales
+
+El formato base sigue siendo compatible con `dimensions`, `rooms`, `doors`, `windows` y `stairs`. Para croquis reales con contornos no rectangulares o huecos de puertas, se agregaron campos opcionales:
+
+```json
+{
+  "draw_room_walls": false,
+  "show_room_dimensions": false,
+  "show_title_block": false,
+  "wall_thickness": 0.15,
+  "walls": [
+    {"x1": 0.0, "y1": 0.0, "x2": 4.0, "y2": 0.0}
+  ],
+  "hatches": [
+    {"x": 0.0, "y": 0.0, "width": 2.0, "height": 3.0, "spacing": 0.30}
+  ],
+  "fixtures": [
+    {"type": "bed", "x": 1.0, "y": 1.0, "width": 1.0, "height": 2.0}
+  ],
+  "texts": [
+    {"text": "AREA S/C", "x": 1.5, "y": 2.0, "height": 0.18}
+  ],
+  "custom_dimensions": [
+    {"start": [0.0, 0.0], "end": [4.0, 0.0], "offset": -0.8, "label": "4.00 m", "direction": "horizontal"}
+  ]
+}
+```
+
+Uso recomendado:
+
+- Usar `rooms` para etiquetas y proporciones.
+- Usar `walls` cuando el croquis tenga forma en L, vacíos o puertas que deban quedar abiertas.
+- Usar `hatches` solo para zonas rayadas o sin confirmar del croquis.
+- Usar `fixtures` como apoyo visual arquitectónico, no para instalaciones eléctricas.
+- Desactivar `show_title_block` si el cajetín se superpone con la planta en croquis de borde completo.

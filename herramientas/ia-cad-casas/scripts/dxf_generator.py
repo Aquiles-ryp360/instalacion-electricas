@@ -3,7 +3,48 @@ import argparse
 import json
 import os
 import sys
-from ezdxf.enums import TextEntityAlignment
+
+try:
+    from ezdxf.enums import TextEntityAlignment
+except ImportError:
+    TextEntityAlignment = None
+
+
+DEFAULT_WALL_THICKNESS = 0.15
+
+
+def point_key(point):
+    return (round(float(point[0]), 5), round(float(point[1]), 5))
+
+
+def segment_key(start, end):
+    return tuple(sorted([point_key(start), point_key(end)]))
+
+
+def draw_multiline_text(msp, text, x, y, height=0.22, layer="TEXTOS", rotation=0):
+    lines = str(text).splitlines() or [""]
+    spacing = height * 1.35
+    start_y = y + spacing * (len(lines) - 1) / 2
+    for i, line in enumerate(lines):
+        msp.add_text(
+            line,
+            dxfattribs={"layer": layer, "height": height, "rotation": rotation},
+        ).set_placement((x, start_y - i * spacing), align=TextEntityAlignment.MIDDLE_CENTER)
+
+
+def draw_wall_segment(msp, start, end, thickness=DEFAULT_WALL_THICKNESS, layer="MUROS"):
+    x1, y1 = float(start[0]), float(start[1])
+    x2, y2 = float(end[0]), float(end[1])
+    thickness = float(thickness)
+
+    if abs(x1 - x2) < 1e-5:
+        msp.add_line((x1 - thickness / 2, y1), (x2 - thickness / 2, y2), dxfattribs={"layer": layer})
+        msp.add_line((x1 + thickness / 2, y1), (x2 + thickness / 2, y2), dxfattribs={"layer": layer})
+    elif abs(y1 - y2) < 1e-5:
+        msp.add_line((x1, y1 - thickness / 2), (x2, y2 - thickness / 2), dxfattribs={"layer": layer})
+        msp.add_line((x1, y1 + thickness / 2), (x2, y2 + thickness / 2), dxfattribs={"layer": layer})
+    else:
+        msp.add_line((x1, y1), (x2, y2), dxfattribs={"layer": layer})
 
 
 def validate_layout(data):
@@ -55,6 +96,42 @@ def validate_layout(data):
             for field in required:
                 if field not in stair:
                     raise ValueError(f"Escalera en índice {i} no tiene el campo requerido '{field}'.")
+
+    if "walls" in data:
+        if not isinstance(data["walls"], list):
+            raise ValueError("La sección 'walls' debe ser una lista.")
+        for i, wall in enumerate(data["walls"]):
+            required = ["x1", "y1", "x2", "y2"]
+            for field in required:
+                if field not in wall:
+                    raise ValueError(f"Muro en índice {i} no tiene el campo requerido '{field}'.")
+
+    if "hatches" in data:
+        if not isinstance(data["hatches"], list):
+            raise ValueError("La sección 'hatches' debe ser una lista.")
+        for i, hatch in enumerate(data["hatches"]):
+            required = ["x", "y", "width", "height"]
+            for field in required:
+                if field not in hatch:
+                    raise ValueError(f"Trama en índice {i} no tiene el campo requerido '{field}'.")
+
+    if "texts" in data:
+        if not isinstance(data["texts"], list):
+            raise ValueError("La sección 'texts' debe ser una lista.")
+        for i, text in enumerate(data["texts"]):
+            required = ["text", "x", "y"]
+            for field in required:
+                if field not in text:
+                    raise ValueError(f"Texto en índice {i} no tiene el campo requerido '{field}'.")
+
+    if "custom_dimensions" in data:
+        if not isinstance(data["custom_dimensions"], list):
+            raise ValueError("La sección 'custom_dimensions' debe ser una lista.")
+        for i, dim in enumerate(data["custom_dimensions"]):
+            required = ["start", "end", "offset", "label", "direction"]
+            for field in required:
+                if field not in dim:
+                    raise ValueError(f"Cota en índice {i} no tiene el campo requerido '{field}'.")
 
 def draw_dimension(msp, start, end, offset, label, direction="horizontal"):
     """
@@ -172,7 +249,96 @@ def draw_window(msp, window):
         # Línea central de vidrio
         msp.add_line((x, y1), (x, y2), dxfattribs={'layer': layer})
 
+
+def draw_rectangle(msp, x, y, width, height, layer="MOBILIARIO"):
+    x2 = x + width
+    y2 = y + height
+    msp.add_line((x, y), (x2, y), dxfattribs={"layer": layer})
+    msp.add_line((x2, y), (x2, y2), dxfattribs={"layer": layer})
+    msp.add_line((x2, y2), (x, y2), dxfattribs={"layer": layer})
+    msp.add_line((x, y2), (x, y), dxfattribs={"layer": layer})
+
+
+def draw_hatch(msp, hatch):
+    layer = hatch.get("layer", "TRAMAS")
+    x = float(hatch["x"])
+    y = float(hatch["y"])
+    width = float(hatch["width"])
+    height = float(hatch["height"])
+    spacing = float(hatch.get("spacing", 0.35))
+    k = -height
+    while k <= width:
+        t_start = max(0.0, -k)
+        t_end = min(height, width - k)
+        if t_start < t_end:
+            msp.add_line(
+                (x + k + t_start, y + t_start),
+                (x + k + t_end, y + t_end),
+                dxfattribs={"layer": layer},
+            )
+        k += spacing
+
+
+def draw_fixture(msp, fixture):
+    layer = fixture.get("layer", "MOBILIARIO")
+    kind = fixture.get("type", "rect")
+    x = float(fixture.get("x", 0.0))
+    y = float(fixture.get("y", 0.0))
+    width = float(fixture.get("width", 1.0))
+    height = float(fixture.get("height", 1.0))
+
+    if kind == "bed":
+        draw_rectangle(msp, x, y, width, height, layer)
+        draw_rectangle(msp, x + 0.10, y + height - 0.45, width - 0.20, 0.35, layer)
+        msp.add_line((x + 0.15, y + height - 0.55), (x + width - 0.15, y + height - 0.55), dxfattribs={"layer": layer})
+    elif kind == "sofa":
+        draw_rectangle(msp, x, y, width, height, layer)
+        draw_rectangle(msp, x + 0.10, y + 0.10, width - 0.20, height - 0.20, layer)
+        if width > height:
+            msp.add_line((x + width / 2, y + 0.10), (x + width / 2, y + height - 0.10), dxfattribs={"layer": layer})
+        else:
+            msp.add_line((x + 0.10, y + height / 2), (x + width - 0.10, y + height / 2), dxfattribs={"layer": layer})
+    elif kind == "table":
+        draw_rectangle(msp, x, y, width, height, layer)
+        chair = min(width, height) * 0.22
+        draw_rectangle(msp, x + width * 0.25, y - chair * 1.3, chair, chair, layer)
+        draw_rectangle(msp, x + width * 0.60, y - chair * 1.3, chair, chair, layer)
+        draw_rectangle(msp, x + width * 0.25, y + height + chair * 0.3, chair, chair, layer)
+        draw_rectangle(msp, x + width * 0.60, y + height + chair * 0.3, chair, chair, layer)
+    elif kind == "stove":
+        draw_rectangle(msp, x, y, width, height, layer)
+        radius = min(width, height) * 0.12
+        for cx, cy in [
+            (x + width * 0.30, y + height * 0.30),
+            (x + width * 0.70, y + height * 0.30),
+            (x + width * 0.30, y + height * 0.70),
+            (x + width * 0.70, y + height * 0.70),
+        ]:
+            msp.add_circle((cx, cy), radius, dxfattribs={"layer": layer})
+    elif kind == "sink":
+        draw_rectangle(msp, x, y, width, height, layer)
+        msp.add_ellipse(
+            (x + width / 2, y + height / 2),
+            major_axis=(width * 0.32, 0),
+            ratio=max(0.2, min(1.0, height / max(width, 0.01) * 0.55)),
+            dxfattribs={"layer": layer},
+        )
+    elif kind == "toilet":
+        msp.add_circle((x + width / 2, y + height * 0.35), min(width, height) * 0.25, dxfattribs={"layer": layer})
+        draw_rectangle(msp, x + width * 0.20, y + height * 0.62, width * 0.60, height * 0.22, layer)
+    elif kind == "shower":
+        draw_rectangle(msp, x, y, width, height, layer)
+        msp.add_line((x + width * 0.12, y + height * 0.12), (x + width * 0.88, y + height * 0.88), dxfattribs={"layer": layer})
+        msp.add_circle((x + width * 0.78, y + height * 0.22), min(width, height) * 0.06, dxfattribs={"layer": layer})
+    elif kind == "line":
+        msp.add_line((x, y), (float(fixture["x2"]), float(fixture["y2"])), dxfattribs={"layer": layer})
+    elif kind == "circle":
+        msp.add_circle((x, y), float(fixture.get("radius", 0.25)), dxfattribs={"layer": layer})
+    else:
+        draw_rectangle(msp, x, y, width, height, layer)
+
 def main():
+    global TextEntityAlignment
     parser = argparse.ArgumentParser(description="Generador automático de planos DXF a partir de JSON")
     parser.add_argument("--input", default="layout_example.json", help="Ruta del archivo JSON de entrada")
     parser.add_argument("--output", default="plan_distribucion.dxf", help="Ruta del archivo DXF de salida")
@@ -183,10 +349,15 @@ def main():
     
     input_path = args.input
     if not os.path.isabs(input_path) and not os.path.exists(input_path):
-        # Intentar ruta relativa al script
-        possible_path = os.path.join(script_dir, args.input)
-        if os.path.exists(possible_path):
-            input_path = possible_path
+        # Intentar rutas relativas al script y a la carpeta data del motor.
+        candidates = [
+            os.path.join(script_dir, args.input),
+            os.path.join(script_dir, "..", "data", args.input),
+        ]
+        for possible_path in candidates:
+            if os.path.exists(possible_path):
+                input_path = possible_path
+                break
             
     if not os.path.exists(input_path):
         print(f"Error: El archivo de entrada '{args.input}' no existe.", file=sys.stderr)
@@ -207,47 +378,57 @@ def main():
         
     try:
         import ezdxf
+        if TextEntityAlignment is None:
+            from ezdxf.enums import TextEntityAlignment as _TextEntityAlignment
+            TextEntityAlignment = _TextEntityAlignment
     except ImportError:
         print("Error: La librería 'ezdxf' no está instalada. Ejecute 'pip install ezdxf'.", file=sys.stderr)
         sys.exit(1)
         
     print(f"Generando plano CAD para el proyecto: '{data.get('project', 'Sin nombre')}'...")
+    output_dir = os.path.dirname(os.path.abspath(args.output))
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
     
     # Crear un nuevo dibujo DXF (formato R2010 es compatible con la mayoría de visores)
     doc = ezdxf.new("R2010", setup=True)
     msp = doc.modelspace()
     
-    # Crear y configurar capas con colores estandarizados
-    # Colores ACI (AutoCAD Color Index): 7=Blanco/Negro, 1=Rojo, 4=Cian, 2=Amarillo, 8=Gris
-    doc.layers.new("MUROS", dxfattribs={'color': 7, 'lineweight': 35}) # Grosor de línea 0.35 mm
-    doc.layers.new("PUERTAS", dxfattribs={'color': 1})
-    doc.layers.new("VENTANAS", dxfattribs={'color': 4})
-    doc.layers.new("TEXTOS", dxfattribs={'color': 2})
-    doc.layers.new("COTAS", dxfattribs={'color': 8})
-    doc.layers.new("MARCO", dxfattribs={'color': 7, 'lineweight': 50}) # Marco grueso
-    doc.layers.new("ESCALERAS", dxfattribs={'color': 5})
+    # Crear y configurar capas. Se fija true_color para que PDF/visores en fondo
+    # blanco no rendericen muros/textos demasiado claros.
+    black = 0x000000
+    gray = 0x666666
+    light_gray = 0x999999
+    doc.layers.new("MUROS", dxfattribs={'color': 7, 'true_color': black, 'lineweight': 35}) # Grosor de línea 0.35 mm
+    doc.layers.new("PUERTAS", dxfattribs={'color': 7, 'true_color': black})
+    doc.layers.new("VENTANAS", dxfattribs={'color': 7, 'true_color': black})
+    doc.layers.new("TEXTOS", dxfattribs={'color': 7, 'true_color': black})
+    doc.layers.new("COTAS", dxfattribs={'color': 8, 'true_color': gray})
+    doc.layers.new("MARCO", dxfattribs={'color': 7, 'true_color': black, 'lineweight': 50}) # Marco grueso
+    doc.layers.new("ESCALERAS", dxfattribs={'color': 7, 'true_color': black})
+    doc.layers.new("TRAMAS", dxfattribs={'color': 8, 'true_color': light_gray})
+    doc.layers.new("MOBILIARIO", dxfattribs={'color': 8, 'true_color': gray})
+    doc.layers.new("ANOTACIONES", dxfattribs={'color': 8, 'true_color': gray})
     
     # 1. Dibujar habitaciones y muros
     # Para evitar dibujar líneas duplicadas entre habitaciones adyacentes,
     # recopilamos todos los segmentos de muro únicos.
     walls = set()
-    wall_thickness = 0.15  # Espesor estándar de muros (15 cm)
+    wall_thickness = float(data.get("wall_thickness", DEFAULT_WALL_THICKNESS))
+    draw_room_walls = data.get("draw_room_walls", True)
+    show_room_labels = data.get("show_room_labels", True)
+    show_room_dimensions = data.get("show_room_dimensions", True)
     
     for room in data["rooms"]:
         rx, ry = room["x"], room["y"]
         rw, rh = room["width"], room["height"]
         
-        # Segmentos de la habitación (ordenados para evitar duplicados semánticos)
-        # Cada segmento se representa como ((x1, y1), (x2, y2)) ordenados
-        seg_bottom = tuple(sorted([(rx, ry), (rx + rw, ry)]))
-        seg_top = tuple(sorted([(rx, ry + rh), (rx + rw, ry + rh)]))
-        seg_left = tuple(sorted([(rx, ry), (rx, ry + rh)]))
-        seg_right = tuple(sorted([(rx + rw, ry), (rx + rw, ry + rh)]))
-        
-        walls.add(seg_bottom)
-        walls.add(seg_top)
-        walls.add(seg_left)
-        walls.add(seg_right)
+        if draw_room_walls and room.get("draw_walls", True):
+            # Segmentos de la habitación (ordenados para evitar duplicados semánticos).
+            walls.add(segment_key((rx, ry), (rx + rw, ry)))
+            walls.add(segment_key((rx, ry + rh), (rx + rw, ry + rh)))
+            walls.add(segment_key((rx, ry), (rx, ry + rh)))
+            walls.add(segment_key((rx + rw, ry), (rx + rw, ry + rh)))
         
         # 2. Dibujar detalles de Escalera si corresponde
         x_center = rx + rw / 2
@@ -280,43 +461,40 @@ def main():
         
         # 3. Dibujar etiquetas de textos en el centro de las habitaciones
         # Solo se dibuja si el nombre no está vacío y no empieza con guión bajo (útil para corredores auxiliares o vestíbulos)
-        if room["name"] and not room["name"].startswith("_"):
-            # Nombre de la habitación
-            msp.add_text(
-                room["name"].upper(), 
-                dxfattribs={'layer': 'TEXTOS', 'height': 0.22}
-            ).set_placement((x_center, text_y), align=TextEntityAlignment.MIDDLE_CENTER)
+        if show_room_labels and room.get("show_label", True) and room["name"] and not room["name"].startswith("_"):
+            label = room.get("label", room["name"]).upper()
+            label_height = float(room.get("label_height", data.get("room_label_height", 0.22)))
+            draw_multiline_text(msp, label, x_center, text_y, height=label_height, layer="TEXTOS", rotation=float(room.get("label_rotation", 0)))
             
             # Dimensiones de la habitación (e.g. 4.00 x 4.00 m)
-            dim_text = f"{rw:.2f} x {rh:.2f} m"
-            msp.add_text(
-                dim_text, 
-                dxfattribs={'layer': 'TEXTOS', 'height': 0.15}
-            ).set_placement((x_center, dim_y), align=TextEntityAlignment.MIDDLE_CENTER)
+            if show_room_dimensions and room.get("show_dimensions", True):
+                dim_text = f"{rw:.2f} x {rh:.2f} m"
+                msp.add_text(
+                    dim_text,
+                    dxfattribs={'layer': 'TEXTOS', 'height': 0.15}
+                ).set_placement((x_center, dim_y), align=TextEntityAlignment.MIDDLE_CENTER)
         
     # Cargar y remover los muros ignorados (ej. uniones libres de pasadizos o arcos de paso)
     ignored_walls = set()
     if "ignored_walls" in data:
         for p in data["ignored_walls"]:
             p1, p2 = p
-            seg = tuple(sorted([tuple(p1), tuple(p2)]))
-            ignored_walls.add(seg)
+            ignored_walls.add(segment_key(p1, p2))
             
     # Quitar de la lista de muros
     walls = walls - ignored_walls
         
-    # Dibujar los muros en la capa MUROS (como líneas dobles para representar espesor de muro)
+    # Dibujar los muros derivados de habitaciones en la capa MUROS.
     for start, end in walls:
-        x1, y1 = start
-        x2, y2 = end
-        if abs(x1 - x2) < 1e-5: # Muro vertical
-            msp.add_line((x1 - wall_thickness/2, y1), (x1 - wall_thickness/2, y2), dxfattribs={'layer': 'MUROS'})
-            msp.add_line((x1 + wall_thickness/2, y1), (x1 + wall_thickness/2, y2), dxfattribs={'layer': 'MUROS'})
-        elif abs(y1 - y2) < 1e-5: # Muro horizontal
-            msp.add_line((x1, y1 - wall_thickness/2), (x2, y1 - wall_thickness/2), dxfattribs={'layer': 'MUROS'})
-            msp.add_line((x1, y1 + wall_thickness/2), (x2, y1 + wall_thickness/2), dxfattribs={'layer': 'MUROS'})
-        else:
-            msp.add_line(start, end, dxfattribs={'layer': 'MUROS'})
+        draw_wall_segment(msp, start, end, wall_thickness, "MUROS")
+
+    # Dibujar muros manuales opcionales. Permiten calcar croquis con vacíos, puertas
+    # y contornos que no son una simple retícula de ambientes rectangulares.
+    if "walls" in data:
+        for wall in data["walls"]:
+            start = (wall["x1"], wall["y1"])
+            end = (wall["x2"], wall["y2"])
+            draw_wall_segment(msp, start, end, wall.get("thickness", wall_thickness), wall.get("layer", "MUROS"))
         
     # 3. Dibujar Puertas
     if "doors" in data:
@@ -327,6 +505,15 @@ def main():
     if "windows" in data:
         for window in data["windows"]:
             draw_window(msp, window)
+
+    # 4a. Dibujar tramas y mobiliario/artefactos simples de apoyo visual.
+    if "hatches" in data:
+        for hatch in data["hatches"]:
+            draw_hatch(msp, hatch)
+
+    if "fixtures" in data:
+        for fixture in data["fixtures"]:
+            draw_fixture(msp, fixture)
 
     # 4b. Dibujar Escaleras
     if "stairs" in data:
@@ -357,6 +544,29 @@ def main():
     draw_dimension(msp, (0.0, 0.0), (limit_w, 0.0), -1.0, f"ANCHO TOTAL: {limit_w:.2f} m", "horizontal")
     # Cota de alto total (izquierda)
     draw_dimension(msp, (0.0, 0.0), (0.0, limit_h), -1.0, f"ALTO TOTAL: {limit_h:.2f} m", "vertical")
+
+    if "custom_dimensions" in data:
+        for dim in data["custom_dimensions"]:
+            draw_dimension(
+                msp,
+                tuple(dim["start"]),
+                tuple(dim["end"]),
+                dim["offset"],
+                dim["label"],
+                dim.get("direction", "horizontal"),
+            )
+
+    if "texts" in data:
+        for item in data["texts"]:
+            draw_multiline_text(
+                msp,
+                item["text"],
+                float(item["x"]),
+                float(item["y"]),
+                height=float(item.get("height", 0.18)),
+                layer=item.get("layer", "ANOTACIONES"),
+                rotation=float(item.get("rotation", 0)),
+            )
     
     # 6. Dibujar Marco y Bloque de Título (Title Block)
     margin = data.get("dimensions", {}).get("margin", 1.5)
@@ -378,37 +588,38 @@ def main():
     msp.add_line((imx2, imy1), (imx2, imy2), dxfattribs={'layer': 'MARCO'})
     msp.add_line((imx2, imy2), (imx1, imy2), dxfattribs={'layer': 'MARCO'})
     msp.add_line((imx1, imy2), (imx1, imy1), dxfattribs={'layer': 'MARCO'})
-    
-    # Cajetín de Título (Bottom-Right, del marco interno)
-    c_w = 4.8
-    c_h = 1.6
-    cx1 = imx2 - c_w
-    cy1 = imy1
-    cx2 = imx2
-    cy2 = imy1 + c_h
-    
-    # Bordes del cajetín
-    msp.add_line((cx1, cy1), (cx1, cy2), dxfattribs={'layer': 'MARCO'})
-    msp.add_line((cx1, cy2), (cx2, cy2), dxfattribs={'layer': 'MARCO'})
-    
-    # Líneas divisorias internas del cajetín
-    msp.add_line((cx1, cy1 + 0.4), (cx2, cy1 + 0.4), dxfattribs={'layer': 'MARCO'})
-    msp.add_line((cx1, cy1 + 0.8), (cx2, cy1 + 0.8), dxfattribs={'layer': 'MARCO'})
-    msp.add_line((cx1, cy1 + 1.2), (cx2, cy1 + 1.2), dxfattribs={'layer': 'MARCO'})
-    
-    # Textos del cajetín
-    author = data.get("author", "ESTUDIANTE")
-    project_name = data.get("project", "PROYECTO CAD")
-    date_str = data.get("date", "2026-06-03")
-    
-    # Línea 4 (superior): Universidad
-    msp.add_text("UNAP - ESCUELA INGENIERIA MECANICA ELECTRICA", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 1.35)})
-    # Línea 3: Nombre del proyecto
-    msp.add_text(f"PROY: {project_name.upper()}", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 0.95)})
-    # Línea 2: Autor / Estudiante
-    msp.add_text(f"DIB: {author.upper()}", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 0.55)})
-    # Línea 1: Fecha y Escala
-    msp.add_text(f"FECHA: {date_str}   |   ESC: S/E (MTS)", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'insert': (cx1 + 0.1, cy1 + 0.15)})
+
+    if data.get("show_title_block", True):
+        # Cajetín de Título (Bottom-Right, del marco interno)
+        c_w = 4.8
+        c_h = 1.6
+        cx1 = imx2 - c_w
+        cy1 = imy1
+        cx2 = imx2
+        cy2 = imy1 + c_h
+
+        # Bordes del cajetín
+        msp.add_line((cx1, cy1), (cx1, cy2), dxfattribs={'layer': 'MARCO'})
+        msp.add_line((cx1, cy2), (cx2, cy2), dxfattribs={'layer': 'MARCO'})
+
+        # Líneas divisorias internas del cajetín
+        msp.add_line((cx1, cy1 + 0.4), (cx2, cy1 + 0.4), dxfattribs={'layer': 'MARCO'})
+        msp.add_line((cx1, cy1 + 0.8), (cx2, cy1 + 0.8), dxfattribs={'layer': 'MARCO'})
+        msp.add_line((cx1, cy1 + 1.2), (cx2, cy1 + 1.2), dxfattribs={'layer': 'MARCO'})
+
+        # Textos del cajetín
+        author = data.get("author", "ESTUDIANTE")
+        project_name = data.get("project", "PROYECTO CAD")
+        date_str = data.get("date", "2026-06-03")
+
+        # Línea 4 (superior): Universidad
+        msp.add_text("UNAP - ESCUELA INGENIERIA MECANICA ELECTRICA", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 1.35)})
+        # Línea 3: Nombre del proyecto
+        msp.add_text(f"PROY: {project_name.upper()}", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 0.95)})
+        # Línea 2: Autor / Estudiante
+        msp.add_text(f"DIB: {author.upper()}", dxfattribs={'layer': 'TEXTOS', 'height': 0.12, 'insert': (cx1 + 0.1, cy1 + 0.55)})
+        # Línea 1: Fecha y Escala
+        msp.add_text(f"FECHA: {date_str}   |   ESC: S/E (MTS)", dxfattribs={'layer': 'TEXTOS', 'height': 0.10, 'insert': (cx1 + 0.1, cy1 + 0.15)})
     
     # Guardar archivo DXF
     try:

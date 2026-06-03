@@ -53,3 +53,12 @@ QCAD proporciona soporte completo para la ejecución headless y automatización 
 1. **Python (`dxf_generator.py`)**: Se encarga de procesar los datos de entrada, validarlos y estructurar las entidades matemáticas en el archivo DXF (muros, textos, cotas, bloques de título).
 2. **QCAD (`dxf2pdf.js`)**: Lee el DXF resultante, calcula su cuadro delimitador (bounding box) para auto-centrar el dibujo en un plano A4 y lo exporta a PDF de forma desatendida.
 3. **QCAD / LibreCAD (GUI)**: Utilizados por el usuario de forma interactiva para visualizar, corregir o guardar el archivo final.
+
+---
+
+## 4. Validacion durante el caso Aquiles
+
+- QCAD headless genero correctamente los PDF de `piso1_v1-v3` y `piso2_v1-v3`.
+- Las pruebas interactivas con `timeout qcad <archivo.dxf>` y `timeout librecad <archivo.dxf>` confirmaron que las aplicaciones intentan cargar los DXF; LibreCAD mostro las capas `MUROS`, `PUERTAS`, `VENTANAS`, `TEXTOS`, `COTAS`, `MARCO`, `ESCALERAS`, `TRAMAS`, `MOBILIARIO` y `ANOTACIONES`.
+- `pdftoppm` no fue fiable para rasterizar los PDF generados por QCAD en esta maquina; emitio `Bogus memory allocation size`. Para revision visual se uso render temporal desde DXF con `ezdxf` y `matplotlib`.
+- Se fijaron colores verdaderos negro/gris en las capas del DXF para evitar que muros o textos se vean blancos o demasiado claros sobre fondo blanco.
