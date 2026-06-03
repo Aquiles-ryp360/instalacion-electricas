@@ -7,11 +7,14 @@ Esta carpeta contiene el nuevo proyecto LaTeX aislado para la vivienda de Aquile
 - `main.tex`: archivo principal compilable.
 - `preambulo.tex`: configuracion general del documento.
 - `referencias.bib`: referencias normativas basicas.
-- `capitulos/00-portada.tex`: portada preliminar.
-- `capitulos/01-memoria-descriptiva.tex`: capitulo desarrollado en esta fase.
+- `capitulos/00-portada.tex`: portada con formato visual de memoria descriptiva.
+- `capitulos/01-memoria-descriptiva.tex`: memoria descriptiva desarrollada en esta fase.
 - `capitulos/02-...` a `08-...`: capitulos creados como estructura pendiente.
-- `figuras/`, `planos/`, `tablas/`: carpetas preparadas para fases posteriores.
+- `figuras/`: contiene el escudo usado en la cabecera y la referencia catastral de ubicacion.
+- `planos/`, `tablas/`: carpetas preparadas para fases posteriores.
 - `build/`: salida de compilacion.
+
+Para respetar el formato del modelo indicado por el usuario, `main.tex` compila actualmente solo la memoria descriptiva. Los capitulos restantes permanecen creados como estructura, pero no se insertan en el PDF de esta fase.
 
 ## Compilacion
 
@@ -24,8 +27,6 @@ latexmk -pdf -interaction=nonstopmode -output-directory=build main.tex
 Si `latexmk` no esta disponible:
 
 ```bash
-pdflatex -interaction=nonstopmode -output-directory=build main.tex
-bibtex build/main
 pdflatex -interaction=nonstopmode -output-directory=build main.tex
 pdflatex -interaction=nonstopmode -output-directory=build main.tex
 ```
@@ -63,6 +64,8 @@ Modelo principal adoptado para la memoria descriptiva:
 - `materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/memoria descriptiva/memoria descriptiva l.pdf`
 
 La estructura de la memoria se rehizo siguiendo ese modelo: `Generalidades` y `Descripcion del proyecto`, con subapartados de ubicacion, objetivos, alcances, normas, alimentadores, tablero, circuitos, canalizaciones, iluminacion, tomacorrientes, puesta a tierra, pruebas, simbolos y cuadro de cargas. Los datos del proyecto institucional del modelo no fueron copiados.
+
+El formato visual tambien se ajusto al modelo: tamano carta, portada con barra lateral azul, cabecera institucional enmarcada, pie de pagina con linea azul, titulo `CONTENIDO`, titulos rojos subrayados y numeracion por apartados.
 
 ## Normativa considerada
 
