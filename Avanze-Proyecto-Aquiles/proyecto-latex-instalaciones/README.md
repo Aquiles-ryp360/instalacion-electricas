@@ -58,6 +58,12 @@ Modelos de estructura y tono:
 - `materiales/proyecto-guia-red-primaria/capitulo-vii-planos/`
 - `latex/`
 
+Modelo principal adoptado para la memoria descriptiva:
+
+- `materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/memoria descriptiva/memoria descriptiva l.pdf`
+
+La estructura de la memoria se rehizo siguiendo ese modelo: `Generalidades` y `Descripcion del proyecto`, con subapartados de ubicacion, objetivos, alcances, normas, alimentadores, tablero, circuitos, canalizaciones, iluminacion, tomacorrientes, puesta a tierra, pruebas, simbolos y cuadro de cargas. Los datos del proyecto institucional del modelo no fueron copiados.
+
 ## Normativa considerada
 
 - Codigo Nacional de Electricidad -- Utilizacion.
