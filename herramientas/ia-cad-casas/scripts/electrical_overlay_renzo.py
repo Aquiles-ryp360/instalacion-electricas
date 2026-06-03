@@ -201,6 +201,10 @@ def draw_symbols(msp, floor, ox, oy, scale, view):
     def tp(pt):
         return (ox + pt[0] * scale, oy + pt[1] * scale)
 
+    def label_point(item, default_dx, default_dy):
+        dx, dy = item.get("label_offset", [default_dx, default_dy])
+        return dx * scale, dy * scale
+
     show_lights = view in ("alumbrado", "canalizaciones", "todo")
     show_outlets = view in ("tomacorrientes", "canalizaciones", "todo")
     show_routes = view in ("canalizaciones", "todo")
@@ -209,7 +213,8 @@ def draw_symbols(msp, floor, ox, oy, scale, view):
         for item in floor.get("luminarias", []):
             x, y = tp(item["pos"])
             sym_lum(msp, x, y, item["circuito"])
-            add_text(msp, item["circuito"], x + 0.28, y + 0.18, 0.12, "ELEC_TEXTOS")
+            dx, dy = label_point(item, 0.28, 0.18)
+            add_text(msp, item["circuito"], x + dx, y + dy, 0.12, "ELEC_TEXTOS")
         for item in floor.get("interruptores", []):
             x, y = tp(item["pos"])
             sym_switch(msp, x, y, item.get("tipo", "simple"), item["circuito"])
@@ -218,7 +223,8 @@ def draw_symbols(msp, floor, ox, oy, scale, view):
         for item in floor.get("tomacorrientes", []):
             x, y = tp(item["pos"])
             sym_outlet(msp, x, y, item.get("tipo", "doble"), item["circuito"])
-            add_text(msp, item["circuito"], x + 0.25, y - 0.22, 0.12, "ELEC_TEXTOS")
+            dx, dy = label_point(item, 0.25, -0.22)
+            add_text(msp, item["circuito"], x + dx, y + dy, 0.12, "ELEC_TEXTOS")
 
     if view in ("canalizaciones", "todo"):
         for item in floor.get("tableros", []):
@@ -239,7 +245,11 @@ def draw_symbols(msp, floor, ox, oy, scale, view):
             for a, b in zip(pts, pts[1:]):
                 line(msp, a, b, layer, color, "DASHED")
             if pts:
-                add_text(msp, route.get("circuito", ""), pts[-1][0] + 0.16, pts[-1][1] + 0.16, 0.12, "ELEC_TEXTOS")
+                if route.get("label_pos"):
+                    lx, ly = tp(route["label_pos"])
+                else:
+                    lx, ly = pts[-1][0] + 0.16, pts[-1][1] + 0.16
+                add_text(msp, route.get("circuito", ""), lx, ly, 0.12, "ELEC_TEXTOS")
 
 
 def draw_legend(msp, x, y, title, circuits):
@@ -277,12 +287,18 @@ def draw_legend(msp, x, y, title, circuits):
 
 def draw_title_block(msp, x, y, w, h, title, version):
     rect(msp, x, y, w, h, "ELEC_ROTULO", COLORS["black"])
-    add_text(msp, "PROYECTO: VIVIENDA UNIFAMILIAR", x + 0.25, y + h - 0.35, 0.18, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
-    add_text(msp, "PROPIETARIO: RENZO GABRIEL MAMANI GALINDO", x + 0.25, y + h - 0.75, 0.14, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
-    add_text(msp, "UBICACION: JR. LIMA S/N - CAPACHICA - PUNO", x + 0.25, y + h - 1.10, 0.14, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
-    add_text(msp, f"PLANO: {title}", x + 0.25, y + h - 1.50, 0.18, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
-    add_text(msp, f"VERSION: {version}    ESCALA: REFERENCIAL    ESTADO: REVISION", x + 0.25, y + h - 1.90, 0.14, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
-    add_text(msp, "NORMA: CNE-U / RNE EM.010    FECHA: 2026-06-03", x + 0.25, y + h - 2.30, 0.14, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    rows = [h - 0.65, h - 1.25, h - 1.85, h - 2.45, h - 3.05]
+    for yy in rows:
+        line(msp, (x, y + yy), (x + w, y + yy), "ELEC_ROTULO", COLORS["black"])
+    line(msp, (x + 4.25, y), (x + 4.25, y + 1.20), "ELEC_ROTULO", COLORS["black"])
+    add_text(msp, "PROYECTO: VIVIENDA UNIFAMILIAR", x + 0.25, y + h - 0.34, 0.17, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    add_text(msp, "PROPIETARIO: RENZO GABRIEL MAMANI GALINDO", x + 0.25, y + h - 0.95, 0.14, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    add_text(msp, "UBICACION: JR. LIMA S/N - CAPACHICA - PUNO", x + 0.25, y + h - 1.55, 0.14, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    add_text(msp, f"PLANO: {title}", x + 0.25, y + h - 2.15, 0.16, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    add_text(msp, f"VERSION: {version}", x + 0.25, y + h - 2.75, 0.13, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    add_text(msp, "ESCALA: REFERENCIAL", x + 4.45, y + h - 2.75, 0.13, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    add_text(msp, "NORMA: CNE-U / RNE EM.010", x + 0.25, y + 0.38, 0.13, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
+    add_text(msp, "FECHA: 2026-06-03", x + 4.45, y + 0.38, 0.13, "ELEC_ROTULO", align=TextEntityAlignment.MIDDLE_LEFT)
 
 
 def setup_doc():
@@ -353,8 +369,8 @@ def main():
             draw_architecture(msp, layout, ox, oy, scale)
         draw_symbols(msp, floor, ox, oy, scale, args.view)
 
-    draw_legend(msp, 20.1, 12.3, data["views"][args.view]["titulo"], data["circuitos"])
-    draw_title_block(msp, 20.1, -0.4, 7.2, 2.8, data["views"][args.view]["titulo"], data.get("version", "v1"))
+    draw_legend(msp, 19.7, 12.3, data["views"][args.view]["titulo"], data["circuitos"])
+    draw_title_block(msp, 19.7, -0.4, 8.0, 3.55, data["views"][args.view]["titulo"], data.get("version", "v1"))
 
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)
