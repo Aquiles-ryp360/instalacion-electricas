@@ -333,11 +333,14 @@
     </section>
 
     <section>
-      <h2>Texto para copiar al proyecto</h2>
+      <h2>Exportar</h2>
       <div class="actions" style="margin-bottom:10px">
         <button class="secondary" id="copyBtn" type="button">Copiar Markdown</button>
+        <button class="ghost" id="exportJsonBtn" type="button">Exportar JSON</button>
+        <button class="ghost" id="exportLatexBtn" type="button">Exportar LaTeX</button>
       </div>
       <textarea id="markdownOut" readonly></textarea>
+      <textarea id="latexOut" readonly style="display:none"></textarea>
     </section>
   </main>
 
@@ -460,6 +463,106 @@
       $("markdownOut").value = markdown(rows, totalInstalled, totalDemand, voltage, pf);
     }
 
+    function exportJson() {
+      const data = [];
+      loads.forEach((load) => {
+        data.push({
+          room: load.room,
+          item: load.item,
+          type: load.type,
+          circuit: load.circuit,
+          qty: load.qty,
+          watts: load.watts,
+          length: load.length,
+          total: load.total
+        });
+      });
+      const json = JSON.stringify({
+        proyecto: "Calculadora interactiva",
+        pisos: [{
+          nombre: "Unico",
+          circuitos: [],
+          luminarias: [],
+          interruptores: [],
+          tomacorrientes: []
+        }],
+        tension_v: Number($("voltage").value),
+        factor_potencia: Number($("pf").value)
+      }, null, 2);
+      $("markdownOut").value = json;
+    }
+
+    function exportLatex() {
+      const voltage = Number($("voltage").value);
+      const pf = Number($("pf").value);
+      const rho = Number($("rho").value);
+      const groups = grouped();
+      let totalInstalled = 0;
+      let totalDemand = 0;
+      const rows = [];
+
+      Object.keys(groups).sort().forEach((circuit) => {
+        const items = groups[circuit];
+        const installed = items.reduce((sum, x) => sum + x.total, 0);
+        const type = dominantType(items);
+        const factor = demandFactor[type] ?? 1;
+        const demand = installed * factor;
+        const current = demand / (voltage * pf);
+        const maxLength = Math.max(...items.map((x) => x.length));
+        const cable = conductorFor(current);
+        const vd = (2 * maxLength * current * rho / cable.section) / voltage * 100;
+        totalInstalled += installed;
+        totalDemand += demand;
+        rows.push({ circuit, type, installed, factor, demand, current, maxLength, cable, vd });
+      });
+
+      let tex = "\\begin{table}[H]\n";
+      tex += "\\centering\n";
+      tex += "\\caption{Cuadro de cargas - Calculadora interactiva}\n";
+      tex += "\\label{tab:cargas-calculadora}\n";
+      tex += "\\begin{tabular}{l l c c c}\n";
+      tex += "\\toprule\n";
+      tex += "\\textbf{Circuito} & \\textbf{Uso} & \\textbf{P.I. (W)} & \\textbf{F.D.} & \\textbf{M.D. (W)} \\\\\n";
+      tex += "\\midrule\n";
+
+      rows.forEach((row) => {
+        tex += `${row.circuit} & ${row.type} & ${money(row.installed)} & ${money(row.factor)} & ${money(row.demand)} \\\\\n`;
+      });
+
+      tex += "\\midrule\n";
+      tex += `\\multicolumn{2}{l}{\\textbf{Total}} & \\textbf{${money(totalInstalled)}} & & \\textbf{${money(totalDemand)}} \\\\\n`;
+      tex += "\\bottomrule\n";
+      tex += "\\end{tabular}\n";
+      tex += "\\end{table}\n\n";
+
+      tex += "\\begin{table}[H]\n";
+      tex += "\\centering\n";
+      tex += "\\caption{Conductores y protecciones}\n";
+      tex += "\\label{tab:conductores-calculadora}\n";
+      tex += "\\begin{tabular}{l c c c l c c c}\n";
+      tex += "\\toprule\n";
+      tex += "\\textbf{Circuito} & \\textbf{P.I. (W)} & \\textbf{M.D. (W)} & \\textbf{Ib (A)} & \\textbf{Cond.} & \\textbf{ITM} & \\textbf{dV (\\%)} & \\textbf{Estado} \\\\\n";
+      tex += "\\midrule\n";
+
+      rows.forEach((row) => {
+        const estado = row.vd <= Number($("vdLimit").value) ? "CUMPLE" : "VERIFICAR";
+        tex += `${row.circuit} & ${money(row.installed)} & ${money(row.demand)} & ${money(row.current)} & ${row.cable.label} & ${row.cable.breaker} & ${money(row.vd)} & ${estado} \\\\\n`;
+      });
+
+      tex += "\\bottomrule\n";
+      tex += "\\end{tabular}\n";
+      tex += "\\end{table}\n";
+
+      const lo = $("latexOut");
+      lo.value = tex;
+      lo.style.display = "block";
+      lo.select();
+      navigator.clipboard.writeText(tex).then(() => {
+        $("exportLatexBtn").textContent = "Copiado LaTeX";
+        setTimeout(() => $("exportLatexBtn").textContent = "Exportar LaTeX", 1500);
+      });
+    }
+
     function markdown(rows, totalInstalled, totalDemand, voltage, pf) {
       const loadLines = loads.map((x, i) =>
         `| ${i + 1} | ${x.room} | ${x.item} | ${x.type} | ${x.qty} | ${money(x.watts)} | ${money(x.total)} | ${x.circuit} | |`
@@ -530,6 +633,14 @@ ${summaryLines || "| | | | | | | | | | | |"}
       $("copyBtn").textContent = "Copiado";
       setTimeout(() => $("copyBtn").textContent = "Copiar Markdown", 1200);
     });
+
+    $("exportJsonBtn").addEventListener("click", () => {
+      exportJson();
+      $("exportJsonBtn").textContent = "JSON generado";
+      setTimeout(() => $("exportJsonBtn").textContent = "Exportar JSON", 1500);
+    });
+
+    $("exportLatexBtn").addEventListener("click", exportLatex);
 
     ["voltage", "pf", "rho", "vdLimit"].forEach((id) => $(id).addEventListener("input", render));
 
