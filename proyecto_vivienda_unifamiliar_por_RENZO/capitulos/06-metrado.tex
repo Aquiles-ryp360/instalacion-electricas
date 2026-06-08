@@ -2,33 +2,211 @@
 
 \section{Alcance}
 
-El metrado siguiente es referencial y se presenta unicamente para ordenar el criterio académico del proyecto. No constituye un presupuesto de obra ni una base de compra real.
+El presente metrado cuantifica los materiales necesarios para la instalacion electrica interior de la vivienda unifamiliar de tres niveles, conforme a la sectorizacion de nueve circuitos (C1 a C9) definida en el Capitulo 2. Las cantidades se obtienen de los planos electricos IE-02, IE-03, IE-04 y de los recorridos estimados de canalizacion por nivel.
+
+Los metrados se agrupan por las siguientes categorias: tuberias, conductores, cajas, tableros, accesorios, protecciones, luminarias y sistema de puesta a tierra.
+
+\section{Resumen de puntos electricos por circuito}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Puntos electricos por circuito}
+\label{tab:puntos-por-circuito}
+\begin{tabularx}{\textwidth}{c L{4.5cm} c c c Y}
+\toprule
+\textbf{Cto.} & \textbf{Uso} & \textbf{Luminarias} & \textbf{TCs} & \textbf{Interruptores} & \textbf{Long. est. (m)} \\
+\midrule
+C1 & Alumbrado 1er piso & 6 & -- & 3 & 12 \\
+C2 & TCs generales 1er piso & -- & 5 & -- & 15 \\
+C3 & Cocina & -- & 4 & -- & 10 \\
+C4 & Alumbrado 2do piso & 5 & -- & 3 & 14 \\
+C5 & TCs generales 2do piso & -- & 9 & -- & 20 \\
+C6 & Alumbrado 3er piso & 8 & -- & 4 & 16 \\
+C7 & TCs generales 3er piso & -- & 7 & -- & 18 \\
+C8 & Lavanderia & -- & 2 & -- & 10 \\
+C9 & Bomba de agua & -- & 1 & 1 & 12 \\
+\midrule
+\textbf{Total} & & \textbf{19} & \textbf{28} & \textbf{11} & \textbf{127} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Metrado de tuberias (canalizaciones)}
 
 \begin{landscape}
 \begin{table}[H]
 \centering
 \small
-\caption{Metrado referencial de materiales}
-\label{tab:metrado-referencial}
-\begin{tabularx}{\textwidth}{c L{3.6cm}L{1.0cm}r L{1.8cm}Y}
+\caption{Metrado de tuberias PVC}
+\label{tab:metrado-tuberias}
+\begin{tabularx}{\textwidth}{c L{4.5cm} L{1.5cm} c L{1.8cm} L{3.5cm} Y}
 \toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Cant.} & \textbf{Plano} & \textbf{Observación} \\
+\textbf{Item} & \textbf{Descripcion} & \textbf{Tipo} & \textbf{Und.} & \textbf{Cant.} & \textbf{Circuitos} & \textbf{Observacion} \\
 \midrule
-1 & Conductor fase alumbrado & m & 120 & IE-02/03/04 & Cobre 1.5 mm2 (Fase) \\
-2 & Conductor neutro alumbrado & m & 120 & IE-02/03/04 & Cobre 1.5 mm2 (Neutro) \\
-3 & Conductor fase tomacorrientes & m & 250 & IE-02/03/04 & Cobre 2.5 mm2 (Fase) \\
-4 & Conductor neutro tomacorrientes & m & 250 & IE-02/03/04 & Cobre 2.5 mm2 (Neutro) \\
-5 & Conductor tierra tomacorrientes & m & 250 & IE-02/03/04 & Cobre 2.5 mm2 (Tierra PE) \\
-6 & Tuberia eléctrica & m & 180 & IE-02/03/04 & PVC-SEL 3/4" \\
-7 & Cajas octogonales & und & 18 & IE-02/03/04 & Para puntos de luz (Luminarias) \\
-8 & Cajas rectangulares & und & 42 & IE-02/03/04 & Para interruptores e tomacorrientes \\
-9 & Tomacorrientes dobles & und & 27 & IE-02/03/04 & Con terminal de puesta a tierra \\
-10 & Interruptores de alumbrado & und & 15 & IE-02/03/04 & Simples y conmutados (tres vías) \\
-11 & Luminarias LED & und & 18 & IE-02/03/04 & Paneles LED de adosar/empotrar \\
-12 & Tableros eléctricos & und & 3 & IE-02/03/04 & TG-01 (1), TD-01 (1), TD-02 (1) \\
-13 & Interruptores termomagneticos & und & 7 & IE-05 & ITM Gral 32A (1) + Derivados 10A/16A (6) \\
-14 & Interruptores diferenciales & und & 4 & IE-05 & ID Gral 40A/30mA (1) + T/C 25A/30mA (3) \\
-15 & Sistema de puesta a tierra & glb & 1 & IE-06 & Pozo de tierra vertical completo \\
+1 & Tuberia PVC liviana 3/4" para alumbrado & PV-L & m & 120 & C1, C4, C6 & Empotrada en losa de techo \\
+2 & Tuberia PVC pesada 3/4" para tomacorrientes & PV-P & m & 150 & C2, C3, C5, C7, C8 & Empotrada en contrapiso y muros \\
+3 & Tuberia PVC pesada 1" para alimentador & PV-P & m & 25 & Alimentador general & Desde medidor a TG y subtableros \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{landscape}
+
+\section{Metrado de conductores}
+
+\begin{landscape}
+\begin{table}[H]
+\centering
+\small
+\caption{Metrado de conductores de cobre}
+\label{tab:metrado-conductores}
+\begin{tabularx}{\textwidth}{c L{4.5cm} c L{1.8cm} L{1.8cm} L{1.8cm} c Y}
+\toprule
+\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Seccion} & \textbf{Cant.} & \textbf{Tipo} & \textbf{Uso} & \textbf{Observacion} \\
+\midrule
+1 & Conductor fase alumbrado & m & 1.5 mm2 & 120 & LSOH & C1, C4, C6 & Cableado unipolar \\
+2 & Conductor neutro alumbrado & m & 1.5 mm2 & 120 & LSOH & C1, C4, C6 & Cableado unipolar \\
+3 & Conductor de proteccion alumbrado & m & 1.5 mm2 & 110 & LSOH & C1, C4, C6 & Segun CNE-U \\
+4 & Conductor fase tomacorrientes & m & 2.5 mm2 & 150 & LSOH & C2, C3, C5, C7, C8 & Cableado unipolar \\
+5 & Conductor neutro tomacorrientes & m & 2.5 mm2 & 150 & LSOH & C2, C3, C5, C7, C8 & Cableado unipolar \\
+6 & Conductor de proteccion tomacorrientes & m & 2.5 mm2 & 150 & LSOH & C2, C3, C5, C7, C8 & Cableado unipolar \\
+7 & Conductor alimentador general fase & m & 10 mm2 & 30 & LSOH & TG & Cableado unipolar \\
+8 & Conductor alimentador general neutro & m & 10 mm2 & 30 & LSOH & TG & Cableado unipolar \\
+9 & Conductor de proteccion alimentador & m & 6 mm2 & 25 & LSOH & TG & Puesta a tierra \\
+10 & Conductor para bomba de agua & m & 2.5 mm2 & 35 & LSOH & C9 & Circuito dedicado \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{landscape}
+
+\clearpage
+
+\section{Metrado de cajas}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Metrado de cajas de pase y derivacion}
+\label{tab:metrado-cajas}
+\begin{tabularx}{\textwidth}{c L{4.5cm} L{2.5cm} c L{2.5cm} Y}
+\toprule
+\textbf{Item} & \textbf{Descripcion} & \textbf{Material} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
+\midrule
+1 & Cajas octogonales 4" x 2" para luminarias & Fierro galvanizado & pza & 19 & Puntos de luz y derivacion \\
+2 & Cajas rectangulares 4" x 2" para interruptores & Fierro galvanizado & pza & 11 & Interruptores simples y conmutadores \\
+3 & Cajas rectangulares 4" x 2" para tomacorrientes & Fierro galvanizado & pza & 28 & Tomacorrientes generales y especiales \\
+4 & Caja de pase rectangular 4" x 2" & Fierro galvanizado & pza & 6 & Para derivaciones en cambios de direccion \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Metrado de tableros}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Metrado de tableros electricos}
+\label{tab:metrado-tableros}
+\begin{tabularx}{\textwidth}{c L{4.5cm} L{1.8cm} c L{1.8cm} Y}
+\toprule
+\textbf{Item} & \textbf{Descripcion} & \textbf{Polos} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
+\midrule
+1 & Tablero general TG-01 (metalico empotrable) & 12 polos & u & 1 & Primer piso, zona de ingreso \\
+2 & Tablero de distribucion TD-01 & 8 polos & u & 1 & Segundo piso, zona central \\
+3 & Tablero de distribucion TD-02 & 8 polos & u & 1 & Tercer piso o zona de servicio \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Metrado de accesorios y protecciones}
+
+\begin{landscape}
+\begin{table}[H]
+\centering
+\small
+\caption{Metrado de accesorios, interruptores y protecciones}
+\label{tab:metrado-accesorios}
+\begin{tabularx}{\textwidth}{c L{4.5cm} c L{2.0cm} L{2.0cm} Y}
+\toprule
+\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Cant.} & \textbf{Circuito} & \textbf{Observacion} \\
+\midrule
+1 & Interruptor simple (unipolar) & pza & 6 & C1, C4, C6 & Ambientes generales \\
+2 & Interruptor conmutacion 3 vias (S3) & pza & 4 & C1, C4, C6 & Escaleras y pasadizo \\
+3 & Interruptor de control para bomba & pza & 1 & C9 & Interruptor de maniobra \\
+4 & Tomacorriente doble con toma a tierra & pza & 24 & C2, C3, C5, C7 & Uso general \\
+5 & Tomacorriente doble con proteccion GFCI & pza & 2 & C5, C7 & Banos (protegido) \\
+6 & Tomacorriente para lavanderia & pza & 2 & C8 & Servicio pesado \\
+7 & Tomacorriente para bomba de agua & pza & 1 & C9 & Tomas especial \\
+8 & Interruptor termomagnetico 2P-10A & pza & 3 & C1, C4, C6 & Proteccion alumbrado \\
+9 & Interruptor termomagnetico 2P-16A & pza & 5 & C2, C5, C7, C8, C9 & Proteccion tomacorrientes \\
+10 & Interruptor termomagnetico 2P-20A & pza & 1 & C3 & Proteccion cocina \\
+11 & Interruptor termomagnetico general 2P-40A & pza & 1 & Alimentador & Proteccion general TG \\
+12 & Interruptor diferencial 2P-25A-30mA & pza & 1 & General TG & Proteccion de personas \\
+13 & Luminaria LED interior 12 W (circular o rectangular) & pza & 19 & C1, C4, C6 & Iluminacion LED \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{landscape}
+
+\section{Metrado de puesta a tierra}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Metrado del sistema de puesta a tierra}
+\label{tab:metrado-puesta-tierra}
+\begin{tabularx}{\textwidth}{c L{4.5cm} L{2.0cm} c L{2.5cm} Y}
+\toprule
+\textbf{Item} & \textbf{Descripcion} & \textbf{Material} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
+\midrule
+1 & Varilla de puesta a tierra 5/8" x 2.40 m & Cobre solido & pza & 1 & Electrodo principal \\
+2 & Conector de bronce para varilla & Bronce & pza & 1 & Conexion certificada \\
+3 & Conductor de puesta a tierra 6 mm2 & Cobre desnudo & m & 25 & Conexion a barra de tierra \\
+4 & Caja de registro de puesta a tierra & Metalico & pza & 1 & Para inspeccion \\
+5 & Barra de tierra para tablero & Cobre & pza & 1 & En tablero general \\
+6 & Gel o mejorador de suelo & Quimico & kg & 5 & Reduccion de resistencia \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Resumen general de metrados}
+
+\begin{landscape}
+\begin{table}[H]
+\centering
+\tiny
+\caption{Resumen general de metrados}
+\label{tab:resumen-metrados}
+\begin{tabularx}{\textwidth}{c L{4.8cm} L{2.2cm} c L{1.8cm} L{3.0cm} Y}
+\toprule
+\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Especificacion} & \textbf{Cant.} & \textbf{Plano ref.} & \textbf{Observacion} \\
+\midrule
+1 & Tuberia PVC liviana 3/4" & m & PV-L & 120 & IE-02, IE-04 & Alumbrado empotrado en techo \\
+2 & Tuberia PVC pesada 3/4" & m & PV-P & 150 & IE-03, IE-04 & Tomacorrientes empotrado en muro \\
+3 & Tuberia PVC pesada 1" & m & PV-P & 25 & IE-01 & Alimentador general \\
+4 & Conductor 1.5 mm2 Cu LSOH & m & LSOH 1.5 mm2 & 350 & IE-02 & Fase+neutro+PE alumbrado \\
+5 & Conductor 2.5 mm2 Cu LSOH & m & LSOH 2.5 mm2 & 485 & IE-03 & Fase+neutro+PE tomacorrientes \\
+6 & Conductor 10 mm2 Cu LSOH & m & LSOH 10 mm2 & 30 & IE-01 & Alimentador general \\
+7 & Conductor 6 mm2 Cu & m & Cu desnudo & 25 & IE-06 & Puesta a tierra \\
+8 & Caja octogonal 4" x 2" FG & pza & FG & 19 & IE-02 & Luminarias \\
+9 & Caja rectangular 4" x 2" FG & pza & FG & 45 & IE-02, IE-03 & Interruptores y tomacorrientes \\
+10 & Caja de pase rectangular & pza & FG & 6 & IE-04 & Derivaciones \\
+11 & Tablero general TG-01 & u & 12 polos & 1 & IE-05 & Primer piso \\
+12 & Tablero distribucion TD-01 & u & 8 polos & 1 & IE-05 & Segundo piso \\
+13 & Tablero distribucion TD-02 & u & 8 polos & 1 & IE-05 & Tercer piso \\
+14 & Interruptor simple & pza & Unipolar & 6 & IE-02 & Alumbrado \\
+15 & Interruptor conmutador S3 & pza & 3 vias & 4 & IE-02 & Escaleras \\
+16 & Interruptor control bomba & pza & Unipolar & 1 & IE-02 & Bomba \\
+17 & Tomacorriente doble c/tierra & pza & 15 A - 250 V & 24 & IE-03 & Uso general \\
+18 & Tomacorriente GFCI & pza & 15 A - 30 mA & 2 & IE-03 & Banos \\
+19 & Tomacorriente servicio pesado & pza & 20 A - 250 V & 3 & IE-03 & Lavanderia y bomba \\
+20 & Interruptor termomagnetico 2P-10A & pza & 10 A & 3 & IE-05 & Alumbrado \\
+21 & Interruptor termomagnetico 2P-16A & pza & 16 A & 5 & IE-05 & Tomacorrientes \\
+22 & Interruptor termomagnetico 2P-20A & pza & 20 A & 1 & IE-05 & Cocina \\
+23 & Interruptor termomagnetico general 2P-40A & pza & 40 A & 1 & IE-05 & General TG \\
+24 & Interruptor diferencial 2P-25A-30mA & pza & 25 A - 30 mA & 1 & IE-05 & Proteccion general \\
+25 & Luminaria LED 12 W & pza & 12 W LED & 19 & IE-02 & Iluminacion interior \\
+26 & Kit de puesta a tierra completo & jgo & 5/8" x 2.40 m & 1 & IE-06 & Incluye varilla, conector, caja \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -36,4 +214,11 @@ El metrado siguiente es referencial y se presenta unicamente para ordenar el cri
 
 \section{Nota tecnica}
 
-Los metrados deberán recalcularse en un proyecto de ejecución real si se dispone de planos de detalle definitivos, rutas de canalización precisas y la aprobación de la empresa distribuidora de energía local.
+Los metrados presentados son referenciales y corresponden a un anteproyecto academico. Las cantidades definitivas deberan recalcularse en un proyecto ejecutivo considerando:
+
+\begin{itemize}
+  \item Planos arquitectonicos con cotas definitivas.
+  \item Longitudes reales de recorridos de tuberias en obra.
+  \item Criterios de la empresa distribuidora (Electro Puno S.A.A.).
+  \item Verificacion de curvas, accesorios y desperdicios de obra (se recomienda agregar 5\% a 10\% de desperdicio en la compra real).
+\end{itemize}
