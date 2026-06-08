@@ -1,45 +1,42 @@
-# INFORME DE ANÁLISIS ARQUITECTÓNICO Y VALIDACIÓN DEL PROYECTO
+# INFORME DE VALIDACIÓN INICIAL Y ANÁLISIS DESDE CERO
 ## Diseño Eléctrico Domiciliario - Vivienda de 3 Pisos
 
-Este informe sirve como evidencia del análisis desde cero realizado sobre los planos arquitectónicos en formato PNG para el rediseño de las instalaciones eléctricas residenciales bajo la norma NEC.
+Este informe sirve como evidencia obligatoria de la inspección y análisis arquitectónico inicial de los planos en formato PNG, realizado antes del diseño eléctrico de la vivienda unifamiliar.
 
 ---
 
 ### 1. Análisis del Primer Piso (1er Piso)
 
 * **Ambientes Detectados:**
-  1. **Tienda (Espacio Frontal):** Área social o comercial de $3.0\text{ m} \times 3.5\text{ m}$. Acceso directo desde la calle mediante puerta de doble hoja batiente.
-  2. **Cocina:** Área de servicio de $3.0\text{ m} \times 3.5\text{ m}$. Acceso desde el pasadizo mediante puerta de $0.8\text{ m}$.
-  3. **Pasadizo:** Área de circulación de $1.5\text{ m} \times 7.0\text{ m}$. Acceso principal desde la calle mediante puerta de $0.9\text{ m}$.
-  4. **Escalera:** Área de circulación vertical de $2.5\text{ m} \times 1.5\text{ m}$ ubicada al fondo del lote.
-* **Métricas del Primer Piso:**
-  * **Habitaciones (Dormitorios):** 0
-  * **Baños:** 0
-  * **Espacios Comunes:** 2 (Pasadizo, Escalera)
-* **Observaciones y Detalles del Diseño Eléctrico en PNG:**
-  * **Acometida y Medidor (Wh):** El medidor se encuentra en la pared exterior frontal del pasadizo.
-  * **Tablero General (TG-01):** Ubicado en la pared del pasadizo (esquina inferior derecha), empotrado, a la entrada de la vivienda.
-  * **Iluminación:** 6 puntos en total (2 en Tienda, 2 en Cocina, 1 en Pasadizo, 1 en Escalera).
-  * **Tomacorrientes:** 3 puntos dobles (1 en Tienda [C2] y 2 en Cocina [C3]).
+  1. **Tienda (Espacio Frontal):** Área social o comercial de $3.0\text{ m} \times 3.5\text{ m}$. Acceso directo desde la calle con puerta batiente de doble hoja y ventana.
+  2. **Cocina:** Espacio de servicio de $3.0\text{ m} \times 3.5\text{ m}$ con puerta de $0.8\text{ m}$ hacia el pasadizo.
+  3. **Pasadizo:** Área de circulación de $1.5\text{ m} \times 7.0\text{ m}$. Entrada principal de la casa con puerta de $0.9\text{ m}$.
+  4. **Escalera:** Espacio de circulación vertical de $2.5\text{ m} \times 1.5\text{ m}$ ubicada al fondo del lote.
+* **Dimensiones Totales Visibles del Nivel:** $4.5\text{ m} \times 8.5\text{ m}$ (Ancho total 4.5m; Altura total de construcción 8.5m).
+* **Observaciones Eléctricas Detectadas:**
+  * El medidor general (**Wh**) se ubica empotrado en la pared exterior de fachada.
+  * El Tablero General (**TG-01**) se ubica en el pasadizo, inmediatamente al ingresar a la vivienda.
+  * Puntos eléctricos visibles: 6 luminarias, 5 interruptores y 3 tomacorrientes dobles (2 en cocina y 1 en tienda).
+* **Posibles Limitaciones:**
+  * El espacio físico para el Tablero General es ajustado en el pasadizo debido a la cercanía con la puerta principal de ingreso.
+  * No hay cuarto de baño en este piso.
 
 ---
 
 ### 2. Análisis del Segundo Piso (2do Piso)
 
 * **Ambientes Detectados:**
-  1. **Dormitorio (Principal - Frontal):** Área habitable de $4.5\text{ m} \times 4.0\text{ m}$. Ventana amplia hacia la calle.
+  1. **Dormitorio (Principal - Frontal):** Área habitable de $4.5\text{ m} \times 4.0\text{ m}$ con proyección en voladizo hacia la calle.
   2. **Dormitorio 3 (Posterior):** Área habitable de $3.0\text{ m} \times 3.5\text{ m}$.
-  3. **Sala / Hall:** Área común de $1.5\text{ m} \times 3.5\text{ m}$ que distribuye los accesos.
-  4. **Baño:** Área de servicio húmeda de $2.0\text{ m} \times 1.5\text{ m}$ con puerta de $0.7\text{ m}$.
-  5. **Escalera:** Área de circulación vertical de $2.5\text{ m} \times 1.5\text{ m}$.
-* **Métricas del Segundo Piso:**
-  * **Habitaciones (Dormitorios):** 2 (Dormitorio Principal y Dormitorio 3)
-  * **Baños:** 1 (Baño completo)
-  * **Espacios Comunes:** 2 (Sala/Hall, Escalera)
-* **Observaciones y Detalles del Diseño Eléctrico en PNG:**
-  * **Tablero de Distribución (TD-01):** Ubicado en la pared de la Sala/Hall (junto al acceso del baño).
-  * **Iluminación:** 6 puntos (2 en Dormitorio Principal, 1 en Dormitorio 3, 1 en Sala/Hall, 1 en Baño, 1 en Escalera).
-  * **Tomacorrientes:** 5 tomacorrientes dobles generales (2 en Dormitorio Principal, 2 en Sala/Hall, 1 en Dormitorio 3 [C5]).
+  3. **Sala / Hall:** Corredor y distribuidor de $1.5\text{ m} \times 3.5\text{ m}$.
+  4. **Baño:** Espacio de servicio sanitario de $2.0\text{ m} \times 1.5\text{ m}$ con puerta de $0.7\text{ m}$.
+  5. **Escalera:** Área de circulación vertical ($2.5\text{ m} \times 1.5\text{ m}$).
+* **Dimensiones Totales Visibles del Nivel:** $4.5\text{ m} \times 9.0\text{ m}$ (El segundo piso tiene un voladizo/proyección de 0.5m en fachada, incrementando el largo total a 9.0m).
+* **Observaciones Eléctricas Detectadas:**
+  * El Subtablero de Distribución (**TD-01**) se ubica en el Hall central, contiguo a la puerta del baño.
+  * Puntos eléctricos visibles: 6 luminarias en total, 6 interruptores y 6 tomacorrientes dobles generales.
+* **Posibles Limitaciones:**
+  * El hall de distribución es angosto ($1.5\text{ m}$), lo que requiere tendido de canalizaciones preferentemente perimetral.
 
 ---
 
@@ -50,33 +47,17 @@ Este informe sirve como evidencia del análisis desde cero realizado sobre los p
   2. **Dormitorio 5 (Derecha):** Área habitable alargada de $2.25\text{ m} \times 7.5\text{ m}$ con puerta de $0.8\text{ m}$.
   3. **Baño / Cuarto Chico:** Área de servicio de $2.25\text{ m} \times 1.5\text{ m}$ con puerta de $0.7\text{ m}$.
   4. **Escalera:** Área de circulación vertical de $2.1\text{ m} \times 1.5\text{ m}$.
-* **Métricas del Tercer Piso:**
-  * **Habitaciones (Dormitorios):** 2 (Dormitorio 4 y Dormitorio 5)
-  * **Baños:** 1 (Baño / Cuarto Chico)
-  * **Espacios Comunes:** 1 (Escalera / Pasillo de distribución)
-* **Observaciones y Detalles del Diseño Eléctrico en PNG:**
-  * **Tablero de Distribución (TD-02):** Ubicado en la pared del pasillo frente a las puertas de los dormitorios.
-  * **Iluminación:** 6 puntos en total (2 en Dormitorio 4, 2 en Dormitorio 5, 1 en Pasadizo/Baño, 1 en Escalera).
-  * **Tomacorrientes:** 6 puntos en total (4 tomacorrientes dobles "T.C." en rojo ubicados en el muro divisorio central [C7], y 2 cajas de paso en las paredes exteriores laterales).
+* **Dimensiones Totales Visibles del Nivel:** $4.5\text{ m} \times 9.0\text{ m}$ (Mismo contorno de 9m de largo que el segundo piso).
+* **Observaciones Eléctricas Detectadas:**
+  * El Subtablero de Distribución (**TD-02**) está empotrado en la pared central del pasadizo de acceso.
+  * Puntos eléctricos definidos en el PNG: 7 luminarias en total, 5 interruptores simples y 8 puntos de tomacorrientes/cajas (4 tomacorrientes dobles en rojo rotulados "T.C." en el muro divisor, y 4 cajas de paso en las paredes exteriores laterales).
+* **Posibles Limitaciones:**
+  * El ancho de los dormitorios ($2.25\text{ m}$) limita la distribución de muebles; los tomacorrientes y cajas de paso deben instalarse en muros laterales y compartidos.
 
 ---
 
-### 4. Resumen Consolidado de la Edificación
-* **Total de Habitaciones (Dormitorios) en la vivienda:** 4
+### 4. Consolidado del Proyecto (Métricas Reales)
+* **Total de Dormitorios en la vivienda:** 4
 * **Total de Baños en la vivienda:** 2
-* **Total de Espacios Comunes:** 5 (Pasadizos y Escaleras)
-* **Total de Puntos de Luz (Luminarias):** 18
-* **Total de Tomacorrientes Generales y Cajas de Paso:** 14
-* **Total de Tableros Eléctricos:** 3 (1 General TG-01, 2 Secundarios TD-01 y TD-02)
-
----
-
-### 5. Criterios de Diseño Eléctrico a Aplicar
-* **Normativa principal:** NEC (National Electrical Code).
-* **Tensión y fases:** Suministro monofásico de $220\text{ V}$, $60\text{ Hz}$.
-* **Canalización:** Tuberías de PVC empotradas en losa y muros.
-* **Conductores de Cobre:**
-  * Alimentación general: $10\text{ mm}^2$ THW (32A).
-  * Circuitos de tomacorrientes: $2.5\text{ mm}^2$ THW (16A, con ID de 25A/30mA para protección de personas).
-  * Circuitos de alumbrado: $1.5\text{ mm}^2$ TW (10A).
-* **Puesta a Tierra (SPAT):** Un pozo vertical de puesta a tierra con electrodo de cobre vertical de $5/8" \times 2.40\text{ m}$ conectado a la barra de tierra del TG-01.
+* **Total de Espacios Comunes:** 5 (Pasadizos, Halls, Escaleras)
+* **Total de Tableros Eléctricos:** 3 (1 General TG-01 en el primer piso y 2 de Distribución TD-01 y TD-02 en el segundo y tercer piso)

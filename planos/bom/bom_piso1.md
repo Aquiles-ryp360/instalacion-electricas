@@ -67,7 +67,7 @@ Equipos de control y seguridad del primer nivel:
 ---
 
 ### 5. Puesta a Tierra (SPAT)
-Componentes del pozo de tierra vertical ubicado en el patio posterior:
+Componentes del pozo de tierra vertical:
 
 | Descripción | Especificación | Unidad | Cantidad | Observación |
 | :--- | :--- | :---: | :---: | :--- |

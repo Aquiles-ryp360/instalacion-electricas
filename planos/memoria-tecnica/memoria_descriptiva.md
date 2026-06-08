@@ -19,7 +19,7 @@ El diseño se ha elaborado bajo los lineamientos del **National Electrical Code 
 
 ---
 
-### 3. Objetivos
+### 3. Objectives
 #### 3.1. Objetivo General
 Desarrollar el diseño completo desde cero y la documentación técnica de las instalaciones eléctricas residenciales para la vivienda de 3 niveles, asegurando el suministro seguro y confiable de la energía.
 

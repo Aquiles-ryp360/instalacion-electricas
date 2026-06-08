@@ -23,8 +23,8 @@ Este documento presenta la lista consolidada de materiales requerida para el pro
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | Alimentador General | THW | $10\text{ mm}^2$ | Rojo / Negro | m | 20.0 |
 | Sub-alimentadores | THW | $6\text{ mm}^2$ | Rojo / Negro | m | 44.0 |
-| Alumbrado (C1, C4, C6) | TW | $1.5\text{ mm}^2$ | Rojo / Blanco | m | 280.0 |
-| Tierra Alumbrado (PE) | TW | $1.5\text{ mm}^2$ | Verde | m | 140.0 |
+| Alumbrado (C1, C4, C6) | TW | $1.5\text{ mm}^2$ | Rojo / Blanco | m | 288.0 |
+| Tierra Alumbrado (PE) | TW | $1.5\text{ mm}^2$ | Verde | m | 144.0 |
 | Tomacorrientes (C2, C3, C5, C7) | THW | $2.5\text{ mm}^2$ | Rojo / Blanco | m | 156.0 |
 | Tierra Tomacorrientes (PE) | THW | $2.5\text{ mm}^2$ | Verde | m | 78.0 |
 | Puesta a Tierra (Pozo) | Cobre Desnudo| $6\text{ mm}^2$ | Cobre natural | m | 6.0 |

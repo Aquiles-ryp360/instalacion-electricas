@@ -1,5 +1,5 @@
 # LISTA DE MATERIALES (BOM) - SEGUNDO PISO
-## Proyecto: Instalación Eléctración Residencial - Vivienda Unifamiliar de 3 Pisos
+## Proyecto: Instalación Eléctrica Residencial - Vivienda Unifamiliar de 3 Pisos
 
 Esta lista detalla las estimaciones de materiales para la instalación eléctrica del **Segundo Piso**, de acuerdo a los criterios del NEC y los planos arquitectónicos reales.
 
