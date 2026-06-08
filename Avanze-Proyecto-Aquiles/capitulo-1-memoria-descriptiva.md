@@ -88,3 +88,14 @@ Presentar la descripcion general del mini proyecto de instalacion electrica domi
 | Definir tipo de canalizacion | Empotrada, superficial o mixta |
 | Agregar numerales normativos | Revisar CNE-U y EM.010 |
 | Verificar si el ingeniero exige cronograma o presupuesto dentro del alcance | Consultar indicaciones de clase |
+
+## 8. Notas de Actualización de Planos (Versión 6)
+
+La versión 6 (v6) se generó mediante edición directa sobre los DXF maestros v4, sin regenerar desde JSON. Los DXF v4 contenían correcciones manuales que debían preservarse.
+
+Correcciones aplicadas en v6:
+- **Puesta a Tierra (SPAT):** Se incorporó el símbolo de puesta a tierra en el plano del Piso 1, ubicado en (15.45, 3.60), cerca del medidor y del TG, en zona exterior/frontal. Se creó la capa `ELEC_PUESTA_TIERRA`. Se trazó conductor de protección PE desde el SPAT hasta el TG.
+- **Simbología de Luminarias:** Se corrigió el símbolo de salidas de techo en **ambos pisos**. Las líneas ortogonales (+) fueron reemplazadas por diagonales (X/aspa), conforme al estándar DGE_09_93_51_SALIDA_TECHO. Se editaron 10 luminarias en Piso 1 y 12 luminarias en Piso 2.
+- **Consistencia Segundo Piso:** Se verificó que el segundo piso use la misma simbología que el primero. Se creó la capa `ELEC_PUESTA_TIERRA` y se agregó nota de conductor PE proveniente del SPAT del Piso 1.
+- **Elementos preservados:** Medidor (M), Tablero General (TG), Tablero T2, Ducto Vertical (VD), todos los circuitos C1-C8, canalizaciones, interruptores, tomacorrientes y arquitectura base. Ningún elemento fue eliminado ni reubicado.
+- **Flujo aplicado:** DXF maestro v4 → copia a v6 → edición directa con ezdxf → exportación PDF con QCAD → revisión visual PNG.

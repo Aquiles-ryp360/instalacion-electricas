@@ -1,10 +1,14 @@
 \chapter*{ESPECIFICACIONES DE MONTAJE}
 \addcontentsline{toc}{chapter}{ESPECIFICACIONES DE MONTAJE}
 
-% NO COMPILAR - BORRADOR PRELIMINAR.
-% Este contenido se conserva como material de trabajo, pero no pertenece al alcance
-% actual. La fase activa solo desarrolla Memoria Descriptiva y Calculos Justificativos.
-\iffalse
+% Reinicio de contadores para numeracion coherente con el capitulo 4.
+\setcounter{section}{0}
+\renewcommand{\thesection}{4.\arabic{section}.}
+\renewcommand{\thesubsection}{4.\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{4.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
+\renewcommand{\theHsection}{montaje.\arabic{section}}
+\renewcommand{\theHsubsection}{montaje.\arabic{section}.\arabic{subsection}}
+\renewcommand{\theHsubsubsection}{montaje.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 
 \section{INSTALACION DE CANALIZACIONES}
 
@@ -33,6 +37,7 @@ Las cajas de salida e interruptores deben quedar perfectamente niveladas y enras
 \textbf{Dispositivo / Salida} & \textbf{Altura (m)} & \textbf{Observaciones} \\
 \midrule
 Tablero General (TG) & 1.50 m & Medido al borde superior del gabinete \\
+Tablero de Distribucion T2 & 1.50 m & En segundo piso \\
 Interruptores de pared & 1.20 m & Cerca de las puertas, lado opuesto a bisagras \\
 Tomacorrientes generales & 0.30 m & Bipolar doble con linea de tierra \\
 Tomacorrientes sobre mesa & 1.10 m & En cocina amplia y zona de servicio \\
@@ -73,4 +78,3 @@ Una vez terminada la instalacion, el contratista o estudiante realizara las sigu
   \item \textbf{Medicion de la puesta a tierra:} Utilizando un telurimetro, se medira la resistencia del pozo a tierra mediante el metodo de caida de potencial, la cual debe arrojar un valor menor a 15 Ohmios.
   \item \textbf{Prueba de disparo diferencial:} Verificacion del funcionamiento de los interruptores diferenciales mediante el boton de prueba (Test) integrado.
 \end{itemize}
-\fi

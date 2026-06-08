@@ -1,10 +1,14 @@
 \chapter*{ESPECIFICACIONES DE MATERIALES}
 \addcontentsline{toc}{chapter}{ESPECIFICACIONES DE MATERIALES}
 
-% NO COMPILAR - BORRADOR PRELIMINAR.
-% Este contenido se conserva como material de trabajo, pero no pertenece al alcance
-% actual. La fase activa solo desarrolla Memoria Descriptiva y Calculos Justificativos.
-\iffalse
+% Reinicio de contadores para numeracion coherente con el capitulo 3.
+\setcounter{section}{0}
+\renewcommand{\thesection}{3.\arabic{section}.}
+\renewcommand{\thesubsection}{3.\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{3.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
+\renewcommand{\theHsection}{materiales.\arabic{section}}
+\renewcommand{\theHsubsection}{materiales.\arabic{section}.\arabic{subsection}}
+\renewcommand{\theHsubsubsection}{materiales.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 
 \section{CONDUCTORES ELECTRICOS}
 
@@ -23,18 +27,18 @@ Los cables para el cableado de circuitos de alumbrado y tomacorrientes seran uni
   \item \textbf{Aislamiento:} Cloruro de polivinilo (PVC) resistente al calor y a la humedad.
   \item \textbf{Norma de fabricacion:} NTP 370.252 / NTP 370.053.
   \item \textbf{Temperatura de operacion:} Hasta \(75^\circ\text{C}\) en ambientes secos y humedos.
-  \item \textbf{Secciones minimas:} Alumbrado (\(1.5\text{ mm}^2\)), tomacorrientes (\(2.5\text{ mm}^2\)), cocina (\(4.0\text{ mm}^2\)).
+  \item \textbf{Secciones minimas:} Alumbrado (\(2.5\text{ mm}^2\)), tomacorrientes (\(2.5\text{ mm}^2\)), cocina (\(10.0\text{ mm}^2\)), lavadora (\(10.0\text{ mm}^2\)).
 \end{itemize}
 
 \section{CANALIZACIONES Y ACCESORIOS}
 
 \subsection{TUBERIAS DE PVC CLASE PESADA (PVC-P)}
-Las tuberias para los circuitos empotrados seran rigidas de Cloruro de Polivinilo (PVC) no plastificado, clase pesada.
+Las tuberias para los circuitos empotrados seran rigidas de Cloruro de Polivilino (PVC) no plastificado, clase pesada.
 \begin{itemize}
   \item \textbf{Caracteristicas:} Resistentes al impacto, aplastamiento, humedad y agentes quimicos. Retardantes de la llama y autoextinguibles.
-  \item \textbf{Norma de fabricacion:} NTP 399.006 (INDCOPI ex ITINTEC).
+  \item \textbf{Norma de fabricacion:} NTP 399.006 (INDECOPI ex ITINTEC).
   \item \textbf{Longitud y union:} Tubos de 3.00 m de longitud con campana en un extremo para union mediante pegamento PVC.
-  \item \textbf{Diametros minimos:} Derivados (\(20\text{ mm}\) o 3/4''), alimentador (\(35\text{ mm}\) o 1 1/4'').
+  \item \textbf{Diametros minimos:} Derivados (\(20\text{ mm}\) o 3/4''), alimentador general (\(40\text{ mm}\) o 1 1/2''), subalimentador a T2 (\(32\text{ mm}\) o 1 1/4'').
 \end{itemize}
 
 \subsection{CAJAS METALICAS DE SALIDA Y DISPOSITIVOS}
@@ -47,8 +51,8 @@ Las cajas para tomacorrientes, interruptores y centros de luz seran de fierro ga
     - \textbf{Octogonales (100x50 mm):} Para centros de iluminacion en techo o pared.
 \end{itemize}
 
-\subsection{CAJAS DE PASO}
-Fabricadas en plancha de fierro galvanizado de un espesor no menor a \(1.8\text{ mm}\) para cajas con dimensiones mayores a 200 mm. Seran protegidas con dos capas de pintura anticorrosiva gris y llevaran tapas del mismo espesor de la plancha, sujetadas con stove-bolts inoxidables.
+\subsection{CAJAS DE PASO Y ESTANCAS}
+Fabricadas en plancha de fierro galvanizado de un espesor no menor a \(1.8\text{ mm}\) para cajas con dimensiones mayores a 200 mm. Para exteriores (bomba de agua) se utilizaran cajas estancas termoplasticas con grado de proteccion minimo IP55.
 
 \section{DISPOSITIVOS DE MANIOBRA Y PROTECCION}
 
@@ -57,7 +61,7 @@ Dispositivos automaticos termicos y magneticos destinados a la proteccion contra
 \begin{itemize}
   \item \textbf{Tipo de montaje:} Riel DIN de 35 mm, de operacion manual y disparo libre.
   \item \textbf{Capacidad de ruptura:} Minimo \(10\text{ kA}\) a 220 V (NTP-IEC 60898-1).
-  \textbf{Curva de disparo:} Curva tipo C (apto para cargas residenciales con corrientes de arranque bajas).
+  \item \textbf{Curva de disparo:} Curva tipo C (apto para cargas residenciales con corrientes de arranque bajas).
   \item \textbf{Marcado:} Indicar marca, corriente nominal (A), tension (V) e indicador visual de estado ON/OFF.
 \end{itemize}
 
@@ -72,7 +76,7 @@ Interruptores diferenciales para la proteccion contra fugas de corriente a tierr
 \subsection{TOMACORRIENTES Y ACCESORIOS}
 Los tomacorrientes de pared seran bipolares dobles con contacto de tierra lateral (Schuko) o universal de tres polos, con alveolos protegidos contra contactos accidentales.
 \begin{itemize}
-  \item \textbf{Capacidad y Tension:} \(16\text{ A}\) a 250 V AC, 60 Hz.
+  \item \textbf{Capacidad y Tension:} \(16\text{ A}\) a 250 V AC, 60 Hz. Para salidas especiales (cocina, lavadora) se emplearan tomacorrientes de mayor capacidad (20 A o 32 A).
   \item \textbf{Placa protectora:} Placa de policarbonato autoextinguible de alta resistencia.
 \end{itemize}
 
@@ -95,5 +99,4 @@ Sera una varilla de acero recubierta de cobre por proceso electrolitico (tipo co
 Cinta autoadhesiva elastoplastica de cloruro de polivinilo, de 20 mm de ancho, 10 m de largo y 0.5 mm de espesor minimo, con una rigidez dielectrica minima de 13.8 kV/mm y apta para operar a \(80^\circ\text{C}\).
 
 \subsection{LUMINARIAS LED}
-Las luminarias seran dicroicos LED o paneles LED redondos de adosar de 12 W de potencia nominal, con una eficiencia luminosa minima de 90 lm/W y vida util proyectada de 25,000 horas.
-\fi
+Las luminarias seran paneles LED redondos de adosar de 18 W de potencia nominal, con una eficiencia luminosa minima de 90 lm/W y vida util proyectada de 25,000 horas.

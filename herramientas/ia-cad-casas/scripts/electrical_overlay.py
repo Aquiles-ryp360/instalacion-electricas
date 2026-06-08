@@ -222,9 +222,28 @@ def draw_luminaire(msp, item):
     layer = "ELEC_LUMINARIAS"
     if not add_dge_symbol(msp, "DGE_09_93_51_SALIDA_TECHO", x, y, scale=r / 0.18, layer=layer):
         msp.add_circle((x, y), r, dxfattribs={"layer": layer})
-        msp.add_line((x - r * 0.70, y), (x + r * 0.70, y), dxfattribs={"layer": layer})
-        msp.add_line((x, y - r * 0.70), (x, y + r * 0.70), dxfattribs={"layer": layer})
+        # Dibujar aspa "X" en lugar de "+"
+        d_in = r * 0.4
+        d_out = r * 0.9
+        msp.add_line((x - d_out, y - d_out), (x - d_in, y - d_in), dxfattribs={"layer": layer})
+        msp.add_line((x + d_in, y + d_in), (x + d_out, y + d_out), dxfattribs={"layer": layer})
+        msp.add_line((x - d_out, y + d_out), (x - d_in, y + d_in), dxfattribs={"layer": layer})
+        msp.add_line((x + d_in, y - d_in), (x + d_out, y - d_out), dxfattribs={"layer": layer})
     draw_label(msp, item, item.get("circuit", ""), x, y)
+
+
+def draw_earthing(msp, item):
+    x, y = float(item["x"]), float(item["y"])
+    layer = "ELEC_PUESTA_TIERRA"
+    ensure_layer(msp.doc, layer, {"color": 3, "true_color": 0x00A651, "lineweight": 25})
+    # Dibujar simbolo de puesta a tierra (3 lineas decrecientes y linea vertical)
+    r = float(item.get("size", 0.15))
+    msp.add_line((x, y), (x, y - r), dxfattribs={"layer": layer})
+    msp.add_line((x - r, y - r), (x + r, y - r), dxfattribs={"layer": layer})
+    msp.add_line((x - r*0.6, y - r*1.3), (x + r*0.6, y - r*1.3), dxfattribs={"layer": layer})
+    msp.add_line((x - r*0.2, y - r*1.6), (x + r*0.2, y - r*1.6), dxfattribs={"layer": layer})
+    draw_label(msp, item, item.get("label", "SPAT"), x, y, dy=-r*2.2)
+
 
 
 def draw_switch(msp, item):
@@ -405,8 +424,11 @@ def draw_all(msp, data):
         draw_meter(msp, item)
     for item in data.get("equipos", []):
         draw_equipment(msp, item)
+    for item in data.get("puesta_tierra", []):
+        draw_earthing(msp, item)
     draw_legend(msp, data)
     draw_notes(msp, data)
+
 
 
 def validate(data):
@@ -414,10 +436,11 @@ def validate(data):
     for key in required_lists:
         if key in data and not isinstance(data[key], list):
             raise ValueError(f"'{key}' debe ser una lista")
-    for key in ["luminarias", "interruptores", "tomacorrientes", "tableros", "medidores", "equipos"]:
+    for key in ["luminarias", "interruptores", "tomacorrientes", "tableros", "medidores", "equipos", "puesta_tierra"]:
         for i, item in enumerate(data.get(key, [])):
             if "x" not in item or "y" not in item:
                 raise ValueError(f"{key}[{i}] debe tener x/y")
+
 
 
 def parse_args():

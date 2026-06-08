@@ -1,119 +1,235 @@
-# Cotización Automatizada — Instalaciones Eléctricas
+# Cotizacion automatizada de instalaciones electricas
 
-Pipeline para generar cotizaciones formales de materiales eléctricos con precios reales de proveedores peruanos.
+Herramientas para convertir el BOM de materiales electricos del proyecto en una cotizacion formal, verificable y lista para integrarse al informe.
 
+El directorio mantiene dos flujos:
+
+- **Flujo simple legacy:** conserva `buscador_precios.py` y `generar_cotizacion.py`.
+- **Flujo multi-proveedor nuevo:** usa `cotizador_multi_proveedor.py` para buscar, comparar, recomendar y generar evidencias.
+
+## Flujo legacy existente
+
+El flujo anterior sigue disponible y no fue eliminado:
+
+```text
+BOM JSON -> buscador_precios.py -> cache/enlaces/precios -> generar_cotizacion.py -> HTML/LaTeX/PDF
 ```
-BOM (JSON) → Buscar precios → Cotización (HTML / LaTeX)
-```
 
----
+Archivos principales:
 
-## Flujo Completo
+- `bom.json`: BOM actual del proyecto de Aquiles.
+- `buscador_precios.py`: genera enlaces, usa cache local legacy y opcionalmente Google Custom Search API.
+- `generar_cotizacion.py`: genera cotizacion formal HTML/LaTeX usando precios del BOM.
+- `generar_bom.py`: generador de BOM base.
+- `process_bom_workflow.py`: script historico con rutas Windows y precios de referencia; se conserva como legacy.
+
+Ejemplos legacy:
 
 ```bash
-# 1. GENERAR BOM desde cálculos eléctricos
-python3 ../calculos-electricos-vivienda/scripts/generar_bom.py \
-  --input ../calculos-electricos-vivienda/data/proyecto_aquiles_base.json \
-  --output ../../output/mi_proyecto
+python3 herramientas/cotizacion/buscador_precios.py \
+  --bom herramientas/cotizacion/bom.json \
+  --output herramientas/cotizacion/salidas/comparativa_legacy
 
-# 2. ASIGNAR PRECIOS (3 formas)
-
-# 2a. Manual — precios conocidos
-python3 buscador_precios.py \
-  --precio "Cable TW 2.5mm2=12.50" \
-  --precio "ITM 2P 20A=89.00" \
-  --precio "tubo PVC SAP 20mm=3.20"
-
-# 2b. Automático — Google Custom Search API
-export GOOGLE_API_KEY="AIza..."
-export GOOGLE_CX="tu_cx"
-python3 buscador_precios.py \
-  --bom ../../output/mi_proyecto/bom.json \
-  --output ../../output/comparativa
-
-# 2c. Cache — los precios se guardan en ~/.cache_precios_electricos.json
-
-# Ver precios guardados en cache:
-python3 buscador_precios.py --precio ""
-
-# 3. ACTUALIZAR BOM con los precios
-python3 buscador_precios.py \
-  --bom ../../output/mi_proyecto/bom.json \
-  --actualizar ../../output/mi_proyecto/bom.json
-
-# 4. GENERAR COTIZACION
-python3 generar_cotizacion.py \
-  --bom ../../output/mi_proyecto/bom.json \
-  --cliente "Juan Perez" \
-  --empresa "Mi Empresa SRL" \
-  --output ../../output/mi_proyecto/cotizacion
+python3 herramientas/cotizacion/generar_cotizacion.py \
+  --bom herramientas/cotizacion/bom.json \
+  --output herramientas/cotizacion/salidas/cotizacion_legacy
 ```
 
----
+## Flujo multi-proveedor nuevo
 
-## Herramientas
+El nuevo cotizador:
 
-### `buscador_precios.py` — Búsqueda y asignación de precios
+1. Lee el BOM actual.
+2. Normaliza los nombres tecnicos de los materiales.
+3. Detecta categoria y especificaciones: seccion en mm2, diametro, amperaje, polos, sensibilidad, etc.
+4. Consulta proveedores peruanos con HTTP headless y rate limit.
+5. Extrae producto, marca, precio, URL, disponibilidad, fecha, metodo y confianza cuando el sitio lo permite.
+6. Guarda evidencia por consulta en `evidencias/`.
+7. Compara alternativas por material.
+8. Recomienda una opcion por balance tecnico/economico, no solo por precio.
+9. Genera JSON, CSV, XLSX, HTML, LaTeX y resumen Markdown.
+
+Proveedores principales:
+
+- Promart Peru
+- Sodimac Peru
+- Maestro
+- Mercado Libre Peru
+
+Proveedor opcional:
+
+- Ventas Peru
+
+Google Shopping queda documentado como apoyo de descubrimiento, pero no se usa como proveedor ganador porque no es proveedor directo.
+
+## Instalacion de dependencias
+
+En este equipo ya estaban disponibles las dependencias principales. Para un entorno limpio:
 
 ```bash
-# Buscar un material (genera enlaces a proveedores)
-python3 buscador_precios.py --item "interruptor diferencial 2P 40A"
-
-# Buscar todos los materiales de un BOM
-python3 buscador_precios.py --bom bom.json --output comparativa
-
-# Solo enlaces (sin scraping)
-python3 buscador_precios.py --item "cable TW 2.5mm2" --solo-enlaces
-
-# Asignar precio manual y guardar en cache
-python3 buscador_precios.py --precio "cable TW 2.5mm2=12.50"
-
-# Busqueda con Google API
-python3 buscador_precios.py --item "ITM 2P 20A" \
-  --google-api-key AIza... --google-cx 123...
+cd /home/kimdokja/Documents/Instalaciones-electricas/instalacion-electricas
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r herramientas/cotizacion/requirements.txt
 ```
 
-El cache se guarda en `~/.cache_precios_electricos.json` y se reusa automáticamente.
-El matching de nombres es flexible (case-insensitive, ignora THW/TW/SAP/NH-90).
-
-### `generar_cotizacion.py` — Generación de cotización formal
+Playwright no es obligatorio. Si en el futuro se habilita un fallback headless:
 
 ```bash
-# Cotización básica
-python3 generar_cotizacion.py --bom bom.json --output cotizacion
-
-# Con datos del cliente y empresa
-python3 generar_cotizacion.py --bom bom.json \
-  --cliente "Juan Perez" --empresa "Mi Empresa SRL" \
-  --output cotizacion
-
-# Con precios personalizados (JSON)
-python3 generar_cotizacion.py --bom bom.json \
-  --precios mis_precios.json --output cotizacion
+pip install playwright
+python3 -m playwright install chromium
 ```
 
-Genera:
-- `cotizacion.html` — Formato HTML imprimible (Ctrl+P → PDF)
-- `../latex/cotizacion.tex` — Formato LaTeX para incluir en informes
+No se debe usar navegador visible ni escritorio grafico para el flujo normal.
 
-La cotización incluye:
-- Tabla de materiales con cantidades, precios unitarios y totales
-- Mano de obra (40% de materiales)
-- IGV (18%)
-- Total general
+## Comandos de uso
 
----
-
-## Flujo con Pipeline Automatizado
-
-El pipeline unificado integra todo el proceso:
+Modo rapido:
 
 ```bash
-python3 ../pipeline_automatizado.py \
-  --config proyecto.yaml \
-  --output-dir ../../resultados/
+python3 herramientas/cotizacion/cotizador_multi_proveedor.py \
+  --bom herramientas/cotizacion/bom.json \
+  --output herramientas/cotizacion/salidas/aquiles
 ```
 
-Esto ejecuta: cálculos → JSON → DXF/PDF → BOM → cotización, todo en un solo comando.
+Modo con proveedores especificos y cache:
 
-Ver `../pipeline_automatizado.py` para la configuración YAML y opciones.
+```bash
+python3 herramientas/cotizacion/cotizador_multi_proveedor.py \
+  --bom herramientas/cotizacion/bom.json \
+  --proveedores promart,sodimac,maestro,mercadolibre \
+  --output herramientas/cotizacion/salidas/aquiles \
+  --max-resultados 5 \
+  --usar-cache
+```
+
+Modo refrescando cache:
+
+```bash
+python3 herramientas/cotizacion/cotizador_multi_proveedor.py \
+  --bom herramientas/cotizacion/bom.json \
+  --output herramientas/cotizacion/salidas/aquiles \
+  --max-resultados 5 \
+  --refrescar-cache
+```
+
+Modo offline con fixtures:
+
+```bash
+python3 herramientas/cotizacion/cotizador_multi_proveedor.py \
+  --bom herramientas/cotizacion/bom.json \
+  --output herramientas/cotizacion/salidas/test \
+  --offline \
+  --usar-fixtures
+```
+
+Prueba real limitada:
+
+```bash
+python3 herramientas/cotizacion/cotizador_multi_proveedor.py \
+  --bom herramientas/cotizacion/bom.json \
+  --output herramientas/cotizacion/salidas/test_real \
+  --max-materiales 3 \
+  --max-resultados 3 \
+  --refrescar-cache
+```
+
+## Salidas generadas
+
+Para `--output herramientas/cotizacion/salidas/aquiles`, se generan:
+
+- `comparativa_precios.json`
+- `comparativa_precios.csv`
+- `comparativa_precios.xlsx`
+- `cotizacion_recomendada.html`
+- `cotizacion_recomendada.tex`
+- `resumen_cotizacion.md`
+- `evidencias/manifest.json`
+- `evidencias/*.html` o `evidencias/*.json`
+
+El Excel contiene hojas:
+
+- `BOM original`
+- `Materiales normalizados`
+- `Comparativa por proveedor`
+- `Mejor opcion por material`
+- `Resumen por proveedor`
+- `Evidencias`
+
+## Cache
+
+La cache nueva se guarda en:
+
+```text
+herramientas/cotizacion/.cache/precios_multi_proveedor.json
+```
+
+Cada entrada conserva:
+
+- consulta normalizada
+- proveedor
+- fecha
+- hash del BOM
+- resultados extraidos
+
+Usa `--no-cache` para ignorarla y `--refrescar-cache` para consultar de nuevo y actualizarla.
+
+## Evidencias y limites de scraping
+
+La herramienta no intenta saltar captchas, verificaciones de trafico, bloqueos ni medidas anti-bot.
+
+Si un proveedor no entrega HTML util o no expone precio de forma confiable:
+
+- `precio` queda en `null`
+- `metodo_extraccion` queda como `fallback`, `html`, `cache` o `json`
+- `observaciones` explica la razon
+- se guarda URL o evidencia de la consulta
+
+En pruebas reales se observaron estos comportamientos:
+
+- Promart puede entregar HTML y datos embebidos, pero su estructura puede cambiar.
+- Sodimac puede redirigir busquedas a portada y no entregar resultados parseables.
+- Maestro puede responder lento o con timeout.
+- Mercado Libre puede mostrar verificacion de trafico; en ese caso se registra como bloqueado y no se extrae precio.
+
+## Matching y recomendacion
+
+El sistema asigna puntajes:
+
+```text
+score_total =
+0.50 * score_precio +
+0.30 * score_tecnico +
+0.10 * score_proveedor +
+0.10 * score_disponibilidad
+```
+
+No siempre gana la opcion mas barata. Se penaliza:
+
+- falta de amperaje, polos, seccion o diametro
+- producto de categoria dudosa
+- precio fuera de rango referencial
+- ausencia de precio o URL
+- baja confianza de extraccion
+
+Los materiales sin precio o con baja confianza quedan listados en `resumen_cotizacion.md`.
+
+## Pruebas
+
+```bash
+python3 -m py_compile herramientas/cotizacion/*.py
+python3 -m py_compile herramientas/cotizacion/proveedores/*.py
+pytest herramientas/cotizacion/tests -q
+```
+
+## Revision manual antes de entregar
+
+Antes de presentar al ingeniero:
+
+1. Abrir `cotizacion_recomendada.html` y revisar productos recomendados.
+2. Revisar `resumen_cotizacion.md` para materiales sin precio o baja confianza.
+3. Verificar URLs de productos con precio.
+4. Confirmar que los productos coincidan con especificaciones CNE/RNE: seccion, polos, amperaje, sensibilidad y tipo de material.
+5. Ajustar manualmente cualquier item pendiente si el proveedor no permitio extraccion automatica.
+
+La herramienta prioriza trazabilidad sobre apariencia: no inventa precios.

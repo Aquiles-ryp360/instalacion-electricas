@@ -84,8 +84,8 @@ avance-capitulos-1-2/apoyo-gemini-matriz-normativa.md
 
 | Frente | Estado |
 |---|---|
-| Caso de vivienda de 2 pisos | Definido preliminarmente |
-| Cuestionario del proyecto | En trabajo por Codex |
-| Matriz normativa y tecnica | En trabajo por Gemini |
-| Integracion general | Pendiente de recibir aportes |
-| Compilado LaTeX | Pendiente de resultado de Codex |
+| Caso de vivienda de 2 pisos | Definido e integrado (v6) |
+| Cuestionario del proyecto | Completado e integrado |
+| Matriz normativa y tecnica | Completado e integrado |
+| Integracion general | Completado en v6 (Planos, MD y Cálculos) |
+| Compilado LaTeX | Completado y verificado (build/main.pdf) |

@@ -110,8 +110,28 @@ LibreCAD debe usarse como visor/editor DXF. En esta revision se hizo una prueba 
 
 ## Estado
 
-Version vigente del Piso 1: `electrico_piso1_v3`, corregida segun revision visual del usuario para mantener medidor/tablero de v2, afinar interruptores fuera de puertas/arcos y limpiar rutas ortogonales.
+**Versión vigente del Piso 1:** `electrico_piso1_v6.dxf` — editada directamente desde el DXF maestro v4. Incluye corrección de luminarias (+→X), puesta a tierra SPAT con conductor PE.
 
-Version vigente del Piso 2: `electrico_piso2_v2`, corregida segun revision visual del usuario para agregar tablero `T2`, retirar medidor, reubicar interruptores y ordenar la zona de cocina.
+**Versión vigente del Piso 2:** `electrico_piso2_v6.dxf` — editada directamente desde el DXF maestro v4. Incluye corrección de luminarias (+→X), capa ELEC_PUESTA_TIERRA, nota de conductor PE.
 
-Estas versiones estan aprobadas con observaciones como planos electricos preliminares. Sirven para revision visual con Aquiles, no para ejecucion de obra.
+### Historial de versiones
+
+| Piso | Versión | Estado | Notas |
+|------|---------|--------|-------|
+| 1 | v1–v3 | Archivado | Generadas desde JSON con electrical_overlay.py |
+| 1 | **v4** | DXF maestro | Con ediciones manuales (luminarias retiradas zona exterior, bomba C8) |
+| 1 | v5 | Descartado | Fue generado desde JSON antiguo — puede haber perdido cambios manuales |
+| 1 | **v6** | **Vigente** | Editado directamente desde v4. Luminarias X, SPAT, PE |
+| 2 | v1–v3 | Archivado | Generadas/editadas progresivamente |
+| 2 | **v4** | DXF maestro | Con ediciones manuales (VD reubicado, tomacorrientes monofásicos) |
+| 2 | **v6** | **Vigente** | Editado directamente desde v4. Luminarias X, capa ELEC_PUESTA_TIERRA |
+
+### Flujo de trabajo actual
+
+**IMPORTANTE:** Los DXF editados manualmente son la fuente maestra. NO regenerar desde JSON sin confirmar que reproduce exactamente el DXF maestro. El flujo correcto es:
+
+```
+DXF maestro vigente → copia nueva versionada → edición directa (ezdxf) → PDF (QCAD) → revisión visual PNG
+```
+
+Los JSON en `data/` se mantienen como documentación de respaldo, no como fuente generadora.
