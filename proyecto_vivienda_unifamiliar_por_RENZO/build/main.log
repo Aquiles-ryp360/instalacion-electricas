@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  8 JUN 2026 13:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  8 JUN 2026 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,9 +533,7 @@ tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count319
 \l__pdf_internal_box=\box72
-)
-(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
-build\main.aux
+) (main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -630,11 +628,7 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring ON on input line 113.
-
-(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
-build\main.out)
-(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
-build\main.out)
+ (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -800,32 +794,251 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
 [25
 
-] (metrados/puntos_por_circuito.tex) (metrados/metrado_tuberias.tex)
-(metrados/metrado_conductores.tex) [26
-
-] [27] (metrados/metrado_cajas.tex
-Overfull \hbox (14.35182pt too wide) in paragraph at lines 15--15
+] (metrados/puntos_por_circuito.tex) (metrados/metrado_tuberias.tex
+Overfull \hbox (29.22374pt too wide) in paragraph at lines 19--19
 []|\T1/phv/b/n/10.95 Observacion|  
  []
 
 
-Overfull \hbox (10.36574pt too wide) in paragraph at lines 15--15
+Overfull \hbox (25.67607pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Canalización 
+ []
+
+
+Overfull \hbox (25.67607pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Canalización 
+ []
+
+
+Overfull \hbox (25.67607pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Canalización 
+ []
+
+
+Overfull \hbox (25.67607pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Canalización 
+ []
+
+
+Overfull \hbox (25.67607pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Canalización 
+ []
+
+
+Overfull \hbox (25.67607pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Canalización 
+ []
+
+) [26
+
+] (metrados/metrado_conductores.tex
+Overfull \hbox (45.59036pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/b/n/10.95 Observacion|  
+ []
+
+
+Overfull \hbox (26.01204pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (1.27621pt too wide) in paragraph at lines 19--19
+\T1/phv/m/n/10.95 neu- 
+ []
+
+
+Overfull \hbox (25.28943pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Conexión 
+ []
+
+
+Overfull \hbox (26.01204pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (1.27621pt too wide) in paragraph at lines 19--19
+\T1/phv/m/n/10.95 neu- 
+ []
+
+
+Overfull \hbox (25.28943pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Conexión 
+ []
+
+
+Overfull \hbox (25.28943pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Conexión 
+ []
+
+) [27] [28] (metrados/metrado_cajas.tex
+Overfull \hbox (53.32207pt too wide) in paragraph at lines 17--17
+[]|\T1/phv/b/n/10.95 Observacion|  
+ []
+
+
+Overfull \hbox (23.00189pt too wide) in paragraph at lines 17--17
+[]|\T1/phv/m/n/10.95 Salidas 
+ []
+
+
+Overfull \hbox (14.47197pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 alum- 
+ []
+
+
+Overfull \hbox (6.45662pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 bra- 
+ []
+
+
+Overfull \hbox (4.74849pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 cho|  
+ []
+
+
+Overfull \hbox (49.33598pt too wide) in paragraph at lines 17--17
 []|\T1/phv/m/n/10.95 Interruptores 
  []
 
 
-Overfull \hbox (23.0351pt too wide) in paragraph at lines 15--15
+Overfull \hbox (7.77072pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 sim- 
+ []
+
+
+Overfull \hbox (7.17935pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 ples 
+ []
+
+
+Overfull \hbox (62.00534pt too wide) in paragraph at lines 17--17
 []|\T1/phv/m/n/10.95 Tomacorrientes 
  []
 
-) (metrados/metrado_tableros.tex) (metrados/metrado_accesorios.tex
-Overfull \hbox (7.20244pt too wide) in paragraph at lines 23--23
+
+Overfull \hbox (4.74849pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 uso 
+ []
+
+
+Overfull \hbox (2.9198pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 ge- 
+ []
+
+
+Overfull \hbox (2.9198pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 ne- 
+ []
+
+
+Overfull \hbox (17.52704pt too wide) in paragraph at lines 17--17
+[]|\T1/phv/m/n/10.95 Zonas 
+ []
+
+
+Overfull \hbox (2.9198pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 hú- 
+ []
+
+
+Overfull \hbox (5.95299pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 me- 
+ []
+
+
+Overfull \hbox (4.74849pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 das 
+ []
+
+
+Overfull \hbox (6.5661pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 (ba- 
+ []
+
+
+Overfull \hbox (8.39479pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 ños)|  
+ []
+
+
+Overfull \hbox (24.21732pt too wide) in paragraph at lines 17--17
+[]|\T1/phv/m/n/10.95 Cocina, 
+ []
+
+
+Overfull \hbox (2.03291pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 va- 
+ []
+
+
+Overfull \hbox (2.9198pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 do- 
+ []
+
+
+Overfull \hbox (10.82565pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 elec- 
+ []
+
+
+Overfull \hbox (3.52197pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 tro- 
+ []
+
+
+Overfull \hbox (12.0411pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 bom- 
+ []
+
+
+Overfull \hbox (50.26709pt too wide) in paragraph at lines 17--17
+[]|\T1/phv/m/n/10.95 Derivaciones 
+ []
+
+
+Overfull \hbox (11.42798pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 cam- 
+ []
+
+
+Overfull \hbox (7.17935pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 bios 
+ []
+
+
+Overfull \hbox (0.64212pt too wide) in paragraph at lines 17--17
+\T1/phv/m/n/10.95 ru- 
+ []
+
+) (metrados/metrado_tableros.tex
+Overfull \hbox (4.35628pt too wide) in paragraph at lines 14--14
+[]|\T1/phv/b/n/10.95 Observacion|  
+ []
+
+) [29
+
+] (metrados/metrado_accesorios.tex
+Overfull \hbox (1.6181pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Alumbrado|  
+ []
+
+
+Overfull \hbox (23.69304pt too wide) in paragraph at lines 19--19
+[]|\T1/phv/m/n/10.95 Tomacorrientes|  
+ []
+
+
+Overfull \hbox (7.20244pt too wide) in paragraph at lines 19--19
 []|\T1/phv/m/n/10.95 Alimentador|  
  []
 
-) [28
+) (metrados/metrado_puesta_tierra.tex
+Overfull \hbox (29.96358pt too wide) in paragraph at lines 12--12
+[]|\T1/phv/b/n/10.95 Observacion|  
+ []
 
-] (metrados/metrado_puesta_tierra.tex) [29] (metrados/resumen_metrados.tex
+) [30] (metrados/resumen_metrados.tex
 Overfull \hbox (13.12376pt too wide) in paragraph at lines 7--7
 []|\T1/phv/b/n/10 Especificacion|  
  []
@@ -835,11 +1048,20 @@ Overfull \hbox (13.12376pt too wide) in paragraph at lines 12--12
 []|\T1/phv/b/n/10 Especificacion|  
  []
 
-[30])) (capitulos/07-planos.tex [31]
-Cap\'{\i }tulo 7.
-[32
 
-] [33
+Overfull \hbox (25.53004pt too wide) in alignment at lines 20--73
+ [] [] [] [] [] [] [] 
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.8 on input line 73.
+
+[31] [32]) [33]) (capitulos/07-planos.tex [34]
+Cap\'{\i }tulo 7.
+[35
+
+] [36
 
 ]
 Overfull \hbox (4.15222pt too wide) in paragraph at lines 16--17
@@ -876,41 +1098,41 @@ Overfull \hbox (4.15222pt too wide) in paragraph at lines 22--23
 []|\T1/phv/m/n/12 Entregado|  
  []
 
-[34
+[37
 
-] [35
+] [38
 
 ]
-<planos/primer-piso.pdf, id=515, 289.08pt x 429.28021pt>
+<planos/primer-piso.pdf, id=528, 289.08pt x 429.28021pt>
 File: planos/primer-piso.pdf Graphic file (type pdf)
 <use planos/primer-piso.pdf>
 Package pdftex.def Info: planos/primer-piso.pdf  used on input line 36.
 (pdftex.def)             Requested size: 243.54453pt x 361.63776pt.
- [36
+ [39
 
  <./planos/primer-piso.pdf>]
-<planos/segundo-piso.pdf, id=523, 289.08pt x 447.93523pt>
+<planos/segundo-piso.pdf, id=535, 289.08pt x 447.93523pt>
 File: planos/segundo-piso.pdf Graphic file (type pdf)
 <use planos/segundo-piso.pdf>
 Package pdftex.def Info: planos/segundo-piso.pdf  used on input line 45.
 (pdftex.def)             Requested size: 233.39923pt x 361.63776pt.
- [37
+ [40
 
 
  <./planos/segundo-piso.pdf>]
-<planos/tercer-piso.pdf, id=530, 289.08pt x 447.94458pt>
+<planos/tercer-piso.pdf, id=542, 289.08pt x 447.94458pt>
 File: planos/tercer-piso.pdf Graphic file (type pdf)
 <use planos/tercer-piso.pdf>
 Package pdftex.def Info: planos/tercer-piso.pdf  used on input line 54.
 (pdftex.def)             Requested size: 233.38158pt x 361.63776pt.
 
-[38
+[41
 
 
- <./planos/tercer-piso.pdf>] [39
+ <./planos/tercer-piso.pdf>] [42
 
 ]
-<planos/IE-02-alumbrado.pdf, id=541, 691.4481pt x 346.89601pt>
+<planos/IE-02-alumbrado.pdf, id=554, 691.4481pt x 346.89601pt>
 File: planos/IE-02-alumbrado.pdf Graphic file (type pdf)
 <use planos/IE-02-alumbrado.pdf>
 Package pdftex.def Info: planos/IE-02-alumbrado.pdf  used on input line 68.
@@ -920,12 +1142,12 @@ Overfull \hbox (18.08907pt too wide) in paragraph at lines 68--69
  [][] 
  []
 
-[40
+[43
 
- <./planos/IE-02-alumbrado.pdf>] [41
+ <./planos/IE-02-alumbrado.pdf>] [44
 
 ]
-<planos/IE-03-tomacorrientes.pdf, id=552, 691.4481pt x 346.89601pt>
+<planos/IE-03-tomacorrientes.pdf, id=565, 691.4481pt x 346.89601pt>
 File: planos/IE-03-tomacorrientes.pdf Graphic file (type pdf)
 <use planos/IE-03-tomacorrientes.pdf>
 Package pdftex.def Info: planos/IE-03-tomacorrientes.pdf  used on input line 81
@@ -936,12 +1158,12 @@ Overfull \hbox (18.08907pt too wide) in paragraph at lines 81--82
  [][] 
  []
 
-[42
+[45
 
- <./planos/IE-03-tomacorrientes.pdf>] [43
+ <./planos/IE-03-tomacorrientes.pdf>] [46
 
 ]
-<planos/IE-04-circuitos-canalizaciones.pdf, id=564, 691.4481pt x 346.89601pt>
+<planos/IE-04-circuitos-canalizaciones.pdf, id=576, 691.4481pt x 346.89601pt>
 File: planos/IE-04-circuitos-canalizaciones.pdf Graphic file (type pdf)
 <use planos/IE-04-circuitos-canalizaciones.pdf>
 Package pdftex.def Info: planos/IE-04-circuitos-canalizaciones.pdf  used on inp
@@ -952,44 +1174,44 @@ Overfull \hbox (18.08907pt too wide) in paragraph at lines 94--95
  [][] 
  []
 
-[44
+[47
 
- <./planos/IE-04-circuitos-canalizaciones.pdf>] [45
+ <./planos/IE-04-circuitos-canalizaciones.pdf>] [48
 
 ]
-<planos/IE-05-unifilar-cuadro-cargas.pdf, id=575, 341.09473pt x 346.89601pt>
+<planos/IE-05-unifilar-cuadro-cargas.pdf, id=588, 341.09473pt x 346.89601pt>
 File: planos/IE-05-unifilar-cuadro-cargas.pdf Graphic file (type pdf)
 <use planos/IE-05-unifilar-cuadro-cargas.pdf>
 Package pdftex.def Info: planos/IE-05-unifilar-cuadro-cargas.pdf  used on input
  line 107.
 (pdftex.def)             Requested size: 355.60973pt x 361.63776pt.
- [46
+ [49
 
- <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [47
+ <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [50
 
 ]
-<planos/IE-06-puesta-tierra.pdf, id=586, 504.576pt x 346.89601pt>
+<planos/IE-06-puesta-tierra.pdf, id=599, 504.576pt x 346.89601pt>
 File: planos/IE-06-puesta-tierra.pdf Graphic file (type pdf)
 <use planos/IE-06-puesta-tierra.pdf>
 Package pdftex.def Info: planos/IE-06-puesta-tierra.pdf  used on input line 120
 .
 (pdftex.def)             Requested size: 526.04784pt x 361.63776pt.
- [48
+ [51
 
- <./planos/IE-06-puesta-tierra.pdf>] [49
+ <./planos/IE-06-puesta-tierra.pdf>] [52
 
 ]
-<planos/IE-07-simbologia-detalles.pdf, id=598, 291.97081pt x 1124.52115pt>
+<planos/IE-07-simbologia-detalles.pdf, id=610, 291.97081pt x 1124.52115pt>
 File: planos/IE-07-simbologia-detalles.pdf Graphic file (type pdf)
 <use planos/IE-07-simbologia-detalles.pdf>
 Package pdftex.def Info: planos/IE-07-simbologia-detalles.pdf  used on input li
 ne 133.
 (pdftex.def)             Requested size: 93.89589pt x 361.63776pt.
 
-[50
+[53
 
  <./planos/IE-07-simbologia-detalles.pdf>]) (capitulos/08-anexos.tex
-[51
+[54
 
 ]
 Cap\'{\i }tulo 8.
@@ -998,37 +1220,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
  \T1/phv/b/n/20.74 Y BIBLIOGRAFIA 
  []
 
-[52
+[55
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 27.
- [53
+ [56
 
-]) (capitulos/09-presupuesto.tex [54]
+]) (capitulos/09-presupuesto.tex [57]
 Cap\'{\i }tulo 9.
 
 Underfull \hbox (badness 2343) in paragraph at lines 1--1
  []\T1/phv/b/n/20.74 PRESUPUESTO ESTIMADO 
  []
 
-[55
+[58
 
-] (presupuesto/precios_unitarios.tex [56
+] (presupuesto/precios_unitarios.tex
 
-]) [57]
-(presupuesto/presupuesto_general.tex
+Package longtable Warning: Column widths have changed
+(longtable)                in table 9.1 on input line 60.
+
+[59
+
+] [60]) [61] (presupuesto/presupuesto_general.tex
 Underfull \hbox (badness 1888) in paragraph at lines 23--23
  []||
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 24--24
+Overfull \hbox (4.97227pt too wide) in paragraph at lines 26--26
+ []|\T1/phv/m/n/10 120.40|
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 27--27
  []||
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 25--25
+Overfull \hbox (4.97227pt too wide) in paragraph at lines 27--27
+ []|\T1/phv/m/n/10 151.10|
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 28--28
  []||
  []
 
@@ -1053,7 +1289,7 @@ Underfull \hbox (badness 1888) in paragraph at lines 32--32
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 36--36
+Underfull \hbox (badness 1888) in paragraph at lines 33--33
  []||
  []
 
@@ -1068,6 +1304,21 @@ Underfull \hbox (badness 1888) in paragraph at lines 38--38
  []
 
 
+Underfull \hbox (badness 1888) in paragraph at lines 39--39
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 40--40
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 41--41
+ []||
+ []
+
+
 Underfull \hbox (badness 1888) in paragraph at lines 42--42
  []||
  []
@@ -1078,7 +1329,7 @@ Underfull \hbox (badness 1888) in paragraph at lines 43--43
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 44--44
+Underfull \hbox (badness 1888) in paragraph at lines 47--47
  []||
  []
 
@@ -1108,21 +1359,6 @@ Underfull \hbox (badness 1888) in paragraph at lines 52--52
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 53--53
- []||
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 54--54
- []||
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 55--55
- []||
- []
-
-
 Underfull \hbox (badness 1888) in paragraph at lines 56--56
  []||
  []
@@ -1147,11 +1383,78 @@ Underfull \hbox (badness 1888) in paragraph at lines 63--63
  []||
  []
 
-[58
 
-])) [59]
-(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
-build\main.aux
+Underfull \hbox (badness 1888) in paragraph at lines 64--64
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 65--65
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 66--66
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 67--67
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 68--68
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 69--69
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 70--70
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 71--71
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 75--75
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 79--79
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 83--83
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 87--87
+ []||
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 91--91
+ []||
+ []
+
+[62
+
+] [63])) [64]
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[65] (main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -1163,13 +1466,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 29EC1D2B816443D932E4423D028C8C52;14104.
  ) 
 Here is how much of TeX's memory you used:
- 17872 strings out of 474479
- 349421 string characters out of 5743591
- 1975542 words of memory out of 5000000
- 39678 multiletter control sequences out of 15000+600000
- 606559 words of font info for 87 fonts, out of 8000000 for 9000
+ 17878 strings out of 474479
+ 349080 string characters out of 5743591
+ 2003542 words of memory out of 5000000
+ 39677 multiletter control sequences out of 15000+600000
+ 609449 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,574b,1196s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,574b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi12.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -1180,9 +1483,9 @@ rams/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/renzo/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/renzo/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifa
-miliar_por_RENZO\build\main.pdf (60 pages, 3281636 bytes).
+miliar_por_RENZO\build\main.pdf (66 pages, 3292326 bytes).
 PDF statistics:
- 741 PDF objects out of 1000 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
+ 767 PDF objects out of 1000 (max. 8388607)
+ 197 named destinations out of 1000 (max. 500000)
  669 words of extra memory for PDF output out of 10000 (max. 10000000)
 

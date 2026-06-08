@@ -52,3 +52,15 @@ corregir_piso2_v4.py
 **/temp/*.png
 **/temp/*.pdf
 
+# Project LaTeX auxiliary files
+proyecto_vivienda_unifamiliar_por_RENZO/*.aux
+proyecto_vivienda_unifamiliar_por_RENZO/*.log
+proyecto_vivienda_unifamiliar_por_RENZO/*.out
+proyecto_vivienda_unifamiliar_por_RENZO/*.synctex.gz
+proyecto_vivienda_unifamiliar_por_RENZO/build/*.aux
+proyecto_vivienda_unifamiliar_por_RENZO/build/*.log
+proyecto_vivienda_unifamiliar_por_RENZO/build/*.out
+proyecto_vivienda_unifamiliar_por_RENZO/build/*.toc
+proyecto_vivienda_unifamiliar_por_RENZO/build/*.synctex.gz
+
+
