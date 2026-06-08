@@ -33,7 +33,7 @@ graph TD
     TD02 --> C6["Circuito C6: Alumbrado 3er Piso <br> ITM 2P-10A <br> Cable 3x1.5 mm² Cu (F+N+PE)"]
     TD02 --> C7["Circuito C7: Tomacorrientes 3er Piso <br> ITM 2P-16A / ID 2P-25A-30mA <br> Cable 3x2.5 mm² Cu (F+N+PE)"]
     
-    SPAT["Sistema de Puesta a Tierra <br> (Electrodo vertical de Cobre 5/8')"] --> TG01
+    SPAT["Sistema de Puesta a Tierra <br> (Varilla de Cobre 5/8')"] --> TG01
 ```
 
 ---
@@ -139,5 +139,5 @@ El Subtablero 2 (TD-02) se ubica en el pasadizo del tercer piso, controlando de 
 ---
 
 ### 5. Resumen de Protección de Personas (Interruptores Diferenciales)
-* **Principio de Funcionamiento:** Los interruptores diferenciales (ID) de **30 mA** instalados protegen de forma directa a las personas contra contactos indirectos y fugas a tierra (corrientes residuales).
-* **Distribución:** Cada circuito ramal de tomacorrientes (`C2`, `C3`, `C5`, `C7`) dispone de un diferencial asociado de **2P - 25 A / 30 mA**, lo que asegura que una falla en un tomacorriente no afecte al alumbrado, manteniendo la visibilidad en caso de incidente.
+* **Principio de Funcionamiento:** Los interruptores diferenciales (ID) de **30 mA** instalados protegen de forma directa a las personas contra contactos indirectos y fugas a tierra.
+* **Distribución:** Cada circuito de tomacorrientes (`C2`, `C3`, `C5`, `C7`) dispone de un diferencial asociado de **2P - 25 A / 30 mA**, lo que asegura que una falla en un tomacorriente no afecte al alumbrado.

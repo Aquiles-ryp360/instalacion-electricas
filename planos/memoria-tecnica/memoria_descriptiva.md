@@ -39,7 +39,7 @@ La vivienda cuenta con las siguientes áreas y ambientes funcionales identificad
 | :--- | :--- | :--- |
 | **Primer Piso** | Tienda (área social/comercial), Cocina | Pasadizo longitudinal, Escalera |
 | **Segundo Piso** | Dormitorio Principal, Dormitorio 3, Sala / Hall, Baño | Escalera de acceso |
-| **Tercer Piso** | Dormitorio 4, Dormitorio 5, Cuarto Chico (Lavandería/Baño) | Escalera de acceso |
+| **Tercer Piso** | Dormitorio 4 (izq), Dormitorio 5 (der), Baño / Cuarto Chico | Escalera de acceso |
 
 > [!NOTE]
 > El área frontal del primer piso se denomina "Tienda" en los planos arquitectónicos. Se ha previsto iluminación y tomacorrientes generales para dar flexibilidad tanto a un uso residencial (sala) como a un uso comercial ligero (negocio familiar).
