@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  7 JUN 2026 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  8 JUN 2026 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,7 +653,7 @@ LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
 (C:\Users\renzo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-<capitulos/FONDO DE MI PROYECTO.pdf, id=255, 597.73312pt x 845.40843pt>
+<capitulos/FONDO DE MI PROYECTO.pdf, id=319, 597.73312pt x 845.40843pt>
 File: capitulos/FONDO DE MI PROYECTO.pdf Graphic file (type pdf)
 <use capitulos/FONDO DE MI PROYECTO.pdf>
 Package pdftex.def Info: capitulos/FONDO DE MI PROYECTO.pdf  used on input line
@@ -680,7 +680,7 @@ l.1 \chapter{MEMORIA DESCRIPTIVA}
                                   [1
 
 ]
-<figuras/plano_catastral.png, id=286, 751.30687pt x 527.72156pt>
+<figuras/plano_catastral.png, id=350, 751.30687pt x 527.72156pt>
 File: figuras/plano_catastral.png Graphic file (type png)
 <use figuras/plano_catastral.png>
 Package pdftex.def Info: figuras/plano_catastral.png  used on input line 40.
@@ -688,7 +688,7 @@ Package pdftex.def Info: figuras/plano_catastral.png  used on input line 40.
  [2
 
 ]
-<figuras/ubicacion_satelital.png, id=293, 363.60844pt x 475.02469pt>
+<figuras/ubicacion_satelital.png, id=357, 363.60844pt x 475.02469pt>
 File: figuras/ubicacion_satelital.png Graphic file (type png)
 <use figuras/ubicacion_satelital.png>
 Package pdftex.def Info: figuras/ubicacion_satelital.png  used on input line 47
@@ -802,17 +802,814 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
 ] [26
 
-] [27
+]
+
+Package tabularx Warning: X Columns too narrow (table too wide)
+(tabularx)                 on input line 51.
+
+
+Overfull \hbox (55.27481pt too wide) in paragraph at lines 51--51
+[]|\T1/phv/b/n/10.95 Observacion|  
+ []
+
+
+Overfull \hbox (42.49628pt too wide) in paragraph at lines 51--51
+[]|\T1/phv/m/n/10.95 Empotrada 
+ []
+
+
+Overfull \hbox (1.22624pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 en 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 lo- 
+ []
+
+
+Overfull \hbox (0.61311pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 sa 
+ []
+
+
+Overfull \hbox (1.22624pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 de 
+ []
+
+
+Overfull \hbox (1.82841pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 te- 
+ []
+
+
+Overfull \hbox (6.70123pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 cho|  
+ []
+
+
+Overfull \hbox (42.49628pt too wide) in paragraph at lines 51--51
+[]|\T1/phv/m/n/10.95 Empotrada 
+ []
+
+
+Overfull \hbox (1.22624pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 en 
+ []
+
+
+Overfull \hbox (10.34753pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 con- 
+ []
+
+
+Overfull \hbox (5.36523pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 tra- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 pi- 
+ []
+
+
+Overfull \hbox (0.61311pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 so 
+ []
+
+
+Overfull \hbox (7.79625pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 mu- 
+ []
+
+
+Overfull \hbox (4.25941pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 ros|  
+ []
+
+
+Overfull \hbox (20.6952pt too wide) in paragraph at lines 51--51
+[]|\T1/phv/m/n/10.95 Desde 
+ []
+
+
+Overfull \hbox (7.90573pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 me- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 di- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 dor 
+ []
+
+
+Overfull \hbox (4.25941pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 TG 
+ []
+
+
+Overfull \hbox (10.34753pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 sub- 
+ []
+
+
+Overfull \hbox (1.82841pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 ta- 
+ []
+
+
+Overfull \hbox (7.08446pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 ble- 
+ []
+
+
+Overfull \hbox (4.25941pt too wide) in paragraph at lines 51--51
+\T1/phv/m/n/10.95 ros|  
+ []
+
+
+Overfull \hbox (22.29205pt too wide) in alignment at lines 51--51
+[][][][][][][] 
+ []
+
+[27
+
+] [28
 
 ]
-Overfull \vbox (13.96826pt too high) has occurred while \output is active []
+
+Package tabularx Warning: X Columns too narrow (table too wide)
+(tabularx)                 on input line 78.
 
 
-[28]) (capitulos/07-planos.tex [29
+Overfull \hbox (55.27481pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/b/n/10.95 Observacion|  
+ []
+
+
+Overfull \hbox (35.69649pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (7.3034pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 uni- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 po- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 lar|  
+ []
+
+
+Overfull \hbox (35.69649pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (7.3034pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 uni- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 po- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 lar|  
+ []
+
+
+Overfull \hbox (20.70604pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Segun 
+ []
+
+
+Overfull \hbox (15.81157pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 CNE- 
+ []
+
+
+Overfull \hbox (35.69649pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (7.3034pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 uni- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 po- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 lar|  
+ []
+
+
+Overfull \hbox (35.69649pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (7.3034pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 uni- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 po- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 lar|  
+ []
+
+
+Overfull \hbox (35.69649pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (7.3034pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 uni- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 po- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 lar|  
+ []
+
+
+Overfull \hbox (35.69649pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (7.3034pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 uni- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 po- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 lar|  
+ []
+
+
+Overfull \hbox (35.69649pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Cableado 
+ []
+
+
+Overfull \hbox (7.3034pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 uni- 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 po- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 lar|  
+ []
+
+
+Overfull \hbox (23.1369pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Puesta 
+ []
+
+
+Overfull \hbox (4.25928pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 tie- 
+ []
+
+
+Overfull \hbox (2.32124pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 rra|  
+ []
+
+
+Overfull \hbox (26.1591pt too wide) in paragraph at lines 78--78
+[]|\T1/phv/m/n/10.95 Circuito 
+ []
+
+
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 de- 
+ []
+
+
+Overfull \hbox (1.21529pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 di- 
+ []
+
+
+Overfull \hbox (4.25941pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 ca- 
+ []
+
+
+Overfull \hbox (1.22624pt too wide) in paragraph at lines 78--78
+\T1/phv/m/n/10.95 do|  
+ []
+
+
+Overfull \hbox (88.78018pt too wide) in alignment at lines 78--78
+[][][][][][][][] 
+ []
+
+[29
+
+]
+Overfull \vbox (149.69235pt too high) has occurred while \output is active []
+
+
+[30]
+Overfull \hbox (14.35182pt too wide) in paragraph at lines 100--100
+[]|\T1/phv/b/n/10.95 Observacion|  
+ []
+
+
+Overfull \hbox (10.36574pt too wide) in paragraph at lines 100--100
+[]|\T1/phv/m/n/10.95 Interruptores 
+ []
+
+
+Overfull \hbox (23.0351pt too wide) in paragraph at lines 100--100
+[]|\T1/phv/m/n/10.95 Tomacorrientes 
+ []
+
+[31
+
+
+]
+Overfull \hbox (1.51198pt too wide) in paragraph at lines 147--147
+[]|\T1/phv/m/n/10.95 Alimentador|  
+ []
+
+[32
+
+] [33
+
+]
+
+Package tabularx Warning: X Columns too narrow (table too wide)
+(tabularx)                 on input line 211.
+
+
+Overfull \hbox (30.28754pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/b/n/6 Observacion|  
+ []
+
+
+Overfull \hbox (22.94963pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Alumbrado 
+ []
+
+
+Overfull \hbox (4.3319pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 em- 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 po- 
+ []
+
+
+Overfull \hbox (2.93983pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 tra- 
+ []
+
+
+Overfull \hbox (0.6719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 do 
+ []
+
+
+Overfull \hbox (0.6719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 en 
+ []
+
+
+Overfull \hbox (1.00186pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 te- 
+ []
+
+
+Overfull \hbox (3.6719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 cho|  
+ []
+
+
+Overfull \hbox (35.04549pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Tomacorrientes 
+ []
+
+
+Overfull \hbox (4.3319pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 em- 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 po- 
+ []
+
+
+Overfull \hbox (2.93983pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 tra- 
+ []
+
+
+Overfull \hbox (0.6719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 do 
+ []
+
+
+Overfull \hbox (0.6719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 en 
+ []
+
+
+Overfull \hbox (4.2719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 mu- 
+ []
+
+
+Overfull \hbox (26.00954pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Alimentador 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ge- 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ne- 
+ []
+
+
+Overfull \hbox (0.6059pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ral|  
+ []
+
+
+Overfull \hbox (39.05945pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Fase+neutro+PE 
+ []
+
+
+Overfull \hbox (8.99982pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 alum- 
+ []
+
+
+Overfull \hbox (4.60785pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 bra- 
+ []
+
+
+Overfull \hbox (0.6719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 do|  
+ []
+
+
+Overfull \hbox (39.05945pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Fase+neutro+PE 
+ []
+
+
+Overfull \hbox (1.00186pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 to- 
+ []
+
+
+Overfull \hbox (4.3319pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ma- 
+ []
+
+
+Overfull \hbox (2.33392pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 co- 
+ []
+
+
+Overfull \hbox (8.08772pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 rrien- 
+ []
+
+
+Overfull \hbox (2.00389pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 tes|  
+ []
+
+
+Overfull \hbox (26.00954pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Alimentador 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ge- 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ne- 
+ []
+
+
+Overfull \hbox (0.6059pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ral|  
+ []
+
+
+Overfull \hbox (12.67775pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Puesta 
+ []
+
+
+Overfull \hbox (2.33383pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 tie- 
+ []
+
+
+Overfull \hbox (1.2719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 rra|  
+ []
+
+
+Overfull \hbox (23.42958pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Luminarias|  
+ []
+
+
+Overfull \hbox (28.10338pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Interruptores 
+ []
+
+
+Overfull \hbox (1.00186pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 to- 
+ []
+
+
+Overfull \hbox (4.3319pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ma- 
+ []
+
+
+Overfull \hbox (2.33392pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 co- 
+ []
+
+
+Overfull \hbox (8.08772pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 rrien- 
+ []
+
+
+Overfull \hbox (2.00389pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 tes|  
+ []
+
+
+Overfull \hbox (28.61357pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Derivaciones|  
+ []
+
+
+Overfull \hbox (11.75372pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Primer 
+ []
+
+
+Overfull \hbox (0.6659pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 pi- 
+ []
+
+
+Overfull \hbox (18.01767pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Segundo 
+ []
+
+
+Overfull \hbox (0.6659pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 pi- 
+ []
+
+
+Overfull \hbox (10.61386pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Tercer 
+ []
+
+
+Overfull \hbox (0.6659pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 pi- 
+ []
+
+
+Overfull \hbox (22.94963pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Alumbrado|  
+ []
+
+
+Overfull \hbox (20.27975pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Escaleras|  
+ []
+
+
+Overfull \hbox (13.00778pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Bomba|  
+ []
+
+
+Overfull \hbox (4.66792pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Uso 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ge- 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ne- 
+ []
+
+
+Overfull \hbox (0.6059pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ral|  
+ []
+
+
+Overfull \hbox (11.00981pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Banos|  
+ []
+
+
+Overfull \hbox (23.50156pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Lavanderia 
+ []
+
+
+Overfull \hbox (7.66785pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 bom- 
+ []
+
+
+Overfull \hbox (0.6719pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ba|  
+ []
+
+
+Overfull \hbox (22.94963pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Alumbrado|  
+ []
+
+
+Overfull \hbox (35.04549pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Tomacorrientes|  
+ []
+
+
+Overfull \hbox (12.6718pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Cocina|  
+ []
+
+
+Overfull \hbox (15.2817pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 General 
+ []
+
+
+Overfull \hbox (2.33392pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 TG|  
+ []
+
+
+Overfull \hbox (22.34364pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Proteccion 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ge- 
+ []
+
+
+Overfull \hbox (2.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ne- 
+ []
+
+
+Overfull \hbox (0.6059pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ral|  
+ []
+
+
+Overfull \hbox (24.34158pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Iluminacion 
+ []
+
+
+Overfull \hbox (0.6659pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 in- 
+ []
+
+
+Overfull \hbox (1.00186pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 te- 
+ []
+
+
+Overfull \hbox (2.7538pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 rior|  
+ []
+
+
+Overfull \hbox (12.88779pt too wide) in paragraph at lines 211--211
+[]|\T1/phv/m/n/6 Incluye 
+ []
+
+
+Overfull \hbox (2.18391pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 va- 
+ []
+
+
+Overfull \hbox (1.66783pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 lla, 
+ []
+
+
+Overfull \hbox (2.33392pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 co- 
+ []
+
+
+Overfull \hbox (5.66988pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 nec- 
+ []
+
+
+Overfull \hbox (2.3698pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 tor, 
+ []
+
+
+Overfull \hbox (2.33392pt too wide) in paragraph at lines 211--211
+\T1/phv/m/n/6 ca- 
+ []
+
+
+Overfull \hbox (39.07816pt too wide) in alignment at lines 211--211
+[][][][][][][] 
+ []
+
+[34
+
+]
+Overfull \vbox (231.5163pt too high) has occurred while \output is active []
+
+
+[35]) (capitulos/07-planos.tex [36
 
 ]
 Cap\'{\i }tulo 7.
-[30
+[37
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
@@ -820,7 +1617,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
  (C:\Users\renzo\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-[31
+[38
 
 ]
 Overfull \hbox (4.15222pt too wide) in paragraph at lines 22--23
@@ -857,41 +1654,41 @@ Overfull \hbox (4.15222pt too wide) in paragraph at lines 28--29
 []|\T1/phv/m/n/12 Entregado|  
  []
 
-[32
+[39
 
-] [33
+] [40
 
 ]
-<planos/primer-piso.pdf, id=449, 289.08pt x 429.28021pt>
+<planos/primer-piso.pdf, id=549, 289.08pt x 429.28021pt>
 File: planos/primer-piso.pdf Graphic file (type pdf)
 <use planos/primer-piso.pdf>
 Package pdftex.def Info: planos/primer-piso.pdf  used on input line 42.
 (pdftex.def)             Requested size: 243.54453pt x 361.63776pt.
- [34
+ [41
 
  <./planos/primer-piso.pdf>]
-<planos/segundo-piso.pdf, id=456, 289.08pt x 447.93523pt>
+<planos/segundo-piso.pdf, id=556, 289.08pt x 447.93523pt>
 File: planos/segundo-piso.pdf Graphic file (type pdf)
 <use planos/segundo-piso.pdf>
 Package pdftex.def Info: planos/segundo-piso.pdf  used on input line 51.
 (pdftex.def)             Requested size: 233.39923pt x 361.63776pt.
- [35
+ [42
 
 
  <./planos/segundo-piso.pdf>]
-<planos/tercer-piso.pdf, id=463, 289.08pt x 447.94458pt>
+<planos/tercer-piso.pdf, id=564, 289.08pt x 447.94458pt>
 File: planos/tercer-piso.pdf Graphic file (type pdf)
 <use planos/tercer-piso.pdf>
 Package pdftex.def Info: planos/tercer-piso.pdf  used on input line 60.
 (pdftex.def)             Requested size: 233.38158pt x 361.63776pt.
 
-[36
+[43
 
 
- <./planos/tercer-piso.pdf>] [37
+ <./planos/tercer-piso.pdf>] [44
 
 ]
-<planos/IE-02-alumbrado.pdf, id=475, 691.4481pt x 346.89601pt>
+<planos/IE-02-alumbrado.pdf, id=575, 691.4481pt x 346.89601pt>
 File: planos/IE-02-alumbrado.pdf Graphic file (type pdf)
 <use planos/IE-02-alumbrado.pdf>
 Package pdftex.def Info: planos/IE-02-alumbrado.pdf  used on input line 74.
@@ -901,12 +1698,12 @@ Overfull \hbox (18.08907pt too wide) in paragraph at lines 74--75
  [][] 
  []
 
-[38
+[45
 
- <./planos/IE-02-alumbrado.pdf>] [39
+ <./planos/IE-02-alumbrado.pdf>] [46
 
 ]
-<planos/IE-03-tomacorrientes.pdf, id=486, 691.4481pt x 346.89601pt>
+<planos/IE-03-tomacorrientes.pdf, id=586, 691.4481pt x 346.89601pt>
 File: planos/IE-03-tomacorrientes.pdf Graphic file (type pdf)
 <use planos/IE-03-tomacorrientes.pdf>
 Package pdftex.def Info: planos/IE-03-tomacorrientes.pdf  used on input line 87
@@ -917,12 +1714,12 @@ Overfull \hbox (18.08907pt too wide) in paragraph at lines 87--88
  [][] 
  []
 
-[40
+[47
 
- <./planos/IE-03-tomacorrientes.pdf>] [41
+ <./planos/IE-03-tomacorrientes.pdf>] [48
 
 ]
-<planos/IE-04-circuitos-canalizaciones.pdf, id=497, 691.4481pt x 346.89601pt>
+<planos/IE-04-circuitos-canalizaciones.pdf, id=598, 691.4481pt x 346.89601pt>
 File: planos/IE-04-circuitos-canalizaciones.pdf Graphic file (type pdf)
 <use planos/IE-04-circuitos-canalizaciones.pdf>
 Package pdftex.def Info: planos/IE-04-circuitos-canalizaciones.pdf  used on inp
@@ -933,46 +1730,44 @@ Overfull \hbox (18.08907pt too wide) in paragraph at lines 100--101
  [][] 
  []
 
-[42
+[49
 
- <./planos/IE-04-circuitos-canalizaciones.pdf>] [43
+ <./planos/IE-04-circuitos-canalizaciones.pdf>] [50
 
 ]
-<planos/IE-05-unifilar-cuadro-cargas.pdf, id=509, 504.576pt x 346.89601pt>
+<planos/IE-05-unifilar-cuadro-cargas.pdf, id=609, 341.09473pt x 346.89601pt>
 File: planos/IE-05-unifilar-cuadro-cargas.pdf Graphic file (type pdf)
 <use planos/IE-05-unifilar-cuadro-cargas.pdf>
 Package pdftex.def Info: planos/IE-05-unifilar-cuadro-cargas.pdf  used on input
  line 113.
-(pdftex.def)             Requested size: 526.04784pt x 361.63776pt.
- [44
+(pdftex.def)             Requested size: 355.60973pt x 361.63776pt.
+ [51
 
- <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [45
+ <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [52
 
 ]
-<planos/IE-06-puesta-tierra.pdf, id=520, 504.576pt x 346.89601pt>
+<planos/IE-06-puesta-tierra.pdf, id=620, 504.576pt x 346.89601pt>
 File: planos/IE-06-puesta-tierra.pdf Graphic file (type pdf)
 <use planos/IE-06-puesta-tierra.pdf>
 Package pdftex.def Info: planos/IE-06-puesta-tierra.pdf  used on input line 126
 .
 (pdftex.def)             Requested size: 526.04784pt x 361.63776pt.
- [46
+ [53
 
- <./planos/IE-06-puesta-tierra.pdf>] [47
+ <./planos/IE-06-puesta-tierra.pdf>] [54
 
 ]
-
-pdfTeX warning: pdflatex.exe (file ./planos/IE-07-simbologia-detalles.pdf): PDF
- inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<planos/IE-07-simbologia-detalles.pdf, id=531, 2392.94pt x 1690.315pt>
+<planos/IE-07-simbologia-detalles.pdf, id=632, 291.97081pt x 1124.52115pt>
 File: planos/IE-07-simbologia-detalles.pdf Graphic file (type pdf)
 <use planos/IE-07-simbologia-detalles.pdf>
 Package pdftex.def Info: planos/IE-07-simbologia-detalles.pdf  used on input li
 ne 139.
-(pdftex.def)             Requested size: 511.95267pt x 361.63776pt.
-[48
+(pdftex.def)             Requested size: 93.89589pt x 361.63776pt.
+
+[55
 
  <./planos/IE-07-simbologia-detalles.pdf>]) (capitulos/08-anexos.tex
-[49
+[56
 
 ]
 Cap\'{\i }tulo 8.
@@ -981,14 +1776,770 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
  \T1/phv/b/n/20.74 Y BIBLIOGRAFIA 
  []
 
-[50
+[57
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 27.
- [51
+ [58
 
-]) [52]
+]) (capitulos/09-presupuesto.tex [59]
+Cap\'{\i }tulo 9.
+
+Underfull \hbox (badness 2343) in paragraph at lines 1--1
+ []\T1/phv/b/n/20.74 PRESUPUESTO ESTIMADO 
+ []
+
+[60
+
+] [61
+
+]
+
+Package tabularx Warning: X Columns too narrow (table too wide)
+(tabularx)                 on input line 62.
+
+
+Overfull \hbox (50.47934pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/b/n/10 Observacion|  
+ []
+
+
+Overfull \hbox (22.8496pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Tuberia 
+ []
+
+
+Overfull \hbox (12.22974pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 SEL- 
+ []
+
+
+Overfull \hbox (2.5399pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 VA 
+ []
+
+
+Overfull \hbox (0.54993pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 si- 
+ []
+
+
+Overfull \hbox (3.87988pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 mi- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar|  
+ []
+
+
+Overfull \hbox (22.8496pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Tuberia 
+ []
+
+
+Overfull \hbox (12.22974pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 SEL- 
+ []
+
+
+Overfull \hbox (2.5399pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 VA 
+ []
+
+
+Overfull \hbox (0.54993pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 si- 
+ []
+
+
+Overfull \hbox (3.87988pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 mi- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar|  
+ []
+
+
+Overfull \hbox (22.8496pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Tuberia 
+ []
+
+
+Overfull \hbox (12.22974pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 SEL- 
+ []
+
+
+Overfull \hbox (2.5399pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 VA 
+ []
+
+
+Overfull \hbox (0.54993pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 si- 
+ []
+
+
+Overfull \hbox (3.87988pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 mi- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar|  
+ []
+
+
+Overfull \hbox (15.9198pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Cable 
+ []
+
+
+Overfull \hbox (6.6698pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 uni- 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 po- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 co- 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 bre|  
+ []
+
+
+Overfull \hbox (15.9198pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Cable 
+ []
+
+
+Overfull \hbox (6.6698pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 uni- 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 po- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 co- 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 bre|  
+ []
+
+
+Overfull \hbox (15.9198pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Cable 
+ []
+
+
+Overfull \hbox (6.6698pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 uni- 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 po- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 co- 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 bre|  
+ []
+
+
+Overfull \hbox (21.12962pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Puesta 
+ []
+
+
+Overfull \hbox (3.88976pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 tie- 
+ []
+
+
+Overfull \hbox (2.11986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 rra|  
+ []
+
+
+Overfull \hbox (32.78954pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Completo 
+ []
+
+
+Overfull \hbox (6.11987pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 con 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ba- 
+ []
+
+
+Overfull \hbox (2.11986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 rra 
+ []
+
+
+Overfull \hbox (6.10985pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 N/T 
+ []
+
+
+Overfull \hbox (13.33972pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 puer- 
+ []
+
+
+Overfull \hbox (32.78954pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Completo 
+ []
+
+
+Overfull \hbox (6.11987pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 con 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ba- 
+ []
+
+
+Overfull \hbox (2.11986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 rra 
+ []
+
+
+Overfull \hbox (6.10985pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 N/T 
+ []
+
+
+Overfull \hbox (13.33972pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 puer- 
+ []
+
+
+Overfull \hbox (32.78954pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Completo 
+ []
+
+
+Overfull \hbox (6.11987pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 con 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ba- 
+ []
+
+
+Overfull \hbox (2.11986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 rra 
+ []
+
+
+Overfull \hbox (6.10985pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 N/T 
+ []
+
+
+Overfull \hbox (13.33972pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 puer- 
+ []
+
+
+Overfull \hbox (13.88977pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Color 
+ []
+
+
+Overfull \hbox (12.02979pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 blan- 
+ []
+
+
+Overfull \hbox (0.55994pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 co|  
+ []
+
+
+Overfull \hbox (13.88977pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Color 
+ []
+
+
+Overfull \hbox (12.02979pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 blan- 
+ []
+
+
+Overfull \hbox (0.55994pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 co|  
+ []
+
+
+Overfull \hbox (1.11987pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 15 
+ []
+
+
+Overfull \hbox (6.67981pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 250 
+ []
+
+
+Overfull \hbox (37.23949pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Proteccion 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 di- 
+ []
+
+
+Overfull \hbox (1.36984pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 fe- 
+ []
+
+
+Overfull \hbox (7.77979pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ren- 
+ []
+
+
+Overfull \hbox (4.99988pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 cial 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 in- 
+ []
+
+
+Overfull \hbox (1.66978pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 te- 
+ []
+
+
+Overfull \hbox (7.5798pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 gra- 
+ []
+
+
+Overfull \hbox (1.11987pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 da|  
+ []
+
+
+Overfull \hbox (1.11987pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 20 
+ []
+
+
+Overfull \hbox (6.67981pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 250 
+ []
+
+
+Overfull \hbox (16.71973pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Curva 
+ []
+
+
+Overfull \hbox (16.71973pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Curva 
+ []
+
+
+Overfull \hbox (16.71973pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Curva 
+ []
+
+
+Overfull \hbox (16.71973pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Curva 
+ []
+
+
+Overfull \hbox (37.23949pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Proteccion 
+ []
+
+
+Overfull \hbox (1.11987pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 de 
+ []
+
+
+Overfull \hbox (7.77979pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 per- 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 so- 
+ []
+
+
+Overfull \hbox (6.11987pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 nas|  
+ []
+
+
+Overfull \hbox (15.16978pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Panel 
+ []
+
+
+Overfull \hbox (9.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 LED 
+ []
+
+
+Overfull \hbox (3.87988pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 cir- 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 cu- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar 
+ []
+
+
+Overfull \hbox (7.21985pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 rec- 
+ []
+
+
+Overfull \hbox (7.22972pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 tan- 
+ []
+
+
+Overfull \hbox (4.44983pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 gu- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 lar|  
+ []
+
+
+Overfull \hbox (17.2296pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Varilla 
+ []
+
+
+Overfull \hbox (12.44969pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 5/8"x 
+ []
+
+
+Overfull \hbox (9.4597pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 2.40 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ac- 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ce- 
+ []
+
+
+Overfull \hbox (3.8899pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 so- 
+ []
+
+
+Overfull \hbox (6.25975pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 rios|  
+ []
+
+
+Overfull \hbox (39.04955pt too wide) in paragraph at lines 62--62
+[]|\T1/phv/m/n/10 Accesorios 
+ []
+
+
+Overfull \hbox (1.11987pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 de 
+ []
+
+
+Overfull \hbox (6.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ins- 
+ []
+
+
+Overfull \hbox (1.66978pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 ta- 
+ []
+
+
+Overfull \hbox (1.10986pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 la- 
+ []
+
+
+Overfull \hbox (8.33984pt too wide) in paragraph at lines 62--62
+\T1/phv/m/n/10 cion|  
+ []
+
+
+Overfull \hbox (26.35635pt too wide) in alignment at lines 62--62
+[][][][][][][] 
+ []
+
+[62
+
+]
+Overfull \vbox (1212.36832pt too high) has occurred while \output is active []
+
+
+[63] [64
+
+
+]
+Overfull \hbox (49.11385pt too wide) in alignment at lines 139--139
+[][][][][][][] 
+ []
+
+[65
+
+]
+Overfull \vbox (539.6201pt too high) has occurred while \output is active []
+
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 237.50|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 636.00|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 542.00|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 475.00|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 650.00|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 200.00|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 175--175
+ []|\T1/phv/b/n/10.95 12,430.50|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 621.53|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 994.44|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 175--175
+ []|\T1/phv/b/n/10.95 14,046.47|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 7613) in paragraph at lines 175--175
+ []|\T1/phv/m/n/10.95 2,528.36|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 175--175
+ []||
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 175--175
+ []|\T1/phv/b/n/10.95 16,574.83|
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 175--175
+[][][] 
+ []
+
+[67
+
+
+]
+Underfull \hbox (badness 3088) in paragraph at lines 205--205
+ []|$ $\T1/phv/b/n/10.95 %|
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 205--205
+ []|\T1/phv/m/n/10.95 72.2$ $%|
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 205--205
+ []|\T1/phv/m/n/10.95 27.8$ $%|
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 205--205
+[][][] 
+ []
+
+) [68
+
+]
 (C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
 build\main.aux
 LaTeX Info: Redefining \. on input line 11.
@@ -999,14 +2550,14 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B8CB5CCB3989427EE33C36EC04F81780;11743.
+(rerunfilecheck)             Checksum: FFA8E68F1F52B039A34D17C3F3BCCEC3;14676.
  ) 
 Here is how much of TeX's memory you used:
- 17762 strings out of 474479
- 346075 string characters out of 5743591
- 1945542 words of memory out of 5000000
- 39631 multiletter control sequences out of 15000+600000
- 603688 words of font info for 84 fonts, out of 8000000 for 9000
+ 17850 strings out of 474479
+ 347401 string characters out of 5743591
+ 1980542 words of memory out of 5000000
+ 39669 multiletter control sequences out of 15000+600000
+ 610756 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,574b,1191s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\renzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
@@ -1015,14 +2566,15 @@ ts/cm/cmex10.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmmi12.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/renzo/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/renzo/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/renzo/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/renzo/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/renzo/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/renzo/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/renzo/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/renzo
+/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifa
-miliar_por_RENZO\build\main.pdf (53 pages, 2648617 bytes).
+miliar_por_RENZO\build\main.pdf (69 pages, 3305371 bytes).
 PDF statistics:
- 773 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
- 565 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 816 PDF objects out of 1000 (max. 8388607)
+ 206 named destinations out of 1000 (max. 500000)
+ 693 words of extra memory for PDF output out of 10000 (max. 10000000)
 
