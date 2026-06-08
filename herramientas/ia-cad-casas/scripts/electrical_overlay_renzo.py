@@ -205,7 +205,16 @@ def add_room_labels(msp, layout, ox, oy, scale=1.0):
         elif name == "Dormitorio 5":
             ry = oy + 2.8 * scale
 
-        add_text(msp, name, rx, ry, 0.16, "ARQ_TEXTOS")
+        # Dynamic font sizing based on room dimensions and label length
+        max_h = 0.16
+        length_factor = len(name) * 0.55
+        if length_factor > 0:
+            width_limit = max(0.08, (w - 0.2) / length_factor)
+            max_h = min(max_h, width_limit)
+        max_h = min(max_h, h * 0.14)
+        font_height = max(0.10, max_h) * scale
+
+        add_text(msp, name, rx, ry, font_height, "ARQ_TEXTOS")
 
 
 def draw_architecture(msp, layout, ox, oy, scale=1.0):
@@ -264,6 +273,7 @@ def sym_outlet(msp, x, y, kind, circuit):
         "cocina": "dge_09_93_18_salida_cocina",
         "lavadora": "dge_09_93_17_tomacorriente_tierra",
         "bomba": "dge_09_93_17_tomacorriente_tierra",
+        "caja_paso": "dge_09_93_08_caja_paso",
     }.get(kind, "dge_09_93_13_tomacorriente_monofasico")
     draw_dge_symbol(msp, symbol_id, x, y, "ELEC_TOMACORRIENTES", color, 1.0)
     if kind == "bomba":
@@ -276,8 +286,9 @@ def sym_panel(msp, x, y, label):
 
 
 def sym_meter(msp, x, y):
-    circle(msp, (x, y), 0.18, "ELEC_MEDIDOR", COLORS["green"])
-    add_text(msp, "M", x, y, 0.14, "ELEC_MEDIDOR")
+    w, h = 0.45, 0.25
+    rect(msp, x - w/2, y - h/2, w, h, "ELEC_MEDIDOR", COLORS["green"])
+    add_text(msp, "wh", x, y, 0.11, "ELEC_MEDIDOR")
 
 
 def sym_ground(msp, x, y):

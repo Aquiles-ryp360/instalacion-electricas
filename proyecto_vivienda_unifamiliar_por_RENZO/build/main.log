@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  7 JUN 2026 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  7 JUN 2026 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -960,13 +960,15 @@ Package pdftex.def Info: planos/IE-06-puesta-tierra.pdf  used on input line 126
  <./planos/IE-06-puesta-tierra.pdf>] [47
 
 ]
-<planos/IE-07-simbologia-detalles.pdf, id=531, 291.97081pt x 1124.52115pt>
+
+pdfTeX warning: pdflatex.exe (file ./planos/IE-07-simbologia-detalles.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<planos/IE-07-simbologia-detalles.pdf, id=531, 2392.94pt x 1690.315pt>
 File: planos/IE-07-simbologia-detalles.pdf Graphic file (type pdf)
 <use planos/IE-07-simbologia-detalles.pdf>
 Package pdftex.def Info: planos/IE-07-simbologia-detalles.pdf  used on input li
 ne 139.
-(pdftex.def)             Requested size: 93.89589pt x 361.63776pt.
-
+(pdftex.def)             Requested size: 511.95267pt x 361.63776pt.
 [48
 
  <./planos/IE-07-simbologia-detalles.pdf>]) (capitulos/08-anexos.tex
@@ -1018,9 +1020,9 @@ l/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/renzo/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/renzo/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifa
-miliar_por_RENZO\build\main.pdf (53 pages, 3295961 bytes).
+miliar_por_RENZO\build\main.pdf (53 pages, 2648617 bytes).
 PDF statistics:
- 659 PDF objects out of 1000 (max. 8388607)
+ 773 PDF objects out of 1000 (max. 8388607)
  162 named destinations out of 1000 (max. 500000)
  565 words of extra memory for PDF output out of 10000 (max. 10000000)
 
