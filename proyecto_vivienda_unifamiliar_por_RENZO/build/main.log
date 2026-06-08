@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  3 JUN 2026 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.19)  7 JUN 2026 21:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,7 +533,9 @@ tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count319
 \l__pdf_internal_box=\box72
-) (main.aux
+)
+(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
+build\main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -628,7 +630,11 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring ON on input line 113.
- (main.out) (main.out)
+
+(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
+build\main.out)
+(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
+build\main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -647,7 +653,7 @@ LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
 (C:\Users\renzo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-<capitulos/FONDO DE MI PROYECTO.pdf, id=251, 597.73312pt x 845.40843pt>
+<capitulos/FONDO DE MI PROYECTO.pdf, id=255, 597.73312pt x 845.40843pt>
 File: capitulos/FONDO DE MI PROYECTO.pdf Graphic file (type pdf)
 <use capitulos/FONDO DE MI PROYECTO.pdf>
 Package pdftex.def Info: capitulos/FONDO DE MI PROYECTO.pdf  used on input line
@@ -658,35 +664,7 @@ Package pdftex.def Info: capitulos/FONDO DE MI PROYECTO.pdf  used on input line
 
 {C:/Users/renzo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/renz
 o/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./capitulos/FONDO
- DE MI PROYECTO.pdf>]) (main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [1
-
-] [2])
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
- [3] (main.lot
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-\tf@lot=\write5
-\openout5 = `main.lot'.
-
- [4
-
-] (main.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-\tf@lof=\write6
-\openout6 = `main.lof'.
-
-
-[5
-
-] (capitulos/01-memoria-descriptiva.tex
+ DE MI PROYECTO.pdf>]) (capitulos/01-memoria-descriptiva.tex
 Cap\'{\i }tulo 1.
 
 Underfull \hbox (badness 4084) in paragraph at lines 1--1
@@ -701,9 +679,8 @@ been already used, duplicate ignored
 l.1 \chapter{MEMORIA DESCRIPTIVA}
                                   [1
 
-
 ]
-<figuras/plano_catastral.png, id=413, 751.30687pt x 527.72156pt>
+<figuras/plano_catastral.png, id=286, 751.30687pt x 527.72156pt>
 File: figuras/plano_catastral.png Graphic file (type png)
 <use figuras/plano_catastral.png>
 Package pdftex.def Info: figuras/plano_catastral.png  used on input line 40.
@@ -711,7 +688,7 @@ Package pdftex.def Info: figuras/plano_catastral.png  used on input line 40.
  [2
 
 ]
-<figuras/ubicacion_satelital.png, id=420, 363.60844pt x 475.02469pt>
+<figuras/ubicacion_satelital.png, id=293, 363.60844pt x 475.02469pt>
 File: figuras/ubicacion_satelital.png Graphic file (type png)
 <use figuras/ubicacion_satelital.png>
 Package pdftex.def Info: figuras/ubicacion_satelital.png  used on input line 47
@@ -732,42 +709,110 @@ Underfull \hbox (badness 1590) in paragraph at lines 1--1
 
 [8
 
-] [9
-
-] [10]
-Overfull \hbox (19.7657pt too wide) in paragraph at lines 58--58
-[]|\T1/phv/b/n/8 Conductor|  
- []
-
-[11
-
-] [12
-
-] [13
-
-] [14
-
 ]
-Overfull \hbox (26.64012pt too wide) in paragraph at lines 136--136
-[]|\T1/phv/b/n/10.95 Observacion|  
+Overfull \hbox (6.61925pt too wide) in paragraph at lines 57--57
+[]|\T1/phv/m/n/10.95 Tomacorrientes 
  []
 
 
-Overfull \hbox (11.09093pt too wide) in paragraph at lines 136--136
-[]|\T1/phv/m/n/10.95 Interruptor 
+Overfull \hbox (6.61925pt too wide) in paragraph at lines 57--57
+[]|\T1/phv/m/n/10.95 Tomacorrientes 
  []
 
-[15
+
+Overfull \hbox (6.61925pt too wide) in paragraph at lines 57--57
+[]|\T1/phv/m/n/10.95 Tomacorrientes 
+ []
+
+[9
 
 ]
-Overfull \vbox (97.57231pt too high) has occurred while \output is active []
+Overfull \hbox (15.73213pt too wide) in paragraph at lines 79--79
+[]|\T1/phv/b/n/10.95 Observación|  
+ []
 
 
-[16]) (capitulos/07-planos.tex [17
+Overfull \hbox (18.94041pt too wide) in paragraph at lines 79--79
+[]|\T1/phv/m/n/10.95 Tomacorriente 
+ []
 
-]
+
+Overfull \hbox (18.94041pt too wide) in paragraph at lines 79--79
+[]|\T1/phv/m/n/10.95 Tomacorriente 
+ []
+
+
+Overfull \hbox (18.94041pt too wide) in paragraph at lines 79--79
+[]|\T1/phv/m/n/10.95 Tomacorriente 
+ []
+
+[10] [11] [12]) (capitulos/03-especificaciones-materiales.tex [13]
 Cap\'{\i }tulo 3.
-[18
+[14
+
+] [15
+
+] [16
+
+] [17
+
+] [18] [19
+
+]) (capitulos/04-especificaciones-montaje.tex
+Cap\'{\i }tulo 4.
+
+Underfull \hbox (badness 8000) in paragraph at lines 1--1
+ []\T1/phv/b/n/20.74 ESPECIFICACIONES 
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 1--1
+ \T1/phv/b/n/20.74 TECNICAS DE MONTAJE 
+ []
+
+[20
+
+
+] [21
+
+]) (capitulos/05-cronograma.tex [22]
+Cap\'{\i }tulo 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+ []\T1/phv/b/n/20.74 CRONOGRAMA 
+ []
+
+[23
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/phv/m/n/12 Responsables de
+ []
+
+) (capitulos/06-metrado.tex [24
+
+]
+Cap\'{\i }tulo 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+ []\T1/phv/b/n/20.74 METRADO 
+ []
+
+[25
+
+] [26
+
+] [27
+
+]
+Overfull \vbox (13.96826pt too high) has occurred while \output is active []
+
+
+[28]) (capitulos/07-planos.tex [29
+
+]
+Cap\'{\i }tulo 7.
+[30
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
@@ -775,7 +820,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
  (C:\Users\renzo\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-[19
+[31
 
 ]
 Overfull \hbox (4.15222pt too wide) in paragraph at lines 22--23
@@ -812,107 +857,138 @@ Overfull \hbox (4.15222pt too wide) in paragraph at lines 28--29
 []|\T1/phv/m/n/12 Entregado|  
  []
 
-[20
+[32
 
-] [21
+] [33
 
 ]
-<planos/primer-piso.pdf, id=516, 289.08pt x 429.28021pt>
+<planos/primer-piso.pdf, id=449, 289.08pt x 429.28021pt>
 File: planos/primer-piso.pdf Graphic file (type pdf)
 <use planos/primer-piso.pdf>
 Package pdftex.def Info: planos/primer-piso.pdf  used on input line 42.
 (pdftex.def)             Requested size: 243.54453pt x 361.63776pt.
- [22
+ [34
 
  <./planos/primer-piso.pdf>]
-<planos/segundo-piso.pdf, id=523, 289.08pt x 447.93523pt>
+<planos/segundo-piso.pdf, id=456, 289.08pt x 447.93523pt>
 File: planos/segundo-piso.pdf Graphic file (type pdf)
 <use planos/segundo-piso.pdf>
 Package pdftex.def Info: planos/segundo-piso.pdf  used on input line 51.
 (pdftex.def)             Requested size: 233.39923pt x 361.63776pt.
- [23
+ [35
 
 
  <./planos/segundo-piso.pdf>]
-<planos/tercer-piso.pdf, id=530, 289.08pt x 447.94458pt>
+<planos/tercer-piso.pdf, id=463, 289.08pt x 447.94458pt>
 File: planos/tercer-piso.pdf Graphic file (type pdf)
 <use planos/tercer-piso.pdf>
 Package pdftex.def Info: planos/tercer-piso.pdf  used on input line 60.
 (pdftex.def)             Requested size: 233.38158pt x 361.63776pt.
 
-[24
+[36
 
 
- <./planos/tercer-piso.pdf>] [25
-
-]
-<planos/IE-02-primer-piso.pdf, id=543, 289.08pt x 443.25601pt>
-File: planos/IE-02-primer-piso.pdf Graphic file (type pdf)
-<use planos/IE-02-primer-piso.pdf>
-Package pdftex.def Info: planos/IE-02-primer-piso.pdf  used on input line 74.
-(pdftex.def)             Requested size: 235.85175pt x 361.63776pt.
- [26
-
- <./planos/IE-02-primer-piso.pdf>]
-[27
+ <./planos/tercer-piso.pdf>] [37
 
 ]
-<planos/IE-03-segundo-piso.pdf, id=555, 289.08pt x 462.52798pt>
-File: planos/IE-03-segundo-piso.pdf Graphic file (type pdf)
-<use planos/IE-03-segundo-piso.pdf>
-Package pdftex.def Info: planos/IE-03-segundo-piso.pdf  used on input line 87.
-(pdftex.def)             Requested size: 226.03285pt x 361.63776pt.
- [28
+<planos/IE-02-alumbrado.pdf, id=475, 691.4481pt x 346.89601pt>
+File: planos/IE-02-alumbrado.pdf Graphic file (type pdf)
+<use planos/IE-02-alumbrado.pdf>
+Package pdftex.def Info: planos/IE-02-alumbrado.pdf  used on input line 74.
+(pdftex.def)             Requested size: 720.87215pt x 361.63776pt.
 
- <./planos/IE-03-segundo-piso.pdf>] [29
+Overfull \hbox (18.08907pt too wide) in paragraph at lines 74--75
+ [][] 
+ []
 
-]
-<planos/IE-04-tercer-piso.pdf, id=567, 289.08pt x 462.52798pt>
-File: planos/IE-04-tercer-piso.pdf Graphic file (type pdf)
-<use planos/IE-04-tercer-piso.pdf>
-Package pdftex.def Info: planos/IE-04-tercer-piso.pdf  used on input line 100.
-(pdftex.def)             Requested size: 226.03285pt x 361.63776pt.
- [30
+[38
 
- <./planos/IE-04-tercer-piso.pdf>] [31
+ <./planos/IE-02-alumbrado.pdf>] [39
 
 ]
-<planos/IE-05-unifilar-cuadro-cargas.pdf, id=580, 504.576pt x 346.89601pt>
+<planos/IE-03-tomacorrientes.pdf, id=486, 691.4481pt x 346.89601pt>
+File: planos/IE-03-tomacorrientes.pdf Graphic file (type pdf)
+<use planos/IE-03-tomacorrientes.pdf>
+Package pdftex.def Info: planos/IE-03-tomacorrientes.pdf  used on input line 87
+.
+(pdftex.def)             Requested size: 720.87215pt x 361.63776pt.
+
+Overfull \hbox (18.08907pt too wide) in paragraph at lines 87--88
+ [][] 
+ []
+
+[40
+
+ <./planos/IE-03-tomacorrientes.pdf>] [41
+
+]
+<planos/IE-04-circuitos-canalizaciones.pdf, id=497, 691.4481pt x 346.89601pt>
+File: planos/IE-04-circuitos-canalizaciones.pdf Graphic file (type pdf)
+<use planos/IE-04-circuitos-canalizaciones.pdf>
+Package pdftex.def Info: planos/IE-04-circuitos-canalizaciones.pdf  used on inp
+ut line 100.
+(pdftex.def)             Requested size: 720.87215pt x 361.63776pt.
+
+Overfull \hbox (18.08907pt too wide) in paragraph at lines 100--101
+ [][] 
+ []
+
+[42
+
+ <./planos/IE-04-circuitos-canalizaciones.pdf>] [43
+
+]
+<planos/IE-05-unifilar-cuadro-cargas.pdf, id=509, 504.576pt x 346.89601pt>
 File: planos/IE-05-unifilar-cuadro-cargas.pdf Graphic file (type pdf)
 <use planos/IE-05-unifilar-cuadro-cargas.pdf>
 Package pdftex.def Info: planos/IE-05-unifilar-cuadro-cargas.pdf  used on input
  line 113.
 (pdftex.def)             Requested size: 526.04784pt x 361.63776pt.
- [32
+ [44
 
- <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [33
+ <./planos/IE-05-unifilar-cuadro-cargas.pdf>] [45
 
 ]
-<planos/IE-06-puesta-tierra.pdf, id=592, 504.576pt x 346.89601pt>
+<planos/IE-06-puesta-tierra.pdf, id=520, 504.576pt x 346.89601pt>
 File: planos/IE-06-puesta-tierra.pdf Graphic file (type pdf)
 <use planos/IE-06-puesta-tierra.pdf>
 Package pdftex.def Info: planos/IE-06-puesta-tierra.pdf  used on input line 126
 .
 (pdftex.def)             Requested size: 526.04784pt x 361.63776pt.
- [34
+ [46
 
- <./planos/IE-06-puesta-tierra.pdf>] [35
+ <./planos/IE-06-puesta-tierra.pdf>] [47
 
 ]
-
-pdfTeX warning: pdflatex.exe (file ./planos/IE-07-simbologia-detalles.pdf): PDF
- inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<planos/IE-07-simbologia-detalles.pdf, id=604, 2392.94pt x 1690.315pt>
+<planos/IE-07-simbologia-detalles.pdf, id=531, 291.97081pt x 1124.52115pt>
 File: planos/IE-07-simbologia-detalles.pdf Graphic file (type pdf)
 <use planos/IE-07-simbologia-detalles.pdf>
 Package pdftex.def Info: planos/IE-07-simbologia-detalles.pdf  used on input li
 ne 139.
-(pdftex.def)             Requested size: 511.95267pt x 361.63776pt.
-[36
+(pdftex.def)             Requested size: 93.89589pt x 361.63776pt.
 
- <./planos/IE-07-simbologia-detalles.pdf>]) [37
+[48
 
-] (main.aux
+ <./planos/IE-07-simbologia-detalles.pdf>]) (capitulos/08-anexos.tex
+[49
+
+]
+Cap\'{\i }tulo 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+ \T1/phv/b/n/20.74 Y BIBLIOGRAFIA 
+ []
+
+[50
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 27.
+ [51
+
+]) [52]
+(C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifamiliar_por_RENZO\
+build\main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -921,225 +997,30 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 18A72D7884F25D6D749CE2FFF20D4084;7288.
+(rerunfilecheck)             Checksum: B8CB5CCB3989427EE33C36EC04F81780;11743.
  ) 
 Here is how much of TeX's memory you used:
- 17724 strings out of 474479
- 344092 string characters out of 5743591
- 1939542 words of memory out of 5000000
- 39608 multiletter control sequences out of 15000+600000
- 606067 words of font info for 85 fonts, out of 8000000 for 9000
+ 17762 strings out of 474479
+ 346075 string characters out of 5743591
+ 1945542 words of memory out of 5000000
+ 39631 multiletter control sequences out of 15000+600000
+ 603688 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,574b,1370s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.7.9} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.8} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.7} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.6} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.5} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.4} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.3} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.2} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.7.1} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.7.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.6.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.5.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.3.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.8.3} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.8.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.8.1} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter.8} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.7.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.7.1} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter.7} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.6.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.6.1} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.8} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.7} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.6} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.5} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.4} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.1} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.9} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.8} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.7} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
-, replaced by a fixed one
-
- <C:\Users\renzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt12
-00.pk><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/renzo/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/renzo/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/renzo/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+ 75i,13n,79p,574b,1191s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\renzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
+1200.pk><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/renzo/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/renzo/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/renzo/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/renzo/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/renzo/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on C:\Users\renzo\instalacion-electricas\proyecto_vivienda_unifa
-miliar_por_RENZO\build\main.pdf (43 pages, 2500091 bytes).
+miliar_por_RENZO\build\main.pdf (53 pages, 3295961 bytes).
 PDF statistics:
- 810 PDF objects out of 1000 (max. 8388607)
- 153 named destinations out of 1000 (max. 500000)
- 557 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 565 words of extra memory for PDF output out of 10000 (max. 10000000)
 

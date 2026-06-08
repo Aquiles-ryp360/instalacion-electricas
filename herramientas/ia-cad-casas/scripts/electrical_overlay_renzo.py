@@ -171,7 +171,41 @@ def import_architecture_dxf(doc, msp, dxf_path, ox, oy, scale=1.0):
 def add_room_labels(msp, layout, ox, oy, scale=1.0):
     for room in layout["rooms"]:
         x, y, w, h = room["x"], room["y"], room["width"], room["height"]
-        add_text(msp, clean_label(room["name"]), ox + (x + w / 2) * scale, oy + (y + h / 2) * scale, 0.16, "ARQ_TEXTOS")
+        name = clean_label(room["name"])
+        
+        # Default center
+        rx = ox + (x + w / 2) * scale
+        ry = oy + (y + h / 2) * scale
+        
+        # Apply custom adjustments based on room name
+        # to prevent overlap with electrical symbols
+        if name == "Tienda":
+            ry = oy + 0.8 * scale
+        elif name == "Cocina":
+            ry = oy + 4.3 * scale
+        elif name == "Pasadizo":
+            if h > 5.0:  # First floor Pasadizo
+                ry = oy + 1.8 * scale
+            else:        # Third floor Pasadizo
+                ry = oy + 7.8 * scale
+        elif name == "Escalera":
+            rx = ox + 1.8 * scale
+            ry = oy + 7.3 * scale
+        elif name == "Dormitorio Principal":
+            ry = oy + 0.8 * scale
+        elif name == "Dormitorio 3":
+            ry = oy + 4.5 * scale
+        elif name == "Sala / Hall":
+            ry = oy + 4.5 * scale
+        elif name == "Bano":
+            # For second and third floor bathrooms
+            ry = oy + 7.8 * scale
+        elif name == "Dormitorio 4":
+            ry = oy + 2.8 * scale
+        elif name == "Dormitorio 5":
+            ry = oy + 2.8 * scale
+
+        add_text(msp, name, rx, ry, 0.16, "ARQ_TEXTOS")
 
 
 def draw_architecture(msp, layout, ox, oy, scale=1.0):
@@ -388,7 +422,22 @@ def render_pdf(dxf_path, pdf_path):
     from ezdxf.addons.drawing import RenderContext, Frontend
     from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
 
+    print(f"Renderizando PDF con matplotlib: '{pdf_path}'...")
     doc = ezdxf.readfile(dxf_path)
+    msp = doc.modelspace()
+    
+    fig = plt.figure(figsize=(11.69, 8.27))  # A4 horizontal
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.axis('off')
+    
+    ctx = RenderContext(doc)
+    out = MatplotlibBackend(ax)
+    Frontend(ctx, out).draw_layout(msp, finalize=True)
+    
+    fig.savefig(pdf_path, dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.close(fig)
+    print("¡Renderizado PDF completado con éxito!")
+
 def main():
     parser = argparse.ArgumentParser(description="Genera overlays electricos residenciales sobre layouts arquitectonicos")
     parser.add_argument("--electrical", required=True)
