@@ -17,40 +17,41 @@ python3 herramientas/pipeline_automatizado.py \
   --output-dir resultados/
 
 # O paso a paso:
-python3 herramientas/calculos-electricos-vivienda/scripts/generar_bom.py \
+python3 herramientas/calculos-electricos-vivienda/scripts/calcular_instalacion.py \
   --input data/proyecto.json --output output/
 ```
 
 ---
 
-## Herramientas
+## Cotización
 
-### `buscador_precios.py` — Buscador de precios en línea
+Todas las herramientas de cotización están en `herramientas/cotizacion/`:
 
-Genera tabla comparativa con enlaces a Sodimac, Promart, MercadoLibre, Maestro, Google.
-
-```bash
-# Tabla con enlaces directos
-python3 buscador_precios.py --bom output/bom.json --output comparativa
-
-# Asignar precios manuales (se guardan en cache)
-python3 buscador_precios.py --precio "cable TW 2.5mm2=12.50" --precio "ITM 2P 20A=45.00"
-
-# Busqueda automatica via Google API
-python3 buscador_precios.py --bom output/bom.json \
-  --google-api-key AIza... --google-cx 123...
-
-# Actualizar BOM con los precios encontrados
-python3 buscador_precios.py --bom output/bom.json --actualizar output/bom.json
-```
-
-### `generar_cotizacion.py` — Cotización formal
-
-Genera cotización formateada (HTML imprimible + LaTeX) con subtotal, mano de obra (40%), IGV (18%) y total.
+| Herramienta | Descripción |
+|-------------|-------------|
+| `buscador_precios.py` | Busca y asigna precios de materiales (enlaces + cache + Google API) |
+| `generar_cotizacion.py` | Genera cotización formal HTML/LaTeX |
 
 ```bash
-python3 generar_cotizacion.py --bom output/bom.json --cliente "Juan Perez" --output cotizacion
+# Ir al directorio de cotización
+cd herramientas/cotizacion/
+
+# 1. Asignar precios manuales
+python3 buscador_precios.py --precio "cable TW 2.5mm2=12.50" --precio "ITM 2P 20A=89.00"
+
+# 2. Buscar precios para todo el BOM
+python3 buscador_precios.py --bom ../../output/bom.json --output ../../output/comparativa
+
+# 3. Actualizar BOM con los precios
+python3 buscador_precios.py --bom ../../output/bom.json --actualizar ../../output/bom.json
+
+# 4. Generar cotización
+python3 generar_cotizacion.py --bom ../../output/bom.json \
+  --cliente "Juan Perez" --empresa "Mi Empresa" \
+  --output ../../output/cotizacion
 ```
+
+Ver `herramientas/cotizacion/README.md` para el flujo completo y todas las opciones.
 
 ### `generar_unifilar.py` — Diagrama unifilar
 
@@ -108,8 +109,10 @@ Ver secciones abajo para compilación LaTeX y detalles de cada proyecto.
 ```
 ├── herramientas/
 │   ├── pipeline_automatizado.py       # Orquestador maestro
-│   ├── buscador_precios.py            # Buscador de precios en linea
-│   ├── generar_cotizacion.py          # Generador de cotizaciones
+│   ├── cotizacion/
+│   │   ├── README.md                  # Documentacion de cotizacion
+│   │   ├── buscador_precios.py        # Buscador de precios en linea
+│   │   └── generar_cotizacion.py      # Generador de cotizaciones
 │   ├── calculadora-instalacion-casa.html  # Calculadora HTML interactiva
 │   ├── ia-cad-casas/scripts/
 │   │   ├── generar_unifilar.py        # Diagrama unifilar DXF/PDF
