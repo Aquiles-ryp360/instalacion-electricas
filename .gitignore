@@ -63,4 +63,9 @@ proyecto_vivienda_unifamiliar_por_RENZO/build/*.out
 proyecto_vivienda_unifamiliar_por_RENZO/build/*.toc
 proyecto_vivienda_unifamiliar_por_RENZO/build/*.synctex.gz
 
+# Git worktrees for branches as folders
+proyecto_vivienda_unifamiliar_por_RENZO/rama-laptop-coordinacion/
+proyecto_vivienda_unifamiliar_por_RENZO/rama-tablet-redaccion/
+proyecto_vivienda_unifamiliar_por_RENZO/rama-celular-investigacion/
+
 
