@@ -1,56 +1,56 @@
-# LaTeX auxiliary files (recursive)
-**/*.aux
-**/*.log
-**/*.out
-**/*.toc
-**/*.lot
-**/*.lof
-**/*.fls
-**/*.fdb_latexmk
-**/*.synctex.gz
-**/*.pdf.bak
-**/*.dxf.bak
+# Resultados reproducibles
+/build/
+**/build/
+**/dist/
+**/output/
+**/salidas/
+**/temp/
+**/tmp/
 
-# Keep compiled final PDFs in build directories if explicitly needed
-# But standard practice is to only version final deliverables in specific folders
-!**/build/main.pdf
-!**/main.pdf
+# Fuentes pesadas o privadas disponibles solo en la maquina de trabajo
+/referencias/local/
+/proyectos/*/fuentes/local/
 
-# Raw source archives copied locally
-S.U. ARICATO_PHRA-SANDIA.rar
+# LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
 
-# Office and AutoCAD temporary files
+# Python
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Cache y evidencias de consultas web
+**/.cache/
+**/cache/
+**/evidencias/*.json
+!proyectos/*/presupuesto/evidencias/manifest.json
+
+# Temporales de Office y CAD
 ~$*
 *.bak
 *.dwl
 *.dwl2
 plot.log
-*~
 \#*
-**/*~
-**/#*
+*~
 
-# QCAD and other editor backup files
-*.dxf~
-**/*.dxf~
-**/*.~dxf
-**/*.dwg~
-**/*.~dwg
+# Sistemas operativos y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
 
-# Python virtual environments and cache
-venv/
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Temporary rendering folders
-herramientas/simbologia-ia/temp/
-proyecto_vivienda_unifamiliar_por_RENZO/electricos/temp/
-proyecto_vivienda_unifamiliar_por_RENZO/electricos/salidas/
-
-# Worktree directories
-/rama-laptop-coordinacion/
-/rama-tablet-redaccion/
-/rama-celular-investigacion/
+# Configuracion local de asistentes y agentes
+.gemini/
+.claude/
+.codex/
