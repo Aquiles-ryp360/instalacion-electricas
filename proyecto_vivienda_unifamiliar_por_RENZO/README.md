@@ -35,7 +35,7 @@ El repositorio ha sido reorganizado y optimizado bajo estándares de nivel consu
 Para compilar todo el expediente técnico (incluyendo renders de planos CAD, generación de tablas de metrados en LaTeX y el PDF final compilado con todas sus referencias cruzadas), ejecuta el script orquestador:
 
 ```powershell
-python scripts/compile_expediente.py
+python scripts/build_project.py
 ```
 
 Este comando automatiza secuencialmente:
@@ -89,7 +89,7 @@ proyecto_vivienda_unifamiliar_por_RENZO/
 ├── partidas/                                    # Especificaciones técnicas de partidas LaTeX
 ├── presupuesto/                                 # Tablas de costos y APU en LaTeX
 ├── scripts/                                     # Scripts de automatización y compilación
-│   ├── compile_expediente.py                    # Orquestador del pipeline completo
+│   ├── build_project.py                         # Orquestador del pipeline completo
 │   ├── generate_electrical_drawings.py          # Generador de planos eléctricos e imágenes
 │   └── ...
 ├── src/                                         # Código fuente modular en Python
