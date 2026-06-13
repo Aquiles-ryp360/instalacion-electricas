@@ -12,11 +12,11 @@ except ImportError:
     sys.exit(1)
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-layouts_dir = os.path.join(base_dir, "layouts")
-planos_cad_dir = os.path.join(base_dir, "planos_cad")
-planos_electricos_dir = os.path.join(base_dir, "planos_electricos")
-diagramas_dir = os.path.join(base_dir, "diagramas")
-planos_report_dir = os.path.join(base_dir, "planos")
+layouts_dir = os.path.join(base_dir, "datos_diseno", "layouts")
+planos_cad_dir = os.path.join(base_dir, "06_planos", "fuentes")
+planos_electricos_dir = os.path.join(base_dir, "06_planos", "entregables", "dxf")
+diagramas_dir = os.path.join(base_dir, "06_planos", "diagramas")
+planos_report_dir = os.path.join(base_dir, "06_planos", "entregables", "pdf")
 
 os.makedirs(planos_electricos_dir, exist_ok=True)
 os.makedirs(diagramas_dir, exist_ok=True)

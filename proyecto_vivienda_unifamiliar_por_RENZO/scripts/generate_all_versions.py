@@ -5,7 +5,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.dirname(script_dir)
 base_dir = os.path.dirname(project_dir)
 layouts_dir = os.path.join(project_dir, "datos_diseno", "layouts")
-planos_cad_dir = os.path.join(project_dir, "planos", "fuentes")
+planos_cad_dir = os.path.join(project_dir, "06_planos", "fuentes")
 generator_script = os.path.join(base_dir, "herramientas", "ia-cad-casas", "scripts", "dxf_generator.py")
 
 os.makedirs(planos_cad_dir, exist_ok=True)
