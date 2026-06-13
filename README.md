@@ -39,10 +39,12 @@ Pipeline nativo y expediente de Renzo:
 
 ```bash
 python3 herramientas/pipeline_automatizado.py --proyecto renzo
-# equivalente: cd proyectos/renzo && python3 scripts/build_project.py
+# equivalente: cd proyectos/renzo && python3 scripts/construir_expediente.py
 ```
 
-Las ejecuciones generales escriben en `build/<proyecto>/`. Renzo compila temporalmente en `proyectos/renzo/build/`; el PDF revisado se publica en `proyectos/renzo/entregables/expediente.pdf`.
+Todas las ejecuciones escriben resultados regenerables en `build/<proyecto>/`.
+En Renzo, el PDF temporal queda en `build/renzo/expediente/main.pdf`; la
+version revisada se publica en `proyectos/renzo/entregables/expediente.pdf`.
 
 ## Flujo esperado
 

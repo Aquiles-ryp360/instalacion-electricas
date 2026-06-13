@@ -11,7 +11,9 @@ Trabaja desde `proyecto.yaml` y las entradas canónicas del proyecto. No deduzca
 - `diseno-electrico/datos/`: elementos y circuitos eléctricos estructurados.
 - `datos/`: parámetros de cálculo y otras entradas del pipeline.
 - `documentacion/`: decisiones, supuestos y revisión técnica.
+- `expediente/`: fuentes editables del documento tecnico.
 - `entregables/`: archivos aprobados para compartir.
+- `archivo/`: antecedentes que no deben usarse como entrada activa.
 - `build/`: resultados regenerables; nunca tratarlos como fuente.
 - `referencias/local/`: material pesado o restringido; puede no existir en otro clon.
 
@@ -22,8 +24,9 @@ Trabaja desde `proyecto.yaml` y las entradas canónicas del proyecto. No deduzca
 3. Incluir unidad, fuente, estado y nivel de confianza en datos extraídos por IA.
 4. No modificar las fuentes para que coincidan con una interpretación.
 5. No publicar automáticamente en `entregables/`; primero generar en `build/` y revisar.
-6. Mantener las herramientas genéricas. Los nombres, rutas y parámetros de un proyecto pertenecen a `proyectos/<id>/`.
-7. Ejecutar pruebas y registrar cualquier parte que no se pudo validar.
+6. No usar archivos de `archivo/` para producir resultados vigentes.
+7. Mantener las herramientas genéricas. Los nombres, rutas y parámetros de un proyecto pertenecen a `proyectos/<id>/`.
+8. Ejecutar pruebas y registrar cualquier parte que no se pudo validar.
 
 ## Secuencia mínima
 

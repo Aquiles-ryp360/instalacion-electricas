@@ -11,16 +11,19 @@ ubicacion:
   direccion: "Jr. Lima S/N"
 
 entradas:
-  configuracion: config/proyecto.yaml
-  modelo_electrico: datos_diseno/modelo_electrico/instalaciones_electricas_nueva.json
-  layouts: datos_diseno/layouts
+  configuracion: datos/parametros-proyecto.yaml
+  modelo_electrico: diseno-electrico/datos/modelo-electrico.json
+  layouts:
+    - arquitectura/datos/piso-1.json
+    - arquitectura/datos/piso-2.json
+    - arquitectura/datos/piso-3.json
 
 automatizacion:
   pipeline_habilitado: true
-  script_nativo: scripts/build_project.py
+  script_nativo: scripts/construir_expediente.py
   requiere_revision_humana: true
 
 entregables:
   directorio: entregables
   expediente: entregables/expediente.pdf
-  planos: 06_planos/entregables
+  planos: entregables/planos

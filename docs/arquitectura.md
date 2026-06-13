@@ -22,10 +22,19 @@ diseno-electrico/datos/
 datos/
 documentacion/
 entregables/
-scripts/          solo extensiones realmente específicas
+expediente/        cuando el proyecto tenga fuentes de un documento tecnico
+archivo/           material historico fuera del flujo activo
+scripts/           solo extensiones realmente especificas
+tests/             pruebas propias del proyecto
 ```
 
 `proyecto.yaml` es el punto de entrada. Declara identidad, estado, rutas canónicas, automatización disponible y entregables publicados.
+
+Una carpeta de proyecto no debe mezclar simultaneamente una estructura por
+capitulos (`01_...`, `02_...`) con otra estructura por responsabilidad. Los
+capitulos pertenecen dentro de `expediente/`; las hojas de calculo publicadas
+pertenecen en `entregables/`; y las iteraciones antiguas pertenecen en
+`archivo/`.
 
 ## Herramientas
 
@@ -44,4 +53,6 @@ Un proyecto con un formato CAD especial puede declarar `automatizacion.cad_perso
 
 ## Salidas
 
-`build/<id>/` contiene la ejecución actual y está ignorado por Git. `entregables/` contiene únicamente resultados revisados que sí se desea versionar.
+`build/<id>/` contiene la ejecución actual y está ignorado por Git.
+`entregables/` contiene unicamente resultados revisados que si se desea
+versionar. Los scripts nunca deben escribir directamente en `entregables/`.

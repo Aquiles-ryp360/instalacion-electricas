@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - 2026-06-13
+### Changed
+- Se separaron fuentes, datos canonicos, expediente, documentacion,
+  entregables e historial.
+- El pipeline usa tres layouts activos y un unico modelo electrico canonico.
+- Los resultados regenerables se escriben en `build/renzo/`.
+- Las fuentes LaTeX se trasladaron a `expediente/`.
+- Las iteraciones `v1`, `v2` y `v3` se aislaron en `archivo/`.
+
+### Removed
+- Duplicados DXF/PDF/SVG y la carpeta `dwg/` que contenia archivos DXF.
+- El paquete Python vacio y configuracion de empaquetado sin implementacion.
+- Tres copias identicas del modelo electrico historico.
+
 ## [2.1.0] - 2026-06-12
 ### Added
 - Integrated pytest test suite under `/tests` to validate electrical engineering formulas, including CNE-U 050-200 demand, voltage drop calculations, ITM sizing, and budgeting.
