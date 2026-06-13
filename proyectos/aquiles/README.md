@@ -21,4 +21,14 @@ python3 herramientas/pipeline_automatizado.py --proyecto aquiles
 python3 proyectos/aquiles/scripts/generar-metrados.py
 ```
 
+Documentos LaTeX principales:
+
+```text
+expediente/main.tex                         expediente integral
+expediente/especificaciones_tecnicas_acu.tex especificaciones y ACU solicitados en clase
+```
+
+La auditoria del borrador rapido y las decisiones de correccion estan en
+`documentacion/auditoria-especificaciones-acu-2026-06-13.md`.
+
 El CAD automático usa actualmente el primer piso como plano primario. El segundo piso sigue disponible como entrada canónica y debe procesarse o revisarse por separado antes de publicar una nueva entrega.

@@ -1,80 +1,265 @@
-\chapter*{ESPECIFICACIONES DE MONTAJE}
-\addcontentsline{toc}{chapter}{ESPECIFICACIONES DE MONTAJE}
+\chapter*{EJECUCION DE PARTIDAS Y ANALISIS DE COSTOS UNITARIOS}
+\addcontentsline{toc}{chapter}{EJECUCION DE PARTIDAS Y ANALISIS DE COSTOS UNITARIOS}
 
 % Reinicio de contadores para numeracion coherente con el capitulo 4.
 \setcounter{section}{0}
 \renewcommand{\thesection}{4.\arabic{section}.}
 \renewcommand{\thesubsection}{4.\arabic{section}.\arabic{subsection}.}
-\renewcommand{\thesubsubsection}{4.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
-\renewcommand{\theHsection}{montaje.\arabic{section}}
-\renewcommand{\theHsubsection}{montaje.\arabic{section}.\arabic{subsection}}
-\renewcommand{\theHsubsubsection}{montaje.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\renewcommand{\theHsection}{partidas.\arabic{section}}
+\renewcommand{\theHsubsection}{partidas.\arabic{section}.\arabic{subsection}}
 
-\section{INSTALACION DE CANALIZACIONES}
+\section{ALCANCE Y FUENTES DEL ANALISIS}
 
-\subsection{TUBERIAS EMPOTRADAS EN MUROS Y COLUMNAS}
-Para la instalacion de tuberias en muros de ladrillo se deberan seguir las siguientes pautas constructivas:
-\begin{itemize}
-  \item \textbf{Canaleteado:} Las canaletas se ejecutaran utilizando amoladora con disco de corte para ladrillo y martillo/cincel, prohibiendose el uso de herramientas pesadas que comprometan la estabilidad estructural del muro.
-  \item \textbf{Profundidad:} Las tuberias deben quedar recubiertas con una capa minima de \(15\text{ mm}\) de mortero o tarrajeo para evitar fisuras.
-  \item \textbf{Curvas:} Se emplearan curvas de fabrica de \(90^\circ\) unidas con pegamento PVC, limitando el numero a un maximo de 3 curvas de \(90^\circ\) entre caja y caja.
-\end{itemize}
+Los analisis de costos unitarios (ACU) de este capitulo son una base academica para
+explicar la ejecucion de las partidas. No constituyen una cotizacion de obra ni una
+orden de compra. Los metrados proceden de
+\texttt{presupuesto/bom\_final\_aquiles.json} y de los datos electricos canonicos de
+los pisos 1 y 2. Los precios de materiales se tomaron del presupuesto fechado el 8 de
+junio de 2026; cada recurso se identifica como verificado (V) o estimado (E).
 
-\subsection{TUBERIAS EN LOSAS DE CONCRETO}
-\begin{itemize}
-  \item Las tuberias se fijaran firmemente sobre la malla de acero de refuerzo antes del vaciado del concreto, empleando alambre galvanizado.
-  \item Se evitaran cruces de tuberias en zonas de alta concentracion de esfuerzos como encuentros de vigas y columnas.
-  \item Todas las uniones seran verificadas para asegurar hermeticidad frente a la lechada de cemento durante el vaciado.
-\end{itemize}
-
-\section{INSTALACION DE CAJAS Y ALTURAS REGLAMENTARIAS}
-
-Las cajas de salida e interruptores deben quedar perfectamente niveladas y enrasadas con el tarrajeo o acabado definitivo del muro (tolerancia maxima de embutido de \(6\text{ mm}\)). Se definen las siguientes alturas de montaje medidas desde el nivel de piso terminado (N.P.T.) al eje de la caja:
+Para mano de obra se adopta, solo con fines academicos, un jornal de S/ 80.00 para
+tecnico electricista y S/ 60.00 para ayudante. Las herramientas menores equivalen al
+5\% de la mano de obra directa. Los costos no incluyen gastos generales, utilidad,
+IGV, transporte extraordinario ni trabajos civiles ajenos a la partida.
 
 \begin{center}
-\begin{tabular}{l c l}
+\small
+\begin{tabularx}{\textwidth}{p{0.24\textwidth} L}
 \toprule
-\textbf{Dispositivo / Salida} & \textbf{Altura (m)} & \textbf{Observaciones} \\
+\textbf{Clave} & \textbf{Significado} \\
 \midrule
-Tablero General (TG) & 1.50 m & Medido al borde superior del gabinete \\
-Tablero de Distribucion T2 & 1.50 m & En segundo piso \\
-Interruptores de pared & 1.20 m & Cerca de las puertas, lado opuesto a bisagras \\
-Tomacorrientes generales & 0.30 m & Bipolar doble con linea de tierra \\
-Tomacorrientes sobre mesa & 1.10 m & En cocina amplia y zona de servicio \\
-Tomacorrientes de bano & 1.10 m & Protegido contra salpicaduras \\
-Cajas de paso & 1.80 m o techo & Ubicaciones accesibles para registro \\
-Centros de alumbrado & Techo / Losa & Centrados en los ambientes \\
+V & Precio comercial con evidencia o enlace registrado el 8 de junio de 2026. \\
+E & Precio o rendimiento academico estimado; debe cotizarse antes de comprar o contratar. \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
-\section{CABLEADO Y CONEXIONADO}
+\section{METRADO BASE CONCILIADO}
 
-El paso de los conductores por el interior de las tuberias se realizara una vez concluido el tarrajeo de muros, vaciado de techos y cuando la obra civil este completamente seca.
-\begin{itemize}
-  \item \textbf{Guia de traccion:} Se utilizara cinta guia (wincha de acero o nylon) introduciendo los cables en un solo sentido sin realizar esfuerzos excesivos que puedan danar el aislamiento.
-  \item \textbf{Lubricacion:} Se utilizara exclusivamente talco industrial o estearina como lubricante de arrastre. Queda prohibido el uso de grasas, aceites o jabon comercial.
-  \item \textbf{Empalmes:} Se realizaran unicamente dentro de las cajas de paso u octogonales. Los empalmes se haran mediante uniones firmes soldadas o con conectores a presion, aislados con cinta vulcanizada y protegidos exteriormente con cinta aislante de PVC.
-\end{itemize}
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{L c r L}
+\toprule
+\textbf{Partida o recurso} & \textbf{Unidad} & \textbf{Cantidad} & \textbf{Observacion} \\
+\midrule
+Tuberia PVC SAP de circuitos C1 a C8 & m & 152 & Suma de 16, 20, 11, 24, 28, 22, 16 y 15 m. \\
+Conductores de circuitos C1 a C8 & m & 306 & 262 m de 2.5 mm\(^2\) y 44 m de C6. \\
+Salidas de alumbrado & pto & 15 & 4 en C1 y 11 en C4. \\
+Tomacorrientes generales & pto & 19 & 7 en C2 y 12 en C5. \\
+Salidas especiales & pto & 6 & C3: 1; C6: 3; C7: 1; C8: 1. \\
+Alimentador principal & m & 40 & Metrado de conductores de 16 mm\(^2\), denominacion monofasica. \\
+Canalizacion del alimentador principal & m & 13 & PVC SAP de 40 mm, preliminar. \\
+Alimentador TG--T2 & m & 75 & Tres conductores de 10 mm\(^2\), recorrido estimado de 25 m. \\
+Canalizacion TG--T2 & m & 25 & PVC SAP de 32 mm, preliminar. \\
+Tableros TG y T2 & und & 2 & Capacidad modular pendiente de cierre con unifilar. \\
+Sistema de puesta a tierra & cj & 1 & Incluye electrodo, registro, conexion y medicion. \\
+\bottomrule
+\end{tabularx}
+\end{center}
 
-\section{CONSTRUCCION DEL POZO DE PUESTA A TIERRA}
+La version rapida revisada indicaba 190 m de canalizacion y cinco salidas especiales.
+Esas cantidades no se reproducen porque no coinciden con el BOM: la suma conciliada es
+152 m para C1 a C8 y seis salidas especiales. El tubo de C6 se especifica en 32 mm para
+el escenario de conductor de 10 mm\(^2\); este cambio debe reflejarse en la proxima
+regeneracion del presupuesto.
 
-El pozo de puesta a tierra vertical se ejecutara de acuerdo a las siguientes especificaciones constructivas:
+\section{SECUENCIA GENERAL DE EJECUCION}
+
 \begin{enumerate}
-  \item \textbf{Excavacion:} Se realizara una excavacion cilindrica o cuadrada de \(0.80\text{ m}\) de diametro y una profundidad minima de \(2.60\text{ m}\).
-  \item \textbf{Preparacion del terreno:} El terreno extraido se cernira y mezclara con aditivos quimicos conductivos (dosis de gel o sales especiales) para reducir la resistencia especifica del suelo.
-  \item \textbf{Instalacion del electrodo:} Se colocara la varilla de copperweld de \(3/4'' \times 2.40\text{ m}\) de forma perfectamente vertical en el centro del pozo.
-  \item \textbf{Relleno y compactacion:} Se rellenara el pozo compactando la tierra tratada por capas de \(0.30\text{ m}\), humedeciendo abundantemente cada capa.
-  \item \textbf{Conexion:} El conductor de cobre desnudo de \(10\text{ mm}^2\) se unira a la varilla mediante una abrazadera de bronce tipo perno en U.
-  \item \textbf{Caja de registro:} En la parte superior se colocara una caja de concreto prefabricada con tapa, la cual albergara la conexion y permitira realizar las mediciones del protocolo de pruebas.
+  \item Revisar planos, cuadro de cargas, unifilar, metrados y fichas tecnicas. Cerrar
+  las cargas de cocina, lavadora y bomba antes de comprar protecciones o tomas.
+  \item Replantear tableros, cajas, rutas y alturas; coordinar interferencias con
+  arquitectura, estructura y redes sanitarias.
+  \item Ejecutar picado, cajas y canalizaciones. Inspeccionar y probar con guia antes
+  del resane o vaciado.
+  \item Tender, identificar y conectar conductores con la obra civil seca.
+  \item Instalar tableros, protecciones y sistema de puesta a tierra conforme al
+  unifilar aprobado.
+  \item Ejecutar pruebas, corregir observaciones, actualizar planos conforme a obra y
+  emitir el protocolo de puesta en servicio.
 \end{enumerate}
 
-\section{PRUEBAS DE PUESTA EN SERVICIO}
+\section{ACU-01: CANALIZACION PVC SAP 20 MM EMPOTRADA}
 
-Una vez terminada la instalacion, el contratista o estudiante realizara las siguientes pruebas en presencia del supervisor:
-\begin{itemize}
-  \item \textbf{Prueba de continuidad:} Verificacion de la continuidad electrica en todos los circuitos de alumbrado y conductores de puesta a tierra.
-  \item \textbf{Medicion de aislamiento:} Utilizando un megometro de 500 V DC, se medira la resistencia de aislamiento entre conductores activos y entre conductor activo y tierra. Los valores deben ser superiores a 1.0 M\(\Omega\).
-  \item \textbf{Medicion de la puesta a tierra:} Utilizando un telurimetro, se medira la resistencia del pozo a tierra mediante el metodo de caida de potencial, la cual debe arrojar un valor menor a 15 Ohmios.
-  \item \textbf{Prueba de disparo diferencial:} Verificacion del funcionamiento de los interruptores diferenciales mediante el boton de prueba (Test) integrado.
-\end{itemize}
+\textbf{Unidad:} m. \textbf{Rendimiento:} 16 m/dia por cuadrilla.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.16\textwidth} L r r r c}
+\toprule
+\textbf{Tipo} & \textbf{Recurso} & \textbf{Cantidad} & \textbf{P.U. S/} & \textbf{Parcial S/} & \textbf{Base} \\
+\midrule
+Material & Tubo PVC SAP electrico 20 mm & 1.05 m & 1.97 & 2.07 & V \\
+Material & Union PVC SAP 20 mm & 0.35 und & 1.10 & 0.39 & V \\
+Material & Curva PVC SAP 20 mm & 0.10 und & 2.20 & 0.22 & V \\
+Material & Adhesivo y consumibles & 1 glb & 0.15 & 0.15 & E \\
+M.O. & Tecnico electricista & 0.0625 jor & 80.00 & 5.00 & E \\
+M.O. & Ayudante & 0.0625 jor & 60.00 & 3.75 & E \\
+Equipo & Herramientas menores, 5\% M.O. & 1 glb & 0.44 & 0.44 & E \\
+\midrule
+\multicolumn{4}{r}{\textbf{Costo unitario directo}} & \textbf{S/ 12.02} & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Incluye replanteo, picado, instalacion, fijacion, resane basico, limpieza y prueba con
+guia. No incluye cajas, conductores ni acabados especiales.
+
+\section{ACU-02: CABLEADO 2X2.5 MM\texorpdfstring{$^2$}{2} + PE 2.5 MM\texorpdfstring{$^2$}{2}}
+
+\textbf{Unidad:} m de recorrido. \textbf{Rendimiento:} 40 m/dia por cuadrilla.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.16\textwidth} L r r r c}
+\toprule
+\textbf{Tipo} & \textbf{Recurso} & \textbf{Cantidad} & \textbf{P.U. S/} & \textbf{Parcial S/} & \textbf{Base} \\
+\midrule
+Material & Conductor THW 2.5 mm\(^2\), tres conductores y 5\% de reserva & 3.15 m & 2.10 & 6.62 & V \\
+Material & Identificacion y terminales ordinarios & 1 glb & 0.15 & 0.15 & E \\
+M.O. & Tecnico electricista & 0.025 jor & 80.00 & 2.00 & E \\
+M.O. & Ayudante & 0.025 jor & 60.00 & 1.50 & E \\
+Equipo & Herramientas menores, 5\% M.O. & 1 glb & 0.18 & 0.18 & E \\
+\midrule
+\multicolumn{4}{r}{\textbf{Costo unitario directo}} & \textbf{S/ 10.45} & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+El ACU corresponde a un recorrido con fase, neutro y PE. Los retornos de alumbrado,
+alimentadores y circuitos de seccion diferente se analizan por separado.
+
+\section{ACU-03: SALIDA DE ALUMBRADO SIMPLE}
+
+\textbf{Unidad:} pto. \textbf{Rendimiento:} 6 puntos/dia por cuadrilla.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.16\textwidth} L r r r c}
+\toprule
+\textbf{Tipo} & \textbf{Recurso} & \textbf{Cantidad} & \textbf{P.U. S/} & \textbf{Parcial S/} & \textbf{Base} \\
+\midrule
+Material & Caja octogonal & 1 und & 1.90 & 1.90 & V \\
+Material & Caja rectangular & 1 und & 1.90 & 1.90 & V \\
+Material & Interruptor simple y placa & 1 und & 5.90 & 5.90 & E \\
+Material & Luminaria LED plafon 18 W & 1 und & 20.00 & 20.00 & E \\
+Material & Conectores y accesorios & 1 glb & 2.00 & 2.00 & E \\
+M.O. & Tecnico electricista & 0.15 jor & 80.00 & 12.00 & E \\
+M.O. & Ayudante & 0.15 jor & 60.00 & 9.00 & E \\
+Equipo & Herramientas menores, 5\% M.O. & 1 glb & 1.05 & 1.05 & E \\
+\midrule
+\multicolumn{4}{r}{\textbf{Costo unitario directo}} & \textbf{S/ 53.75} & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+No incluye tuberia ni conductores, ya valorados en ACU-01 y ACU-02. Para puntos
+conmutados se sustituira el interruptor y se agregaran los conductores de control.
+
+\section{ACU-04: TOMACORRIENTE DOBLE 2P+T 16 A}
+
+\textbf{Unidad:} pto. \textbf{Rendimiento:} 8 puntos/dia por cuadrilla.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.16\textwidth} L r r r c}
+\toprule
+\textbf{Tipo} & \textbf{Recurso} & \textbf{Cantidad} & \textbf{P.U. S/} & \textbf{Parcial S/} & \textbf{Base} \\
+\midrule
+Material & Tomacorriente doble 2P+T 16 A y placa & 1 und & 19.49 & 19.49 & V \\
+Material & Caja rectangular & 1 und & 1.90 & 1.90 & V \\
+Material & Terminales y accesorios & 1 glb & 1.50 & 1.50 & E \\
+M.O. & Tecnico electricista & 0.10 jor & 80.00 & 8.00 & E \\
+M.O. & Ayudante & 0.10 jor & 60.00 & 6.00 & E \\
+Equipo & Herramientas menores, 5\% M.O. & 1 glb & 0.70 & 0.70 & E \\
+\midrule
+\multicolumn{4}{r}{\textbf{Costo unitario directo}} & \textbf{S/ 37.59} & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+No incluye tuberia ni conductores. La valorizacion exige prueba de polaridad y
+continuidad del conductor PE.
+
+\section{ACU-05: SISTEMA DE PUESTA A TIERRA VERTICAL}
+
+\textbf{Unidad:} cj. \textbf{Rendimiento:} 1 conjunto/dia por cuadrilla, sin considerar
+condiciones extraordinarias de suelo.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.16\textwidth} L r r r c}
+\toprule
+\textbf{Tipo} & \textbf{Recurso} & \textbf{Cantidad} & \textbf{P.U. S/} & \textbf{Parcial S/} & \textbf{Base} \\
+\midrule
+Material & Varilla cobreada 5/8 pulg x 2.40 m & 1 und & 25.00 & 25.00 & E \\
+Material & Conductor de cobre 10 mm\(^2\) & 10 m & 3.50 & 35.00 & E \\
+Material & Caja de registro con tapa & 1 und & 35.00 & 35.00 & E \\
+Material & Conector certificado para varilla & 1 und & 18.00 & 18.00 & V \\
+Material & Tratamiento y consumibles & 1 glb & 60.00 & 60.00 & E \\
+M.O. & Tecnico electricista & 1.00 jor & 80.00 & 80.00 & E \\
+M.O. & Ayudante & 1.00 jor & 60.00 & 60.00 & E \\
+Equipo & Medicion con telurimetro & 1 glb & 80.00 & 80.00 & E \\
+Equipo & Herramientas menores, 5\% M.O. & 1 glb & 7.00 & 7.00 & E \\
+\midrule
+\multicolumn{4}{r}{\textbf{Costo unitario directo}} & \textbf{S/ 400.00} & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+La cantidad de conductor se ajustara a la distancia real entre electrodo y tablero. La
+partida solo se acepta con protocolo de medicion y resistencia no mayor de 25
+\(\Omega\).
+
+\section{ACU-06: PRUEBAS Y PUESTA EN SERVICIO}
+
+\textbf{Unidad:} glb. \textbf{Rendimiento:} 1 instalacion/dia.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.16\textwidth} L r r r c}
+\toprule
+\textbf{Tipo} & \textbf{Recurso} & \textbf{Cantidad} & \textbf{P.U. S/} & \textbf{Parcial S/} & \textbf{Base} \\
+\midrule
+Equipo & Uso de megometro, multimetro y telurimetro & 1 glb & 80.00 & 80.00 & E \\
+Material & Etiquetas, formatos y consumibles & 1 glb & 15.00 & 15.00 & E \\
+M.O. & Tecnico electricista & 0.50 jor & 80.00 & 40.00 & E \\
+M.O. & Ayudante & 0.50 jor & 60.00 & 30.00 & E \\
+Equipo & Herramientas menores, 5\% M.O. & 1 glb & 3.50 & 3.50 & E \\
+\midrule
+\multicolumn{4}{r}{\textbf{Costo unitario directo}} & \textbf{S/ 168.50} & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{CRITERIO DE VALORIZACION}
+
+Los ACU anteriores no deben sumarse directamente usando cantidades de ``puntos
+completos'' que vuelvan a incluir tuberia y conductores. La valorizacion se preparara
+con partidas no superpuestas: canalizacion por metro, cableado por metro de recorrido,
+dispositivos por punto, tableros por unidad, puesta a tierra por conjunto y pruebas en
+forma global.
+
+El costo de tableros y salidas especiales queda pendiente de cierre porque el proyecto
+aun debe confirmar las cargas de cocina, lavadora y bomba, la agrupacion de
+diferenciales, la corriente nominal aguas arriba y la capacidad modular del gabinete.
+Publicar un costo cerrado con los actuales tableros de 8 polos daria una precision
+aparente y tecnicamente incorrecta.
+
+\section{CONTROL DE CALIDAD Y CONFORMIDAD}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.25\textwidth} L}
+\toprule
+\textbf{Control} & \textbf{Criterio de aceptacion} \\
+\midrule
+Canalizaciones & Sin obstrucciones, aplastamientos ni afectacion estructural; cajas accesibles y alineadas. \\
+Cableado & Aislamiento integro, colores identificados, empalmes solo en cajas y continuidad de PE. \\
+Tomacorrientes & Polaridad correcta, tierra operativa, placa firme y proteccion diferencial asociada. \\
+Tableros & Unifilar aprobado, reserva modular, rotulado, neutro y PE separados, diferenciales coordinados. \\
+Puesta a tierra & Conexion accesible y resistencia medida no mayor de 25 \(\Omega\). \\
+Pruebas & Protocolos completos, instrumentos identificados y observaciones cerradas. \\
+\bottomrule
+\end{tabularx}
+\end{center}

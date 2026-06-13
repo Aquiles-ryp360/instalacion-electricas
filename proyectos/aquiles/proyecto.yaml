@@ -23,6 +23,7 @@ automatizacion:
 entregables:
   directorio: entregables
   expediente: entregables/expediente.pdf
+  especificaciones_acu: entregables/especificaciones-tecnicas-acu.pdf
   planos:
     - diseno-electrico/planos/piso-1.pdf
     - diseno-electrico/planos/piso-2.pdf
