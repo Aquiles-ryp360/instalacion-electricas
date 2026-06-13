@@ -1,24 +1,20 @@
-# LaTeX auxiliary files
-latex/build/*.aux
-latex/build/*.log
-latex/build/*.out
-latex/build/*.toc
-latex/build/*.lot
-latex/build/*.lof
-latex/build/*.fls
-latex/build/*.fdb_latexmk
-latex/build/*.synctex.gz
+# LaTeX auxiliary files (recursive)
+**/*.aux
+**/*.log
+**/*.out
+**/*.toc
+**/*.lot
+**/*.lof
+**/*.fls
+**/*.fdb_latexmk
+**/*.synctex.gz
+**/*.pdf.bak
+**/*.dxf.bak
 
-# Keep compiled PDF
-!latex/build/main.pdf
-
-# Avance LaTeX auxiliary files
-avance-capitulos-1-2/latex/build/*.aux
-avance-capitulos-1-2/latex/build/*.log
-avance-capitulos-1-2/latex/build/*.out
-
-# Keep compiled advance PDFs
-!avance-capitulos-1-2/latex/build/*.pdf
+# Keep compiled final PDFs in build directories if explicitly needed
+# But standard practice is to only version final deliverables in specific folders
+!**/build/main.pdf
+!**/main.pdf
 
 # Raw source archives copied locally
 S.U. ARICATO_PHRA-SANDIA.rar
@@ -29,6 +25,17 @@ S.U. ARICATO_PHRA-SANDIA.rar
 *.dwl
 *.dwl2
 plot.log
+*~
+\#*
+**/*~
+**/#*
+
+# QCAD and other editor backup files
+*.dxf~
+**/*.dxf~
+**/*.~dxf
+**/*.dwg~
+**/*.~dwg
 
 # Python virtual environments and cache
 venv/
@@ -38,29 +45,12 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Temporary rendering files
+# Temporary rendering folders
 herramientas/simbologia-ia/temp/
+proyecto_vivienda_unifamiliar_por_RENZO/electricos/temp/
+proyecto_vivienda_unifamiliar_por_RENZO/electricos/salidas/
 
-# AutoCAD temporary / lock files
-\#*
-*~
-
-# Temporary Python scripts (one-off corrections)
-corregir_piso2_v4.py
-
-# Temp rendering outputs (PNG, PDF in temp/)
-**/temp/*.png
-**/temp/*.pdf
-
-# Project LaTeX auxiliary files
-proyecto_vivienda_unifamiliar_por_RENZO/*.aux
-proyecto_vivienda_unifamiliar_por_RENZO/*.log
-proyecto_vivienda_unifamiliar_por_RENZO/*.out
-proyecto_vivienda_unifamiliar_por_RENZO/*.synctex.gz
-proyecto_vivienda_unifamiliar_por_RENZO/build/*.aux
-proyecto_vivienda_unifamiliar_por_RENZO/build/*.log
-proyecto_vivienda_unifamiliar_por_RENZO/build/*.out
-proyecto_vivienda_unifamiliar_por_RENZO/build/*.toc
-proyecto_vivienda_unifamiliar_por_RENZO/build/*.synctex.gz
-
-
+# Worktree directories
+/rama-laptop-coordinacion/
+/rama-tablet-redaccion/
+/rama-celular-investigacion/
