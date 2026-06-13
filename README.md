@@ -4,130 +4,87 @@ Pipeline completo de cálculo → CAD → diagrama unifilar → BOM → cotizaci
 
 ---
 
-## Pipeline Automatizado
+## 🏗️ Estructura del Repositorio
 
-```
-YAML config → Cálculos eléctricos → JSON → DXF/PDF (planos + unifilar) → BOM → Cotización
-```
+El repositorio está organizado de la siguiente manera:
 
-```bash
-# Pipeline completo de un solo paso
-python3 herramientas/pipeline_automatizado.py \
-  --config proyecto.yaml \
-  --output-dir resultados/
-
-# O paso a paso:
-python3 herramientas/calculos-electricos-vivienda/scripts/calcular_instalacion.py \
-  --input data/proyecto.json --output output/
-```
+* **`herramientas/`**: Contiene los motores generales de cálculo y utilidades de automatización:
+  * `pipeline_automatizado.py`: Orquestador maestro para automatizar diseño y cálculos.
+  * `calculadora-instalacion-casa.html`: Calculadora interactiva web para estimar demandas.
+  * `calculos-electricos-vivienda/`: Motor en Python para dimensionamiento bajo el CNE-U.
+  * `ia-cad-casas/`: Scripts para generación de diagramas unifilares y ruteo ortogonal de tuberías.
+  * `cotizacion/`: Scripts para búsqueda de precios de mercado y generación de presupuestos formales.
+* **`proyecto_vivienda_unifamiliar_por_RENZO/`**: Expediente técnico profesional de 3 pisos (LaTeX, cálculos, planos, metrados, presupuestos y pruebas unitarias de Renzo Gabriel Mamani Galindo).
+* **`Avanze-Proyecto-Aquiles/`**: Proyecto académico de vivienda unifamiliar de 2 pisos (Aquiles Ramos).
 
 ---
 
-## Cotización
+## 🚀 Expediente Técnico - Vivienda Unifamiliar 3 Pisos (Renzo)
 
-Todas las herramientas de cotización están en `herramientas/cotizacion/`:
+El proyecto ubicado en [proyecto_vivienda_unifamiliar_por_RENZO/](./proyecto_vivienda_unifamiliar_por_RENZO/) cuenta con una arquitectura de nivel profesional (10/10) que incluye un pipeline automatizado, pruebas unitarias y flujos de CI/CD.
 
-| Herramienta | Descripción |
-|-------------|-------------|
-| `buscador_precios.py` | Busca y asigna precios de materiales (enlaces + cache + Google API) |
-| `generar_cotizacion.py` | Genera cotización formal HTML/LaTeX |
+### Ejecución del Pipeline:
+Para construir todo el expediente de forma automatizada (generar planos DXF de cada piso, diagramas unifilares, metrados, presupuestos y compilar el documento LaTeX a PDF), ejecuta:
 
-```bash
-# Ir al directorio de cotización
-cd herramientas/cotizacion/
+```powershell
+# Ir al proyecto
+cd proyecto_vivienda_unifamiliar_por_RENZO/
 
-# 1. Asignar precios manuales
-python3 buscador_precios.py --precio "cable TW 2.5mm2=12.50" --precio "ITM 2P 20A=89.00"
-
-# 2. Buscar precios para todo el BOM
-python3 buscador_precios.py --bom ../../output/bom.json --output ../../output/comparativa
-
-# 3. Actualizar BOM con los precios
-python3 buscador_precios.py --bom ../../output/bom.json --actualizar ../../output/bom.json
-
-# 4. Generar cotización
-python3 generar_cotizacion.py --bom ../../output/bom.json \
-  --cliente "Juan Perez" --empresa "Mi Empresa" \
-  --output ../../output/cotizacion
+# Ejecutar la compilación del expediente completo
+python scripts/build_project.py
 ```
 
-Ver `herramientas/cotizacion/README.md` para el flujo completo y todas las opciones.
+El PDF final compilado quedará en:
+`proyecto_vivienda_unifamiliar_por_RENZO/build/main.pdf`
 
-### `generar_unifilar.py` — Diagrama unifilar
+Para más detalles, consulta el [README específico del proyecto de Renzo](./proyecto_vivienda_unifamiliar_por_RENZO/README.md).
 
-Genera diagrama unifilar en DXF + PDF a partir del JSON de circuitos.
+---
 
+## ⚙️ Pipeline General de Herramientas
+
+Puedes utilizar las herramientas de cálculo y cotización ubicadas en `herramientas/` de la siguiente manera:
+
+### Motor de Cálculo:
+Calcula demanda máxima, conductores y protecciones según el CNE-U:
 ```bash
-python3 ia-cad-casas/scripts/generar_unifilar.py \
+python herramientas/calculos-electricos-vivienda/scripts/calcular_instalacion.py \
+  --input herramientas/calculos-electricos-vivienda/data/proyecto.json --output output/
+```
+
+### Generación de Diagrama Unifilar:
+Genera diagramas unifilares en formato DXF/PDF a partir del JSON de circuitos:
+```bash
+python herramientas/ia-cad-casas/scripts/generar_unifilar.py \
   --json output/instalacion_electrica.json \
   --output planos/unifilar
 ```
 
-### `auto_routing.py` — Enrutamiento ortogonal de tuberías
-
-Calcula rutas ortogonales (en L) entre grupos de circuitos y el tablero general.
-
+### Buscador de Precios y Cotización:
+Permite asignar y buscar precios en base a listados de materiales (BOM) y generar presupuestos formales:
 ```bash
-python3 ia-cad-casas/scripts/auto_routing.py \
-  --json output/instalacion_electrica.json \
-  --output planos/ruteo.dxf
+# Buscar precios a partir de un BOM generado
+python herramientas/cotizacion/buscador_precios.py --bom output/bom.json --output output/comparativa.json
 ```
 
-### `calcular_instalacion.py` — Motor de cálculo
+Ver detalles completos en [herramientas/cotizacion/README.md](./herramientas/cotizacion/README.md).
 
-Calcula demanda máxima, conductores, protecciones según CNE-U.
+---
 
+## 📦 Requisitos de Instalación
+
+Para ejecutar los scripts de automatización y cálculos, instala las dependencias necesarias:
 ```bash
-python3 calculos-electricos-vivienda/scripts/calcular_instalacion.py \
-  --input data/proyecto.json --output output/
+pip install -r proyecto_vivienda_unifamiliar_por_RENZO/requirements.txt
 ```
-
----
-
-## Instalación
-
+O de forma manual:
 ```bash
-pip install pyyaml beautifulsoup4    # pipeline + busqueda
-pip install ezdxf matplotlib         # CAD / unifilar / PDF
+pip install pyyaml beautifulsoup4 ezdxf matplotlib pytest
 ```
 
 ---
 
-## Proyectos Académicos
+## ⚖️ Normativa de Referencia
 
-El repositorio también contiene los expedientes técnicos completos de:
-
-- **Renzo Mamani** — Vivienda unifamiliar 3 pisos, Capachica, Puno (LaTeX en `latex/`)
-- **Aquiles Ramos** — Vivienda unifamiliar 2 pisos, San Miguel, Puno (LaTeX en `Avanze-Proyecto-Aquiles/`)
-
-Ver secciones abajo para compilación LaTeX y detalles de cada proyecto.
-
----
-
-## 📂 Estructura
-
-```
-├── herramientas/
-│   ├── pipeline_automatizado.py       # Orquestador maestro
-│   ├── cotizacion/
-│   │   ├── README.md                  # Documentacion de cotizacion
-│   │   ├── buscador_precios.py        # Buscador de precios en linea
-│   │   └── generar_cotizacion.py      # Generador de cotizaciones
-│   ├── calculadora-instalacion-casa.html  # Calculadora HTML interactiva
-│   ├── ia-cad-casas/scripts/
-│   │   ├── generar_unifilar.py        # Diagrama unifilar DXF/PDF
-│   │   └── auto_routing.py            # Enrutamiento de tuberias
-│   └── calculos-electricos-vivienda/scripts/
-│       ├── calcular_instalacion.py    # Motor de calculo de cargas
-│       └── generar_bom.py             # Generador de BOM + costos
-├── Avanze-Proyecto-Aquiles/           # Proyecto 2 pisos (Aquiles)
-├── latex/                             # Proyecto 3 pisos (Renzo)
-└── README.md
-```
-
----
-
-## Normativa
-
-- **CNE-U**: Cálculo de demanda máxima, circuitos mínimos, conductores
-- **RNE EM.010**: Requisitos técnicos para instalaciones eléctricas interiores
+* **Código Nacional de Electricidad - Utilización (CNE-U)**: Criterios de demanda máxima, conductores, caídas de tensión y factores de simultaneidad.
+* **Reglamento Nacional de Edificaciones (RNE EM.010)**: Parámetros técnicos mínimos de seguridad para instalaciones eléctricas residenciales interiores.
