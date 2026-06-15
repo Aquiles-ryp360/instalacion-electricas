@@ -350,12 +350,12 @@ def setup_doc():
         ensure_layer(doc, f"ELEC_CIRCUITO_{cid}", true_color=color, lineweight=20, linetype="DASHED")
     return doc
 
-def render_pdf(dxf_path, pdf_path):
+def render_pdf_and_svg(dxf_path, pdf_path, svg_path):
     import matplotlib.pyplot as plt
     from ezdxf.addons.drawing import RenderContext, Frontend
     from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
 
-    print(f"Renderizando PDF con matplotlib: '{pdf_path}'...")
+    print(f"Renderizando PDF y SVG con matplotlib: '{pdf_path}'...")
     doc = ezdxf.readfile(dxf_path)
     msp = doc.modelspace()
     
@@ -368,8 +368,9 @@ def render_pdf(dxf_path, pdf_path):
     Frontend(ctx, out).draw_layout(msp, finalize=True)
     
     fig.savefig(pdf_path, dpi=300, bbox_inches='tight', pad_inches=0)
+    fig.savefig(svg_path, format='svg', bbox_inches='tight', pad_inches=0)
     plt.close(fig)
-    print("¡Renderizado PDF completado con éxito!")
+    print("¡Renderizado PDF y SVG completado con éxito!")
 
 def main():
     project_root = Path(__file__).resolve().parents[1]
@@ -435,10 +436,12 @@ def main():
         doc.saveas(out_dxf_path)
         print(f"DXF generado: {out_dxf_path}")
         
-        # Save PDF
+        # Save PDF and SVG
         out_pdf_path = output_dir / "pdf" / f"IE-{plan_code:02d}-{floor_slug}.pdf"
         out_pdf_path.parent.mkdir(parents=True, exist_ok=True)
-        render_pdf(str(out_dxf_path), str(out_pdf_path))
+        out_svg_path = output_dir / "svg" / f"IE-{plan_code:02d}-{floor_slug}.svg"
+        out_svg_path.parent.mkdir(parents=True, exist_ok=True)
+        render_pdf_and_svg(str(out_dxf_path), str(out_pdf_path), str(out_svg_path))
 
 if __name__ == "__main__":
     main()

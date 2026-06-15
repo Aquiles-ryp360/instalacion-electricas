@@ -362,10 +362,13 @@ def build_floor1_electrical():
     for tc_name, (tx, ty) in tcs.items():
         draw_electric_center(msp, tx, ty, symbol_text="TC", layer="ELEC_TOMACORRIENTES", color=6, radius=0.13)
         
-    # Conduits for outlets (C2) - Ring layout loop
+    # Conduits for general outlets (C2) - Ring layout loop
     draw_conduit(msp, (tg_x, tg_y), tcs["Tienda_TC2"], color=6)
     draw_conduit(msp, tcs["Tienda_TC2"], tcs["Tienda_TC1"], color=6)
-    draw_conduit(msp, tcs["Tienda_TC1"], tcs["Cocina_TC1"], color=6)
+    draw_conduit(msp, tcs["Tienda_TC1"], (tg_x, tg_y), color=6)
+    
+    # Conduits for kitchen outlets (C3) - Ring layout loop
+    draw_conduit(msp, (tg_x, tg_y), tcs["Cocina_TC1"], color=6)
     draw_conduit(msp, tcs["Cocina_TC1"], tcs["Cocina_TC2"], color=6)
     draw_conduit(msp, tcs["Cocina_TC2"], tcs["Cocina_TC4"], color=6)
     draw_conduit(msp, tcs["Cocina_TC4"], tcs["Cocina_TC3"], color=6)
@@ -467,7 +470,7 @@ def build_floor2_electrical():
     for tc_name, (tx, ty) in tcs.items():
         draw_electric_center(msp, tx, ty, symbol_text="TC", layer="ELEC_TOMACORRIENTES", color=6, radius=0.13)
         
-    # Conduits for tomacorrientes (C4) - Ring layout loop
+    # Conduits for tomacorrientes (C5) - Ring layout loop
     draw_conduit(msp, (td_x, td_y), tcs["Sala_3"], color=6)
     draw_conduit(msp, tcs["Sala_3"], tcs["Sala_1"], color=6)
     draw_conduit(msp, tcs["Sala_1"], tcs["Sala_2"], color=6)
@@ -574,7 +577,7 @@ def build_floor3_electrical():
     for name, (tx, ty) in tcs.items():
         draw_electric_center(msp, tx, ty, symbol_text="TC", layer="ELEC_TOMACORRIENTES", color=6, radius=0.13)
             
-    # Conduits for outlets (C6) - Ring layout loop
+    # Conduits for outlets (C7) - Ring layout loop
     draw_conduit(msp, (td_x, td_y), tcs["Dorm_4_3"], color=6)
     draw_conduit(msp, tcs["Dorm_4_3"], tcs["Dorm_4_2"], color=6)
     draw_conduit(msp, tcs["Dorm_4_2"], tcs["Dorm_4_1"], color=6)
