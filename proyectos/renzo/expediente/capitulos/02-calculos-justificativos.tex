@@ -38,22 +38,21 @@ Donde $P_{inst}$ es la potencia instalada, $P_{dem}$ es la potencia demandada, $
 
 \begin{table}[H]
 \centering
-\small
-\setlength{\tabcolsep}{3pt}
-\caption{Cuadro de cargas por circuito (7 Circuitos)}
-\label{tab:cuadro-cargas-circuito}
-\begin{tabularx}{\textwidth}{l Y c r c r Y Y}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\caption{Cuadro de cargas por circuito}
+\label{tab:cuadro-cargas}
+\begin{tabularx}{\textwidth}{c L{3.2cm} c c L{3.2cm} c L{2.2cm}}
 \toprule
-\textbf{Cto.} & \textbf{Uso} & \textbf{Ptos.} & \textbf{P. Inst. (W)} & \textbf{F.D.} & \textbf{P. Dem. (W)} & \textbf{Protección} & \textbf{Conductor} \\
+\textbf{Cto.} & \textbf{Descripción} & \textbf{Pot. (W)} & \textbf{F.D.} & \textbf{Conductor} & \textbf{ITM} & \textbf{ID} \\
 \midrule
-C1 & Alumbrado primer piso & 4 & 500 & 1.00 & 500 & 2P-10A & 3 x 1.5 mm2 Cu \\
-C2 & Tomacorrientes generales 1er piso & 5 & 1000 & 1.00 & 1000 & 2P-16A & 3 x 2.5 mm2 Cu \\
-C3 & Tomacorrientes especiales cocina & 3 & 1500 & 1.00 & 1500 & 2P-20A & 3 x 2.5 mm2 Cu \\
-C4 & Alumbrado segundo piso & 4 & 500 & 1.00 & 500 & 2P-10A & 3 x 1.5 mm2 Cu \\
-C5 & Tomacorrientes del segundo piso & 8 & 1500 & 0.70 & 1050 & 2P-16A & 3 x 2.5 mm2 Cu \\
-C6 & Alumbrado tercer piso & 4 & 500 & 1.00 & 500 & 2P-10A & 3 x 1.5 mm2 Cu \\
-C7 & Tomacorrientes del tercer piso & 6 & 1500 & 0.70 & 1050 & 2P-16A & 3 x 2.5 mm2 Cu \\
-\textbf{Total} &  & \textbf{34} & \textbf{7000} &  & \textbf{6100} &  &  \\
+C1 & Alumbrado General (Lámparas LED) & 132 & 1.00 & 3 x 1.5 mm2 Cu - PVC 3/4" & 2P-10A & 2P-25A/30mA \\
+C2 & Tomacorrientes Generales (TC) & 2520 & 0.70 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
+C3 & Tomacorrientes de Cocina & 1200 & 0.80 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-20A & 2P-25A/30mA \\
+C4 & Servicios Lavandería & 360 & 0.80 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
+C5 & Carga Especial (Bomba de Agua) & 750 & 1.00 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
+\midrule
+\textbf{TOTAL} & \textbf{Demanda consolidada} & & & Acometida: 2×10mm² Cu + PE & Gral: 2P-40A & ID: 2P-40A/30mA \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -66,27 +65,36 @@ C7 & Tomacorrientes del tercer piso & 6 & 1500 & 0.70 & 1050 & 2P-16A & 3 x 2.5 
 \setlength{\tabcolsep}{3pt}
 \caption{Levantamiento de cargas por ambiente}
 \label{tab:levantamiento-cargas}
-\begin{tabularx}{\textwidth}{c c Y c c r r c Y}
+\begin{tabularx}{\textwidth}{c Y c c c}
 \toprule
-\textbf{Item} & \textbf{Ambiente} & \textbf{Equipo o punto} & \textbf{Tipo} & \textbf{Cant.} & \textbf{W unit.} & \textbf{W total} & \textbf{Cto.} & \textbf{Observación} \\
+\textbf{Item} & \textbf{Ambiente / Carga} & \textbf{Cant.} & \textbf{Pot. Unit. (W)} & \textbf{F. Demanda} \\
 \midrule
-1 & Primer piso & Luminaria LED & Alumbrado & 4 & 125 & 500 & C1 & Tienda (2), Cocina (1), Pasadizo/Escalera (1) \\
-2 & Primer piso & Tomacorriente doble con tierra & Tomacorrientes & 5 & 200 & 1000 & C2 & Tienda (3), Pasadizo (2) \\
-3 & Primer piso & Tomacorriente especial cocina & Cocina & 3 & 500 & 1500 & C3 & Cocina (3) \\
-4 & Segundo piso & Luminaria LED & Alumbrado & 4 & 125 & 500 & C4 & Dormitorios (2), Hall (1), Baño/Escalera (1) \\
-5 & Segundo piso & Tomacorriente doble con tierra & Tomacorrientes & 8 & 187.5 & 1500 & C5 & Dormitorios (5), Sala (2), Baño (1) \\
-6 & Tercer piso & Luminaria LED & Alumbrado & 4 & 125 & 500 & C6 & Dormitorios (2), Pasadizo (1), Baño/Escalera (1) \\
-7 & Tercer piso & Tomacorriente doble con tierra & Tomacorrientes & 6 & 250 & 1500 & C7 & Dormitorios (5), Baño (1) \\
+1 & Sala-comedor - Luminaria LED & 2 & 12 & 1.00 \\
+2 & Sala-comedor - Tomacorriente doble & 4 & 180 & 0.70 \\
+3 & Cocina - Luminaria LED & 2 & 12 & 1.00 \\
+4 & Cocina - Pequeños Artefactos & 4 & 300 & 0.80 \\
+5 & Dormitorio Principal - Luminaria LED & 1 & 12 & 1.00 \\
+6 & Dormitorio Principal - Tomacorriente & 3 & 180 & 0.70 \\
+7 & Dormitorio Secundario 1 - Luz LED & 1 & 12 & 1.00 \\
+8 & Dormitorio Secundario 1 - Tomacorriente & 2 & 180 & 0.70 \\
+9 & Dormitorio Secundario 2 - Luz LED & 1 & 12 & 1.00 \\
+10 & Dormitorio Secundario 2 - Tomacorriente & 2 & 180 & 0.70 \\
+11 & Baño - Luminaria LED & 1 & 12 & 1.00 \\
+12 & Baño - Tomacorriente GFCI & 1 & 180 & 0.70 \\
+13 & Lavandería - Luminaria LED & 1 & 12 & 1.00 \\
+14 & Lavandería - Tomacorriente de servicio & 2 & 180 & 0.80 \\
+15 & Área Técnica - Bomba de Agua 1HP & 1 & 750 & 1.00 \\
+16 & Circulaciones (Pasadizos, Escalera) - Luz & 2 & 12 & 1.00 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \section{Interpretacion de la demanda maxima}
 
-La potencia instalada total es 7000 W. Aplicando factores de demanda por tipo de carga se obtiene una demanda maxima estimada de 6100 W. Con tension de 220 V y factor de potencia 0.90:
+La potencia instalada total es 4962 W. Aplicando factores de demanda por tipo de carga se obtiene una demanda maxima estimada de 3894 W. Con tension de 220 V y factor de potencia 0.90:
 
 \begin{equation}
-I_{dem} = \frac{6100}{220 \times 0.90} = 30.81\text{ A}
+I_{dem} = \frac{3894}{220 \times 0.90} = 19.67\text{ A}
 \end{equation}
 
 Con este valor de corriente de demanda se dimensiona el alimentador general con conductor de cobre de 10 mm2 y un interruptor termomagnetico principal de 2P-40A.
@@ -103,8 +111,8 @@ Con este valor de corriente de demanda se dimensiona el alimentador general con 
 \textbf{Elemento} & \textbf{Ubicacion propuesta} & \textbf{Circuitos asociados} & \textbf{Criterio} \\
 \midrule
 TG-01 & Primer piso, pasadizo longitudinal & C1, C2 y C3 & Tablero principal accesible y rotulado \\
-TD-01 & Segundo piso, zona central/hall & C4 y C5 & Subtablero para el control del 2do nivel \\
-TD-02 & Tercer piso, pasadizo longitudinal & C6 y C7 & Subtablero para el control del 3er nivel \\
+TD-02 & Segundo piso, zona central/hall & C4 y C5 & Subtablero para el control del 2do nivel \\
+TD-03 & Tercer piso, pasadizo longitudinal & C6 y C7 & Subtablero para el control del 3er nivel \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -148,10 +156,30 @@ Donde $I_b$ es la corriente de diseno, $I_n$ es la corriente nominal del interru
 
 La propuesta incluye conductor de proteccion de tierra en todos los tomacorrientes (de color verde o verde-amarillo) y barra de conexion a tierra en cada tablero. La conexion final se realiza a un pozo de tierra vertical con electrodo de cobre de 5/8" x 2.40m y aditivo de conductividad gel, disenado para una resistencia de puesta a tierra menor a 15 Ohms.
 
+\section{Resumen de puntos instalados}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Resumen de puntos electricos por tipo}
+\label{tab:resumen-puntos}
+\begin{tabularx}{\textwidth}{L{3.5cm} c c c c}
+\toprule
+\textbf{Nivel} & \textbf{Luminarias} & \textbf{Interruptores} & \textbf{Tomacorrientes} & \textbf{Total} \\
+\midrule
+Primer piso & 7 & 5 & 8 & 20 \\
+Segundo piso & 6 & 5 & 8 & 19 \\
+Tercer piso & 6 & 6 & 8 & 20 \\
+\midrule
+\textbf{Total} & \textbf{19} & \textbf{16} & \textbf{24} & \textbf{59} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \section{Observaciones de auditoria}
 
 \begin{itemize}
   \item \textbf{Cargas especiales eliminadas:} electrobombas o motores especiales que no corresponden a la solicitud final del diseno de puntos, simplificando la instalacion.
   \item \textbf{Circuitos resultantes:} 7 circuitos generales (C1 a C7) que cubren de manera integral la distribucion de alumbrado y tomacorrientes por nivel, mas la cocina independiente.
-  \item \textbf{Impacto:} se reajustan los planos de diseño, la memoria de calculo, la maxima demanda (de 4.30 kW a 6.10 kW) y las especificaciones unificadas.
+  \item \textbf{Puntos instalados:} 19 luminarias, 16 interruptores y 24 tomacorrientes distribuidos en 43 puntos conectados a los 7 circuitos derivados.
 \end{itemize}
