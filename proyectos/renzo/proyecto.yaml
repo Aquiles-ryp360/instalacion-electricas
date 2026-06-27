@@ -2,6 +2,7 @@ schema_version: 1
 id: renzo
 proyecto: "Instalaciones electricas interiores - vivienda unifamiliar de 3 pisos"
 propietario: "Renzo Gabriel Mamani Galindo"
+docente: "Richar Renzo Julio Amachi Quispe"
 estado: "expediente en desarrollo sujeto a revision tecnica"
 
 ubicacion:

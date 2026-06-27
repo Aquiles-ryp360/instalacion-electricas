@@ -79,7 +79,6 @@ Presentar la descripcion general del mini proyecto de instalacion electrica domi
 
 | Pendiente | Accion |
 |---|---|
-| Completar nombre del docente | Solicitar dato al estudiante |
 | Confirmar provincia y distrito exactos | Validar ubicacion San Miguel / San Roman |
 | Confirmar distribucion real por pisos | Usar croquis o plano arquitectonico propio |
 | Definir area aproximada por piso | Usar croquis y medidas aproximadas |

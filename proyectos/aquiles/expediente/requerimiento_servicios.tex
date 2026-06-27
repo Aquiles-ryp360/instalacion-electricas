@@ -1,0 +1,387 @@
+\documentclass[12pt,letterpaper]{report}
+
+\input{preambulo}
+
+\hypersetup{
+  pdftitle={Requerimiento de servicio - Proyecto Aquiles},
+  pdfsubject={Puesta a tierra, electrobomba y grupo electrogeno}
+}
+
+\newcommand{\reqnote}[1]{%
+  \begingroup
+  \setlength{\fboxsep}{8pt}%
+  \colorbox{modelblue!8}{%
+    \begin{minipage}{0.94\textwidth}
+      #1
+    \end{minipage}%
+  }%
+  \endgroup
+}
+
+\newcommand{\reqheader}{\rowcolor{modelblue!14}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
+\input{capitulos/00-portada-requerimiento-servicios}
+\clearpage
+\hypersetup{pageanchor=true}
+
+\pagestyle{memoria}
+\pagenumbering{arabic}
+\renewcommand{\documentfootertext}{REQUERIMIENTO DE SERVICIO - INSTALACIONES ELECTRICAS}
+
+\tableofcontents
+\clearpage
+
+\chapter*{REQUERIMIENTO DE SERVICIO}
+\addcontentsline{toc}{chapter}{REQUERIMIENTO DE SERVICIO}
+
+\section{DATOS GENERALES}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{P{0.34\textwidth} L}
+\toprule
+\reqheader \textbf{Concepto} & \textbf{Dato} \\
+\midrule
+Proyecto & Instalaciones electricas interiores -- vivienda unifamiliar de 2 pisos \\
+Propietario / integrante & Aquiles Taylor Ramos Yapo \\
+Docente del curso & Ing. Richar Renzo Julio Amachi Quispe \\
+Ubicacion & Av. Horacio con Jr. Marineros, Mz. F7, lotes 11 y 12 \\
+Distrito / provincia / departamento & San Miguel / San Roman / Puno \\
+Sistema electrico de referencia & Monofasico, 220 V, 60 Hz \\
+Tipo de requerimiento & Adquisicion de materiales, instalacion y puesta en servicio \\
+Base de calculo & Maxima demanda del proyecto, actualizada con electrobomba de 2 HP \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\reqnote{%
+\textbf{Alcance del documento.} Este requerimiento se emite como documento tecnico academico para el Proyecto Aquiles. Los valores finales deben verificarse en obra por profesional competente antes de una ejecucion real.%
+}
+
+\section{FINALIDAD}
+
+El presente requerimiento tiene por finalidad garantizar la seguridad electrica, continuidad operativa y disponibilidad de servicios auxiliares de la vivienda unifamiliar del Proyecto Aquiles, mediante la contratacion integral de los siguientes servicios:
+
+\begin{itemize}
+  \item Sistema de puesta a tierra de la instalacion electrica interior.
+  \item Electrobomba de \(2\ \text{HP}\), con accesorios de conexion, proteccion, instalacion y prueba de funcionamiento.
+  \item Grupo electrogeno dimensionado segun la maxima demanda adoptada del proyecto.
+\end{itemize}
+
+La puesta a tierra reduce el riesgo de choque electrico, asegura la continuidad del conductor de proteccion y permite la operacion adecuada de las protecciones. La electrobomba forma parte de las cargas especiales de la vivienda y debe quedar conectada de manera segura. El grupo electrogeno debe permitir respaldo electrico de la vivienda segun la demanda calculada.
+
+\section{DESCRIPCION GENERAL DEL REQUERIMIENTO}
+
+El servicio sera ejecutado bajo modalidad integral o a todo costo, incluyendo suministro de materiales, equipos, herramientas, mano de obra, montaje, pruebas, mediciones, informe tecnico, puesta en servicio y garantia.
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{C{0.10\textwidth} P{0.25\textwidth} C{0.14\textwidth} L}
+\toprule
+\reqheader \textbf{Item} & \textbf{Servicio requerido} & \textbf{Cantidad} & \textbf{Alcance} \\
+\midrule
+1 & Sistema de puesta a tierra residencial & 1 sistema & Materiales, instalacion, medicion con telurometro, conexion al tablero y puesta en servicio. \\
+2 & Electrobomba de 2 HP & 1 equipo & Adquisicion, conexion electrica, protecciones, accesorios necesarios, prueba hidraulica/electrica y puesta en servicio. \\
+3 & Grupo electrogeno para maxima demanda & 1 equipo & Adquisicion, instalacion, tablero o llave de transferencia, pruebas con carga y puesta en servicio. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{BASE TECNICA DE DIMENSIONAMIENTO}
+
+La base del calculo se toma del expediente del Proyecto Aquiles. El calculo anterior consideraba una bomba de \(1\ \text{HP}\), equivalente a \(746\ \text{W}\). Por indicacion del docente, para este requerimiento se actualiza la electrobomba a \(2\ \text{HP}\):
+
+\begin{equation}
+P_{bomba}=2\times746\ \text{W}=1\,492\ \text{W}
+\end{equation}
+
+Con este cambio, la maxima demanda conservadora del proyecto queda como se muestra en la Tabla \ref{tab:resumen-dimensionamiento}.
+
+\begin{table}[H]
+\centering
+\caption{Resumen tecnico de dimensionamiento ajustado.}
+\label{tab:resumen-dimensionamiento}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{L C{0.32\textwidth}}
+\toprule
+\reqheader \textbf{Concepto} & \textbf{Valor} \\
+\midrule
+Potencia instalada anterior del escenario conservador & 11,658 W \\
+Potencia instalada adicional por cambio de bomba 1 HP a 2 HP & 746 W \\
+\textbf{Potencia instalada ajustada} & \textbf{12,404 W} \\
+Maxima demanda anterior & 10,358 W \\
+\textbf{Maxima demanda ajustada con electrobomba 2 HP} & \textbf{11,104 W} \\
+Tension de servicio & 220 V \\
+Factor de potencia adoptado & 0.90 \\
+Corriente de empleo del alimentador & 56.08 A \\
+Corriente de diseno referencial, \(1.25\times I_b\) & 70.10 A \\
+Potencia aparente para respaldo & 12.34 kVA \\
+\textbf{Capacidad minima recomendada del grupo electrogeno} & \textbf{15 kVA, monofasico, 220 V, 60 Hz} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Para el grupo electrogeno se adopta una reserva aproximada del \(20\%\) sobre la potencia aparente de la maxima demanda:
+
+\begin{equation}
+S_{grupo}=\frac{11.104\ \text{kW}}{0.90}=12.34\ \text{kVA}
+\end{equation}
+
+\begin{equation}
+S_{grupo,recomendada}=12.34\ \text{kVA}\times1.20=14.81\ \text{kVA}
+\end{equation}
+
+Por disponibilidad comercial y margen de arranque del motor de la electrobomba, se solicita grupo electrogeno no menor a \(15\ \text{kVA}\). Si el proveedor no garantiza el arranque de la electrobomba de \(2\ \text{HP}\) con la carga de vivienda conectada, debera ofertar una capacidad superior dentro del rango comercial de \(16\ \text{kVA}\) a \(18\ \text{kVA}\).
+
+\section{NORMATIVA TECNICA APLICABLE}
+
+La ejecucion debera tomar como referencia minima:
+
+\begin{itemize}
+  \item Codigo Nacional de Electricidad -- Utilizacion, aprobado por R.M. N. 0037-2006-MEM, y su modificatoria R.M. N. 0175-2008-MEM.
+  \item Reglamento Nacional de Edificaciones, Norma Tecnica EM.010 Instalaciones Electricas Interiores, modificada por R.M. N. 083-2019-VIVIENDA.
+  \item Ley N. 29783, Ley de Seguridad y Salud en el Trabajo, para las condiciones de ejecucion segura.
+  \item Manuales tecnicos del fabricante de la electrobomba, grupo electrogeno, protecciones, tablero y accesorios.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Aplicacion normativa al requerimiento.}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{P{0.32\textwidth} L}
+\toprule
+\reqheader \textbf{Referencia} & \textbf{Aplicacion en el Proyecto Aquiles} \\
+\midrule
+RNE EM.010 & Define que las instalaciones electricas interiores comprenden alimentadores, tableros, circuitos derivados, protecciones, medicion y puesta a tierra; ademas exige analizar potencia instalada y maxima demanda. \\
+CNE-Utilizacion, Seccion 050 & Base para cargas y factores de demanda en vivienda. \\
+CNE-Utilizacion, Seccion 060 & Base para el sistema de puesta a tierra y enlace equipotencial. La resistencia final de puesta a tierra no debe superar \(25\ \Omega\); como criterio de mejor desempeno para vivienda se propone una meta de \(10\ \Omega\) o menor si las condiciones del suelo lo permiten. \\
+RNE EM.010, equipos de emergencia & Indica que los equipos para suministro de energia por emergencia deben cumplir el Codigo Nacional de Electricidad; por ello el grupo electrogeno debe instalarse con proteccion, transferencia segura y puesta a tierra. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Fuentes oficiales consultadas}
+
+\begin{itemize}
+  \item MINEM, R.M. N. 0037-2006-MEM -- Codigo Nacional de Electricidad Utilizacion: \url{https://www.gob.pe/institucion/minem/normas-legales/108855-0037-2006-mem}
+  \item MINEM, R.M. N. 0175-2008-MEM -- Modificacion del CNE Utilizacion: \url{https://www.gob.pe/institucion/minem/normas-legales/108110-0175-2008-mem}
+  \item MVCS, Reglamento Nacional de Edificaciones -- EM.010: \url{https://www.gob.pe/institucion/vivienda/informes-publicaciones/2309793-reglamento-nacional-de-edificaciones-rne}
+  \item Congreso de la Republica, Ley N. 29783: \url{https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/462576-29783}
+\end{itemize}
+
+\section{CONDICIONES DE CONTRATACION Y EJECUCION}
+
+\subsection{Modalidad}
+
+El servicio se solicita bajo modalidad a todo costo, con entrega llave en mano. El proveedor debe incluir materiales, equipos, herramientas, transporte, mano de obra, pruebas, mediciones, documentacion tecnica y puesta en servicio.
+
+\subsection{Lugar de prestacion}
+
+El servicio se ejecutara en la vivienda ubicada en Av. Horacio con Jr. Marineros, Mz. F7, lotes 11 y 12, distrito de San Miguel, provincia de San Roman, departamento de Puno.
+
+\subsection{Plazo referencial}
+
+El plazo referencial de ejecucion sera de 10 dias calendario desde la aprobacion del requerimiento y disponibilidad del area de trabajo. El plazo puede ajustarse si el proveedor justifica tiempos de adquisicion de equipos o condiciones de obra.
+
+\subsection{Seguridad y salud en el trabajo}
+
+El proveedor sera responsable de ejecutar los trabajos con personal calificado, herramientas adecuadas, equipos de proteccion personal y procedimientos seguros. Debe evitar energizacion accidental, retroalimentacion hacia la red publica, excavaciones sin senalizacion y manipulacion de equipos sin bloqueo o aislamiento.
+
+\subsection{Recepcion y conformidad}
+
+La conformidad se otorgara despues de verificar la instalacion completa de los tres items, las pruebas electricas y mecanicas, la medicion de resistencia de puesta a tierra, el funcionamiento de la electrobomba, el funcionamiento del grupo electrogeno y la entrega del informe tecnico con fichas, garantias y recomendaciones.
+
+\subsection{Garantia}
+
+La garantia minima sera de 12 meses para mano de obra y materiales instalados, sin perjuicio de la garantia mayor que otorgue el fabricante de los equipos principales.
+
+\section{ESPECIFICACIONES TECNICAS MINIMAS POR ITEM}
+
+\subsection{Item 1: Sistema de puesta a tierra residencial}
+
+\begin{longtable}{P{0.30\textwidth} P{0.62\textwidth}}
+\toprule
+\reqheader \textbf{Componente / actividad} & \textbf{Requerimiento minimo} \\
+\midrule
+\endfirsthead
+\toprule
+\reqheader \textbf{Componente / actividad} & \textbf{Requerimiento minimo} \\
+\midrule
+\endhead
+Estudio preliminar & Verificar ubicacion del pozo, distancia al tablero general, accesibilidad para mantenimiento y condicion del terreno. \\
+Electrodo & Varilla de cobre o acero recubierto de cobre, minimo 5/8 pulg y 2.40 m comercial, compatible con el CNE; debe alcanzar profundidad efectiva conforme instalacion. \\
+Caja de registro & Caja de concreto o polipropileno resistente, con tapa removible para inspeccion. \\
+Conductor de puesta a tierra & Cobre aislado verde/amarillo o desnudo, seccion minima segun calculo del proyecto; referencial \(10\ \text{mm}^2\) para conexion al tablero, o mayor si la verificacion normativa final lo exige. \\
+Conector & Abrazadera de cobre, conector certificado o soldadura exotermica; debe asegurar baja resistencia de contacto. \\
+Tratamiento de suelo & Bentonita, cemento conductivo, gel reductor u otro material tecnico no corrosivo, segun condicion del terreno. \\
+Excavacion y relleno & Excavacion, instalacion de electrodo, tratamiento, relleno y compactacion. \\
+Conexion al tablero & Conexion a barra de tierra del Tablero General; continuidad hacia tableros y circuitos con conductor PE. \\
+Medicion & Medicion con telurometro antes/despues del tratamiento, registrando metodo usado, condiciones y resultado. \\
+Valor de aceptacion & Resistencia final no mayor a \(25\ \Omega\); meta recomendada para el proyecto: \(10\ \Omega\) o menor. \\
+Entregable & Informe de medicion, fotos, croquis de ubicacion, materiales instalados y recomendaciones de mantenimiento. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Item 2: Electrobomba de 2 HP}
+
+\begin{longtable}{P{0.30\textwidth} P{0.62\textwidth}}
+\toprule
+\reqheader \textbf{Componente / actividad} & \textbf{Requerimiento minimo} \\
+\midrule
+\endfirsthead
+\toprule
+\reqheader \textbf{Componente / actividad} & \textbf{Requerimiento minimo} \\
+\midrule
+\endhead
+Equipo & Electrobomba monofasica 220 V, 60 Hz, potencia nominal \(2\ \text{HP}\), adecuada para el uso hidraulico real de la vivienda. \\
+Potencia de calculo & \(1\,492\ \text{W}\) para el cuadro de cargas del proyecto. \\
+Corriente referencial & \(7.54\ \text{A}\) con 220 V y factor de potencia 0.90; verificar con corriente nominal de placa. \\
+Circuito electrico & Circuito dedicado C8 desde tablero, con conductor de cobre \(2.5\ \text{mm}^2\) como minimo y conductor de proteccion PE. \\
+Canalizacion & Tuberia PVC SAP 20 mm o equivalente, con accesorios y sellos adecuados para zona exterior. \\
+Caja de conexion & Caja estanca IP55 o superior, borneras y prensaestopas si corresponde. \\
+Proteccion & ITM bipolar recomendado 16 A curva C o dimensionado segun placa; interruptor diferencial 30 mA; guardamotor o proteccion termica regulada a la corriente nominal del equipo. \\
+Accesorios de control & Interruptor de mando, flotador o presostato si corresponde, contactor si el fabricante o corriente de arranque lo exige. \\
+Accesorios hidraulicos & Acoples, union, valvula check y accesorios necesarios para dejar el equipo operativo, segun condicion real de pozo, cisterna o tanque. \\
+Pruebas & Arranque, parada, sentido/flujo, consumo de corriente, ausencia de fugas, estabilidad de presion y verificacion de protecciones. \\
+Entregable & Ficha tecnica, manual, registro de prueba, garantia y recomendaciones de operacion. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Item 3: Grupo electrogeno segun maxima demanda}
+
+\begin{longtable}{P{0.30\textwidth} P{0.62\textwidth}}
+\toprule
+\reqheader \textbf{Componente / actividad} & \textbf{Requerimiento minimo} \\
+\midrule
+\endfirsthead
+\toprule
+\reqheader \textbf{Componente / actividad} & \textbf{Requerimiento minimo} \\
+\midrule
+\endhead
+Capacidad & No menor a \(15\ \text{kVA}\) monofasico, 220 V, 60 Hz. Recomendar \(16\ \text{kVA}\) a \(18\ \text{kVA}\) si el proveedor no garantiza arranque de electrobomba de 2 HP con carga conectada. \\
+Potencia base & Maxima demanda ajustada: \(11.104\ \text{kW}\); potencia aparente base: \(12.34\ \text{kVA}\). \\
+Regulacion & AVR o sistema de regulacion de tension compatible con cargas residenciales. \\
+Proteccion & Interruptor termomagnetico de salida y proteccion contra sobrecarga/cortocircuito segun fabricante. \\
+Transferencia & Tablero o llave de transferencia manual/automatica 2P, capacidad recomendada 80 A, con enclavamiento para impedir retroalimentacion hacia la red publica. \\
+Conexion & Alimentacion al tablero general o tablero de emergencia definido, con conductores dimensionados por corriente, longitud y caida de tension. \\
+Puesta a tierra & Conexion del chasis y tablero del grupo al sistema de puesta a tierra, respetando continuidad y enlace equipotencial. \\
+Ubicacion & Zona ventilada, accesible para mantenimiento, protegida de lluvia directa, gases de escape y manipulacion no autorizada. \\
+Combustible & Gasolina o diesel segun oferta; debe indicarse autonomia, consumo estimado y plan de mantenimiento. \\
+Pruebas & Prueba en vacio, prueba con carga parcial, prueba de transferencia, verificacion de tension/frecuencia y arranque de electrobomba. \\
+Entregable & Ficha tecnica, manual, garantia, registro de pruebas y esquema de conexion. \\
+\bottomrule
+\end{longtable}
+
+\section{EXPERIENCIA MINIMA DEL PROVEEDOR Y PERSONAL}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{P{0.26\textwidth} L}
+\toprule
+\reqheader \textbf{Perfil} & \textbf{Requerimiento minimo} \\
+\midrule
+Proveedor & Haber ejecutado al menos 2 servicios similares de instalaciones electricas, puesta a tierra, bombas o grupos electrogenos en los ultimos 3 anos. \\
+Tecnico responsable & Experiencia minima de 2 anos en instalaciones electricas residenciales, tableros, puesta a tierra o equipos electromecanicos. \\
+Profesional certificador & Ingeniero Electricista o Ingeniero Mecanico Electricista colegiado y habilitado para validar mediciones, protocolos y recomendaciones finales, si el servicio se ejecuta de manera real. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La experiencia puede sustentarse con ordenes de servicio, constancias, conformidades, facturas, fotografias de trabajos similares o declaracion jurada tecnica.
+
+\section{ENTREGABLES TECNICOS}
+
+Al concluir el servicio, el proveedor debera entregar:
+
+\begin{itemize}
+  \item Informe tecnico general del servicio ejecutado.
+  \item Relacion de materiales y equipos instalados.
+  \item Fichas tecnicas y manuales de electrobomba, grupo electrogeno, protecciones y tablero de transferencia.
+  \item Protocolo de medicion de puesta a tierra con resultado en ohmios.
+  \item Registro de pruebas de continuidad del conductor de proteccion.
+  \item Registro de prueba de arranque y operacion de electrobomba.
+  \item Registro de prueba de grupo electrogeno, tension, frecuencia y transferencia.
+  \item Croquis o esquema unifilar actualizado de conexion.
+  \item Garantias de equipos y mano de obra.
+  \item Recomendaciones de mantenimiento preventivo.
+\end{itemize}
+
+\section{CRITERIOS DE ACEPTACION}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{P{0.25\textwidth} L}
+\toprule
+\reqheader \textbf{Criterio} & \textbf{Condicion de aceptacion} \\
+\midrule
+Puesta a tierra & Resistencia medida no mayor a \(25\ \Omega\); continuidad PE hacia tablero y circuitos. \\
+Electrobomba & Arranque y parada normales, corriente dentro del valor de placa, protecciones operativas y sin fugas visibles. \\
+Grupo electrogeno & Tension y frecuencia estables, soporte de carga de prueba, arranque de electrobomba y transferencia sin retorno hacia red publica. \\
+Seguridad & Tableros cerrados, conductores protegidos, identificacion de circuitos, conexion a tierra y ausencia de partes energizadas expuestas. \\
+Documentacion & Informe, mediciones, fichas tecnicas, garantias y esquema de conexion entregados. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{OBSERVACIONES TECNICAS}
+
+\begin{itemize}
+  \item El calculo adopta el escenario conservador del Proyecto Aquiles, que considera cocina electrica preliminar. Si finalmente se confirma cocina a gas y ausencia de cargas electricas de alta potencia, la maxima demanda y el grupo electrogeno podrian recalcularse.
+  \item La electrobomba se actualiza obligatoriamente a \(2\ \text{HP}\) por indicacion docente.
+  \item La capacidad de \(15\ \text{kVA}\) del grupo electrogeno se justifica por maxima demanda y reserva. El proveedor debe confirmar capacidad de arranque del motor de \(2\ \text{HP}\).
+  \item El cambio de bomba de \(1\ \text{HP}\) a \(2\ \text{HP}\) incrementa la corriente de diseno referencial del alimentador. Antes de una ejecucion real debe revisarse la coordinacion final de alimentador, interruptor general, transferencia y tablero.
+  \item La puesta a tierra debe medirse en obra. No basta con instalar la varilla; la conformidad depende del valor medido y de la continuidad del conductor de proteccion.
+\end{itemize}
+
+\section{ANEXO: CUADRO DE CARGAS AJUSTADO}
+
+\begin{table}[H]
+\centering
+\caption{Cuadro de cargas ajustado para el requerimiento.}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{C{0.12\textwidth} L C{0.17\textwidth} C{0.12\textwidth} C{0.17\textwidth}}
+\toprule
+\reqheader \textbf{Circuito} & \textbf{Descripcion} & \textbf{P.I. (W)} & \textbf{F.D.} & \textbf{M.D. (W)} \\
+\midrule
+C1 & Alumbrado primer piso & 80 & 1.00 & 80 \\
+C2 & Tomacorrientes primer piso & 1,260 & 0.70 & 882 \\
+C3 & Cocina primer piso, auxiliar & 300 & 0.80 & 240 \\
+C4 & Alumbrado segundo piso & 132 & 1.00 & 132 \\
+C5 & Tomacorrientes segundo piso & 2,340 & 0.70 & 1,638 \\
+C6 & Cocina electrica segundo piso, escenario conservador & 6,000 & 1.00 & 6,000 \\
+C7 & Lavadora segundo piso & 800 & 0.80 & 640 \\
+C8 & Electrobomba exterior 2 HP & 1,492 & 1.00 & 1,492 \\
+\midrule
+\multicolumn{2}{l}{\textbf{Total}} & \textbf{12,404} & & \textbf{11,104} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{FECHA Y FIRMA}
+
+San Miguel, San Roman, Puno, 22 de junio de 2026.
+
+\vspace{0.45in}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{0.92\textwidth}{C{0.42\textwidth} C{0.42\textwidth}}
+\toprule
+\textbf{Elaborado por} & \textbf{Revisado por} \\
+\midrule
+\vspace{0.42in} Proyecto Aquiles -- Instalaciones Electricas I & \vspace{0.42in} Ing. Richar Renzo Julio Amachi Quispe \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\end{document}

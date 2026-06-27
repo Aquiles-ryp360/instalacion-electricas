@@ -2,6 +2,7 @@ schema_version: 1
 id: aquiles
 proyecto: "Instalaciones electricas interiores - vivienda unifamiliar de 2 pisos"
 propietario: "Aquiles Taylor Ramos Yapo"
+docente: "Richar Renzo Julio Amachi Quispe"
 estado: "preliminar sujeto a validacion tecnica"
 
 ubicacion:

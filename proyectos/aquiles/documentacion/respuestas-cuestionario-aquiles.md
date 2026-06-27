@@ -5,7 +5,7 @@
 | Dato | Respuesta registrada | Estado |
 |---|---|---|
 | Estudiante | Aquiles Taylor Ramos Yapo | Definido |
-| Docente / ingeniero | Pendiente de completar | Pendiente |
+| Docente / ingeniero | Ing. Richar Renzo Julio Amachi Quispe | Definido |
 | Fecha de avance | 01 de junio de 2026 | Definido |
 | Direccion o referencia | Avenida Horacio con Jr. Marineros, manzana F7, lotes 11 y 12 | Definido |
 | Distrito | San Miguel | Definido |
@@ -91,7 +91,6 @@ Estos supuestos sirven solo para armar el avance de los capitulos I y II. Se deb
 
 | Pendiente | Motivo |
 |---|---|
-| Nombre del docente / ingeniero | Falta dato |
 | Provincia exacta | Se asume San Roman por ubicacion en Juliaca/San Miguel, pero debe confirmarse |
 | Area aproximada por piso | Necesaria para plano, distribucion y criterios de demanda por area |
 | Numero final de tomacorrientes en sala, cuartos y cuarto de uso varios del segundo piso | Falta decision exacta |
@@ -99,4 +98,3 @@ Estos supuestos sirven solo para armar el avance de los capitulos I y II. Se deb
 | Tipo de canalizacion | Falta decidir si sera empotrada, superficial o mixta |
 | Potencia real de bomba, lavadora, microondas/horno y waflera | Falta placa o potencia nominal aproximada |
 | Croquis por piso | Pendiente de dibujo en hoja y posterior digitalizacion |
-

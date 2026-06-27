@@ -1,4 +1,4 @@
-# Arquitectura del repositorio
+q# Arquitectura del repositorio
 
 ## Principio central
 

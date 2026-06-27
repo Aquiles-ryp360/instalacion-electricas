@@ -2,8 +2,8 @@
 
 ## 1. Portada
 
-- Curso:
-- Docente:
+- Curso: Instalaciones Eléctricas I
+- Docente: Ing. Richar Renzo Julio Amachi Quispe
 - Integrantes:
 - Tema: Mini proyecto de instalacion electrica domiciliaria.
 - Fecha:
@@ -38,4 +38,3 @@ Resumen tomado de `normativas/matriz-cumplimiento.md`.
 - Levantar cargas reales o estimadas.
 - Elaborar plano/croquis y diagrama unifilar.
 - Seleccionar protecciones, conductores y puesta a tierra.
-
