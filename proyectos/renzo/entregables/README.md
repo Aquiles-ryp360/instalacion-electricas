@@ -8,3 +8,4 @@ pipeline no escribe aqui automaticamente.
 - `calculos/`: hojas de calculo publicadas.
 - `presupuesto/`: metrados, presupuesto y cotizacion comparativa.
 - `documentos/`: fuentes LaTeX publicadas junto con su PDF generado.
+- `requerimientos/`: copia final del requerimiento, TDR, cuadro de insumos y guia de catalogo.win.
