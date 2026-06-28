@@ -20,8 +20,13 @@ cubre una familia, por ejemplo cables, la etapa debe quedar como `SKIPPED` o
 ## Entradas principales
 
 - `cli/cotizar.py`: orquestador general v1. Actualmente delega a Promelsa.
-- `cli/promelsa.py`: cotizacion directa en Promelsa.
+- `cli/promelsa.py`: entrada CLI para cotizacion directa en Promelsa.
+- `tiendas/promelsa.py`: implementacion real del scraper Promelsa.
 - `homologacion/perucompras.py`: busqueda de fichas tecnicas PeruCompras.
+
+`cli/` se mantiene como capa de entrada para operadores y agentes externos. La
+logica de negocio debe vivir en `tiendas/`, `homologacion/`, `seleccion/`,
+`core/` y `exportadores/`.
 
 ## Tiendas
 

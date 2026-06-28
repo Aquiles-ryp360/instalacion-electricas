@@ -8,7 +8,7 @@ activo vive en `v1/`.
 
 ```text
 v1/
-  cli/             comandos de entrada
+  cli/             entradas de consola para humanos/agentes
   core/            BOM, normalizacion, matching y modelos comunes
   homologacion/    fuentes tecnicas previas a la compra, como PeruCompras
   tiendas/         scrapers comerciales por tienda/proveedor
@@ -48,16 +48,6 @@ python3 herramientas/cotizacion/v1/cli/promelsa.py \
   --key item
 ```
 
-Wrapper compatible:
-
-```bash
-python3 herramientas/cotizacion/agente_compras.py \
-  --input proyectos/aquiles/presupuesto/bom_final_aquiles.json \
-  --output build/aquiles_promelsa.json \
-  --modo cli \
-  --key item
-```
-
 Modo automatico con Gemini:
 
 ```bash
@@ -73,7 +63,7 @@ Tambien puede usarse `herramientas/cotizacion/.env`; ver `.env.example`.
 
 ## Orquestador v1
 
-`v1/cli/cotizar.py` existe como punto de entrada general. Por ahora delega a
+`v1/cli/cotizar.py` es la entrada general del flujo. Por ahora delega a
 Promelsa; cuando agreguemos mas tiendas, este archivo coordinara PeruCompras,
 tiendas, seleccion y exportadores.
 
@@ -94,13 +84,6 @@ python3 herramientas/cotizacion/v1/homologacion/perucompras.py \
   --input proyectos/aquiles/presupuesto/bom_final_aquiles.json \
   --output build/aquiles_perucompras.json \
   --key item
-```
-
-Wrappers compatibles:
-
-```bash
-python3 herramientas/cotizacion/scraper_perucompras.py --input ... --output ...
-python3 herramientas/cotizacion/fuentes/perucompras_fichas.py --input ... --output ...
 ```
 
 ## Estados

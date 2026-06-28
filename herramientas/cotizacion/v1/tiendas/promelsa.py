@@ -5,6 +5,16 @@ El script esta pensado para ser reusable entre proyectos: no asume rutas del
 Proyecto Aquiles ni una estructura unica de JSON. Recibe la ruta del BOM por
 CLI, detecta listas comunes de materiales y agrega una cotizacion Promelsa a
 cada item procesado.
+
+Implementacion real de la tienda Promelsa. La entrada recomendada para
+operadores y agentes externos es `v1/cli/promelsa.py`; este archivo tambien se
+puede ejecutar directamente para depuracion:
+
+    python3 herramientas/cotizacion/v1/tiendas/promelsa.py \
+      --input proyectos/aquiles/presupuesto/bom_final_aquiles.json \
+      --output build/aquiles_promelsa.json \
+      --modo cli \
+      --key item
 """
 
 from __future__ import annotations

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Scraper de fichas oficiales del buscador publico de PeruCompras."""
+"""Scraper de fichas oficiales del buscador publico de PeruCompras.
+
+Implementacion real de la homologacion PeruCompras. Se ejecuta directamente:
+
+    python3 herramientas/cotizacion/v1/homologacion/perucompras.py \
+      --input proyectos/aquiles/presupuesto/bom_final_aquiles.json \
+      --output build/aquiles_perucompras.json \
+      --key item
+"""
 
 from __future__ import annotations
 

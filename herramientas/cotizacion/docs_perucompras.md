@@ -1,4 +1,4 @@
-# scraper_perucompras.py
+# PeruCompras v1
 
 ## Metadata
 
@@ -6,16 +6,10 @@ Proposito: consultar el Buscador Publico de Catalogos Electronicos de
 PeruCompras desde un BOM JSON y guardar, para cada material, el primer nombre
 oficial visible en las tarjetas HTML de resultados.
 
-Ubicacion principal:
+Ubicacion:
 
 ```text
 herramientas/cotizacion/v1/homologacion/perucompras.py
-```
-
-Ruta compatible:
-
-```text
-herramientas/cotizacion/scraper_perucompras.py
 ```
 
 Dependencias:
@@ -147,7 +141,7 @@ python3 -m pip install requests beautifulsoup4 rich
 Ejecucion:
 
 ```bash
-python3 herramientas/cotizacion/scraper_perucompras.py \
+python3 herramientas/cotizacion/v1/homologacion/perucompras.py \
   --input herramientas/cotizacion/fixtures/perucompras_bom_test.json \
   --output herramientas/cotizacion/salidas/perucompras_test.json \
   --limit 5 \
