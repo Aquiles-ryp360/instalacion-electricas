@@ -411,10 +411,10 @@ def build_floor2_electrical():
     
     draw_base_architecture(msp, data)
     
-    # Add Tablero de Distribución TD-01 on the right wall of Hall
+    # Add Tablero de Distribución TD-02 on the right wall of Hall
     td_x, td_y = 4.3, 4.5
-    msp.add_lwpolyline([(td_x - 0.1, td_y - 0.2), (td_x + 0.1, td_y - 0.2), (td_x + 0.1, td_y + 0.2), (td_x - 0.1, td_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'color': 1}) # Red TD-01
-    msp.add_text("TD-01", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.11, 'color': 1}).set_placement((td_x - 0.4, td_y - 0.05))
+    msp.add_lwpolyline([(td_x - 0.1, td_y - 0.2), (td_x + 0.1, td_y - 0.2), (td_x + 0.1, td_y + 0.2), (td_x - 0.1, td_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'color': 1}) # Red TD-02
+    msp.add_text("TD-02", dxfattribs={'layer': 'ELEC_TOMACORRIENTES', 'height': 0.11, 'color': 1}).set_placement((td_x - 0.4, td_y - 0.05))
     
     # 6 Lights (Centro de Luz)
     lights = {
@@ -521,10 +521,10 @@ def build_floor3_electrical():
     
     draw_base_architecture(msp, data)
     
-    # Add Tablero de Distribución TD-02 on the left wall of Pasadizo
+    # Add Tablero de Distribución TD-03 on the left wall of Pasadizo
     td_x, td_y = 0.2, 8.0
-    msp.add_lwpolyline([(td_x - 0.1, td_y - 0.2), (td_x + 0.1, td_y - 0.2), (td_x + 0.1, td_y + 0.2), (td_x - 0.1, td_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_ALUMBRADO', 'color': 1}) # Red TD-02
-    msp.add_text("TD-02", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.11, 'color': 1}).set_placement((td_x + 0.2, td_y - 0.05))
+    msp.add_lwpolyline([(td_x - 0.1, td_y - 0.2), (td_x + 0.1, td_y - 0.2), (td_x + 0.1, td_y + 0.2), (td_x - 0.1, td_y + 0.2)], close=True, dxfattribs={'layer': 'ELEC_ALUMBRADO', 'color': 1}) # Red TD-03
+    msp.add_text("TD-03", dxfattribs={'layer': 'ELEC_ALUMBRADO', 'height': 0.11, 'color': 1}).set_placement((td_x + 0.2, td_y - 0.05))
     
     # 7 Lights (Centro de Luz)
     lights = {
@@ -642,7 +642,7 @@ def build_diagrama_unifilar():
     msp.add_text("FECHA: 2026-06-03  |  ESC: S/E (MTS)", dxfattribs={'layer': 'TEXTOS', 'height': 0.09, 'color': 7}).set_placement((cx1 + 0.1, cy1 + 0.15))
     
     # Title
-    msp.add_text("DIAGRAMA UNIFILAR GENERAL - TG-01, TD-01, TD-02", dxfattribs={'layer': 'TEXTOS', 'height': 0.28, 'color': 7}).set_placement((0.0, 8.5))
+    msp.add_text("DIAGRAMA UNIFILAR GENERAL - TG-01, TD-02, TD-03", dxfattribs={'layer': 'TEXTOS', 'height': 0.28, 'color': 7}).set_placement((0.0, 8.5))
     
     # Helpers for switch symbols
     def draw_itm_box(msp, x, y, label):
@@ -719,34 +719,34 @@ def build_diagrama_unifilar():
     msp.add_text("3x2.5mm2 LSOH", dxfattribs={'layer': 'TEXTOS', 'height': 0.075, 'color': 7}).set_placement((3.5, 1.6), align=TextEntityAlignment.MIDDLE_CENTER)
     msp.add_text("1500 W", dxfattribs={'layer': 'TEXTOS', 'height': 0.075, 'color': 7}).set_placement((3.5, 1.4), align=TextEntityAlignment.MIDDLE_CENTER)
 
-    # Feeder branch to TD-01 at x = 4.5
+    # Feeder branch to TD-02 at x = 4.5
     msp.add_line((4.5, tg_bar_y), (4.5, 3.4), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
-    draw_itm_box(msp, 4.5, 3.2, "2P-25A (Alim TD-01)")
+    draw_itm_box(msp, 4.5, 3.2, "2P-25A (Alim TD-02)")
     msp.add_line((4.5, 3.0), (4.5, 2.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
-    # Horizontal feed line to TD-01
+    # Horizontal feed line to TD-02
     msp.add_line((4.5, 2.8), (7.75, 2.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
     msp.add_line((7.75, 2.8), (7.75, 6.0), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
-    msp.add_text("Feed TD-01: 3x4mm2", dxfattribs={'layer': 'TEXTOS', 'height': 0.075, 'color': 7}).set_placement((6.1, 2.92), align=TextEntityAlignment.MIDDLE_CENTER)
+    msp.add_text("Feed TD-02: 3x4mm2", dxfattribs={'layer': 'TEXTOS', 'height': 0.075, 'color': 7}).set_placement((6.1, 2.92), align=TextEntityAlignment.MIDDLE_CENTER)
 
-    # Feeder branch to TD-02 at x = 5.5
+    # Feeder branch to TD-03 at x = 5.5
     msp.add_line((5.5, tg_bar_y), (5.5, 3.4), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
-    draw_itm_box(msp, 5.5, 3.2, "2P-25A (Alim TD-02)")
+    draw_itm_box(msp, 5.5, 3.2, "2P-25A (Alim TD-03)")
     msp.add_line((5.5, 3.0), (5.5, 2.7), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
-    # Horizontal feed line to TD-02
+    # Horizontal feed line to TD-03
     msp.add_line((5.5, 2.7), (11.25, 2.7), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
     msp.add_line((11.25, 2.7), (11.25, 6.0), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
-    msp.add_text("Feed TD-02: 3x4mm2", dxfattribs={'layer': 'TEXTOS', 'height': 0.075, 'color': 7}).set_placement((8.4, 2.52), align=TextEntityAlignment.MIDDLE_CENTER)
+    msp.add_text("Feed TD-03: 3x4mm2", dxfattribs={'layer': 'TEXTOS', 'height': 0.075, 'color': 7}).set_placement((8.4, 2.52), align=TextEntityAlignment.MIDDLE_CENTER)
 
 
-    # 2. TABLERO DE DISTRIBUCIÓN TD-01 (2do Piso)
+    # 2. TABLERO DE DISTRIBUCIÓN TD-02 (2do Piso)
     msp.add_lwpolyline([(6.2, 0.8), (9.2, 0.8), (9.2, 6.3), (6.2, 6.3)], close=True, dxfattribs={'layer': 'DIAGRAMA', 'color': 8, 'linetype': 'DASHED'})
-    msp.add_text("TABLERO TD-01 (2DO PISO)", dxfattribs={'layer': 'TEXTOS', 'height': 0.11, 'color': 7}).set_placement((7.7, 6.1), align=TextEntityAlignment.MIDDLE_CENTER)
+    msp.add_text("TABLERO TD-02 (2DO PISO)", dxfattribs={'layer': 'TEXTOS', 'height': 0.11, 'color': 7}).set_placement((7.7, 6.1), align=TextEntityAlignment.MIDDLE_CENTER)
     
-    # TD-01 Main Breaker
+    # TD-02 Main Breaker
     draw_itm_box(msp, 7.75, 5.5, "ITM 2P, 25A")
     msp.add_line((7.75, 5.3), (7.75, 3.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
     
-    # TD-01 Busbar
+    # TD-02 Busbar
     td1_bar_y = 3.8
     msp.add_line((6.4, td1_bar_y), (9.0, td1_bar_y), dxfattribs={'layer': 'DIAGRAMA', 'color': 7, 'lineweight': 50})
     draw_ground_icon(msp, 6.5, td1_bar_y)
@@ -770,15 +770,15 @@ def build_diagrama_unifilar():
     msp.add_text("1050 W", dxfattribs={'layer': 'TEXTOS', 'height': 0.075, 'color': 7}).set_placement((8.25, 1.4), align=TextEntityAlignment.MIDDLE_CENTER)
 
 
-    # 3. TABLERO DE DISTRIBUCIÓN TD-02 (3er Piso)
+    # 3. TABLERO DE DISTRIBUCIÓN TD-03 (3er Piso)
     msp.add_lwpolyline([(9.5, 0.8), (12.7, 0.8), (12.7, 6.3), (9.5, 6.3)], close=True, dxfattribs={'layer': 'DIAGRAMA', 'color': 8, 'linetype': 'DASHED'})
-    msp.add_text("TABLERO TD-02 (3ER PISO)", dxfattribs={'layer': 'TEXTOS', 'height': 0.11, 'color': 7}).set_placement((11.1, 6.1), align=TextEntityAlignment.MIDDLE_CENTER)
+    msp.add_text("TABLERO TD-03 (3ER PISO)", dxfattribs={'layer': 'TEXTOS', 'height': 0.11, 'color': 7}).set_placement((11.1, 6.1), align=TextEntityAlignment.MIDDLE_CENTER)
     
-    # TD-02 Main Breaker
+    # TD-03 Main Breaker
     draw_itm_box(msp, 11.25, 5.5, "ITM 2P, 25A")
     msp.add_line((11.25, 5.3), (11.25, 3.8), dxfattribs={'layer': 'DIAGRAMA', 'color': 7})
     
-    # TD-02 Busbar
+    # TD-03 Busbar
     td2_bar_y = 3.8
     msp.add_line((9.7, td2_bar_y), (12.5, td2_bar_y), dxfattribs={'layer': 'DIAGRAMA', 'color': 7, 'lineweight': 50})
     draw_ground_icon(msp, 9.8, td2_bar_y)
@@ -980,8 +980,8 @@ def build_puesta_a_tierra():
     # Drawing the leaders pointing to elements
     draw_leader(msp, 1.2, 7.7, 3.0, 7.25, "TAPA DE CONCRETO 0.40 x 0.40 m", align="left")
     draw_leader(msp, 1.2, 7.0, 3.0, 6.75, "CONECTOR SPLIT-BOLT BRONCE 3/4\"", align="left")
-    draw_leader(msp, 1.2, 6.2, 1.6, 6.80, "COND. COBRE PE 10 mm2 EN TUBO PVC 3/4\"", align="left")
-    draw_leader(msp, 4.8, 5.0, 3.0, 4.5, "ELECTRODO COBRE PURO 3/4\" x 2.40 m", align="right")
+    draw_leader(msp, 1.2, 6.2, 1.6, 6.80, "COND. COBRE PE 6 mm2 EN TUBO PVC 3/4\"", align="left")
+    draw_leader(msp, 4.8, 5.0, 3.0, 4.5, "VARILLA COPPERWELD 5/8\" x 2.40 m", align="right")
     draw_leader(msp, 4.8, 3.5, 3.2, 3.0, "TIERRA TRATADA CON DOSIS BENTONITA/GEL", align="right")
     draw_leader(msp, 1.2, 2.0, 2.2, 2.0, "BASE / SOLADO DEL POZO", align="left")
 
@@ -994,7 +994,7 @@ def build_puesta_a_tierra():
     msp.add_text("ESPECIFICACIONES TÉCNICAS", dxfattribs={'layer': 'TEXTOS', 'height': 0.13, 'color': 7}).set_placement((spec_x, spec_y + 3.0))
     specs = [
         "1. Resistencia del pozo a tierra menor a 15 Ohms.",
-        "2. Electrodo de cobre puro al 99.9% de pureza.",
+        "2. Electrodo tipo copperweld 5/8\" x 2.40 m.",
         "3. Conductor de protección de cobre tipo desnudo/PE.",
         "4. Tratamiento con gel conductor químico de alta retención.",
         "5. Caja de registro de concreto H=0.30 m.",

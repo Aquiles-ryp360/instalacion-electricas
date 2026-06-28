@@ -4,17 +4,18 @@
 
 El calculo se desarrolla para una vivienda unifamiliar de tres niveles con suministro monofasico de 220 V, 60 Hz. La propuesta se basa en los layouts arquitectonicos canonicos y en el modelo electrico vigente representado en las laminas IE-02, IE-03 e IE-04.
 
-Por requerimiento de diseno, la sectorizacion se organiza en 7 circuitos independientes (alumbrado y tomacorrientes por nivel, mas un circuito de tomacorrientes especiales de cocina en el primer piso). Se han eliminado motores o bombas especiales para simplificar la instalacion y ajustarse exclusivamente al levantamiento real de puntos.
+La sectorizacion se organiza en 7 circuitos independientes: alumbrado y tomacorrientes por nivel, mas un circuito independiente de tomacorrientes especiales de cocina en el primer piso. No se consideran motores, bombas ni cargas especiales ajenas al levantamiento real de puntos.
 
 \section{Premisas de calculo}
 
 \begin{itemize}
   \item Tension nominal: 220 V monofasico.
   \item Factor de potencia (cos $\phi$) adoptado: 0.90.
-  \item Potencia unitaria de luminaria LED: 125 W por punto (adoptado para proporcionar un margen de reserva y seguridad superior al mínimo normativo de 50 W).
-  \item Potencia unitaria de tomacorriente general: Entre 187.5 W y 250 W por punto doble (adoptado para prever demandas futuras y superar el mínimo de 180 W del CNE-U).
-  \item Factor de demanda para circuitos de Alumbrado: 1.00.
-  \item Factor de demanda para circuitos de Tomacorrientes: 0.70 (excepto en el primer piso donde se aplica 1.00 por consideraciones de uso en tienda/comercial).
+  \item Potencia de diseno para circuitos de alumbrado: 500 W por nivel, adoptada como reserva academica por encima de la carga LED instalada.
+  \item Potencia de diseno para circuitos de tomacorrientes: 1000 W a 1500 W por circuito, segun uso y concentracion de puntos.
+  \item Factor de demanda para circuitos de alumbrado: 1.00.
+  \item Factor de demanda para tomacorrientes generales en segundo y tercer piso: 0.70.
+  \item Factor de demanda para tomacorrientes del primer piso y cocina: 1.00, por criterio conservador.
   \item Proteccion diferencial de 30 mA para todos los circuitos de tomacorrientes.
 \end{itemize}
 
@@ -42,59 +43,52 @@ Donde $P_{inst}$ es la potencia instalada, $P_{dem}$ es la potencia demandada, $
 \setlength{\tabcolsep}{2.5pt}
 \caption{Cuadro de cargas por circuito}
 \label{tab:cuadro-cargas}
-\begin{tabularx}{\textwidth}{c L{3.2cm} c c L{3.2cm} c L{2.2cm}}
+\begin{tabularx}{\textwidth}{c L{3.3cm} r c L{3.1cm} c L{2.2cm}}
 \toprule
-\textbf{Cto.} & \textbf{Descripción} & \textbf{Pot. (W)} & \textbf{F.D.} & \textbf{Conductor} & \textbf{ITM} & \textbf{ID} \\
+\textbf{Cto.} & \textbf{Descripcion} & \textbf{Pot. (W)} & \textbf{F.D.} & \textbf{Conductor} & \textbf{ITM} & \textbf{ID} \\
 \midrule
-C1 & Alumbrado General (Lámparas LED) & 132 & 1.00 & 3 x 1.5 mm2 Cu - PVC 3/4" & 2P-10A & 2P-25A/30mA \\
-C2 & Tomacorrientes Generales (TC) & 2520 & 0.70 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
-C3 & Tomacorrientes de Cocina & 1200 & 0.80 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-20A & 2P-25A/30mA \\
-C4 & Servicios Lavandería & 360 & 0.80 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
-C5 & Carga Especial (Bomba de Agua) & 750 & 1.00 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
+C1 & Alumbrado primer piso & 500 & 1.00 & 3 x 1.5 mm2 Cu - PVC 3/4" & 2P-10A & ID general \\
+C2 & Tomacorrientes generales primer piso & 1000 & 1.00 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
+C3 & Tomacorrientes especiales de cocina primer piso & 1500 & 1.00 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-20A & 2P-25A/30mA \\
+C4 & Alumbrado segundo piso & 500 & 1.00 & 3 x 1.5 mm2 Cu - PVC 3/4" & 2P-10A & ID general \\
+C5 & Tomacorrientes generales segundo piso & 1500 & 0.70 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
+C6 & Alumbrado tercer piso & 500 & 1.00 & 3 x 1.5 mm2 Cu - PVC 3/4" & 2P-10A & ID general \\
+C7 & Tomacorrientes generales tercer piso & 1500 & 0.70 & 3 x 2.5 mm2 Cu - PVC 3/4" & 2P-16A & 2P-25A/30mA \\
 \midrule
-\textbf{TOTAL} & \textbf{Demanda consolidada} & & & Acometida: 2×10mm² Cu + PE & Gral: 2P-40A & ID: 2P-40A/30mA \\
+\textbf{TOTAL} & \textbf{Demanda consolidada} & \textbf{7000} & -- & Acometida: 2 x 10 mm2 Cu + PE & Gral: 2P-40A & ID: 2P-40A/30mA \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Levantamiento de cargas por ambiente}
+\section{Levantamiento de cargas por circuito}
 
 \begin{table}[H]
 \centering
 \small
 \setlength{\tabcolsep}{3pt}
-\caption{Levantamiento de cargas por ambiente}
+\caption{Levantamiento de cargas por circuito}
 \label{tab:levantamiento-cargas}
-\begin{tabularx}{\textwidth}{c Y c c c}
+\begin{tabularx}{\textwidth}{c Y L{3.2cm} r c}
 \toprule
-\textbf{Item} & \textbf{Ambiente / Carga} & \textbf{Cant.} & \textbf{Pot. Unit. (W)} & \textbf{F. Demanda} \\
+\textbf{Item} & \textbf{Circuito / carga} & \textbf{Puntos vinculados} & \textbf{Pot. Inst. (W)} & \textbf{F. Demanda} \\
 \midrule
-1 & Sala-comedor - Luminaria LED & 2 & 12 & 1.00 \\
-2 & Sala-comedor - Tomacorriente doble & 4 & 180 & 0.70 \\
-3 & Cocina - Luminaria LED & 2 & 12 & 1.00 \\
-4 & Cocina - Pequeños Artefactos & 4 & 300 & 0.80 \\
-5 & Dormitorio Principal - Luminaria LED & 1 & 12 & 1.00 \\
-6 & Dormitorio Principal - Tomacorriente & 3 & 180 & 0.70 \\
-7 & Dormitorio Secundario 1 - Luz LED & 1 & 12 & 1.00 \\
-8 & Dormitorio Secundario 1 - Tomacorriente & 2 & 180 & 0.70 \\
-9 & Dormitorio Secundario 2 - Luz LED & 1 & 12 & 1.00 \\
-10 & Dormitorio Secundario 2 - Tomacorriente & 2 & 180 & 0.70 \\
-11 & Baño - Luminaria LED & 1 & 12 & 1.00 \\
-12 & Baño - Tomacorriente GFCI & 1 & 180 & 0.70 \\
-13 & Lavandería - Luminaria LED & 1 & 12 & 1.00 \\
-14 & Lavandería - Tomacorriente de servicio & 2 & 180 & 0.80 \\
-15 & Área Técnica - Bomba de Agua 1HP & 1 & 750 & 1.00 \\
-16 & Circulaciones (Pasadizos, Escalera) - Luz & 2 & 12 & 1.00 \\
+1 & C1 - Alumbrado primer piso & 7 luminarias / 5 interruptores & 500 & 1.00 \\
+2 & C2 - Tomacorrientes generales primer piso & 4 tomacorrientes dobles & 1000 & 1.00 \\
+3 & C3 - Tomacorrientes especiales de cocina primer piso & 4 tomacorrientes dobles & 1500 & 1.00 \\
+4 & C4 - Alumbrado segundo piso & 6 luminarias / 5 interruptores & 500 & 1.00 \\
+5 & C5 - Tomacorrientes generales segundo piso & 8 tomacorrientes, incluido 1 protegido & 1500 & 0.70 \\
+6 & C6 - Alumbrado tercer piso & 6 luminarias / 6 interruptores & 500 & 1.00 \\
+7 & C7 - Tomacorrientes generales tercer piso & 8 tomacorrientes, incluido 1 protegido & 1500 & 0.70 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \section{Interpretacion de la demanda maxima}
 
-La potencia instalada total es 4962 W. Aplicando factores de demanda por tipo de carga se obtiene una demanda maxima estimada de 3894 W. Con tension de 220 V y factor de potencia 0.90:
+La potencia instalada total es 7000 W. Aplicando los factores de demanda del modelo electrico canonico se obtiene una demanda maxima estimada de 6100 W. Con tension de 220 V y factor de potencia 0.90:
 
 \begin{equation}
-I_{dem} = \frac{3894}{220 \times 0.90} = 19.67\text{ A}
+I_{dem} = \frac{6100}{220 \times 0.90} = 30.81\text{ A}
 \end{equation}
 
 Con este valor de corriente de demanda se dimensiona el alimentador general con conductor de cobre de 10 mm2 y un interruptor termomagnetico principal de 2P-40A.
@@ -127,7 +121,7 @@ TD-03 & Tercer piso, pasadizo longitudinal & C6 y C7 & Subtablero para el contro
 \label{tab:protecciones-preliminares}
 \begin{tabularx}{\textwidth}{l Y Y Y Y}
 \toprule
-\textbf{Cto.} & \textbf{Uso} & \textbf{Interruptor} & \textbf{Conductor} & \textbf{Observación} \\
+\textbf{Cto.} & \textbf{Uso} & \textbf{Interruptor} & \textbf{Conductor} & \textbf{Observacion} \\
 \midrule
 General & Alimentacion principal & 2P-40A & 3 x 10 mm2 Cu + PE & Llave general termomagnetica \\
 - & ID General & 2P-40A / 30mA & - & Interruptor diferencial general TG \\
@@ -150,11 +144,11 @@ La seleccion preliminar mantiene el criterio basico:
 I_b \leq I_n \leq I_z
 \end{equation}
 
-Donde $I_b$ es la corriente de diseno, $I_n$ es la corriente nominal del interruptor e $I_z$ es la capacidad admisible del conductor. Con calibres de 1.5 mm2 ($I_z \approx 15\text{ A}$ en canalizacion empotrada) y de 2.5 mm2 ($I_z \approx 20\text{ A}$), las llaves de 10A, 16A y 20A garantizan la adecuada coordinacion y proteccion termica.
+Donde $I_b$ es la corriente de diseno, $I_n$ es la corriente nominal del interruptor e $I_z$ es la capacidad admisible del conductor. Con calibres de 1.5 mm2 ($I_z \approx 15\text{ A}$) y de 2.5 mm2 ($I_z \approx 20\text{ A}$), las llaves de 10A, 16A y 20A garantizan la coordinacion termica de los circuitos derivados. El alimentador de 10 mm2 mantiene holgura para la demanda de 30.81 A con proteccion general de 40 A.
 
 \section{Sistema de puesta a tierra}
 
-La propuesta incluye conductor de proteccion de tierra en todos los tomacorrientes (de color verde o verde-amarillo) y barra de conexion a tierra en cada tablero. La conexion final se realiza a un pozo de tierra vertical con electrodo de cobre de 5/8" x 2.40m y aditivo de conductividad gel, disenado para una resistencia de puesta a tierra menor a 15 Ohms.
+La propuesta incluye conductor de proteccion de tierra en todos los tomacorrientes y barra de conexion a tierra en cada tablero. La conexion final se realiza a un pozo de tierra vertical con electrodo de cobre de 5/8" x 2.40 m y aditivo de conductividad gel, disenado para una resistencia de puesta a tierra menor a 15 Ohms.
 
 \section{Resumen de puntos instalados}
 
@@ -179,7 +173,7 @@ Tercer piso & 6 & 6 & 8 & 20 \\
 \section{Observaciones de auditoria}
 
 \begin{itemize}
-  \item \textbf{Cargas especiales eliminadas:} electrobombas o motores especiales que no corresponden a la solicitud final del diseno de puntos, simplificando la instalacion.
-  \item \textbf{Circuitos resultantes:} 7 circuitos generales (C1 a C7) que cubren de manera integral la distribucion de alumbrado y tomacorrientes por nivel, mas la cocina independiente.
-  \item \textbf{Puntos instalados:} 19 luminarias, 16 interruptores y 24 tomacorrientes distribuidos en 43 puntos conectados a los 7 circuitos derivados.
+  \item \textbf{Cargas especiales eliminadas:} no se incluyen electrobombas ni motores especiales que no correspondan a la solicitud final del diseno de puntos.
+  \item \textbf{Circuitos resultantes:} 7 circuitos generales (C1 a C7) que cubren alumbrado y tomacorrientes por nivel, mas la cocina independiente.
+  \item \textbf{Puntos instalados:} 19 luminarias, 16 interruptores y 24 tomacorrientes, para un total de 59 puntos fisicos vinculados a los 7 circuitos derivados.
 \end{itemize}

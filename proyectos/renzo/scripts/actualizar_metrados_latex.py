@@ -1,371 +1,315 @@
-import os
+#!/usr/bin/env python3
+"""Regenera los capitulos de metrado y presupuesto del Proyecto Renzo.
 
-base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-capitulos_dir = os.path.join(base_dir, "expediente", "capitulos")
-metrado_path = os.path.join(capitulos_dir, "06-metrado.tex")
-presupuesto_path = os.path.join(capitulos_dir, "09-presupuesto.tex")
+La fuente primaria para conteos de puntos es
+``diseno-electrico/datos/modelo-electrico.json``. Los precios y codigos se
+mantienen alineados con el cuadro de insumos validado contra catalogo.win.
+"""
 
-# 1. Generate 06-metrado.tex content
-metrado_content = r"""\chapter{METRADO}
+from __future__ import annotations
 
-\section{Alcance}
+import json
+import math
+from pathlib import Path
 
-El presente metrado cuantifica los materiales necesarios para la instalacion electrica interior de la vivienda unifamiliar de tres niveles, conforme a la sectorizacion de siete circuitos (C1 a C7) definida para el proyecto de Renzo Gabriel Mamani Galindo. Las cantidades se obtienen de los planos electricos y de los recorridos estimados de canalizacion por nivel.
 
-Los metrados se agrupan por las siguientes categorias: tuberias, conductores, cajas, tableros, accesorios, protecciones, luminarias y sistema de puesta a tierra.
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+CAPITULOS_DIR = PROJECT_DIR / "expediente" / "capitulos"
+MODELO_PATH = PROJECT_DIR / "diseno-electrico" / "datos" / "modelo-electrico.json"
+METRADO_PATH = CAPITULOS_DIR / "06-metrado.tex"
+PRESUPUESTO_PATH = CAPITULOS_DIR / "09-presupuesto.tex"
 
-\section{Resumen de puntos electricos por circuito}
 
-\begin{table}[H]
+INSUMOS = [
+    ("01.01", "Tuberia PVC SAP electrica D=20 mm (3/4 in) L=3 m para alumbrado", "und", 40, 6.75, "969800030540"),
+    ("01.02", "Tuberia PVC SAP electrica D=20 mm (3/4 in) L=3 m para tomacorrientes", "und", 50, 6.75, "969800030540"),
+    ("01.03", "Tuberia PVC SAP electrica D=25 mm (1 in) L=3 m para alimentador", "und", 9, 19.50, "969800031384"),
+    ("02.01", "Conductor de cobre aislado LSOH 450/750 V 1.5 mm2", "m", 350, 1.65, "281600450640"),
+    ("02.02", "Conductor de cobre aislado LSOH 450/750 V 2.5 mm2", "m", 480, 2.55, "281600450641"),
+    ("02.03", "Conductor de cobre aislado LSOH 0.6/1 kV 10 mm2", "m", 30, 14.50, "281600450644"),
+    ("03.01", "Caja octogonal galvanizada 4 x 2 in para salida de luz", "und", 19, 3.50, "283400010796"),
+    ("03.02", "Caja rectangular galvanizada 4 x 2 in para interruptor y tomacorriente", "und", 40, 3.50, "283400010161"),
+    ("04.01", "Tablero general metalico TG-01 12 polos equipado", "und", 1, 450.00, "462290890071"),
+    ("04.02", "Tablero de distribucion metalico TD 8 polos equipado", "und", 2, 320.00, "952281740043"),
+    ("05.01", "Interruptor termomagnetico 2P 40 A curva C 6 kA o superior", "und", 1, 42.90, "285000180299"),
+    ("05.02", "Interruptor termomagnetico 2P 10 A para alumbrado", "und", 3, 38.50, "285000180309"),
+    ("05.03", "Interruptor termomagnetico 2P 16 A para tomacorrientes", "und", 3, 39.00, "285000180297"),
+    ("05.04", "Interruptor termomagnetico 2P 20 A para cocina", "und", 1, 39.90, "285000180298"),
+    ("05.05", "Interruptor diferencial 2P 40 A 30 mA tipo AC", "und", 1, 160.60, "285000061084"),
+    ("05.06", "Interruptor diferencial 2P 25 A 30 mA tipo AC", "und", 4, 145.00, "285000060817"),
+    ("05.07", "Interruptor simple empotrable con placa", "und", 11, 12.00, "285000060186"),
+    ("05.08", "Interruptor conmutado de 3 vias empotrable con placa", "und", 5, 15.00, "285000060010"),
+    ("05.09", "Tomacorriente doble con puesta a tierra empotrable", "und", 22, 14.50, "285000100015"),
+    ("05.10", "Tomacorriente protegido tipo GFCI / diferencial para bano", "und", 2, 45.00, "por verificar"),
+    ("06.01", "Luminaria LED interior tipo panel / sobreponer 18 W aprox.", "und", 19, 28.00, "285400320060"),
+    ("07.01", "Kit de pozo de puesta a tierra completo", "jgo", 1, 135.00, "por desagregar"),
+    ("08.01", "Cinta aislante electrica PVC 19 mm x 18 m aprox.", "und", 5, 7.50, "070400190001"),
+]
+
+
+PARTIDAS = {
+    "01": "TUBERIAS Y CANALIZACIONES",
+    "02": "CONDUCTORES ELECTRICOS",
+    "03": "CAJAS",
+    "04": "TABLEROS",
+    "05": "ACCESORIOS Y PROTECCIONES",
+    "06": "LUMINARIAS",
+    "07": "PUESTA A TIERRA",
+    "08": "CONSUMIBLES",
+}
+
+
+def load_model() -> dict:
+    return json.loads(MODELO_PATH.read_text(encoding="utf-8"))
+
+
+def circuit_counts(model: dict) -> dict[str, dict[str, int | float | str]]:
+    result = {
+        c["id"]: {
+            "uso": c["uso"],
+            "luminarias": 0,
+            "tomacorrientes": 0,
+            "interruptores": 0,
+            "longitud_m": 0.0,
+        }
+        for c in model["circuitos"]
+    }
+    for floor in model["floors"]:
+        for key, target in (
+            ("luminarias", "luminarias"),
+            ("tomacorrientes", "tomacorrientes"),
+            ("interruptores", "interruptores"),
+        ):
+            for item in floor.get(key, []):
+                result[item["circuito"]][target] += 1
+        for canalizacion in floor.get("canalizaciones", []):
+            points = canalizacion["puntos"]
+            length = sum(math.dist(a, b) for a, b in zip(points, points[1:]))
+            result[canalizacion["circuito"]]["longitud_m"] = round(length)
+    return result
+
+
+def model_totals(model: dict) -> dict[str, int | float]:
+    totals = {"luminarias": 0, "interruptores": 0, "tomacorrientes": 0, "tableros": 0}
+    for floor in model["floors"]:
+        for key in totals:
+            totals[key] += len(floor.get(key, []))
+    totals.update(model["resumen"])
+    return totals
+
+
+def money(value: float) -> str:
+    return f"{value:,.2f}"
+
+
+def render_circuit_rows(counts: dict[str, dict[str, int | float | str]]) -> str:
+    rows = []
+    for circuit, data in counts.items():
+        rows.append(
+            f'{circuit} & {data["uso"]} & {data["luminarias"] or "--"} & '
+            f'{data["tomacorrientes"] or "--"} & {data["interruptores"] or "--"} & '
+            f'{data["longitud_m"]} \\\\'
+        )
+    totals = {
+        "luminarias": sum(int(d["luminarias"]) for d in counts.values()),
+        "tomacorrientes": sum(int(d["tomacorrientes"]) for d in counts.values()),
+        "interruptores": sum(int(d["interruptores"]) for d in counts.values()),
+        "longitud_m": sum(float(d["longitud_m"]) for d in counts.values()),
+    }
+    rows.append(
+        "\\midrule\n"
+        f'\\textbf{{Total}} & & \\textbf{{{totals["luminarias"]}}} & '
+        f'\\textbf{{{totals["tomacorrientes"]}}} & '
+        f'\\textbf{{{totals["interruptores"]}}} & '
+        f'\\textbf{{{int(totals["longitud_m"])}}} \\\\'
+    )
+    return "\n".join(rows)
+
+
+def render_insumo_rows(include_code: bool = False) -> str:
+    rows = []
+    for item, desc, unit, qty, price, code in INSUMOS:
+        partial = qty * price
+        if include_code:
+            rows.append(
+                f"{item} & {desc} & {unit} & {qty:g} & {money(price)} & "
+                f"{money(partial)} & {code} \\\\"
+            )
+        else:
+            rows.append(f"{item} & {desc} & {unit} & {qty:g} & {code} \\\\")
+    return "\n".join(rows)
+
+
+def render_budget_rows() -> str:
+    rows = []
+    current = None
+    subtotal = 0.0
+    for item, desc, unit, qty, price, _code in INSUMOS:
+        partida = item.split(".")[0]
+        if current != partida:
+            if current is not None:
+                rows.append(
+                    f" & & & & & \\textbf{{Subtotal {current}}} & \\textbf{{{money(subtotal)}}} \\\\"
+                )
+                rows.append("\\midrule")
+            current = partida
+            subtotal = 0.0
+            rows.append(f"\\multicolumn{{7}}{{l}}{{\\textbf{{{partida}.00 {PARTIDAS[partida]}}}}} \\\\")
+        partial = qty * price
+        subtotal += partial
+        rows.append(
+            f"{item} & {desc} & {unit} & {qty:g} & {money(price)} & {money(partial)} & \\\\"
+        )
+    rows.append(f" & & & & & \\textbf{{Subtotal {current}}} & \\textbf{{{money(subtotal)}}} \\\\")
+    return "\n".join(rows)
+
+
+def render_metrado(model: dict) -> str:
+    counts = circuit_counts(model)
+    totals = model_totals(model)
+    circuit_rows = render_circuit_rows(counts)
+    insumo_rows = render_insumo_rows()
+    return rf"""\chapter{{METRADO}}
+
+\section{{Alcance}}
+
+El presente metrado cuantifica los materiales necesarios para la instalacion electrica interior de la vivienda unifamiliar de tres niveles, conforme a la sectorizacion de siete circuitos (C1 a C7) definida para el proyecto de Renzo Gabriel Mamani Galindo. Los puntos proceden del modelo electrico canonico y las cantidades de compra se mantienen alineadas con el cuadro de insumos validado.
+
+Los metrados se agrupan por tuberias, conductores, cajas, tableros, accesorios, protecciones, luminarias y sistema de puesta a tierra.
+
+\section{{Resumen de puntos electricos por circuito}}
+
+\begin{{table}}[H]
 \centering
 \small
-\caption{Puntos electricos por circuito (Proyecto de Renzo)}
-\label{tab:puntos-por-circuito}
-\begin{tabularx}{\textwidth}{c L{4.5cm} c c c Y}
+\caption{{Puntos electricos por circuito (Proyecto de Renzo)}}
+\label{{tab:puntos-por-circuito}}
+\begin{{tabularx}}{{\textwidth}}{{c L{{5.0cm}} c c c c}}
 \toprule
-\textbf{Cto.} & \textbf{Uso} & \textbf{Luminarias} & \textbf{TCs} & \textbf{Interruptores} & \textbf{Long. est. (m)} \\
+\textbf{{Cto.}} & \textbf{{Uso}} & \textbf{{Luminarias}} & \textbf{{TCs}} & \textbf{{Interruptores}} & \textbf{{Long. modelo (m)}} \\
 \midrule
-C1 & Alumbrado 1er piso & 4 & -- & 2 & 12 \\
-C2 & TCs generales 1er piso & -- & 5 & -- & 15 \\
-C3 & Tomacorrientes Cocina & -- & 3 & -- & 10 \\
-C4 & Alumbrado 2do piso & 4 & -- & 3 & 14 \\
-C5 & TCs generales 2do piso & -- & 8 & -- & 20 \\
-C6 & Alumbrado 3er piso & 4 & -- & 3 & 16 \\
-C7 & TCs generales 3er piso & -- & 6 & -- & 18 \\
-\midrule
-\textbf{Total} & & \textbf{12} & \textbf{22} & \textbf{8} & \textbf{105} \\
+{circuit_rows}
 \bottomrule
-\end{tabularx}
-\end{table}
+\end{{tabularx}}
+\end{{table}}
 
-\section{Metrado de tuberias (canalizaciones)}
+\section{{Metrado consolidado de insumos}}
 
-\begin{landscape}
-\begin{table}[H]
+\begin{{landscape}}
+\begin{{longtable}}{{c L{{6.8cm}} c r L{{3.0cm}}}}
+\caption{{Metrado consolidado de insumos electricos}}\label{{tab:resumen-metrados}}\\
+\toprule
+\textbf{{Item}} & \textbf{{Descripcion}} & \textbf{{Und.}} & \textbf{{Cant.}} & \textbf{{Codigo SIGA / catalogo.win}} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{{Item}} & \textbf{{Descripcion}} & \textbf{{Und.}} & \textbf{{Cant.}} & \textbf{{Codigo SIGA / catalogo.win}} \\
+\midrule
+\endhead
+{insumo_rows}
+\bottomrule
+\end{{longtable}}
+\end{{landscape}}
+
+\section{{Resumen de cantidades fisicas}}
+
+\begin{{table}}[H]
 \centering
 \small
-\caption{Metrado de tuberias PVC}
-\label{tab:metrado-tuberias}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{1.5cm} c L{1.8cm} L{3.5cm} Y}
+\caption{{Resumen de puntos y equipos segun modelo canonico}}
+\label{{tab:resumen-puntos-metrado}}
+\begin{{tabularx}}{{\textwidth}}{{L{{5.0cm}} c Y}}
 \toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Tipo} & \textbf{Und.} & \textbf{Cant.} & \textbf{Circuitos} & \textbf{Observacion} \\
+\textbf{{Concepto}} & \textbf{{Cantidad}} & \textbf{{Fuente}} \\
 \midrule
-1 & Tuberia PVC liviana 3/4" para alumbrado & PV-L & m & 120 & C1, C4, C6 & Empotrada en losa de techo \\
-2 & Tuberia PVC pesada 3/4" para tomacorrientes & PV-P & m & 150 & C2, C3, C5, C7 & Empotrada en contrapiso y muros \\
-3 & Tuberia PVC pesada 1" para alimentador & PV-P & m & 25 & Alimentador general & Desde medidor a TG y subtableros \\
+Luminarias & {totals["luminarias"]} & Modelo electrico canonico \\
+Interruptores & {totals["interruptores"]} & Modelo electrico canonico \\
+Tomacorrientes totales & {totals["tomacorrientes"]} & Modelo electrico canonico; incluye 2 tomacorrientes protegidos en banos \\
+Tableros & {totals["tableros"]} & TG-01, TD-02 y TD-03 \\
+Potencia instalada & {totals["potencia_instalada_w"] / 1000:.2f} kW & Cuadro de cargas canonico \\
+Demanda maxima & {totals["demanda_maxima_w"] / 1000:.2f} kW & Cuadro de cargas canonico \\
 \bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
+\end{{tabularx}}
+\end{{table}}
 
-\section{Metrado de conductores}
+\section{{Nota tecnica}}
 
-\begin{landscape}
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de conductores de cobre}
-\label{tab:metrado-conductores}
-\begin{tabularx}{\textwidth}{c L{4.5cm} c L{1.8cm} L{1.8cm} L{1.8cm} c Y}
+Los metrados presentados son referenciales para expediente academico. Antes de compra o ejecucion deben verificarse recorridos reales, alturas de montaje, disponibilidad comercial y los dos items aun pendientes de decision formal en catalogo.win: tomacorriente protegido tipo GFCI y kit de pozo de puesta a tierra.
+"""
+
+
+def render_presupuesto(model: dict) -> str:
+    material_total = sum(qty * price for _, _, _, qty, price, _ in INSUMOS)
+    labor = round(material_total * 0.40, 2)
+    subtotal = round(material_total + labor, 2)
+    tax = round(subtotal * 0.18, 2)
+    total = round(subtotal + tax, 2)
+    budget_rows = render_budget_rows()
+    price_rows = render_insumo_rows(include_code=True)
+
+    return rf"""\chapter{{PRESUPUESTO ESTIMADO}}
+
+\section{{Alcance}}
+
+El presente presupuesto estima el costo referencial de los materiales, mano de obra e impuestos para la instalacion electrica interior de la vivienda unifamiliar de tres niveles. Los precios unitarios se alinean con el cuadro de insumos del requerimiento y con la validacion de codigos catalogo.win realizada el 2026-06-28.
+
+\section{{Precios unitarios referenciales}}
+
+\begin{{landscape}}
+\begin{{longtable}}{{c L{{6.2cm}} c r R{{1.8cm}} R{{1.8cm}} L{{2.8cm}}}}
+\caption{{Precios unitarios referenciales de materiales (Proyecto Renzo)}}\label{{tab:precios-unitarios}}\\
 \toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Seccion} & \textbf{Cant.} & \textbf{Tipo} & \textbf{Uso} & \textbf{Observacion} \\
+\textbf{{Item}} & \textbf{{Descripcion}} & \textbf{{Und.}} & \textbf{{Cant.}} & \textbf{{P. Unit. (S/)}} & \textbf{{Parcial (S/)}} & \textbf{{Codigo}} \\
 \midrule
-1 & Conductor fase alumbrado & m & 1.5 mm2 & 120 & LSOH & C1, C4, C6 & Cableado unipolar \\
-2 & Conductor neutro alumbrado & m & 1.5 mm2 & 120 & LSOH & C1, C4, C6 & Cableado unipolar \\
-3 & Conductor de proteccion alumbrado & m & 1.5 mm2 & 110 & LSOH & C1, C4, C6 & Segun CNE-U \\
-4 & Conductor fase tomacorrientes & m & 2.5 mm2 & 160 & LSOH & C2, C3, C5, C7 & Cableado unipolar \\
-5 & Conductor neutro tomacorrientes & m & 2.5 mm2 & 160 & LSOH & C2, C3, C5, C7 & Cableado unipolar \\
-6 & Conductor de proteccion tomacorrientes & m & 2.5 mm2 & 160 & LSOH & C2, C3, C5, C7 & Cableado unipolar \\
-7 & Conductor alimentador general fase & m & 10 mm2 & 30 & LSOH & TG & Cableado unipolar \\
-8 & Conductor alimentador general neutro & m & 10 mm2 & 30 & LSOH & TG & Cableado unipolar \\
+\endfirsthead
+\toprule
+\textbf{{Item}} & \textbf{{Descripcion}} & \textbf{{Und.}} & \textbf{{Cant.}} & \textbf{{P. Unit. (S/)}} & \textbf{{Parcial (S/)}} & \textbf{{Codigo}} \\
+\midrule
+\endhead
+{price_rows}
 \bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
+\end{{longtable}}
+\end{{landscape}}
 
 \clearpage
 
-\section{Metrado de cajas}
+\section{{Presupuesto general}}
 
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de cajas de pase y derivacion}
-\label{tab:metrado-cajas}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{2.5cm} c L{2.5cm} Y}
+\begin{{landscape}}
+\begin{{longtable}}{{c L{{6.0cm}} c r R{{1.8cm}} R{{1.8cm}} R{{1.8cm}}}}
+\caption{{Presupuesto general estimado (Proyecto Renzo)}}\label{{tab:presupuesto-general}}\\
 \toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Material} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
+\textbf{{Item}} & \textbf{{Descripcion de partida / material}} & \textbf{{Und.}} & \textbf{{Cant.}} & \textbf{{P. Unit. (S/)}} & \textbf{{Parcial (S/)}} & \textbf{{Subtotal (S/)}} \\
 \midrule
-1 & Cajas octogonales 4" x 2" para luminarias & Fierro galvanizado & pza & 12 & Puntos de luz y derivacion \\
-2 & Cajas rectangulares 4" x 2" para interruptores & Fierro galvanizado & pza & 8 & Interruptores simples y conmutadores \\
-3 & Cajas rectangulares 4" x 2" para tomacorrientes & Fierro galvanizado & pza & 24 & Tomacorrientes generales y especiales \\
-4 & Caja de pase rectangular 4" x 2" & Fierro galvanizado & pza & 6 & Para derivaciones en cambios de direccion \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Metrado de tableros}
-
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de tableros electricos}
-\label{tab:metrado-tableros}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{1.8cm} c L{1.8cm} Y}
+\endfirsthead
 \toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Polos} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
+\textbf{{Item}} & \textbf{{Descripcion de partida / material}} & \textbf{{Und.}} & \textbf{{Cant.}} & \textbf{{P. Unit. (S/)}} & \textbf{{Parcial (S/)}} & \textbf{{Subtotal (S/)}} \\
 \midrule
-1 & Tablero general TG-01 (metalico empotrable) & 12 polos & u & 1 & Primer piso, zona de ingreso \\
-2 & Tablero de distribucion TD-01 & 8 polos & u & 1 & Segundo piso, zona central \\
-3 & Tablero de distribucion TD-02 & 8 polos & u & 1 & Tercer piso o zona de servicio \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Metrado de accesorios y protecciones}
-
-\begin{landscape}
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de accesorios, interruptores y protecciones}
-\label{tab:metrado-accesorios}
-\begin{tabularx}{\textwidth}{c L{4.5cm} c L{2.0cm} L{2.0cm} Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Cant.} & \textbf{Circuito} & \textbf{Observacion} \\
+\endhead
+{budget_rows}
 \midrule
-1 & Interruptor simple (unipolar) & pza & 4 & C1, C4, C6 & Ambientes generales \\
-2 & Interruptor conmutacion 3 vias (S3) & pza & 4 & C1, C4, C6 & Escaleras y pasadizo \\
-3 & Tomacorriente doble con toma a tierra & pza & 22 & C2, C3, C5, C7 & Uso general \\
-4 & Tomacorriente doble con proteccion GFCI & pza & 2 & C5, C7 & Banos (protegido) \\
-5 & Interruptor termomagnetico 2P-10A & pza & 3 & C1, C4, C6 & Proteccion alumbrado \\
-6 & Interruptor termomagnetico 2P-16A & pza & 3 & C2, C5, C7 & Proteccion tomacorrientes \\
-7 & Interruptor termomagnetico 2P-20A & pza & 1 & C3 & Proteccion cocina \\
-8 & Interruptor termomagnetico general 2P-40A & pza & 1 & Alimentador & Proteccion general TG \\
-9 & Interruptor diferencial 2P-25A-30mA & pza & 4 & C2, C3, C5, C7 & Proteccion de personas \\
-10 & Interruptor diferencial 2P-40A-30mA (General) & pza & 1 & TG-01 & Proteccion diferencial general \\
-11 & Luminaria LED interior 12 W (circular o rectangular) & pza & 12 & C1, C4, C6 & Iluminacion LED \\
+\multicolumn{{6}}{{r}}{{\textbf{{VALOR TOTAL DE MATERIALES}}}} & \textbf{{{money(material_total)}}} \\
+\multicolumn{{6}}{{r}}{{Mano de Obra (40\%)}} & \textbf{{{money(labor)}}} \\
+\multicolumn{{6}}{{r}}{{\textbf{{SUBTOTAL GENERAL}}}} & \textbf{{{money(subtotal)}}} \\
+\multicolumn{{6}}{{r}}{{Impuesto General a las Ventas (IGV 18\%)}} & \textbf{{{money(tax)}}} \\
+\multicolumn{{6}}{{r}}{{\textbf{{PRESUPUESTO TOTAL GENERAL}}}} & \textbf{{{money(total)}}} \\
 \bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
+\end{{longtable}}
+\end{{landscape}}
 
-\section{Metrado de puesta a tierra}
+\section{{Nota tecnica}}
 
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado del sistema de puesta a tierra}
-\label{tab:metrado-puesta-tierra}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{2.0cm} c L{2.5cm} Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Material} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
-\midrule
-1 & Varilla de puesta a tierra 5/8" x 2.40 m & Cobre solido & pza & 1 & Electrodo principal \\
-2 & Conector de bronce para varilla & Bronce & pza & 1 & Conexion certificada \\
-3 & Conductor de puesta a tierra 6 mm2 & Cobre desnudo & m & 25 & Conexion a barra de tierra \\
-4 & Caja de registro de puesta a tierra & Metalico & pza & 1 & Para inspeccion \\
-5 & Barra de tierra para tablero & Cobre & pza & 1 & En tablero general \\
-6 & Gel o mejorador de suelo & Quimico & kg & 5 & Reduccion de resistencia \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Resumen general de metrados}
-
-\begin{landscape}
-\begin{table}[H]
-\centering
-\tiny
-\caption{Resumen general de metrados (Proyecto Renzo)}
-\label{tab:resumen-metrados}
-\begin{tabularx}{\textwidth}{c L{4.8cm} L{2.2cm} c L{1.8cm} L{3.0cm} Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Especificacion} & \textbf{Cant.} & \textbf{Plano ref.} & \textbf{Observacion} \\
-\midrule
-1 & Tuberia PVC liviana 3/4" & m & PV-L & 120 & IE-02, IE-04 & Alumbrado empotrado en techo \\
-2 & Tuberia PVC pesada 3/4" & m & PV-P & 150 & IE-03, IE-04 & Tomacorrientes empotrado en muro \\
-3 & Tuberia PVC pesada 1" & m & PV-P & 25 & IE-05 & Alimentador general \\
-4 & Conductor 1.5 mm2 Cu LSOH & m & LSOH 1.5 mm2 & 350 & IE-02 & Fase+neutro+PE alumbrado \\
-5 & Conductor 2.5 mm2 Cu LSOH & m & LSOH 2.5 mm2 & 480 & IE-03 & Fase+neutro+PE tomacorrientes \\
-6 & Conductor 10 mm2 Cu LSOH & m & LSOH 10 mm2 & 30 & IE-05 & Alimentador general \\
-7 & Conductor 6 mm2 Cu & m & Cu desnudo & 25 & IE-06 & Puesta a tierra \\
-8 & Caja octogonal 4" x 2" FG & pza & FG & 12 & IE-02 & Luminarias \\
-9 & Caja rectangular 4" x 2" FG & pza & FG & 32 & IE-02, IE-03 & Interruptores y tomacorrientes \\
-10 & Caja de pase rectangular & pza & FG & 6 & IE-04 & Derivaciones \\
-11 & Tablero general TG-01 & u & 12 polos & 1 & IE-05 & Primer piso \\
-12 & Tablero distribucion TD-01 & u & 8 polos & 1 & IE-05 & Segundo piso \\
-13 & Tablero distribucion TD-02 & u & 8 polos & 1 & IE-05 & Tercer piso \\
-14 & Interruptor simple & pza & Unipolar & 4 & IE-02 & Alumbrado \\
-15 & Interruptor conmutador S3 & pza & 3 vias & 4 & IE-02 & Escaleras \\
-16 & Tomacorriente doble c/tierra & pza & 15 A - 250 V & 22 & IE-03 & Uso general \\
-17 & Tomacorriente GFCI & pza & 15 A - 30 mA & 2 & IE-03 & Banos \\
-18 & Interruptor termomagnetico 2P-10A & pza & 10 A & 3 & IE-05 & Alumbrado \\
-19 & Interruptor termomagnetico 2P-16A & pza & 16 A & 3 & IE-05 & Tomacorrientes \\
-20 & Interruptor termomagnetico 2P-20A & pza & 20 A & 1 & IE-05 & Cocina \\
-21 & Interruptor termomagnetico general 2P-40A & pza & 40 A & 1 & IE-05 & General TG \\
-22 & Interruptor diferencial 2P-25A-30mA & pza & 25 A - 30 mA & 4 & IE-05 & Circuitos tomacorrientes \\
-23 & Interruptor diferencial 2P-40A-30mA & pza & 40 A - 30 mA & 1 & IE-05 & General TG \\
-24 & Luminaria LED 12 W & pza & 12 W LED & 12 & IE-02 & Iluminacion interior \\
-25 & Kit de puesta a tierra completo & jgo & 5/8" x 2.40 m & 1 & IE-06 & Incluye varilla, conector, caja \\
-\bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
-
-\section{Nota tecnica}
-
-Los metrados presentados son referenciales y corresponden a un anteproyecto academico. Las cantidades definitivas deberan recalcularse en un proyecto ejecutivo considerando:
-
-\begin{itemize}
-  \item Planos arquitectonicos con cotas definitivas.
-  \item Longitudes reales de recorridos de tuberias en obra.
-  \item Criterios de la empresa distribuidora (Electro Puno S.A.A.).
-  \item Verificacion de curvas, accesorios y desperdicios de obra (se recomienda agregar 5\% a 10\% de desperdicio en la compra real).
-\end{itemize}
+Los costos presentados son referenciales. El tomacorriente protegido tipo GFCI y el kit de pozo de puesta a tierra mantienen estado de verificacion/desagregacion en catalogo.win, por lo que su compra requiere decision humana y cotizacion vigente.
 """
 
-with open(metrado_path, "w", encoding="utf-8") as f:
-    f.write(metrado_content)
-print(f"Updated: {metrado_path}")
+
+def main() -> None:
+    model = load_model()
+    METRADO_PATH.write_text(render_metrado(model), encoding="utf-8")
+    PRESUPUESTO_PATH.write_text(render_presupuesto(model), encoding="utf-8")
+    print(f"Updated: {METRADO_PATH}")
+    print(f"Updated: {PRESUPUESTO_PATH}")
 
 
-# 2. Generate 09-presupuesto.tex content
-presupuesto_content = r"""\chapter{PRESUPUESTO ESTIMADO}
-
-\section{Alcance}
-
-El presente presupuesto estima el costo referencial de los materiales, mano de obra e impuestos para la instalacion electrica interior de la vivienda unifamiliar de tres niveles para el proyecto de Renzo Gabriel Mamani Galindo. Los precios unitarios corresponden a valores referenciales del mercado local a la fecha del proyecto.
-
-El presupuesto se estructura en las siguientes partidas:
-\begin{itemize}
-  \item Tuberias y canalizaciones.
-  \item Conductores electricos.
-  \item Cajas de pase y derivacion.
-  \item Tableros electricos.
-  \item Accesorios, interruptores y tomacorrientes.
-  \item Protecciones electricas.
-  \item Luminarias.
-  \item Sistema de puesta a tierra.
-  \item Mano de obra.
-  \item Impuestos (IGV 18\%).
-\end{itemize}
-
-\section{Precios unitarios referenciales}
-
-La siguiente tabla muestra los precios unitarios estimados para cada material, basados en cotizaciones de proveedores locales y ferreterias especializadas de la region.
-
-\begin{table}[H]
-\centering
-\footnotesize
-\caption{Precios unitarios referenciales de materiales (Proyecto Renzo)}
-\label{tab:precios-unitarios}
-\begin{tabularx}{\textwidth}{c Y c c R{1.8cm} L{2.0cm} L{2.5cm}}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Cant.} & \textbf{P. Unit. (S/)} & \textbf{Proveedor ref.} & \textbf{Observacion} \\
-\midrule
-1 & Tuberia PVC liviana 3/4" & m & 120 & 3.50 & Ferreteria local & Tuberia SELVA o similar \\
-2 & Tuberia PVC pesada 3/4" & m & 150 & 4.50 & Ferreteria local & Tuberia SELVA o similar \\
-3 & Tuberia PVC pesada 1" & m & 25 & 8.50 & Ferreteria local & Tuberia SELVA o similar \\
-4 & Conductor LSOH 1.5 mm2 (rollo 100 m) & m & 350 & 2.80 & Indeco / Promel & Cable unipolar cobre \\
-5 & Conductor LSOH 2.5 mm2 (rollo 100 m) & m & 480 & 4.50 & Indeco / Promel & Cable unipolar cobre \\
-6 & Conductor LSOH 10 mm2 (rollo 100 m) & m & 30 & 16.00 & Indeco / Promel & Cable unipolar cobre \\
-7 & Conductor 6 mm2 Cu desnudo (rollo 50 m) & m & 25 & 8.00 & Indeco / Promel & Puesta a tierra \\
-8 & Caja octogonal FG 4" x 2" & pza & 12 & 3.50 & Ferreteria local & -- \\
-9 & Caja rectangular FG 4" x 2" & pza & 32 & 3.20 & Ferreteria local & -- \\
-10 & Caja de pase rectangular FG & pza & 6 & 4.50 & Ferreteria local & -- \\
-11 & Tablero general TG-01 12 polos equipado & u & 1 & 450.00 & SEIN / TICINO & Completo con barra N/T y puerta \\
-12 & Tablero distribucion TD-01 8 polos equipado & u & 1 & 320.00 & SEIN / TICINO & Completo con barra N/T y puerta \\
-13 & Tablero distribucion TD-02 8 polos equipado & u & 1 & 320.00 & SEIN / TICINO & Completo con barra N/T y puerta \\
-14 & Interruptor simple unipolar (placa completa) & pza & 4 & 12.00 & TICINO / BTICINO & Color blanco \\
-15 & Interruptor conmutador S3 (placa completa) & pza & 4 & 15.00 & TICINO / BTICINO & Color blanco \\
-16 & Tomacorriente doble c/tierra (placa completa) & pza & 22 & 14.50 & TICINO / BTICINO & 15 A - 250 V \\
-17 & Tomacorriente GFCI (placa completa) & pza & 2 & 45.00 & TICINO / BTICINO & Proteccion diferencial integrada \\
-18 & Interruptor termomagnetico 2P-10A & pza & 3 & 35.00 & SEIN / LEGRAND & Curva C \\
-19 & Interruptor termomagnetico 2P-16A & pza & 3 & 38.00 & SEIN / LEGRAND & Curva C \\
-20 & Interruptor termomagnetico 2P-20A & pza & 1 & 42.00 & SEIN / LEGRAND & Curva C \\
-21 & Interruptor termomagnetico general 2P-40A & pza & 1 & 85.00 & SEIN / LEGRAND & Curva C \\
-22 & Interruptor diferencial 2P-25A-30mA & pza & 4 & 120.00 & SEIN / LEGRAND & Proteccion de personas \\
-23 & Interruptor diferencial 2P-40A-30mA & pza & 1 & 140.00 & SEIN / LEGRAND & Proteccion general \\
-24 & Luminaria LED interior 12 W & pza & 12 & 25.00 & Philips / OSRAM & Panel LED circular o rectangular \\
-25 & Kit de puesta a tierra completo & jgo & 1 & 650.00 & Ferreteria especializada & Varilla 5/8" x 2.40 m + accesorios \\
-26 & Varios (curvas, uniones, cinta aislante, conectores) & glb & 1 & 200.00 & Ferreteria local & Accesorios de instalacion \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\clearpage
-
-\section{Presupuesto general}
-
-\begin{table}[H]
-\centering
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\caption{Presupuesto general estimado (Proyecto Renzo)}
-\label{tab:presupuesto-general}
-\begin{tabularx}{\textwidth}{c Y c c R{1.8cm} R{1.8cm} R{1.8cm}}
-\toprule
-\textbf{Item} & \textbf{Descripcion de partida / material} & \textbf{Und.} & \textbf{Cant.} & \textbf{P. Unit. (S/)} & \textbf{Parcial (S/)} & \textbf{Subtotal (S/)} \\
-\midrule
-\multicolumn{7}{l}{\textbf{01.00 TUBERIAS Y CANALIZACIONES}} \\
-01.01 & Tuberia PVC liviana 3/4" para alumbrado & m & 120 & 3.50 & 420.00 & \\
-01.02 & Tuberia PVC pesada 3/4" para tomacorrientes & m & 150 & 4.50 & 675.00 & \\
-01.03 & Tuberia PVC pesada 1" para alimentador & m & 25 & 8.50 & 212.50 & \\
- & & & & & \textbf{Subtotal 01} & \textbf{1,307.50} \\
-\midrule
-\multicolumn{7}{l}{\textbf{02.00 CONDUCTORES ELECTRICOS}} \\
-02.01 & Conductor LSOH 1.5 mm2 (fase+neutro+PE) & m & 350 & 2.80 & 980.00 & \\
-02.02 & Conductor LSOH 2.5 mm2 (fase+neutro+PE) & m & 480 & 4.50 & 2,160.00 & \\
-02.03 & Conductor LSOH 10 mm2 (fase+neutro) & m & 30 & 16.00 & 480.00 & \\
-02.04 & Conductor Cu desnudo 6 mm2 (PT) & m & 25 & 8.00 & 200.00 & \\
- & & & & & \textbf{Subtotal 02} & \textbf{3,820.00} \\
-\midrule
-\multicolumn{7}{l}{\textbf{03.00 CAJAS}} \\
-03.01 & Caja octogonal FG 4" x 2" & pza & 12 & 3.50 & 42.00 & \\
-03.02 & Caja rectangular FG 4" x 2" & pza & 32 & 3.20 & 102.40 & \\
-03.03 & Caja de pase rectangular FG & pza & 6 & 4.50 & 27.00 & \\
- & & & & & \textbf{Subtotal 03} & \textbf{171.40} \\
-\midrule
-\multicolumn{7}{l}{\textbf{04.00 TABLEROS}} \\
-04.01 & Tablero general TG-01 12 polos & u & 1 & 450.00 & 450.00 & \\
-04.02 & Tablero distribucion TD-01 8 polos & u & 1 & 320.00 & 320.00 & \\
-04.03 & Tablero distribucion TD-02 8 polos & u & 1 & 320.00 & 320.00 & \\
- & & & & & \textbf{Subtotal 04} & \textbf{1,090.00} \\
-\midrule
-\multicolumn{7}{l}{\textbf{05.00 ACCESORIOS Y PROTECCIONES}} \\
-05.01 & Interruptor simple unipolar & pza & 4 & 12.00 & 48.00 & \\
-05.02 & Interruptor conmutador S3 & pza & 4 & 15.00 & 60.00 & \\
-05.03 & Tomacorriente doble con toma a tierra & pza & 22 & 14.50 & 319.00 & \\
-05.04 & Tomacorriente GFCI (banos) & pza & 2 & 45.00 & 90.00 & \\
-05.05 & Interruptor termomagnetico 2P-10A & pza & 3 & 35.00 & 105.00 & \\
-05.06 & Interruptor termomagnetico 2P-16A & pza & 3 & 38.00 & 114.00 & \\
-05.07 & Interruptor termomagnetico 2P-20A & pza & 1 & 42.00 & 42.00 & \\
-05.08 & Interruptor termomagnetico general 2P-40A & pza & 1 & 85.00 & 85.00 & \\
-05.09 & Interruptor diferencial 2P-25A-30mA & pza & 4 & 120.00 & 480.00 & \\
-05.10 & Interruptor diferencial 2P-40A-30mA (General) & pza & 1 & 140.00 & 140.00 & \\
-05.11 & Luminaria LED interior 12 W & pza & 12 & 25.00 & 300.00 & \\
- & & & & & \textbf{Subtotal 05} & \textbf{1,783.00} \\
-\midrule
-\multicolumn{7}{l}{\textbf{06.00 PUESTA A TIERRA Y VARIOS}} \\
-06.01 & Kit de puesta a tierra completo & jgo & 1 & 650.00 & 650.00 & \\
-06.02 & Varios (accesorios de instalacion) & glb & 1 & 200.00 & 200.00 & \\
- & & & & & \textbf{Subtotal 06} & \textbf{850.00} \\
-\midrule
-\multicolumn{5}{r}{\textbf{VALOR TOTAL DE MATERIALES}} & & \textbf{9,021.90} \\
-\multicolumn{5}{r}{Mano de Obra (40\%)} & & \textbf{3,608.76} \\
-\multicolumn{5}{r}{\textbf{SUBTOTAL GENERAL}} & & \textbf{12,630.66} \\
-\multicolumn{5}{r}{Impuesto General a las Ventas (IGV 18\%)} & & \textbf{2,273.52} \\
-\multicolumn{5}{r}{\textbf{PRESUPUESTO TOTAL GENERAL}} & & \textbf{14,904.18} \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Nota tecnica}
-
-Los costos presentados estan basados en cotizaciones locales de la region de Puno. Para una ejecucion real de obra se sugiere considerar un incremento del 5\% al 10\% por concepto de desperdicios de materiales y variabilidad en el mercado de cobre.
-"""
-
-with open(presupuesto_path, "w", encoding="utf-8") as f:
-    f.write(presupuesto_content)
-print(f"Updated: {presupuesto_path}")
+if __name__ == "__main__":
+    main()

@@ -1757,6 +1757,7 @@ def escribir_html(path: Path, raw_bom: Dict[str, Any], comparativas: List[Compar
             p_eq = 'S/ %.2f' % r.precio_equivalente_unitario if r.precio_equivalente_unitario is not None else '-'
             subt = 'S/ %.2f' % r.subtotal_compra_real if r.subtotal_compra_real is not None else '-'
             precio_tienda_str = 'S/ %.2f' % r.precio if r.precio is not None else '-'
+            fuente = f'<a href="{html.escape(r.url)}">url</a>' if r.url else '-'
             trs.append(f"""
             <tr>
               <td>{html.escape(r.proveedor)}</td>
@@ -1766,7 +1767,7 @@ def escribir_html(path: Path, raw_bom: Dict[str, Any], comparativas: List[Compar
               <td class="num">{subt}</td>
               <td>{html.escape(r.metodo_extraccion)}</td>
               <td>{r.score_total:.2f}</td>
-              <td>{'<a href=\"%s\">url</a>' % html.escape(r.url) if r.url else '-'}</td>
+              <td>{fuente}</td>
             </tr>""")
         comp_blocks.append(f"""
         <h3>{html.escape(m.nombre_original)}</h3>
@@ -2188,6 +2189,16 @@ def generar_informe_latex_imprimible(
             + "\n\\bottomrule\\end{longtable}\n"
         )
 
+    distribucion_items = "\n".join(
+        f"\\item {tex(prov)}: {int(datos['items'])} partidas recomendadas, S/ {datos['total']:.2f}."
+        for prov, datos in sorted(distribucion.items())
+    )
+    pendientes_tabla = (
+        "\n".join(pendientes_rows)
+        if pendientes_rows
+        else r"\multicolumn{3}{c}{No quedaron materiales pendientes.} \\"
+    )
+
     contenido = rf"""\documentclass[11pt,a4paper]{{article}}
 \usepackage[utf8]{{inputenc}}
 \usepackage[T1]{{fontenc}}
@@ -2255,7 +2266,7 @@ El informe separa precio faltante de precio cero, documenta bloqueos y exige URL
 {tex(conclusion)}
 
 \begin{{itemize}}
-{chr(10).join(f"\\item {tex(prov)}: {int(datos['items'])} partidas recomendadas, S/ {datos['total']:.2f}." for prov, datos in sorted(distribucion.items()))}
+{distribucion_items}
 \end{{itemize}}
 
 \textbf{{Decision propuesta:}} emitir ordenes separadas segun la cotizacion mixta, priorizando el proveedor indicado para cada material. No consolidar todo en una sola tienda mientras su cobertura sea parcial o existan pendientes tecnicos.
@@ -2263,7 +2274,7 @@ El informe separa precio faltante de precio cero, documenta bloqueos y exige URL
 \section{{Materiales pendientes de confirmacion}}
 \begin{{longtable}}{{p{{0.35\textwidth}} p{{0.12\textwidth}} p{{0.48\textwidth}}}}
 \toprule Material & Cantidad & Motivo / accion \\ \midrule\endhead
-{chr(10).join(pendientes_rows) if pendientes_rows else r'\multicolumn{3}{c}{No quedaron materiales pendientes.} \\'}
+{pendientes_tabla}
 \bottomrule
 \end{{longtable}}
 

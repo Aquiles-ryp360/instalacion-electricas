@@ -13,10 +13,16 @@ El enlace enviado por el docente (`https://catalogo.win/`) es un buscador de ite
 
 ## Criterio aplicado
 
-- No se inventaron codigos SIGA: los items no verificados quedan como `POR VERIFICAR EN CATALOGO.WIN`.
-- El codigo `969800030540` se conserva porque aparece en la plantilla del curso para tuberia PVC SAP de 20 mm x 3 m.
+- Validacion ejecutada el 2026-06-28 contra `https://catalogo.win/`.
+- No se inventaron codigos SIGA: los items sin coincidencia exacta quedan marcados como pendientes o por desagregar.
+- El codigo `969800030540` se conserva porque aparece en la plantilla del curso y fue validado en catalogo.win como tuberia PVC SAP 3/4 in x 3 m.
 - Las cantidades salen del modelo y metrados del Proyecto Renzo.
 - Los precios son referenciales, tomados de los presupuestos/cotizaciones existentes del proyecto; deben actualizarse antes de comprar.
+- Quedaron pendientes de cierre formal:
+  - Item 20, tomacorriente protegido tipo GFCI/diferencial: catalogo.win no devolvio coincidencia exacta de tomacorriente GFCI.
+  - Item 22, kit de pozo de puesta a tierra: no existe codigo unico para el kit completo; debe desagregarse por componentes si el docente exige codificacion SIGA itemizada.
+- Los candidatos cercanos para esos pendientes quedaron registrados en la hoja
+  `SIMILARES CATALOGO WIN` del Excel.
 
 ## Archivos generados
 

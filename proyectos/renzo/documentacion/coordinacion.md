@@ -20,11 +20,11 @@ Los textos afectados estan actualmente en:
 
 ## Pendientes tecnicos
 
-- Consolidar la diferencia entre puntos fisicos del modelo electrico y las
+- Mantener sincronizados los puntos fisicos del modelo electrico con las
   tablas de metrado antes de comprar materiales.
 - Revisar escalas, membretes y legibilidad de todos los planos publicados.
-- Confirmar que cualquier cambio de circuitos se refleje en el modelo
-  electrico, los metrados y el presupuesto.
+- Confirmar que cualquier cambio de circuitos o tableros (TG-01, TD-02 y
+  TD-03) se refleje en el modelo electrico, los metrados y el presupuesto.
 
 ## Fuente de verdad
 

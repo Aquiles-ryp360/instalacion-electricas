@@ -15,7 +15,7 @@ El diseño se ha elaborado bajo los lineamientos del **National Electrical Code 
 * **Área Techada:** 120 m² construidos en total (aprox. 40 m² por piso)
 * **Sistema Eléctrico:** Monofásico 220 V, 60 Hz
 * **Canalización:** PVC empotrado en muros y techos
-* **Tableros:** Un tablero eléctrico principal (TG-01) en primer piso y dos tableros secundarios (TD-01 y TD-02) para el segundo y tercer piso respectivamente.
+* **Tableros:** Un tablero electrico principal (TG-01) en primer piso y dos tableros secundarios (TD-02 y TD-03) para el segundo y tercer piso respectivamente.
 
 ---
 
@@ -65,15 +65,15 @@ Para garantizar la continuidad del servicio y simplificar el mantenimiento, la v
 ### 6. Sistema de Alimentación y Tableros
 * **Medidor de Energía (M):** Ubicado en el límite de propiedad en fachada, registra el consumo de la red de baja tensión de la empresa distribuidora.
 * **Tablero General (TG-01):** Ubicado en el primer piso, en el pasadizo de acceso longitudinal, en zona libre de humedad y fácilmente accesible. Contiene el interruptor general termomagnético de la vivienda y alimenta a los tableros secundarios.
-* **Subtablero 1 (TD-01):** Ubicado en el segundo piso en la zona del Hall, atiende las cargas de ese nivel.
-* **Subtablero 2 (TD-02):** Ubicado en el tercer piso en el pasadizo, atiende las cargas del tercer nivel.
+* **Subtablero segundo nivel (TD-02):** Ubicado en el segundo piso en la zona del Hall, atiende las cargas de ese nivel.
+* **Subtablero tercer nivel (TD-03):** Ubicado en el tercer piso en el pasadizo, atiende las cargas del tercer nivel.
 
 ---
 
 ### 7. Criterios de Ubicación y Alturas de Montaje
 Para el montaje y canalización, se adoptan las siguientes alturas típicas de instalación (medidas desde el nivel de piso terminado - NPT a la base de la caja):
 
-* **Tableros Eléctricos (TG-01, TD-01, TD-02):** Borde superior a $1.80\text{ m}$.
+* **Tableros Electricos (TG-01, TD-02, TD-03):** Borde superior a $1.80\text{ m}$.
 * **Interruptores de Alumbrado (S, S3):** Centro de la caja a $1.20\text{ m}$ de altura, ubicados siempre del lado de la manija de la puerta (cerradura) a $0.15\text{ m}$ del marco.
 * **Tomacorrientes Generales (dobles con tierra):** Centro de la caja a $0.40\text{ m}$ (bajo) en áreas secas.
 * **Tomacorrientes de Cocina:** Centro de la caja a $1.10\text{ m}$ (alto) sobre el nivel de la mesa de trabajo o mesón.
@@ -82,4 +82,4 @@ Para el montaje y canalización, se adoptan las siguientes alturas típicas de i
 ---
 
 ### 8. Puesta a Tierra (SPAT)
-Se ha diseñado un **Sistema de Puesta a Tierra (SPAT)** con electrodo de cobre vertical de $5/8" \times 2.40\text{ m}$ ubicado en el patio posterior del primer piso. El pozo de tierra estará debidamente acondicionado con aditivos gel para garantizar una resistencia de puesta a tierra menor a $25\ \Omega$ (según el NEC para electrodos simples) y preferiblemente menor a $15\ \Omega$. Desde el pozo, un conductor de cobre de $6\text{ mm}^2$ conecta con la barra de puesta a tierra del Tablero General (TG-01), la cual distribuye el conductor de protección (PE) a los circuitos derivados.
+Se ha diseñado un **Sistema de Puesta a Tierra (SPAT)** con electrodo tipo Copperweld vertical de $5/8" \times 2.40\text{ m}$ ubicado en la zona posterior del primer piso, junto al pasadizo/escalera segun el modelo electrico. El pozo de tierra estará debidamente acondicionado con aditivos gel para garantizar una resistencia de puesta a tierra menor a $25\ \Omega$ (según el NEC para electrodos simples) y preferiblemente menor a $15\ \Omega$. Desde el pozo, un conductor de cobre de $6\text{ mm}^2$ conecta con la barra de puesta a tierra del Tablero General (TG-01), la cual distribuye el conductor de protección (PE) a los circuitos derivados.

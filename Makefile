@@ -6,10 +6,10 @@ install:
 	$(PYTHON) -m pip install -r requirements.txt
 
 test:
-	$(PYTHON) -m pytest -q herramientas/cotizacion/tests proyectos/renzo/tests
+	$(PYTHON) -m pytest -q herramientas/cotizacion/v0_legacy/tests proyectos/renzo/tests
 
 test-tools:
-	$(PYTHON) -m pytest -q herramientas/cotizacion/tests
+	$(PYTHON) -m pytest -q herramientas/cotizacion/v0_legacy/tests
 
 test-renzo:
 	$(PYTHON) -m pytest -q proyectos/renzo/tests

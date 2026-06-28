@@ -1,106 +1,56 @@
-# MEMORIA TÉCNICA Y CÁLCULOS JUSTIFICATIVOS
-## Proyecto: Instalación Eléctrica Residencial - Vivienda Unifamiliar de 3 Pisos
+# MEMORIA TECNICA Y CALCULOS JUSTIFICATIVOS
+## Proyecto: Instalacion Electrica Residencial - Vivienda Unifamiliar de 3 Pisos
 
-### 1. Normas de Referencia y Criterios de Diseño
-El diseño de la instalación eléctrica se basa en las siguientes normativas:
-* **National Electrical Code (NEC - NFPA 70):** Para el cálculo de secciones de conductores (NEC 310), dimensionamiento de circuitos ramales (NEC 210), protecciones (NEC 240) y sistemas de puesta a tierra (NEC 250).
-* **Reglamento Nacional de Edificaciones (RNE EM.010):** Normativa aplicable en Perú para instalaciones interiores.
-* **Código Nacional de Electricidad - Utilización (CNE-U):** Sección 050 para cargas e iluminación y Sección 060 para puesta a tierra.
+### 1. Normas De Referencia Y Criterios De Diseno
 
-### 2. Parámetros Eléctricos del Sistema
-* **Tensión de suministro ($V$):** $220\text{ V}$ (Tensión monofásica de servicio).
-* **Frecuencia ($f$):** $60\text{ Hz}$.
-* **Factor de Potencia ($\cos \phi$):** $0.90$ (estimado para cargas residenciales combinadas).
-* **Caída de Tensión Máxima Permitida:**
-  * Alimentador principal: $2.5\%$
-  * Circuitos derivados (ramales): $3.0\%$ (NEC 210.19(A) FPN 4)
-  * Caída de tensión total combinada: $5.0\%$
+El diseno de la instalacion electrica se basa en el Codigo Nacional de Electricidad - Utilizacion, el Reglamento Nacional de Edificaciones EM.010 y criterios NEC usados como apoyo academico para coordinacion de conductores, protecciones y puesta a tierra.
 
----
+### 2. Parametros Electricos Del Sistema
 
-### 3. Fórmulas de Cálculo
-#### 3.1. Corriente de Diseño ($I$)
-Para un sistema monofásico, la corriente nominal o de diseño se calcula mediante la fórmula:
-$$I = \frac{P}{V \cdot \cos \phi}$$
-Donde:
-* $P$: Potencia en Watts ($W$).
-* $V$: Tensión nominal ($220\text{ V}$).
-* $\cos \phi$: Factor de potencia ($0.90$).
+- Tension de suministro: 220 V monofasico.
+- Frecuencia: 60 Hz.
+- Factor de potencia: 0.90.
+- Alimentador principal: conductor de cobre de 10 mm2.
+- Proteccion general: interruptor termomagnetico 2P-40A e interruptor diferencial 2P-40A/30mA.
 
-#### 3.2. Caída de Tensión ($\Delta V$)
-Para circuitos monofásicos de cobre, la caída de tensión se calcula mediante la fórmula:
-$$\Delta V = \frac{2 \cdot L \cdot I \cdot \rho}{S}$$
-Donde:
-* $L$: Longitud del conductor (metros).
-* $I$: Corriente del circuito (Amperios).
-* $\rho$: Resistividad del cobre a la temperatura de operación ($0.0175\ \Omega \cdot \text{mm}^2/\text{m}$).
-* $S$: Sección o calibre del conductor ($\text{mm}^2$).
+### 3. Cuadro De Cargas Vigente
 
-Porcentaje de caída de tensión:
-$$\Delta V\% = \left(\frac{\Delta V}{V}\right) \cdot 100$$
+| Cto. | Piso | Uso | Pot. Inst. (W) | F.D. | Max. Dem. (W) | I dem (A) | Proteccion | Conductor |
+| --- | :---: | --- | ---: | ---: | ---: | ---: | --- | --- |
+| C1 | 1 | Alumbrado primer piso | 500 | 1.00 | 500 | 2.53 | 2P-10A | 3 x 1.5 mm2 Cu |
+| C2 | 1 | Tomacorrientes generales primer piso | 1000 | 1.00 | 1000 | 5.05 | 2P-16A + ID 25A/30mA | 3 x 2.5 mm2 Cu |
+| C3 | 1 | Tomacorrientes especiales de cocina | 1500 | 1.00 | 1500 | 7.58 | 2P-20A + ID 25A/30mA | 3 x 2.5 mm2 Cu |
+| C4 | 2 | Alumbrado segundo piso | 500 | 1.00 | 500 | 2.53 | 2P-10A | 3 x 1.5 mm2 Cu |
+| C5 | 2 | Tomacorrientes generales segundo piso | 1500 | 0.70 | 1050 | 5.30 | 2P-16A + ID 25A/30mA | 3 x 2.5 mm2 Cu |
+| C6 | 3 | Alumbrado tercer piso | 500 | 1.00 | 500 | 2.53 | 2P-10A | 3 x 1.5 mm2 Cu |
+| C7 | 3 | Tomacorrientes generales tercer piso | 1500 | 0.70 | 1050 | 5.30 | 2P-16A + ID 25A/30mA | 3 x 2.5 mm2 Cu |
+| **Total** |  | **Vivienda unifamiliar** | **7000** |  | **6100** | **30.81** | **2P-40A general** | **3 x 10 mm2 Cu + PE** |
 
----
+### 4. Conteo De Puntos
 
-### 4. Cuadro de Cargas y Demanda Máxima
-El cuadro de cargas se ha calculado basándose en el análisis riguroso de los planos PNG actuales, donde se identificaron exactamente **13 tomacorrientes dobles** (3 en primer piso, 6 en segundo piso, 4 en tercer piso):
+| Nivel | Luminarias | Interruptores | Tomacorrientes | Total |
+| --- | ---: | ---: | ---: | ---: |
+| Primer piso | 7 | 5 | 8 | 20 |
+| Segundo piso | 6 | 5 | 8 | 19 |
+| Tercer piso | 6 | 6 | 8 | 20 |
+| **Total** | **19** | **16** | **24** | **59** |
 
-| Cto. | Piso | Descripción del Circuito | P. Inst. ($W$) | F.D. | P. Dem. ($W$) | $I_{\text{dem}}$ ($A$) | Protección ITM | Calibre Cond. (F+N+PE) |
-| :--- | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **C1** | Piso 1 | Alumbrado primer piso | 72 | 1.00 | 72 | 0.36 | 2P - 10 A | $3 \times 1.5\text{ mm}^2$ Cu |
-| **C2** | Piso 1 | Tomacorrientes generales | 180 | 1.00 | 180 | 0.91 | 2P - 16 A | $3 \times 2.5\text{ mm}^2$ Cu |
-| **C3** | Piso 1 | Tomacorrientes de cocina | 360 | 1.00 | 360 | 1.82 | 2P - 20 A | $3 \times 2.5\text{ mm}^2$ Cu |
-| **C4** | Piso 2 | Alumbrado segundo piso | 72 | 1.00 | 72 | 0.36 | 2P - 10 A | $3 \times 1.5\text{ mm}^2$ Cu |
-| **C5** | Piso 2 | Tomacorrientes generales | 1080 | 0.70 | 756 | 3.82 | 2P - 16 A | $3 \times 2.5\text{ mm}^2$ Cu |
-| **C6** | Piso 3 | Alumbrado tercer piso | 84 | 1.00 | 84 | 0.42 | 2P - 10 A | $3 \times 1.5\text{ mm}^2$ Cu |
-| **C7** | Piso 3 | Tomacorrientes generales | 720 | 0.70 | 504 | 2.55 | 2P - 16 A | $3 \times 2.5\text{ mm}^2$ Cu |
-| **Total**| | **Vivienda Unifamiliar** | **2,568** | | **2,028** | **10.24** | | |
+### 5. Corriente De Demanda
 
-* **Potencia Instalada Total ($P_{\text{inst}}$):** $2,568\text{ W}$ ($2.57\text{ kW}$)
-* **Máxima Demanda Calculada ($P_{\text{dem}}$):** $2,028\text{ W}$ ($2.03\text{ kW}$)
-* **Corriente de Demanda Total ($I_{\text{dem}}$):** $10.24\text{ A}$
+```text
+I = P / (V x cos phi)
+I = 6100 / (220 x 0.90) = 30.81 A
+```
 
----
+La proteccion general adoptada es 2P-40A. El alimentador de 10 mm2 mantiene holgura para la demanda calculada y permite coordinacion con el interruptor general.
 
-### 5. Selección y Coordinación Conductor-Protección
-Para cada circuito se ha seleccionado la sección del conductor de cobre y su interruptor de protección según la regla:
-$$I_b \leq I_n \leq I_z$$
+### 6. Coordinacion Conductor-Proteccion
 
-#### 5.1. Circuito General de Alimentación (Acometida a TG-01)
-* **Corriente de diseño:** $10.24\text{ A}$.
-* **Protección adoptada:** Interruptor termomagnético de **2P - 32 A**.
-* **Conductor seleccionado:** **$2 \times 10\text{ mm}^2\text{ Cu} + 1 \times 10\text{ mm}^2\text{ Cu (PE)}$** tipo THW en canalización PVC de $1"$.
-* **Capacidad del conductor ($I_z$):** $50\text{ A}$ (a 60°C). Cumple con holgura: $10.24\text{ A} \leq 32\text{ A} \leq 50\text{ A}$.
+- Circuitos de alumbrado C1, C4 y C6: 3 x 1.5 mm2 Cu, protegidos con ITM 2P-10A.
+- Circuitos de tomacorrientes C2, C5 y C7: 3 x 2.5 mm2 Cu, protegidos con ITM 2P-16A y diferencial 25A/30mA.
+- Circuito de cocina C3: 3 x 2.5 mm2 Cu, protegido con ITM 2P-20A y diferencial 25A/30mA.
+- Alimentador general: 3 x 10 mm2 Cu + PE, protegido con ITM 2P-40A y diferencial 40A/30mA.
 
-#### 5.2. Circuitos de Alumbrado (C1, C4, C6)
-* **Corriente máxima:** $0.42\text{ A}$ (C6).
-* **Protección adoptada:** Termomagnético de **2P - 10 A**.
-* **Conductor:** **$2 \times 1.5\text{ mm}^2\text{ Cu} + 1.5\text{ mm}^2\text{ Cu (PE)}$** tipo TW.
-* **Capacidad del conductor ($I_z$):** $15\text{ A}$ (a 60°C). Coordinación: $0.42\text{ A} \leq 10\text{ A} \leq 15\text{ A}$.
+### 7. Puesta A Tierra
 
-#### 5.3. Circuitos de Tomacorrientes Generales (C2, C5, C7)
-* **Corriente máxima:** $3.82\text{ A}$ (C5).
-* **Protección adoptada:** Termomagnético de **2P - 16 A** + Interruptor Diferencial de **2P - 25 A / 30 mA**.
-* **Conductor:** **$2 \times 2.5\text{ mm}^2\text{ Cu} + 2.5\text{ mm}^2\text{ Cu (PE)}$** tipo THW.
-* **Capacidad del conductor ($I_z$):** $20\text{ A}$ (a 60°C). Coordinación: $3.82\text{ A} \leq 16\text{ A} \leq 20\text{ A}$.
-
-#### 5.4. Circuito de Cocina (C3)
-* **Corriente de diseño:** $1.82\text{ A}$.
-* **Protección adoptada:** Termomagnético de **2P - 20 A** + Interruptor Diferencial de **2P - 25 A / 30 mA**.
-* **Conductor:** **$2 \times 2.5\text{ mm}^2\text{ Cu} + 2.5\text{ mm}^2\text{ Cu (PE)}$** tipo THW.
-* **Capacidad del conductor ($I_z$):** $20\text{ A}$ (a 60°C). Coordinación: $1.82\text{ A} \leq 20\text{ A} \leq 20\text{ A}$.
-
----
-
-### 6. Cálculos de Caída de Tensión
-La caída de tensión en el tramo más largo (C7 en el tercer piso) se estima para una longitud de $25\text{ m}$:
-$$\Delta V = \frac{2 \cdot L \cdot I \cdot \rho}{S} = \frac{2 \cdot 25\text{ m} \cdot 2.55\text{ A} \cdot 0.0175\ \Omega \cdot \text{mm}^2/\text{m}}{2.5\text{ mm}^2} = \frac{2.231}{2.5} = 0.89\text{ V}$$
-
-Porcentaje de caída de tensión:
-$$\Delta V\% = \left(\frac{0.89\text{ V}}{220\text{ V}}\right) \cdot 100 = 0.40\%$$
-
----
-
-### 7. Dimensionamiento de la Puesta a Tierra (SPAT)
-* **Varilla de cobre:** Diámetro $5/8"$, longitud $2.40\text{ m}$.
-* **Conductor de enlace:** Cobre de $6\text{ mm}^2$ (mínimo exigido por NEC 250.66).
-* **Resistencia objetivo:** $< 25\ \Omega$ (NEC 250.53).
+Se adopta pozo de puesta a tierra con electrodo de cobre de 5/8 in x 2.40 m, conductor de enlace de 6 mm2 y resistencia objetivo menor a 15 ohm, sujeto a medicion en obra.

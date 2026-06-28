@@ -79,8 +79,8 @@
 ### 6.1. Protecciones contra Cortocircuito y Sobrecarga (NEC 408.36)
 * **Requisito:** Los tableros deben contar con interruptores de protección para cada circuito derivado y un interruptor de desconexión principal (Main Breaker).
 * **Aplicación:** 
-  * El Tablero General TG-1 cuenta con un interruptor termomagnético general de 2P-40A que protege al alimentador que viene del medidor, y de él se derivan las llaves térmicas de iluminación y tomacorrientes del primer piso, y las llaves de sub-alimentación a los pisos superiores (2P-20A).
-  * Cada subtablero (TD-2 y TD-3) cuenta con llaves locales de 2P-10A y 2P-16A independientes.
+  * El Tablero General TG-01 cuenta con un interruptor termomagnético general de 2P-40A que protege al alimentador que viene del medidor, y de él se derivan las llaves térmicas de iluminación y tomacorrientes del primer piso, y las llaves de sub-alimentación a los pisos superiores (2P-25A).
+  * Cada subtablero (TD-02 y TD-03) cuenta con llaves locales de 2P-10A y 2P-16A independientes.
   * Se implementan interruptores diferenciales independientes por circuito (2P-25A-30mA) para protección de contacto de personas en cumplimiento del CNE y NEC.
 
 ---
@@ -90,8 +90,8 @@
 | Elemento Clave | Ubicación en Plano | Decisión de Diseño | Referencia NEC / CNE | Origen de la Decisión |
 | :--- | :--- | :--- | :--- | :--- |
 | **Medidor ("wh")** | Fachada Frontal P1 | Exterior, h = 1.20m | CNE-U 020-000 | Requerimiento de concesionaria de energía en planos PNG |
-| **Tablero General (TG-1)** | Pasadizo P1 | Pasadizo derecho, h = 1.50m | NEC 110.26 / CNE 020-100 | Acceso libre y visible según planos PNG |
-| **Subtableros (TD-2 / TD-3)** | Pasadizo P2 / P3 | Zona de distribución vertical | NEC 110.26 / CNE 020-100 | Proximidad a montante y distribución de ambientes |
+| **Tablero General (TG-01)** | Pasadizo P1 | Pasadizo derecho, h = 1.50m | NEC 110.26 / CNE 020-100 | Acceso libre y visible según planos PNG |
+| **Subtableros (TD-02 / TD-03)** | Pasadizo P2 / P3 | Zona de distribución vertical | NEC 110.26 / CNE 020-100 | Proximidad a montante y distribución de ambientes |
 | **Tomacorriente Cocina** | Cocina P1 | Circuito dedicado C3, 20A | NEC 210.52(B) | Cargas especiales de cocina detectadas en planos PNG |
 | **Tomacorriente Baño** | Baño P2 / P3 | Receptáculo GFCI | NEC 210.8(A)(1) | Área húmeda de servicio identificada en planos PNG |
 | **Luminarias de Escalera** | Escalera P1 / P2 / P3 | Conmutación (3-Way) desde dos puntos | NEC 210.70(A)(2) | Control seguro en circulación vertical detectada en PNG |

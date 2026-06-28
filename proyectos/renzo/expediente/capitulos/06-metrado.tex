@@ -2,9 +2,9 @@
 
 \section{Alcance}
 
-El presente metrado cuantifica los materiales necesarios para la instalacion electrica interior de la vivienda unifamiliar de tres niveles, conforme a la sectorizacion de siete circuitos (C1 a C7) definida para el proyecto de Renzo Gabriel Mamani Galindo. Las cantidades se obtienen de los planos electricos y de los recorridos estimados de canalizacion por nivel.
+El presente metrado cuantifica los materiales necesarios para la instalacion electrica interior de la vivienda unifamiliar de tres niveles, conforme a la sectorizacion de siete circuitos (C1 a C7) definida para el proyecto de Renzo Gabriel Mamani Galindo. Los puntos proceden del modelo electrico canonico y las cantidades de compra se mantienen alineadas con el cuadro de insumos validado.
 
-Los metrados se agrupan por las siguientes categorias: tuberias, conductores, cajas, tableros, accesorios, protecciones, luminarias y sistema de puesta a tierra.
+Los metrados se agrupan por tuberias, conductores, cajas, tableros, accesorios, protecciones, luminarias y sistema de puesta a tierra.
 
 \section{Resumen de puntos electricos por circuito}
 
@@ -13,238 +13,84 @@ Los metrados se agrupan por las siguientes categorias: tuberias, conductores, ca
 \small
 \caption{Puntos electricos por circuito (Proyecto de Renzo)}
 \label{tab:puntos-por-circuito}
-\begin{tabularx}{\textwidth}{c L{4.5cm} c c c Y}
+\begin{tabularx}{\textwidth}{c L{5.0cm} c c c c}
 \toprule
-\textbf{Cto.} & \textbf{Uso} & \textbf{Luminarias} & \textbf{TCs} & \textbf{Interruptores} & \textbf{Long. est. (m)} \\
+\textbf{Cto.} & \textbf{Uso} & \textbf{Luminarias} & \textbf{TCs} & \textbf{Interruptores} & \textbf{Long. modelo (m)} \\
 \midrule
-C1 & Alumbrado 1er piso & 7 & -- & 5 & 18 \\
-C2 & TCs generales 1er piso & -- & 4 & -- & 12 \\
-C3 & Tomacorrientes Cocina & -- & 4 & -- & 12 \\
-C4 & Alumbrado 2do piso & 6 & -- & 5 & 16 \\
-C5 & TCs generales 2do piso & -- & 8 & -- & 22 \\
-C6 & Alumbrado 3er piso & 6 & -- & 6 & 18 \\
-C7 & TCs generales 3er piso & -- & 8 & -- & 22 \\
+C1 & Alumbrado primer piso & 7 & -- & 5 & 16 \\
+C2 & Tomacorrientes generales primer piso & -- & 4 & -- & 9 \\
+C3 & Tomacorrientes especiales de cocina primer piso & -- & 4 & -- & 10 \\
+C4 & Alumbrado segundo piso & 6 & -- & 5 & 18 \\
+C5 & Tomacorrientes generales segundo piso & -- & 8 & -- & 19 \\
+C6 & Alumbrado tercer piso & 6 & -- & 6 & 19 \\
+C7 & Tomacorrientes generales tercer piso & -- & 8 & -- & 18 \\
 \midrule
-\textbf{Total} & & \textbf{19} & \textbf{24} & \textbf{16} & \textbf{120} \\
+\textbf{Total} & & \textbf{19} & \textbf{24} & \textbf{16} & \textbf{109} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Metrado de tuberias (canalizaciones)}
+\section{Metrado consolidado de insumos}
 
 \begin{landscape}
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de tuberias PVC}
-\label{tab:metrado-tuberias}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{1.5cm} c L{1.8cm} L{3.5cm} Y}
+\begin{longtable}{c L{6.8cm} c r L{3.0cm}}
+\caption{Metrado consolidado de insumos electricos}\label{tab:resumen-metrados}\\
 \toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Tipo} & \textbf{Und.} & \textbf{Cant.} & \textbf{Circuitos} & \textbf{Observacion} \\
+\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Cant.} & \textbf{Codigo SIGA / catalogo.win} \\
 \midrule
-1 & Tuberia PVC liviana 3/4" para alumbrado & PV-L & m & 140 & C1, C4, C6 & Empotrada en losa de techo \\
-2 & Tuberia PVC pesada 3/4" para tomacorrientes & PV-P & m & 180 & C2, C3, C5, C7 & Empotrada en contrapiso y muros \\
-3 & Tuberia PVC pesada 1" para alimentador & PV-P & m & 25 & Alimentador general & Desde medidor a TG y subtableros \\
+\endfirsthead
+\toprule
+\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Cant.} & \textbf{Codigo SIGA / catalogo.win} \\
+\midrule
+\endhead
+01.01 & Tuberia PVC SAP electrica D=20 mm (3/4 in) L=3 m para alumbrado & und & 40 & 969800030540 \\
+01.02 & Tuberia PVC SAP electrica D=20 mm (3/4 in) L=3 m para tomacorrientes & und & 50 & 969800030540 \\
+01.03 & Tuberia PVC SAP electrica D=25 mm (1 in) L=3 m para alimentador & und & 9 & 969800031384 \\
+02.01 & Conductor de cobre aislado LSOH 450/750 V 1.5 mm2 & m & 350 & 281600450640 \\
+02.02 & Conductor de cobre aislado LSOH 450/750 V 2.5 mm2 & m & 480 & 281600450641 \\
+02.03 & Conductor de cobre aislado LSOH 0.6/1 kV 10 mm2 & m & 30 & 281600450644 \\
+03.01 & Caja octogonal galvanizada 4 x 2 in para salida de luz & und & 19 & 283400010796 \\
+03.02 & Caja rectangular galvanizada 4 x 2 in para interruptor y tomacorriente & und & 40 & 283400010161 \\
+04.01 & Tablero general metalico TG-01 12 polos equipado & und & 1 & 462290890071 \\
+04.02 & Tablero de distribucion metalico TD 8 polos equipado & und & 2 & 952281740043 \\
+05.01 & Interruptor termomagnetico 2P 40 A curva C 6 kA o superior & und & 1 & 285000180299 \\
+05.02 & Interruptor termomagnetico 2P 10 A para alumbrado & und & 3 & 285000180309 \\
+05.03 & Interruptor termomagnetico 2P 16 A para tomacorrientes & und & 3 & 285000180297 \\
+05.04 & Interruptor termomagnetico 2P 20 A para cocina & und & 1 & 285000180298 \\
+05.05 & Interruptor diferencial 2P 40 A 30 mA tipo AC & und & 1 & 285000061084 \\
+05.06 & Interruptor diferencial 2P 25 A 30 mA tipo AC & und & 4 & 285000060817 \\
+05.07 & Interruptor simple empotrable con placa & und & 11 & 285000060186 \\
+05.08 & Interruptor conmutado de 3 vias empotrable con placa & und & 5 & 285000060010 \\
+05.09 & Tomacorriente doble con puesta a tierra empotrable & und & 22 & 285000100015 \\
+05.10 & Tomacorriente protegido tipo GFCI / diferencial para bano & und & 2 & por verificar \\
+06.01 & Luminaria LED interior tipo panel / sobreponer 18 W aprox. & und & 19 & 285400320060 \\
+07.01 & Kit de pozo de puesta a tierra completo & jgo & 1 & por desagregar \\
+08.01 & Cinta aislante electrica PVC 19 mm x 18 m aprox. & und & 5 & 070400190001 \\
 \bottomrule
-\end{tabularx}
-\end{table}
+\end{longtable}
 \end{landscape}
 
-\section{Metrado de conductores}
-
-\begin{landscape}
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de conductores de cobre}
-\label{tab:metrado-conductores}
-\begin{tabularx}{\textwidth}{c L{4.5cm} c L{1.8cm} L{1.8cm} L{1.8cm} c Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Seccion} & \textbf{Cant.} & \textbf{Tipo} & \textbf{Uso} & \textbf{Observacion} \\
-\midrule
-1 & Conductor fase alumbrado & m & 1.5 mm2 & 140 & LSOH & C1, C4, C6 & Cableado unipolar \\
-2 & Conductor neutro alumbrado & m & 1.5 mm2 & 140 & LSOH & C1, C4, C6 & Cableado unipolar \\
-3 & Conductor de proteccion alumbrado & m & 1.5 mm2 & 130 & LSOH & C1, C4, C6 & Segun CNE-U \\
-4 & Conductor fase tomacorrientes & m & 2.5 mm2 & 190 & LSOH & C2, C3, C5, C7 & Cableado unipolar \\
-5 & Conductor neutro tomacorrientes & m & 2.5 mm2 & 190 & LSOH & C2, C3, C5, C7 & Cableado unipolar \\
-6 & Conductor de proteccion tomacorrientes & m & 2.5 mm2 & 190 & LSOH & C2, C3, C5, C7 & Cableado unipolar \\
-7 & Conductor alimentador general fase & m & 10 mm2 & 30 & LSOH & TG & Cableado unipolar \\
-8 & Conductor alimentador general neutro & m & 10 mm2 & 30 & LSOH & TG & Cableado unipolar \\
-\bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
-
-\clearpage
-
-\section{Metrado de cajas}
+\section{Resumen de cantidades fisicas}
 
 \begin{table}[H]
 \centering
 \small
-\caption{Metrado de cajas de pase y derivacion}
-\label{tab:metrado-cajas}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{2.5cm} c L{2.5cm} Y}
+\caption{Resumen de puntos y equipos segun modelo canonico}
+\label{tab:resumen-puntos-metrado}
+\begin{tabularx}{\textwidth}{L{5.0cm} c Y}
 \toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Material} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
+\textbf{Concepto} & \textbf{Cantidad} & \textbf{Fuente} \\
 \midrule
-1 & Cajas octogonales 4" x 2" para luminarias & Fierro galvanizado & pza & 19 & Puntos de luz y derivacion \\
-2 & Cajas rectangulares 4" x 2" para interruptores & Fierro galvanizado & pza & 16 & Interruptores simples y conmutadores \\
-3 & Cajas rectangulares 4" x 2" para tomacorrientes & Fierro galvanizado & pza & 24 & Tomacorrientes generales y especiales \\
-4 & Caja de pase rectangular 4" x 2" & Fierro galvanizado & pza & 8 & Para derivaciones en cambios de direccion \\
+Luminarias & 19 & Modelo electrico canonico \\
+Interruptores & 16 & Modelo electrico canonico \\
+Tomacorrientes totales & 24 & Modelo electrico canonico; incluye 2 tomacorrientes protegidos en banos \\
+Tableros & 3 & TG-01, TD-02 y TD-03 \\
+Potencia instalada & 7.00 kW & Cuadro de cargas canonico \\
+Demanda maxima & 6.10 kW & Cuadro de cargas canonico \\
 \bottomrule
 \end{tabularx}
 \end{table}
-
-\section{Metrado de tableros}
-
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de tableros electricos}
-\label{tab:metrado-tableros}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{1.8cm} c L{1.8cm} Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Polos} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
-\midrule
-1 & Tablero general TG-01 (metalico empotrable) & 12 polos & u & 1 & Primer piso, zona de ingreso \\
-2 & Tablero de distribucion TD-02 & 8 polos & u & 1 & Segundo piso, zona central \\
-3 & Tablero de distribucion TD-03 & 8 polos & u & 1 & Tercer piso o zona de servicio \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Metrado de accesorios y protecciones}
-
-\begin{landscape}
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado de accesorios, interruptores y protecciones}
-\label{tab:metrado-accesorios}
-\begin{tabularx}{\textwidth}{c L{4.5cm} c L{2.0cm} L{2.0cm} Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Cant.} & \textbf{Circuito} & \textbf{Observacion} \\
-\midrule
-1 & Interruptor simple (unipolar) & pza & 11 & C1, C4, C6 & Ambientes generales \\
-2 & Interruptor conmutacion 3 vias (S3) & pza & 5 & C1, C4, C6 & Escaleras y pasadizo \\
-3 & Tomacorriente doble con toma a tierra & pza & 22 & C2, C3, C5, C7 & Uso general \\
-4 & Tomacorriente doble con proteccion GFCI & pza & 2 & C5, C7 & Banos (protegido) \\
-5 & Interruptor termomagnetico 2P-10A & pza & 3 & C1, C4, C6 & Proteccion alumbrado \\
-6 & Interruptor termomagnetico 2P-16A & pza & 3 & C2, C5, C7 & Proteccion tomacorrientes \\
-7 & Interruptor termomagnetico 2P-20A & pza & 1 & C3 & Proteccion cocina \\
-8 & Interruptor termomagnetico general 2P-40A & pza & 1 & Alimentador & Proteccion general TG \\
-9 & Interruptor diferencial 2P-25A-30mA & pza & 4 & C2, C3, C5, C7 & Proteccion de personas \\
-10 & Interruptor diferencial 2P-40A-30mA (General) & pza & 1 & TG-01 & Proteccion diferencial general \\
-11 & Luminaria LED interior 12 W (circular o rectangular) & pza & 19 & C1, C4, C6 & Iluminacion LED \\
-\bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
-
-\section{Metrado de puesta a tierra}
-
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado del sistema de puesta a tierra}
-\label{tab:metrado-puesta-tierra}
-\begin{tabularx}{\textwidth}{c L{4.5cm} L{2.0cm} c L{2.5cm} Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Material} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observacion} \\
-\midrule
-1 & Varilla de puesta a tierra 5/8" x 2.40 m & Cobre solido & pza & 1 & Electrodo principal \\
-2 & Conector de bronce para varilla & Bronce & pza & 1 & Conexion certificada \\
-3 & Conductor de puesta a tierra 6 mm2 & Cobre desnudo & m & 25 & Conexion a barra de tierra \\
-4 & Caja de registro de puesta a tierra & Metalico & pza & 1 & Para inspeccion \\
-5 & Barra de tierra para tablero & Cobre & pza & 1 & En tablero general \\
-6 & Gel o mejorador de suelo & Quimico & kg & 5 & Reduccion de resistencia \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Resumen general de metrados}
-
-\begin{landscape}
-\begin{table}[H]
-\centering
-\tiny
-\caption{Resumen general de metrados (Proyecto Renzo)}
-\label{tab:resumen-metrados}
-\begin{tabularx}{\textwidth}{c L{4.8cm} L{2.2cm} c L{1.8cm} L{3.0cm} Y}
-\toprule
-\textbf{Item} & \textbf{Descripcion} & \textbf{Und.} & \textbf{Especificacion} & \textbf{Cant.} & \textbf{Plano ref.} & \textbf{Observacion} \\
-\midrule
-1 & Tuberia PVC liviana 3/4" & m & PV-L & 140 & IE-02, IE-04 & Alumbrado empotrado en techo \\
-2 & Tuberia PVC pesada 3/4" & m & PV-P & 180 & IE-03, IE-04 & Tomacorrientes empotrado en muro \\
-3 & Tuberia PVC pesada 1" & m & PV-P & 25 & IE-05 & Alimentador general \\
-4 & Conductor 1.5 mm2 Cu LSOH & m & LSOH 1.5 mm2 & 410 & IE-02 & Fase+neutro+PE alumbrado \\
-5 & Conductor 2.5 mm2 Cu LSOH & m & LSOH 2.5 mm2 & 570 & IE-03 & Fase+neutro+PE tomacorrientes \\
-6 & Conductor 10 mm2 Cu LSOH & m & LSOH 10 mm2 & 30 & IE-05 & Alimentador general \\
-7 & Conductor 6 mm2 Cu & m & Cu desnudo & 25 & IE-06 & Puesta a tierra \\
-8 & Caja octogonal 4" x 2" FG & pza & FG & 19 & IE-02 & Luminarias \\
-9 & Caja rectangular 4" x 2" FG & pza & FG & 40 & IE-02, IE-03 & Interruptores y tomacorrientes \\
-10 & Caja de pase rectangular & pza & FG & 8 & IE-04 & Derivaciones \\
-11 & Tablero general TG-01 & u & 12 polos & 1 & IE-05 & Primer piso \\
-12 & Tablero distribucion TD-02 & u & 8 polos & 1 & IE-05 & Segundo piso \\
-13 & Tablero distribucion TD-03 & u & 8 polos & 1 & IE-05 & Tercer piso \\
-14 & Interruptor simple & pza & Unipolar & 11 & IE-02 & Alumbrado \\
-15 & Interruptor conmutador S3 & pza & 3 vias & 5 & IE-02 & Escaleras \\
-16 & Tomacorriente doble c/tierra & pza & 15 A - 250 V & 22 & IE-03 & Uso general \\
-17 & Tomacorriente GFCI & pza & 15 A - 30 mA & 2 & IE-03 & Banos \\
-18 & Interruptor termomagnetico 2P-10A & pza & 10 A & 3 & IE-05 & Alumbrado \\
-19 & Interruptor termomagnetico 2P-16A & pza & 16 A & 3 & IE-05 & Tomacorrientes \\
-20 & Interruptor termomagnetico 2P-20A & pza & 20 A & 1 & IE-05 & Cocina \\
-21 & Interruptor termomagnetico general 2P-40A & pza & 40 A & 1 & IE-05 & General TG \\
-22 & Interruptor diferencial 2P-25A-30mA & pza & 25 A - 30 mA & 4 & IE-05 & Circuitos tomacorrientes \\
-23 & Interruptor diferencial 2P-40A-30mA & pza & 40 A - 30 mA & 1 & IE-05 & General TG \\
-24 & Luminaria LED 12 W & pza & 12 W LED & 19 & IE-02 & Iluminacion interior \\
-25 & Kit de puesta a tierra completo & jgo & 5/8" x 2.40 m & 1 & IE-06 & Incluye varilla, conector, caja \\
-\bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
-
-\section{Metrado general según hoja de cálculo}
-
-\begin{landscape}
-\begin{table}[H]
-\centering
-\small
-\caption{Metrado general de instalaciones eléctricas (datos Excel)}
-\label{tab:metrado-excel}
-\begin{tabularx}{\textwidth}{c L{3.5cm} Y c c Y}
-\toprule
-\textbf{Item} & \textbf{Código} & \textbf{Descripción} & \textbf{Und.} & \textbf{Cant.} & \textbf{Observación} \\
-\midrule
-1.0 & CAN-01 & Tubería PVC Liviana (PV-L) 3/4" para alumbrado & m & 120 & Empotrado en losa de techo \\
-1.1 & CAN-02 & Tubería PVC Pesada (PV-P) 3/4" para tomacorrientes & m & 150 & Empotrado en contrapiso \\
-1.2 & CAN-03 & Tubería PVC Pesada (PV-P) 1" para alimentador & m & 25 & Desde medidor a TG y subtableros \\
-2.0 & CON-01 & Conductor de cobre LSOH 1.5 mm2 & m & 350 & Cableado de alumbrado (fase, neutro) \\
-2.1 & CON-02 & Conductor de cobre LSOH 2.5 mm2 & m & 480 & Cableado de TCs y cargas especiales \\
-2.2 & CON-03 & Conductor de cobre LSOH 10 mm2 & m & 30 & Alimentador general acometida \\
-3.0 & CAJ-01 & Cajas Octogonales FG 4" x 2" (Salida Luz) & pza & 12 & Para puntos de luz y derivación \\
-3.1 & CAJ-02 & Cajas Rectangulares FG 4" x 2" & pza & 28 & Para interruptores y tomacorrientes \\
-4.0 & TAB-01 & Tablero de Distribución Metálico TG-01 (12 polos) & u & 1 & Tablero General Primer Piso \\
-4.1 & TAB-02 & Tablero de Distribución Metálico TD-01 (8 polos) & u & 1 & Tablero Distribución Segundo Piso \\
-4.2 & TAB-03 & Tablero de Distribución Metálico TD-02 (8 polos) & u & 1 & Tablero Distribución Tercer Piso \\
-5.0 & ACC-01 & Interruptores Simples (placas de empotrar) & pza & 4 & Ambientes generales \\
-5.1 & ACC-02 & Interruptores Conmutación de 3 vías (S3) & pza & 4 & Escaleras y pasadizo \\
-5.2 & ACC-03 & Placa de Tomacorriente Doble con Toma de Tierra & pza & 22 & Tomacorrientes generales y cocina \\
-5.3 & ACC-04 & Placa de Tomacorriente GFCI & pza & 2 & Protección baños (Piso 2 y Piso 3) \\
-6.0 & PAT-01 & Pozo de Puesta a Tierra Completo (Electrodo, gel, caja) & jgo & 1 & Resistencia final < 15 Ohms \\
-\bottomrule
-\end{tabularx}
-\end{table}
-\end{landscape}
 
 \section{Nota tecnica}
 
-Los metrados presentados son referenciales y corresponden a un anteproyecto academico. Las cantidades definitivas deberan recalcularse en un proyecto ejecutivo considerando:
-
-\begin{itemize}
-  \item Planos arquitectonicos con cotas definitivas.
-  \item Longitudes reales de recorridos de tuberias en obra.
-  \item Criterios de la empresa distribuidora (Electro Puno S.A.A.).
-  \item Verificacion de curvas, accesorios y desperdicios de obra (se recomienda agregar 5\% a 10\% de desperdicio en la compra real).
-\end{itemize}
+Los metrados presentados son referenciales para expediente academico. Antes de compra o ejecucion deben verificarse recorridos reales, alturas de montaje, disponibilidad comercial y los dos items aun pendientes de decision formal en catalogo.win: tomacorriente protegido tipo GFCI y kit de pozo de puesta a tierra.

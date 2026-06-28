@@ -10,14 +10,14 @@ El sistema eléctrico se organiza en 7 circuitos (alumbrado y tomacorrientes por
 
 | Circuito | Uso | Puntos | Pot. Instalada (W) | F. Demanda | Máx. Demanda (W) |
 | --- | --- | :---: | :---: | :---: | :---: |
-| **C1** | Alumbrado primer piso | 4 | 500 W | 1.00 | 500 W |
-| **C2** | Tomacorrientes generales 1er piso | 5 | 1000 W | 1.00 | 1000 W |
-| **C3** | Tomacorrientes de cocina (1er piso) | 3 | 1500 W | 1.00 | 1500 W |
-| **C4** | Alumbrado segundo piso | 4 | 500 W | 1.00 | 500 W |
+| **C1** | Alumbrado primer piso | 7 luminarias / 5 interruptores | 500 W | 1.00 | 500 W |
+| **C2** | Tomacorrientes generales 1er piso | 4 tomacorrientes | 1000 W | 1.00 | 1000 W |
+| **C3** | Tomacorrientes de cocina (1er piso) | 4 tomacorrientes | 1500 W | 1.00 | 1500 W |
+| **C4** | Alumbrado segundo piso | 6 luminarias / 5 interruptores | 500 W | 1.00 | 500 W |
 | **C5** | Tomacorrientes del segundo piso | 8 | 1500 W | 0.70 | 1050 W |
-| **C6** | Alumbrado tercer piso | 4 | 500 W | 1.00 | 500 W |
-| **C7** | Tomacorrientes del tercer piso | 6 | 1500 W | 0.70 | 1050 W |
-| **Total** | | **34** | **7000 W** | | **6100 W** |
+| **C6** | Alumbrado tercer piso | 6 luminarias / 6 interruptores | 500 W | 1.00 | 500 W |
+| **C7** | Tomacorrientes del tercer piso | 8 tomacorrientes | 1500 W | 0.70 | 1050 W |
+| **Total** | | **59 puntos fisicos** | **7000 W** | | **6100 W** |
 
 - **Potencia Instalada Total:** 7,000 W
 - **Máxima Demanda Estimada:** 6,100 W

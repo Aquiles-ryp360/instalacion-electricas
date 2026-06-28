@@ -33,7 +33,7 @@ Este informe sirve como evidencia obligatoria de la inspección y análisis arqu
   5. **Escalera:** Área de circulación vertical ($2.5\text{ m} \times 1.5\text{ m}$).
 * **Dimensiones Totales Visibles del Nivel:** $4.5\text{ m} \times 9.0\text{ m}$ (El segundo piso tiene un voladizo/proyección de 0.5m en fachada, incrementando el largo total a 9.0m).
 * **Observaciones Eléctricas Detectadas:**
-  * El Subtablero de Distribución (**TD-01**) se ubica en el Hall central, contiguo a la puerta del baño.
+  * El Subtablero de Distribución (**TD-02**) se ubica en el Hall central, contiguo a la puerta del baño.
   * Puntos eléctricos visibles: 6 luminarias en total, 6 interruptores y 6 tomacorrientes dobles generales.
 * **Posibles Limitaciones:**
   * El hall de distribución es angosto ($1.5\text{ m}$), lo que requiere tendido de canalizaciones preferentemente perimetral.
@@ -49,7 +49,7 @@ Este informe sirve como evidencia obligatoria de la inspección y análisis arqu
   4. **Escalera:** Área de circulación vertical de $2.1\text{ m} \times 1.5\text{ m}$.
 * **Dimensiones Totales Visibles del Nivel:** $4.5\text{ m} \times 9.0\text{ m}$ (Mismo contorno de 9m de largo que el segundo piso).
 * **Observaciones Eléctricas Detectadas:**
-  * El Subtablero de Distribución (**TD-02**) está empotrado en la pared central del pasadizo de acceso.
+  * El Subtablero de Distribución (**TD-03**) está empotrado en la pared central del pasadizo de acceso.
   * Puntos eléctricos definidos en el PNG: 7 luminarias en total, 5 interruptores simples y 8 puntos de tomacorrientes/cajas (4 tomacorrientes dobles en rojo rotulados "T.C." en el muro divisor, y 4 cajas de paso en las paredes exteriores laterales).
 * **Posibles Limitaciones:**
   * El ancho de los dormitorios ($2.25\text{ m}$) limita la distribución de muebles; los tomacorrientes y cajas de paso deben instalarse en muros laterales y compartidos.
@@ -60,4 +60,4 @@ Este informe sirve como evidencia obligatoria de la inspección y análisis arqu
 * **Total de Dormitorios en la vivienda:** 4
 * **Total de Baños en la vivienda:** 2
 * **Total de Espacios Comunes:** 5 (Pasadizos, Halls, Escaleras)
-* **Total de Tableros Eléctricos:** 3 (1 General TG-01 en el primer piso y 2 de Distribución TD-01 y TD-02 en el segundo y tercer piso)
+* **Total de Tableros Eléctricos:** 3 (1 General TG-01 en el primer piso y 2 de Distribución TD-02 y TD-03 en el segundo y tercer piso)

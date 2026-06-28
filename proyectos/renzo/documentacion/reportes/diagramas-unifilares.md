@@ -1,7 +1,7 @@
 # DIAGRAMAS UNIFILARES DEL PROYECTO
 ## Proyecto: Instalación Eléctrica Residencial - Vivienda Unifamiliar de 3 Pisos
 
-Este documento detalla el esquema de conexión unifilar de la vivienda unifamiliar de tres pisos. Se incluye el Diagrama Unifilar General del Proyecto y los diagramas unifilares de distribución de cada uno de los niveles (TG-01, TD-01, TD-02).
+Este documento detalla el esquema de conexion unifilar de la vivienda unifamiliar de tres pisos. Se incluye el Diagrama Unifilar General del Proyecto y los diagramas unifilares de distribucion de cada uno de los niveles (TG-01, TD-02, TD-03).
 
 ---
 
@@ -21,17 +21,17 @@ graph TD
     TG01 --> C2["Circuito C2: Tomacorrientes 1er Piso <br> ITM 2P-16A / ID 2P-25A-30mA <br> Cable 3x2.5 mm² Cu (F+N+PE)"]
     TG01 --> C3["Circuito C3: Tomacorrientes Cocina <br> ITM 2P-20A / ID 2P-25A-30mA <br> Cable 3x2.5 mm² Cu (F+N+PE)"]
     
-    TG01 --> Sub_TD01["Sub-alimentador TD-01 <br> ITM 2P-25A <br> Cable 3x6 mm² Cu (F+N+PE)"]
     TG01 --> Sub_TD02["Sub-alimentador TD-02 <br> ITM 2P-25A <br> Cable 3x6 mm² Cu (F+N+PE)"]
+    TG01 --> Sub_TD03["Sub-alimentador TD-03 <br> ITM 2P-25A <br> Cable 3x6 mm² Cu (F+N+PE)"]
 
-    Sub_TD01 --> TD01["Subtablero de Distribución: TD-01 <br> (Segundo Piso)"]
-    Sub_TD02 --> TD02["Subtablero de Distribución: TD-02 <br> (Tercer Piso)"]
+    Sub_TD02 --> TD02["Subtablero de Distribucion: TD-02 <br> (Segundo Piso)"]
+    Sub_TD03 --> TD03["Subtablero de Distribucion: TD-03 <br> (Tercer Piso)"]
 
-    TD01 --> C4["Circuito C4: Alumbrado 2do Piso <br> ITM 2P-10A <br> Cable 3x1.5 mm² Cu (F+N+PE)"]
-    TD01 --> C5["Circuito C5: Tomacorrientes 2do Piso <br> ITM 2P-16A / ID 2P-25A-30mA <br> Cable 3x2.5 mm² Cu (F+N+PE)"]
+    TD02 --> C4["Circuito C4: Alumbrado 2do Piso <br> ITM 2P-10A <br> Cable 3x1.5 mm² Cu (F+N+PE)"]
+    TD02 --> C5["Circuito C5: Tomacorrientes 2do Piso <br> ITM 2P-16A / ID 2P-25A-30mA <br> Cable 3x2.5 mm² Cu (F+N+PE)"]
 
-    TD02 --> C6["Circuito C6: Alumbrado 3er Piso <br> ITM 2P-10A <br> Cable 3x1.5 mm² Cu (F+N+PE)"]
-    TD02 --> C7["Circuito C7: Tomacorrientes 3er Piso <br> ITM 2P-16A / ID 2P-25A-30mA <br> Cable 3x2.5 mm² Cu (F+N+PE)"]
+    TD03 --> C6["Circuito C6: Alumbrado 3er Piso <br> ITM 2P-10A <br> Cable 3x1.5 mm² Cu (F+N+PE)"]
+    TD03 --> C7["Circuito C7: Tomacorrientes 3er Piso <br> ITM 2P-16A / ID 2P-25A-30mA <br> Cable 3x2.5 mm² Cu (F+N+PE)"]
     
     SPAT["Sistema de Puesta a Tierra <br> (Varilla de Cobre 5/8')"] --> TG01
 ```
@@ -60,7 +60,7 @@ El Tablero General (TG-01) recibe la acometida de la calle y distribuye el alumb
         │         │                                  Tierra  │
         ├─────────┼──────────┬──────────┬──────────┬─────────┤
         │         │          │          │          │         │
-      [C1]      [C2]       [C3]    [Alim. TD01] [Alim. TD02] │
+      [C1]      [C2]       [C3]    [Alim. TD02] [Alim. TD03] │
     Alumbrado  T.C. Gral   Cocina   Piso 2 sub   Piso 3 sub  │
      2P-10A    2P-16A      2P-20A     2P-25A       2P-25A    │
         │         │          │          │            │       │
@@ -70,15 +70,15 @@ El Tablero General (TG-01) recibe la acometida de la calle y distribuye el alumb
     3x1.5 mm²  3x2.5 mm²  3x2.5 mm²  3x6.0 mm²    3x6.0 mm²  │
      (PVC 3/4") (PVC 3/4") (PVC 3/4") (PVC 1")     (PVC 1")  │
         │         │          │          │            │       │
-      Luz       Tomas      Tomas      A TD-01      A TD-02   │
+      Luz       Tomas      Tomas      A TD-02      A TD-03   │
         └─────────┴──────────┴──────────┴────────────┘       
 ```
 
 ---
 
-### 3. Diagrama Unifilar del Segundo Piso (Subtablero TD-01)
+### 3. Diagrama Unifilar del Segundo Piso (Subtablero TD-02)
 
-El Subtablero 1 (TD-01) está ubicado en el hall del segundo piso y distribuye la energía para las luminarias y tomacorrientes del nivel intermedio.
+El Subtablero del segundo piso (TD-02) esta ubicado en el hall del segundo piso y distribuye la energia para las luminarias y tomacorrientes del nivel intermedio.
 
 ```text
                   Alimentación desde TG-01
@@ -89,7 +89,7 @@ El Subtablero 1 (TD-01) está ubicado en el hall del segundo piso y distribuye l
                              │
         ┌────────────────────┴──────────────────────┐
         │            SUBTABLERO DE DISTRIBUCIÓN     │
-        │                     TD-01                 │
+        │                     TD-02                 │
         ├───────────────────────────────────────────┤
         │                                           │
       [C4]                                        [C5]
@@ -107,9 +107,9 @@ El Subtablero 1 (TD-01) está ubicado en el hall del segundo piso y distribuye l
 
 ---
 
-### 4. Diagrama Unifilar del Tercer Piso (Subtablero TD-02)
+### 4. Diagrama Unifilar del Tercer Piso (Subtablero TD-03)
 
-El Subtablero 2 (TD-02) se ubica en el pasadizo del tercer piso, controlando de manera local las luminarias y tomacorrientes de las habitaciones superiores.
+El Subtablero del tercer piso (TD-03) se ubica en el pasadizo del tercer piso, controlando de manera local las luminarias y tomacorrientes de las habitaciones superiores.
 
 ```text
                   Alimentación desde TG-01
@@ -120,7 +120,7 @@ El Subtablero 2 (TD-02) se ubica en el pasadizo del tercer piso, controlando de 
                              │
         ┌────────────────────┴──────────────────────┐
         │            SUBTABLERO DE DISTRIBUCIÓN     │
-        │                     TD-02                 │
+        │                     TD-03                 │
         ├───────────────────────────────────────────┤
         │                                           │
       [C6]                                        [C7]

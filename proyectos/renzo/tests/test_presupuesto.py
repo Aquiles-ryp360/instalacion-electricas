@@ -18,16 +18,16 @@ def calcular_presupuesto_total(costo_materiales, factor_mano_obra=0.40, igv_porc
     }
 
 def test_presupuesto_normal():
-    # Costo materiales de S/ 9021.90
-    res = calcular_presupuesto_total(9021.90)
-    # mano_obra = 9021.90 * 0.40 = 3608.76
-    # subtotal = 9021.90 + 3608.76 = 12630.66
-    # igv = 12630.66 * 0.18 = 2273.5188 -> 2273.52
-    # total = 12630.66 + 2273.52 = 14904.18
-    assert res["mano_obra"] == 3608.76
-    assert res["subtotal"] == 12630.66
-    assert res["igv"] == 2273.52
-    assert res["total"] == 14904.18
+    # Costo de materiales alineado con el cuadro de insumos validado.
+    res = calcular_presupuesto_total(6692.40)
+    # mano_obra = 6692.40 * 0.40 = 2676.96
+    # subtotal = 6692.40 + 2676.96 = 9369.36
+    # igv = 9369.36 * 0.18 = 1686.4848 -> 1686.48
+    # total = 9369.36 + 1686.48 = 11055.84
+    assert res["mano_obra"] == 2676.96
+    assert res["subtotal"] == 9369.36
+    assert res["igv"] == 1686.48
+    assert res["total"] == 11055.84
 
 def test_presupuesto_cero():
     res = calcular_presupuesto_total(0)
