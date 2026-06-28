@@ -7,3 +7,4 @@ pipeline no escribe aqui automaticamente.
 - `planos/`: planos aprobados en formatos de intercambio y consulta.
 - `calculos/`: hojas de calculo publicadas.
 - `presupuesto/`: metrados, presupuesto y cotizacion comparativa.
+- `documentos/`: fuentes LaTeX publicadas junto con su PDF generado.
