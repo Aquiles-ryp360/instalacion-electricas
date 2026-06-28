@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CotizacionItemV1",
+  "type": "object",
+  "required": ["estado", "fuente", "fecha_consulta"],
+  "properties": {
+    "estado": {
+      "type": "string",
+      "enum": ["OK", "NO_ENCONTRADO", "SIN_SELECCION", "SKIPPED", "ERROR", "REQUIERE_REVISION"]
+    },
+    "fuente": { "type": "string" },
+    "fecha_consulta": { "type": "string" },
+    "producto": { "type": "object" },
+    "candidatos": { "type": "array" }
+  },
+  "additionalProperties": true
+}

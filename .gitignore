@@ -29,11 +29,17 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 
+# Secretos locales
+.env
+**/.env
+
 # Cache y evidencias de consultas web
 **/.cache/
 **/cache/
 **/evidencias/*.json
 !proyectos/*/presupuesto/evidencias/manifest.json
+!herramientas/cotizacion/v1/salidas/
+!herramientas/cotizacion/v1/salidas/.gitkeep
 
 # Temporales de Office y CAD
 ~$*
