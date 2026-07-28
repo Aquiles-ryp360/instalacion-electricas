@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "proyecto": "Nave industrial - Layout arquitectonico",
+  "largo_m": 0,
+  "ancho_m": 0,
+  "altura_m": 0,
+
+  "zonas": [
+    {
+      "nombre": "Zona de produccion",
+      "x": 0,
+      "y": 0,
+      "ancho_m": 0,
+      "largo_m": 0,
+      "altura_m": 6
+    },
+    {
+      "nombre": "Almacen",
+      "x": 0,
+      "y": 0,
+      "ancho_m": 0,
+      "largo_m": 0,
+      "altura_m": 6
+    },
+    {
+      "nombre": "Oficinas",
+      "x": 0,
+      "y": 0,
+      "ancho_m": 0,
+      "largo_m": 0,
+      "altura_m": 2.5
+    },
+    {
+      "nombre": "SS.HH.",
+      "x": 0,
+      "y": 0,
+      "ancho_m": 0,
+      "largo_m": 0,
+      "altura_m": 2.5
+    }
+  ],
+
+  "puertas_industriales": [],
+  "ventanas": [],
+  "columnas": [],
+  "equipos_fijos": [],
+
+  "estado": "pendiente - completar con dimensiones reales"
+}

@@ -1,0 +1,40 @@
+schema_version: 1
+id: nave-industrial
+proyecto: "Instalaciones electricas industriales - Nave / Galpon industrial"
+propietario: "por definir"
+estado: "preliminar - definir datos de entrada"
+
+ubicacion:
+  distrito: "por definir"
+  provincia: "por definir"
+  departamento: "por definir"
+  direccion: "por definir"
+
+tipo_instalacion: industrial
+nivel_tension: "BT"  # BT (380V) o MT (10/22.9kV)
+sistema: "trifasico"  # trifasico, monofasico
+frecuencia_hz: 60
+tension_v: 380
+fases: 3
+
+entradas:
+  configuracion: datos/parametros-proyecto.yaml
+  layout_nave: arquitectura/datos/layout-nave.json
+  cargas_industriales: diseno-electrico/datos/cargas-industriales.json
+
+automatizacion:
+  pipeline_habilitado: true
+  cad_personalizado:
+    script: scripts/generar_planos_industriales.py
+    electrical: diseno-electrico/datos/cargas-industriales.json
+    view: "completo"
+  requiere_revision_humana: true
+
+entregables:
+  directorio: entregables
+  expediente: entregables/expediente.pdf
+  planos:
+    - entregables/plano-unifilar.pdf
+    - entregables/plano-distribucion.pdf
+    - entregables/plano-fuerza.pdf
+    - entregables/diagrama-tableros.pdf

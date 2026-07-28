@@ -1,0 +1,75 @@
+# Parametros del proyecto industrial
+# Completar con datos reales de la nave
+
+proyecto: "Instalaciones electricas - Nave industrial"
+propietario: "por definir"
+
+# Datos electricos generales
+tension_v: 380
+fases: 3
+frecuencia_hz: 60
+factor_potencia: 0.85          # fp inicial sin compensacion
+factor_potencia_objetivo: 0.95 # fp deseado con compensacion
+factor_diseno: 1.25
+resistividad_rho: 0.0175       # cobre
+
+# Caidas de tension (CNE)
+caida_alimentador_porc: 2.0
+caida_derivados_porc: 2.5
+caida_total_max_porc: 4.0
+
+# Datos de suministro
+potencia_solicitada_kw: 0      # completar segun demanda calculada
+tipo_conexion: "trifasica"
+nivel_tension: "380/220V"
+sistema_distribucion: "TN-S"   # TN-C, TN-S, TT
+
+# Areas
+area_terreno_m2: 0
+area_construida_m2: 0
+area_techada_m2: 0
+
+# Alimentador principal
+longitud_alimentador_m: 15
+
+# Subestacion (si aplica)
+subestacion_propia: false
+transformador_kva: null
+tipo_subestacion: null  # "interior", "exterior", "poste"
+
+# Datos de la nave
+nave:
+  largo_m: 0
+  ancho_m: 0
+  altura_m: 0
+  # Areas funcionales
+  zonas:
+    - nombre: "Produccion"
+      area_m2: 0
+      # tipo de iluminacion: led industrial, fluorescente, vapor sodio, etc
+      iluminacion_tipo: "LED industrial"
+      iluminacion_nivel_lux: 300  # segun RNE / norma
+    - nombre: "Almacen"
+      area_m2: 0
+      iluminacion_tipo: "LED industrial"
+      iluminacion_nivel_lux: 150
+    - nombre: "Oficinas"
+      area_m2: 0
+      iluminacion_tipo: "LED panel"
+      iluminacion_nivel_lux: 500
+    - nombre: "SS.HH."
+      area_m2: 0
+      iluminacion_tipo: "LED"
+      iluminacion_nivel_lux: 100
+
+# Parametros para calculo de conductores
+conductor_tipo: "THW-90"      # THW, THHN, TW
+conductor_material: "cobre"    # cobre, aluminio
+temperatura_ambiente_c: 40
+numero_conductores_tubo: 4    # 3F + N
+
+# Compensacion de factor de potencia (si aplica)
+compensacion_fp:
+  requiere: false
+  tipo: "automatica"           # fija, automatica, mixta
+  banco_kvar: 0
