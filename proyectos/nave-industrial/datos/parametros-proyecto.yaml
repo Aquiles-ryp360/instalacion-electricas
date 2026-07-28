@@ -1,17 +1,24 @@
 # Parametros del proyecto industrial
-# Completar con datos reales de la nave
+# ESTIMADO - VERIFICAR CON INGENIERO
 
-proyecto: "Instalaciones electricas - Nave industrial"
+proyecto: "Instalaciones electricas industriales - Nave industrial"
 propietario: "por definir"
+
+# Ubicacion
+ubicacion:
+  distrito: "por definir"
+  provincia: "por definir"
+  departamento: "Puno"
+  direccion: "por definir"
 
 # Datos electricos generales
 tension_v: 380
 fases: 3
 frecuencia_hz: 60
-factor_potencia: 0.85          # fp inicial sin compensacion
-factor_potencia_objetivo: 0.95 # fp deseado con compensacion
+factor_potencia: 0.85
+factor_potencia_objetivo: 0.95
 factor_diseno: 1.25
-resistividad_rho: 0.0175       # cobre
+resistividad_rho: 0.0175
 
 # Caidas de tension (CNE)
 caida_alimentador_porc: 2.0
@@ -19,57 +26,55 @@ caida_derivados_porc: 2.5
 caida_total_max_porc: 4.0
 
 # Datos de suministro
-potencia_solicitada_kw: 0      # completar segun demanda calculada
+potencia_solicitada_kw: 70
 tipo_conexion: "trifasica"
 nivel_tension: "380/220V"
-sistema_distribucion: "TN-S"   # TN-C, TN-S, TT
+sistema_distribucion: "TN-S"
 
 # Areas
-area_terreno_m2: 0
-area_construida_m2: 0
-area_techada_m2: 0
+area_terreno_m2: 500
+area_construida_m2: 450
+area_techada_m2: 450
 
 # Alimentador principal
 longitud_alimentador_m: 15
 
-# Subestacion (si aplica)
+# Subestacion
 subestacion_propia: false
 transformador_kva: null
-tipo_subestacion: null  # "interior", "exterior", "poste"
+tipo_subestacion: null
 
-# Datos de la nave
+# Nave
 nave:
-  largo_m: 0
-  ancho_m: 0
-  altura_m: 0
-  # Areas funcionales
+  largo_m: 30
+  ancho_m: 15
+  altura_m: 6
   zonas:
-    - nombre: "Produccion"
-      area_m2: 0
-      # tipo de iluminacion: led industrial, fluorescente, vapor sodio, etc
-      iluminacion_tipo: "LED industrial"
-      iluminacion_nivel_lux: 300  # segun RNE / norma
-    - nombre: "Almacen"
-      area_m2: 0
-      iluminacion_tipo: "LED industrial"
+    - nombre: Produccion
+      area_m2: 216
+      iluminacion_tipo: LED industrial 100W
+      iluminacion_nivel_lux: 300
+    - nombre: Almacen
+      area_m2: 120
+      iluminacion_tipo: LED industrial 80W
       iluminacion_nivel_lux: 150
-    - nombre: "Oficinas"
-      area_m2: 0
-      iluminacion_tipo: "LED panel"
+    - nombre: Oficinas
+      area_m2: 36
+      iluminacion_tipo: LED panel 60x60
       iluminacion_nivel_lux: 500
-    - nombre: "SS.HH."
-      area_m2: 0
-      iluminacion_tipo: "LED"
+    - nombre: SS.HH.
+      area_m2: 8
+      iluminacion_tipo: LED
       iluminacion_nivel_lux: 100
 
-# Parametros para calculo de conductores
-conductor_tipo: "THW-90"      # THW, THHN, TW
-conductor_material: "cobre"    # cobre, aluminio
+# Conductores
+conductor_tipo: THW-90
+conductor_material: cobre
 temperatura_ambiente_c: 40
-numero_conductores_tubo: 4    # 3F + N
+numero_conductores_tubo: 4
 
-# Compensacion de factor de potencia (si aplica)
+# Compensacion FP
 compensacion_fp:
-  requiere: false
-  tipo: "automatica"           # fija, automatica, mixta
+  requiere: true
+  tipo: automatica
   banco_kvar: 0

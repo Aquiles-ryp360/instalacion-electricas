@@ -1,49 +1,77 @@
 {
   "schema_version": 1,
   "proyecto": "Nave industrial - Layout arquitectonico",
-  "largo_m": 0,
-  "ancho_m": 0,
-  "altura_m": 0,
+  "largo_m": 30.0,
+  "ancho_m": 15.0,
+  "altura_m": 6.0,
+  "area_total_m2": 450.0,
+  "unidad": "metros",
 
   "zonas": [
     {
       "nombre": "Zona de produccion",
-      "x": 0,
-      "y": 0,
-      "ancho_m": 0,
-      "largo_m": 0,
-      "altura_m": 6
+      "x": 1.0,
+      "y": 1.0,
+      "ancho_m": 18.0,
+      "largo_m": 12.0,
+      "altura_m": 6.0,
+      "area_m2": 216.0,
+      "tipo_piso": "concreto industrial",
+      "iluminacion_nivel_lux": 300
     },
     {
       "nombre": "Almacen",
-      "x": 0,
-      "y": 0,
-      "ancho_m": 0,
-      "largo_m": 0,
-      "altura_m": 6
+      "x": 19.0,
+      "y": 1.0,
+      "ancho_m": 10.0,
+      "largo_m": 12.0,
+      "altura_m": 6.0,
+      "area_m2": 120.0,
+      "tipo_piso": "concreto",
+      "iluminacion_nivel_lux": 150
     },
     {
       "nombre": "Oficinas",
-      "x": 0,
-      "y": 0,
-      "ancho_m": 0,
-      "largo_m": 0,
-      "altura_m": 2.5
+      "x": 1.0,
+      "y": 13.0,
+      "ancho_m": 12.0,
+      "largo_m": 3.0,
+      "altura_m": 2.5,
+      "area_m2": 36.0,
+      "tipo_piso": "ceramico",
+      "iluminacion_nivel_lux": 500
     },
     {
       "nombre": "SS.HH.",
-      "x": 0,
-      "y": 0,
-      "ancho_m": 0,
-      "largo_m": 0,
-      "altura_m": 2.5
+      "x": 13.0,
+      "y": 14.0,
+      "ancho_m": 4.0,
+      "largo_m": 2.0,
+      "altura_m": 2.5,
+      "area_m2": 8.0,
+      "tipo_piso": "ceramico antideslizante",
+      "iluminacion_nivel_lux": 100
     }
   ],
 
-  "puertas_industriales": [],
-  "ventanas": [],
-  "columnas": [],
-  "equipos_fijos": [],
+  "puertas_industriales": [
+    { "nombre": "Puerta principal", "x": 1.0, "y": 5.0, "ancho_m": 4.0, "alto_m": 5.0, "tipo": "seccional" },
+    { "nombre": "Puerta almacen", "x": 19.0, "y": 3.0, "ancho_m": 3.5, "alto_m": 4.5, "tipo": "seccional" }
+  ],
 
-  "estado": "pendiente - completar con dimensiones reales"
+  "ventanas": [
+    { "nombre": "Ventanas oficina", "x": 1.0, "y": 13.5, "ancho_m": 10.0, "alto_m": 1.2, "tipo": "industrial" }
+  ],
+
+  "columnas": [
+    { "x": 6.0, "y": 4.0, "seccion_mm": "400x400" },
+    { "x": 12.0, "y": 4.0, "seccion_mm": "400x400" },
+    { "x": 6.0, "y": 9.0, "seccion_mm": "400x400" },
+    { "x": 12.0, "y": 9.0, "seccion_mm": "400x400" },
+    { "x": 20.0, "y": 4.0, "seccion_mm": "400x400" },
+    { "x": 20.0, "y": 9.0, "seccion_mm": "400x400" }
+  ],
+
+  "estado": "ESTIMADO - VERIFICAR CON INGENIERO",
+  "nota": "Valores tipicos para nave industrial de 30x15m. Ajustar dimensiones reales antes de construccion."
 }

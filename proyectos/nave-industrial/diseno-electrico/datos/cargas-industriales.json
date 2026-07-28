@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
-  "proyecto": "Nave industrial - cargas electricas",
+  "proyecto": "Instalaciones electricas industriales - Nave industrial",
+  "propietario": "por definir",
   "tension_v": 380,
   "fases": 3,
   "frecuencia_hz": 60,
@@ -11,10 +12,11 @@
       "id": "TG",
       "nombre": "Tablero General",
       "ubicacion": {
-        "x": 2.0,
-        "y": 2.0
+        "x": 14.0,
+        "y": 6.0
       },
       "nivel": "general",
+      "tipo": "trifasico",
       "alimentador_desde": "medidor",
       "circuitos": [
         "C1",
@@ -26,27 +28,30 @@
     },
     {
       "id": "TF1",
-      "nombre": "Tablero de Fuerza 1",
+      "nombre": "Tablero de Fuerza N°1",
       "ubicacion": {
         "x": 8.0,
-        "y": 4.0
+        "y": 7.0
       },
       "nivel": "distribucion",
+      "tipo": "trifasico",
       "alimentador_desde": "TG",
       "circuitos": [
         "M1",
         "M2",
-        "M3"
+        "M3",
+        "M4"
       ]
     },
     {
       "id": "TI1",
-      "nombre": "Tablero de Iluminacion 1",
+      "nombre": "Tablero de Iluminacion",
       "ubicacion": {
-        "x": 5.0,
-        "y": 8.0
+        "x": 6.0,
+        "y": 14.0
       },
       "nivel": "distribucion",
+      "tipo": "monofasico",
       "alimentador_desde": "TG",
       "circuitos": [
         "IL1",
@@ -57,14 +62,15 @@
   "circuitos": [
     {
       "id": "C1",
-      "descripcion": "Alimentador TF1 - Fuerza",
+      "descripcion": "Alimentador TF1 - Fuerza motriz",
       "tipo": "alimentacion",
-      "potencia_kw": 45.0,
-      "factor_demanda": 0.85,
+      "potencia_kw": 60.0,
+      "factor_demanda": 0.8,
       "longitud_m": 25,
-      "proteccion_itm_a": 100,
-      "seccion_mm2": 35,
-      "tubo_mm": 50
+      "proteccion_itm_a": 125,
+      "seccion_mm2": 50,
+      "tubo_mm": 65,
+      "fp": 0.85
     },
     {
       "id": "C2",
@@ -75,46 +81,50 @@
       "longitud_m": 20,
       "proteccion_itm_a": 25,
       "seccion_mm2": 6,
-      "tubo_mm": 25
+      "tubo_mm": 25,
+      "fp": 0.95
     },
     {
       "id": "C3",
       "descripcion": "Tomacorrientes industriales",
       "tipo": "tomacorrientes",
-      "potencia_kw": 5.0,
+      "potencia_kw": 6.0,
       "factor_demanda": 0.5,
-      "longitud_m": 30,
-      "proteccion_itm_a": 20,
-      "seccion_mm2": 4,
-      "tubo_mm": 20
+      "longitud_m": 35,
+      "proteccion_itm_a": 25,
+      "seccion_mm2": 6,
+      "tubo_mm": 25,
+      "fp": 0.85
     },
     {
       "id": "C4",
-      "descripcion": "Climatizacion / Ventilacion",
+      "descripcion": "Climatizacion - Aire acondicionado oficinas",
       "tipo": "climatizacion",
-      "potencia_kw": 6.0,
+      "potencia_kw": 4.5,
       "factor_demanda": 0.8,
       "longitud_m": 18,
-      "proteccion_itm_a": 25,
-      "seccion_mm2": 6,
-      "tubo_mm": 25
+      "proteccion_itm_a": 20,
+      "seccion_mm2": 4,
+      "tubo_mm": 20,
+      "fp": 0.9
     },
     {
       "id": "C5",
-      "descripcion": "Servicios generales (oficinas)",
+      "descripcion": "Servicios generales (oficinas, SS.HH.)",
       "tipo": "servicios",
-      "potencia_kw": 4.0,
+      "potencia_kw": 3.0,
       "factor_demanda": 0.7,
       "longitud_m": 15,
       "proteccion_itm_a": 16,
       "seccion_mm2": 4,
-      "tubo_mm": 20
+      "tubo_mm": 20,
+      "fp": 0.85
     }
   ],
   "motores": [
     {
       "id": "M1",
-      "descripcion": "Bomba de agua 10 HP",
+      "descripcion": "Bomba centrifuga - Sistema contra incendios",
       "potencia_hp": 10,
       "potencia_kw": 7.46,
       "tension_v": 380,
@@ -127,17 +137,18 @@
       "factor_servicio": 1.15,
       "circuito": "C1",
       "ubicacion": {
-        "x": 9.0,
-        "y": 3.0
+        "x": 10.0,
+        "y": 4.0
       },
-      "proteccion_termica": "relay 14-20A",
+      "proteccion_termica": "relay termico 14-20A",
       "seccion_mm2": 6,
       "longitud_m": 12,
-      "itm_a": 30
+      "itm_a": 30,
+      "aplicacion": "bomba CI"
     },
     {
       "id": "M2",
-      "descripcion": "Compresor 15 HP",
+      "descripcion": "Compresor de aire industrial",
       "potencia_hp": 15,
       "potencia_kw": 11.19,
       "tension_v": 380,
@@ -150,17 +161,18 @@
       "factor_servicio": 1.15,
       "circuito": "C1",
       "ubicacion": {
-        "x": 10.0,
-        "y": 5.0
+        "x": 7.0,
+        "y": 3.0
       },
-      "proteccion_termica": "relay 20-25A",
+      "proteccion_termica": "relay termico 20-25A",
       "seccion_mm2": 10,
       "longitud_m": 18,
-      "itm_a": 40
+      "itm_a": 40,
+      "aplicacion": "compresor"
     },
     {
       "id": "M3",
-      "descripcion": "Extractor industrial 5 HP",
+      "descripcion": "Extractor industrial - Ventilacion general",
       "potencia_hp": 5,
       "potencia_kw": 3.73,
       "tension_v": 380,
@@ -173,56 +185,163 @@
       "factor_servicio": 1.15,
       "circuito": "C1",
       "ubicacion": {
-        "x": 11.0,
-        "y": 4.0
+        "x": 15.0,
+        "y": 5.0
       },
-      "proteccion_termica": "relay 8-12A",
+      "proteccion_termica": "relay termico 8-12A",
       "seccion_mm2": 4,
       "longitud_m": 15,
-      "itm_a": 16
+      "itm_a": 16,
+      "aplicacion": "extractor"
+    },
+    {
+      "id": "M4",
+      "descripcion": "Molino / Trituradora pequena",
+      "potencia_hp": 7.5,
+      "potencia_kw": 5.59,
+      "tension_v": 380,
+      "fases": 3,
+      "fp": 0.8,
+      "eficiencia": 0.88,
+      "corriente_nominal_a": 10.5,
+      "corriente_arranque_a": 73.5,
+      "tipo_arranque": "directo",
+      "factor_servicio": 1.15,
+      "circuito": "C1",
+      "ubicacion": {
+        "x": 5.0,
+        "y": 8.0
+      },
+      "proteccion_termica": "relay termico 12-16A",
+      "seccion_mm2": 4,
+      "longitud_m": 20,
+      "itm_a": 20,
+      "aplicacion": "molino"
     }
   ],
   "iluminacion": [
     {
-      "id": "IL1",
-      "descripcion": "Iluminacion zona produccion",
-      "tipo": "LED industrial 100W",
-      "cantidad": 12,
+      "id": "IL-ZP",
+      "descripcion": "Iluminacion LED zona produccion",
+      "tipo": "LED industrial 100W 5000K IP65",
+      "cantidad": 16,
       "potencia_unitaria_w": 100,
+      "potencia_total_w": 1600,
       "circuito": "C2",
-      "ubicacion_zona": "produccion"
+      "ubicacion_zona": "produccion",
+      "control": "interruptor manual + fotocontrol"
     },
     {
-      "id": "IL2",
-      "descripcion": "Iluminacion almacen",
-      "tipo": "LED industrial 80W",
-      "cantidad": 6,
+      "id": "IL-ZA",
+      "descripcion": "Iluminacion LED almacen",
+      "tipo": "LED industrial 80W 5000K IP65",
+      "cantidad": 8,
       "potencia_unitaria_w": 80,
+      "potencia_total_w": 640,
       "circuito": "C2",
-      "ubicacion_zona": "almacen"
+      "ubicacion_zona": "almacen",
+      "control": "interruptor manual"
+    },
+    {
+      "id": "IL-OF",
+      "descripcion": "Iluminacion LED oficinas",
+      "tipo": "LED panel 60x60 40W",
+      "cantidad": 8,
+      "potencia_unitaria_w": 40,
+      "potencia_total_w": 320,
+      "circuito": "C2",
+      "ubicacion_zona": "oficinas",
+      "control": "interruptor manual"
+    },
+    {
+      "id": "IL-SS",
+      "descripcion": "Iluminacion SS.HH.",
+      "tipo": "LED sobreponer 18W",
+      "cantidad": 4,
+      "potencia_unitaria_w": 18,
+      "potencia_total_w": 72,
+      "circuito": "C2",
+      "ubicacion_zona": "SS.HH.",
+      "control": "interruptor manual"
+    }
+  ],
+  "tomacorrientes": [
+    {
+      "id": "T1",
+      "descripcion": "Toma trifasico industrial 32A",
+      "tension_v": 380,
+      "fases": 3,
+      "corriente_a": 32,
+      "circuito": "C3",
+      "ubicacion": {
+        "x": 4.0,
+        "y": 4.0
+      },
+      "tipo": "interlock"
+    },
+    {
+      "id": "T2",
+      "descripcion": "Toma trifasico industrial 16A",
+      "tension_v": 380,
+      "fases": 3,
+      "corriente_a": 16,
+      "circuito": "C3",
+      "ubicacion": {
+        "x": 16.0,
+        "y": 4.0
+      },
+      "tipo": "interlock"
+    },
+    {
+      "id": "T3",
+      "descripcion": "Toma monofasico doble 16A",
+      "tension_v": 220,
+      "fases": 1,
+      "corriente_a": 16,
+      "circuito": "C5",
+      "ubicacion": {
+        "x": 3.0,
+        "y": 14.0
+      },
+      "tipo": "doble"
+    },
+    {
+      "id": "T4",
+      "descripcion": "Toma monofasico doble 16A",
+      "tension_v": 220,
+      "fases": 1,
+      "corriente_a": 16,
+      "circuito": "C5",
+      "ubicacion": {
+        "x": 8.0,
+        "y": 14.0
+      },
+      "tipo": "doble"
     }
   ],
   "cargas_especiales": [
     {
       "id": "E1",
-      "descripcion": "Toma trifasica 32A",
-      "tension_v": 380,
-      "corriente_a": 32,
-      "circuito": "C3",
+      "descripcion": "Aire acondicionado oficina 12000 BTU",
+      "tension_v": 220,
+      "fases": 1,
+      "potencia_w": 1400,
+      "circuito": "C4",
       "ubicacion": {
-        "x": 7.0,
-        "y": 5.0
+        "x": 4.0,
+        "y": 13.5
       }
     },
     {
       "id": "E2",
-      "descripcion": "Toma trifasica 16A",
-      "tension_v": 380,
-      "corriente_a": 16,
-      "circuito": "C3",
+      "descripcion": "Aire acondicionado oficina 12000 BTU",
+      "tension_v": 220,
+      "fases": 1,
+      "potencia_w": 1400,
+      "circuito": "C4",
       "ubicacion": {
-        "x": 7.0,
-        "y": 3.0
+        "x": 10.0,
+        "y": 13.5
       }
     }
   ],
@@ -233,10 +352,13 @@
       "tipo": "malla",
       "resistencia_objetivo_ohm": 5,
       "conductor_mm2": 35,
+      "conductor_tipo": "cobre desnudo",
       "electrodos": 4,
+      "electrodo_tipo": "varilla copperweld 5/8x2.4m",
+      "profundidad_m": 0.8,
       "ubicacion": {
-        "x": 1.0,
-        "y": 1.0
+        "x": 14.0,
+        "y": 5.0
       }
     }
   ],
@@ -247,13 +369,26 @@
     "fp_objetivo": 0.95,
     "banco_kvar": 0,
     "tipo": "automatica",
+    "pasos_kvar": [
+      5,
+      5,
+      10,
+      10
+    ],
     "ubicacion": {
-      "x": 3.0,
-      "y": 6.0
+      "x": 16.0,
+      "y": 7.0
     }
   },
-  "maxima_demanda_kw": 69.05,
-  "corriente_total_a": 116.56,
-  "alimentador_principal_itm_a": 160,
+  "notas": [
+    "VALORES ESTIMADOS - VERIFICAR CON INGENIERO",
+    "Motores: 10HP bomba CI + 15HP compresor + 5HP extractor + 7.5HP molino",
+    "Iluminacion: LED industrial IP65 en zonas productivas",
+    "SPAT: malla con 4 varillas copperweld, R<5ohm",
+    "Compensacion FP: banco automatico de 30 kVAr aprox"
+  ],
+  "maxima_demanda_kw": 76.25,
+  "corriente_total_a": 128.73,
+  "alimentador_principal_itm_a": 180,
   "alimentador_principal_seccion_mm2": 70
 }
