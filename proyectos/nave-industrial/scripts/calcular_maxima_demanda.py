@@ -8,6 +8,18 @@ FACTOR_TEMP_40C = 0.91       # k_T para 40°C, cable THW 90°C
 FACTOR_AGRUP_4_COND = 0.80   # k_n para 4 conductores en tubo
 FACTOR_CORRECCION = FACTOR_TEMP_40C * FACTOR_AGRUP_4_COND  # 0.728
 
+def calc_dV_arranque(kw, V, fp, long_m, material="cobre", I_mult=6.0):
+    rho = 0.0175 if material == "cobre" else 0.0288
+    Ib = kw * 1000 / (math.sqrt(3) * V * fp)
+    I_start = Ib * I_mult
+    tabs = [(1.5, 14), (2.5, 20), (4, 27), (6, 36), (10, 49), (16, 67),
+            (25, 91), (35, 112), (50, 141), (70, 179), (95, 220), (120, 258)]
+    I_adm_corregida = [(s, ia * FACTOR_CORRECCION) for s, ia in tabs]
+    S = next((s for s, ia in I_adm_corregida if Ib * 1.25 <= ia), 120)
+    if S == 0: return 999
+    dV = math.sqrt(3) * rho * long_m * I_start / S * 100 / V
+    return round(dV, 2)
+
 def calc_circuito_trifasico(kw, V=380, fp=0.85, long_m=10, material="cobre", dV_max=2.5):
     rho = 0.0175 if material == "cobre" else 0.0288
     Ib = kw * 1000 / (math.sqrt(3) * V * fp)
@@ -67,6 +79,25 @@ def main():
     I = md_final * 1000 / (math.sqrt(3) * V * 0.9)
     alim = calc_circuito_trifasico(md_final, V)
 
+    # Arranque motores — verificar dV con datos especificos de cada motor
+    motores_data = []
+    for mo in motores:
+        kw = mo.get("potencia_kw", 0)
+        lm = mo.get("longitud_m", 50)
+        Sc = mo.get("seccion_mm2", 6)
+        fp_m = mo.get("fp", 0.85)
+        # Usar corriente de arranque del JSON si existe, sino estimar 6x In
+        I_start = mo.get("corriente_arranque_a", kw*1000/(math.sqrt(3)*V*0.85)*6)
+        rho = 0.0175
+        dV_s = round(math.sqrt(3) * rho * lm * I_start / Sc * 100 / V, 2)
+        motores_data.append({"id": mo.get("id", ""),
+                             "potencia_kw": kw, "seccion_mm2": Sc,
+                             "longitud_m": lm, "I_arranque_a": round(I_start,1),
+                             "dV_arranque_porc": dV_s,
+                             "tipo_arranque": mo.get("tipo_arranque","DOL"),
+                             "cumple_CNE_15pct": dV_s <= 15})
+    max_dV_arr = max(m["dV_arranque_porc"] for m in motores_data)
+
     # Compensacion FP
     fp_a = data.get("compensacion_fp", {}).get("fp_actual", 0.85)
     fp_t = data.get("compensacion_fp", {}).get("fp_objetivo", 0.95)
@@ -89,7 +120,9 @@ def main():
                         "fd_simultaneidad": fd_simultaneidad,
                         "md_con_simultaneidad_kw": round(md_sim, 2),
                         "reserva_pct": reserva_pct,
-                        "reserva_kw": round(md_sim * reserva_pct, 2)},
+                        "reserva_kw": round(md_sim * reserva_pct, 2),
+            "arranque_motores": motores_data,
+            "dV_arranque_max_porc": max_dV_arr},
            "resumen": {"maxima_demanda_kw": round(md_final, 2),
                        "corriente_total_a": round(I, 2),
                        "alimentador": alim,
@@ -104,7 +137,8 @@ def main():
           f"I: {res['resumen']['corriente_total_a']} A | "
           f"Alim: {alim['seccion_mm2']}mm2 / {alim['itm_a']}A | "
           f"FP: {round(q)} kVar | "
-          f"k_corr: {FACTOR_CORRECCION:.3f}")
+          f"k_corr: {FACTOR_CORRECCION:.3f} | "
+          f"dV_arr_max: {max_dV_arr}%")
 
 if __name__ == "__main__":
     main()

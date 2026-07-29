@@ -2,7 +2,7 @@
 """Tests unitarios para el motor de calculos industrial (CNE-Utilizacion)."""
 import json, math, sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
-from calcular_maxima_demanda import calc_circuito_trifasico, FACTOR_CORRECCION
+from calcular_maxima_demanda import calc_circuito_trifasico, calc_dV_arranque, FACTOR_CORRECCION
 
 def test_factor_correccion():
     assert round(FACTOR_CORRECCION, 3) == 0.728
@@ -25,6 +25,31 @@ def test_circuito_trifasico_ampacidad():
     tabs = dict([(1.5,14),(2.5,20),(4,27),(6,36),(10,49),(16,67),
                  (25,91),(35,112),(50,141),(70,179),(95,220),(120,258)])
     assert tabs.get(res["seccion_mm2"], 0) * FACTOR_CORRECCION >= Ib * 1.25
+
+def test_dV_arranque_m2():
+    """Motor M2 (15HP=11.19kW) estrella-delta, 10mm2, 18m -> dV_start < 15%."""
+    dV = calc_dV_arranque(kw=11.19, V=380, fp=0.85, long_m=18, material="cobre", I_mult=2.0)
+    assert dV < 15, f"dV_arr={dV}% >= 15%"
+
+def test_dV_arranque_integracion():
+    """Verifica que el resultado del script incluya dV_arr_max < 15%."""
+    import subprocess, tempfile, json, sys, os
+    data = json.load(open(os.path.join(os.path.dirname(__file__),'..','diseno-electrico','datos','cargas-industriales.json')))
+    with tempfile.NamedTemporaryFile(mode='w',suffix='.json',delete=False) as fi:
+        json.dump(data,fi); fi_input = fi.name
+    with tempfile.NamedTemporaryFile(mode='w',suffix='.json',delete=False) as fo:
+        fo_output = fo.name
+    try:
+        subprocess.run([sys.executable,os.path.join(os.path.dirname(__file__),'..','scripts','calcular_maxima_demanda.py'),
+                        fi_input,fo_output],capture_output=True,check=True)
+        with open(fo_output) as f: res = json.load(f)
+        dV_max = res["desglose"]["dV_arranque_max_porc"]
+        assert dV_max < 15, f"dV_arr_max={dV_max}% >= 15%"
+        # Verificar cada motor individualmente
+        for mo in res["desglose"]["arranque_motores"]:
+            assert mo["cumple_CNE_15pct"], f"{mo['id']}: dV={mo['dV_arranque_porc']}%"
+    finally:
+        os.unlink(fi_input); os.unlink(fo_output)
 
 def test_md_rango():
     """Verifica que MD calculada para datos reales este en rango [33, 36] kW."""
