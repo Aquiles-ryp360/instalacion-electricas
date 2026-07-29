@@ -1,68 +1,93 @@
 #!/usr/bin/env python3
-"""Genera BOM con precios de referencia para instalacion industrial."""
+"""Genera BOM con precios de referencia para instalacion industrial 20x40m."""
 import json, sys
 from pathlib import Path
 from datetime import date
 
 PRECIOS = {
-    "Cable THW 35 mm2": 14.00, "Cable THW 10 mm2": 4.80, "Cable THW 6 mm2": 3.20,
-    "Cable THW 4 mm2": 2.40, "Tuberia PVC SAP 50 mm": 9.00, "Tuberia PVC SAP 25 mm": 5.50,
-    "Tuberia PVC SAP 20 mm": 4.00, "Tablero general 24 circuitos": 350.00,
-    "Tablero fuerza 12 circuitos": 280.00, "Tablero iluminacion 8 circuitos": 180.00,
-    "ITM tripolar 80A": 180.00, "ITM tripolar 50A": 120.00, "ITM tripolar 40A": 65.00,
-    "ITM tripolar 30A": 55.00, "ITM tripolar 20A": 45.00, "ITM tripolar 16A": 42.00,
+    "Cable N2XH 50 mm2": 22.00, "Cable N2XH 16 mm2": 8.50, "Cable N2XH 10 mm2": 5.50,
+    "Cable N2XH 6 mm2": 3.80, "Cable N2XH 4 mm2": 2.80,
+    "Bandeja portacables 200x50mm": 28.00, "Soporte suspensión bandeja": 12.00,
+    "Tuberia PVC SAP 32 mm": 7.00, "Tuberia PVC SAP 25 mm": 5.50, "Tuberia PVC SAP 20 mm": 4.00,
+    "Tablero general TGD 24 circuitos IP65": 480.00,
+    "Tablero fuerza TF1 18 circuitos IP65": 380.00,
+    "Tablero iluminacion TI1 12 circuitos IP65": 250.00,
+    "ITM tripolar 100A": 250.00, "ITM tripolar 63A": 140.00,
+    "ITM tripolar 40A": 65.00, "ITM tripolar 30A": 55.00,
+    "ITM tripolar 25A": 50.00, "ITM tripolar 16A": 42.00,
     "ITM bipolar 25A": 28.00, "ITM bipolar 20A": 25.00, "ITM bipolar 16A": 22.00,
     "Diferencial 4P-63A-300mA sup.": 220.00, "Diferencial 4P-40A-300mA ret.": 180.00,
     "Diferencial 2P-25A-30mA": 65.00, "Diferencial 2P-20A-30mA": 55.00, "Diferencial 2P-16A-30mA": 48.00,
-    "Reles termicos": 45.00,
-    "LED industrial 100W IP65": 85.00, "LED industrial 80W IP65": 72.00,
-    "LED panel 60x60 40W": 55.00, "LED sobreponer 18W": 28.00,
-    "Toma trifasica interlock 32A": 65.00, "Toma trifasica interlock 16A": 52.00,
-    "Toma doble 16A + T": 12.00,
+    "Guardamotor 14-20A": 95.00, "Guardamotor 20-25A": 105.00, "Guardamotor 63-80A": 160.00,
+    "LED High-Bay 150W 5000K IP65": 135.00,
+    "LED panel 60x60 40W 4000K": 55.00, "LED sobreponer 18W 4000K": 28.00,
+    "Toma trifasica Stecker 32A 380V": 75.00,
+    "Toma doble Shucko 16A 220V": 14.00,
     "Varilla copperweld 5/8'' x 2.4m": 45.00, "Cable Cu desnudo 35 mm2": 15.00,
-    "Conector bimetalico": 8.00, "Banco capacitores automatico 10kVAr": 480.00,
+    "Conector bimetalico": 8.00, "Caja registro PAT": 35.00,
+    "Banco capacitores automatico 15kVAr 3 pasos": 680.00,
+    "Contactor arranque estrella-delta 40A": 180.00,
+    "Timer rele temporizador": 35.00,
 }
 
 MATERIALES = [
-    ("Canalizacion", [
-        ("Cable THW 35 mm2", "m", 50), ("Cable THW 10 mm2", "m", 40),
-        ("Cable THW 6 mm2", "m", 60), ("Cable THW 4 mm2", "m", 80),
-        ("Tuberia PVC SAP 50 mm", "m", 20), ("Tuberia PVC SAP 25 mm", "m", 60),
-        ("Tuberia PVC SAP 20 mm", "m", 40),
+    ("Canalizacion y Bandejas", [
+        ("Cable N2XH 50 mm2", "m", 60),
+        ("Cable N2XH 16 mm2", "m", 40),
+        ("Cable N2XH 10 mm2", "m", 30),
+        ("Cable N2XH 6 mm2", "m", 80),
+        ("Cable N2XH 4 mm2", "m", 100),
+        ("Bandeja portacables 200x50mm", "m", 60),
+        ("Soporte suspension bandeja", "und", 30),
+        ("Tuberia PVC SAP 32 mm", "m", 30),
+        ("Tuberia PVC SAP 25 mm", "m", 50),
+        ("Tuberia PVC SAP 20 mm", "m", 60),
     ]),
     ("Tableros", [
-        ("Tablero general 24 circuitos", "und", 1),
-        ("Tablero fuerza 12 circuitos", "und", 1),
-        ("Tablero iluminacion 8 circuitos", "und", 1),
+        ("Tablero general TGD 24 circuitos IP65", "und", 1),
+        ("Tablero fuerza TF1 18 circuitos IP65", "und", 1),
+        ("Tablero iluminacion TI1 12 circuitos IP65", "und", 1),
     ]),
     ("Protecciones", [
-        ("ITM tripolar 80A", "und", 1), ("ITM tripolar 50A", "und", 1),
-        ("ITM tripolar 40A", "und", 1), ("ITM tripolar 30A", "und", 1),
-        ("ITM tripolar 20A", "und", 1), ("ITM tripolar 16A", "und", 1),
-        ("ITM bipolar 25A", "und", 1), ("ITM bipolar 20A", "und", 1),
+        ("ITM tripolar 100A", "und", 1),
+        ("ITM tripolar 63A", "und", 2),
+        ("ITM tripolar 40A", "und", 1),
+        ("ITM tripolar 30A", "und", 1),
+        ("ITM tripolar 25A", "und", 1),
+        ("ITM tripolar 16A", "und", 2),
+        ("ITM bipolar 25A", "und", 1),
+        ("ITM bipolar 20A", "und", 1),
         ("ITM bipolar 16A", "und", 1),
         ("Diferencial 4P-63A-300mA sup.", "und", 1),
         ("Diferencial 4P-40A-300mA ret.", "und", 1),
         ("Diferencial 2P-25A-30mA", "und", 2),
         ("Diferencial 2P-20A-30mA", "und", 1),
         ("Diferencial 2P-16A-30mA", "und", 1),
-        ("Reles termicos", "und", 4),
+        ("Guardamotor 14-20A", "und", 1),
+        ("Guardamotor 20-25A", "und", 1),
+        ("Guardamotor 63-80A", "und", 1),
+    ]),
+    ("Arranque Estrella-Delta", [
+        ("Contactor arranque estrella-delta 40A", "und", 1),
+        ("Timer rele temporizador", "und", 1),
     ]),
     ("Iluminacion", [
-        ("LED industrial 100W IP65", "und", 16), ("LED industrial 80W IP65", "und", 8),
-        ("LED panel 60x60 40W", "und", 8), ("LED sobreponer 18W", "und", 4),
+        ("LED High-Bay 150W 5000K IP65", "und", 20),
+        ("LED panel 60x60 40W 4000K", "und", 10),
+        ("LED sobreponer 18W 4000K", "und", 4),
     ]),
     ("Tomacorrientes", [
-        ("Toma trifasica interlock 32A", "und", 1),
-        ("Toma trifasica interlock 16A", "und", 1),
-        ("Toma doble 16A + T", "und", 4),
+        ("Toma trifasica Stecker 32A 380V", "und", 4),
+        ("Toma doble Shucko 16A 220V", "und", 8),
     ]),
     ("Puesta a Tierra", [
-        ("Varilla copperweld 5/8'' x 2.4m", "und", 4),
-        ("Cable Cu desnudo 35 mm2", "m", 50), ("Conector bimetalico", "und", 8),
+        ("Varilla copperweld 5/8'' x 2.4m", "und", 6),
+        ("Cable Cu desnudo 35 mm2", "m", 80),
+        ("Conector bimetalico", "und", 12),
+        ("Caja registro PAT", "und", 2),
     ]),
     ("Compensacion FP", [
-        ("Banco capacitores automatico 10kVAr", "und", 1),
+        ("Banco capacitores automatico 15kVAr 3 pasos", "und", 1),
     ]),
 ]
 
@@ -79,7 +104,7 @@ def main():
             subtotal += pt
         total_general += subtotal
 
-    bom = {"proyecto": "Instalaciones Electricas Industriales - Nave Industrial",
+    bom = {"proyecto": "Instalaciones Electricas Industriales - Nave 20x40m",
            "fecha": str(date.today()), "moneda": "Soles (PEN)",
            "estado": "ESTIMADO - VERIFICAR CON INGENIERO",
            "resumen": {"categorias": len(set(i["categoria"] for i in items)),
@@ -89,13 +114,12 @@ def main():
            "materiales": items}
 
     Path("build/nave-industrial/bom").mkdir(parents=True, exist_ok=True)
-
     with open("build/nave-industrial/bom/bom.json", "w") as f:
         json.dump(bom, f, indent=2, ensure_ascii=False)
 
     lines = [f"# BOM - {bom['proyecto']}", f"**Fecha:** {bom['fecha']}",
              f"**Estado:** {bom['estado']}", f"**Moneda:** {bom['moneda']}", "",
-             "## Resumen", f"| Concepto | Monto (S/) |",
+             "## Resumen", "| Concepto | Monto (S/) |",
              "|---|---|", f"| Materiales | {total_general:,.0f} |",
              f"| Mano de obra (35%) | {round(total_general*0.35):,.0f} |",
              f"| **Total estimado** | **{round(total_general*1.35):,.0f}** |", "",

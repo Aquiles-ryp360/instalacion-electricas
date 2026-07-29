@@ -1,79 +1,71 @@
 # Parametros del proyecto industrial
-# ESTIMADO - VERIFICAR CON INGENIERO
+# REEMPLAZADO - Nueva especificacion nave 20x40m
 
-proyecto: "Instalaciones electricas industriales - Nave industrial"
+proyecto: "Instalaciones electricas industriales - Nave Industrial 20x40m"
 propietario: "Renzo Gabriel Mamani Galindo"
 
-# Ubicacion
 ubicacion:
   distrito: "Juliaca"
   provincia: "San Roman"
   departamento: "Puno"
   direccion: "por definir"
 
-# Datos electricos generales
 tension_v: 380
 fases: 3
 frecuencia_hz: 60
 factor_potencia: 0.85
-factor_potencia_objetivo: 0.95
+factor_potencia_objetivo: 0.96
 factor_diseno: 1.25
 resistividad_rho: 0.0175
 
-# Caidas de tension (CNE)
 caida_alimentador_porc: 2.0
 caida_derivados_porc: 2.5
 caida_total_max_porc: 4.0
 
-# Datos de suministro
-potencia_solicitada_kw: 70
+potencia_solicitada_kw: 80
 tipo_conexion: "trifasica"
 nivel_tension: "380/220V"
 sistema_distribucion: "TN-S"
 
-# Areas
-area_terreno_m2: 500
-area_construida_m2: 450
-area_techada_m2: 450
+area_terreno_m2: 900
+area_construida_m2: 800
+area_techada_m2: 800
 
-# Alimentador principal
-longitud_alimentador_m: 15
+longitud_alimentador_m: 20
 
-# Subestacion
 subestacion_propia: false
 transformador_kva: null
 tipo_subestacion: null
 
-# Nave
 nave:
-  largo_m: 30
-  ancho_m: 15
-  altura_m: 6
+  largo_m: 40
+  ancho_m: 20
+  altura_m: 8
   zonas:
     - nombre: Produccion
-      area_m2: 216
-      iluminacion_tipo: LED industrial 100W
+      area_m2: 600
+      iluminacion_tipo: LED High-Bay 150W 5000K IP65
       iluminacion_nivel_lux: 300
+      altura_montaje_m: 7
     - nombre: Almacen
       area_m2: 120
-      iluminacion_tipo: LED industrial 80W
+      iluminacion_tipo: LED industrial 100W IP65
       iluminacion_nivel_lux: 150
+      altura_montaje_m: 7
     - nombre: Oficinas
-      area_m2: 36
-      iluminacion_tipo: LED panel 60x60
+      area_m2: 60
+      iluminacion_tipo: LED panel 60x60 40W
       iluminacion_nivel_lux: 500
     - nombre: SS.HH.
-      area_m2: 8
-      iluminacion_tipo: LED
+      area_m2: 12
+      iluminacion_tipo: LED sobreponer 18W
       iluminacion_nivel_lux: 100
 
-# Conductores
-conductor_tipo: THW-90
+conductor_tipo: N2XH (libre halogenous)
 conductor_material: cobre
 temperatura_ambiente_c: 40
 numero_conductores_tubo: 4
 
-# Compensacion FP
 compensacion_fp:
   requiere: true
   tipo: automatica

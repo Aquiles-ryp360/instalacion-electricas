@@ -15,7 +15,7 @@
 
 \title{\textbf{EXPEDIENTE TECNICO} \\
 Instalaciones Electricas Industriales \\
-Nave Industrial}
+Nave Industrial 20x40m}
 \author{Propietario: Renzo Gabriel Mamani Galindo \\
 Distrito: Juliaca - San Roman - Puno}
 \date{\today}
@@ -32,17 +32,21 @@ Distrito: Juliaca - San Roman - Puno}
 
 \subsection{Generalidades}
 El presente proyecto comprende el diseno de las instalaciones electricas para una nave industrial de
-30m x 15m (450 m2) destinada a actividades de produccion, almacenamiento y oficinas administrativas.
+20m x 40m (800 m2, altura 8m) destinada a actividades de produccion, almacenamiento y oficinas administrativas.
+Incluye puente grua de 5Tn, compresor de 15HP, banco de maquinaria taller y 7 circuitos principales.
 
 \subsection{Alcance}
 \begin{itemize}
-  \item Acometida electrica en baja tension 380/220V trifasica
-  \item Tablero General (TG) y tableros de distribucion
-  \item Alimentacion a 4 motores industriales (10HP, 15HP, 5HP, 7.5HP)
-  \item Iluminacion LED industrial en zonas de produccion y almacen
-  \item Tomacorrientes industriales trifasicos y monofasicos
-  \item Sistema de puesta a tierra tipo malla
-  \item Compensacion de factor de potencia
+  \item Acometida electrica BT 380/220V trifasica TN-S
+  \item Tablero General de Distribucion (TGD) y sub-tableros TF1/TI1
+  \item Circuito C1: Alumbrado industrial LED High-Bay 150W (7m altura)
+  \item Circuito C2: Tomacorrientes industriales Stecker 380V + Shucko 220V
+  \item Circuito C3: Fuerza - Puente Grua 10HP (regimen intermitente)
+  \item Circuito C4: Fuerza - Compresor 15HP arranque Estrella-Delta
+  \item Circuito C5: Fuerza - Maquinaria taller 25kW (tornos, fresadoras, plasma)
+  \item Circuito C6: Alumbrado y tomas oficinas (monofasico 220V)
+  \item Circuito C7: Banco de condensadores automatico para FP $\geq$ 0.96
+  \item Sistema de puesta a tierra tipo malla con 6 varillas
 \end{itemize}
 
 \subsection{Datos del Proyecto}
@@ -53,10 +57,10 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
   Tension nominal & 380/220V \\
   Sistema & 3F + N + PE \\
   Frecuencia & 60 Hz \\
-  Maxima Demanda & 34.4 kW \\
-  Corriente total & 58.0 A \\
-  Factor de potencia inicial & 0.85 \\
-  Factor de potencia objetivo & 0.95 \\
+  Dimensiones nave & 20m x 40m x 8m (800 m2) \\
+  Maxima Demanda & 39.4 kW \\
+  Corriente total & 66.4 A \\
+  FP inicial / objetivo & 0.85 / 0.96 \\
   Esquema de conexion & TN-S \\
   \bottomrule
 \end{tabular}
@@ -74,52 +78,82 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
     \item Agrupamiento (4 conductores en tubo): $k_n = 0.80$
     \item Factor de correccion total: $0.91 \times 0.80 = 0.728$
   \end{itemize}
-  \item Caida de tension maxima: 2.5\% en derivados, 4.0\% total
-  \item No se incluyen alimentadores (C1, C2) en el calculo de MD para evitar doble contabilizacion de cargas
+  \item Caida de tension: 2.0\% alimentador, 2.5\% derivados, 4.0\% total
+  \item La MD se calcula a partir de los circuitos (cada uno con su FD),
+        sin doble conteo desde la lista de motores
 \end{itemize}
 
 \subsection{Calculo de Maxima Demanda}
 \begin{longtable}{lrrr}
   \toprule
-  Descripcion & Potencia (kW) & FD & MD (kW) \\
+  Circuito & Potencia (kW) & FD & MD (kW) \\
   \midrule
-  Iluminacion LED & 2.6 & 1.00 & 2.6 \\
-  Fuerza motriz (4 motores) & 27.97 & 0.80 & 22.4 \\
-  Tomacorrientes industriales & 6.0 & 0.50 & 3.0 \\
-  Climatizacion & 4.5 & 0.80 & 3.6 \\
-  Servicios generales & 3.0 & 0.70 & 2.1 \\
+  C1 - LED High-Bay 150W (20u) & 3.0 & 1.00 & 3.0 \\
+  C2 - Tomacorrientes industriales & 6.0 & 0.50 & 3.0 \\
+  C3 - Puente Grua 10HP & 7.5 & 0.50 & 3.7 \\
+  C4 - Compresor 15HP E-D & 11.2 & 0.80 & 9.0 \\
+  C5 - Maquinaria taller 25kW & 25.0 & 0.70 & 17.5 \\
+  C6 - Oficinas (monofasico) & 3.0 & 0.80 & 2.4 \\
   \midrule
-  Subtotal & & & 33.7 \\
-  Factor de simultaneidad (0.85) & & & \textbf{28.6} \\
-  Reserva crecimiento (20\%) & & & \textbf{5.7} \\
-  \textbf{Total MD} & & & \textbf{34.4 kW} \\
+  Subtotal & & & 38.6 \\
+  Factor de simultaneidad (0.85) & & & \textbf{32.8} \\
+  Reserva crecimiento (20\%) & & & \textbf{6.6} \\
+  \textbf{Total MD} & & & \textbf{39.4 kW} \\
   \bottomrule
 \end{longtable}
 
 \subsection{Alimentador Principal}
+Seccion calculada para $I_b = 66.4$ A, con $I_b \times 1.25 = 83.1$ A corregido:
 \begin{tabular}{ll}
   \toprule
   Parametro & Valor \\
   \midrule
-  Corriente de calculo & 58.0 A \\
-  Seccion de conductor & 35 mm2 THW-90 \\
-  ITM general & 80 A \\
-  Caida de tension & 1.2\% \\
+  Corriente de calculo & 66.4 A \\
+  Seccion de conductor & 50 mm2 N2XH \\
+  Ampacidad corregida ($0.728\times141$A) & 102.6 A \\
+  ITM general & 100 A \\
+  Caida de tension & $<$ 2.0\% \\
   Tuberia & PVC SAP 50 mm \\
   \bottomrule
 \end{tabular}
 
-\subsection{Motores Electricos}
-\begin{longtable}{lrrrlr}
+\subsection{Circuitos Derivados}
+\begin{longtable}{llrrr}
   \toprule
-  Motor & Potencia & I nominal & I arranque & Arranque & ITM \\
+  Circuito & Descripcion & Seccion & ITM & Tuberia \\
   \midrule
-  M1 - Bomba CI 10HP & 7.5 kW & 13.5 A & 81 A & Directo & 30 A \\
-  M2 - Compresor 15HP & 11.2 kW & 19.5 A & 117 A & E-D & 40 A \\
-  M3 - Extractor 5HP & 3.7 kW & 7.2 A & 43 A & Directo & 16 A \\
-  M4 - Molino 7.5HP & 5.6 kW & 10.5 A & 74 A & Directo & 20 A \\
+  C1 & LED High-Bay 150W (20u) & 4 mm2 & 16 A & 20 mm \\
+  C2 & Stecker 32A + Shucko 16A & 6 mm2 & 25 A & 25 mm \\
+  C3 & Puente Grua 10HP & 6 mm2 & 30 A & 25 mm \\
+  C4 & Compresor 15HP E-D & 10 mm2 & 40 A & 25 mm \\
+  C5 & Maquinaria taller 25kW & 16 mm2 & 63 A & 32 mm \\
+  C6 & Oficinas monof. & 4 mm2 & 16 A & 20 mm \\
+  C7 & BPF 15kVAr & 16 mm2 & 63 A & 32 mm \\
   \bottomrule
 \end{longtable}
+
+\subsection{Motores Electricos}
+\begin{longtable}{lrrrll}
+  \toprule
+  Motor & Potencia & I nom. & I arr. & Arranque & ITM \\
+  \midrule
+  M1 - Puente Grua 10HP & 7.5 kW & 13.8 A & 83 A & Directo & 30 A \\
+  M2 - Compresor 15HP & 11.2 kW & 20.0 A & 50 A & E-D & 40 A \\
+  \bottomrule
+\end{longtable}
+
+\subsection{Caida de Tension durante Arranque}
+Verificacion segun CNE-Utilizacion (max 15\% en bornes del motor):
+
+\begin{longtable}{lrrrr}
+  \toprule
+  Motor & Seccion & Long. & I arr. & dV arr. \\
+  \midrule
+  M1 - Puente Grua 10HP & 6 mm2 & 30 m & 83 A & 2.9\% \\
+  M2 - Compresor 15HP E-D & 10 mm2 & 25 m & 50 A & 1.0\% \\
+  \bottomrule
+\end{longtable}
+Ambos valores estan dentro del 15\% maximo (IEEE 399 / CNE).
 
 \subsection{Compensacion de Factor de Potencia}
 \begin{tabular}{ll}
@@ -127,33 +161,24 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
   Parametro & Valor \\
   \midrule
   FP actual & 0.85 \\
-  FP objetivo & 0.95 \\
-  Potencia activa & 34.4 kW \\
-  Banco requerido & 10 kVAr \\
-  Tipo & Automatico por pasos (5+5 kVAr) \\
+  FP objetivo & $\geq$ 0.96 \\
+  Potencia activa & 39.4 kW \\
+  Banco requerido & 15 kVAr \\
+  Tipo & Automatico por pasos (3 x 5 kVAr) \\
   \bottomrule
 \end{tabular}
-
-\subsection{Caida de Tension durante Arranque de Motores}
-Para el motor de 15 HP (M2 - Compresor) con arranque estrella-delta:
-\begin{itemize}
-  \item Corriente nominal: 19.5 A
-  \item Corriente de arranque (estrella): $I_{arr} = 19.5 \times 2.0 = 39.0$ A
-  \item Caida de tension en barra TF1: $\Delta V_{arr} \approx 6.8\%$ (dentro del 15\% maximo recomendado por IEEE 399)
-  \item No se espera pestañeo en iluminacion LED durante arranque
-\end{itemize}
 
 \subsection{Esquema de Proteccion Diferencial}
 \begin{longtable}{lll}
   \toprule
   Circuito & Tipo & Sensibilidad \\
   \midrule
-  TG - Cabecera general & Diferencial 4P-63A & 300 mA superinmunizado \\
-  TF1 - Tablero de fuerza & Diferencial 4P-40A & 300 mA con retardo selectivo \\
-  TI1 - Iluminacion & Diferencial 2P-25A & 30 mA \\
-  C3 - Tomacorrientes industriales & Diferencial 2P-25A & 30 mA \\
+  TGD - Cabecera general & Diferencial 4P-63A & 300 mA SI \\
+  TF1 - Tablero de fuerza & Diferencial 4P-40A & 300 mA ret. selectivo \\
+  TI1 - Alumbrado ind. & Diferencial 2P-25A & 30 mA \\
+  C2 - Tomacorrientes ind. & Diferencial 2P-25A & 30 mA \\
   C4 - Climatizacion & Diferencial 2P-20A & 30 mA \\
-  C5 - Servicios generales & Diferencial 2P-16A & 30 mA \\
+  C6 - Servicios oficina & Diferencial 2P-16A & 30 mA \\
   \bottomrule
 \end{longtable}
 
@@ -162,10 +187,11 @@ Para el motor de 15 HP (M2 - Compresor) con arranque estrella-delta:
   \toprule
   Parametro & Valor \\
   \midrule
-  Tipo & Malla enterrada \\
+  Tipo & Malla perimetral enterrada \\
   Conductor & Cu desnudo 35 mm2 \\
-  Electrodos & 4 varillas copperweld 5/8'' x 2.4m \\
-  Resistencia objetivo & < 5 ohm \\
+  Electrodos & 6 varillas copperweld 5/8'' x 2.4m \\
+  Profundidad & 0.80 m \\
+  Resistencia objetivo & $<$ 5 ohm \\
   \bottomrule
 \end{tabular}
 
@@ -174,8 +200,8 @@ Para el motor de 15 HP (M2 - Compresor) con arranque estrella-delta:
 Los planos se entregan en formato DXF (compatible AutoCAD) y PDF.
 
 \begin{enumerate}
-  \item \textbf{Plano 01:} Diagrama Unifilar General
-  \item \textbf{Plano 02:} Plano de Distribucion en Planta
+  \item \textbf{Plano 01:} Diagrama Unifilar General - TGD Nave 20x40m
+  \item \textbf{Plano 02:} Plano de Distribucion en Planta (con SPAT y acometida)
   \item \textbf{Plano 03:} Diagrama de Fuerza (MCC)
 \end{enumerate}
 
@@ -183,33 +209,25 @@ Los planos se entregan en formato DXF (compatible AutoCAD) y PDF.
 \section{Especificaciones Tecnicas}
 
 \subsection{Conductores}
-Cable THW-90 de cobre, 600V, temperatura maxima 90 grados.
-Secciones segun calculo:
-\begin{itemize}
-  \item Alimentador general: 35 mm2 (3F + N + PE) corregido por $k_T \times k_n = 0.728$
-  \item Motores >10HP: 10 mm2
-  \item Motores $\leq$10HP: 6 mm2
-  \item Motores $\leq$5HP: 4 mm2
-  \item Iluminacion: 6 mm2
-  \item Tomacorrientes y servicios: 4 mm2
-\end{itemize}
+Cable libre de halogenos N2XH, 0.6/1kV, temperatura maxima 90 grados.
+Canalizacion principal en bandeja portacables 200x50mm.
 
 \subsection{Protecciones}
 Interruptores termomagneticos (ITM) segun IEC 60947-2.
-Tableros con interruptor diferencial general 4P-63A-300mA.
-Reles termicos para proteccion de motores.
+Guardamotores ajustables para proteccion de motores.
+Diferenciales superinmunizados (SI) en cabecera y selectivos en derivados.
 
 \subsection{Canalizaciones}
-Tuberia PVC SAP pesada, empotrada en piso y losa.
-Bandejas portacables en zonas de produccion y taller.
+Bandeja portacables metalica perforada 200x50mm en zona de produccion.
+Tuberia PVC SAP pesada para derivados, empotrada en piso.
 
 \subsection{Luminarias}
-LED industrial IP65 para zonas productivas, 5000K, >130 lm/W.
-LED panel 60x60 para oficinas.
+Campana LED High-Bay 150W 5000K IP65 a 7m de altura en zonas productivas.
+LED panel 60x60 40W 4000K para oficinas.
 
 \subsection{Puesta a Tierra}
-Malla de cobre desnudo enterrada a 0.80m, interconectando 4 varillas
-copperweld 5/8'' x 2.40m. Resistencia menor a 5 ohm.
+Malla de cobre desnudo enterrada a 0.80m, interconectando 6 varillas
+copperweld 5/8'' x 2.40m en perimetro de nave. Resistencia menor a 5 ohm.
 
 \newpage
 \section{BOM - Lista de Materiales}
@@ -218,55 +236,63 @@ copperweld 5/8'' x 2.40m. Resistencia menor a 5 ohm.
   \toprule
   Item & Unidad & Cant. & Uso \\
   \midrule
-  \multicolumn{4}{l}{\textbf{Canalizacion y Conductores}} \\
-  Cable THW 50 mm2 & m & 50 & Alimentador general (3F+N+PE) \\
-  Cable THW 10 mm2 & m & 40 & Motor M2 (compresor) \\
-  Cable THW 6 mm2 & m & 60 & Motores M1, iluminacion \\
-  Cable THW 4 mm2 & m & 80 & Motores M3/M4, servicios \\
-  Tuberia PVC SAP 50 mm & m & 20 & Alimentador principal \\
-  Tuberia PVC SAP 25 mm & m & 60 & Circuitos derivados \\
-  Tuberia PVC SAP 20 mm & m & 40 & Servicios y tomas \\
+  \multicolumn{4}{l}{\textbf{Canalizacion y Bandejas}} \\
+  Cable N2XH 50 mm2 & m & 60 & Alimentador TGD (3F+N+PE) \\
+  Cable N2XH 16 mm2 & m & 40 & Maquinaria C5 + BPF C7 \\
+  Cable N2XH 10 mm2 & m & 30 & Compresor M2 (C4) \\
+  Cable N2XH 6 mm2 & m & 80 & Grua M1 + TC C2 \\
+  Cable N2XH 4 mm2 & m & 100 & Iluminacion C1 + Oficinas C6 \\
+  Bandeja portacables 200x50mm & m & 60 & Tendido principal aereo \\
+  Soporte suspension bandeja & und & 30 & Fijacion cada 2m \\
+  Tuberia PVC SAP 32 mm & m & 30 & Alimentador TF1 \\
+  Tuberia PVC SAP 25 mm & m & 50 & Circuitos C2/C3/C4 \\
+  Tuberia PVC SAP 20 mm & m & 60 & Circuitos C1/C6 \\
   \midrule
   \multicolumn{4}{l}{\textbf{Tableros}} \\
-  Tablero general 24 circuitos & und & 1 & TG \\
-  Tablero fuerza 12 circuitos & und & 1 & TF1 \\
-  Tablero iluminacion 8 circuitos & und & 1 & TI1 \\
+  Tablero TGD 24 circuitos IP65 & und & 1 & Tablero General \\
+  Tablero TF1 18 circuitos IP65 & und & 1 & Tablero Fuerza \\
+  Tablero TI1 12 circuitos IP65 & und & 1 & Tablero Iluminacion \\
   \midrule
   \multicolumn{4}{l}{\textbf{Protecciones}} \\
-  ITM tripolar 80A & und & 1 & Proteccion general \\
-  ITM tripolar 50A & und & 1 & Alimentador TF1 \\
-  ITM tripolar 40A & und & 1 & Motor M2 \\
-  ITM tripolar 30A & und & 1 & Motor M1 \\
-  ITM tripolar 20A & und & 1 & Motor M4 \\
-  ITM tripolar 16A & und & 1 & Motor M3 \\
+  ITM tripolar 100A & und & 1 & Proteccion general TGD \\
+  ITM tripolar 63A & und & 2 & TF1 + C5 Maquinaria \\
+  ITM tripolar 40A & und & 1 & Compresor M2 \\
+  ITM tripolar 30A & und & 1 & Puente Grua M1 \\
+  ITM tripolar 25A & und & 1 & TC industriales C2 \\
+  ITM tripolar 16A & und & 2 & Iluminacion C1 + Oficinas C6 \\
   ITM bipolar 25A & und & 1 & Alimentador TI1 \\
   ITM bipolar 20A & und & 1 & Climatizacion \\
   ITM bipolar 16A & und & 1 & Servicios \\
-  Diferencial 4P-63A-300mA sup. & und & 1 & Cabecera TG \\
-  Diferencial 4P-40A-300mA ret. & und & 1 & TF1 - Fuerza \\
-  Diferencial 2P-25A-30mA & und & 2 & TI1 + tomacorrientes \\
+  Diferencial 4P-63A-300mA SI & und & 1 & Cabecera TGD \\
+  Diferencial 4P-40A-300mA ret. & und & 1 & TF1 fuerza \\
+  Diferencial 2P-25A-30mA & und & 2 & TI1 + TC C2 \\
   Diferencial 2P-20A-30mA & und & 1 & Climatizacion \\
-  Diferencial 2P-16A-30mA & und & 1 & Servicios generales \\
-  Reles termicos & und & 4 & Proteccion motores \\
+  Diferencial 2P-16A-30mA & und & 1 & Servicios oficina \\
+  Guardamotor 14-20A & und & 1 & Proteccion M1 \\
+  Guardamotor 20-25A & und & 1 & Proteccion M2 \\
+  Guardamotor 63-80A & und & 1 & Proteccion C5 maquinaria \\
+  \midrule
+  \multicolumn{4}{l}{\textbf{Arranque Estrella-Delta}} \\
+  Contactor arranque E-D 40A & und & 1 & Compresor M2 \\
+  Timer rele temporizador & und & 1 & Control transicion E-D \\
   \midrule
   \multicolumn{4}{l}{\textbf{Iluminacion}} \\
-  LED industrial 100W IP65 & und & 16 & Zona produccion \\
-  LED industrial 80W IP65 & und & 8 & Almacen \\
-  LED panel 60x60 40W & und & 8 & Oficinas \\
-  LED sobreponer 18W & und & 4 & SS.HH. \\
+  LED High-Bay 150W 5000K IP65 & und & 20 & Produccion + Almacen \\
+  LED panel 60x60 40W 4000K & und & 10 & Oficinas \\
+  LED sobreponer 18W 4000K & und & 4 & SS.HH. \\
   \midrule
   \multicolumn{4}{l}{\textbf{Tomacorrientes}} \\
-  Toma trifasica interlock 32A & und & 1 & Industrial \\
-  Toma trifasica interlock 16A & und & 1 & Industrial \\
-  Toma doble 16A + T & und & 4 & Oficinas/SS.HH. \\
+  Toma trifasica Stecker 32A 380V & und & 4 & Industrial en nave \\
+  Toma doble Shucko 16A 220V & und & 8 & Industrial + oficinas \\
   \midrule
   \multicolumn{4}{l}{\textbf{Puesta a Tierra}} \\
-  Varilla copperweld 5/8'' x 2.4m & und & 4 & SPAT \\
-  Cable Cu desnudo 35 mm2 & m & 50 & Malla SPAT \\
-  Conector bimetalico & und & 8 & SPAT \\
+  Varilla copperweld 5/8'' x 2.4m & und & 6 & Malla SPAT perimetral \\
+  Cable Cu desnudo 35 mm2 & m & 80 & Interconexion malla \\
+  Conector bimetalico & und & 12 & Conexion varillas \\
+  Caja registro PAT & und & 2 & Acceso para inspeccion \\
   \midrule
   \multicolumn{4}{l}{\textbf{Compensacion FP}} \\
-  Banco de capacitores automatico 25kVAr & und & 1 & BPF \\
+  Banco capacitores automatico 15kVAr & und & 1 & 3 pasos (5+5+5) \\
   \bottomrule
 \end{longtable}
 

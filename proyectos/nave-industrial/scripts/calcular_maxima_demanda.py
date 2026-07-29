@@ -35,38 +35,40 @@ def calc_circuito_trifasico(kw, V=380, fp=0.85, long_m=10, material="cobre", dV_
             "itm_a": max(10, math.ceil(Ib * 1.25 / 10) * 10),
             "factor_correccion_total": round(FACTOR_CORRECCION, 3)}
 
+TIPOS_CARGA = {"iluminacion", "tomacorrientes", "fuerza_motriz", "servicios"}
+
 def main():
     i, o = sys.argv[1], sys.argv[2]
     with open(i) as f:
         data = json.load(f)
     V = data.get("tension_v", 380)
 
-    # Iluminacion: solo sumar potencias de luminarias
-    p_ilum = sum(c.get("potencia_total_w", 0) for c in data.get("iluminacion", [])) / 1000
-
-    # Motores: suma directa de potencia en kW de cada motor (evita doble conteo)
-    motores = data.get("motores", [])
-    p_motores = sum(m.get("potencia_kw", 0) for m in motores)
-    fd_m = 0.80
-    p_md_motores = p_motores * fd_m
-
-    # Circuitos derivados de servicios (C3=TC industriales, C4=climatizacion, C5=servicios)
-    # NO incluir C1 y C2 porque alimentan motores e iluminacion ya contabilizados
+    # Procesar circuitos por tipo — cada circuito tiene su potencia y FD
     circuitos = data.get("circuitos", [])
-    p_servicios = 0
+    p_total = 0
     detalle_circuitos = []
     for c in circuitos:
-        if c.get("tipo") in ("alimentacion",):
+        t = c.get("tipo", "")
+        if t not in TIPOS_CARGA:
             continue
         p = c.get("potencia_kw", 0) * c.get("factor_demanda", 1)
-        p_servicios += p
+        p_total += p
         detalle_circuitos.append({"id": c["id"], "desc": c["descripcion"],
-                                  "potencia_kw": c.get("potencia_kw", 0),
+                                  "tipo": t, "potencia_kw": c.get("potencia_kw", 0),
                                   "fd": c.get("factor_demanda", 1),
                                   "md_kw": round(p, 2)})
 
+    # Desglose por tipo
+    p_ilum = sum(d["md_kw"] for d in detalle_circuitos if d["tipo"] == "iluminacion")
+    p_fuerza = sum(d["md_kw"] for d in detalle_circuitos if d["tipo"] == "fuerza_motriz")
+    p_servicios = sum(d["md_kw"] for d in detalle_circuitos if d["tipo"] in ("tomacorrientes","servicios"))
+
+    # Motores lista solo para detalle de arranque, NO para MD (evita doble conteo)
+    motores = data.get("motores", [])
+    p_motores_instalados = sum(m.get("potencia_kw", 0) for m in motores)
+
     # Subtotal sin simultaneidad
-    md_subtotal = p_md_motores + p_ilum + p_servicios
+    md_subtotal = p_total
 
     # Factor de simultaneidad general
     fd_simultaneidad = 0.85
@@ -96,7 +98,7 @@ def main():
                              "dV_arranque_porc": dV_s,
                              "tipo_arranque": mo.get("tipo_arranque","DOL"),
                              "cumple_CNE_15pct": dV_s <= 15})
-    max_dV_arr = max(m["dV_arranque_porc"] for m in motores_data)
+    max_dV_arr = max((m["dV_arranque_porc"] for m in motores_data), default=0)
 
     # Compensacion FP
     fp_a = data.get("compensacion_fp", {}).get("fp_actual", 0.85)
@@ -113,9 +115,10 @@ def main():
                                    "agrupamiento_4_cond": FACTOR_AGRUP_4_COND,
                                    "total_aplicado": round(FACTOR_CORRECCION, 3)},
            "desglose": {"iluminacion_kw": round(p_ilum, 2),
-                        "motores_kw": round(p_motores, 2),
-                        "motores_md_kw": round(p_md_motores, 2),
-                        "servicios_circuitos": detalle_circuitos,
+                        "fuerza_motriz_kw": round(p_fuerza, 2),
+                        "servicios_tomacorrientes_kw": round(p_servicios, 2),
+                        "motores_instalados_kw": round(p_motores_instalados, 2),
+                        "circuitos_detalle": detalle_circuitos,
                         "subtotal_md_kw": round(md_subtotal, 2),
                         "fd_simultaneidad": fd_simultaneidad,
                         "md_con_simultaneidad_kw": round(md_sim, 2),

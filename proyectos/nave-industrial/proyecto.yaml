@@ -1,8 +1,8 @@
-schema_version: 1
+schema_version: 2
 id: nave-industrial
-proyecto: "Instalaciones electricas industriales - Nave / Galpon industrial"
+proyecto: "Instalaciones electricas industriales - Nave Industrial 20x40m"
 propietario: "Renzo Gabriel Mamani Galindo"
-estado: "preliminar - definir datos de entrada"
+estado: "en desarrollo - Paso 1/5"
 
 ubicacion:
   distrito: "Juliaca"
@@ -11,11 +11,40 @@ ubicacion:
   direccion: "por definir"
 
 tipo_instalacion: industrial
-nivel_tension: "BT"  # BT (380V) o MT (10/22.9kV)
-sistema: "trifasico"  # trifasico, monofasico
+nivel_tension: "BT"
+sistema: "trifasico"
 frecuencia_hz: 60
 tension_v: 380
 fases: 3
+
+dimensiones_nave:
+  largo_m: 40
+  ancho_m: 20
+  altura_m: 8
+  area_total_m2: 800
+
+circuitos_principales:
+  - id: C1
+    descripcion: "Alumbrado industrial LED High-Bay 150W"
+    tipo: iluminacion
+  - id: C2
+    descripcion: "Tomacorrientes industriales Stecker 380V + Shucko 220V"
+    tipo: tomacorrientes
+  - id: C3
+    descripcion: "Fuerza - Puente Grua 10HP"
+    tipo: fuerza_motriz
+  - id: C4
+    descripcion: "Fuerza - Compresor de aire 15HP (Estrella-Delta)"
+    tipo: fuerza_motriz
+  - id: C5
+    descripcion: "Fuerza - Maquinaria taller 25kW (tornos, fresadoras, plasma)"
+    tipo: fuerza_motriz
+  - id: C6
+    descripcion: "Alumbrado y tomas oficinas (monofasico 220V)"
+    tipo: servicios
+  - id: C7
+    descripcion: "Banco de condensadores - compensacion FP"
+    tipo: compensacion
 
 entradas:
   configuracion: datos/parametros-proyecto.yaml
@@ -37,4 +66,3 @@ entregables:
     - entregables/plano-unifilar.pdf
     - entregables/plano-distribucion.pdf
     - entregables/plano-fuerza.pdf
-    - entregables/diagrama-tableros.pdf
