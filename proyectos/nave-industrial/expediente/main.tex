@@ -52,8 +52,8 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
   Tension nominal & 380/220V \\
   Sistema & 3F + N + PE \\
   Frecuencia & 60 Hz \\
-  Maxima Demanda & 76.3 kW \\
-  Corriente total & 128.7 A \\
+  Maxima Demanda & 34.4 kW \\
+  Corriente total & 58.0 A \\
   Factor de potencia inicial & 0.85 \\
   Factor de potencia objetivo & 0.95 \\
   Esquema de conexion & TN-S \\
@@ -63,21 +63,35 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
 \newpage
 \section{Memoria de Calculo}
 
+\subsection{Consideraciones de Calculo}
+\begin{itemize}
+  \item Norma aplicada: CNE-Utilizacion (2006)
+  \item Tension nominal: 380V trifasica (3F + N + PE)
+  \item Factores de correccion por ampacidad segun CNE Tabla 5-IV:
+  \begin{itemize}
+    \item Temperatura ambiente 40$^\circ$C: $k_T = 0.91$
+    \item Agrupamiento (4 conductores en tubo): $k_n = 0.80$
+    \item Factor de correccion total: $0.91 \times 0.80 = 0.728$
+  \end{itemize}
+  \item Caida de tension maxima: 2.5\% en derivados, 4.0\% total
+  \item No se incluyen alimentadores (C1, C2) en el calculo de MD para evitar doble contabilizacion de cargas
+\end{itemize}
+
 \subsection{Calculo de Maxima Demanda}
 \begin{longtable}{lrrr}
   \toprule
   Descripcion & Potencia (kW) & FD & MD (kW) \\
   \midrule
   Iluminacion LED & 2.6 & 1.00 & 2.6 \\
-  Fuerza motriz (4 motores) & 28.0 & 0.80 & 22.4 \\
+  Fuerza motriz (4 motores) & 27.97 & 0.80 & 22.4 \\
   Tomacorrientes industriales & 6.0 & 0.50 & 3.0 \\
   Climatizacion & 4.5 & 0.80 & 3.6 \\
   Servicios generales & 3.0 & 0.70 & 2.1 \\
   \midrule
   Subtotal & & & 33.7 \\
   Factor de simultaneidad (0.85) & & & \textbf{28.6} \\
-  Reserva (20\%) & & & \textbf{47.7} \\
-  \textbf{Total MD} & & & \textbf{76.3 kW} \\
+  Reserva crecimiento (20\%) & & & \textbf{5.7} \\
+  \textbf{Total MD} & & & \textbf{34.4 kW} \\
   \bottomrule
 \end{longtable}
 
@@ -86,11 +100,11 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
   \toprule
   Parametro & Valor \\
   \midrule
-  Corriente de calculo & 128.7 A \\
-  Seccion de conductor & 50 mm2 THW-90 \\
-  ITM general & 160 A \\
-  Caida de tension & 1.8\% \\
-  Tuberia & PVC SAP 65 mm \\
+  Corriente de calculo & 58.0 A \\
+  Seccion de conductor & 35 mm2 THW-90 \\
+  ITM general & 80 A \\
+  Caida de tension & 1.2\% \\
+  Tuberia & PVC SAP 50 mm \\
   \bottomrule
 \end{tabular}
 
@@ -113,9 +127,9 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
   \midrule
   FP actual & 0.85 \\
   FP objetivo & 0.95 \\
-  Potencia activa & 76.3 kW \\
-  Banco requerido & 22 kVAr \\
-  Tipo & Automatico por pasos (5+5+10+10 kVAr) \\
+  Potencia activa & 34.4 kW \\
+  Banco requerido & 10 kVAr \\
+  Tipo & Automatico por pasos (5+5 kVAr) \\
   \bottomrule
 \end{tabular}
 
@@ -148,11 +162,12 @@ Los planos se entregan en formato DXF (compatible AutoCAD) y PDF.
 Cable THW-90 de cobre, 600V, temperatura maxima 90 grados.
 Secciones segun calculo:
 \begin{itemize}
-  \item Alimentador general: 50 mm2 (3F + N + PE)
+  \item Alimentador general: 35 mm2 (3F + N + PE) corregido por $k_T \times k_n = 0.728$
   \item Motores >10HP: 10 mm2
-  \item Motores <=10HP: 6 mm2
-  \item Motores <=5HP: 4 mm2
-  \item Iluminacion y tomacorrientes: 4-6 mm2
+  \item Motores $\leq$10HP: 6 mm2
+  \item Motores $\leq$5HP: 4 mm2
+  \item Iluminacion: 6 mm2
+  \item Tomacorrientes y servicios: 4 mm2
 \end{itemize}
 
 \subsection{Protecciones}
@@ -184,7 +199,7 @@ copperweld 5/8'' x 2.40m. Resistencia menor a 5 ohm.
   Cable THW 10 mm2 & m & 40 & Motor M2 (compresor) \\
   Cable THW 6 mm2 & m & 60 & Motores M1, iluminacion \\
   Cable THW 4 mm2 & m & 80 & Motores M3/M4, servicios \\
-  Tuberia PVC SAP 65 mm & m & 20 & Alimentador principal \\
+  Tuberia PVC SAP 50 mm & m & 20 & Alimentador principal \\
   Tuberia PVC SAP 25 mm & m & 60 & Circuitos derivados \\
   Tuberia PVC SAP 20 mm & m & 40 & Servicios y tomas \\
   \midrule
@@ -194,8 +209,8 @@ copperweld 5/8'' x 2.40m. Resistencia menor a 5 ohm.
   Tablero iluminacion 8 circuitos & und & 1 & TI1 \\
   \midrule
   \multicolumn{4}{l}{\textbf{Protecciones}} \\
-  ITM tripolar 160A & und & 1 & Proteccion general \\
-  ITM tripolar 100A & und & 1 & Alimentador TF1 \\
+  ITM tripolar 80A & und & 1 & Proteccion general \\
+  ITM tripolar 50A & und & 1 & Alimentador TF1 \\
   ITM tripolar 40A & und & 1 & Motor M2 \\
   ITM tripolar 30A & und & 1 & Motor M1 \\
   ITM tripolar 20A & und & 1 & Motor M4 \\

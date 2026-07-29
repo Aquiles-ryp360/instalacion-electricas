@@ -21,8 +21,7 @@ aquiles:
 renzo:
 	$(PYTHON) herramientas/pipeline_automatizado.py --proyecto renzo
 
-nave-industrial:
-	$(PYTHON) herramientas/pipeline_automatizado.py --proyecto $(PROYECTO_INDUSTRIAL)
+nave-industrial: nave-industrial-calculos nave-industrial-planos nave-industrial-expediente
 
 nave-industrial-planos:
 	$(PYTHON) proyectos/$(PROYECTO_INDUSTRIAL)/scripts/generar_planos_industriales.py \
@@ -34,6 +33,18 @@ nave-industrial-calculos:
 	$(PYTHON) proyectos/$(PROYECTO_INDUSTRIAL)/scripts/calcular_maxima_demanda.py \
 		proyectos/$(PROYECTO_INDUSTRIAL)/diseno-electrico/datos/cargas-industriales.json \
 		build/$(PROYECTO_INDUSTRIAL)/calculos/resultados.json
+
+nave-industrial-expediente:
+	cd proyectos/$(PROYECTO_INDUSTRIAL)/expediente && pdflatex -interaction=nonstopmode main.tex > /dev/null 2>&1; \
+	mkdir -p ../../../build/$(PROYECTO_INDUSTRIAL)/expediente; \
+	cp main.pdf ../../../build/$(PROYECTO_INDUSTRIAL)/expediente/expediente.pdf; \
+	cp main.pdf ../../../proyectos/$(PROYECTO_INDUSTRIAL)/entregables/expediente.pdf
+
+nave-industrial-bom:
+	$(PYTHON) proyectos/$(PROYECTO_INDUSTRIAL)/scripts/generar_bom.py
+
+nave-industrial-test:
+	$(PYTHON) -m pytest -q proyectos/$(PROYECTO_INDUSTRIAL)/tests/
 
 clean:
 	rm -rf build

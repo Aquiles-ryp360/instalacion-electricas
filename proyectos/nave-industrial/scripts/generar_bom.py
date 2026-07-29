@@ -5,11 +5,11 @@ from pathlib import Path
 from datetime import date
 
 PRECIOS = {
-    "Cable THW 50 mm2": 18.50, "Cable THW 10 mm2": 4.80, "Cable THW 6 mm2": 3.20,
-    "Cable THW 4 mm2": 2.40, "Tuberia PVC SAP 65 mm": 12.00, "Tuberia PVC SAP 25 mm": 5.50,
+    "Cable THW 35 mm2": 14.00, "Cable THW 10 mm2": 4.80, "Cable THW 6 mm2": 3.20,
+    "Cable THW 4 mm2": 2.40, "Tuberia PVC SAP 50 mm": 9.00, "Tuberia PVC SAP 25 mm": 5.50,
     "Tuberia PVC SAP 20 mm": 4.00, "Tablero general 24 circuitos": 350.00,
     "Tablero fuerza 12 circuitos": 280.00, "Tablero iluminacion 8 circuitos": 180.00,
-    "ITM tripolar 160A": 320.00, "ITM tripolar 100A": 210.00, "ITM tripolar 40A": 65.00,
+    "ITM tripolar 80A": 180.00, "ITM tripolar 50A": 120.00, "ITM tripolar 40A": 65.00,
     "ITM tripolar 30A": 55.00, "ITM tripolar 20A": 45.00, "ITM tripolar 16A": 42.00,
     "ITM bipolar 25A": 28.00, "ITM bipolar 20A": 25.00, "ITM bipolar 16A": 22.00,
     "Diferencial 4P-63A-300mA": 180.00, "Reles termicos": 45.00,
@@ -18,14 +18,14 @@ PRECIOS = {
     "Toma trifasica interlock 32A": 65.00, "Toma trifasica interlock 16A": 52.00,
     "Toma doble 16A + T": 12.00,
     "Varilla copperweld 5/8'' x 2.4m": 45.00, "Cable Cu desnudo 35 mm2": 15.00,
-    "Conector bimetalico": 8.00, "Banco capacitores automatico 25kVAr": 850.00,
+    "Conector bimetalico": 8.00, "Banco capacitores automatico 10kVAr": 480.00,
 }
 
 MATERIALES = [
     ("Canalizacion", [
-        ("Cable THW 50 mm2", "m", 50), ("Cable THW 10 mm2", "m", 40),
+        ("Cable THW 35 mm2", "m", 50), ("Cable THW 10 mm2", "m", 40),
         ("Cable THW 6 mm2", "m", 60), ("Cable THW 4 mm2", "m", 80),
-        ("Tuberia PVC SAP 65 mm", "m", 20), ("Tuberia PVC SAP 25 mm", "m", 60),
+        ("Tuberia PVC SAP 50 mm", "m", 20), ("Tuberia PVC SAP 25 mm", "m", 60),
         ("Tuberia PVC SAP 20 mm", "m", 40),
     ]),
     ("Tableros", [
@@ -34,7 +34,7 @@ MATERIALES = [
         ("Tablero iluminacion 8 circuitos", "und", 1),
     ]),
     ("Protecciones", [
-        ("ITM tripolar 160A", "und", 1), ("ITM tripolar 100A", "und", 1),
+        ("ITM tripolar 80A", "und", 1), ("ITM tripolar 50A", "und", 1),
         ("ITM tripolar 40A", "und", 1), ("ITM tripolar 30A", "und", 1),
         ("ITM tripolar 20A", "und", 1), ("ITM tripolar 16A", "und", 1),
         ("ITM bipolar 25A", "und", 1), ("ITM bipolar 20A", "und", 1),
@@ -55,7 +55,7 @@ MATERIALES = [
         ("Cable Cu desnudo 35 mm2", "m", 50), ("Conector bimetalico", "und", 8),
     ]),
     ("Compensacion FP", [
-        ("Banco capacitores automatico 25kVAr", "und", 1),
+        ("Banco capacitores automatico 10kVAr", "und", 1),
     ]),
 ]
 

@@ -387,8 +387,8 @@
     "SPAT: malla con 4 varillas copperweld, R<5ohm",
     "Compensacion FP: banco automatico de 30 kVAr aprox"
   ],
-  "maxima_demanda_kw": 76.25,
-  "corriente_total_a": 128.73,
-  "alimentador_principal_itm_a": 180,
-  "alimentador_principal_seccion_mm2": 70
+  "maxima_demanda_kw": 34.38,
+  "corriente_total_a": 58.04,
+  "alimentador_principal_itm_a": 80,
+  "alimentador_principal_seccion_mm2": 35
 }
