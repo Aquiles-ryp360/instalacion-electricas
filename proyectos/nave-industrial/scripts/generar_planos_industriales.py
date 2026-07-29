@@ -19,6 +19,14 @@ try:
 except ImportError:
     ezdxf = None; TextEntityAlignment = None
 
+REPO_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO_ROOT / "herramientas" / "cad" / "scripts"))
+try:
+    from electrical_overlay import add_dge_symbol
+except Exception:
+    def add_dge_symbol(*_args, **_kwargs):
+        return False
+
 LW = {"MARCO":50,"BUS":50,"TABLERO":50,"MCC":50,"CABLE":35,"PROT":35,"MOTOR":35,
       "TRAFO":35,"COMP":35,"TIERRA":25,"TEXTO":25,"NOTE":25,"CARGA":25,"LUM":25}
 LS = {}
@@ -46,11 +54,42 @@ def ac(m,x,y,r,l="IND_MOTOR"):
 def ax(m,x,y,s=0.08,l="IND_NOTE"):
     al(m,x-s,y-s,x+s,y-s,l); al(m,x-s,y+s,x+s,y-s,l)
 
+DGE = {
+    "panel": "DGE_09_91_16_PANEL_DISTRIBUCION",
+    "luminaria": "DGE_09_93_60_LUMINARIA_G",
+    "toma_1f": "DGE_09_93_13_TOMACORRIENTE_MONOFASICO",
+    "toma_3f": "DGE_09_93_15_TOMACORRIENTE_TRIFASICO",
+    "tierra": "DGE_09_93_02_TIERRA_CONDUCTOR",
+}
+
+def dge(m,key,x,y,scale=1.0,l="IND_CARGA",r=0):
+    return add_dge_symbol(m,DGE[key],x,y,scale=scale,layer=l,rotation=r)
+
+def grid_points(x,y,w,h,count):
+    if count <= 0: return []
+    cols=max(1,math.ceil(math.sqrt(count*w/max(h,1))))
+    rows=math.ceil(count/cols)
+    return [(x+(i%cols+1)*w/(cols+1), y+(i//cols+1)*h/(rows+1)) for i in range(count)]
+
+def zone_lookup(zones):
+    return {zn.lower().replace(".","").replace(" ",""): (zx,zy,zw,zh)
+            for zx,zy,zw,zh,zn in zones}
+
+def zone_rect(name,zones):
+    key=(name or "").lower().replace(".","").replace(" ","")
+    z=zone_lookup(zones)
+    for k in z:
+        if key in k or k in key:
+            return z[k]
+    return None
+
 def draw_trafo(m,x,y,lb="T1",p="100kVA"):
     ac(m,x,y,0.35,"IND_TRAFO"); ac(m,x,y,0.22,"IND_TRAFO")
     at(m,lb,x,y+0.45,0.14,"IND_TRAFO"); at(m,p,x,y-0.45,0.10,"IND_TRAFO")
 def draw_tg(m,x,y,lb,ex=""):
-    ar(m,x-0.6,y-0.25,1.2,0.5); at(m,lb,x,y,0.16,"IND_TABLERO")
+    if not dge(m,"panel",x,y,scale=2.0,l="IND_TABLERO"):
+        ar(m,x-0.6,y-0.25,1.2,0.5)
+    at(m,lb,x,y,0.16,"IND_TABLERO")
     if ex: at(m,ex,x,y-0.35,0.08,"IND_TEXTO")
 def draw_itm(m,x,y,r):
     ar(m,x-0.25,y-0.12,0.5,0.22,"IND_PROT"); at(m,f"{r}A",x,y,0.10,"IND_PROT")
@@ -61,10 +100,37 @@ def draw_carga(m,x,y,lb,kw=""):
     ar(m,x-0.25,y-0.15,0.5,0.3,"IND_CARGA"); at(m,lb,x,y,0.10,"IND_CARGA")
     if kw: at(m,f"{kw}kW",x,y-0.3,0.08,"IND_TEXTO")
 def draw_gnd(m,x,y):
+    dge(m,"tierra",x,y,scale=2.0,l="IND_TIERRA")
     al(m,x,y,x,y-0.3,"IND_TIERRA"); al(m,x-0.2,y-0.3,x+0.2,y-0.3,"IND_TIERRA")
     al(m,x-0.12,y-0.45,x+0.12,y-0.45,"IND_TIERRA")
     al(m,x-0.05,y-0.6,x+0.05,y-0.6,"IND_TIERRA")
     at(m,"SPAT",x,y-0.8,0.09,"IND_TIERRA")
+
+def draw_toma(m,x,y,tt):
+    key="toma_3f" if tt.get("fases",1) == 3 else "toma_1f"
+    if not dge(m,key,x,y,scale=1.2,l="IND_CARGA"):
+        ar(m,x-0.12,y-0.12,0.24,0.24,"IND_CARGA")
+    at(m,tt["id"],x,y+0.32,0.08,"IND_CARGA")
+    at(m,f"{tt.get('corriente_a','')}A {tt.get('tension_v','')}V",x,y-0.34,0.06,"IND_TEXTO")
+
+def draw_luminarias(m,data,zones):
+    for il in data.get("iluminacion",[]):
+        rect=zone_rect(il.get("ubicacion_zona"),zones)
+        if not rect: continue
+        x,y,w,h=rect
+        for lx,ly in grid_points(x+1.0,y+1.0,max(w-2.0,1.0),max(h-2.0,1.0),int(il.get("cantidad",0))):
+            if not dge(m,"luminaria",lx,ly,scale=0.9,l="IND_LUM"):
+                ax(m,lx,ly,0.16,"IND_LUM")
+            at(m,il.get("circuito",""),lx,ly-0.32,0.06,"IND_TEXTO")
+
+def draw_legend(m,x,y):
+    at(m,"SIMBOLOGIA DGE",x+1.2,y+0.9,0.10,"IND_TEXTO")
+    entries=[("panel","Tablero 09-91-16"),("luminaria","Luminaria 09-93-60"),
+             ("toma_1f","Toma 1F 09-93-13"),("toma_3f","Toma 3F 09-93-15")]
+    for i,(key,label) in enumerate(entries):
+        yy=y-i*0.55
+        dge(m,key,x,yy,scale=0.9,l="IND_NOTE")
+        at(m,label,x+1.4,yy,0.075,"IND_NOTE")
 
 def generar_unifilar(data,out):
     doc=ezdxf.new("R2010",setup=True); sl(doc); m=doc.modelspace()
@@ -129,11 +195,11 @@ def generar_unifilar(data,out):
 
 def generar_distribucion(data,out):
     doc=ezdxf.new("R2010",setup=True); sl(doc); m=doc.modelspace()
-    nw=42.0; nh=22.0; X0=0.5; Y0=0.5
+    zones=[(1,1,38,15,"PRODUCCION"),(1,16,20,12,"ALMACEN"),(22,16,10,6,"OFICINAS"),(33,17,5,3,"SS.HH.")]
+    nw=42.0; nh=max(22.0,max(zy+zh for _,zy,_,zh,_ in zones)+1.0); X0=0.5; Y0=0.5
     at(m,"PLANO DE DISTRIBUCION - NAVE INDUSTRIAL 20x40m",nw/2,nh+0.8,0.30,"IND_TEXTO")
     at(m,data.get("proyecto","Nave industrial"),nw/2,nh+0.3,0.14,"IND_TEXTO")
     ar(m,X0,Y0,nw,nh,"IND_MARCO")
-    zones=[(1,1,38,15,"PRODUCCION"),(1,16,20,12,"ALMACEN"),(22,16,10,6,"OFICINAS"),(33,17,5,3,"SS.HH.")]
     for zx,zy,zw,zh,zn in zones:
         ar(m,zx,zy,zw,zh,"IND_NOTE"); at(m,zn,zx+zw/2,zy+zh/2,0.25,"IND_TEXTO")
     # Columnas 10 total
@@ -154,7 +220,8 @@ def generar_distribucion(data,out):
     # Tableros
     for tb in data.get("tableros",[]):
         u=tb.get("ubicacion",{}); tx,ty=u.get("x",2),u.get("y",2)
-        ar(m,tx-0.4,ty-0.25,0.8,0.5,"IND_TABLERO"); at(m,tb["id"],tx,ty,0.14,"IND_TABLERO")
+        draw_tg(m,tx,ty,tb["id"])
+    draw_luminarias(m,data,zones)
     # Motores
     for mt in data.get("motores",[]):
         u=mt.get("ubicacion",{}); mx,my=u.get("x",5),u.get("y",5)
@@ -163,12 +230,13 @@ def generar_distribucion(data,out):
     # Tomas
     for tt in data.get("tomacorrientes",[]):
         u=tt.get("ubicacion",{}); tx,ty=u.get("x",3),u.get("y",3)
-        ar(m,tx-0.12,ty-0.12,0.24,0.24,"IND_CARGA"); at(m,tt["id"],tx,ty,0.08,"IND_CARGA")
+        draw_toma(m,tx,ty,tt)
     # Compensacion FP
     cfp=data.get("compensacion_fp",{})
     if cfp.get("requiere"):
         cx,cy=cfp.get("ubicacion",{}).get("x",35),cfp.get("ubicacion",{}).get("y",10)
         ar(m,cx-0.4,cy-0.3,0.8,0.6,"IND_COMP"); at(m,"BPF",cx,cy,0.12,"IND_COMP")
+    draw_legend(m,34.5,nh-1.5)
     Path(out).parent.mkdir(parents=True,exist_ok=True); doc.saveas(out)
     print(f"Distribucion: {out}")
 
@@ -209,13 +277,18 @@ def exportar_pdf(dxf):
         import matplotlib.pyplot as plt
         from ezdxf.addons.drawing import RenderContext, Frontend
         from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
-        pdf=dxf.replace(".dxf",".pdf"); d=ezdxf.readfile(dxf)
+        pdf=dxf.replace(".dxf",".pdf")
+        png=dxf.replace(".dxf",".png")
+        d=ezdxf.readfile(dxf)
         fig=plt.figure(figsize=(16.53,11.69),dpi=200)
         ax=fig.add_axes([0,0,1,1]); ax.axis("off")
         Frontend(RenderContext(d),MatplotlibBackend(ax)).draw_layout(d.modelspace(),finalize=True)
-        fig.savefig(pdf,dpi=200,bbox_inches="tight",pad_inches=0.2); plt.close(fig)
+        fig.savefig(pdf,dpi=200,bbox_inches="tight",pad_inches=0.2)
+        fig.savefig(png,dpi=200,bbox_inches="tight",pad_inches=0.2)
+        plt.close(fig)
         print(f"PDF: {pdf}")
-    except Exception as e: print(f"PDF fail: {e}")
+        print(f"PNG: {png}")
+    except Exception as e: print(f"PDF/PNG fail: {e}")
 
 def main():
     p=argparse.ArgumentParser()

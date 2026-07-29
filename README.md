@@ -1,6 +1,6 @@
-# Automatizacion de instalaciones electricas residenciales
+# Automatizacion de instalaciones electricas
 
-Repositorio para transformar la informacion de una vivienda, idealmente un croquis, en datos estructurados, calculos electricos, planos CAD, metrados, cotizaciones y un expediente tecnico revisable.
+Repositorio para transformar informacion de viviendas y una nave industrial, idealmente desde croquis o modelos estructurados, en datos canonicos, calculos electricos, planos CAD, metrados, cotizaciones y expedientes tecnicos revisables.
 
 El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar resultados preliminares como diseno definitivo. Toda salida tecnica requiere revision humana y contraste con el Codigo Nacional de Electricidad, el RNE y las condiciones reales de obra.
 
@@ -13,6 +13,7 @@ El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar
 ├── herramientas/             motores reutilizables
 ├── proyectos/
 │   ├── aquiles/              vivienda de dos pisos
+│   ├── nave-industrial/      nave industrial trifasica de 20 x 40 m
 │   └── renzo/                vivienda de tres pisos
 ├── referencias/              normativa versionada y material local ignorado
 └── build/                    resultados regenerables, ignorados por Git
@@ -40,6 +41,12 @@ Pipeline nativo y expediente de Renzo:
 ```bash
 python3 herramientas/pipeline_automatizado.py --proyecto renzo
 # equivalente: cd proyectos/renzo && python3 scripts/construir_expediente.py
+```
+
+Pipeline industrial:
+
+```bash
+make nave-industrial
 ```
 
 Todas las ejecuciones escriben resultados regenerables en `build/<proyecto>/`.

@@ -1,4 +1,4 @@
-q# Arquitectura del repositorio
+# Arquitectura del repositorio
 
 ## Principio central
 
@@ -45,7 +45,7 @@ pertenecen en `entregables/`; y las iteraciones antiguas pertenecen en
 - `cotizacion/`: BOM, normalización, proveedores, comparación y reportes.
 - `calculadora/`: interfaz HTML independiente.
 
-Las herramientas no deben incluir datos, nombres ni rutas de Aquiles o Renzo.
+Las herramientas no deben incluir datos, nombres ni rutas de Aquiles, Renzo o nave-industrial.
 
 ## Extensiones
 

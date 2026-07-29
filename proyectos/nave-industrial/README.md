@@ -33,9 +33,10 @@ nave-industrial/
 
 ## Planos generados
 
-- `plano_unifilar.dxf/pdf` - Diagrama unifilar general (subestacion -> TG -> tableros -> motores)
-- `plano_distribucion.dxf/pdf` - Layout de planta con ubicacion de equipos
+- `industrial_unifilar.dxf/pdf` - Diagrama unifilar general (red -> TG -> tableros -> motores)
+- `industrial_distribucion.dxf/pdf` - Layout de planta con tableros, luminarias, tomacorrientes, motores, SPAT y leyenda DGE
+- `industrial_fuerza.dxf/pdf` - Diagrama de fuerza MCC para motores y maquinaria
 
 ## Formato
 
-Los planos se generan en DXF (compatible con AutoCAD, LibreCAD, QCAD) y PDF.
+Los planos se generan en DXF (compatible con AutoCAD, LibreCAD, QCAD) y PDF. La distribucion usa simbolos de `herramientas/simbologia/simbologia_normativa_dge.json` cuando estan disponibles.
