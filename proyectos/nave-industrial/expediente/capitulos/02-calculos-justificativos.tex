@@ -1,0 +1,97 @@
+\chapter{Cálculos Justificativos de Ingeniería}
+
+\section{Fórmulas y Criterios Teóricos}
+
+\subsection{Cálculo de Corriente de Trabajo Trifásica ($I_b$)}
+La corriente nominal de trabajo para sistemas trifásicos en baja tensión se determina mediante la expresión:
+\begin{equation}
+I_b = \frac{P}{\sqrt{3} \cdot V_L \cdot \cos\phi}
+\end{equation}
+donde:
+\begin{itemize}
+    \item $P$: Potencia activa en Watts ($W$).
+    \item $V_L$: Tensión entre fases ($380\text{ V}$).
+    \item $\cos\phi$: Factor de potencia de la carga.
+\end{itemize}
+
+\subsection{Factores de Corrección por Ampacidad de Conductores ($k_{\text{corr}}$)}
+La ampacidad nominal del conductor se corrige por temperatura ambiente y agrupamiento según el CNE-Utilización (Tabla 5-IV):
+\begin{equation}
+I_z = I_n \cdot k_T \cdot k_n
+\end{equation}
+donde para Juliaca ($40^\circ\text{C}$ de temperatura de diseño en ducto) y 4 conductores activos en tubos ($3\text{F}+\text{N}$):
+\begin{itemize}
+    \item $k_T = 0.91$ (Factor de temperatura a $40^\circ\text{C}$).
+    \item $k_n = 0.80$ (Factor de agrupamiento de 4 conductores).
+    \item $k_{\text{corr}} = 0.91 \times 0.80 = 0.728$.
+\end{itemize}
+
+\subsection{Cálculo de Caída de Tensión Trifásica ($dV\%$)}
+La caída de tensión porcentual para una línea trifásica balanceada en baja tensión se calcula por:
+\begin{equation}
+dV\% = \frac{\sqrt{3} \cdot L \cdot I_b \cdot \rho}{S \cdot V_L} \cdot 100
+\end{equation}
+donde:
+\begin{itemize}
+    \item $L$: Longitud del circuito en metros ($m$).
+    \item $\rho$: Resistividad del cobre a temperatura de trabajo ($\rho = 0.0175 \:\Omega\cdot\text{mm}^2/\text{m}$).
+    \item $S$: Sección transversal del conductor en $\text{mm}^2$.
+    \item $V_L$: Tensión nominal entre líneas ($380\text{ V}$).
+\end{itemize}
+
+\subsection{Cálculo de Caída de Tensión en Arranque de Motores (IEEE 399)}
+Durante el arranque directo o Estrella-Delta, la corriente de arranque $I_{\text{arr}}$ es varias veces la corriente nominal ($5\text{ a } 7 \times I_n$). La caída de tensión instantánea en bornes del motor se calcula como:
+\begin{equation}
+dV_{\text{arr}}\% = \frac{\sqrt{3} \cdot L \cdot I_{\text{arr}} \cdot \rho}{S \cdot V_L} \cdot 100 \le 15\%
+\end{equation}
+
+\subsection{Cálculo de Compensación de Energía Reactiva ($Q_c$)}
+La potencia reactiva necesaria para elevar el factor de potencia desde $\cos\phi_1 = 0.85$ hasta $\cos\phi_2 = 0.96$ es:
+\begin{equation}
+Q_c = P_{\text{MD}} \cdot (\tan\phi_1 - \tan\phi_2)
+\end{equation}
+donde:
+\begin{itemize}
+    \item $\phi_1 = \arccos(0.85) = 31.79^\circ \Rightarrow \tan\phi_1 = 0.620$.
+    \item $\phi_2 = \arccos(0.96) = 16.26^\circ \Rightarrow \tan\phi_2 = 0.292$.
+    \item $Q_c = 39.35 \text{ kW} \cdot (0.620 - 0.292) = 12.91 \text{ kVAr} \Rightarrow \text{Banco Adoptado: } 15\text{ kVAr}$.
+\end{itemize}
+
+\subsection{Resistencia de Malla de Puesta a Tierra (Fórmula de Sverak / IEEE Std 80)}
+La resistencia equivalente de la malla perimetral enterrada con 6 electrodos verticales se calcula mediante:
+\begin{equation}
+R_g = \rho_s \cdot \left( \frac{1}{L_T} + \frac{1}{\sqrt{20 A}} \left( 1 + \frac{1}{1 + h \sqrt{20 / A}} \right) \right) \le 5.0 \:\Omega
+\end{equation}
+donde $\rho_s = 80 \:\Omega\cdot\text{m}$ (terreno arcilloso compactado de la zona), $A = 800\text{ m}^2$, $h = 0.80\text{ m}$ y $L_T = 80\text{ m}$ de malla $+ 6 \times 2.4\text{ m} = 94.4\text{ m}$. El valor obtenido es $R_g = 2.14 \:\Omega < 5.0 \:\Omega$.
+
+\section{Cuadro de Cálculos por Circuito}
+
+\begin{table}[H]
+\centering
+\caption{Resultados del dimensionamiento de los 7 circuitos industriales}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccccccc}
+\toprule
+\textbf{Id} & \textbf{Descripción} & \textbf{P.I. (kW)} & \textbf{F.D.} & \textbf{M.D. (kW)} & \textbf{Ib (A)} & \textbf{Sección} & \textbf{ITM} & \textbf{Ducto} & \textbf{dV (\%)} \\
+\midrule
+C1 & Alumbrado High-Bay 150W (20u) & 3.00 & 1.00 & 3.00 & 4.79 & $4\text{ mm}^2$ & 3P-16A & $20\text{ mm}$ & $0.42\%$ \\
+C2 & Tomacorrientes Stecker/Shucko & 6.00 & 0.50 & 3.00 & 5.35 & $6\text{ mm}^2$ & 3P-25A & $25\text{ mm}$ & $0.39\%$ \\
+C3 & Fuerza - Puente Grúa 10HP & 7.46 & 0.50 & 3.73 & 6.94 & $6\text{ mm}^2$ & 3P-30A & $25\text{ mm}$ & $0.30\%$ \\
+C4 & Fuerza - Compresor 15HP E-D & 11.19 & 0.80 & 8.95 & 15.96 & $10\text{ mm}^2$ & 3P-40A & $25\text{ mm}$ & $0.35\%$ \\
+C5 & Maquinaria Taller 25kW & 25.00 & 0.70 & 17.50 & 31.21 & $16\text{ mm}^2$ & 3P-63A & $32\text{ mm}$ & $0.60\%$ \\
+C6 & Servicios Oficinas (220V) & 3.00 & 0.80 & 2.40 & 12.12 & $4\text{ mm}^2$ & 2P-16A & $20\text{ mm}$ & $0.54\%$ \\
+C7 & Banco Condensadores 15kVAr & 0.00 & 1.00 & 0.00 & 22.79 & $16\text{ mm}^2$ & 3P-63A & $32\text{ mm}$ & $0.06\%$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\section{Dimensionamiento del Alimentador General}
+Para la Máxima Demanda total adoptada de $39.35\text{ kW}$ a $380\text{V}$ trifásico:
+\begin{itemize}
+    \item Corriente nominal de empleo: $I_b = 66.44\text{ A}$.
+    \item Corriente de diseño con factor $1.25$: $I_d = 66.44 \times 1.25 = 83.05\text{ A}$.
+    \item Conductor seleccionado: **$50\text{ mm}^2$ N2XH** (Ampacidad al aire $141\text{ A}$, corregida a $141 \times 0.728 = 102.66\text{ A} > 83.05\text{ A}$).
+    \item Interruptor Termomagnético General: **3P - 100A (Capacidad de ruptura 25kA)**.
+    \item Caída de tensión en alimentador ($60\text{ m}$): $dV = 1.85\% \le 2.0\%$.
+\end{itemize}
