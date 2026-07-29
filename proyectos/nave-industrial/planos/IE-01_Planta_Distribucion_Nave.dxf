@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461250.845810185
+2461250.8706944445
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461250.845810185
+2461250.8706944445
   9
 $TDUUPDATE
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-166
+214
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{9EC2B7EA-FD4E-43A8-99F0-A17AC1057DAC}
+{2B414299-9340-4BFF-A44F-ED8C1FC93E33}
   9
 $VERSIONGUID
   2
-{5300C566-FCC5-4D47-8FC6-38836DBB14C3}
+{850C6657-1F95-408D-847A-EC41490610CD}
   9
 $EXTNAMES
 290
@@ -2233,7 +2233,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-19
+21
   0
 LAYER
   5
@@ -2295,13 +2295,13 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-ARQ_MUROS
+ARQ_EJES
  70
 0
  62
-7
+1
   6
-Continuous
+CENTER
 370
 -3
 390
@@ -2319,11 +2319,11 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-ARQ_TIJERALES
+ARQ_COTAS
  70
 0
  62
-8
+3
   6
 Continuous
 370
@@ -2343,7 +2343,31 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-ARQ_TEXTOS
+ARQ_MUROS
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+-3
+390
+13
+347
+21
+  0
+LAYER
+  5
+8D
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+ARQ_MUROS_HATCH
  70
 0
  62
@@ -2359,7 +2383,55 @@ Continuous
   0
 LAYER
   5
-8D
+8E
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+ARQ_TIJERALES
+ 70
+0
+ 62
+8
+  6
+DASHED
+370
+-3
+390
+13
+347
+21
+  0
+LAYER
+  5
+8F
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+ARQ_TEXTOS
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+-3
+390
+13
+347
+21
+  0
+LAYER
+  5
+90
 330
 1
 100
@@ -2383,7 +2455,7 @@ Continuous
   0
 LAYER
   5
-8E
+91
 330
 1
 100
@@ -2407,7 +2479,7 @@ Continuous
   0
 LAYER
   5
-8F
+92
 330
 1
 100
@@ -2431,7 +2503,7 @@ Continuous
   0
 LAYER
   5
-90
+93
 330
 1
 100
@@ -2455,31 +2527,7 @@ Continuous
   0
 LAYER
   5
-91
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-ELEC_TOMA_220
- 70
-0
- 62
-3
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-92
+94
 330
 1
 100
@@ -2503,7 +2551,7 @@ Continuous
   0
 LAYER
   5
-93
+95
 330
 1
 100
@@ -2517,7 +2565,7 @@ ELEC_MALLA_PAT
  62
 3
   6
-Continuous
+DASHED
 370
 -3
 390
@@ -2527,7 +2575,7 @@ Continuous
   0
 LAYER
   5
-94
+96
 330
 1
 100
@@ -2551,7 +2599,7 @@ Continuous
   0
 LAYER
   5
-95
+97
 330
 1
 100
@@ -2575,7 +2623,7 @@ Continuous
   0
 LAYER
   5
-96
+98
 330
 1
 100
@@ -2599,7 +2647,7 @@ Continuous
   0
 LAYER
   5
-97
+99
 330
 1
 100
@@ -2623,7 +2671,7 @@ Continuous
   0
 LAYER
   5
-98
+9A
 330
 1
 100
@@ -2647,7 +2695,7 @@ Continuous
   0
 LAYER
   5
-99
+9B
 330
 1
 100
@@ -2671,7 +2719,7 @@ Continuous
   0
 LAYER
   5
-9A
+9C
 330
 1
 100
@@ -3493,7 +3541,7 @@ ACAD
   0
 APPID
   5
-163
+211
 330
 3
 100
@@ -3507,7 +3555,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-164
+212
 330
 3
 100
@@ -5617,78 +5665,6 @@ SECTION
   2
 ENTITIES
   0
-LWPOLYLINE
-  5
-9B
-330
-17
-100
-AcDbEntity
-  8
-ARQ_MUROS
-100
-AcDbPolyline
- 90
-5
- 70
-0
- 10
-5.0
- 20
-5.0
- 10
-25.0
- 20
-5.0
- 10
-25.0
- 20
-45.0
- 10
-5.0
- 20
-45.0
- 10
-5.0
- 20
-5.0
-  0
-LWPOLYLINE
-  5
-9C
-330
-17
-100
-AcDbEntity
-  8
-ARQ_MUROS
-100
-AcDbPolyline
- 90
-5
- 70
-0
- 10
-4.75
- 20
-4.75
- 10
-25.25
- 20
-4.75
- 10
-25.25
- 20
-45.25
- 10
-4.75
- 20
-45.25
- 10
-4.75
- 20
-4.75
-  0
 LINE
   5
 9D
@@ -5697,23 +5673,23 @@ LINE
 100
 AcDbEntity
   8
-ARQ_MUROS
+ARQ_EJES
 100
 AcDbLine
  10
-5.0
+6.0
  20
-11.0
+5.0
  30
 0.0
  11
-25.0
+6.0
  21
-11.0
+47.0
  31
 0.0
   0
-LINE
+CIRCLE
   5
 9E
 330
@@ -5721,21 +5697,17 @@ LINE
 100
 AcDbEntity
   8
-ARQ_MUROS
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-13.0
+6.0
  20
-5.0
+47.65
  30
 0.0
- 11
-13.0
- 21
-11.0
- 31
-0.0
+ 40
+0.45
   0
 TEXT
   5
@@ -5745,25 +5717,25 @@ TEXT
 100
 AcDbEntity
   8
-ARQ_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-9.0
+6.0
  20
-8.0
+47.65
  30
 0.0
  40
-0.35
+0.3
   1
-OFICINAS ADMINISTRATIVAS
+A
  72
 1
  11
-9.0
+6.0
  21
-8.0
+47.65
  31
 0.0
 100
@@ -5771,7 +5743,7 @@ AcDbText
  73
 2
   0
-TEXT
+LINE
   5
 A0
 330
@@ -5779,33 +5751,23 @@ A0
 100
 AcDbEntity
   8
-ARQ_TEXTOS
+ARQ_EJES
 100
-AcDbText
+AcDbLine
  10
-19.0
+6.0
  20
-8.0
+47.0
  30
 0.0
- 40
-0.35
-  1
-VESTUARIOS / SS.HH.
- 72
-1
  11
-19.0
+6.0
  21
-8.0
+47.199999999999996
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-TEXT
+CIRCLE
   5
 A1
 330
@@ -5813,25 +5775,45 @@ A1
 100
 AcDbEntity
   8
-ARQ_TEXTOS
+ARQ_EJES
 100
-AcDbText
+AcDbCircle
  10
-15.0
+6.0
  20
-28.0
+4.35
  30
 0.0
  40
-0.5
+0.45
+  0
+TEXT
+  5
+A2
+330
+17
+100
+AcDbEntity
+  8
+ARQ_EJES
+100
+AcDbText
+ 10
+6.0
+ 20
+4.35
+ 30
+0.0
+ 40
+0.3
   1
-NAVE DE PRODUCCIÓN Y ALMACÉN (740 m²)
+A
  72
 1
  11
-15.0
+6.0
  21
-28.0
+4.35
  31
 0.0
 100
@@ -5841,67 +5823,29 @@ AcDbText
   0
 LINE
   5
-A2
-330
-17
-100
-AcDbEntity
-  8
-ARQ_TIJERALES
-  6
-DASHED
-100
-AcDbLine
- 10
-5.0
- 20
-5.0
- 30
-0.0
- 11
-25.0
- 21
-5.0
- 31
-0.0
-  0
-LWPOLYLINE
-  5
 A3
 330
 17
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-4.6
+6.0
  20
-4.8
- 10
 5.0
- 20
+ 30
+0.0
+ 11
+6.0
+ 21
 4.8
- 10
-5.0
- 20
-5.2
- 10
-4.6
- 20
-5.2
- 10
-4.6
- 20
-4.8
+ 31
+0.0
   0
-LWPOLYLINE
+LINE
   5
 A4
 330
@@ -5909,35 +5853,23 @@ A4
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-25.0
+11.0
  20
-4.8
- 10
-25.4
- 20
-4.8
- 10
-25.4
- 20
-5.2
- 10
-25.0
- 20
-5.2
- 10
-25.0
- 20
-4.8
+5.0
+ 30
+0.0
+ 11
+11.0
+ 21
+47.0
+ 31
+0.0
   0
-LINE
+CIRCLE
   5
 A5
 330
@@ -5945,25 +5877,19 @@ A5
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-5.0
+11.0
  20
-10.0
+47.65
  30
 0.0
- 11
-25.0
- 21
-10.0
- 31
-0.0
+ 40
+0.45
   0
-LWPOLYLINE
+TEXT
   5
 A6
 330
@@ -5971,35 +5897,33 @@ A6
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbText
  10
-4.6
+11.0
  20
-9.8
- 10
-5.0
- 20
-9.8
- 10
-5.0
- 20
-10.200000000000001
- 10
-4.6
- 20
-10.200000000000001
- 10
-4.6
- 20
-9.8
+47.65
+ 30
+0.0
+ 40
+0.3
+  1
+B
+ 72
+1
+ 11
+11.0
+ 21
+47.65
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
-LWPOLYLINE
+LINE
   5
 A7
 330
@@ -6007,35 +5931,23 @@ A7
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-25.0
+11.0
  20
-9.8
- 10
-25.4
- 20
-9.8
- 10
-25.4
- 20
-10.200000000000001
- 10
-25.0
- 20
-10.200000000000001
- 10
-25.0
- 20
-9.8
+47.0
+ 30
+0.0
+ 11
+11.0
+ 21
+47.199999999999996
+ 31
+0.0
   0
-LINE
+CIRCLE
   5
 A8
 330
@@ -6043,25 +5955,19 @@ A8
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-5.0
+11.0
  20
-15.0
+4.35
  30
 0.0
- 11
-25.0
- 21
-15.0
- 31
-0.0
+ 40
+0.45
   0
-LWPOLYLINE
+TEXT
   5
 A9
 330
@@ -6069,35 +5975,33 @@ A9
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbText
  10
-4.6
+11.0
  20
-14.8
- 10
-5.0
- 20
-14.8
- 10
-5.0
- 20
-15.200000000000001
- 10
-4.6
- 20
-15.200000000000001
- 10
-4.6
- 20
-14.8
+4.35
+ 30
+0.0
+ 40
+0.3
+  1
+B
+ 72
+1
+ 11
+11.0
+ 21
+4.35
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
-LWPOLYLINE
+LINE
   5
 AA
 330
@@ -6105,33 +6009,21 @@ AA
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-25.0
+11.0
  20
-14.8
- 10
-25.4
- 20
-14.8
- 10
-25.4
- 20
-15.200000000000001
- 10
-25.0
- 20
-15.200000000000001
- 10
-25.0
- 20
-14.8
+5.0
+ 30
+0.0
+ 11
+11.0
+ 21
+4.8
+ 31
+0.0
   0
 LINE
   5
@@ -6141,25 +6033,23 @@ AB
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
 AcDbLine
  10
-5.0
+16.0
  20
-20.0
+5.0
  30
 0.0
  11
-25.0
+16.0
  21
-20.0
+47.0
  31
 0.0
   0
-LWPOLYLINE
+CIRCLE
   5
 AC
 330
@@ -6167,35 +6057,19 @@ AC
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbCircle
  10
-4.6
+16.0
  20
-19.8
- 10
-5.0
- 20
-19.8
- 10
-5.0
- 20
-20.2
- 10
-4.6
- 20
-20.2
- 10
-4.6
- 20
-19.8
+47.65
+ 30
+0.0
+ 40
+0.45
   0
-LWPOLYLINE
+TEXT
   5
 AD
 330
@@ -6203,33 +6077,31 @@ AD
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbText
  10
-25.0
+16.0
  20
-19.8
- 10
-25.4
- 20
-19.8
- 10
-25.4
- 20
-20.2
- 10
-25.0
- 20
-20.2
- 10
-25.0
- 20
-19.8
+47.65
+ 30
+0.0
+ 40
+0.3
+  1
+C
+ 72
+1
+ 11
+16.0
+ 21
+47.65
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -6239,25 +6111,23 @@ AE
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
 AcDbLine
  10
-5.0
+16.0
  20
-25.0
+47.0
  30
 0.0
  11
-25.0
+16.0
  21
-25.0
+47.199999999999996
  31
 0.0
   0
-LWPOLYLINE
+CIRCLE
   5
 AF
 330
@@ -6265,35 +6135,19 @@ AF
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbCircle
  10
-4.6
+16.0
  20
-24.8
- 10
-5.0
- 20
-24.8
- 10
-5.0
- 20
-25.2
- 10
-4.6
- 20
-25.2
- 10
-4.6
- 20
-24.8
+4.35
+ 30
+0.0
+ 40
+0.45
   0
-LWPOLYLINE
+TEXT
   5
 B0
 330
@@ -6301,33 +6155,31 @@ B0
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbText
  10
-25.0
+16.0
  20
-24.8
- 10
-25.4
- 20
-24.8
- 10
-25.4
- 20
-25.2
- 10
-25.0
- 20
-25.2
- 10
-25.0
- 20
-24.8
+4.35
+ 30
+0.0
+ 40
+0.3
+  1
+C
+ 72
+1
+ 11
+16.0
+ 21
+4.35
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -6337,25 +6189,23 @@ B1
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
 AcDbLine
  10
-5.0
+16.0
  20
-30.0
+5.0
  30
 0.0
  11
-25.0
+16.0
  21
-30.0
+4.8
  31
 0.0
   0
-LWPOLYLINE
+LINE
   5
 B2
 330
@@ -6363,35 +6213,23 @@ B2
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-4.6
+21.0
  20
-29.8
- 10
 5.0
- 20
-29.8
- 10
-5.0
- 20
-30.2
- 10
-4.6
- 20
-30.2
- 10
-4.6
- 20
-29.8
+ 30
+0.0
+ 11
+21.0
+ 21
+47.0
+ 31
+0.0
   0
-LWPOLYLINE
+CIRCLE
   5
 B3
 330
@@ -6399,35 +6237,19 @@ B3
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbCircle
  10
-25.0
+21.0
  20
-29.8
- 10
-25.4
- 20
-29.8
- 10
-25.4
- 20
-30.2
- 10
-25.0
- 20
-30.2
- 10
-25.0
- 20
-29.8
+47.65
+ 30
+0.0
+ 40
+0.45
   0
-LINE
+TEXT
   5
 B4
 330
@@ -6435,25 +6257,33 @@ B4
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-5.0
+21.0
  20
-35.0
+47.65
  30
 0.0
+ 40
+0.3
+  1
+D
+ 72
+1
  11
-25.0
+21.0
  21
-35.0
+47.65
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
-LWPOLYLINE
+LINE
   5
 B5
 330
@@ -6461,35 +6291,23 @@ B5
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-4.6
+21.0
  20
-34.8
- 10
-5.0
- 20
-34.8
- 10
-5.0
- 20
-35.199999999999996
- 10
-4.6
- 20
-35.199999999999996
- 10
-4.6
- 20
-34.8
+47.0
+ 30
+0.0
+ 11
+21.0
+ 21
+47.199999999999996
+ 31
+0.0
   0
-LWPOLYLINE
+CIRCLE
   5
 B6
 330
@@ -6497,35 +6315,19 @@ B6
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbCircle
  10
-25.0
+21.0
  20
-34.8
- 10
-25.4
- 20
-34.8
- 10
-25.4
- 20
-35.199999999999996
- 10
-25.0
- 20
-35.199999999999996
- 10
-25.0
- 20
-34.8
+4.35
+ 30
+0.0
+ 40
+0.45
   0
-LINE
+TEXT
   5
 B7
 330
@@ -6533,25 +6335,33 @@ B7
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-5.0
+21.0
  20
-40.0
+4.35
  30
 0.0
+ 40
+0.3
+  1
+D
+ 72
+1
  11
-25.0
+21.0
  21
-40.0
+4.35
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
-LWPOLYLINE
+LINE
   5
 B8
 330
@@ -6559,35 +6369,23 @@ B8
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-4.6
+21.0
  20
-39.8
- 10
 5.0
- 20
-39.8
- 10
-5.0
- 20
-40.199999999999996
- 10
-4.6
- 20
-40.199999999999996
- 10
-4.6
- 20
-39.8
+ 30
+0.0
+ 11
+21.0
+ 21
+4.8
+ 31
+0.0
   0
-LWPOLYLINE
+LINE
   5
 B9
 330
@@ -6595,35 +6393,23 @@ B9
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-25.0
+26.0
  20
-39.8
- 10
-25.4
- 20
-39.8
- 10
-25.4
- 20
-40.199999999999996
- 10
-25.0
- 20
-40.199999999999996
- 10
-25.0
- 20
-39.8
+5.0
+ 30
+0.0
+ 11
+26.0
+ 21
+47.0
+ 31
+0.0
   0
-LINE
+CIRCLE
   5
 BA
 330
@@ -6631,25 +6417,19 @@ BA
 100
 AcDbEntity
   8
-ARQ_TIJERALES
-  6
-DASHED
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-5.0
+26.0
  20
-45.0
+47.65
  30
 0.0
- 11
-25.0
- 21
-45.0
- 31
-0.0
+ 40
+0.45
   0
-LWPOLYLINE
+TEXT
   5
 BB
 330
@@ -6657,35 +6437,33 @@ BB
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbText
  10
-4.6
+26.0
  20
-44.8
- 10
-5.0
- 20
-44.8
- 10
-5.0
- 20
-45.199999999999996
- 10
-4.6
- 20
-45.199999999999996
- 10
-4.6
- 20
-44.8
+47.65
+ 30
+0.0
+ 40
+0.3
+  1
+E
+ 72
+1
+ 11
+26.0
+ 21
+47.65
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
-LWPOLYLINE
+LINE
   5
 BC
 330
@@ -6693,35 +6471,23 @@ BC
 100
 AcDbEntity
   8
-ARQ_TIJERALES
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-25.0
+26.0
  20
-44.8
- 10
-25.4
- 20
-44.8
- 10
-25.4
- 20
-45.199999999999996
- 10
-25.0
- 20
-45.199999999999996
- 10
-25.0
- 20
-44.8
+47.0
+ 30
+0.0
+ 11
+26.0
+ 21
+47.199999999999996
+ 31
+0.0
   0
-LWPOLYLINE
+CIRCLE
   5
 BD
 330
@@ -6729,33 +6495,17 @@ BD
 100
 AcDbEntity
   8
-ELEC_TGD
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbCircle
  10
-5.5
+26.0
  20
-11.5
- 10
-6.7
- 20
-11.5
- 10
-6.7
- 20
-12.0
- 10
-5.5
- 20
-12.0
- 10
-5.5
- 20
-11.5
+4.35
+ 30
+0.0
+ 40
+0.45
   0
 TEXT
   5
@@ -6765,25 +6515,25 @@ BE
 100
 AcDbEntity
   8
-ELEC_TGD
+ARQ_EJES
 100
 AcDbText
  10
-6.1
+26.0
  20
-12.3
+4.35
  30
 0.0
  40
-0.22
+0.3
   1
-TGD-NAVE 380V
+E
  72
 1
  11
-6.1
+26.0
  21
-12.3
+4.35
  31
 0.0
 100
@@ -6791,7 +6541,7 @@ AcDbText
  73
 2
   0
-LWPOLYLINE
+LINE
   5
 BF
 330
@@ -6799,35 +6549,23 @@ BF
 100
 AcDbEntity
   8
-UNIFILAR_BANCO
+ARQ_EJES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-7.0
+26.0
  20
-11.5
- 10
-7.8
- 20
-11.5
- 10
-7.8
- 20
-12.0
- 10
-7.0
- 20
-12.0
- 10
-7.0
- 20
-11.5
+5.0
+ 30
+0.0
+ 11
+26.0
+ 21
+4.8
+ 31
+0.0
   0
-TEXT
+LINE
   5
 C0
 330
@@ -6835,33 +6573,23 @@ C0
 100
 AcDbEntity
   8
-UNIFILAR_BANCO
+ARQ_EJES
 100
-AcDbText
+AcDbLine
  10
-7.4
+5.0
  20
-12.3
+6.0
  30
 0.0
- 40
-0.18
-  1
-BC-AUTO 15kVAR
- 72
-1
  11
-7.4
+27.0
  21
-12.3
+6.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-LINE
+CIRCLE
   5
 C1
 330
@@ -6869,23 +6597,19 @@ C1
 100
 AcDbEntity
   8
-ELEC_BANDEJA
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-14.85
+4.5
  20
-11.0
+6.0
  30
 0.0
- 11
-14.85
- 21
-44.0
- 31
-0.0
+ 40
+0.45
   0
-LINE
+TEXT
   5
 C2
 330
@@ -6893,51 +6617,25 @@ C2
 100
 AcDbEntity
   8
-ELEC_BANDEJA
-100
-AcDbLine
- 10
-15.15
- 20
-11.0
- 30
-0.0
- 11
-15.15
- 21
-44.0
- 31
-0.0
-  0
-TEXT
-  5
-C3
-330
-17
-100
-AcDbEntity
-  8
-ELEC_BANDEJA
+ARQ_EJES
 100
 AcDbText
  10
-15.0
+4.5
  20
-30.0
+6.0
  30
 0.0
  40
-0.22
+0.3
   1
-BANDEJA PORTACABLES METÁLICA 200x50mm
- 50
-90.0
+1
  72
 1
  11
-15.0
+4.5
  21
-30.0
+6.0
  31
 0.0
 100
@@ -6945,7 +6643,27 @@ AcDbText
  73
 2
   0
-LINE
+CIRCLE
+  5
+C3
+330
+17
+100
+AcDbEntity
+  8
+ARQ_EJES
+100
+AcDbCircle
+ 10
+27.5
+ 20
+6.0
+ 30
+0.0
+ 40
+0.45
+  0
+TEXT
   5
 C4
 330
@@ -6953,21 +6671,31 @@ C4
 100
 AcDbEntity
   8
-ELEC_BANDEJA
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-6.1
+27.5
  20
-12.0
+6.0
  30
 0.0
+ 40
+0.3
+  1
+1
+ 72
+1
  11
-6.1
+27.5
  21
-13.0
+6.0
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -6977,19 +6705,19 @@ C5
 100
 AcDbEntity
   8
-ELEC_BANDEJA
+ARQ_EJES
 100
 AcDbLine
  10
-6.1
+5.0
  20
-13.0
+11.0
  30
 0.0
  11
-15.0
+27.0
  21
-13.0
+11.0
  31
 0.0
   0
@@ -7001,19 +6729,19 @@ C6
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbCircle
  10
-8.5
+4.5
  20
-14.0
+11.0
  30
 0.0
  40
-0.35
+0.45
   0
-LINE
+TEXT
   5
 C7
 330
@@ -7021,23 +6749,33 @@ C7
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-8.25
+4.5
  20
-13.75
+11.0
  30
 0.0
+ 40
+0.3
+  1
+2
+ 72
+1
  11
-8.75
+4.5
  21
-14.25
+11.0
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
-LINE
+CIRCLE
   5
 C8
 330
@@ -7045,21 +6783,17 @@ C8
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-8.25
+27.5
  20
-14.25
+11.0
  30
 0.0
- 11
-8.75
- 21
-13.75
- 31
-0.0
+ 40
+0.45
   0
 TEXT
   5
@@ -7069,25 +6803,25 @@ C9
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-8.5
+27.5
  20
-13.5
+11.0
  30
 0.0
  40
-0.14
+0.3
   1
-HB-150W
+2
  72
 1
  11
-8.5
+27.5
  21
-13.5
+11.0
  31
 0.0
 100
@@ -7095,7 +6829,7 @@ AcDbText
  73
 2
   0
-CIRCLE
+LINE
   5
 CA
 330
@@ -7103,19 +6837,23 @@ CA
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbCircle
+AcDbLine
  10
-8.5
+5.0
  20
-19.0
+16.0
  30
 0.0
- 40
-0.35
+ 11
+27.0
+ 21
+16.0
+ 31
+0.0
   0
-LINE
+CIRCLE
   5
 CB
 330
@@ -7123,23 +6861,19 @@ CB
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-8.25
+4.5
  20
-18.75
+16.0
  30
 0.0
- 11
-8.75
- 21
-19.25
- 31
-0.0
+ 40
+0.45
   0
-LINE
+TEXT
   5
 CC
 330
@@ -7147,49 +6881,25 @@ CC
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
-100
-AcDbLine
- 10
-8.25
- 20
-19.25
- 30
-0.0
- 11
-8.75
- 21
-18.75
- 31
-0.0
-  0
-TEXT
-  5
-CD
-330
-17
-100
-AcDbEntity
-  8
-ELEC_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-8.5
+4.5
  20
-18.5
+16.0
  30
 0.0
  40
-0.14
+0.3
   1
-HB-150W
+3
  72
 1
  11
-8.5
+4.5
  21
-18.5
+16.0
  31
 0.0
 100
@@ -7199,23 +6909,57 @@ AcDbText
   0
 CIRCLE
   5
+CD
+330
+17
+100
+AcDbEntity
+  8
+ARQ_EJES
+100
+AcDbCircle
+ 10
+27.5
+ 20
+16.0
+ 30
+0.0
+ 40
+0.45
+  0
+TEXT
+  5
 CE
 330
 17
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbCircle
+AcDbText
  10
-8.5
+27.5
  20
-24.0
+16.0
  30
 0.0
  40
-0.35
+0.3
+  1
+3
+ 72
+1
+ 11
+27.5
+ 21
+16.0
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -7225,23 +6969,23 @@ CF
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbLine
  10
-8.25
+5.0
  20
-23.75
+21.0
  30
 0.0
  11
-8.75
+27.0
  21
-24.25
+21.0
  31
 0.0
   0
-LINE
+CIRCLE
   5
 D0
 330
@@ -7249,21 +6993,17 @@ D0
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-8.25
+4.5
  20
-24.25
+21.0
  30
 0.0
- 11
-8.75
- 21
-23.75
- 31
-0.0
+ 40
+0.45
   0
 TEXT
   5
@@ -7273,25 +7013,25 @@ D1
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-8.5
+4.5
  20
-23.5
+21.0
  30
 0.0
  40
-0.14
+0.3
   1
-HB-150W
+4
  72
 1
  11
-8.5
+4.5
  21
-23.5
+21.0
  31
 0.0
 100
@@ -7307,19 +7047,19 @@ D2
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbCircle
  10
-8.5
+27.5
  20
-29.0
+21.0
  30
 0.0
  40
-0.35
+0.45
   0
-LINE
+TEXT
   5
 D3
 330
@@ -7327,21 +7067,31 @@ D3
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-8.25
+27.5
  20
-28.75
+21.0
  30
 0.0
+ 40
+0.3
+  1
+4
+ 72
+1
  11
-8.75
+27.5
  21
-29.25
+21.0
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -7351,23 +7101,23 @@ D4
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbLine
  10
-8.25
+5.0
  20
-29.25
+26.0
  30
 0.0
  11
-8.75
+27.0
  21
-28.75
+26.0
  31
 0.0
   0
-TEXT
+CIRCLE
   5
 D5
 330
@@ -7375,25 +7125,45 @@ D5
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_EJES
 100
-AcDbText
+AcDbCircle
  10
-8.5
+4.5
  20
-28.5
+26.0
  30
 0.0
  40
-0.14
+0.45
+  0
+TEXT
+  5
+D6
+330
+17
+100
+AcDbEntity
+  8
+ARQ_EJES
+100
+AcDbText
+ 10
+4.5
+ 20
+26.0
+ 30
+0.0
+ 40
+0.3
   1
-HB-150W
+5
  72
 1
  11
-8.5
+4.5
  21
-28.5
+26.0
  31
 0.0
 100
@@ -7403,49 +7173,25 @@ AcDbText
   0
 CIRCLE
   5
-D6
-330
-17
-100
-AcDbEntity
-  8
-ELEC_HIGHBAY
-100
-AcDbCircle
- 10
-8.5
- 20
-34.0
- 30
-0.0
- 40
-0.35
-  0
-LINE
-  5
 D7
 330
 17
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-8.25
+27.5
  20
-33.75
+26.0
  30
 0.0
- 11
-8.75
- 21
-34.25
- 31
-0.0
+ 40
+0.45
   0
-LINE
+TEXT
   5
 D8
 330
@@ -7453,23 +7199,33 @@ D8
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-8.25
+27.5
  20
-34.25
+26.0
  30
 0.0
+ 40
+0.3
+  1
+5
+ 72
+1
  11
-8.75
+27.5
  21
-33.75
+26.0
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
-TEXT
+LINE
   5
 D9
 330
@@ -7477,31 +7233,21 @@ D9
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_EJES
 100
-AcDbText
+AcDbLine
  10
-8.5
+5.0
  20
-33.5
+31.0
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-8.5
+27.0
  21
-33.5
+31.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
 CIRCLE
   5
@@ -7511,19 +7257,19 @@ DA
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbCircle
  10
-8.5
+4.5
  20
-39.0
+31.0
  30
 0.0
  40
-0.35
+0.45
   0
-LINE
+TEXT
   5
 DB
 330
@@ -7531,23 +7277,33 @@ DB
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-8.25
+4.5
  20
-38.75
+31.0
  30
 0.0
+ 40
+0.3
+  1
+6
+ 72
+1
  11
-8.75
+4.5
  21
-39.25
+31.0
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
-LINE
+CIRCLE
   5
 DC
 330
@@ -7555,21 +7311,17 @@ DC
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-8.25
+27.5
  20
-39.25
+31.0
  30
 0.0
- 11
-8.75
- 21
-38.75
- 31
-0.0
+ 40
+0.45
   0
 TEXT
   5
@@ -7579,25 +7331,25 @@ DD
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-8.5
+27.5
  20
-38.5
+31.0
  30
 0.0
  40
-0.14
+0.3
   1
-HB-150W
+6
  72
 1
  11
-8.5
+27.5
  21
-38.5
+31.0
  31
 0.0
 100
@@ -7605,7 +7357,7 @@ AcDbText
  73
 2
   0
-CIRCLE
+LINE
   5
 DE
 330
@@ -7613,19 +7365,23 @@ DE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbCircle
+AcDbLine
  10
-8.5
+5.0
  20
-44.0
+36.0
  30
 0.0
- 40
-0.35
+ 11
+27.0
+ 21
+36.0
+ 31
+0.0
   0
-LINE
+CIRCLE
   5
 DF
 330
@@ -7633,23 +7389,19 @@ DF
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-8.25
+4.5
  20
-43.75
+36.0
  30
 0.0
- 11
-8.75
- 21
-44.25
- 31
-0.0
+ 40
+0.45
   0
-LINE
+TEXT
   5
 E0
 330
@@ -7657,49 +7409,25 @@ E0
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
-100
-AcDbLine
- 10
-8.25
- 20
-44.25
- 30
-0.0
- 11
-8.75
- 21
-43.75
- 31
-0.0
-  0
-TEXT
-  5
-E1
-330
-17
-100
-AcDbEntity
-  8
-ELEC_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-8.5
+4.5
  20
-43.5
+36.0
  30
 0.0
  40
-0.14
+0.3
   1
-HB-150W
+7
  72
 1
  11
-8.5
+4.5
  21
-43.5
+36.0
  31
 0.0
 100
@@ -7709,23 +7437,57 @@ AcDbText
   0
 CIRCLE
   5
+E1
+330
+17
+100
+AcDbEntity
+  8
+ARQ_EJES
+100
+AcDbCircle
+ 10
+27.5
+ 20
+36.0
+ 30
+0.0
+ 40
+0.45
+  0
+TEXT
+  5
 E2
 330
 17
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbCircle
+AcDbText
  10
-12.5
+27.5
  20
-14.0
+36.0
  30
 0.0
  40
-0.35
+0.3
+  1
+7
+ 72
+1
+ 11
+27.5
+ 21
+36.0
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -7735,23 +7497,23 @@ E3
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbLine
  10
-12.25
+5.0
  20
-13.75
+41.0
  30
 0.0
  11
-12.75
+27.0
  21
-14.25
+41.0
  31
 0.0
   0
-LINE
+CIRCLE
   5
 E4
 330
@@ -7759,21 +7521,17 @@ E4
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbCircle
  10
-12.25
+4.5
  20
-14.25
+41.0
  30
 0.0
- 11
-12.75
- 21
-13.75
- 31
-0.0
+ 40
+0.45
   0
 TEXT
   5
@@ -7783,25 +7541,25 @@ E5
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-12.5
+4.5
  20
-13.5
+41.0
  30
 0.0
  40
-0.14
+0.3
   1
-HB-150W
+8
  72
 1
  11
-12.5
+4.5
  21
-13.5
+41.0
  31
 0.0
 100
@@ -7817,19 +7575,19 @@ E6
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbCircle
  10
-12.5
+27.5
  20
-19.0
+41.0
  30
 0.0
  40
-0.35
+0.45
   0
-LINE
+TEXT
   5
 E7
 330
@@ -7837,21 +7595,31 @@ E7
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
-AcDbLine
+AcDbText
  10
-12.25
+27.5
  20
-18.75
+41.0
  30
 0.0
+ 40
+0.3
+  1
+8
+ 72
+1
  11
-12.75
+27.5
  21
-19.25
+41.0
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -7861,23 +7629,23 @@ E8
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_EJES
 100
 AcDbLine
  10
-12.25
+5.0
  20
-19.25
+46.0
  30
 0.0
  11
-12.75
+27.0
  21
-18.75
+46.0
  31
 0.0
   0
-TEXT
+CIRCLE
   5
 E9
 330
@@ -7885,33 +7653,19 @@ E9
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_EJES
 100
-AcDbText
+AcDbCircle
  10
-12.5
+4.5
  20
-18.5
+46.0
  30
 0.0
  40
-0.14
-  1
-HB-150W
- 72
-1
- 11
-12.5
- 21
-18.5
- 31
-0.0
-100
-AcDbText
- 73
-2
+0.45
   0
-CIRCLE
+TEXT
   5
 EA
 330
@@ -7919,93 +7673,25 @@ EA
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
-100
-AcDbCircle
- 10
-12.5
- 20
-24.0
- 30
-0.0
- 40
-0.35
-  0
-LINE
-  5
-EB
-330
-17
-100
-AcDbEntity
-  8
-ELEC_HIGHBAY
-100
-AcDbLine
- 10
-12.25
- 20
-23.75
- 30
-0.0
- 11
-12.75
- 21
-24.25
- 31
-0.0
-  0
-LINE
-  5
-EC
-330
-17
-100
-AcDbEntity
-  8
-ELEC_HIGHBAY
-100
-AcDbLine
- 10
-12.25
- 20
-24.25
- 30
-0.0
- 11
-12.75
- 21
-23.75
- 31
-0.0
-  0
-TEXT
-  5
-ED
-330
-17
-100
-AcDbEntity
-  8
-ELEC_TEXTOS
+ARQ_EJES
 100
 AcDbText
  10
-12.5
+4.5
  20
-23.5
+46.0
  30
 0.0
  40
-0.14
+0.3
   1
-HB-150W
+9
  72
 1
  11
-12.5
+4.5
  21
-23.5
+46.0
  31
 0.0
 100
@@ -8015,23 +7701,105 @@ AcDbText
   0
 CIRCLE
   5
+EB
+330
+17
+100
+AcDbEntity
+  8
+ARQ_EJES
+100
+AcDbCircle
+ 10
+27.5
+ 20
+46.0
+ 30
+0.0
+ 40
+0.45
+  0
+TEXT
+  5
+EC
+330
+17
+100
+AcDbEntity
+  8
+ARQ_EJES
+100
+AcDbText
+ 10
+27.5
+ 20
+46.0
+ 30
+0.0
+ 40
+0.3
+  1
+9
+ 72
+1
+ 11
+27.5
+ 21
+46.0
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+ED
+330
+17
+100
+AcDbEntity
+  8
+ARQ_COTAS
+100
+AcDbLine
+ 10
+6.0
+ 20
+3.5
+ 30
+0.0
+ 11
+26.0
+ 21
+3.5
+ 31
+0.0
+  0
+LINE
+  5
 EE
 330
 17
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_COTAS
 100
-AcDbCircle
+AcDbLine
  10
-12.5
+5.85
  20
-29.0
+3.35
  30
 0.0
- 40
-0.35
+ 11
+6.15
+ 21
+3.65
+ 31
+0.0
   0
 LINE
   5
@@ -8041,23 +7809,23 @@ EF
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_COTAS
 100
 AcDbLine
  10
-12.25
+25.85
  20
-28.75
+3.35
  30
 0.0
  11
-12.75
+26.15
  21
-29.25
+3.65
  31
 0.0
   0
-LINE
+TEXT
   5
 F0
 330
@@ -8065,49 +7833,25 @@ F0
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
-100
-AcDbLine
- 10
-12.25
- 20
-29.25
- 30
-0.0
- 11
-12.75
- 21
-28.75
- 31
-0.0
-  0
-TEXT
-  5
-F1
-330
-17
-100
-AcDbEntity
-  8
-ELEC_TEXTOS
+ARQ_COTAS
 100
 AcDbText
  10
-12.5
+16.0
  20
-28.5
+3.8
  30
 0.0
  40
-0.14
+0.18
   1
-HB-150W
+COTACIÓN TOTAL NAVE = 20.00 m
  72
 1
  11
-12.5
+16.0
  21
-28.5
+3.8
  31
 0.0
 100
@@ -8115,7 +7859,31 @@ AcDbText
  73
 2
   0
-CIRCLE
+LINE
+  5
+F1
+330
+17
+100
+AcDbEntity
+  8
+ARQ_COTAS
+100
+AcDbLine
+ 10
+3.5
+ 20
+6.0
+ 30
+0.0
+ 11
+3.5
+ 21
+46.0
+ 31
+0.0
+  0
+LINE
   5
 F2
 330
@@ -8123,17 +7891,21 @@ F2
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_COTAS
 100
-AcDbCircle
+AcDbLine
  10
-12.5
+3.35
  20
-34.0
+5.85
  30
 0.0
- 40
-0.35
+ 11
+3.65
+ 21
+6.15
+ 31
+0.0
   0
 LINE
   5
@@ -8143,23 +7915,23 @@ F3
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_COTAS
 100
 AcDbLine
  10
-12.25
+3.35
  20
-33.75
+45.85
  30
 0.0
  11
-12.75
+3.65
  21
-34.25
+46.15
  31
 0.0
   0
-LINE
+TEXT
   5
 F4
 330
@@ -8167,49 +7939,27 @@ F4
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
-100
-AcDbLine
- 10
-12.25
- 20
-34.25
- 30
-0.0
- 11
-12.75
- 21
-33.75
- 31
-0.0
-  0
-TEXT
-  5
-F5
-330
-17
-100
-AcDbEntity
-  8
-ELEC_TEXTOS
+ARQ_COTAS
 100
 AcDbText
  10
-12.5
+3.5
  20
-33.5
+26.0
  30
 0.0
  40
-0.14
+0.18
   1
-HB-150W
+COTACIÓN TOTAL LARGO NAVE = 40.00 m
+ 50
+90.0
  72
 1
  11
-12.5
+3.5
  21
-33.5
+26.0
  31
 0.0
 100
@@ -8217,7 +7967,43 @@ AcDbText
  73
 2
   0
-CIRCLE
+LWPOLYLINE
+  5
+F5
+330
+17
+100
+AcDbEntity
+  8
+ARQ_MUROS
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+6.0
+ 20
+6.0
+ 10
+26.0
+ 20
+6.0
+ 10
+26.0
+ 20
+46.0
+ 10
+6.0
+ 20
+46.0
+ 10
+6.0
+ 20
+6.0
+  0
+LWPOLYLINE
   5
 F6
 330
@@ -8225,17 +8011,33 @@ F6
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_MUROS
 100
-AcDbCircle
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-12.5
+5.75
  20
-39.0
- 30
-0.0
- 40
-0.35
+5.75
+ 10
+26.25
+ 20
+5.75
+ 10
+26.25
+ 20
+46.25
+ 10
+5.75
+ 20
+46.25
+ 10
+5.75
+ 20
+5.75
   0
 LINE
   5
@@ -8245,19 +8047,19 @@ F7
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_MUROS
 100
 AcDbLine
  10
-12.25
+6.0
  20
-38.75
+12.0
  30
 0.0
  11
-12.75
+26.0
  21
-39.25
+12.0
  31
 0.0
   0
@@ -8269,23 +8071,23 @@ F8
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_MUROS
 100
 AcDbLine
  10
-12.25
+14.0
  20
-39.25
+6.0
  30
 0.0
  11
-12.75
+14.0
  21
-38.75
+12.0
  31
 0.0
   0
-TEXT
+LINE
   5
 F9
 330
@@ -8293,33 +8095,23 @@ F9
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_MUROS
 100
-AcDbText
+AcDbLine
  10
-12.5
+15.0
  20
-38.5
+6.0
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-12.5
+15.0
  21
-38.5
+5.75
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 FA
 330
@@ -8327,19 +8119,23 @@ FA
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_MUROS
 100
-AcDbCircle
+AcDbLine
  10
-12.5
+17.0
  20
-44.0
+6.0
  30
 0.0
- 40
-0.35
+ 11
+17.0
+ 21
+5.75
+ 31
+0.0
   0
-LINE
+TEXT
   5
 FB
 330
@@ -8347,23 +8143,33 @@ FB
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TEXTOS
 100
-AcDbLine
+AcDbText
  10
-12.25
+16.0
  20
-43.75
+5.4
  30
 0.0
+ 40
+0.22
+  1
+ACCESO PRINCIPAL
+ 72
+1
  11
-12.75
+16.0
  21
-44.25
+5.4
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
-LINE
+TEXT
   5
 FC
 330
@@ -8371,21 +8177,31 @@ FC
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TEXTOS
 100
-AcDbLine
+AcDbText
  10
-12.25
+10.0
  20
-44.25
+9.0
  30
 0.0
+ 40
+0.35
+  1
+OFICINAS ADMINISTRATIVAS
+ 72
+1
  11
-12.75
+10.0
  21
-43.75
+9.0
  31
 0.0
+100
+AcDbText
+ 73
+2
   0
 TEXT
   5
@@ -8395,25 +8211,25 @@ FD
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TEXTOS
 100
 AcDbText
  10
-12.5
+20.0
  20
-43.5
+9.0
  30
 0.0
  40
-0.14
+0.35
   1
-HB-150W
+VESTUARIOS / SS.HH.
  72
 1
  11
-12.5
+20.0
  21
-43.5
+9.0
  31
 0.0
 100
@@ -8421,7 +8237,7 @@ AcDbText
  73
 2
   0
-CIRCLE
+TEXT
   5
 FE
 330
@@ -8429,17 +8245,31 @@ FE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TEXTOS
 100
-AcDbCircle
+AcDbText
  10
-17.5
+16.0
  20
-14.0
+29.0
  30
 0.0
  40
-0.35
+0.5
+  1
+NAVE DE PRODUCCIÓN Y ALMACÉN (740 m²)
+ 72
+1
+ 11
+16.0
+ 21
+29.0
+ 31
+0.0
+100
+AcDbText
+ 73
+2
   0
 LINE
   5
@@ -8449,19 +8279,19 @@ FF
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+6.0
  20
-13.75
+6.0
  30
 0.0
  11
-17.75
+26.0
  21
-14.25
+6.0
  31
 0.0
   0
@@ -8473,23 +8303,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+6.0
  20
-14.25
+6.0
  30
 0.0
  11
-17.75
+8.5
  21
-13.75
+6.4
  31
 0.0
   0
-TEXT
+LINE
   5
 101
 330
@@ -8497,33 +8327,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-17.5
+8.5
  20
-13.5
+6.4
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-17.5
+11.0
  21
-13.5
+6.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 102
 330
@@ -8531,17 +8351,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-17.5
+11.0
  20
-19.0
+6.0
  30
 0.0
- 40
-0.35
+ 11
+13.5
+ 21
+6.4
+ 31
+0.0
   0
 LINE
   5
@@ -8551,19 +8375,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+13.5
  20
-18.75
+6.4
  30
 0.0
  11
-17.75
+16.0
  21
-19.25
+6.0
  31
 0.0
   0
@@ -8575,23 +8399,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+16.0
  20
-19.25
+6.0
  30
 0.0
  11
-17.75
+18.5
  21
-18.75
+6.4
  31
 0.0
   0
-TEXT
+LINE
   5
 105
 330
@@ -8599,33 +8423,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-17.5
- 20
 18.5
+ 20
+6.4
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-17.5
+21.0
  21
-18.5
+6.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 106
 330
@@ -8633,17 +8447,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-17.5
+21.0
  20
-24.0
+6.0
  30
 0.0
- 40
-0.35
+ 11
+23.5
+ 21
+6.4
+ 31
+0.0
   0
 LINE
   5
@@ -8653,23 +8471,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+23.5
  20
-23.75
+6.4
  30
 0.0
  11
-17.75
+26.0
  21
-24.25
+6.0
  31
 0.0
   0
-LINE
+LWPOLYLINE
   5
 108
 330
@@ -8677,23 +8495,35 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbLine
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-17.25
+5.6
  20
-24.25
- 30
-0.0
- 11
-17.75
- 21
-23.75
- 31
-0.0
+5.8
+ 10
+6.0
+ 20
+5.8
+ 10
+6.0
+ 20
+6.2
+ 10
+5.6
+ 20
+6.2
+ 10
+5.6
+ 20
+5.8
   0
-TEXT
+LWPOLYLINE
   5
 109
 330
@@ -8701,33 +8531,35 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-17.5
+26.0
  20
-23.5
- 30
-0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
- 11
-17.5
- 21
-23.5
- 31
-0.0
-100
-AcDbText
- 73
-2
+5.8
+ 10
+26.4
+ 20
+5.8
+ 10
+26.4
+ 20
+6.2
+ 10
+26.0
+ 20
+6.2
+ 10
+26.0
+ 20
+5.8
   0
-CIRCLE
+LINE
   5
 10A
 330
@@ -8735,17 +8567,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-17.5
+6.0
  20
-29.0
+11.0
  30
 0.0
- 40
-0.35
+ 11
+26.0
+ 21
+11.0
+ 31
+0.0
   0
 LINE
   5
@@ -8755,19 +8591,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+6.0
  20
-28.75
+11.0
  30
 0.0
  11
-17.75
+8.5
  21
-29.25
+11.4
  31
 0.0
   0
@@ -8779,23 +8615,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+8.5
  20
-29.25
+11.4
  30
 0.0
  11
-17.75
+11.0
  21
-28.75
+11.0
  31
 0.0
   0
-TEXT
+LINE
   5
 10D
 330
@@ -8803,33 +8639,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-17.5
+11.0
  20
-28.5
+11.0
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-17.5
+13.5
  21
-28.5
+11.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 10E
 330
@@ -8837,17 +8663,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-17.5
+13.5
  20
-34.0
+11.4
  30
 0.0
- 40
-0.35
+ 11
+16.0
+ 21
+11.0
+ 31
+0.0
   0
 LINE
   5
@@ -8857,19 +8687,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+16.0
  20
-33.75
+11.0
  30
 0.0
  11
-17.75
+18.5
  21
-34.25
+11.4
  31
 0.0
   0
@@ -8881,23 +8711,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+18.5
  20
-34.25
+11.4
  30
 0.0
  11
-17.75
+21.0
  21
-33.75
+11.0
  31
 0.0
   0
-TEXT
+LINE
   5
 111
 330
@@ -8905,33 +8735,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-17.5
+21.0
  20
-33.5
+11.0
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-17.5
+23.5
  21
-33.5
+11.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 112
 330
@@ -8939,19 +8759,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-17.5
+23.5
  20
-39.0
+11.4
  30
 0.0
- 40
-0.35
+ 11
+26.0
+ 21
+11.0
+ 31
+0.0
   0
-LINE
+LWPOLYLINE
   5
 113
 330
@@ -8959,23 +8783,35 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbLine
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-17.25
+5.6
  20
-38.75
- 30
-0.0
- 11
-17.75
- 21
-39.25
- 31
-0.0
+10.8
+ 10
+6.0
+ 20
+10.8
+ 10
+6.0
+ 20
+11.200000000000001
+ 10
+5.6
+ 20
+11.200000000000001
+ 10
+5.6
+ 20
+10.8
   0
-LINE
+LWPOLYLINE
   5
 114
 330
@@ -8983,23 +8819,35 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbLine
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-17.25
+26.0
  20
-39.25
- 30
-0.0
- 11
-17.75
- 21
-38.75
- 31
-0.0
+10.8
+ 10
+26.4
+ 20
+10.8
+ 10
+26.4
+ 20
+11.200000000000001
+ 10
+26.0
+ 20
+11.200000000000001
+ 10
+26.0
+ 20
+10.8
   0
-TEXT
+LINE
   5
 115
 330
@@ -9007,33 +8855,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-17.5
+6.0
  20
-38.5
+16.0
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-17.5
+26.0
  21
-38.5
+16.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 116
 330
@@ -9041,17 +8879,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-17.5
+6.0
  20
-44.0
+16.0
  30
 0.0
- 40
-0.35
+ 11
+8.5
+ 21
+16.4
+ 31
+0.0
   0
 LINE
   5
@@ -9061,19 +8903,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+8.5
  20
-43.75
+16.4
  30
 0.0
  11
-17.75
+11.0
  21
-44.25
+16.0
  31
 0.0
   0
@@ -9085,23 +8927,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.25
+11.0
  20
-44.25
+16.0
  30
 0.0
  11
-17.75
+13.5
  21
-43.75
+16.4
  31
 0.0
   0
-TEXT
+LINE
   5
 119
 330
@@ -9109,33 +8951,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-17.5
+13.5
  20
-43.5
+16.4
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-17.5
+16.0
  21
-43.5
+16.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 11A
 330
@@ -9143,17 +8975,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-21.5
+16.0
  20
-14.0
+16.0
  30
 0.0
- 40
-0.35
+ 11
+18.5
+ 21
+16.4
+ 31
+0.0
   0
 LINE
   5
@@ -9163,19 +8999,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+18.5
  20
-13.75
+16.4
  30
 0.0
  11
-21.75
+21.0
  21
-14.25
+16.0
  31
 0.0
   0
@@ -9187,23 +9023,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+21.0
  20
-14.25
+16.0
  30
 0.0
  11
-21.75
+23.5
  21
-13.75
+16.4
  31
 0.0
   0
-TEXT
+LINE
   5
 11D
 330
@@ -9211,33 +9047,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-21.5
+23.5
  20
-13.5
+16.4
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-21.5
+26.0
  21
-13.5
+16.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LWPOLYLINE
   5
 11E
 330
@@ -9245,19 +9071,35 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-21.5
+5.6
  20
-19.0
- 30
-0.0
- 40
-0.35
+15.8
+ 10
+6.0
+ 20
+15.8
+ 10
+6.0
+ 20
+16.2
+ 10
+5.6
+ 20
+16.2
+ 10
+5.6
+ 20
+15.8
   0
-LINE
+LWPOLYLINE
   5
 11F
 330
@@ -9265,21 +9107,33 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbLine
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-21.25
+26.0
  20
-18.75
- 30
-0.0
- 11
-21.75
- 21
-19.25
- 31
-0.0
+15.8
+ 10
+26.4
+ 20
+15.8
+ 10
+26.4
+ 20
+16.2
+ 10
+26.0
+ 20
+16.2
+ 10
+26.0
+ 20
+15.8
   0
 LINE
   5
@@ -9289,23 +9143,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+6.0
  20
-19.25
+21.0
  30
 0.0
  11
-21.75
+26.0
  21
-18.75
+21.0
  31
 0.0
   0
-TEXT
+LINE
   5
 121
 330
@@ -9313,33 +9167,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-21.5
+6.0
  20
-18.5
+21.0
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-21.5
+8.5
  21
-18.5
+21.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 122
 330
@@ -9347,17 +9191,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-21.5
+8.5
  20
-24.0
+21.4
  30
 0.0
- 40
-0.35
+ 11
+11.0
+ 21
+21.0
+ 31
+0.0
   0
 LINE
   5
@@ -9367,19 +9215,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+11.0
  20
-23.75
+21.0
  30
 0.0
  11
-21.75
+13.5
  21
-24.25
+21.4
  31
 0.0
   0
@@ -9391,23 +9239,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+13.5
  20
-24.25
+21.4
  30
 0.0
  11
-21.75
+16.0
  21
-23.75
+21.0
  31
 0.0
   0
-TEXT
+LINE
   5
 125
 330
@@ -9415,33 +9263,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-21.5
+16.0
  20
-23.5
+21.0
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-21.5
+18.5
  21
-23.5
+21.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 126
 330
@@ -9449,17 +9287,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-21.5
+18.5
  20
-29.0
+21.4
  30
 0.0
- 40
-0.35
+ 11
+21.0
+ 21
+21.0
+ 31
+0.0
   0
 LINE
   5
@@ -9469,19 +9311,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+21.0
  20
-28.75
+21.0
  30
 0.0
  11
-21.75
+23.5
  21
-29.25
+21.4
  31
 0.0
   0
@@ -9493,23 +9335,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+23.5
  20
-29.25
+21.4
  30
 0.0
  11
-21.75
+26.0
  21
-28.75
+21.0
  31
 0.0
   0
-TEXT
+LWPOLYLINE
   5
 129
 330
@@ -9517,33 +9359,35 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-21.5
+5.6
  20
-28.5
- 30
-0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
- 11
-21.5
- 21
-28.5
- 31
-0.0
-100
-AcDbText
- 73
-2
+20.8
+ 10
+6.0
+ 20
+20.8
+ 10
+6.0
+ 20
+21.2
+ 10
+5.6
+ 20
+21.2
+ 10
+5.6
+ 20
+20.8
   0
-CIRCLE
+LWPOLYLINE
   5
 12A
 330
@@ -9551,17 +9395,33 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-21.5
+26.0
  20
-34.0
- 30
-0.0
- 40
-0.35
+20.8
+ 10
+26.4
+ 20
+20.8
+ 10
+26.4
+ 20
+21.2
+ 10
+26.0
+ 20
+21.2
+ 10
+26.0
+ 20
+20.8
   0
 LINE
   5
@@ -9571,19 +9431,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+6.0
  20
-33.75
+26.0
  30
 0.0
  11
-21.75
+26.0
  21
-34.25
+26.0
  31
 0.0
   0
@@ -9595,23 +9455,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+6.0
  20
-34.25
+26.0
  30
 0.0
  11
-21.75
+8.5
  21
-33.75
+26.4
  31
 0.0
   0
-TEXT
+LINE
   5
 12D
 330
@@ -9619,33 +9479,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-21.5
+8.5
  20
-33.5
+26.4
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-21.5
+11.0
  21
-33.5
+26.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 12E
 330
@@ -9653,17 +9503,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-21.5
+11.0
  20
-39.0
+26.0
  30
 0.0
- 40
-0.35
+ 11
+13.5
+ 21
+26.4
+ 31
+0.0
   0
 LINE
   5
@@ -9673,19 +9527,19 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+13.5
  20
-38.75
+26.4
  30
 0.0
  11
-21.75
+16.0
  21
-39.25
+26.0
  31
 0.0
   0
@@ -9697,23 +9551,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+16.0
  20
-39.25
+26.0
  30
 0.0
  11
-21.75
+18.5
  21
-38.75
+26.4
  31
 0.0
   0
-TEXT
+LINE
   5
 131
 330
@@ -9721,33 +9575,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-21.5
+18.5
  20
-38.5
+26.4
  30
 0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
  11
-21.5
+21.0
  21
-38.5
+26.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 132
 330
@@ -9755,17 +9599,21 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-21.5
+21.0
  20
-44.0
+26.0
  30
 0.0
- 40
-0.35
+ 11
+23.5
+ 21
+26.4
+ 31
+0.0
   0
 LINE
   5
@@ -9775,23 +9623,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
 AcDbLine
  10
-21.25
+23.5
  20
-43.75
+26.4
  30
 0.0
  11
-21.75
+26.0
  21
-44.25
+26.0
  31
 0.0
   0
-LINE
+LWPOLYLINE
   5
 134
 330
@@ -9799,23 +9647,35 @@ LINE
 100
 AcDbEntity
   8
-ELEC_HIGHBAY
+ARQ_TIJERALES
 100
-AcDbLine
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-21.25
+5.6
  20
-44.25
- 30
-0.0
- 11
-21.75
- 21
-43.75
- 31
-0.0
+25.8
+ 10
+6.0
+ 20
+25.8
+ 10
+6.0
+ 20
+26.2
+ 10
+5.6
+ 20
+26.2
+ 10
+5.6
+ 20
+25.8
   0
-TEXT
+LWPOLYLINE
   5
 135
 330
@@ -9823,33 +9683,35 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_TEXTOS
+ARQ_TIJERALES
 100
-AcDbText
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-21.5
+26.0
  20
-43.5
- 30
-0.0
- 40
-0.14
-  1
-HB-150W
- 72
-1
- 11
-21.5
- 21
-43.5
- 31
-0.0
-100
-AcDbText
- 73
-2
+25.8
+ 10
+26.4
+ 20
+25.8
+ 10
+26.4
+ 20
+26.2
+ 10
+26.0
+ 20
+26.2
+ 10
+26.0
+ 20
+25.8
   0
-CIRCLE
+LINE
   5
 136
 330
@@ -9857,19 +9719,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-5.2
+6.0
  20
-15.0
+31.0
  30
 0.0
- 40
-0.3
+ 11
+26.0
+ 21
+31.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 137
 330
@@ -9877,33 +9743,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-5.2
+6.0
  20
-15.5
+31.0
  30
 0.0
- 40
-0.14
-  1
-3Ø 380V 32A
- 72
-1
  11
-5.2
+8.5
  21
-15.5
+31.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 138
 330
@@ -9911,19 +9767,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-5.2
+8.5
  20
-25.0
+31.4
  30
 0.0
- 40
-0.3
+ 11
+11.0
+ 21
+31.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 139
 330
@@ -9931,33 +9791,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-5.2
+11.0
  20
-25.5
+31.0
  30
 0.0
- 40
-0.14
-  1
-3Ø 380V 32A
- 72
-1
  11
-5.2
+13.5
  21
-25.5
+31.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 13A
 330
@@ -9965,19 +9815,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-5.2
+13.5
  20
-35.0
+31.4
  30
 0.0
- 40
-0.3
+ 11
+16.0
+ 21
+31.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 13B
 330
@@ -9985,33 +9839,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-5.2
+16.0
  20
-35.5
+31.0
  30
 0.0
- 40
-0.14
-  1
-3Ø 380V 32A
- 72
-1
  11
-5.2
+18.5
  21
-35.5
+31.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 13C
 330
@@ -10019,19 +9863,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-24.8
+18.5
  20
-15.0
+31.4
  30
 0.0
- 40
-0.3
+ 11
+21.0
+ 21
+31.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 13D
 330
@@ -10039,33 +9887,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-24.8
+21.0
  20
-15.5
+31.0
  30
 0.0
- 40
-0.14
-  1
-3Ø 380V 32A
- 72
-1
  11
-24.8
+23.5
  21
-15.5
+31.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 13E
 330
@@ -10073,19 +9911,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-24.8
+23.5
  20
-25.0
+31.4
  30
 0.0
- 40
-0.3
+ 11
+26.0
+ 21
+31.0
+ 31
+0.0
   0
-TEXT
+LWPOLYLINE
   5
 13F
 330
@@ -10093,33 +9935,35 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbText
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-24.8
+5.6
  20
-25.5
- 30
-0.0
- 40
-0.14
-  1
-3Ø 380V 32A
- 72
-1
- 11
-24.8
- 21
-25.5
- 31
-0.0
-100
-AcDbText
- 73
-2
+30.8
+ 10
+6.0
+ 20
+30.8
+ 10
+6.0
+ 20
+31.2
+ 10
+5.6
+ 20
+31.2
+ 10
+5.6
+ 20
+30.8
   0
-CIRCLE
+LWPOLYLINE
   5
 140
 330
@@ -10127,19 +9971,35 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-24.8
+26.0
  20
-35.0
- 30
-0.0
- 40
-0.3
+30.8
+ 10
+26.4
+ 20
+30.8
+ 10
+26.4
+ 20
+31.2
+ 10
+26.0
+ 20
+31.2
+ 10
+26.0
+ 20
+30.8
   0
-TEXT
+LINE
   5
 141
 330
@@ -10147,33 +10007,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-24.8
+6.0
  20
-35.5
+36.0
  30
 0.0
- 40
-0.14
-  1
-3Ø 380V 32A
- 72
-1
  11
-24.8
+26.0
  21
-35.5
+36.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 142
 330
@@ -10181,19 +10031,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-15.0
+6.0
  20
-44.8
+36.0
  30
 0.0
- 40
-0.3
+ 11
+8.5
+ 21
+36.4
+ 31
+0.0
   0
-TEXT
+LINE
   5
 143
 330
@@ -10201,31 +10055,21 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_STECKER
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-15.0
+8.5
  20
-45.3
+36.4
  30
 0.0
- 40
-0.14
-  1
-3Ø 380V 32A
- 72
-1
  11
-15.0
+11.0
  21
-45.3
+36.0
  31
 0.0
-100
-AcDbText
- 73
-2
   0
 LINE
   5
@@ -10235,23 +10079,23 @@ LINE
 100
 AcDbEntity
   8
-ELEC_MOTORES
+ARQ_TIJERALES
 100
 AcDbLine
  10
-6.0
+11.0
  20
-25.0
+36.0
  30
 0.0
  11
-24.0
+13.5
  21
-25.0
+36.4
  31
 0.0
   0
-LWPOLYLINE
+LINE
   5
 145
 330
@@ -10259,35 +10103,23 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-ELEC_MOTORES
+ARQ_TIJERALES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-14.4
+13.5
  20
-24.6
- 10
-15.6
- 20
-24.6
- 10
-15.6
- 20
-25.400000000000002
- 10
-14.4
- 20
-25.400000000000002
- 10
-14.4
- 20
-24.6
+36.4
+ 30
+0.0
+ 11
+16.0
+ 21
+36.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 146
 330
@@ -10295,33 +10127,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_MOTORES
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-15.0
+16.0
  20
-25.8
+36.0
  30
 0.0
- 40
-0.18
-  1
-PUENTE GRÚA 10 HP
- 72
-1
  11
-15.0
+18.5
  21
-25.8
+36.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-LWPOLYLINE
+LINE
   5
 147
 330
@@ -10329,35 +10151,23 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-ELEC_MOTORES
+ARQ_TIJERALES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-6.0
+18.5
  20
-40.0
- 10
-7.5
- 20
-40.0
- 10
-7.5
- 20
-41.0
- 10
-6.0
- 20
-41.0
- 10
-6.0
- 20
-40.0
+36.4
+ 30
+0.0
+ 11
+21.0
+ 21
+36.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 148
 330
@@ -10365,33 +10175,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_MOTORES
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-6.75
+21.0
  20
-41.3
+36.0
  30
 0.0
- 40
-0.18
-  1
-COMPRESOR 15 HP
- 72
-1
  11
-6.75
+23.5
  21
-41.3
+36.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-LWPOLYLINE
+LINE
   5
 149
 330
@@ -10399,35 +10199,23 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-ELEC_MOTORES
+ARQ_TIJERALES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-19.0
+23.5
  20
-35.0
- 10
-23.0
- 20
-35.0
- 10
-23.0
- 20
-38.0
- 10
-19.0
- 20
-38.0
- 10
-19.0
- 20
-35.0
+36.4
+ 30
+0.0
+ 11
+26.0
+ 21
+36.0
+ 31
+0.0
   0
-TEXT
+LWPOLYLINE
   5
 14A
 330
@@ -10435,31 +10223,33 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_MOTORES
+ARQ_TIJERALES
 100
-AcDbText
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-21.0
+5.6
  20
-38.5
- 30
-0.0
- 40
-0.2
-  1
-ZONA DE MAQUINARIA (25 kW)
- 72
-1
- 11
-21.0
- 21
-38.5
- 31
-0.0
-100
-AcDbText
- 73
-2
+35.8
+ 10
+6.0
+ 20
+35.8
+ 10
+6.0
+ 20
+36.199999999999996
+ 10
+5.6
+ 20
+36.199999999999996
+ 10
+5.6
+ 20
+35.8
   0
 LWPOLYLINE
   5
@@ -10469,9 +10259,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
-  6
-DASHED
+ARQ_TIJERALES
 100
 AcDbPolyline
  90
@@ -10479,27 +10267,27 @@ AcDbPolyline
  70
 0
  10
-3.5
+26.0
  20
-3.5
+35.8
  10
-26.5
+26.4
  20
-3.5
+35.8
  10
-26.5
+26.4
  20
-46.5
+36.199999999999996
  10
-3.5
+26.0
  20
-46.5
+36.199999999999996
  10
-3.5
+26.0
  20
-3.5
+35.8
   0
-CIRCLE
+LINE
   5
 14C
 330
@@ -10507,19 +10295,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-3.5
+6.0
  20
-3.5
+41.0
  30
 0.0
- 40
-0.4
+ 11
+26.0
+ 21
+41.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 14D
 330
@@ -10527,33 +10319,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-3.5
+6.0
  20
-2.8
+41.0
  30
 0.0
- 40
-0.15
-  1
-PAT <= 5 Ohm
- 72
-1
  11
-3.5
+8.5
  21
-2.8
+41.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 14E
 330
@@ -10561,19 +10343,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-26.5
+8.5
  20
-3.5
+41.4
  30
 0.0
- 40
-0.4
+ 11
+11.0
+ 21
+41.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 14F
 330
@@ -10581,33 +10367,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-26.5
+11.0
  20
-2.8
+41.0
  30
 0.0
- 40
-0.15
-  1
-PAT <= 5 Ohm
- 72
-1
  11
-26.5
+13.5
  21
-2.8
+41.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 150
 330
@@ -10615,19 +10391,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-26.5
+13.5
  20
-46.5
+41.4
  30
 0.0
- 40
-0.4
+ 11
+16.0
+ 21
+41.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 151
 330
@@ -10635,33 +10415,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-26.5
+16.0
  20
-45.8
+41.0
  30
 0.0
- 40
-0.15
-  1
-PAT <= 5 Ohm
- 72
-1
  11
-26.5
+18.5
  21
-45.8
+41.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-CIRCLE
+LINE
   5
 152
 330
@@ -10669,19 +10439,23 @@ CIRCLE
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbCircle
+AcDbLine
  10
-3.5
+18.5
  20
-46.5
+41.4
  30
 0.0
- 40
-0.4
+ 11
+21.0
+ 21
+41.0
+ 31
+0.0
   0
-TEXT
+LINE
   5
 153
 330
@@ -10689,33 +10463,23 @@ TEXT
 100
 AcDbEntity
   8
-ELEC_MALLA_PAT
+ARQ_TIJERALES
 100
-AcDbText
+AcDbLine
  10
-3.5
+21.0
  20
-45.8
+41.0
  30
 0.0
- 40
-0.15
-  1
-PAT <= 5 Ohm
- 72
-1
  11
-3.5
+23.5
  21
-45.8
+41.4
  31
 0.0
-100
-AcDbText
- 73
-2
   0
-LWPOLYLINE
+LINE
   5
 154
 330
@@ -10723,32 +10487,20 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-MARCO_CAJETIN
+ARQ_TIJERALES
 100
-AcDbPolyline
- 90
-5
- 70
-0
+AcDbLine
  10
-0.0
+23.5
  20
+41.4
+ 30
 0.0
- 10
-32.0
- 20
-0.0
- 10
-32.0
- 20
-48.0
- 10
-0.0
- 20
-48.0
- 10
-0.0
- 20
+ 11
+26.0
+ 21
+41.0
+ 31
 0.0
   0
 LWPOLYLINE
@@ -10759,7 +10511,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-MARCO_CAJETIN
+ARQ_TIJERALES
 100
 AcDbPolyline
  90
@@ -10767,27 +10519,27 @@ AcDbPolyline
  70
 0
  10
-17.5
+5.6
  20
-0.5
+40.8
  10
-31.5
+6.0
  20
-0.5
+40.8
  10
-31.5
+6.0
  20
-5.0
+41.199999999999996
  10
-17.5
+5.6
  20
-5.0
+41.199999999999996
  10
-17.5
+5.6
  20
-0.5
+40.8
   0
-LINE
+LWPOLYLINE
   5
 156
 330
@@ -10795,21 +10547,33 @@ LINE
 100
 AcDbEntity
   8
-MEMBRETE_LINEAS
+ARQ_TIJERALES
 100
-AcDbLine
+AcDbPolyline
+ 90
+5
+ 70
+0
  10
-17.5
+26.0
  20
-4.1
- 30
-0.0
- 11
-31.5
- 21
-4.1
- 31
-0.0
+40.8
+ 10
+26.4
+ 20
+40.8
+ 10
+26.4
+ 20
+41.199999999999996
+ 10
+26.0
+ 20
+41.199999999999996
+ 10
+26.0
+ 20
+40.8
   0
 LINE
   5
@@ -10819,19 +10583,19 @@ LINE
 100
 AcDbEntity
   8
-MEMBRETE_LINEAS
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.5
+6.0
  20
-3.2
+46.0
  30
 0.0
  11
-31.5
+26.0
  21
-3.2
+46.0
  31
 0.0
   0
@@ -10843,19 +10607,19 @@ LINE
 100
 AcDbEntity
   8
-MEMBRETE_LINEAS
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.5
+6.0
  20
-2.3
+46.0
  30
 0.0
  11
-31.5
+8.5
  21
-2.3
+46.4
  31
 0.0
   0
@@ -10867,19 +10631,19 @@ LINE
 100
 AcDbEntity
   8
-MEMBRETE_LINEAS
+ARQ_TIJERALES
 100
 AcDbLine
  10
-17.5
+8.5
  20
-1.4
+46.4
  30
 0.0
  11
-31.5
+11.0
  21
-1.4
+46.0
  31
 0.0
   0
@@ -10891,17 +10655,4691 @@ LINE
 100
 AcDbEntity
   8
+ARQ_TIJERALES
+100
+AcDbLine
+ 10
+11.0
+ 20
+46.0
+ 30
+0.0
+ 11
+13.5
+ 21
+46.4
+ 31
+0.0
+  0
+LINE
+  5
+15B
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TIJERALES
+100
+AcDbLine
+ 10
+13.5
+ 20
+46.4
+ 30
+0.0
+ 11
+16.0
+ 21
+46.0
+ 31
+0.0
+  0
+LINE
+  5
+15C
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TIJERALES
+100
+AcDbLine
+ 10
+16.0
+ 20
+46.0
+ 30
+0.0
+ 11
+18.5
+ 21
+46.4
+ 31
+0.0
+  0
+LINE
+  5
+15D
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TIJERALES
+100
+AcDbLine
+ 10
+18.5
+ 20
+46.4
+ 30
+0.0
+ 11
+21.0
+ 21
+46.0
+ 31
+0.0
+  0
+LINE
+  5
+15E
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TIJERALES
+100
+AcDbLine
+ 10
+21.0
+ 20
+46.0
+ 30
+0.0
+ 11
+23.5
+ 21
+46.4
+ 31
+0.0
+  0
+LINE
+  5
+15F
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TIJERALES
+100
+AcDbLine
+ 10
+23.5
+ 20
+46.4
+ 30
+0.0
+ 11
+26.0
+ 21
+46.0
+ 31
+0.0
+  0
+LWPOLYLINE
+  5
+160
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TIJERALES
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+5.6
+ 20
+45.8
+ 10
+6.0
+ 20
+45.8
+ 10
+6.0
+ 20
+46.199999999999996
+ 10
+5.6
+ 20
+46.199999999999996
+ 10
+5.6
+ 20
+45.8
+  0
+LWPOLYLINE
+  5
+161
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TIJERALES
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+26.0
+ 20
+45.8
+ 10
+26.4
+ 20
+45.8
+ 10
+26.4
+ 20
+46.199999999999996
+ 10
+26.0
+ 20
+46.199999999999996
+ 10
+26.0
+ 20
+45.8
+  0
+LWPOLYLINE
+  5
+162
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TGD
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+6.5
+ 20
+12.5
+ 10
+7.7
+ 20
+12.5
+ 10
+7.7
+ 20
+13.0
+ 10
+6.5
+ 20
+13.0
+ 10
+6.5
+ 20
+12.5
+  0
+TEXT
+  5
+163
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TGD
+100
+AcDbText
+ 10
+7.1
+ 20
+13.3
+ 30
+0.0
+ 40
+0.22
+  1
+TGD-NAVE 380V
+ 72
+1
+ 11
+7.1
+ 21
+13.3
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LWPOLYLINE
+  5
+164
+330
+17
+100
+AcDbEntity
+  8
+UNIFILAR_BANCO
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+8.0
+ 20
+12.5
+ 10
+8.8
+ 20
+12.5
+ 10
+8.8
+ 20
+13.0
+ 10
+8.0
+ 20
+13.0
+ 10
+8.0
+ 20
+12.5
+  0
+TEXT
+  5
+165
+330
+17
+100
+AcDbEntity
+  8
+UNIFILAR_BANCO
+100
+AcDbText
+ 10
+8.4
+ 20
+13.3
+ 30
+0.0
+ 40
+0.18
+  1
+BC-AUTO 15kVAR
+ 72
+1
+ 11
+8.4
+ 21
+13.3
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+166
+330
+17
+100
+AcDbEntity
+  8
+ELEC_BANDEJA
+100
+AcDbLine
+ 10
+15.85
+ 20
+12.0
+ 30
+0.0
+ 11
+15.85
+ 21
+45.0
+ 31
+0.0
+  0
+LINE
+  5
+167
+330
+17
+100
+AcDbEntity
+  8
+ELEC_BANDEJA
+100
+AcDbLine
+ 10
+16.15
+ 20
+12.0
+ 30
+0.0
+ 11
+16.15
+ 21
+45.0
+ 31
+0.0
+  0
+TEXT
+  5
+168
+330
+17
+100
+AcDbEntity
+  8
+ELEC_BANDEJA
+100
+AcDbText
+ 10
+16.0
+ 20
+31.0
+ 30
+0.0
+ 40
+0.22
+  1
+BANDEJA PORTACABLES METÁLICA 200x50mm
+ 50
+90.0
+ 72
+1
+ 11
+16.0
+ 21
+31.0
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+169
+330
+17
+100
+AcDbEntity
+  8
+ELEC_BANDEJA
+100
+AcDbLine
+ 10
+7.1
+ 20
+13.0
+ 30
+0.0
+ 11
+7.1
+ 21
+14.0
+ 31
+0.0
+  0
+LINE
+  5
+16A
+330
+17
+100
+AcDbEntity
+  8
+ELEC_BANDEJA
+100
+AcDbLine
+ 10
+7.1
+ 20
+14.0
+ 30
+0.0
+ 11
+16.0
+ 21
+14.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+16B
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+9.5
+ 20
+15.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+16C
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+14.75
+ 30
+0.0
+ 11
+9.75
+ 21
+15.25
+ 31
+0.0
+  0
+LINE
+  5
+16D
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+15.25
+ 30
+0.0
+ 11
+9.75
+ 21
+14.75
+ 31
+0.0
+  0
+TEXT
+  5
+16E
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+9.5
+ 20
+14.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+9.5
+ 21
+14.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+16F
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+9.5
+ 20
+20.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+170
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+19.75
+ 30
+0.0
+ 11
+9.75
+ 21
+20.25
+ 31
+0.0
+  0
+LINE
+  5
+171
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+20.25
+ 30
+0.0
+ 11
+9.75
+ 21
+19.75
+ 31
+0.0
+  0
+TEXT
+  5
+172
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+9.5
+ 20
+19.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+9.5
+ 21
+19.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+173
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+9.5
+ 20
+25.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+174
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+24.75
+ 30
+0.0
+ 11
+9.75
+ 21
+25.25
+ 31
+0.0
+  0
+LINE
+  5
+175
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+25.25
+ 30
+0.0
+ 11
+9.75
+ 21
+24.75
+ 31
+0.0
+  0
+TEXT
+  5
+176
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+9.5
+ 20
+24.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+9.5
+ 21
+24.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+177
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+9.5
+ 20
+30.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+178
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+29.75
+ 30
+0.0
+ 11
+9.75
+ 21
+30.25
+ 31
+0.0
+  0
+LINE
+  5
+179
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+30.25
+ 30
+0.0
+ 11
+9.75
+ 21
+29.75
+ 31
+0.0
+  0
+TEXT
+  5
+17A
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+9.5
+ 20
+29.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+9.5
+ 21
+29.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+17B
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+9.5
+ 20
+35.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+17C
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+34.75
+ 30
+0.0
+ 11
+9.75
+ 21
+35.25
+ 31
+0.0
+  0
+LINE
+  5
+17D
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+35.25
+ 30
+0.0
+ 11
+9.75
+ 21
+34.75
+ 31
+0.0
+  0
+TEXT
+  5
+17E
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+9.5
+ 20
+34.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+9.5
+ 21
+34.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+17F
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+9.5
+ 20
+40.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+180
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+39.75
+ 30
+0.0
+ 11
+9.75
+ 21
+40.25
+ 31
+0.0
+  0
+LINE
+  5
+181
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+40.25
+ 30
+0.0
+ 11
+9.75
+ 21
+39.75
+ 31
+0.0
+  0
+TEXT
+  5
+182
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+9.5
+ 20
+39.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+9.5
+ 21
+39.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+183
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+9.5
+ 20
+45.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+184
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+44.75
+ 30
+0.0
+ 11
+9.75
+ 21
+45.25
+ 31
+0.0
+  0
+LINE
+  5
+185
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+9.25
+ 20
+45.25
+ 30
+0.0
+ 11
+9.75
+ 21
+44.75
+ 31
+0.0
+  0
+TEXT
+  5
+186
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+9.5
+ 20
+44.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+9.5
+ 21
+44.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+187
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+13.5
+ 20
+15.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+188
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+14.75
+ 30
+0.0
+ 11
+13.75
+ 21
+15.25
+ 31
+0.0
+  0
+LINE
+  5
+189
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+15.25
+ 30
+0.0
+ 11
+13.75
+ 21
+14.75
+ 31
+0.0
+  0
+TEXT
+  5
+18A
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+13.5
+ 20
+14.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+13.5
+ 21
+14.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+18B
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+13.5
+ 20
+20.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+18C
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+19.75
+ 30
+0.0
+ 11
+13.75
+ 21
+20.25
+ 31
+0.0
+  0
+LINE
+  5
+18D
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+20.25
+ 30
+0.0
+ 11
+13.75
+ 21
+19.75
+ 31
+0.0
+  0
+TEXT
+  5
+18E
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+13.5
+ 20
+19.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+13.5
+ 21
+19.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+18F
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+13.5
+ 20
+25.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+190
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+24.75
+ 30
+0.0
+ 11
+13.75
+ 21
+25.25
+ 31
+0.0
+  0
+LINE
+  5
+191
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+25.25
+ 30
+0.0
+ 11
+13.75
+ 21
+24.75
+ 31
+0.0
+  0
+TEXT
+  5
+192
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+13.5
+ 20
+24.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+13.5
+ 21
+24.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+193
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+13.5
+ 20
+30.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+194
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+29.75
+ 30
+0.0
+ 11
+13.75
+ 21
+30.25
+ 31
+0.0
+  0
+LINE
+  5
+195
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+30.25
+ 30
+0.0
+ 11
+13.75
+ 21
+29.75
+ 31
+0.0
+  0
+TEXT
+  5
+196
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+13.5
+ 20
+29.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+13.5
+ 21
+29.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+197
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+13.5
+ 20
+35.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+198
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+34.75
+ 30
+0.0
+ 11
+13.75
+ 21
+35.25
+ 31
+0.0
+  0
+LINE
+  5
+199
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+35.25
+ 30
+0.0
+ 11
+13.75
+ 21
+34.75
+ 31
+0.0
+  0
+TEXT
+  5
+19A
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+13.5
+ 20
+34.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+13.5
+ 21
+34.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+19B
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+13.5
+ 20
+40.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+19C
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+39.75
+ 30
+0.0
+ 11
+13.75
+ 21
+40.25
+ 31
+0.0
+  0
+LINE
+  5
+19D
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+40.25
+ 30
+0.0
+ 11
+13.75
+ 21
+39.75
+ 31
+0.0
+  0
+TEXT
+  5
+19E
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+13.5
+ 20
+39.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+13.5
+ 21
+39.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+19F
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+13.5
+ 20
+45.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1A0
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+44.75
+ 30
+0.0
+ 11
+13.75
+ 21
+45.25
+ 31
+0.0
+  0
+LINE
+  5
+1A1
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+13.25
+ 20
+45.25
+ 30
+0.0
+ 11
+13.75
+ 21
+44.75
+ 31
+0.0
+  0
+TEXT
+  5
+1A2
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+13.5
+ 20
+44.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+13.5
+ 21
+44.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1A3
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+18.5
+ 20
+15.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1A4
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+14.75
+ 30
+0.0
+ 11
+18.75
+ 21
+15.25
+ 31
+0.0
+  0
+LINE
+  5
+1A5
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+15.25
+ 30
+0.0
+ 11
+18.75
+ 21
+14.75
+ 31
+0.0
+  0
+TEXT
+  5
+1A6
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+18.5
+ 20
+14.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+18.5
+ 21
+14.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1A7
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+18.5
+ 20
+20.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1A8
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+19.75
+ 30
+0.0
+ 11
+18.75
+ 21
+20.25
+ 31
+0.0
+  0
+LINE
+  5
+1A9
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+20.25
+ 30
+0.0
+ 11
+18.75
+ 21
+19.75
+ 31
+0.0
+  0
+TEXT
+  5
+1AA
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+18.5
+ 20
+19.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+18.5
+ 21
+19.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1AB
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+18.5
+ 20
+25.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1AC
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+24.75
+ 30
+0.0
+ 11
+18.75
+ 21
+25.25
+ 31
+0.0
+  0
+LINE
+  5
+1AD
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+25.25
+ 30
+0.0
+ 11
+18.75
+ 21
+24.75
+ 31
+0.0
+  0
+TEXT
+  5
+1AE
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+18.5
+ 20
+24.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+18.5
+ 21
+24.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1AF
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+18.5
+ 20
+30.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1B0
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+29.75
+ 30
+0.0
+ 11
+18.75
+ 21
+30.25
+ 31
+0.0
+  0
+LINE
+  5
+1B1
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+30.25
+ 30
+0.0
+ 11
+18.75
+ 21
+29.75
+ 31
+0.0
+  0
+TEXT
+  5
+1B2
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+18.5
+ 20
+29.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+18.5
+ 21
+29.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1B3
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+18.5
+ 20
+35.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1B4
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+34.75
+ 30
+0.0
+ 11
+18.75
+ 21
+35.25
+ 31
+0.0
+  0
+LINE
+  5
+1B5
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+35.25
+ 30
+0.0
+ 11
+18.75
+ 21
+34.75
+ 31
+0.0
+  0
+TEXT
+  5
+1B6
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+18.5
+ 20
+34.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+18.5
+ 21
+34.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1B7
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+18.5
+ 20
+40.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1B8
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+39.75
+ 30
+0.0
+ 11
+18.75
+ 21
+40.25
+ 31
+0.0
+  0
+LINE
+  5
+1B9
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+40.25
+ 30
+0.0
+ 11
+18.75
+ 21
+39.75
+ 31
+0.0
+  0
+TEXT
+  5
+1BA
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+18.5
+ 20
+39.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+18.5
+ 21
+39.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1BB
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+18.5
+ 20
+45.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1BC
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+44.75
+ 30
+0.0
+ 11
+18.75
+ 21
+45.25
+ 31
+0.0
+  0
+LINE
+  5
+1BD
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+18.25
+ 20
+45.25
+ 30
+0.0
+ 11
+18.75
+ 21
+44.75
+ 31
+0.0
+  0
+TEXT
+  5
+1BE
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+18.5
+ 20
+44.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+18.5
+ 21
+44.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1BF
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+22.5
+ 20
+15.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1C0
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+14.75
+ 30
+0.0
+ 11
+22.75
+ 21
+15.25
+ 31
+0.0
+  0
+LINE
+  5
+1C1
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+15.25
+ 30
+0.0
+ 11
+22.75
+ 21
+14.75
+ 31
+0.0
+  0
+TEXT
+  5
+1C2
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+22.5
+ 20
+14.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+22.5
+ 21
+14.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1C3
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+22.5
+ 20
+20.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1C4
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+19.75
+ 30
+0.0
+ 11
+22.75
+ 21
+20.25
+ 31
+0.0
+  0
+LINE
+  5
+1C5
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+20.25
+ 30
+0.0
+ 11
+22.75
+ 21
+19.75
+ 31
+0.0
+  0
+TEXT
+  5
+1C6
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+22.5
+ 20
+19.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+22.5
+ 21
+19.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1C7
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+22.5
+ 20
+25.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1C8
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+24.75
+ 30
+0.0
+ 11
+22.75
+ 21
+25.25
+ 31
+0.0
+  0
+LINE
+  5
+1C9
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+25.25
+ 30
+0.0
+ 11
+22.75
+ 21
+24.75
+ 31
+0.0
+  0
+TEXT
+  5
+1CA
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+22.5
+ 20
+24.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+22.5
+ 21
+24.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1CB
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+22.5
+ 20
+30.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1CC
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+29.75
+ 30
+0.0
+ 11
+22.75
+ 21
+30.25
+ 31
+0.0
+  0
+LINE
+  5
+1CD
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+30.25
+ 30
+0.0
+ 11
+22.75
+ 21
+29.75
+ 31
+0.0
+  0
+TEXT
+  5
+1CE
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+22.5
+ 20
+29.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+22.5
+ 21
+29.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1CF
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+22.5
+ 20
+35.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1D0
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+34.75
+ 30
+0.0
+ 11
+22.75
+ 21
+35.25
+ 31
+0.0
+  0
+LINE
+  5
+1D1
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+35.25
+ 30
+0.0
+ 11
+22.75
+ 21
+34.75
+ 31
+0.0
+  0
+TEXT
+  5
+1D2
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+22.5
+ 20
+34.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+22.5
+ 21
+34.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1D3
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+22.5
+ 20
+40.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1D4
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+39.75
+ 30
+0.0
+ 11
+22.75
+ 21
+40.25
+ 31
+0.0
+  0
+LINE
+  5
+1D5
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+40.25
+ 30
+0.0
+ 11
+22.75
+ 21
+39.75
+ 31
+0.0
+  0
+TEXT
+  5
+1D6
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+22.5
+ 20
+39.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+22.5
+ 21
+39.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1D7
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbCircle
+ 10
+22.5
+ 20
+45.0
+ 30
+0.0
+ 40
+0.35
+  0
+LINE
+  5
+1D8
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+44.75
+ 30
+0.0
+ 11
+22.75
+ 21
+45.25
+ 31
+0.0
+  0
+LINE
+  5
+1D9
+330
+17
+100
+AcDbEntity
+  8
+ELEC_HIGHBAY
+100
+AcDbLine
+ 10
+22.25
+ 20
+45.25
+ 30
+0.0
+ 11
+22.75
+ 21
+44.75
+ 31
+0.0
+  0
+TEXT
+  5
+1DA
+330
+17
+100
+AcDbEntity
+  8
+ELEC_TEXTOS
+100
+AcDbText
+ 10
+22.5
+ 20
+44.5
+ 30
+0.0
+ 40
+0.14
+  1
+HB-150W
+ 72
+1
+ 11
+22.5
+ 21
+44.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1DB
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbCircle
+ 10
+6.2
+ 20
+16.0
+ 30
+0.0
+ 40
+0.3
+  0
+TEXT
+  5
+1DC
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbText
+ 10
+6.2
+ 20
+16.5
+ 30
+0.0
+ 40
+0.14
+  1
+3Ø 380V 32A
+ 72
+1
+ 11
+6.2
+ 21
+16.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1DD
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbCircle
+ 10
+6.2
+ 20
+26.0
+ 30
+0.0
+ 40
+0.3
+  0
+TEXT
+  5
+1DE
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbText
+ 10
+6.2
+ 20
+26.5
+ 30
+0.0
+ 40
+0.14
+  1
+3Ø 380V 32A
+ 72
+1
+ 11
+6.2
+ 21
+26.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1DF
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbCircle
+ 10
+6.2
+ 20
+36.0
+ 30
+0.0
+ 40
+0.3
+  0
+TEXT
+  5
+1E0
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbText
+ 10
+6.2
+ 20
+36.5
+ 30
+0.0
+ 40
+0.14
+  1
+3Ø 380V 32A
+ 72
+1
+ 11
+6.2
+ 21
+36.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1E1
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbCircle
+ 10
+25.8
+ 20
+16.0
+ 30
+0.0
+ 40
+0.3
+  0
+TEXT
+  5
+1E2
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbText
+ 10
+25.8
+ 20
+16.5
+ 30
+0.0
+ 40
+0.14
+  1
+3Ø 380V 32A
+ 72
+1
+ 11
+25.8
+ 21
+16.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1E3
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbCircle
+ 10
+25.8
+ 20
+26.0
+ 30
+0.0
+ 40
+0.3
+  0
+TEXT
+  5
+1E4
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbText
+ 10
+25.8
+ 20
+26.5
+ 30
+0.0
+ 40
+0.14
+  1
+3Ø 380V 32A
+ 72
+1
+ 11
+25.8
+ 21
+26.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1E5
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbCircle
+ 10
+25.8
+ 20
+36.0
+ 30
+0.0
+ 40
+0.3
+  0
+TEXT
+  5
+1E6
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbText
+ 10
+25.8
+ 20
+36.5
+ 30
+0.0
+ 40
+0.14
+  1
+3Ø 380V 32A
+ 72
+1
+ 11
+25.8
+ 21
+36.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1E7
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbCircle
+ 10
+16.0
+ 20
+45.8
+ 30
+0.0
+ 40
+0.3
+  0
+TEXT
+  5
+1E8
+330
+17
+100
+AcDbEntity
+  8
+ELEC_STECKER
+100
+AcDbText
+ 10
+16.0
+ 20
+46.3
+ 30
+0.0
+ 40
+0.14
+  1
+3Ø 380V 32A
+ 72
+1
+ 11
+16.0
+ 21
+46.3
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+1E9
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MOTORES
+100
+AcDbLine
+ 10
+7.0
+ 20
+26.0
+ 30
+0.0
+ 11
+25.0
+ 21
+26.0
+ 31
+0.0
+  0
+LWPOLYLINE
+  5
+1EA
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MOTORES
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+15.4
+ 20
+25.6
+ 10
+16.6
+ 20
+25.6
+ 10
+16.6
+ 20
+26.400000000000002
+ 10
+15.4
+ 20
+26.400000000000002
+ 10
+15.4
+ 20
+25.6
+  0
+TEXT
+  5
+1EB
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MOTORES
+100
+AcDbText
+ 10
+16.0
+ 20
+26.8
+ 30
+0.0
+ 40
+0.18
+  1
+PUENTE GRÚA 10 HP
+ 72
+1
+ 11
+16.0
+ 21
+26.8
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LWPOLYLINE
+  5
+1EC
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MOTORES
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+7.0
+ 20
+41.0
+ 10
+8.5
+ 20
+41.0
+ 10
+8.5
+ 20
+42.0
+ 10
+7.0
+ 20
+42.0
+ 10
+7.0
+ 20
+41.0
+  0
+TEXT
+  5
+1ED
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MOTORES
+100
+AcDbText
+ 10
+7.75
+ 20
+42.3
+ 30
+0.0
+ 40
+0.18
+  1
+COMPRESOR 15 HP
+ 72
+1
+ 11
+7.75
+ 21
+42.3
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LWPOLYLINE
+  5
+1EE
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MOTORES
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+20.0
+ 20
+36.0
+ 10
+24.0
+ 20
+36.0
+ 10
+24.0
+ 20
+39.0
+ 10
+20.0
+ 20
+39.0
+ 10
+20.0
+ 20
+36.0
+  0
+TEXT
+  5
+1EF
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MOTORES
+100
+AcDbText
+ 10
+22.0
+ 20
+39.5
+ 30
+0.0
+ 40
+0.2
+  1
+ZONA DE MAQUINARIA (25 kW)
+ 72
+1
+ 11
+22.0
+ 21
+39.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LWPOLYLINE
+  5
+1F0
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+4.5
+ 20
+4.5
+ 10
+27.5
+ 20
+4.5
+ 10
+27.5
+ 20
+47.5
+ 10
+4.5
+ 20
+47.5
+ 10
+4.5
+ 20
+4.5
+  0
+CIRCLE
+  5
+1F1
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbCircle
+ 10
+4.5
+ 20
+4.5
+ 30
+0.0
+ 40
+0.4
+  0
+TEXT
+  5
+1F2
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbText
+ 10
+4.5
+ 20
+3.8
+ 30
+0.0
+ 40
+0.15
+  1
+PAT <= 5 Ohm
+ 72
+1
+ 11
+4.5
+ 21
+3.8
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1F3
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbCircle
+ 10
+27.5
+ 20
+4.5
+ 30
+0.0
+ 40
+0.4
+  0
+TEXT
+  5
+1F4
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbText
+ 10
+27.5
+ 20
+3.8
+ 30
+0.0
+ 40
+0.15
+  1
+PAT <= 5 Ohm
+ 72
+1
+ 11
+27.5
+ 21
+3.8
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1F5
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbCircle
+ 10
+27.5
+ 20
+47.5
+ 30
+0.0
+ 40
+0.4
+  0
+TEXT
+  5
+1F6
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbText
+ 10
+27.5
+ 20
+46.8
+ 30
+0.0
+ 40
+0.15
+  1
+PAT <= 5 Ohm
+ 72
+1
+ 11
+27.5
+ 21
+46.8
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1F7
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbCircle
+ 10
+4.5
+ 20
+47.5
+ 30
+0.0
+ 40
+0.4
+  0
+TEXT
+  5
+1F8
+330
+17
+100
+AcDbEntity
+  8
+ELEC_MALLA_PAT
+100
+AcDbText
+ 10
+4.5
+ 20
+46.8
+ 30
+0.0
+ 40
+0.15
+  1
+PAT <= 5 Ohm
+ 72
+1
+ 11
+4.5
+ 21
+46.8
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+CIRCLE
+  5
+1F9
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbCircle
+ 10
+30.5
+ 20
+44.0
+ 30
+0.0
+ 40
+1.0
+  0
+LWPOLYLINE
+  5
+1FA
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+30.5
+ 20
+45.0
+ 10
+30.2
+ 20
+43.8
+ 10
+30.5
+ 20
+44.0
+ 10
+30.8
+ 20
+43.8
+ 10
+30.5
+ 20
+45.0
+  0
+TEXT
+  5
+1FB
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbText
+ 10
+30.5
+ 20
+45.4
+ 30
+0.0
+ 40
+0.4
+  1
+N
+ 72
+1
+ 11
+30.5
+ 21
+45.4
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LWPOLYLINE
+  5
+1FC
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+18.0
+ 20
+1.5
+ 10
+23.0
+ 20
+1.5
+ 10
+23.0
+ 20
+1.7
+ 10
+18.0
+ 20
+1.7
+ 10
+18.0
+ 20
+1.5
+  0
+LWPOLYLINE
+  5
+1FD
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+18.0
+ 20
+1.5
+ 10
+20.5
+ 20
+1.5
+ 10
+20.5
+ 20
+1.7
+ 10
+18.0
+ 20
+1.7
+ 10
+18.0
+ 20
+1.5
+  0
+TEXT
+  5
+1FE
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbText
+ 10
+18.0
+ 20
+1.2
+ 30
+0.0
+ 40
+0.15
+  1
+0m
+ 72
+1
+ 11
+18.0
+ 21
+1.2
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+TEXT
+  5
+1FF
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbText
+ 10
+20.5
+ 20
+1.2
+ 30
+0.0
+ 40
+0.15
+  1
+5m
+ 72
+1
+ 11
+20.5
+ 21
+1.2
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+TEXT
+  5
+200
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbText
+ 10
+23.0
+ 20
+1.2
+ 30
+0.0
+ 40
+0.15
+  1
+10m
+ 72
+1
+ 11
+23.0
+ 21
+1.2
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+TEXT
+  5
+201
+330
+17
+100
+AcDbEntity
+  8
+ARQ_TEXTOS
+100
+AcDbText
+ 10
+20.5
+ 20
+1.9
+ 30
+0.0
+ 40
+0.18
+  1
+ESCALA GRÁFICA 1:100
+ 72
+1
+ 11
+20.5
+ 21
+1.9
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LWPOLYLINE
+  5
+202
+330
+17
+100
+AcDbEntity
+  8
+MARCO_CAJETIN
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 10
+36.0
+ 20
+0.0
+ 10
+36.0
+ 20
+52.0
+ 10
+0.0
+ 20
+52.0
+ 10
+0.0
+ 20
+0.0
+  0
+LWPOLYLINE
+  5
+203
+330
+17
+100
+AcDbEntity
+  8
+MARCO_CAJETIN
+100
+AcDbPolyline
+ 90
+5
+ 70
+0
+ 10
+21.5
+ 20
+0.5
+ 10
+35.5
+ 20
+0.5
+ 10
+35.5
+ 20
+5.0
+ 10
+21.5
+ 20
+5.0
+ 10
+21.5
+ 20
+0.5
+  0
+LINE
+  5
+204
+330
+17
+100
+AcDbEntity
+  8
 MEMBRETE_LINEAS
 100
 AcDbLine
  10
-27.0
+21.5
+ 20
+4.1
+ 30
+0.0
+ 11
+35.5
+ 21
+4.1
+ 31
+0.0
+  0
+LINE
+  5
+205
+330
+17
+100
+AcDbEntity
+  8
+MEMBRETE_LINEAS
+100
+AcDbLine
+ 10
+21.5
+ 20
+3.2
+ 30
+0.0
+ 11
+35.5
+ 21
+3.2
+ 31
+0.0
+  0
+LINE
+  5
+206
+330
+17
+100
+AcDbEntity
+  8
+MEMBRETE_LINEAS
+100
+AcDbLine
+ 10
+21.5
+ 20
+2.3
+ 30
+0.0
+ 11
+35.5
+ 21
+2.3
+ 31
+0.0
+  0
+LINE
+  5
+207
+330
+17
+100
+AcDbEntity
+  8
+MEMBRETE_LINEAS
+100
+AcDbLine
+ 10
+21.5
+ 20
+1.4
+ 30
+0.0
+ 11
+35.5
+ 21
+1.4
+ 31
+0.0
+  0
+LINE
+  5
+208
+330
+17
+100
+AcDbEntity
+  8
+MEMBRETE_LINEAS
+100
+AcDbLine
+ 10
+31.0
  20
 0.5
  30
 0.0
  11
-27.0
+31.0
  21
 3.2
  31
@@ -10909,7 +15347,7 @@ AcDbLine
   0
 TEXT
   5
-15B
+209
 330
 17
 100
@@ -10919,7 +15357,7 @@ MEMBRETE_TEXTOS
 100
 AcDbText
  10
-24.5
+28.5
  20
 4.55
  30
@@ -10931,7 +15369,7 @@ PROYECTO DE INGENIERÍA ELECTROMECÁNICA - NAVE INDUSTRIAL 800 m²
  72
 1
  11
-24.5
+28.5
  21
 4.55
  31
@@ -10943,7 +15381,7 @@ AcDbText
   0
 TEXT
   5
-15C
+20A
 330
 17
 100
@@ -10953,7 +15391,7 @@ MEMBRETE_TEXTOS
 100
 AcDbText
  10
-24.5
+28.5
  20
 3.65
  30
@@ -10965,7 +15403,7 @@ CLIENTE: EMPRESA INDUSTRIAL S.A.C.
  72
 1
  11
-24.5
+28.5
  21
 3.65
  31
@@ -10977,7 +15415,7 @@ AcDbText
   0
 TEXT
   5
-15D
+20B
 330
 17
 100
@@ -10987,7 +15425,7 @@ MEMBRETE_TEXTOS
 100
 AcDbText
  10
-22.25
+26.25
  20
 2.75
  30
@@ -10999,7 +15437,7 @@ LÁMINA: DISTRIBUCIÓN Y BANDEJA PORTACABLES NAVE INDUSTRIAL
  72
 1
  11
-22.25
+26.25
  21
 2.75
  31
@@ -11011,7 +15449,7 @@ AcDbText
   0
 TEXT
   5
-15E
+20C
 330
 17
 100
@@ -11021,7 +15459,7 @@ MEMBRETE_TEXTOS
 100
 AcDbText
  10
-22.25
+26.25
  20
 1.85
  30
@@ -11033,7 +15471,7 @@ PROYECTISTA: ING. RENZO MAMANI / ING. AQUILES RAMOS | CIP N° 285940
  72
 1
  11
-22.25
+26.25
  21
 1.85
  31
@@ -11045,7 +15483,7 @@ AcDbText
   0
 TEXT
   5
-15F
+20D
 330
 17
 100
@@ -11055,7 +15493,7 @@ MEMBRETE_TEXTOS
 100
 AcDbText
  10
-22.25
+26.25
  20
 0.95
  30
@@ -11067,7 +15505,7 @@ UBICACIÓN: PARQUE INDUSTRIAL - JULIACA / PUNO
  72
 1
  11
-22.25
+26.25
  21
 0.95
  31
@@ -11079,7 +15517,7 @@ AcDbText
   0
 TEXT
   5
-160
+20E
 330
 17
 100
@@ -11089,7 +15527,7 @@ MEMBRETE_TEXTOS
 100
 AcDbText
  10
-29.25
+33.25
  20
 2.75
  30
@@ -11101,7 +15539,7 @@ CÓDIGO:
  72
 1
  11
-29.25
+33.25
  21
 2.75
  31
@@ -11113,7 +15551,7 @@ AcDbText
   0
 TEXT
   5
-161
+20F
 330
 17
 100
@@ -11123,7 +15561,7 @@ ELEC_TGD
 100
 AcDbText
  10
-29.25
+33.25
  20
 1.85
  30
@@ -11135,7 +15573,7 @@ IE-01
  72
 1
  11
-29.25
+33.25
  21
 1.85
  31
@@ -11147,7 +15585,7 @@ AcDbText
   0
 TEXT
   5
-162
+210
 330
 17
 100
@@ -11157,7 +15595,7 @@ MEMBRETE_TEXTOS
 100
 AcDbText
  10
-29.25
+33.25
  20
 0.95
  30
@@ -11169,7 +15607,7 @@ ESCALA: 1:100 | JULIO 2026
  72
 1
  11
-29.25
+33.25
  21
 0.95
  31
@@ -12269,7 +16707,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-165
+213
   0
 DICTIONARYVAR
   5
@@ -12281,7 +16719,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-07-29T01:17:58.864515+00:00
+1.4.4 @ 2026-07-29T01:53:48.735173+00:00
   0
 VISUALSTYLE
   5
@@ -12985,7 +17423,7 @@ X-Ray
   0
 DICTIONARYVAR
   5
-165
+213
 330
 2D
 100
@@ -12993,7 +17431,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-07-29T01:17:58.879170+00:00
+1.4.4 @ 2026-07-29T01:53:48.748759+00:00
   0
 ENDSEC
   0

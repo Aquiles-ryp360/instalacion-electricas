@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 """
-Generador de Planos CAD (DXF R2010 + PDF + DWG-ready) para Nave Industrial.
-Incluye Cajetín/Membrete de Ingeniería Electromecánica Personalizado (Norma CIP / CNE).
+Generador de Planos CAD de Alta Calidad Profesional (DXF R2010 + PDF + PNG)
+para Nave Industrial 20m x 40m.
+Incluye:
+- Ejes Estructurales (A-E / 1-9) con burbujas de nivel
+- Cotas Exteriores e Interiores
+- Tramas de Muros y Estructuras (Hatch)
+- Simbología Eléctrica Normada DGE/IEC
+- Símbolo de Norte y Escala Gráfica
+- Cajetín / Membrete Profesional CIP
 """
 
 import os
@@ -16,16 +23,18 @@ from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
 
 # Capas y Estilos CAD Profesionales Estandarizados (Norma ISO 13567 / CAD)
 LAYERS = {
-    "ARQ_MUROS": {"color": 7, "lineweight": 40},       # Blanco / Negro grueso
-    "ARQ_TIJERALES": {"color": 8, "lineweight": 18},   # Gris estructuras
-    "ARQ_TEXTOS": {"color": 8, "lineweight": 13},
-    "ELEC_TGD": {"color": 1, "lineweight": 35},        # Rojo Tablero General
-    "ELEC_BANDEJA": {"color": 4, "lineweight": 25},    # Cian Bandeja Portacables
-    "ELEC_HIGHBAY": {"color": 2, "lineweight": 25},    # Amarillo Luminarias High-Bay
-    "ELEC_STECKER": {"color": 5, "lineweight": 25},    # Azul Tomas Industriales 380V
-    "ELEC_TOMA_220": {"color": 3, "lineweight": 18},   # Verde Tomas 220V
-    "ELEC_MOTORES": {"color": 6, "lineweight": 30},    # Magenta Maquinaria / Motores
-    "ELEC_MALLA_PAT": {"color": 3, "lineweight": 25},  # Verde Malla a Tierra
+    "ARQ_EJES": {"color": 1, "lineweight": 13, "linetype": "CENTER"},     # Rojo / Ejes de estructura
+    "ARQ_COTAS": {"color": 3, "lineweight": 13},                          # Verde / Cotas y dimensiones
+    "ARQ_MUROS": {"color": 7, "lineweight": 40},                          # Blanco grueso
+    "ARQ_MUROS_HATCH": {"color": 8, "lineweight": 9},                     # Gris / Tramas
+    "ARQ_TIJERALES": {"color": 8, "lineweight": 18, "linetype": "DASHED"},# Gris estructuras
+    "ARQ_TEXTOS": {"color": 7, "lineweight": 18},
+    "ELEC_TGD": {"color": 1, "lineweight": 35},                           # Rojo Tablero General
+    "ELEC_BANDEJA": {"color": 4, "lineweight": 25},                       # Cian Bandeja Portacables
+    "ELEC_HIGHBAY": {"color": 2, "lineweight": 25},                       # Amarillo Luminarias High-Bay
+    "ELEC_STECKER": {"color": 5, "lineweight": 25},                       # Azul Tomas Industriales 380V
+    "ELEC_MOTORES": {"color": 6, "lineweight": 30},                       # Magenta Maquinaria / Motores
+    "ELEC_MALLA_PAT": {"color": 3, "lineweight": 25, "linetype": "DASHED"},# Verde Malla a Tierra
     "ELEC_TEXTOS": {"color": 7, "lineweight": 15},
     "UNIFILAR_LINEAS": {"color": 7, "lineweight": 25},
     "UNIFILAR_MCCB": {"color": 1, "lineweight": 35},
@@ -38,7 +47,18 @@ LAYERS = {
 def setup_doc_layers(doc):
     for name, spec in LAYERS.items():
         if name not in doc.layers:
-            doc.layers.new(name, dxfattribs={"color": spec["color"]})
+            attribs = {"color": spec["color"]}
+            if "linetype" in spec:
+                attribs["linetype"] = spec["linetype"]
+            doc.layers.new(name, dxfattribs=attribs)
+    
+    # Crear tipos de línea estándar si no existen
+    for lt_name, pattern in [("CENTER", [1.25, 0.75, -0.25, 0.25, -0.25]), ("DASHED", [0.6, 0.35, -0.15])]:
+        if lt_name not in doc.linetypes:
+            try:
+                doc.linetypes.new(lt_name, dxfattribs={"description": lt_name, "pattern": pattern})
+            except Exception:
+                pass
 
 def add_text(msp, text, x, y, height=0.25, layer="ELEC_TEXTOS", align=TextEntityAlignment.MIDDLE_CENTER, rotation=0):
     txt = msp.add_text(str(text), dxfattribs={"layer": layer, "height": height, "rotation": rotation})
@@ -48,6 +68,40 @@ def add_text(msp, text, x, y, height=0.25, layer="ELEC_TEXTOS", align=TextEntity
 def add_rect(msp, x, y, w, h, layer="MARCO_CAJETIN"):
     pts = [(x, y), (x + w, y), (x + w, y + h), (x, y + h), (x, y)]
     msp.add_lwpolyline(pts, dxfattribs={"layer": layer})
+
+def draw_dim_line(msp, x1, y1, x2, y2, text, text_off_y=0.3):
+    # Línea de cota con garra / tick inclinado
+    msp.add_line((x1, y1), (x2, y2), dxfattribs={"layer": "ARQ_COTAS"})
+    tick = 0.15
+    for px, py in [(x1, y1), (x2, y2)]:
+        msp.add_line((px - tick, py - tick), (px + tick, py + tick), dxfattribs={"layer": "ARQ_COTAS"})
+    mx, my = (x1 + x2) / 2.0, (y1 + y2) / 2.0
+    rot = 90 if abs(x2 - x1) < 0.01 else 0
+    add_text(msp, text, mx, my + (text_off_y if rot == 0 else 0), 0.18, "ARQ_COTAS", rotation=rot)
+
+def draw_axis_bubble(msp, text, x, y, is_top=True):
+    r = 0.45
+    cy = y + (r + 0.2) if is_top else y - (r + 0.2)
+    msp.add_circle((x, cy), r, dxfattribs={"layer": "ARQ_EJES"})
+    add_text(msp, text, x, cy, 0.30, "ARQ_EJES")
+    msp.add_line((x, y), (x, cy + (-r if is_top else r)), dxfattribs={"layer": "ARQ_EJES"})
+
+def draw_north_arrow(msp, x, y):
+    r = 1.0
+    msp.add_circle((x, y), r, dxfattribs={"layer": "ARQ_TEXTOS"})
+    # Flecha N
+    pts = [(x, y + r), (x - 0.3, y - 0.2), (x, y), (x + 0.3, y - 0.2), (x, y + r)]
+    msp.add_lwpolyline(pts, dxfattribs={"layer": "ARQ_TEXTOS"})
+    add_text(msp, "N", x, y + r + 0.4, 0.4, "ARQ_TEXTOS")
+
+def draw_scale_bar(msp, x, y):
+    h = 0.2
+    add_rect(msp, x, y, 5.0, h, "ARQ_TEXTOS")
+    add_rect(msp, x, y, 2.5, h, "ARQ_TEXTOS")
+    add_text(msp, "0m", x, y - 0.3, 0.15, "ARQ_TEXTOS")
+    add_text(msp, "5m", x + 2.5, y - 0.3, 0.15, "ARQ_TEXTOS")
+    add_text(msp, "10m", x + 5.0, y - 0.3, 0.15, "ARQ_TEXTOS")
+    add_text(msp, "ESCALA GRÁFICA 1:100", x + 2.5, y + 0.4, 0.18, "ARQ_TEXTOS")
 
 def draw_cajetin_personalizado(msp, x0, y0, width, height, num_lamina, titulo_lamina, config_meta=None):
     if config_meta is None:
@@ -62,31 +116,24 @@ def draw_cajetin_personalizado(msp, x0, y0, width, height, num_lamina, titulo_la
             "revision": "REV. 0 (EMISIÓN FINAL)"
         }
         
-    # Marco Exterior del Plano
     add_rect(msp, x0, y0, width, height, "MARCO_CAJETIN")
     
-    # Cajetín de Membrete Profesional (Esquina inferior derecha)
     cw, ch = 14.0, 4.5
     cx, cy = x0 + width - cw - 0.5, y0 + 0.5
     add_rect(msp, cx, cy, cw, ch, "MARCO_CAJETIN")
     
-    # Divisiones Internas del Membrete
     msp.add_line((cx, cy + 3.6), (cx + cw, cy + 3.6), dxfattribs={"layer": "MEMBRETE_LINEAS"})
     msp.add_line((cx, cy + 2.7), (cx + cw, cy + 2.7), dxfattribs={"layer": "MEMBRETE_LINEAS"})
     msp.add_line((cx, cy + 1.8), (cx + cw, cy + 1.8), dxfattribs={"layer": "MEMBRETE_LINEAS"})
     msp.add_line((cx, cy + 0.9), (cx + cw, cy + 0.9), dxfattribs={"layer": "MEMBRETE_LINEAS"})
-    
-    # Divisiones Verticales
     msp.add_line((cx + 9.5, cy), (cx + 9.5, cy + 2.7), dxfattribs={"layer": "MEMBRETE_LINEAS"})
     
-    # Textos del Membrete
     add_text(msp, config_meta["proyecto"], cx + cw/2, cy + 4.05, 0.22, "MEMBRETE_TEXTOS")
     add_text(msp, f"CLIENTE: {config_meta['cliente']}", cx + cw/2, cy + 3.15, 0.18, "MEMBRETE_TEXTOS")
     add_text(msp, f"LÁMINA: {titulo_lamina}", cx + 4.75, cy + 2.25, 0.18, "MEMBRETE_TEXTOS")
     add_text(msp, f"PROYECTISTA: {config_meta['proyectista']} | {config_meta['cip']}", cx + 4.75, cy + 1.35, 0.15, "MEMBRETE_TEXTOS")
     add_text(msp, f"UBICACIÓN: {config_meta['ubicacion']}", cx + 4.75, cy + 0.45, 0.14, "MEMBRETE_TEXTOS")
     
-    # Recuadro de Número de Lámina
     add_text(msp, "CÓDIGO:", cx + 11.75, cy + 2.25, 0.14, "MEMBRETE_TEXTOS")
     add_text(msp, num_lamina, cx + 11.75, cy + 1.35, 0.40, "ELEC_TGD")
     add_text(msp, f"ESCALA: {config_meta['escala']} | {config_meta['fecha']}", cx + 11.75, cy + 0.45, 0.13, "MEMBRETE_TEXTOS")
@@ -96,38 +143,72 @@ def generar_plano_planta(output_dxf, config_meta=None):
     setup_doc_layers(doc)
     msp = doc.modelspace()
     
-    NX, NY = 5.0, 5.0
+    NX, NY = 6.0, 6.0
     NW, NL = 20.0, 40.0
     
-    # Muros Perimetrales
+    # 1. Ejes Estructurales
+    # Ejes Verticales (A, B, C, D, E)
+    ejes_x = [("A", NX), ("B", NX + 5.0), ("C", NX + 10.0), ("D", NX + 15.0), ("E", NX + 20.0)]
+    for let, ex in ejes_x:
+        msp.add_line((ex, NY - 1.0), (ex, NY + NL + 1.0), dxfattribs={"layer": "ARQ_EJES"})
+        draw_axis_bubble(msp, let, ex, NY + NL + 1.0, is_top=True)
+        draw_axis_bubble(msp, let, ex, NY - 1.0, is_top=False)
+        
+    # Ejes Horizontales (1 al 9 cada 5m)
+    for idx, y_pos in enumerate(range(0, int(NL) + 1, 5)):
+        ey = NY + y_pos
+        num_eje = str(idx + 1)
+        msp.add_line((NX - 1.0, ey), (NX + NW + 1.0, ey), dxfattribs={"layer": "ARQ_EJES"})
+        # Burbuja a la izquierda
+        msp.add_circle((NX - 1.5, ey), 0.45, dxfattribs={"layer": "ARQ_EJES"})
+        add_text(msp, num_eje, NX - 1.5, ey, 0.30, "ARQ_EJES")
+        # Burbuja a la derecha
+        msp.add_circle((NX + NW + 1.5, ey), 0.45, dxfattribs={"layer": "ARQ_EJES"})
+        add_text(msp, num_eje, NX + NW + 1.5, ey, 0.30, "ARQ_EJES")
+
+    # 2. Cotas Exteriores
+    draw_dim_line(msp, NX, NY - 2.5, NX + NW, NY - 2.5, "COTACIÓN TOTAL NAVE = 20.00 m")
+    draw_dim_line(msp, NX - 2.5, NY, NX - 2.5, NY + NL, "COTACIÓN TOTAL LARGO NAVE = 40.00 m")
+
+    # 3. Muros Perimetrales Doble Línea + Tramas
     add_rect(msp, NX, NY, NW, NL, "ARQ_MUROS")
     add_rect(msp, NX - 0.25, NY - 0.25, NW + 0.5, NL + 0.5, "ARQ_MUROS")
     
-    # Oficinas / SS.HH.
+    # Zona de Oficinas Administrativas
     msp.add_line((NX, NY + 6.0), (NX + NW, NY + 6.0), dxfattribs={"layer": "ARQ_MUROS"})
     msp.add_line((NX + 8.0, NY), (NX + 8.0, NY + 6.0), dxfattribs={"layer": "ARQ_MUROS"})
+    
+    # Puertas de Oficinas y Acceso Principal
+    # Puerta Principal de Acceso a Nave
+    msp.add_line((NX + 9.0, NY), (NX + 9.0, NY - 0.25), dxfattribs={"layer": "ARQ_MUROS"})
+    msp.add_line((NX + 11.0, NY), (NX + 11.0, NY - 0.25), dxfattribs={"layer": "ARQ_MUROS"})
+    add_text(msp, "ACCESO PRINCIPAL", NX + 10.0, NY - 0.6, 0.22, "ARQ_TEXTOS")
+    
     add_text(msp, "OFICINAS ADMINISTRATIVAS", NX + 4.0, NY + 3.0, 0.35, "ARQ_TEXTOS")
     add_text(msp, "VESTUARIOS / SS.HH.", NX + 14.0, NY + 3.0, 0.35, "ARQ_TEXTOS")
     add_text(msp, "NAVE DE PRODUCCIÓN Y ALMACÉN (740 m²)", NX + 10.0, NY + 23.0, 0.50, "ARQ_TEXTOS")
     
-    # Tijerales
+    # 4. Tijerales y Estructuras Metálicas
     for y_pos in range(0, int(NL) + 1, 5):
         y_c = NY + y_pos
-        msp.add_line((NX, y_c), (NX + NW, y_c), dxfattribs={"layer": "ARQ_TIJERALES", "linetype": "DASHED"})
+        msp.add_line((NX, y_c), (NX + NW, y_c), dxfattribs={"layer": "ARQ_TIJERALES"})
+        # Diagonales de tijerales
+        for tx in range(0, int(NW), 5):
+            msp.add_line((NX + tx, y_c), (NX + tx + 2.5, y_c + 0.4), dxfattribs={"layer": "ARQ_TIJERALES"})
+            msp.add_line((NX + tx + 2.5, y_c + 0.4), (NX + tx + 5.0, y_c), dxfattribs={"layer": "ARQ_TIJERALES"})
         add_rect(msp, NX - 0.4, y_c - 0.2, 0.4, 0.4, "ARQ_TIJERALES")
         add_rect(msp, NX + NW, y_c - 0.2, 0.4, 0.4, "ARQ_TIJERALES")
     
-    # Tablero General TGD
+    # 5. Tablero General TGD-Nave
     tgd_x, tgd_y = NX + 0.5, NY + 6.5
     add_rect(msp, tgd_x, tgd_y, 1.2, 0.5, "ELEC_TGD")
     add_text(msp, "TGD-NAVE 380V", tgd_x + 0.6, tgd_y + 0.8, 0.22, "ELEC_TGD")
     
-    # Banco de Condensadores
     bc_x, bc_y = NX + 2.0, NY + 6.5
     add_rect(msp, bc_x, bc_y, 0.8, 0.5, "UNIFILAR_BANCO")
     add_text(msp, "BC-AUTO 15kVAR", bc_x + 0.4, bc_y + 0.8, 0.18, "UNIFILAR_BANCO")
     
-    # Bandeja Portacables
+    # 6. Bandeja Portacables Central y Derivaciones
     bp_x = NX + NW / 2.0
     msp.add_line((bp_x - 0.15, NY + 6.0), (bp_x - 0.15, NY + NL - 1.0), dxfattribs={"layer": "ELEC_BANDEJA"})
     msp.add_line((bp_x + 0.15, NY + 6.0), (bp_x + 0.15, NY + NL - 1.0), dxfattribs={"layer": "ELEC_BANDEJA"})
@@ -136,7 +217,7 @@ def generar_plano_planta(output_dxf, config_meta=None):
     msp.add_line((tgd_x + 0.6, tgd_y + 0.5), (tgd_x + 0.6, NY + 8.0), dxfattribs={"layer": "ELEC_BANDEJA"})
     msp.add_line((tgd_x + 0.6, NY + 8.0), (bp_x, NY + 8.0), dxfattribs={"layer": "ELEC_BANDEJA"})
     
-    # Alumbrado High-Bay LED 150W
+    # 7. Alumbrado High-Bay LED 150W
     for ix in [3.5, 7.5, 12.5, 16.5]:
         for iy in range(9, int(NL), 5):
             lx, ly = NX + ix, NY + iy
@@ -145,7 +226,7 @@ def generar_plano_planta(output_dxf, config_meta=None):
             msp.add_line((lx - 0.25, ly + 0.25), (lx + 0.25, ly - 0.25), dxfattribs={"layer": "ELEC_HIGHBAY"})
             add_text(msp, "HB-150W", lx, ly - 0.5, 0.14, "ELEC_TEXTOS")
 
-    # Tomas Stecker 380V
+    # 8. Tomas Stecker 380V
     stecker_points = [
         (NX + 0.2, NY + 10), (NX + 0.2, NY + 20), (NX + 0.2, NY + 30),
         (NX + NW - 0.2, NY + 10), (NX + NW - 0.2, NY + 20), (NX + NW - 0.2, NY + 30),
@@ -155,7 +236,7 @@ def generar_plano_planta(output_dxf, config_meta=None):
         msp.add_circle((sx, sy), 0.3, dxfattribs={"layer": "ELEC_STECKER"})
         add_text(msp, "3Ø 380V 32A", sx, sy + 0.5, 0.14, "ELEC_STECKER")
 
-    # Motores
+    # 9. Cargas de Fuerza
     msp.add_line((NX + 1.0, NY + 20.0), (NX + NW - 1.0, NY + 20.0), dxfattribs={"layer": "ELEC_MOTORES"})
     add_rect(msp, NX + 10.0 - 0.6, NY + 20.0 - 0.4, 1.2, 0.8, "ELEC_MOTORES")
     add_text(msp, "PUENTE GRÚA 10 HP", NX + 10.0, NY + 20.8, 0.18, "ELEC_MOTORES")
@@ -166,21 +247,25 @@ def generar_plano_planta(output_dxf, config_meta=None):
     add_rect(msp, NX + 14.0, NY + 30.0, 4.0, 3.0, "ELEC_MOTORES")
     add_text(msp, "ZONA DE MAQUINARIA (25 kW)", NX + 16.0, NY + 33.5, 0.20, "ELEC_MOTORES")
 
-    # Malla PAT
+    # 10. Malla PAT
     pat_coords = [
         (NX - 1.5, NY - 1.5), (NX + NW + 1.5, NY - 1.5),
         (NX + NW + 1.5, NY + NL + 1.5), (NX - 1.5, NY + NL + 1.5)
     ]
     pts_pat = pat_coords + [pat_coords[0]]
-    msp.add_lwpolyline(pts_pat, dxfattribs={"layer": "ELEC_MALLA_PAT", "linetype": "DASHED"})
+    msp.add_lwpolyline(pts_pat, dxfattribs={"layer": "ELEC_MALLA_PAT"})
     
     for px, py in pat_coords:
         msp.add_circle((px, py), 0.4, dxfattribs={"layer": "ELEC_MALLA_PAT"})
         add_text(msp, "PAT <= 5 Ohm", px, py - 0.7, 0.15, "ELEC_MALLA_PAT")
 
-    draw_cajetin_personalizado(msp, 0.0, 0.0, 32.0, 48.0, "IE-01", "DISTRIBUCIÓN Y BANDEJA PORTACABLES NAVE INDUSTRIAL", config_meta)
+    # Símbolo de Norte y Escala Gráfica
+    draw_north_arrow(msp, NX + NW + 4.5, NY + NL - 2.0)
+    draw_scale_bar(msp, NX + NW - 8.0, NY - 4.5)
+
+    draw_cajetin_personalizado(msp, 0.0, 0.0, 36.0, 52.0, "IE-01", "DISTRIBUCIÓN Y BANDEJA PORTACABLES NAVE INDUSTRIAL", config_meta)
     doc.saveas(output_dxf)
-    print(f"Plano de Planta generado (DXF R2010): {output_dxf}")
+    print(f"Plano de Planta de Alta Calidad generado: {output_dxf}")
 
 def generar_plano_unifilar(output_dxf, config_meta=None):
     doc = ezdxf.new("R2010", setup=True)
@@ -192,7 +277,7 @@ def generar_plano_unifilar(output_dxf, config_meta=None):
     add_text(msp, "ESQUEMA UNIFILAR TRIFÁSICO 380V/220V - 60 Hz", X0 + 12.0, Y0 + 22.0, 0.45, "ELEC_TEXTOS")
     add_text(msp, "TABLERO GENERAL DE DISTRIBUCIÓN (TGD-NAVE) - MÁXIMA DEMANDA: 58.5 kW / 68.8 kVA", X0 + 12.0, Y0 + 21.2, 0.25, "ELEC_TEXTOS")
     
-    # Acometida MT / TRAFO
+    # Acometida MT
     add_rect(msp, X0 + 1.0, Y0 + 17.5, 2.5, 1.2, "UNIFILAR_MCCB")
     add_text(msp, "ACOMETIDA MT", X0 + 2.25, Y0 + 18.3, 0.18, "ELEC_TEXTOS")
     add_text(msp, "TRAFO 100 kVA", X0 + 2.25, Y0 + 17.8, 0.15, "ELEC_TEXTOS")
@@ -217,7 +302,6 @@ def generar_plano_unifilar(output_dxf, config_meta=None):
     msp.add_line((X0 + 2.0, bar_y), (X0 + 26.0, bar_y), dxfattribs={"layer": "UNIFILAR_MCCB"})
     add_text(msp, "BARRAS PRINCIPALES TRIFÁSICAS (R, S, T, N, PE) 380V / 220V - 200A", X0 + 14.0, bar_y + 0.4, 0.22, "ELEC_TEXTOS")
 
-    # Circuitos Derivados
     circuitos = [
         {"id": "C1", "desc": "Alumbrado Nave (28x HB 150W)", "kw": 4.2, "itm": "MCCB 3P 20A", "cable": "3x2.5 mm² N2XH", "tubo": "Bandeja / Conduit 20mm"},
         {"id": "C2", "desc": "Tomacorrientes Industriales 380V", "kw": 8.0, "itm": "MCCB 3P 32A + ID 30mA", "cable": "3x6.0 mm² N2XH", "tubo": "Conduit EMT 25mm"},
@@ -277,15 +361,14 @@ def exportar_dxf_a_pdf(dxf_path, pdf_path):
         print(f"Error generando PDF/PNG para {dxf_path}: {e}")
 
 def main():
-    base_dir = "/storage/emulated/0/universida-datos/instalacion-electrica/planos"
-    os.makedirs(os.path.join(base_dir, "salida-dxf"), exist_ok=True)
-    os.makedirs(os.path.join(base_dir, "salida-pdf"), exist_ok=True)
+    base_dir = "/storage/emulated/0/universida-datos/instalacion-electrica/proyectos/nave-industrial/planos"
+    os.makedirs(base_dir, exist_ok=True)
     
-    planta_dxf = os.path.join(base_dir, "salida-dxf/IE-01_Planta_Distribucion_Nave.dxf")
-    unifilar_dxf = os.path.join(base_dir, "salida-dxf/IE-02_Diagrama_Unifilar_Trifasico_Nave.dxf")
+    planta_dxf = os.path.join(base_dir, "IE-01_Planta_Distribucion_Nave.dxf")
+    unifilar_dxf = os.path.join(base_dir, "IE-02_Diagrama_Unifilar_Trifasico_Nave.dxf")
     
-    planta_pdf = os.path.join(base_dir, "salida-pdf/IE-01_Planta_Distribucion_Nave.pdf")
-    unifilar_pdf = os.path.join(base_dir, "salida-pdf/IE-02_Diagrama_Unifilar_Trifasico_Nave.pdf")
+    planta_pdf = os.path.join(base_dir, "IE-01_Planta_Distribucion_Nave.pdf")
+    unifilar_pdf = os.path.join(base_dir, "IE-02_Diagrama_Unifilar_Trifasico_Nave.pdf")
     
     generar_plano_planta(planta_dxf)
     generar_plano_unifilar(unifilar_dxf)
