@@ -16,7 +16,8 @@
 \title{\textbf{EXPEDIENTE TECNICO} \\
 Instalaciones Electricas Industriales \\
 Nave Industrial}
-\author{Propietario: por definir}
+\author{Propietario: Renzo Gabriel Mamani Galindo \\
+Distrito: Juliaca - San Roman - Puno}
 \date{\today}
 
 \begin{document}
@@ -133,6 +134,29 @@ El presente proyecto comprende el diseno de las instalaciones electricas para un
   \bottomrule
 \end{tabular}
 
+\subsection{Caida de Tension durante Arranque de Motores}
+Para el motor de 15 HP (M2 - Compresor) con arranque estrella-delta:
+\begin{itemize}
+  \item Corriente nominal: 19.5 A
+  \item Corriente de arranque (estrella): $I_{arr} = 19.5 \times 2.0 = 39.0$ A
+  \item Caida de tension en barra TF1: $\Delta V_{arr} \approx 6.8\%$ (dentro del 15\% maximo recomendado por IEEE 399)
+  \item No se espera pestañeo en iluminacion LED durante arranque
+\end{itemize}
+
+\subsection{Esquema de Proteccion Diferencial}
+\begin{longtable}{lll}
+  \toprule
+  Circuito & Tipo & Sensibilidad \\
+  \midrule
+  TG - Cabecera general & Diferencial 4P-63A & 300 mA superinmunizado \\
+  TF1 - Tablero de fuerza & Diferencial 4P-40A & 300 mA con retardo selectivo \\
+  TI1 - Iluminacion & Diferencial 2P-25A & 30 mA \\
+  C3 - Tomacorrientes industriales & Diferencial 2P-25A & 30 mA \\
+  C4 - Climatizacion & Diferencial 2P-20A & 30 mA \\
+  C5 - Servicios generales & Diferencial 2P-16A & 30 mA \\
+  \bottomrule
+\end{longtable}
+
 \subsection{Puesta a Tierra}
 \begin{tabular}{ll}
   \toprule
@@ -218,7 +242,11 @@ copperweld 5/8'' x 2.40m. Resistencia menor a 5 ohm.
   ITM bipolar 25A & und & 1 & Alimentador TI1 \\
   ITM bipolar 20A & und & 1 & Climatizacion \\
   ITM bipolar 16A & und & 1 & Servicios \\
-  Diferencial 4P-63A-300mA & und & 1 & General TG \\
+  Diferencial 4P-63A-300mA sup. & und & 1 & Cabecera TG \\
+  Diferencial 4P-40A-300mA ret. & und & 1 & TF1 - Fuerza \\
+  Diferencial 2P-25A-30mA & und & 2 & TI1 + tomacorrientes \\
+  Diferencial 2P-20A-30mA & und & 1 & Climatizacion \\
+  Diferencial 2P-16A-30mA & und & 1 & Servicios generales \\
   Reles termicos & und & 4 & Proteccion motores \\
   \midrule
   \multicolumn{4}{l}{\textbf{Iluminacion}} \\
@@ -247,7 +275,8 @@ copperweld 5/8'' x 2.40m. Resistencia menor a 5 ohm.
   \rule{8cm}{0.4pt} \\
   \textbf{Fecha:} \today \\
   \textbf{Estado:} ESTIMADO - VERIFICAR CON INGENIERO \\
-  \textbf{Propietario:} por definir
+  \textbf{Propietario:} Renzo Gabriel Mamani Galindo \\
+  \textbf{Ubicacion:} Juliaca - San Roman - Puno
 \end{center}
 
 \end{document}

@@ -1,13 +1,13 @@
 schema_version: 1
 id: nave-industrial
 proyecto: "Instalaciones electricas industriales - Nave / Galpon industrial"
-propietario: "por definir"
+propietario: "Renzo Gabriel Mamani Galindo"
 estado: "preliminar - definir datos de entrada"
 
 ubicacion:
-  distrito: "por definir"
-  provincia: "por definir"
-  departamento: "por definir"
+  distrito: "Juliaca"
+  provincia: "San Roman"
+  departamento: "Puno"
   direccion: "por definir"
 
 tipo_instalacion: industrial
