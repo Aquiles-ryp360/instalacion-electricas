@@ -1,6 +1,6 @@
 # Guia normativa aplicada al grifo
 
-Fecha de comprobacion: 2026-08-01.
+Fecha de comprobacion: 2026-08-02.
 Alcance: anteproyecto academico nuevo para combustibles liquidos; GLP y GNV no
 aplican.
 
@@ -15,12 +15,15 @@ revision de un ingeniero habilitado para un expediente constructivo.
 4. [D.S. N.° 037-2007-EM, modificacion de distancias sectoriales](https://www.osinergmin.gob.pe/seccion/centro_documental/Institucional/CRO/Normas/DS-037-2007-EM.pdf).
 5. [Guia Tecnica N.° 001-OS/DSR-UTH de OSINERGMIN](https://www.osinergmin.gob.pe/seccion/centro_documental/hidrocarburos/Documentos/Comercializacion/Documentos-Tecnicos/Guia-Tecnica-001-OS-DSR-UTH.pdf), de caracter orientativo para areas clasificadas.
 6. [Listado de condiciones de seguridad de criticidad alta en grifos y estaciones de servicio, R.C.D. N.° 042-2016-OS/CD](https://busquedas.elperuano.pe/dispositivo/NL/1353511-1), usado como control complementario de fiscalizacion.
+7. [R.M. N.° 120-2026-MINEM/DM, publicacion oficial del proyecto normativo](https://www.gob.pe/institucion/minem/normas-legales/7912689-120-2026-minem-dm), verificada en el navegador integrado y contrastada con las cinco paginas del proyecto de decreto supremo.
 
 En marzo de 2026 se publico para comentarios la R.M. N.° 120-2026-MINEM/DM,
-un **proyecto** de modificacion referido al control de inventarios del articulo
-31 del D.S. N.° 054-93-EM. A la fecha de consulta no se identifico una norma
-final que sustituya los requisitos electricos aqui aplicados; el proyecto
-publicado no se trata como norma vigente.
+un **proyecto** que modifica el articulo 31 del D.S. N.° 054-93-EM para el
+registro tecnologico de las mediciones diarias de volumen y agrega el articulo
+55A al D.S. N.° 045-2001-EM para publicar informacion de procedencia y calidad
+de combustibles. A la fecha de consulta no se identifico una norma final que
+sustituya los requisitos electricos aqui aplicados; el proyecto publicado no se
+trata como norma vigente ni cambia los criterios electricos de este anteproyecto.
 
 ## Jerarquia de uso en este proyecto
 

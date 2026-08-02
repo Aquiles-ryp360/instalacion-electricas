@@ -18,7 +18,7 @@ Fecha de prueba: 2026-08-02. Rama: `codex/windows-mejora-grifo`.
 | Poppler | Parcial/disponible en PATH | `pdfinfo`, `pdfimages`, `pdftoppm` | Ninguna | `pdfimages` 24.04.0 disponible desde MiKTeX; las otras utilidades se verificaran al existir los PDF. |
 | Ghostscript | No instalado | Alternativa de inspeccion/conversion PDF | No se propone: MiKTeX/Poppler cubren la necesidad actual | No probado. |
 | LibreOffice | No instalado | Conversion ofimatica auxiliar | No se propone: el expediente usa LaTeX/PDF | No probado. |
-| Navegador integrado | Disponible en Codex | Fuentes oficiales y fichas trazables | Ninguna | Capacidad disponible en la sesion; no sustituye evidencia local ni revision humana. |
+| Navegador integrado | Disponible en Codex | Fuentes oficiales y fichas trazables | Ninguna | Usado para verificar las paginas oficiales del CNE-U y de la R.M. N.° 120-2026-MINEM/DM; no sustituye evidencia local ni revision humana. |
 | Computer Use | No expuesto en esta sesion | Control grafico de AutoCAD | Ninguna | No se afirma control de escritorio; solo se probaron terminal, COM y Core Console. |
 | Skills/plugins | Disponibles parcialmente | Flujos documentales y navegador | Ninguna | Se uso la skill oficial `openai-docs`; no se instalo software por acumulacion. |
 
