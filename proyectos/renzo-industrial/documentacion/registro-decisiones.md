@@ -34,3 +34,25 @@ Formato: `DEC-NNN | fecha | decision | estado`.
 
 - Conductores N y PE separados aguas abajo del origen de la instalacion.
 - Estado: criterio adoptado; configuracion final condicionada a factibilidad.
+
+## DEC-006 | 2026-08-02 | Rotulo de planos propio de Renzo
+
+- Se crea `datos/rotulo-planos.yaml` con datos propios del estudiante (UNAP,
+  docente Meza Marocho) y NO se reutilizan los del proyecto hermano.
+- Propietario, direccion y distrito/provincia/departamento quedan `por
+  confirmar`; no se inventa firma, sello, CIP ni aprobacion profesional.
+- Se definen 6 laminas IE-01..IE-06 para el anteproyecto.
+- Estado: vigente.
+
+## DEC-007 | 2026-08-02 | Juego de planos de anteproyecto IE-01..IE-06
+
+- Se crea `scripts/generar_planos_grifo_renzo.py`, motor propio que dibuja la
+  arquitectura desde `layout-grifo.json` (coordenadas locales) y superpone el
+  diseno electrico (alumbrado, fuerza, emergencia, PAT, pararrayo y
+  clasificacion de areas como propuesta academica).
+- Se excluye el poligono `lote_total` (bounding box aproximado) para no salir
+  del marco A1; solo se grafica el lote a ejecutar.
+- Salida: DXF + PNG (220 dpi) + PDF vectorial A1 por lamina y un PDF combinado
+  (`planos-electricos-grifo-renzo.pdf`), todo en `build/`.
+- Estado: ejecutado; pendiente de revision humana antes de publicar en
+  `entregables/`.
