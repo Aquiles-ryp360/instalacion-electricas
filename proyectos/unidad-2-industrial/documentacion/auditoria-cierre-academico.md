@@ -36,17 +36,19 @@ formato del expediente Aquiles de la primera unidad y resultados reproducibles.
 | Rutas y circuitos legibles | Carriles separados, etiquetas de circuito y unifilar ortogonal | CUMPLE |
 | Cotizacion automatica | BOM separado, evidencia JSON/CSV/Markdown y filtros seguros | CUMPLE COMO CONSULTA COMERCIAL |
 | Reproduccion en Windows | Seis entradas versionadas, preparador PowerShell y verificador SHA-256 | CUMPLE |
+| Auditoria AutoCAD | Seis DXF abiertos por AutoCAD 2027/AcCoreConsole sobre copias | CUMPLE |
 
 ## Resultados de control
 
 - Calculo electrico: PASS.
 - Alumbrado por lumenes: PASS.
 - Metrados/presupuesto reproducible: PASS.
-- Cotizacion automatica: 41 consultas; 4 `OK`, 30 `SIN_SELECCION` y 7 `NO_ENCONTRADO`; todas requieren revision.
+- Cotizacion automatica: 41 consultas; 5 `OK`, 29 `SIN_SELECCION` y 7 `NO_ENCONTRADO`; todas requieren revision.
 - Expediente y guia: compilacion LaTeX sin error fatal.
 - Expediente: 31 paginas; las capturas de ubicacion son evidencia raster y las seis paginas de planos A1 permanecen vectoriales.
 - Planos: seis paginas A1 vectoriales, sin `WIPEOUT`; los PNG son solo previsualizacion.
-- Pruebas automatizadas: 45 PASS (cotizacion v0/v1, Renzo y Unidad 2).
+- AutoCAD 2027: seis auditorias `PASS`; cero DXF descartados y cero objetos borrados.
+- Pruebas automatizadas: 47 PASS (cotizacion v0/v1, Renzo y Unidad 2).
 
 ## Limite del cierre
 

@@ -54,17 +54,30 @@ $results = foreach ($drawing in $drawings) {
         $process.Kill()
         $process.WaitForExit()
     }
+    $logText = if (Test-Path -LiteralPath $log) {
+        Get-Content -LiteralPath $log -Encoding Unicode -Raw
+    } else {
+        ''
+    }
+    $auditMatch = [regex]::Match(
+        $logText,
+        'Total de errores encontrados\s+(\d+), corregidos\s+(\d+)'
+    )
+    $fatalDxfError = $logText -match 'Entrada DXF no válida|Invalid DXF input|ERROR:'
+    $auditCompleted = $auditMatch.Success -and -not $fatalDxfError
     [PSCustomObject]@{
         plano = $drawing.Name
         copia_auditada = $copy
-        estado = if (-not $finished) { 'TIMEOUT' } elseif ($process.ExitCode -eq 0) { 'PASS' } else { 'ERROR' }
+        estado = if (-not $finished) { 'TIMEOUT' } elseif ($auditCompleted) { 'PASS' } else { 'ERROR' }
         codigo_salida = if ($finished) { $process.ExitCode } else { $null }
+        errores_encontrados = if ($auditMatch.Success) { [int]$auditMatch.Groups[1].Value } else { $null }
+        errores_corregidos = if ($auditMatch.Success) { [int]$auditMatch.Groups[2].Value } else { $null }
         log = $log
         errores = $errorLog
     }
 }
 
-$results | Format-Table -AutoSize
+$results | Format-Table plano, estado, codigo_salida, errores_encontrados, errores_corregidos -AutoSize
 if ($results.estado -contains 'TIMEOUT' -or $results.estado -contains 'ERROR') {
     exit 1
 }

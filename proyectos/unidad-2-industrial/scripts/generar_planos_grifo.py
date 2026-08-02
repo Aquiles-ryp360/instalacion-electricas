@@ -697,6 +697,27 @@ def render(doc: ezdxf.document.Drawing, png_path: Path, pdf_path: Path) -> None:
     )
 
 
+def apply_render_font_fallbacks(
+    doc: ezdxf.document.Drawing,
+) -> list[dict[str, str]]:
+    """Normaliza SHX/no resueltas solo despues de guardar el DXF."""
+    fallbacks: list[dict[str, str]] = []
+    truetype_extensions = {".ttf", ".otf", ".ttc"}
+    for style in doc.styles:
+        filename = str(style.dxf.font or "")
+        if Path(filename).suffix.lower() in truetype_extensions:
+            continue
+        fallbacks.append(
+            {
+                "style": str(style.dxf.name),
+                "source_font": filename,
+                "render_font": "arial.ttf",
+            }
+        )
+        style.dxf.font = "arial.ttf"
+    return fallbacks
+
+
 def main() -> int:
     root = repository_root()
     project = root / "proyectos/unidad-2-industrial"
@@ -747,8 +768,23 @@ def main() -> int:
         dxf_path = output / f"{stem}.dxf"
         png_path = output / f"{stem}.png"
         pdf_path = output / f"{stem}.pdf"
+        # El importador puede conservar referencias de estilo de ATTRIB que no
+        # existen en el documento destino. ezdxf las tolera al leer, pero
+        # AutoCAD rechaza por completo el DXF. La auditoria elimina esas
+        # referencias huerfanas antes de serializar el plano entregable.
+        audit = doc.audit()
+        if audit.errors:
+            raise RuntimeError(
+                f"DXF invalido para {sheet['code']}: "
+                + "; ".join(error.message for error in audit.errors)
+            )
         doc.saveas(dxf_path)
+        render_font_fallbacks: list[dict[str, str]] = []
         if not args.skip_render:
+            # El DXF conserva los estilos importados. La sustitucion se aplica
+            # solo a las vistas Matplotlib para evitar fuentes SHX defectuosas
+            # o no disponibles en Windows.
+            render_font_fallbacks = apply_render_font_fallbacks(doc)
             render(doc, png_path, pdf_path)
         manifest["sheets"].append({
             "code": code,
@@ -757,6 +793,7 @@ def main() -> int:
             "png": None if args.skip_render else str(png_path.relative_to(root)),
             "pdf": None if args.skip_render else str(pdf_path.relative_to(root)),
             "entity_count": len(msp),
+            "render_font_fallbacks": render_font_fallbacks,
             "title_block": {
                 "university": title_data["institucion"]["universidad"],
                 "student": title_data["academico"]["estudiante"],

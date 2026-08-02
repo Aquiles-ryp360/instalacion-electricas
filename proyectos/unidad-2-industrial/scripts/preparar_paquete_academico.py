@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import stat
 import shutil
 import zipfile
 from pathlib import Path
@@ -22,6 +24,12 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def remove_readonly_and_retry(function, path: str, _error) -> None:
+    """Permite reconstruir paquetes dentro de carpetas sincronizadas en Windows."""
+    os.chmod(path, stat.S_IWRITE)
+    function(path)
+
+
 def main() -> int:
     root = repository_root()
     project = root / "proyectos/unidad-2-industrial"
@@ -29,7 +37,7 @@ def main() -> int:
     package = build / "paquete-academico-revision"
     plans_out = package / "planos-editables-y-pdf"
     if package.exists():
-        shutil.rmtree(package)
+        shutil.rmtree(package, onexc=remove_readonly_and_retry)
     package.mkdir(parents=True, exist_ok=True)
     plans_out.mkdir(parents=True, exist_ok=True)
 

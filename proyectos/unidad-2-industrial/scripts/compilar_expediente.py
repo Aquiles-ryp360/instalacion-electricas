@@ -19,6 +19,40 @@ def run(command: list[str], *, cwd: Path) -> None:
     subprocess.run(command, cwd=cwd, check=True)
 
 
+def compile_latex(
+    *, source: Path, output: Path, tex_name: str, jobname: str | None = None
+) -> None:
+    """Compila con latexmk o con pdflatex directo cuando Windows no tiene Perl."""
+    latexmk = shutil.which("latexmk")
+    if latexmk and shutil.which("perl"):
+        command = [
+            latexmk,
+            "-pdf",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            f"-outdir={output}",
+        ]
+        if jobname:
+            command.append(f"-jobname={jobname}")
+        run([*command, tex_name], cwd=source)
+        return
+
+    pdflatex = shutil.which("pdflatex")
+    if not pdflatex:
+        raise SystemExit("Falta pdflatex; instale MiKTeX o TeX Live.")
+    command = [
+        pdflatex,
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        f"-output-directory={output}",
+    ]
+    if jobname:
+        command.append(f"-jobname={jobname}")
+    # Tres pasadas resuelven indice, referencias cruzadas y numero de paginas.
+    for _ in range(3):
+        run([*command, tex_name], cwd=source)
+
+
 def main() -> int:
     root = repository_root()
     project = root / "proyectos/unidad-2-industrial"
@@ -79,9 +113,13 @@ def main() -> int:
         raise SystemExit("Falta el PDF conjunto de planos; use --regenerar-planos.")
 
     output.mkdir(parents=True, exist_ok=True)
-    latex_base = ["latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error", f"-outdir={output}"]
-    run([*latex_base, "main.tex"], cwd=source)
-    run([*latex_base, "-jobname=guia-sustentacion", "guia-sustentacion.tex"], cwd=source)
+    compile_latex(source=source, output=output, tex_name="main.tex")
+    compile_latex(
+        source=source,
+        output=output,
+        tex_name="guia-sustentacion.tex",
+        jobname="guia-sustentacion",
+    )
     print(f"Expediente: {output / 'main.pdf'}")
     print(f"Guia: {output / 'guia-sustentacion.pdf'}")
     return 0

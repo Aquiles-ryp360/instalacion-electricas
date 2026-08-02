@@ -20,9 +20,10 @@ from pathlib import Path
 from typing import Iterable
 
 import ezdxf
-from ezdxf import bbox, select
+from ezdxf import bbox
 from ezdxf.addons import Importer
 from ezdxf.addons.drawing import matplotlib as ezdxf_matplotlib
+from ezdxf.math import BoundingBox
 
 
 EXPECTED_SHA256 = "7980dda84d5ea40ed85e5458b487edfc219584d8c4b6e62f7fd9442e7443d805"
@@ -67,9 +68,39 @@ def sha256(path: Path) -> str:
 
 def select_sheet_entities(
     entities: Iterable[ezdxf.entities.DXFGraphic], sheet: Sheet, cache: bbox.Cache
-) -> list[ezdxf.entities.DXFGraphic]:
-    window = select.Window((sheet.xmin, sheet.ymin), (sheet.xmax, sheet.ymax))
-    return list(select.bbox_overlap(window, entities, cache=cache))
+) -> tuple[list[ezdxf.entities.DXFGraphic], list[dict[str, object]]]:
+    """Selecciona por caja y tolera fuentes TrueType defectuosas de Windows.
+
+    Algunas fuentes instaladas pueden declarar altura de mayusculas cero. En
+    ese caso ``ezdxf`` no logra calcular la caja de TEXT/INSERT aunque la
+    entidad y su punto de insercion sean validos. La alternativa se limita al
+    punto de insercion y queda registrada para revision en el manifiesto.
+    """
+    window = BoundingBox(((sheet.xmin, sheet.ymin), (sheet.xmax, sheet.ymax)))
+    selected: list[ezdxf.entities.DXFGraphic] = []
+    fallbacks: list[dict[str, object]] = []
+    for entity in entities:
+        try:
+            extents = bbox.extents((entity,), fast=True, cache=cache)
+            if extents.has_data and window.has_overlap(extents):
+                selected.append(entity)
+            continue
+        except (ArithmeticError, ValueError) as exc:
+            anchor = entity.dxf.get("insert", None)
+            included = anchor is not None and window.inside((anchor.x, anchor.y))
+            if included:
+                selected.append(entity)
+            fallbacks.append(
+                {
+                    "handle": str(entity.dxf.handle),
+                    "type": entity.dxftype(),
+                    "layer": str(entity.dxf.layer),
+                    "reason": f"{type(exc).__name__}: {exc}",
+                    "anchor": None if anchor is None else [float(anchor.x), float(anchor.y)],
+                    "included": included,
+                }
+            )
+    return selected, fallbacks
 
 
 def import_entities(
@@ -123,6 +154,27 @@ def render_review(doc: ezdxf.document.Drawing, destination: Path) -> None:
         size_inches=(12.0, 0.0),
         filter_func=review_filter,
     )
+
+
+def apply_render_font_fallbacks(
+    doc: ezdxf.document.Drawing,
+) -> list[dict[str, str]]:
+    """Sustituye SHX/no resueltas solo en la copia en memoria para renderizar."""
+    fallbacks: list[dict[str, str]] = []
+    truetype_extensions = {".ttf", ".otf", ".ttc"}
+    for style in doc.styles:
+        filename = str(style.dxf.font or "")
+        if Path(filename).suffix.lower() in truetype_extensions:
+            continue
+        fallbacks.append(
+            {
+                "style": str(style.dxf.name),
+                "source_font": filename,
+                "render_font": "arial.ttf",
+            }
+        )
+        style.dxf.font = "arial.ttf"
+    return fallbacks
 
 
 def main() -> int:
@@ -195,7 +247,7 @@ def main() -> int:
     selected_sheets = [sheet for sheet in SHEETS if args.sheet in (None, sheet.code)]
     for sheet in selected_sheets:
         print(f"Seleccionando {sheet.code}...")
-        entities = select_sheet_entities(source_entities, sheet, cache)
+        entities, selection_fallbacks = select_sheet_entities(source_entities, sheet, cache)
         if not entities:
             print(f"ERROR: no se encontraron entidades en {sheet.code}", file=sys.stderr)
             return 4
@@ -206,10 +258,20 @@ def main() -> int:
         dxf_path = output / f"{stem}.dxf"
         png_path = output / f"{stem}.png"
         pdf_path = output / f"{stem}.pdf"
+        audit = derived.audit()
+        if audit.errors:
+            raise RuntimeError(
+                f"DXF base invalido para {sheet['code']}: "
+                + "; ".join(error.message for error in audit.errors)
+            )
         derived.saveas(dxf_path)
 
+        render_font_fallbacks: list[dict[str, str]] = []
         if not args.skip_render:
             print(f"Renderizando vista liviana {sheet.code} a PNG y PDF vectorial...", flush=True)
+            # El DXF ya fue guardado con sus estilos originales. Esta
+            # sustitucion afecta solamente las vistas de revision.
+            render_font_fallbacks = apply_render_font_fallbacks(derived)
             render_review(derived, png_path)
             render_review(derived, pdf_path)
 
@@ -235,6 +297,8 @@ def main() -> int:
                 "entity_types": dict(sorted(counts.items())),
                 "layers": dict(sorted(layers.items())),
                 "translation_warnings": warnings,
+                "selection_fallbacks": selection_fallbacks,
+                "render_font_fallbacks": render_font_fallbacks,
                 "outputs": {
                     "dxf": str(dxf_path.relative_to(root)),
                     "png": None if args.skip_render else str(png_path.relative_to(root)),

@@ -16,8 +16,11 @@ def repository_root() -> Path:
     return Path(__file__).resolve().parents[3]
 
 
-def sha256(path: Path) -> str:
+def sha256(path: Path, *, normalize_newlines: bool = False) -> str:
     digest = hashlib.sha256()
+    if normalize_newlines:
+        digest.update(path.read_bytes().replace(b"\r\n", b"\n"))
+        return digest.hexdigest()
     with path.open("rb") as stream:
         for chunk in iter(lambda: stream.read(1024 * 1024), b""):
             digest.update(chunk)
@@ -48,6 +51,7 @@ REQUIRED_FILES = {
     "proyectos/unidad-2-industrial/presupuesto/datos/promelsa-base-2026-08-02.json": {
         "sha256": "c365b6e090ea3f2cfd380be7d1314f9a92828c2cf2193535485e6bfe865b38a6",
         "role": "evidencia comercial base para compilacion sin red",
+        "normalize_newlines": True,
     },
 }
 
@@ -92,7 +96,10 @@ def main() -> int:
     for relative, expected in REQUIRED_FILES.items():
         path = root / relative
         exists = path.is_file()
-        actual = sha256(path) if exists else None
+        actual = sha256(
+            path,
+            normalize_newlines=bool(expected.get("normalize_newlines")),
+        ) if exists else None
         valid = actual == expected["sha256"]
         tracked = is_tracked(root, relative) if exists and shutil.which("git") else False
         files.append({

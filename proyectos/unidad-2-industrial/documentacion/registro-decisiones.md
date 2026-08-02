@@ -278,3 +278,16 @@ cambia, registrar una nueva entrada que sustituya a la anterior.
 - Impacto: el resumen vigente queda en 5 `OK`, 29 `SIN_SELECCION` y 7 `NO_ENCONTRADO`; se agrega una prueba de regresion y una automatizacion Windows reproducible sin tocar originales
 - Supuestos autorizados: ninguno; los cinco `OK` restantes conservan revision humana y no reemplazan precios instalados
 - Pendientes: copiar el DXF y las dos capturas locales, inicializar AutoCAD interactivamente, regenerar los seis planos y repetir el wrapper antes de declarar `AUDIT` PASS
+
+### DEC-021 - Cierre reproducible y auditoria nativa en AutoCAD 2027
+
+- Fecha: 2026-08-02
+- Estado: implementada y verificada
+- Decide: cierre tecnico en Codex nativo para Windows autorizado por Aquiles Taylor Ramos Yapo
+- Fuente o evidencia: commit fuente `3599e3d`, 47 pruebas, verificador con seis recursos `READY`, seis logs de AcCoreConsole y control PDF con Poppler
+- Decision: normalizar saltos de linea solo al verificar fuentes textuales; sanear referencias huerfanas de estilos `ATTRIB` antes de guardar cada DXF; compilar con tres pasadas directas de `pdflatex` si falta Perl; evaluar la auditoria por su log completo y descartar la copia sin modificar el entregable
+- Motivo: Git para Windows cambia LF a CRLF en el JSON, MiKTeX instala `latexmk` sin garantizar Perl y AutoCAD es mas estricto que `ezdxf` al leer atributos importados
+- Alternativas consideradas: alterar las huellas publicadas, exigir Perl global, aceptar DXF no abiertos por AutoCAD o guardar encima de los originales
+- Impacto: los seis DXF abren y completan `AUDIT`; los seis PDF individuales y su union son A1 vectoriales sin raster; expediente de 31 paginas, guia de 5 paginas y ZIP se reconstruyen sin red
+- Supuestos autorizados: ninguno adicional
+- Pendientes: impresion de prueba A1 y revision/firma profesional si el proyecto pasa de entrega academica a ejecucion
