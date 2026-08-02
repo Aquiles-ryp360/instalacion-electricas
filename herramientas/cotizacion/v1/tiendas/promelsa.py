@@ -744,7 +744,15 @@ def score_candidate(material_name: str, candidate: dict[str, Any]) -> dict[str, 
     elif candidate.get("disponible") is False:
         score -= 0.35
 
-    wrong_for_cable = {"alicate", "marcador", "solvente", "limpieza", "herramienta"}
+    wrong_for_cable = {
+        "alicate",
+        "cuchillo",
+        "herramienta",
+        "limpieza",
+        "marcador",
+        "pelacable",
+        "solvente",
+    }
     if required_family == "cable" and candidate_tokens & wrong_for_cable:
         score -= 3.5
     if required_family in {"tubo_pvc", "curva_pvc", "union_pvc"} and "pvc" in overlap:
@@ -1130,6 +1138,19 @@ def decidir_heuristico_seguro(material_name: str, candidatos: list[dict[str, Any
     candidate_text = normalize_text(candidate_raw_text)
     semantic_ok = True
     semantic_reason = "sin_restriccion_adicional"
+    if required_family == "cable":
+        cable_exclusions = {
+            "alicate",
+            "cuchillo",
+            "herramienta",
+            "limpieza",
+            "marcador",
+            "pelacable",
+            "solvente",
+        }
+        if token_set(candidate_text) & cable_exclusions:
+            semantic_ok = False
+            semantic_reason = "herramienta_o_accesorio_no_es_cable"
     if required_family == "luminaria" and ({"emergencia", "autonoma"} & token_set(required_text)):
         semantic_ok = bool({"emergencia", "autonoma"} & token_set(candidate_text))
         semantic_reason = "funcion_emergencia"

@@ -265,3 +265,16 @@ cambia, registrar una nueva entrada que sustituya a la anterior.
 - Impacto: el repositorio aumenta aproximadamente 53 MB; las fuentes permanecen inmutables y verificadas por SHA-256; WhatsApp y demas material local siguen fuera de Git porque no son dependencias del pipeline
 - Supuestos autorizados: la publicacion de estas tres fuentes fue solicitada expresamente por el estudiante
 - Pendientes: instalar Python/LaTeX en cada equipo; AutoCAD sigue siendo opcional para el pipeline Python y necesario solo para la auditoria nativa propuesta
+
+### DEC-020 - Validacion conservadora y automatizacion CAD en Windows
+
+- Fecha: 2026-08-02
+- Estado: implementada parcialmente; auditoria CAD pendiente de fuentes e inicializacion de licencia
+- Decide: revision tecnica reproducible en Codex nativo para Windows
+- Fuente o evidencia: ejecucion de 43 pruebas, consulta Promelsa del 2026-08-02, AutoCAD 2027 R26.0, ProgID `AutoCAD.Application.26` y `documentacion/inventario-capacidades-windows.md`
+- Decision: rechazar deterministicamente herramientas y accesorios que solo mencionen la palabra cable; conservar la evidencia comercial sin actualizar precios; preparar un wrapper de AcCoreConsole que audite solamente copias `IE-*.dxf` bajo `build/`
+- Motivo: la consulta en vivo clasifico erradamente un cuchillo pelacable como cableado de control, mientras que Core Console y COM estaban instalados pero bloqueados por la inicializacion/licencia de AutoCAD
+- Alternativas consideradas: aceptar los seis resultados `OK`, editar manualmente el JSON o afirmar una auditoria CAD no ejecutada
+- Impacto: el resumen vigente queda en 5 `OK`, 29 `SIN_SELECCION` y 7 `NO_ENCONTRADO`; se agrega una prueba de regresion y una automatizacion Windows reproducible sin tocar originales
+- Supuestos autorizados: ninguno; los cinco `OK` restantes conservan revision humana y no reemplazan precios instalados
+- Pendientes: copiar el DXF y las dos capturas locales, inicializar AutoCAD interactivamente, regenerar los seis planos y repetir el wrapper antes de declarar `AUDIT` PASS

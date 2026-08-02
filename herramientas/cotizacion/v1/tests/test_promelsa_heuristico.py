@@ -75,6 +75,28 @@ def test_heuristic_rejects_accessory_that_only_mentions_target_family():
     assert result["opcion"] is None
 
 
+def test_heuristic_rejects_cable_stripping_tool_as_control_cable():
+    module = load_module()
+    candidate = {
+        "opcion": 1,
+        "nombre": "Cuchillo pela cable aislado 1000V L=165mm",
+        "texto_visible": "Herramienta aislada para pelar cable",
+        "familia_candidato": "cable",
+        "especificaciones_coincidentes": [],
+        "coincidencia_score": 4.35,
+        "precio_soles": 28.64,
+        "disponible": True,
+    }
+
+    result = module.decidir_heuristico_seguro(
+        "Cableado de control e interbloqueo del paro de emergencia",
+        [candidate],
+    )
+
+    assert result["opcion"] is None
+    assert "herramienta_o_accesorio_no_es_cable" in result["criterios"][-1]
+
+
 def test_heuristic_rejects_non_autonomous_luminaire_for_emergency():
     module = load_module()
     candidate = {

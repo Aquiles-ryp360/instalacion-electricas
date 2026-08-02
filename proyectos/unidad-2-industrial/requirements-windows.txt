@@ -1,0 +1,2 @@
+# Dependencia adicional para sondas COM opcionales de AutoCAD en Windows.
+pywin32>=312
