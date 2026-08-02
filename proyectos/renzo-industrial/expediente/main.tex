@@ -1,0 +1,43 @@
+\documentclass[12pt,letterpaper]{report}
+\input{preambulo}
+\input{../../../build/renzo-industrial/expediente/generated/datos}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
+\input{capitulos/00-portada}
+\clearpage
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{memoria}
+
+\renewcommand{\documentfootertext}{MEMORIA DESCRIPTIVA - INSTALACIONES ELECTRICAS}
+\input{capitulos/01-memoria-descriptiva}
+\clearpage
+\renewcommand{\documentfootertext}{CALCULOS JUSTIFICATIVOS - INSTALACIONES ELECTRICAS}
+\input{capitulos/02-calculos}
+\clearpage
+\renewcommand{\documentfootertext}{ESPECIFICACIONES TECNICAS - INSTALACIONES ELECTRICAS}
+\input{capitulos/03-especificaciones}
+\clearpage
+\renewcommand{\documentfootertext}{SEGURIDAD Y CUMPLIMIENTO NORMATIVO}
+\input{capitulos/04-seguridad-normativa}
+\clearpage
+\renewcommand{\documentfootertext}{CRONOGRAMA DE EJECUCION - INSTALACIONES ELECTRICAS}
+\input{capitulos/05-cronograma}
+\clearpage
+\renewcommand{\documentfootertext}{METRADOS Y PRESUPUESTO - INSTALACIONES ELECTRICAS}
+\input{capitulos/06-metrados-presupuesto}
+\clearpage
+\renewcommand{\documentfootertext}{PLANOS DE INSTALACIONES ELECTRICAS}
+\input{capitulos/05-planos}
+\clearpage
+\renewcommand{\documentfootertext}{CONCLUSIONES Y RECOMENDACIONES}
+\input{capitulos/06-conclusiones}
+
+\clearpage
+\includepdf[pages=-,landscape=true,fitpaper=true,pagecommand={\thispagestyle{empty}}]{../../../build/renzo-industrial/cad/planos/planos-electricos-grifo-renzo.pdf}
+\end{document}

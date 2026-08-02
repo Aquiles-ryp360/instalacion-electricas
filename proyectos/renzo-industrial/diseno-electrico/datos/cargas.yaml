@@ -17,15 +17,23 @@ system:
   main_feeder_length_m: 12.0
   reserve_factor: 1.20
   source_state: academic_design_criterion_pending_utility_feasibility
+  tableros_note: "El DWG muestra TG y TG2. El diseno de anteproyecto organiza la distribucion en TG (acometida) con subalimentadores a TDE, TDF y TD-A1. TG2 se interpreta como el tablero de distribucion del edificio administrativo (equivalente a TD-A1) por proximidad; configuracion real a confirmar en campo."
 
 calculation:
+  demand_method: CNE-U_Regla_050-210_Tabla_14_para_usos_no_residenciales_mas_EM.010_art_7
+  demand_method_nota: "Griffo (uso comercial/industrial): carga basica por Tabla 14 CNE-U (25 W/m2, fd 100%) como cota minima; el diseno dimensiona por cargas reales proyectadas con factores de demanda y simultaneidad justificados (EM.010 art. 7)."
   cne_voltage_drop_branch_percent_max: 2.5
   cne_voltage_drop_total_percent_max: 4.0
+  cne_voltage_drop_regla: "CNE-U Regla 050-102: alimentador y circuito derivado max 2,5% c/u; total hasta salida mas alejada max 4%."
+  cne_min_conductor_regla: "CNE-U Regla 030-002: minimo 2,5 mm2 cobre en circuitos derivados de fuerza y alumbrado."
+  cne_ampacity_regla: "CNE-U Regla 030-004 y Tabla 2 (XLPE/EPR 90 C, 3 conductores cargados, metodos B1/D NTP 370.301)."
+  cne_pe_regla: "CNE-U Tabla 16: minima seccion de enlace equipotencial segun proteccion."
+  cne_pe_minimum_note: "el PE de circuitos con motor se adopta igual a la fase (mayor que Tabla 16) por proteccion fisica y continuidad."
   copper_resistivity_ohm_mm2_per_m_at_operating_temperature: 0.021
   cable_reactance_ohm_per_km: 0.08
   minimum_power_and_lighting_conductor_mm2: 2.5
   default_derating_factor: 0.80
-  demand_method: EM.010_art_7_method_1
+  derating_note: "CNE-U Tabla 5A/5C: factor 0,80 adopta conservadoramente correccion por temperatura, agrupamiento y altitud (Puno, 3830 m); no se aplican factores separados."
   phase_unbalance_target_percent: 10.0
 
 generator:
@@ -260,3 +268,23 @@ circuits:
   - {id: S-01, profile: service_2_5, description: "POS, comunicaciones y CCTV", panel: UPS-IT, phase: S, emergency: true, installed_kva: 1.20, length_m: 25, source_ref: "operacion y monitoreo del grifo"}
   - {id: S-02, profile: service_2_5, description: "Central de alarma y deteccion", panel: TDE, phase: T, emergency: true, installed_kva: 0.20, length_m: 20}
   - {id: S-03, profile: service_2_5, description: "Alumbrado de emergencia y senales de evacuacion", panel: TDE, phase: R, emergency: true, installed_kva: 0.30, length_m: 30, source_state: mandatory_function_design_criterion, source_ref: "EM.010 art. 11.1"}
+  - id: S-04
+    profile: service_2_5
+    description: "Pulsador y paro de emergencia general de playa"
+    panel: TDE
+    phase: S
+    emergency: true
+    installed_kva: 0.10
+    length_m: 25
+    source_state: adopted_design_criterion
+    source_ref: "observado en DWG como pulsador_emergencia; circuito de control y paro"
+  - id: S-05
+    profile: service_2_5
+    description: "Monitoreo de areas (puntos PM A1/R1, PM A2/R2)"
+    panel: TDE
+    phase: S
+    emergency: true
+    installed_kva: 0.15
+    length_m: 30
+    source_state: adopted_design_criterion
+    source_ref: "puntos PM observados en el plano de distribucion (ambiguos, por confirmar)"

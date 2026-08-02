@@ -202,7 +202,7 @@ def calculate(data: dict[str, Any]) -> dict[str, Any]:
     if float(system["main_breaker_a"]) > main_ampacity:
         failures.append("interruptor principal excede ampacidad corregida del alimentador")
     main_vd = voltage_drop_percent(
-        supply="1P", voltage=vln, current_a=service_phase_current, pf=0.90,
+        supply="3P", voltage=vll, current_a=service_phase_current, pf=0.90,
         length_m=float(system["main_feeder_length_m"]), size_mm2=main_size,
         rho=rho, x_ohm_km=x_ohm_km,
     )
@@ -226,12 +226,41 @@ def calculate(data: dict[str, Any]) -> dict[str, Any]:
         if float(feeder["pe_mm2"]) < required_pe:
             failures.append(f"{feeder['id']}: PE menor que Tabla 16")
         vd = voltage_drop_percent(
-            supply="1P", voltage=vln, current_a=max_current, pf=0.90,
+            supply="3P", voltage=vll, current_a=max_current, pf=0.90,
             length_m=float(feeder["length_m"]), size_mm2=size,
             rho=rho, x_ohm_km=x_ohm_km,
         )
         feeder_drop_by_panel[panel] = vd
         feeder_results.append({**feeder, "phase_demand_kva": phases, "max_phase_current_a": max_current, "corrected_ampacity_a": ampacity, "voltage_drop_percent": vd})
+
+    start_multiplier = float(data["generator"]["starting_multiplier_largest_STP"])
+    start_current_by_panel: dict[str, float] = {}
+    start_motor_by_panel: dict[str, str] = {}
+    for feeder in data["feeders"]:
+        panel = feeder["panel"]
+        panels = FEEDER_GROUPS[panel]
+        phases = phase_values(circuits, demand=True, panels=panels)
+        group_motors = [c for c in circuits if c["panel"] in panels and bool(c.get("motor"))]
+        peak_phase_kva = dict(phases)
+        start_motor = None
+        if group_motors:
+            largest = max(group_motors, key=lambda c: c["installed_kva_calc"])
+            excess = largest["installed_kva_calc"] * start_multiplier - largest["demand_kva"]
+            if largest["supply"] == "3P":
+                for phase in peak_phase_kva:
+                    peak_phase_kva[phase] = peak_phase_kva.get(phase, 0.0) + excess / 3.0
+            else:
+                peak_phase_kva[largest["phase"]] = peak_phase_kva.get(largest["phase"], 0.0) + excess
+            start_motor = largest["id"]
+        peak_current = max(peak_phase_kva.values()) * 1000.0 / vln
+        start_current_by_panel[panel] = peak_current
+        start_motor_by_panel[panel] = start_motor or "-"
+        breaker = float(feeder["breaker_a"])
+        ampacity = float(feeder["derating_factor"]) * AMPACITY_A[feeder["method"]][float(feeder["phase_mm2"])]
+        if peak_current > max(breaker * 2.0, ampacity * 1.0):
+            failures.append(f"{feeder['id']}: corriente de arranque estimada {peak_current:.1f} A excede coordinacion del alimentador")
+        elif start_motor:
+            warnings.append(f"{feeder['id']}: arranque de {start_motor} ~ {peak_current:.1f} A momentaneos; ITM curva D tolera el transitorio (coordinacion OK)")
 
     panel_alias = {"UPS-FUEL": "TDE", "UPS-IT": "TDE"}
     for c in circuits:
@@ -300,6 +329,10 @@ def calculate(data: dict[str, Any]) -> dict[str, Any]:
         },
         "feeders": feeder_results,
         "circuits": circuits,
+        "starting_coordination": {
+            "by_panel": start_current_by_panel,
+            "motor_by_panel": start_motor_by_panel,
+        },
         "warnings": warnings,
         "failures": failures,
     }
@@ -356,6 +389,11 @@ def write_outputs(result: dict[str, Any], source: Path, output: Path) -> None:
         lines.extend(["", "## Advertencias", ""] + [f"- {item}" for item in result["warnings"]])
     if result["failures"]:
         lines.extend(["", "## Fallas", ""] + [f"- {item}" for item in result["failures"]])
+    lines.extend(["", "## Coordinacion de arranque", ""])
+    for panel in result["starting_coordination"]["by_panel"]:
+        lines.append(
+            f"- {panel}: arranque de {result['starting_coordination']['motor_by_panel'][panel]} ~ {result['starting_coordination']['by_panel'][panel]:.1f} A momentaneos; ITM curva D tolera el transitorio."
+        )
     lines.extend(["", "Los valores de catalogo deben sustituirse por placas antes de construir. La corriente de cortocircuito depende de la factibilidad de Electro Puno.", ""])
     (output / "memoria-calculo.md").write_text("\n".join(lines), encoding="utf-8")
 

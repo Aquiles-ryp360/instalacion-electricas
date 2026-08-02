@@ -231,6 +231,32 @@ def add_legend(msp: ezdxf.layouts.BaseLayout, title: str, rows: list[tuple[str, 
         text_left(msp, description, x + 4.0, yy, 0.22, "IE_TEXTO")
 
 
+def add_north_arrow(msp: ezdxf.layouts.BaseLayout, cx: float = 49.5, cy: float = 54.0) -> None:
+    msp.add_lwpolyline([(cx, cy - 1.4), (cx - 0.5, cy), (cx, cy + 1.4), (cx + 0.5, cy)], dxfattribs={"layer": "IE_TEXTO", "color": 7}, close=True)
+    msp.add_lwpolyline([(cx, cy + 0.15), (cx - 0.35, cy - 0.55), (cx + 0.35, cy - 0.55)], dxfattribs={"layer": "IE_TEXTO", "color": 7}, close=True)
+    text_center(msp, "N", cx, cy + 1.8, 0.55, "IE_TEXTO", 7)
+
+
+def add_scale_bar(msp: ezdxf.layouts.BaseLayout, cx: float = 30.0, cy: float = 14.6, meters: float = 10.0, length: float = 14.0) -> None:
+    """Barra de escala grafica: `length` cm en lamina representan `meters` reales."""
+    segment = length / 4.0
+    for index in range(4):
+        x0 = cx - length / 2 + index * segment
+        y_top = cy + 0.35
+        if index % 2 == 0:
+            msp.add_lwpolyline(
+                [(x0, cy - 0.35), (x0 + segment, cy - 0.35), (x0 + segment, y_top), (x0, y_top)],
+                dxfattribs={"layer": "IE_TABLA", "color": 30, "lineweight": 60}, close=True,
+            )
+        else:
+            msp.add_lwpolyline(
+                [(x0, cy - 0.35), (x0 + segment, cy - 0.35), (x0 + segment, y_top), (x0, y_top)],
+                dxfattribs={"layer": "IE_TABLA", "color": 7, "lineweight": 18}, close=True,
+            )
+    text_center(msp, f"0   2   4   6   8   {meters:.0f} m", cx, cy - 0.85, 0.22, "IE_TEXTO")
+    text_center(msp, f"ESCALA GRAFICA: {length / meters:.2f} cm = {meters:.0f} m", cx, cy + 0.9, 0.22, "IE_TEXTO")
+
+
 def sheet_ie01(doc: ezdxf.document.Drawing, architecture: dict[str, Any], calc: dict[str, Any]) -> None:
     msp = doc.modelspace()
     add_architecture(doc, architecture)
@@ -242,6 +268,8 @@ def sheet_ie01(doc: ezdxf.document.Drawing, architecture: dict[str, Any], calc: 
     add_panel(msp, tdf, "TDF")
     for x in (6.0, 12.0, 18.0, 24.0, 30.0):
         add_route(msp, [(9.0, 6.0), (9.0, 8.0), (x, 8.0), (x, 12.0)])
+    add_north_arrow(msp)
+    add_scale_bar(msp)
     add_legend(msp, "IE-01 | LEYENDA Y CRITERIOS", [
         ("X", "Luminaria LED; magenta = circuito de emergencia"),
         ("TDE", "Tablero de emergencia mediante ATS"),
@@ -262,6 +290,8 @@ def sheet_ie02(doc: ezdxf.document.Drawing, architecture: dict[str, Any], calc: 
         add_outlet(msp, local_to_page(x, y))
     for x, y in ((4.0, 4.0), (8.0, 4.0), (13.0, 3.0), (16.0, 2.0), (18.0, 2.0), (22.0, 3.0), (5.0, 2.0), (10.0, 2.0), (12.0, 4.0), (20.0, 2.0), (24.0, 3.0)):
         add_route(msp, [(9.0, 5.0), (9.0, 6.0), (x, 6.0), (x, y)])
+    add_north_arrow(msp)
+    add_scale_bar(msp)
     add_legend(msp, "IE-02 | LEYENDA", [
         ("X", "Luminaria LED interior"),
         ("TC", "Tomacorriente"),
@@ -288,6 +318,8 @@ def sheet_ie03(doc: ezdxf.document.Drawing, architecture: dict[str, Any], calc: 
         add_route(msp, [(9.0, 6.0), (12.0, 6.0), tanque["pos_local"]])
     for punto in architecture["dispensadores_y_surtidores"]["posiciones_local"]:
         add_route(msp, [(10.0, 5.0), (12.0, 7.0), punto])
+    add_north_arrow(msp)
+    add_scale_bar(msp)
     add_legend(msp, "IE-03 | LEYENDA", [
         ("STP", "Bomba sumergible de tanque (emergencia)"),
         ("SURT", "Surtidor / cabeza electronica"),
@@ -317,6 +349,8 @@ def sheet_ie04(doc: ezdxf.document.Drawing, architecture: dict[str, Any], calc: 
         local_to_page(12.0, 7.0), local_to_page(14.0, 8.0), local_to_page(17.0, 12.0),
         local_to_page(21.0, 8.0),
     ], dxfattribs={"layer": "IE_TIERRA"})
+    add_north_arrow(msp)
+    add_scale_bar(msp)
     add_legend(msp, "IE-04 | PUESTA A TIERRA Y RAYO", [
         ("PAT", "Pozo de puesta a tierra"),
         ("=O", "Pararrayo con radio de proteccion 20 m (h=12 m)"),
@@ -359,6 +393,8 @@ def sheet_ie06(doc: ezdxf.document.Drawing, architecture: dict[str, Any], calc: 
     for punto in architecture["dispensadores_y_surtidores"]["posiciones_local"]:
         cx, cy = local_to_page(*punto)
         msp.add_circle((cx, cy), 3.5, dxfattribs={"layer": "IE_ZONA_2", "linetype": "DASHED"})
+    add_north_arrow(msp)
+    add_scale_bar(msp)
     add_legend(msp, "IE-06 | CLASIFICACION DE AREAS", [
         ("Zona 1", "Area peligrosa alrededor de tanques y venteos"),
         ("Zona 2", "Area de despacho alrededor de surtidores"),

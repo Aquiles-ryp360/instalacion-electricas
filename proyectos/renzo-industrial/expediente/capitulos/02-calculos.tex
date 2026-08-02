@@ -1,0 +1,58 @@
+\chapter{Calculos justificativos}
+\thispagestyle{memoria}\pagestyle{memoria}
+
+\section{Demanda y suministro}
+La potencia instalada es \PI. La maxima demanda calculada es
+\MD~(\MDkw~kW y \MDkva~kVA), con un desbalance de fases de \Desb, por debajo
+del objetivo de 10~\%.
+
+Aplicando el factor de reserva de 20~\% la demanda con reserva es \MDReserva,
+menor que la capacidad de servicio propuesta de \ServCap. La corriente maxima
+de fase con reserva es \Ipase, cubierta por el interruptor principal de
+\IPrincipal.
+
+La demanda se determina con cargas realmente proyectadas y factores de demanda
+y simultaneidad justificados, conforme al articulo 7 de la EM.010. Para usos
+no residenciales se verifica ademas la cota de la Regla 050-210 del CNE-U con
+la Tabla 14 (25~W/m\textsuperscript{2} para uso industrial/comercial, factor
+de demanda 100~\%), que queda ampliamente superada por las cargas instaladas.
+
+\section{Conductores y caida de tension}
+La comprobacion usa las capacidades de la Tabla 2 del CNE-U para cobre
+XLPE/EPR a 90~\({}^\circ\)C (tres conductores cargados, metodos B1 y D de la
+NTP 370.301) y secciones de enlace equipotencial de la Tabla 16. El conductor
+minimo es 2,5~mm\textsuperscript{2}, conforme a la Regla 030-002.
+
+Conforme a la Regla 050-102, la caida de tension de cada alimentador o
+circuito derivado no supera 2,5~\% y la caida total hasta la salida mas
+alejada no supera 4~\%. El alimentador principal y los subalimentadores se
+calculan con la formula trifasica (380~V). El alimentador principal presenta
+una caida de \dVAlim.
+
+El desrating de 0,80 adopta conservadoramente la correccion por temperatura,
+agrupamiento y altitud (Puno, aproximadamente 3830~m), sin aplicar factores
+separados.
+
+\section{Cuadro de circuitos}
+\ALIMENTADORESTAB
+
+\bigskip
+\CIRCUITOSTAB
+
+\section{Coordinacion de arranque}
+El arranque de los motores se verifica contra la coordinacion del
+subalimentador correspondiente. El arranque del mayor motor de cada tablero
+produce corrientes momentaneas que los interruptores de curva D toleran
+durante el transitorio; el grupo electrogeno se dimensiona para el arranque
+secuencial de una bomba sumergible a la vez. Los valores de catalogo deben
+sustituirse por placas antes de construir.
+
+\section{Grupo electrogeno y UPS}
+La carga critica permanente es \EmergKVA. El escenario de arranque secuencial
+con el mayor motor es \ArranqueKVA y con margen de 1,25 es \ArranqueMargen. A
+la altitud de sitio (factor \AltFactor) el grupo \GrupoModelo~de~\GrupoNom~kVA
+standby entrega \GrupoDisp, por lo que la verificacion CUMPLE.
+
+Las UPS se dimensionan por sus cargas conectadas: la UPS de
+combustible/control y la UPS de POS-CCTV-comunicaciones quedan por encima de
+sus potencias nominales de forma holgada.
