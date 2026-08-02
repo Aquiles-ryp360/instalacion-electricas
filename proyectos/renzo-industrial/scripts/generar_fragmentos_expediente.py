@@ -65,7 +65,11 @@ def main() -> int:
         f"\\renewcommand{{\\GrupoDisp}}{{{fmt(g['available_standby_kva_at_site'])}}}",
         f"\\renewcommand{{\\GrupoNom}}{{{fmt(g['selected_nameplate_kva'])}}}",
         f"\\renewcommand{{\\GrupoModelo}}{{Cummins C30D6}}",
+        f"\\renewcommand{{\\IccAsumido}}{{10}}",
+        f"\\renewcommand{{\\Icu}}{{{fmt(system.get('main_breaker_icu_ka_min', 25))}}}",
     ]
+
+    feeder_breaker = {fdr["id"]: fdr["breaker_a"] for fdr in result["feeders"]}
 
     def esc(text: str) -> str:
         return (
@@ -120,6 +124,11 @@ def main() -> int:
         "\\providecommand{\\GrupoDisp}{}",
         "\\providecommand{\\GrupoNom}{}",
         "\\providecommand{\\GrupoModelo}{}",
+        "\\providecommand{\\IccAsumido}{}",
+        "\\providecommand{\\Icu}{}",
+        f"\\providecommand{{\\ITMAlTDE}}{{{feeder_breaker.get('AL-TDE', 40)}}}",
+        f"\\providecommand{{\\ITMAlTDF}}{{{feeder_breaker.get('AL-TDF', 32)}}}",
+        f"\\providecommand{{\\ITMAlTDA}}{{{feeder_breaker.get('AL-TD-A1', 20)}}}",
         "\\providecommand{\\CIRCUITOS}{}",
         "\\providecommand{\\ALIMENTADORES}{}",
         *macros,

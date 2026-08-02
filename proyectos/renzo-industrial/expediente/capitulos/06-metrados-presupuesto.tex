@@ -4,32 +4,48 @@
 \section{Base del metrado}
 Los metrados de este anteproyecto se estiman a partir del cuadro de circuitos
 y las longitudes de diseno registradas en las entradas canonicas
-(\texttt{diseno-electrico/datos/cargas.yaml}) y los planos IE-01..IE-06. Son
-valores referenciales de anteproyecto; el metrado definitivo se realiza sobre
-planos de construccion aprobados y verificados en campo.
+(\texttt{diseno-electrico/datos/cargas.yaml}) y los planos IE-01..IE-06. Las
+longitudes de circuitos y alimentadores suman aproximadamente 620~m de
+canalizacion. Son valores referenciales de anteproyecto; el metrado definitivo
+se realiza sobre planos de construccion aprobados y verificados en campo.
 
 \section{Alcance economico}
 El presupuesto considera partidas de canalizaciones, conductores, tableros,
 protecciones, luminarias, tomacorrientes, equipos de playa, grupo electrogeno
 con ATS, UPS, puesta a tierra, pararrayo y montaje. No incluye obra civil
 estructural, redes de distribuidora, ni gestion de permisos sectoriales. Los
-precios son unitarios referenciales de mercado y deben actualizarse antes de
-la ejecucion.
+precios unitarios son referenciales de mercado (tercer trimestre 2026,
+mercado peruano) y deben actualizarse con cotizaciones vigentes antes de la
+ejecucion.
 
 \begin{center}
-\begin{tabularx}{\linewidth}{@{}L l l L@{}}
+\small
+\begin{tabularx}{\linewidth}{@{}l l l L r r@{}}
 \toprule
-Partida & Cant. & Und. & P.U. (S/) \\
+Partida & Cant. & Und. & Descripcion & P.U. (S/) & Parcial (S/) \\
 \midrule
-Tuberia PVC SAP y accesorios & & & segun metrado por circuito \\
-Conductor de cobre XLPE (2,5 a 16~mm\textsuperscript{2}) & & & segun metrado por circuito \\
-Tableros TDE, TDF y TD-A1 & 3 & und & segun catalogo \\
-Interruptores y diferenciales & segun cuadro & und & segun catalogo \\
-Luminarias LED interior y exterior & segun plano & und & segun catalogo \\
-Grupo \GrupoModelo~\GrupoNom~kVA con ATS & 1 & und & segun catalogo \\
-UPS combustible/control y POS-CCTV & 2 & und & segun catalogo \\
-Pozo de puesta a tierra & 2 & und & segun partida \\
-Pararrayo h=12~m & 1 & und & segun catalogo \\
+Tuberia PVC SAP y accesorios & 620 & m & circuitos y alimentadores & 3,50 & 2\,170,00 \\
+Conductor de cobre XLPE 2,5~mm\textsuperscript{2} & 1400 & m & alumbrado, tomacorrientes, servicios & 4,20 & 5\,880,00 \\
+Conductor de cobre XLPE 4~mm\textsuperscript{2} & 450 & m & circuitos de fuerza y tomacorrientes & 5,80 & 2\,610,00 \\
+Conductor de cobre XLPE 10~mm\textsuperscript{2} & 80 & m & alimentadores TDE y TDF & 11,50 & 920,00 \\
+Conductor de cobre XLPE 16~mm\textsuperscript{2} & 50 & m & alimentador principal + PE & 15,00 & 750,00 \\
+Tableros TDE, TDF y TD-A1 & 3 & und & metalicos, con barra N y PE & 650,00 & 1\,950,00 \\
+Interruptores termomagneticos y diferenciales & 22 & und & segun cuadro de circuitos & 95,00 & 2\,090,00 \\
+Interruptor general y subalimentadores & 4 & und & ITM 50 A 4P y 40/32/20 A & 320,00 & 1\,280,00 \\
+Luminarias LED interior y exterior & 18 & und & interior, marquesina, postes y totem & 180,00 & 3\,240,00 \\
+Alumbrado de emergencia y senales & 6 & und & EM.010 art. 11.1 & 140,00 & 840,00 \\
+Tomacorrientes y dispositivos & 24 & und & cajas, placas y salidas & 55,00 & 1\,320,00 \\
+Bombas sumergibles de tanque (STP) & 3 & und & 1,5~hp, arranque directo & 3\,200,00 & 9\,600,00 \\
+Surtidores con cabeza electronica & 2 & und & islas de despacho & 18\,000,00 & 36\,000,00 \\
+Compresor de aire de servicio & 1 & und & 2,2~kW & 4\,800,00 & 4\,800,00 \\
+Bombas de agua y de efluentes & 2 & und & 1,5~kW & 1\,900,00 & 3\,800,00 \\
+Grupo \GrupoModelo~\GrupoNom~kVA con ATS & 1 & und & standby, 4 polos, neutro conmutado & 45\,000,00 & 45\,000,00 \\
+UPS combustible/control y POS-CCTV & 2 & und & 1,5 y 2,0~kVA, 15~min & 2\,400,00 & 4\,800,00 \\
+Pozo de puesta a tierra & 2 & und & con enlace equipotencial & 1\,200,00 & 2\,400,00 \\
+Pararrayo h=12~m & 1 & und & con radio de proteccion 20~m & 6\,500,00 & 6\,500,00 \\
+Montaje, pruebas y verificaciones & 1 & gbl & instalacion, telurometro, ensayos & 15\,000,00 & 15\,000,00 \\
+\midrule
+\multicolumn{5}{r}{\bfseries TOTAL REFERENCIAL} & \bfseries 151\,950,00 \\
 \bottomrule
 \end{tabularx}
 \end{center}

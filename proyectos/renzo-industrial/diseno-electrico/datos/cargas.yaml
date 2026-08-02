@@ -2,6 +2,19 @@ schema_version: 1
 project_id: renzo-industrial
 status: criterios_de_diseno_catalogados_pendientes_de_placas
 
+site:
+  departamento: "Puno"
+  provincia: "San Roman"
+  distrito: "San Roman"
+  direccion: "Predio Rustico Reumita Parcela B-8 y B-9 Lado Este, comunidad campesina San Francisco de Buenavista, carretera Juliaca-Puno"
+  propietario: "Miguel Mamani Chuquicallata"
+  altitud_m_snm: 3830.0
+  altitud_state: confirmada_por_estudiante
+  empresa_distribuidora: "Electro Puno (asumida)"
+  icc_punto_entrega_kA: null
+  icc_state: pendiente_factibilidad_concesionaria
+  fuente: "cuestionario-estudiante.md respuestas B2/B3 del 2026-08-02"
+
 system:
   line_to_line_v: 380.0
   line_to_neutral_v: 220.0

@@ -1,6 +1,36 @@
 \chapter{Calculos justificativos}
 \thispagestyle{memoria}\pagestyle{memoria}
 
+\section{Parametros de diseno}
+Los parametros base del diseno se resumen a continuacion. Los valores marcados
+como supuesto se asumen para el anteproyecto y deben confirmarse con la
+concesionaria antes de la construccion.
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}L l X@{}}
+\toprule
+Parametro & Valor & Nota \\
+\midrule
+Tension nominal & 380/220~V, 3F+N+PE & DEC-004 \\
+Frecuencia & 60~Hz & sistema peruano \\
+Sistema de puesta a tierra & TN-S & DEC-005 \\
+Capacidad de servicio & \ServCap & propuesta \\
+Factor de reserva & 1,20 & margen de diseno \\
+Factor de potencia de demanda & 0,83 & MD 15,67~kW / 18,83~kVA \\
+Desbalance de fases & \Desb & objetivo \(\leq\) 10~\% \\
+Resistividad del cobre (en servicio) & 0,021~\(\Omega\cdot\)mm\textsuperscript{2}/m & Tabla del calculo \\
+Reactancia del conductor & 0,08~\(\Omega\)/km & hipotesis \\
+Factor de desrating & 0,80 & CNE-U Tabla 5A/5C: temperatura, agrupamiento y altitud \\
+Caida de tension (alim./derivado) & 2,5~\% / 4~\% total & CNE-U Regla 050-102 \\
+Conductor minimo & 2,5~mm\textsuperscript{2} & CNE-U Regla 030-002 \\
+Icc en punto de entrega & \IccAsumido~kA (supuesto) & pendiente factibilidad \\
+Poder de corte del ITM principal & \(\geq\) \Icu~kA & cubre el Icc supuesto \\
+Altitud de sitio & 3830~m s.n.m. & confirmada por el estudiante \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
 \section{Demanda y suministro}
 La potencia instalada es \PI. La maxima demanda calculada es
 \MD~(\MDkw~kW y \MDkva~kVA), con un desbalance de fases de \Desb, por debajo
@@ -16,6 +46,20 @@ y simultaneidad justificados, conforme al articulo 7 de la EM.010. Para usos
 no residenciales se verifica ademas la cota de la Regla 050-210 del CNE-U con
 la Tabla 14 (25~W/m\textsuperscript{2} para uso industrial/comercial, factor
 de demanda 100~\%), que queda ampliamente superada por las cargas instaladas.
+
+\section{Cortocircuito y selectividad}
+Para el anteproyecto se asume una corriente de cortocircuito de
+\IccAsumido~kA en el punto de entrega, valor tipico de un suministro BT de
+esta magnitud y que debe confirmarse con la factibilidad de la concesionaria.
+El interruptor principal de \IPrincipal~se selecciona con poder de corte
+\(I_{cu} \geq\) \Icu~kA, por lo que cubre holgadamente el Icc supuesto.
+
+La selectividad entre el interruptor general y los interruptores de los
+subalimentadores (TDE \ITMAlTDE~A, TDF \ITMAlTDF~A y TD-A1 \ITMAlTDA~A) se logra
+por escalonamiento de corrientes nominales, con relaciones de 1,25 a 2,5~veces
+entre niveles, garantizando que solo opere el dispositivo mas cercano al
+defecto. El estudio de selectividad definitivo y el calculo de Icc por fase se
+realizan en la etapa de construccion con los datos reales de la concesionaria.
 
 \section{Conductores y caida de tension}
 La comprobacion usa las capacidades de la Tabla 2 del CNE-U para cobre

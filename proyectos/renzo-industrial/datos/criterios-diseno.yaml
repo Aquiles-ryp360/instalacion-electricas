@@ -12,7 +12,7 @@ Valores sin confirmar permanecen como `por confirmar` o como criterio adoptado.
 | Fases | 3F+N+PE | DEC-004 | criterio adoptado |
 | Frecuencia | 60 Hz | Sistema peruano | adoptado |
 | Sistema de puesta a tierra | TN-S | DEC-005 | criterio adoptado |
-| Empresa distribuidora | por confirmar | — | pendiente |
+| Empresa distribuidora | Electro Puno (asumida) | estudiante confirmo grifo en Puno/San Roman | asumida por el estudiante |
 | Punto de entrega | por confirmar | — | pendiente |
 | Icc en punto de entrega | por confirmar | — | pendiente |
 
@@ -33,9 +33,13 @@ Valores sin confirmar permanecen como `por confirmar` o como criterio adoptado.
 - Caida de tension: maximo 2.5% circuitos de alumbrado y 4% fuerza (limites
   academicos por confirmar contra CNE-U).
 - Tensiones de servicio para calculo: 380 V entre fases, 220 V fase-neutro.
+- Altitud de sitio: 3830 m s.n.m. (confirmada por el estudiante; Puno).
 - Temperatura ambiente de referencia: por confirmar (altitud Puno).
 
 ## Datos de catalogo
 
 - Potencias de equipos sin placa se tomaran de catalogos comparables
   registrando fabricante, familia, fecha y margen usado.
+- El estudiante delego la estimacion de cargas de alumbrado interior/exterior,
+  tomacorrientes y equipos de oficina; se mantienen como criterios adoptados
+  coherentes con los planos IE-01..IE-06 generados.

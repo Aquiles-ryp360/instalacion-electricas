@@ -163,8 +163,8 @@ def add_title_block(msp: ezdxf.layouts.BaseLayout, title_data: dict[str, Any], s
     text_center(msp, sheet["titulo"], (x0 + x1) / 2, 9.28, 0.40, "ROTULO_TEXTO")
 
     text_left(msp, f"PROPIETARIO: {project['propietario']}", x0 + 0.25, 8.08, 0.28, "ROTULO_TEXTO")
-    text_left(msp, "Dato pendiente de confirmacion por el estudiante", x0 + 0.25, 7.63, 0.20, "ROTULO_TEXTO")
-    text_left(msp, "UBICACION: POR CONFIRMAR", x0 + 0.25, 7.19, 0.24, "ROTULO_TEXTO")
+    text_left(msp, "DISTRITO/PROV.: SAN ROMAN - DEP.: PUNO", x0 + 0.25, 7.63, 0.20, "ROTULO_TEXTO")
+    text_left(msp, "UBICACION: PREDIO RUSTICO REUMITA PARCELA B-8 Y B-9, CARRETERA JULIACA-PUNO", x0 + 0.25, 7.19, 0.19, "ROTULO_TEXTO")
 
     text_left(msp, f"CURSO: {acad['curso']}", x0 + 0.25, 6.05, 0.28, "ROTULO_TEXTO")
     text_left(msp, f"DOCENTE: {acad['docente']}", x0 + 0.25, 5.58, 0.28, "ROTULO_TEXTO")
@@ -172,8 +172,8 @@ def add_title_block(msp: ezdxf.layouts.BaseLayout, title_data: dict[str, Any], s
     text_left(msp, "REVISION DOCENTE: CAMPO ACADEMICO - SIN FIRMA NI APROBACION AFIRMADA", 68.7, 5.58, 0.19, "ROTULO_TEXTO")
 
     text_left(msp, "MODALIDAD: INDIVIDUAL", x0 + 0.25, 4.78, 0.25, "ROTULO_TEXTO")
-    text_left(msp, "CODIGO EST.: __________", x0 + 0.25, 4.30, 0.24, "ROTULO_TEXTO")
-    text_left(msp, "SEMESTRE: __________", 68.7, 4.78, 0.24, "ROTULO_TEXTO")
+    text_left(msp, f"CODIGO EST.: {acad['codigo_estudiante']}", x0 + 0.25, 4.30, 0.24, "ROTULO_TEXTO")
+    text_left(msp, f"SEMESTRE: {acad['semestre_academico']}", 68.7, 4.78, 0.24, "ROTULO_TEXTO")
     text_left(msp, "SEDE: PUNO - PERU", 68.7, 4.30, 0.24, "ROTULO_TEXTO")
 
     labels = (

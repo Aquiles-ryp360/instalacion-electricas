@@ -85,3 +85,22 @@ Formato: `DEC-NNN | fecha | decision | estado`.
   (23 paginas). Compilacion: 2 pasadas pdflatex; solo overfull benignos
   (< 5 pt).
 - Estado: ejecutado; pendiente revision humana antes de publicar.
+
+## DEC-010 | 2026-08-02 | Datos confirmados del estudiante (cuestionario B1-B11)
+
+- El estudiante respondio el cuestionario (`documentacion/cuestionario-estudiante.md`).
+- Confirmados: codigo 228447, semestre 2026-II, entrega 2026-08-03,
+  propietario Miguel Mamani Chuquicallata, direccion Predio Rustico Reumita
+  Parcela B-8 y B-9 Lado Este (comunidad campesina San Francisco de
+  Buenavista, carretera Juliaca-Puno), distrito/provincia San Roman,
+  departamento Puno, altitud 3830 m s.n.m.
+- Delegados al diseno (criterio adoptado, registrado en `criterios-diseno.yaml`
+  y `cargas.yaml`): empresa distribuidora Electro Puno (asumida), Icc 10 kA
+  (supuesto), estimacion de alumbrado/tomacorrientes/equipos segun planos,
+  mantener Cummins C30D6, mantener cargas criticas y UPS.
+- Mejoras solicitadas y aplicadas: memoria de calculo con Icc/selectividad y
+  tabla de parametros, presupuesto con cantidades y totales, cronograma por
+  semanas, mas citas normativas y tabla de parametros de diseno.
+- Pendiente para publicar: factibilidad/Icc de la concesionaria, placas reales
+  y revision humana competente.
+- Estado: aplicado.

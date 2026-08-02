@@ -5,8 +5,11 @@ curso: "Instalaciones Electricas I"
 docente: "Gregorio Meza Marocho"
 autor_estudiante: "Renzo Gabriel Mamani Galindo"
 modalidad: individual
-propietario: "por confirmar"
-estado: "anteproyecto desarrollado: cargas, calculos (PASS), planos CAD y expediente compilados en build/; pendiente revision humana competente antes de publicar en entregables"
+propietario: "Miguel Mamani Chuquicallata"
+codigo_estudiante: "228447"
+semestre_academico: "2026-II"
+fecha_entrega: "2026-08-03"
+estado: "anteproyecto desarrollado y auditado: datos de ubicacion y propietario confirmados por el estudiante; calculos (PASS), planos CAD y expediente en build/; pendiente factibilidad/Icc, placas reales y revision humana competente antes de publicar en entregables"
 
 naturaleza_proyecto:
   tipo: anteproyecto_academico_nuevo
@@ -23,12 +26,13 @@ tipologia:
   fuente: "decision directa del estudiante"
 
 ubicacion:
-  distrito: por_confirmar
-  provincia: por_confirmar
-  departamento: por_confirmar
-  direccion: por_confirmar
-  estado: "pendiente de confirmacion por el estudiante; el DWG de ubicacion existe pero su rotulo no se ha transcripto"
-  fuente: "fuentes/local/cad/PLANO DE UBICACION.dwg (CAD-001)"
+  distrito: "San Roman"
+  provincia: "San Roman"
+  departamento: "Puno"
+  direccion: "Predio Rustico Reumita Parcela B-8 y B-9 Lado Este, comunidad campesina San Francisco de Buenavista, carretera Juliaca-Puno"
+  altitud_m_snm: 3830
+  estado: "confirmada por el estudiante el 2026-08-02; rotulo del DWG de ubicacion transcito por el estudiante"
+  fuente: "cuestionario-estudiante.md (B2) y fuentes/local/cad/PLANO DE UBICACION.dwg (CAD-001)"
 
 suministro:
   nivel_tension: baja_tension
@@ -37,7 +41,7 @@ suministro:
   frecuencia_hz: 60
   sistema_puesta_tierra: "TN-S aguas abajo del origen; conductores N y PE separados"
   punto_entrega: por_confirmar_en_campo
-  empresa_distribuidora: por_confirmar
+  empresa_distribuidora: "Electro Puno (asumida por el estudiante)"
   estado: "criterio_academico_adoptado; requiere factibilidad y corriente de cortocircuito de la concesionaria"
 
 alcance:

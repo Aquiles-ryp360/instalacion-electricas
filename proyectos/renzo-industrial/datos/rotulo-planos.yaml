@@ -15,19 +15,20 @@ academico:
   docente: "MG. GREGORIO MEZA MAROCHO"
   estudiante: "RENZO GABRIEL MAMANI GALINDO"
   modalidad: INDIVIDUAL
-  codigo_estudiante: null
-  semestre_academico: null
-  estado_datos_faltantes: "registrados en dudas-pendientes; no bloquean el anteproyecto"
+  codigo_estudiante: "228447"
+  semestre_academico: "2026-II"
+  fecha_entrega: "2026-08-03"
+  estado_datos_faltantes: "datos de identificacion confirmados por el estudiante el 2026-08-02"
 
 proyecto:
   titulo: "INSTALACIONES ELECTRICAS INTERIORES EN BAJA TENSION PARA ESTACION DE SERVICIO (GRIFO) DE COMBUSTIBLES LIQUIDOS"
   naturaleza: "ANTEPROYECTO ACADEMICO NUEVO"
-  propietario: "POR CONFIRMAR"
-  propietario_nota: "DATO PENDIENTE DE CONFIRMACION POR EL ESTUDIANTE"
-  direccion: "POR CONFIRMAR"
-  distrito: POR_CONFIRMAR
-  provincia: POR_CONFIRMAR
-  departamento: POR_CONFIRMAR
+  propietario: "MIGUEL MAMANI CHUQUICALLATA"
+  propietario_nota: "confirmado por el estudiante"
+  direccion: "PREDIO RUSTICO REUMITA PARCELA B-8 Y B-9 LADO ESTE, COMUNIDAD CAMPESINA SAN FRANCISCO DE BUENAVISTA, CARRETERA JULIACA-PUNO"
+  distrito: "SAN ROMAN"
+  provincia: "SAN ROMAN"
+  departamento: "PUNO"
   combustibles: "DIESEL B5-S50 / GASOHOL REGULAR / GASOHOL PREMIUM"
   exclusiones: "NO INCLUYE GLP NI GNV"
 
@@ -49,7 +50,6 @@ presentacion:
   unidad_modelo: m
   idioma: es-PE
   advertencia: "ANTEPROYECTO ACADEMICO - NO CONSTRUIR SIN FACTIBILIDAD, VERIFICACION DE CAMPO Y REVISION PROFESIONAL"
-
 campos_variables_por_lamina:
   - codigo
   - titulo_lamina
