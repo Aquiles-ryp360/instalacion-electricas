@@ -1,0 +1,68 @@
+schema_version: 1
+id: unidad-2-industrial
+proyecto: "Instalacion electrica no residencial - segunda unidad"
+curso: "Instalaciones Electricas I"
+docente: "Richar Renzo Julio Amachi Quispe"
+propietario: null
+estado: "preparacion - tipologia por confirmar"
+
+tipologia:
+  seleccionada: null
+  estado: por_confirmar
+  alternativas:
+    - hospital_o_clinica
+    - laboratorio
+    - taller
+    - grifo_o_estacion_de_servicio
+  fuente: "alternativas indicadas por el estudiante; falta consigna docente"
+
+ubicacion:
+  distrito: null
+  provincia: null
+  departamento: null
+  direccion: null
+  estado: por_confirmar
+  fuente: null
+
+suministro:
+  nivel_tension: null
+  tension_v: null
+  fases: null
+  frecuencia_hz: null
+  sistema_puesta_tierra: null
+  punto_entrega: null
+  empresa_distribuidora: null
+  estado: por_confirmar
+  fuente: null
+
+alcance:
+  baja_tension: por_confirmar
+  media_tension: por_confirmar
+  subestacion: por_confirmar
+  generacion_emergencia: por_confirmar
+  ups: por_confirmar
+  alarma_y_bomba_contra_incendio: por_confirmar
+  areas_peligrosas: por_confirmar
+
+entradas:
+  criterios: datos/criterios-diseno.yaml
+  layout: null
+  cargas: null
+  consigna: null
+
+automatizacion:
+  pipeline_habilitado: false
+  razon_bloqueo: "faltan tipologia, arquitectura, suministro y cargas confirmadas"
+  requiere_revision_humana: true
+
+entregables:
+  directorio: entregables
+  expediente: null
+  planos: []
+
+siguiente_hito:
+  nombre: "seleccionar tipologia y registrar consigna"
+  criterios_salida:
+    - "consigna y rubrica guardadas en fuentes"
+    - "tipologia validada por el grupo y docente"
+    - "alcance y entregables confirmados"

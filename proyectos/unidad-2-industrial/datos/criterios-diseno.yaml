@@ -1,0 +1,75 @@
+schema_version: 1
+proyecto_id: unidad-2-industrial
+estado_general: por_confirmar
+
+clasificacion:
+  tipologia: null
+  actividad_principal: null
+  categoria_sectorial: null
+  ocupacion: null
+  horario_operacion: null
+  fuente: null
+  estado: por_confirmar
+
+arquitectura:
+  area_terreno_m2: null
+  area_techada_m2: null
+  numero_niveles: null
+  altura_libre_m: null
+  ambientes: []
+  fuente: null
+  estado: por_confirmar
+
+suministro:
+  tension_v: null
+  fases: null
+  frecuencia_hz: null
+  potencia_disponible_kw: null
+  corriente_cortocircuito_punto_entrega_ka: null
+  empresa_distribuidora: null
+  factibilidad_disponible: false
+  fuente: null
+  estado: por_confirmar
+
+ambiente_y_riesgo:
+  gases_inflamables: por_confirmar
+  liquidos_inflamables: por_confirmar
+  polvos_combustibles: por_confirmar
+  fibras_combustibles: por_confirmar
+  humedad_alta: por_confirmar
+  agentes_corrosivos: por_confirmar
+  areas_de_pacientes: por_confirmar
+  cargas_que_comprometen_vida: por_confirmar
+  clasificacion_areas: null
+  fuente: null
+  estado: por_confirmar
+
+cargas:
+  equipos: []
+  motores: []
+  soldadoras: []
+  diagnostico_por_imagenes: []
+  climatizacion: []
+  bombas: []
+  iluminacion: []
+  cargas_especiales: []
+  estado: por_confirmar
+
+criterios_electricos:
+  sistema_puesta_tierra: null
+  caida_tension_admisible: null
+  factor_potencia_objetivo: null
+  metodo_demanda: null
+  respaldo_emergencia: null
+  tiempo_autonomia: null
+  fuente: null
+  estado: por_confirmar
+
+normativa:
+  base:
+    - codigo: CNE-U
+      estado: fuente_verificada_aplicacion_pendiente
+    - codigo: RNE-EM.010
+      estado: fuente_verificada_aplicacion_pendiente
+  especial: []
+  fecha_ultima_revision: "2026-08-01"

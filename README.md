@@ -14,7 +14,8 @@ El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar
 ├── proyectos/
 │   ├── aquiles/              vivienda de dos pisos
 │   ├── nave-industrial/      nave industrial trifasica de 20 x 40 m
-│   └── renzo/                vivienda de tres pisos
+│   ├── renzo/                vivienda de tres pisos
+│   └── unidad-2-industrial/  nuevo proyecto no residencial, tipologia por definir
 ├── referencias/              normativa versionada y material local ignorado
 └── build/                    resultados regenerables, ignorados por Git
 ```
@@ -64,6 +65,11 @@ version revisada se publica en `proyectos/renzo/entregables/expediente.pdf`.
 7. Publicar unicamente resultados aprobados en `entregables/`.
 
 Consulta [docs/arquitectura.md](docs/arquitectura.md), [docs/flujo-agentes.md](docs/flujo-agentes.md) y [AGENTS.md](AGENTS.md) antes de modificar datos canonicos.
+
+El proyecto de la segunda unidad se inicia en
+[`proyectos/unidad-2-industrial/`](proyectos/unidad-2-industrial/README.md).
+Mientras su tipologia siga pendiente, solo se permite investigar, registrar
+fuentes y comparar alternativas; no se deben inventar cargas ni generar planos.
 
 ## Datos pesados y respaldos
 
