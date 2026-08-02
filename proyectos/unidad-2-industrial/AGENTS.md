@@ -33,8 +33,9 @@ verificacion de campo y revision profesional de areas clasificadas.
   fase que en realidad sea un criterio adoptado.
 - Crear cuadro de cargas, circuitos, conductores o protecciones como si fueran
   definitivos.
-- Copiar los 380 V, 20 x 40 m, motores, factores o circuitos de
-  `proyectos/nave-industrial/`.
+- Copiar tensiones, cargas, factores o circuitos de otros proyectos del
+  repositorio (`renzo-industrial`, `renzo`, `aquiles` o el eliminado
+  `nave-industrial`).
 - Dibujar limites definitivos de zonas peligrosas sin trazar su regla normativa
   y sin advertir la necesidad de revision competente. Se permite una propuesta
   academica basada en las fuentes geometricas disponibles.

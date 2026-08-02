@@ -43,5 +43,5 @@ por el grupo y, de ser posible, validada por el docente.
 
 Se descarta temporalmente una alternativa si faltan datos que cambian la
 clasificacion del riesgo, la arquitectura, la alimentacion o la potencia. No se
-rellenan esos vacios copiando valores de `proyectos/nave-industrial/` ni de un
-ejemplo de Internet.
+rellenan esos vacios copiando valores de otro proyecto de la unidad 2
+(`unidad-2-industrial` o `renzo-industrial`) ni de un ejemplo de Internet.

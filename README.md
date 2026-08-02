@@ -13,9 +13,9 @@ El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar
 ├── herramientas/             motores reutilizables
 ├── proyectos/
 │   ├── aquiles/              vivienda de dos pisos
-│   ├── nave-industrial/      nave industrial trifasica de 20 x 40 m
 │   ├── renzo/                vivienda de tres pisos
-│   └── unidad-2-industrial/  nuevo proyecto no residencial, tipologia por definir
+│   ├── renzo-industrial/     estacion de servicio (grifo) - unidad 2 de Renzo
+│   └── unidad-2-industrial/  estacion de servicio (grifo) - unidad 2 de Aquiles
 ├── referencias/              normativa versionada y material local ignorado
 └── build/                    resultados regenerables, ignorados por Git
 ```
@@ -49,6 +49,11 @@ Pipeline industrial:
 ```bash
 make nave-industrial
 ```
+
+`nave-industrial` fue eliminado del repositorio (ver
+`proyectos/renzo-industrial/documentacion/registro-decisiones.md`, DEC-001).
+El proyecto de unidad 2 de Renzo (`renzo-industrial`) esta en etapa inicial y
+no tiene aun pipeline habilitado.
 
 Todas las ejecuciones escriben resultados regenerables en `build/<proyecto>/`.
 En Renzo, el PDF temporal queda en `build/renzo/expediente/main.pdf`; la

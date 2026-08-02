@@ -1,0 +1,88 @@
+schema_version: 1
+id: renzo-industrial
+proyecto: "Instalaciones electricas interiores para una estacion de servicio (grifo) de combustibles liquidos - segunda unidad"
+curso: "Instalaciones Electricas I"
+docente: "Gregorio Meza Marocho"
+autor_estudiante: "Renzo Gabriel Mamani Galindo"
+modalidad: individual
+propietario: "por confirmar"
+estado: "proyecto iniciado: fuente CAD incorporada, arquitectura preliminar extraida; diseno electrico en desarrollo"
+
+naturaleza_proyecto:
+  tipo: anteproyecto_academico_nuevo
+  descripcion: "Diseno nuevo de instalaciones electricas para un grifo de combustibles liquidos, a partir de una planta arquitectonica de distribucion y ubicacion en DWG."
+  no_es:
+    - copia_del_proyecto_electrico_preexistente
+    - expediente_aprobado_por_entidad
+    - regularizacion_de_una_instalacion_electrica_existente
+
+tipologia:
+  seleccionada: grifo_o_estacion_de_servicio
+  estado: definida_por_estudiante
+  fecha_decision: "2026-08-02"
+  fuente: "decision directa del estudiante"
+
+ubicacion:
+  distrito: por_confirmar
+  provincia: por_confirmar
+  departamento: por_confirmar
+  direccion: por_confirmar
+  estado: "pendiente de confirmacion por el estudiante; el DWG de ubicacion existe pero su rotulo no se ha transcripto"
+  fuente: "fuentes/local/cad/PLANO DE UBICACION.dwg (CAD-001)"
+
+suministro:
+  nivel_tension: baja_tension
+  tension_v: "380/220"
+  fases: "3F+N+PE"
+  frecuencia_hz: 60
+  sistema_puesta_tierra: "TN-S aguas abajo del origen; conductores N y PE separados"
+  punto_entrega: por_confirmar_en_campo
+  empresa_distribuidora: por_confirmar
+  estado: "criterio_academico_adoptado; requiere factibilidad y corriente de cortocircuito de la concesionaria"
+
+alcance:
+  baja_tension: incluido
+  media_tension: excluida
+  subestacion: excluida
+  generacion_emergencia: por_definir
+  ups: por_definir
+  alarma_y_bomba_contra_incendio: por_definir
+  areas_peligrosas: "incluida clasificacion de areas segun CNE-U; requiere revision competente"
+  glp: excluido
+  gnv: excluido
+  combustibles_liquidos:
+    - Diesel_B5_S50
+    - Gasohol_Regular
+    - Gasohol_Premium
+  canalizaciones_y_plano_electrico: "no existen en la fuente; forman parte del diseno a desarrollar"
+
+entradas:
+  layout: arquitectura/datos/layout-grifo.json
+  criterios: datos/criterios-diseno.yaml
+  cad_fuente_local: "fuentes/local/cad/PLANO DE DISTRIBUCION.dwg"
+  cad_fuente_sha256: "2ddd45113a7d94eb27b595272c3fe6d9ea2142999354b5cf4c350247f3db506b"
+  cad_ubicacion_local: "fuentes/local/cad/PLANO DE UBICACION.dwg"
+  cad_ubicacion_sha256: "35d41698d64d82adec580cd0cf17424ea6fa55ec3dd9702ace8ab112566d40ae"
+
+automatizacion:
+  pipeline_habilitado: false
+  razon_bloqueo: "proyecto en etapa inicial; faltan cargas confirmadas, factibilidad, placas y revision humana"
+  requiere_revision_humana: true
+
+resultados_build:
+  estado: "sin resultados aun"
+
+entregables:
+  directorio: entregables
+  expediente: null
+  planos: []
+
+siguiente_hito:
+  nombre: "definir cargas y diseno electrico de anteproyecto"
+  criterios_salida:
+    - "confirmar ubicacion, propietario y suministro con el estudiante"
+    - "definir cargas por ambiente y por equipo (dispensadores, alumbrado, tomacorrientes, POS/CCTV)"
+    - "clasificar areas peligrosas segun CNE-U"
+    - "definir circuitos, tableros TG/TG2, canalizaciones y plano electrico"
+    - "obtener factibilidad e Icc de la concesionaria"
+    - "revision humana competente antes de publicar en entregables"

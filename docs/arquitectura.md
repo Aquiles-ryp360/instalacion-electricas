@@ -45,7 +45,7 @@ pertenecen en `entregables/`; y las iteraciones antiguas pertenecen en
 - `cotizacion/`: BOM, normalización, proveedores, comparación y reportes.
 - `calculadora/`: interfaz HTML independiente.
 
-Las herramientas no deben incluir datos, nombres ni rutas de Aquiles, Renzo o nave-industrial.
+Las herramientas no deben incluir datos, nombres ni rutas de Aquiles, Renzo, renzo-industrial o unidad-2-industrial.
 
 ## Extensiones
 

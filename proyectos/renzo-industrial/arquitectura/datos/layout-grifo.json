@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "renzo-industrial",
+  "proyecto": "Instalaciones electricas interiores - estacion de servicio (grifo) de combustibles liquidos",
+  "unidad": 2,
+  "proyecto_relacionado": "renzo",
+  "origen": "Extraido de fuentes/local/cad/PLANO DE DISTRIBUCION.dwg (CAD-002)",
+  "sistema_coordenadas_fuente": "UTM WGS84 zona 19S (coordenadas observadas en el DXF)",
+  "origen_local": {"x": 380425.0, "y": 8325990.0, "nota": "Esquina suroeste del lote a ejecutar; todas las coordenadas locales son relativas a este origen y en metros"},
+  "unidades": "metros",
+
+  "lote_total": {
+    "poligono_utm": [
+      [380425.0, 8325970.0],
+      [380466.0, 8325970.0],
+      [380466.0, 8326007.0],
+      [380425.0, 8326007.0]
+    ],
+    "dimensiones": {"largo": 41.0, "ancho": 37.0},
+    "area_m2": 1517.0,
+    "estado": "observado_aproximado",
+    "confianza": "media",
+    "nota": "Bounding box de la capa LOTE TOTAL; el poligono exacto requiere trazado fino del DXF"
+  },
+
+  "lote_a_ejecutar": {
+    "poligono_utm": [
+      [380425.0, 8325990.0],
+      [380453.0, 8325992.0],
+      [380453.0, 8326006.0],
+      [380451.0, 8326006.0]
+    ],
+    "poligono_local": [
+      [0.0, 0.0],
+      [28.0, 2.0],
+      [28.0, 16.0],
+      [26.0, 16.0]
+    ],
+    "dimensiones": {"largo": 28.0, "ancho": 16.0},
+    "area_m2": 435.0,
+    "estado": "observado",
+    "confianza": "media",
+    "nota": "Poligono principal de la capa LOTE A EJECUTAR"
+  },
+
+  "edificio": {
+    "bbox_utm": [380422.0, 8325990.0, 380456.0, 8326013.0],
+    "bbox_local": [-3.0, 0.0, 31.0, 23.0],
+    "dimensiones": {"largo": 34.0, "ancho": 23.0},
+    "estado": "observado_aproximado",
+    "confianza": "media",
+    "nota": "Bounding box de la capa muro"
+  },
+
+  "ambientes": [
+    {"nombre": "Administracion y facturacion", "centro_utm": [380428.0, 8325993.0], "centro_local": [3.0, 3.0], "tipo": "oficina", "estado": "observado", "confianza": "media"},
+    {"nombre": "Oficina 01", "centro_utm": [380433.0, 8325993.0], "centro_local": [8.0, 3.0], "tipo": "oficina", "estado": "observado", "confianza": "media"},
+    {"nombre": "Sala de maquinas", "centro_utm": [380439.0, 8325993.0], "centro_local": [14.0, 3.0], "tipo": "sala_maquinas", "estado": "observado", "confianza": "media"},
+    {"nombre": "SS.HH 1", "centro_utm": [380441.0, 8325992.0], "centro_local": [16.0, 2.0], "tipo": "sshh", "estado": "observado", "confianza": "media"},
+    {"nombre": "SS.HH 2", "centro_utm": [380443.0, 8325992.0], "centro_local": [18.0, 2.0], "tipo": "sshh", "estado": "observado", "confianza": "media"},
+    {"nombre": "Vereda", "centro_utm": [380428.0, 8325995.0], "centro_local": [3.0, 5.0], "tipo": "vereda", "estado": "observado", "confianza": "media"},
+    {"nombre": "Tuberias de venteo", "centro_utm": [380426.0, 8325994.0], "centro_local": [1.0, 4.0], "tipo": "venteo", "estado": "observado", "confianza": "media"}
+  ],
+
+  "tanques": [
+    {"numero": "TK-1", "combustible": "Gasohol Premium", "capacidad_gls": 2469.53, "pos_utm": [380440.0, 8326001.0], "pos_local": [15.0, 11.0], "estado": "observado", "confianza": "alta", "nota": "texto 'G-Premium / 2,469.53 Gls' con manhole"},
+    {"numero": "TK-2", "combustible": "Gasohol Regular", "capacidad_gls": 3292.71, "pos_utm": [380442.0, 8325998.0], "pos_local": [17.0, 8.0], "estado": "observado", "confianza": "media", "nota": "manhole asociado"},
+    {"numero": "TK-3", "combustible": "Diesel B5-S50", "capacidad_gls": 4939.07, "pos_utm": [380446.0, 8325998.0], "pos_local": [21.0, 8.0], "estado": "observado", "confianza": "alta", "nota": "texto 'DB5-S50UV / 4,939.07 Gls' con manhole"}
+  ],
+
+  "dispensadores_y_surtidores": {
+    "islas": ["D", "M", "V"],
+    "posiciones_utm": [[380439.0, 8326001.0], [380444.0, 8326001.0]],
+    "posiciones_local": [[14.0, 11.0], [19.0, 11.0]],
+    "productos": ["DB5-S50", "G-Premium", "G-Regular"],
+    "estado": "observado",
+    "confianza": "media"
+  },
+
+  "equipos_electricos_observados": [
+    {"tipo": "tablero_general", "sigla": "TG", "pos_utm": [380435.0, 8325995.0], "pos_local": [10.0, 5.0], "estado": "observado", "confianza": "alta"},
+    {"tipo": "tablero_general", "sigla": "TG2", "pos_utm": [380434.0, 8325995.0], "pos_local": [9.0, 5.0], "estado": "observado", "confianza": "media"},
+    {"tipo": "interruptor_general", "pos_utm": [380436.0, 8325995.0], "pos_local": [11.0, 5.0], "estado": "observado", "confianza": "media"},
+    {"tipo": "pulsador_emergencia", "pos_utm": [380435.0, 8325996.0], "pos_local": [10.0, 6.0], "estado": "observado", "confianza": "media"},
+    {"tipo": "pozo_tierra", "sigla": "PAT", "pos_utm": [380434.0, 8325996.0], "pos_local": [9.0, 6.0], "estado": "observado", "confianza": "alta"},
+    {"tipo": "pozo_tierra_secundario", "pos_utm": [380442.0, 8326002.0], "pos_local": [17.0, 12.0], "estado": "observado", "confianza": "media"},
+    {"tipo": "pararrayo", "altura_m": 12.0, "radio_proteccion_m": 20.0, "pos_utm": [380435.0, 8325994.0], "pos_local": [10.0, 4.0], "estado": "observado", "confianza": "alta", "nota": "texto 'RADIO DE PROTECCION DE PARARRAYO R=20m (h=12m)'"},
+    {"tipo": "extintor", "sigla": "extint", "cantidad": 2, "estado": "observado", "confianza": "media"},
+    {"tipo": "monitoreo", "sigla": "PM A1/R1, PM A2/R2", "estado": "observado", "confianza": "media", "nota": "posible referencia a puntos de monitoreo de areas"}
+  ],
+
+  "infraestructura_complementaria": {
+    "fosa_de_agua": {"pos_utm": [380446.0, 8325994.0], "pos_local": [21.0, 4.0], "estado": "observado"},
+    "cilindro_arena": {"pos_utm": [380438.0, 8326001.0], "pos_local": [13.0, 11.0], "estado": "observado"},
+    "cilindro_trapo_empapado": {"estado": "observado"},
+    "totem": {"estado": "observado", "confianza": "media"}
+  },
+
+  "circulacion": {
+    "ingreso": {"pos_utm": [380433.0, 8326008.0], "pos_local": [8.0, 18.0], "estado": "observado"},
+    "salida": {"pos_utm": [380451.0, 8326008.0], "pos_local": [26.0, 18.0], "estado": "observado"},
+    "despacho_combustible": "circulacion de vehiculos mayores/menores",
+    "radio_giro_vehiculos_mayores_m": 14.0,
+    "radio_giro_vehiculos_menores_m": 6.5,
+    "estado": "observado"
+  },
+
+  "norma_aplicable_preliminar": {
+    "cne_utilizacion": "CNE-U 2006 con modificatorias",
+    "sectorial": "Reglamento de Seguridad para Establecimientos de Venta al Publico de Combustibles",
+    "clasificacion_areas": "se requiere clasificacion de areas peligrosas por zona; por confirmar con revision competente",
+    "estado": "por_confirmar"
+  },
+
+  "incertidumbres": [
+    "Las dimensiones de ambientes se derivaron de posiciones de texto y bounding boxes; se requiere trazado fino para cotas exactas",
+    "La cantidad exacta de dispensadores/surtidores y su potencia debe confirmarse en campo",
+    "Ubicacion (distrito/provincia/departamento) por confirmar",
+    "El plano contiene TG y TG2; se requiere definir la configuracion real de tableros",
+    "Los puntos PM A1/R1, PM A2/R2 son ambiguos y requieren aclaracion"
+  ]
+}

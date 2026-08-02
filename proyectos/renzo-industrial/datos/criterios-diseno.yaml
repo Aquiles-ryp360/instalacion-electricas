@@ -1,0 +1,41 @@
+# Criterios de diseno
+
+Parametros confirmados del proyecto. Cada valor indica su fuente y estado.
+Valores sin confirmar permanecen como `por confirmar` o como criterio adoptado.
+
+## Suministro
+
+| Parametro | Valor | Fuente | Estado |
+|---|---|---|---|
+| Nivel de tension | Baja tension | DEC-004 | criterio adoptado |
+| Tension nominal | 380/220 V | DEC-004 | criterio adoptado |
+| Fases | 3F+N+PE | DEC-004 | criterio adoptado |
+| Frecuencia | 60 Hz | Sistema peruano | adoptado |
+| Sistema de puesta a tierra | TN-S | DEC-005 | criterio adoptado |
+| Empresa distribuidora | por confirmar | — | pendiente |
+| Punto de entrega | por confirmar | — | pendiente |
+| Icc en punto de entrega | por confirmar | — | pendiente |
+
+## Normativa
+
+- CNE-U 2006 con sus modificatorias (norma principal).
+- RNE EM.010 Instalaciones Electricas y ME.030 Calidad en la Construccion
+  (aplicable).
+- Normativa sectorial de establecimientos de venta al publico de combustibles
+  (requiere consulta oficial vigente).
+- Reglamento Nacional de Edificaciones y normativa de la OSINERGMIN en lo
+  aplicable a grifos (por confirmar vigencia).
+
+## Criterios de calculo
+
+- Factores de demanda por tipo de carga: se adoptaran segun CNE-U, con
+  referencia explicita al articulo.
+- Caida de tension: maximo 2.5% circuitos de alumbrado y 4% fuerza (limites
+  academicos por confirmar contra CNE-U).
+- Tensiones de servicio para calculo: 380 V entre fases, 220 V fase-neutro.
+- Temperatura ambiente de referencia: por confirmar (altitud Puno).
+
+## Datos de catalogo
+
+- Potencias de equipos sin placa se tomaran de catalogos comparables
+  registrando fabricante, familia, fecha y margen usado.

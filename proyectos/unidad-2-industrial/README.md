@@ -64,6 +64,7 @@ Electro Puno, placas definitivas, verificacion de campo y revision profesional
 de areas clasificadas. Las generaciones actuales permanecen en `build/`; solo
 una revision humana completa autoriza copiarlas a `entregables/`.
 
-El proyecto existente `nave-industrial` puede consultarse para entender la
-estructura de un flujo industrial, pero sus dimensiones, tensiones, cargas,
-circuitos y factores no son datos de este proyecto.
+Los proyectos `aquiles` y `renzo` pueden consultarse para entender la
+estructura del flujo, pero sus dimensiones, tensiones, cargas, circuitos y
+factores no son datos de este proyecto. El proyecto `renzo-industrial` de la
+misma unidad es independiente y no comparte datos tecnicos.
