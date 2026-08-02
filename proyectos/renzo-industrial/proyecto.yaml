@@ -81,8 +81,10 @@ resultados_build:
 
 entregables:
   directorio: entregables
-  expediente: null
-  planos: []
+  expediente: "entregables/expediente-renzo-industrial.pdf (26 paginas, compilado 2026-08-02)"
+  planos:
+    - "entregables/planos-electricos-grifo-renzo.pdf (IE-01..IE-06, A1)"
+  nota: "anteproyecto academico; no construir sin factibilidad, placas reales y revision humana competente"
 
 siguiente_hito:
   nombre: "definir cargas y diseno electrico de anteproyecto"
