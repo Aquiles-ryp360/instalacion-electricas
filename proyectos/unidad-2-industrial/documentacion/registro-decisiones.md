@@ -252,3 +252,16 @@ cambia, registrar una nueva entrada que sustituya a la anterior.
 - Impacto: 41 consultas produjeron 4 coincidencias trazables, 30 sin seleccion segura y 7 sin resultado; todas las coincidencias conservan revision humana
 - Supuestos autorizados: ninguno para compra; el precio visible es evidencia dinamica de consulta
 - Pendientes: revisar equivalencia, unidad comercial, vigencia, flete y elaborar APU antes de cambiar el presupuesto
+
+### DEC-019 - Fuentes autosuficientes para Windows
+
+- Fecha: 2026-08-02
+- Estado: aprobada por el estudiante
+- Decide: Aquiles Taylor Ramos Yapo
+- Fuente o evidencia: bloqueo informado por Codex Windows en `Texto-windows.txt`
+- Decision: versionar en sus rutas exactas el DXF arquitectonico y las dos capturas de ubicacion; versionar ademas el logo UNAP vectorial y una evidencia Promelsa base, e incorporar un verificador de entorno y un preparador PowerShell
+- Motivo: permitir que un clon nuevo regenere planos, expediente, guia y ZIP sin copiar archivos manualmente ni depender de red para recursos ya verificados
+- Alternativas consideradas: enviar los tres archivos por separado, publicar `build/` completo o mantener un ZIP de fuentes que exigiera extraccion manual
+- Impacto: el repositorio aumenta aproximadamente 53 MB; las fuentes permanecen inmutables y verificadas por SHA-256; WhatsApp y demas material local siguen fuera de Git porque no son dependencias del pipeline
+- Supuestos autorizados: la publicacion de estas tres fuentes fue solicitada expresamente por el estudiante
+- Pendientes: instalar Python/LaTeX en cada equipo; AutoCAD sigue siendo opcional para el pipeline Python y necesario solo para la auditoria nativa propuesta

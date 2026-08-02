@@ -11,7 +11,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import subprocess
 from datetime import date
 from pathlib import Path
 from typing import Any, Callable
@@ -775,7 +774,14 @@ def main() -> int:
         temporary = output / ".planos-electricos-grifo-unap-aquiles.tmp.pdf"
         if temporary.exists():
             temporary.unlink()
-        subprocess.run(["pdfunite", *(str(path) for path in all_pdf_paths), str(temporary)], check=True)
+        from pypdf import PdfWriter
+
+        writer = PdfWriter()
+        for path in all_pdf_paths:
+            writer.append(str(path))
+        with temporary.open("wb") as stream:
+            writer.write(stream)
+        writer.close()
         temporary.replace(combined)
         manifest["combined_pdf"] = str(combined.relative_to(root))
         manifest["pdf_quality"] = "vectorial_directo_A1; PNG_solo_vista_previa_220_dpi"

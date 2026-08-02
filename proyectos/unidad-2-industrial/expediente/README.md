@@ -30,6 +30,11 @@ La consulta comercial se actualiza por separado con los comandos de
 `../presupuesto/README.md`; compilar no debe depender de la red ni cambiar
 precios del presupuesto academico.
 
+El escudo UNAP SVG/PDF y una evidencia comercial base están versionados y
+verificados por SHA-256. Por ello una compilación limpia no necesita descargar
+el logo ni consultar una tienda. La unión de las seis láminas usa `pypdf`, no
+el comando Linux `pdfunite`.
+
 El PDF se conserva en `build/` hasta terminar la revision. La portada distingue
 al estudiante, al propietario consignado en la referencia y al docente actual;
 no afirma aprobacion de la DREM ni consigna CIP, sello o firma inventados.

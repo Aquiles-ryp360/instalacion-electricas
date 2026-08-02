@@ -27,6 +27,12 @@ Primero lee completos, en este orden:
 6. `datos/ubicacion.yaml`, `datos/rotulo-planos.yaml`,
    `diseno-electrico/datos/cargas.yaml` y `presupuesto/README.md`.
 
+Antes de diagnosticar archivos ausentes, ejecuta
+`python proyectos/unidad-2-industrial/scripts/verificar_preparacion.py --solo-fuentes`.
+Desde DEC-019 el clon debe contener el DXF, las dos capturas, el logo vectorial
+y la evidencia comercial base; si el verificador falla, primero confirma que
+la rama incluya esa decisión.
+
 Respeta estas reglas durante todo el trabajo:
 
 - No modifiques originales de `fuentes/local/`; genera derivados en `build/`.

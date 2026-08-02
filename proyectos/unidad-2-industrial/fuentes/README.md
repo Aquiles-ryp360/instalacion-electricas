@@ -9,8 +9,10 @@ Guardar aqui, sin modificar:
 - documentos sectoriales recibidos.
 
 Registrar procedencia, fecha, autor y restricciones. Si un archivo es pesado o
-privado, usar `fuentes/local/`, que esta ignorado por Git, y dejar aqui una
-referencia sin datos sensibles.
+privado, normalmente se usa `fuentes/local/`. Por DEC-019 existe una excepción
+explícita para reproducir Unidad 2 en Windows: el DXF arquitectónico y las dos
+capturas de ubicación están versionados en sus rutas exactas. El resto de
+`fuentes/local/`, incluido WhatsApp, continúa ignorado.
 
 ## Fuentes recibidas del grupo de WhatsApp
 
@@ -30,7 +32,7 @@ oficiales.
 
 ## Fuente CAD recibida
 
-La copia inmutable del plano se guarda localmente en:
+La copia inmutable del plano se distribuye con el repositorio en:
 
 ```text
 fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf
@@ -39,3 +41,18 @@ fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf
 Su procedencia, huella, laminas y datos observados se documentan en
 [`inventario-cad.md`](inventario-cad.md). No editar este archivo: los recortes,
 limpiezas y bases electricas se regeneran en `build/`.
+
+## Comprobación de un clon nuevo
+
+Desde la raíz, Linux/macOS:
+
+```bash
+python proyectos/unidad-2-industrial/scripts/verificar_preparacion.py --solo-fuentes
+```
+
+En Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File `
+  .\proyectos\unidad-2-industrial\scripts\preparar_windows.ps1 -SoloFuentes
+```

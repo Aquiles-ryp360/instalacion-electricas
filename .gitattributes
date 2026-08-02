@@ -1,0 +1,10 @@
+*.dxf binary
+*.dwg binary
+*.pdf binary
+*.png binary
+*.svg binary
+*.jpg binary
+*.jpeg binary
+*.xlsx binary
+*.docx binary
+*.zip binary

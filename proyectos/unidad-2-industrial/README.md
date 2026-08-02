@@ -71,6 +71,17 @@ Electro Puno, placas definitivas, verificacion de campo y revision profesional
 de areas clasificadas. Las generaciones actuales permanecen en `build/`; solo
 una revision humana completa autoriza copiarlas a `entregables/`.
 
+Un clon nuevo recibe las tres fuentes indispensables de CAD/ubicación, el logo
+vectorial y una evidencia comercial base. En Windows se prepara y comprueba con:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File `
+  .\proyectos\unidad-2-industrial\scripts\preparar_windows.ps1
+```
+
+La guía completa está en
+[`documentacion/preparacion-windows.md`](documentacion/preparacion-windows.md).
+
 Los proyectos `aquiles` y `renzo` pueden consultarse para entender la
 estructura del flujo, pero sus dimensiones, tensiones, cargas, circuitos y
 factores no son datos de este proyecto. El proyecto `renzo-industrial` de la

@@ -11,6 +11,19 @@
 /referencias/local/
 /proyectos/*/fuentes/local/
 
+# Excepcion aprobada para reproducir Unidad 2 en Windows. Solo estas tres
+# fuentes inmutables se distribuyen; WhatsApp y otras fuentes locales siguen
+# ignoradas.
+!/proyectos/unidad-2-industrial/fuentes/local/
+/proyectos/unidad-2-industrial/fuentes/local/*
+!/proyectos/unidad-2-industrial/fuentes/local/cad/
+/proyectos/unidad-2-industrial/fuentes/local/cad/*
+!/proyectos/unidad-2-industrial/fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf
+!/proyectos/unidad-2-industrial/fuentes/local/ubicacion/
+/proyectos/unidad-2-industrial/fuentes/local/ubicacion/*
+!/proyectos/unidad-2-industrial/fuentes/local/ubicacion/2026-08-02-captura-catastro-municipal-caracoto.png
+!/proyectos/unidad-2-industrial/fuentes/local/ubicacion/2026-08-02-captura-google-maps-caracoto.png
+
 # LaTeX
 *.aux
 *.fdb_latexmk

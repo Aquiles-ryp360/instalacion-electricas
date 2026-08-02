@@ -2,8 +2,8 @@
 
 ## CAD-001
 
-- Archivo recibido: `/home/kimdokja/Downloads/DISTRIBUCION Y CIRCULACION MIGUEL.dxf`
-- Copia local inmutable: `fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf`
+- Origen inicial recibido: `DISTRIBUCION Y CIRCULACION MIGUEL.dxf`
+- Copia inmutable versionada: `fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf`
 - Fecha de incorporacion: 2026-08-01
 - Tamano: 48 638 066 bytes
 - SHA-256 original: `7980dda84d5ea40ed85e5458b487edfc219584d8c4b6e62f7fd9442e7443d805`
@@ -16,6 +16,8 @@
 - Autor/ultima escritura informado por metadato: Aquiles
 - Restriccion: conservar sin modificar; las copias recortadas o limpiadas son
   productos regenerables y se guardan en `build/`.
+- Distribucion: excepción aprobada en DEC-019 para que Linux y Windows reciban
+  exactamente la misma fuente mediante Git.
 
 ## Contenido observado
 

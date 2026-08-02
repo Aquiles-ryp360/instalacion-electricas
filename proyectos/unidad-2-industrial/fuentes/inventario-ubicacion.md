@@ -1,9 +1,10 @@
 # Inventario de fuentes de ubicación y catastro
 
 Las imágenes originales recibidas el 2 de agosto de 2026 se guardan sin
-modificación en `fuentes/local/ubicacion/`. La carpeta es local porque contiene
-capturas pesadas y material cartográfico de terceros; este inventario y
-`datos/ubicacion.yaml` permiten que otra IA conozca su nombre, huella y uso.
+modificación en `fuentes/local/ubicacion/`. Por indicación expresa del
+estudiante en DEC-019, estas dos capturas son excepciones versionadas para que
+un clon de Windows pueda compilar la memoria sin transferencia manual. Este
+inventario y `datos/ubicacion.yaml` fijan su nombre, huella y uso.
 
 | ID | Archivo local | SHA-256 | Uso permitido en el proyecto |
 |---|---|---|---|

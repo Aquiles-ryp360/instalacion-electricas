@@ -30,3 +30,9 @@ Estados esperados:
 No copiar un precio comercial unitario sobre una partida que incluye montaje,
 mano de obra, cajas, accesorios o pruebas. Primero debe prepararse un análisis
 de precio unitario que separe suministro e instalación.
+
+Para una compilación nueva sin acceso a la tienda se conserva
+`datos/promelsa-base-2026-08-02.json`. `compilar_expediente.py` lo copia a
+`build/` únicamente cuando no existe una consulta más reciente, y después
+reaplica los filtros vigentes. Actualizar el mercado sigue requiriendo ejecutar
+el flujo anterior; la evidencia base no se presenta como precio actual.

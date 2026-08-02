@@ -48,6 +48,7 @@ def main() -> int:
         (project / "datos/ubicacion.yaml", package / "08-ubicacion-y-trazabilidad.yaml"),
         (project / "fuentes/inventario-ubicacion.md", package / "09-inventario-ubicacion.md"),
         (project / "documentacion/prompt-codex-windows-mejora-cad.md", package / "10-prompt-codex-windows-mejora-cad.md"),
+        (project / "documentacion/preparacion-windows.md", package / "11-preparacion-windows.md"),
     ]
     plan_dir = build / "cad/planos"
     for code in ("IE-01", "IE-02", "IE-03", "IE-04", "IE-05", "IE-06"):

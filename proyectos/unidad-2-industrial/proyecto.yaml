@@ -76,6 +76,9 @@ entradas:
   dudas: documentacion/dudas-pendientes.md
   cad_fuente_local: "fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf"
   cad_fuente_sha256: "7980dda84d5ea40ed85e5458b487edfc219584d8c4b6e62f7fd9442e7443d805"
+  cad_fuente_distribucion: "versionada como excepcion DEC-019 para reproduccion Windows/Linux"
+  logo_unap_versionado: "fuentes/versionadas/identidad/unap_logo.svg"
+  cotizacion_comercial_base: "presupuesto/datos/promelsa-base-2026-08-02.json"
 
 automatizacion:
   pipeline_habilitado: false
@@ -88,6 +91,7 @@ automatizacion:
     entrada_build: build/unidad-2-industrial/cotizaciones/bom-cotizable.json
     salida_build: build/unidad-2-industrial/cotizaciones/promelsa.json
     regla_precio: "usar --no-actualizar-precio; una ficha comercial no sustituye una partida instalada"
+    fallback_sin_red: presupuesto/datos/promelsa-base-2026-08-02.json
 
 resultados_build:
   calculo_electrico: build/unidad-2-industrial/calculos/resumen-calculos.json

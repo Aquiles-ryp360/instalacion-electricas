@@ -1,0 +1,4312 @@
+{
+  "schema_version": 1,
+  "proyecto": "Anteproyecto electrico academico de grifo - Unidad 2",
+  "fecha": "2026-08-02",
+  "caracter": "BOM cotizable generado automaticamente; requiere revision tecnica y comercial.",
+  "flujo_recomendado": "herramientas/cotizacion/v1/cli/cotizar.py --modo heuristico --no-actualizar-precio",
+  "resumen": {
+    "cantidad_partidas_cotizables": 41,
+    "costo_referencial_bom_soles": 269642.76
+  },
+  "materiales": [
+    {
+      "item": "Tubo PVC SAP pesado 25 mm",
+      "descripcion_partida": "Canalizacion PVC SAP pesada 25 mm enterrada, instalada y sellada",
+      "codigo": "COND-25-D",
+      "categoria": "02 Canalizaciones",
+      "unidad": "m",
+      "cantidad": 687.5,
+      "precio_unit_soles": 32.0,
+      "costo_soles": 22000.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "OK",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:30+00:00",
+        "consulta_original": "Tubo PVC SAP pesado 25 mm",
+        "consulta_usada": "tubo pvc sap",
+        "consultas_intentadas": [
+          "tubo pvc sap pesado 25 mm",
+          "tubo pvc sap pesado",
+          "tubo pvc 25 mm",
+          "tubo pvc sap",
+          "tubo pvc"
+        ],
+        "busqueda_relajada": true,
+        "seleccion": {
+          "opcion": 1,
+          "decision": "coincidencia_heuristica_trazable",
+          "requiere_revision": true,
+          "justificacion": "Coinciden familia y especificacion nominal; hay precio visible y no se detecto falta de stock. Requiere validacion humana antes de compra.",
+          "criterios": [
+            "familia:tubo_pvc=OK",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:7.450=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        },
+        "producto": {
+          "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+          "sku": "1026759",
+          "codigo_fabricante": "SAP034T",
+          "marca": "TUBOPLAS",
+          "precio_texto": "S/ 11.01",
+          "precio_soles": 11.01,
+          "stock_texto": "Stock disponible : 441",
+          "stock_cantidad": 441,
+          "disponible": true,
+          "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+          "descripcion": "Tubo SAP, cumple con la norma técnica peruana (NTP) 399-006 / PVC-U. Es autoextinguible, color gris. Aplicación: conducción de baja o media tensión en instalaciones eléctricas ocultas o visibles en áreas industriales o subterráneas.",
+          "atributos": {
+            "Ficha Técnica": "",
+            "Marca": "TUBOPLAS",
+            "Modelo": "SAP",
+            "Garantía": "12 meses",
+            "Tipo De Artículo": "Stock",
+            "Referencia De Fabricante": "SAP034T",
+            "Certificación": "NTP 399-006",
+            "Longitud": "3m",
+            "Medidas": "3/4\"",
+            "Tipo De Material": "PVC",
+            "País De Fabricación": "Perú",
+            "Observaciones adicionales": "La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+          },
+          "ficha_tecnica_url": "https://www.promelsa.com.pe/media/PDF/1026759-01.pdf",
+          "ficha_tecnica_urls": [
+            "https://www.promelsa.com.pe/media/PDF/1026759-01.pdf"
+          ],
+          "texto_tecnico": "Tubo PVC SAP 3/4¨ x3mts | Tubo SAP, cumple con la norma técnica peruana (NTP) 399-006 / PVC-U. Es autoextinguible, color gris. Aplicación: conducción de baja o media tensión en instalaciones eléctricas ocultas o visibles en áreas industriales o subterráneas. | Marca: TUBOPLAS | Modelo: SAP | Garantía: 12 meses | Tipo De Artículo: Stock | Referencia De Fabricante: SAP034T | Certificación: NTP 399-006 | Longitud: 3m | Medidas: 3/4\" | Tipo De Material: PVC | País De Fabricación: Perú | Observaciones adicionales: La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+        },
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1026759",
+            "precio_texto": "S/ 11.01",
+            "precio_soles": 11.01,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1026759 SAP034T Tubo PVC SAP 3/4¨ x3mts S/ 11.01 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 7.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "25mm"
+            ],
+            "especificaciones_coincidentes": [
+              "3/4pulg"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tubo PVC SAP 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028729",
+            "precio_texto": "S/ 8.53",
+            "precio_soles": 8.53,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028729-tubo-pvc-sap-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028729 SAP012T Tubo PVC SAP 1/2¨ x3mts S/ 8.53 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 25 mm",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "25mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tubo PVC SAP 1 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028733",
+            "precio_texto": "S/ 27.33",
+            "precio_soles": 27.33,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028733-tubo-pvc-sap-1-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028733 SAP112T Tubo PVC SAP 1 1/2¨ x3mts S/ 27.33 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 25 mm",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "25mm"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "actualizacion_precio": {
+          "precio_actualizado": false
+        }
+      }
+    },
+    {
+      "item": "Tubo PVC SAP pesado 25 mm",
+      "descripcion_partida": "Canalizacion PVC SAP pesada 25 mm empotrada/aparente, instalada",
+      "codigo": "COND-25-I",
+      "categoria": "02 Canalizaciones",
+      "unidad": "m",
+      "cantidad": 586.3,
+      "precio_unit_soles": 22.0,
+      "costo_soles": 12898.6,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "OK",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:36+00:00",
+        "consulta_original": "Tubo PVC SAP pesado 25 mm",
+        "consulta_usada": "tubo pvc sap",
+        "consultas_intentadas": [
+          "tubo pvc sap pesado 25 mm",
+          "tubo pvc sap pesado",
+          "tubo pvc 25 mm",
+          "tubo pvc sap",
+          "tubo pvc"
+        ],
+        "busqueda_relajada": true,
+        "seleccion": {
+          "opcion": 1,
+          "decision": "coincidencia_heuristica_trazable",
+          "requiere_revision": true,
+          "justificacion": "Coinciden familia y especificacion nominal; hay precio visible y no se detecto falta de stock. Requiere validacion humana antes de compra.",
+          "criterios": [
+            "familia:tubo_pvc=OK",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:7.450=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        },
+        "producto": {
+          "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+          "sku": "1026759",
+          "codigo_fabricante": "SAP034T",
+          "marca": "TUBOPLAS",
+          "precio_texto": "S/ 11.01",
+          "precio_soles": 11.01,
+          "stock_texto": "Stock disponible : 441",
+          "stock_cantidad": 441,
+          "disponible": true,
+          "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+          "descripcion": "Tubo SAP, cumple con la norma técnica peruana (NTP) 399-006 / PVC-U. Es autoextinguible, color gris. Aplicación: conducción de baja o media tensión en instalaciones eléctricas ocultas o visibles en áreas industriales o subterráneas.",
+          "atributos": {
+            "Ficha Técnica": "",
+            "Marca": "TUBOPLAS",
+            "Modelo": "SAP",
+            "Garantía": "12 meses",
+            "Tipo De Artículo": "Stock",
+            "Referencia De Fabricante": "SAP034T",
+            "Certificación": "NTP 399-006",
+            "Longitud": "3m",
+            "Medidas": "3/4\"",
+            "Tipo De Material": "PVC",
+            "País De Fabricación": "Perú",
+            "Observaciones adicionales": "La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+          },
+          "ficha_tecnica_url": "https://www.promelsa.com.pe/media/PDF/1026759-01.pdf",
+          "ficha_tecnica_urls": [
+            "https://www.promelsa.com.pe/media/PDF/1026759-01.pdf"
+          ],
+          "texto_tecnico": "Tubo PVC SAP 3/4¨ x3mts | Tubo SAP, cumple con la norma técnica peruana (NTP) 399-006 / PVC-U. Es autoextinguible, color gris. Aplicación: conducción de baja o media tensión en instalaciones eléctricas ocultas o visibles en áreas industriales o subterráneas. | Marca: TUBOPLAS | Modelo: SAP | Garantía: 12 meses | Tipo De Artículo: Stock | Referencia De Fabricante: SAP034T | Certificación: NTP 399-006 | Longitud: 3m | Medidas: 3/4\" | Tipo De Material: PVC | País De Fabricación: Perú | Observaciones adicionales: La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+        },
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1026759",
+            "precio_texto": "S/ 11.01",
+            "precio_soles": 11.01,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1026759 SAP034T Tubo PVC SAP 3/4¨ x3mts S/ 11.01 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 7.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "25mm"
+            ],
+            "especificaciones_coincidentes": [
+              "3/4pulg"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tubo PVC SAP 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028729",
+            "precio_texto": "S/ 8.53",
+            "precio_soles": 8.53,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028729-tubo-pvc-sap-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028729 SAP012T Tubo PVC SAP 1/2¨ x3mts S/ 8.53 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 25 mm",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "25mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tubo PVC SAP 1 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028733",
+            "precio_texto": "S/ 27.33",
+            "precio_soles": 27.33,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028733-tubo-pvc-sap-1-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028733 SAP112T Tubo PVC SAP 1 1/2¨ x3mts S/ 27.33 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 25 mm",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "25mm"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "actualizacion_precio": {
+          "precio_actualizado": false
+        }
+      }
+    },
+    {
+      "item": "Tubo PVC SAP pesado 32 mm",
+      "descripcion_partida": "Canalizacion PVC SAP pesada 32 mm enterrada, instalada y sellada",
+      "codigo": "COND-32-D",
+      "categoria": "02 Canalizaciones",
+      "unidad": "m",
+      "cantidad": 88.0,
+      "precio_unit_soles": 39.0,
+      "costo_soles": 3432.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:26+00:00",
+        "consulta_original": "Tubo PVC SAP pesado 32 mm",
+        "consulta_usada": "tubo pvc sap",
+        "consultas_intentadas": [
+          "tubo pvc sap pesado 32 mm",
+          "tubo pvc sap pesado",
+          "tubo pvc 32 mm",
+          "tubo pvc sap",
+          "tubo pvc"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tubo PVC SAP 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028729",
+            "precio_texto": "S/ 8.53",
+            "precio_soles": 8.53,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028729-tubo-pvc-sap-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028729 SAP012T Tubo PVC SAP 1/2¨ x3mts S/ 8.53 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "32mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1026759",
+            "precio_texto": "S/ 11.01",
+            "precio_soles": 11.01,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1026759 SAP034T Tubo PVC SAP 3/4¨ x3mts S/ 11.01 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 32 mm",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "32mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tubo PVC SAP 1¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028728",
+            "precio_texto": "S/ 14.70",
+            "precio_soles": 14.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028728-tubo-pvc-sap-1-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028728 SAP100T Tubo PVC SAP 1¨ x3mts S/ 14.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 32 mm",
+            "coincidencia_score": 4.7,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "32mm"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:tubo_pvc=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:5.450=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Tubo PVC SAP pesado 32 mm",
+      "descripcion_partida": "Canalizacion PVC SAP pesada 32 mm interior, instalada",
+      "codigo": "COND-32-I",
+      "categoria": "02 Canalizaciones",
+      "unidad": "m",
+      "cantidad": 66.0,
+      "precio_unit_soles": 28.0,
+      "costo_soles": 1848.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:32+00:00",
+        "consulta_original": "Tubo PVC SAP pesado 32 mm",
+        "consulta_usada": "tubo pvc sap",
+        "consultas_intentadas": [
+          "tubo pvc sap pesado 32 mm",
+          "tubo pvc sap pesado",
+          "tubo pvc 32 mm",
+          "tubo pvc sap",
+          "tubo pvc"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tubo PVC SAP 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028729",
+            "precio_texto": "S/ 8.53",
+            "precio_soles": 8.53,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028729-tubo-pvc-sap-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028729 SAP012T Tubo PVC SAP 1/2¨ x3mts S/ 8.53 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "32mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1026759",
+            "precio_texto": "S/ 11.01",
+            "precio_soles": 11.01,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1026759 SAP034T Tubo PVC SAP 3/4¨ x3mts S/ 11.01 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 32 mm",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "32mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tubo PVC SAP 1¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028728",
+            "precio_texto": "S/ 14.70",
+            "precio_soles": 14.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028728-tubo-pvc-sap-1-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028728 SAP100T Tubo PVC SAP 1¨ x3mts S/ 14.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 32 mm",
+            "coincidencia_score": 4.7,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "32mm"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:tubo_pvc=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:5.450=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Tubo PVC SAP pesado 40 mm",
+      "descripcion_partida": "Canalizacion PVC SAP pesada 40 mm interior, instalada",
+      "codigo": "COND-40-I",
+      "categoria": "02 Canalizaciones",
+      "unidad": "m",
+      "cantidad": 11.0,
+      "precio_unit_soles": 36.0,
+      "costo_soles": 396.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "OK",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:57+00:00",
+        "consulta_original": "Tubo PVC SAP pesado 40 mm",
+        "consulta_usada": "tubo pvc 40 mm",
+        "consultas_intentadas": [
+          "tubo pvc sap pesado 40 mm",
+          "tubo pvc sap pesado",
+          "tubo pvc 40 mm",
+          "tubo pvc sap",
+          "tubo pvc"
+        ],
+        "busqueda_relajada": true,
+        "seleccion": {
+          "opcion": 1,
+          "decision": "coincidencia_heuristica_trazable",
+          "requiere_revision": true,
+          "justificacion": "Coinciden familia y especificacion nominal; hay precio visible y no se detecto falta de stock. Requiere validacion humana antes de compra.",
+          "criterios": [
+            "familia:tubo_pvc=OK",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:7.450=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        },
+        "producto": {
+          "nombre": "Tubo PVC SAP 1 1/4¨ x3mts",
+          "sku": "1028730",
+          "codigo_fabricante": "SAP114T",
+          "marca": "TUBOPLAS",
+          "precio_texto": "S/ 20.78",
+          "precio_soles": 20.78,
+          "stock_texto": "Stock disponible : 10",
+          "stock_cantidad": 10,
+          "disponible": true,
+          "url": "https://www.promelsa.com.pe/1028730-tubo-pvc-sap-1-1-4-x3mts.html",
+          "descripcion": "Tubo SAP, cumple con la norma técnica peruana (NTP) 399-006 / PVC-U. Es autoextinguible, color gris. Aplicación: conducción de baja o media tensión en instalaciones eléctricas ocultas o visibles en áreas industriales o subterráneas.",
+          "atributos": {
+            "Ficha Técnica": "",
+            "Marca": "TUBOPLAS",
+            "Modelo": "SAP",
+            "Garantía": "12 meses",
+            "Tipo De Artículo": "Stock",
+            "Referencia De Fabricante": "SAP114T",
+            "Certificación": "NTP 399-006",
+            "Longitud": "3m",
+            "Medidas": "1 1/4\"",
+            "Tipo De Material": "PVC",
+            "País De Fabricación": "Perú",
+            "Observaciones adicionales": "La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+          },
+          "ficha_tecnica_url": "https://www.promelsa.com.pe/media/PDF/1028730-01.pdf",
+          "ficha_tecnica_urls": [
+            "https://www.promelsa.com.pe/media/PDF/1028730-01.pdf",
+            "https://www.promelsa.com.pe/media/PDF/1028730-03.pdf"
+          ],
+          "texto_tecnico": "Tubo PVC SAP 1 1/4¨ x3mts | Tubo SAP, cumple con la norma técnica peruana (NTP) 399-006 / PVC-U. Es autoextinguible, color gris. Aplicación: conducción de baja o media tensión en instalaciones eléctricas ocultas o visibles en áreas industriales o subterráneas. | Marca: TUBOPLAS | Modelo: SAP | Garantía: 12 meses | Tipo De Artículo: Stock | Referencia De Fabricante: SAP114T | Certificación: NTP 399-006 | Longitud: 3m | Medidas: 1 1/4\" | Tipo De Material: PVC | País De Fabricación: Perú | Observaciones adicionales: La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+        },
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tubo PVC SAP 1 1/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028730",
+            "precio_texto": "S/ 20.78",
+            "precio_soles": 20.78,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028730-tubo-pvc-sap-1-1-4-x3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028730 SAP114T Tubo PVC SAP 1 1/4¨ x3mts S/ 20.78 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 40 mm",
+            "coincidencia_score": 7.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "40mm"
+            ],
+            "especificaciones_coincidentes": [
+              "1_1/4pulg"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tubo PVC SAP 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028729",
+            "precio_texto": "S/ 8.53",
+            "precio_soles": 8.53,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028729-tubo-pvc-sap-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028729 SAP012T Tubo PVC SAP 1/2¨ x3mts S/ 8.53 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "40mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1026759",
+            "precio_texto": "S/ 11.01",
+            "precio_soles": 11.01,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1026759 SAP034T Tubo PVC SAP 3/4¨ x3mts S/ 11.01 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc 40 mm",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "40mm"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "actualizacion_precio": {
+          "precio_actualizado": false
+        }
+      }
+    },
+    {
+      "item": "Tubo PVC SAP pesado 50 mm",
+      "descripcion_partida": "Canalizacion PVC SAP pesada 50 mm interior, instalada",
+      "codigo": "COND-50-I",
+      "categoria": "02 Canalizaciones",
+      "unidad": "m",
+      "cantidad": 17.6,
+      "precio_unit_soles": 48.0,
+      "costo_soles": 844.8,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:54+00:00",
+        "consulta_original": "Tubo PVC SAP pesado 50 mm",
+        "consulta_usada": "tubo pvc sap",
+        "consultas_intentadas": [
+          "tubo pvc sap pesado 50 mm",
+          "tubo pvc sap pesado",
+          "tubo pvc 50 mm",
+          "tubo pvc sap",
+          "tubo pvc"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tubo PVC SAP 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028729",
+            "precio_texto": "S/ 8.53",
+            "precio_soles": 8.53,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028729-tubo-pvc-sap-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028729 SAP012T Tubo PVC SAP 1/2¨ x3mts S/ 8.53 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "50mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1026759",
+            "precio_texto": "S/ 11.01",
+            "precio_soles": 11.01,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1026759 SAP034T Tubo PVC SAP 3/4¨ x3mts S/ 11.01 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "50mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tubo PVC SAP 1¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028728",
+            "precio_texto": "S/ 14.70",
+            "precio_soles": 14.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028728-tubo-pvc-sap-1-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028728 SAP100T Tubo PVC SAP 1¨ x3mts S/ 14.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 4.7,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "50mm"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:tubo_pvc=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:5.450=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Tubo PVC SAP pesado 75 mm",
+      "descripcion_partida": "Canalizacion pesada 75 mm para alimentador general, instalada",
+      "codigo": "COND-75-D",
+      "categoria": "02 Canalizaciones",
+      "unidad": "m",
+      "cantidad": 13.2,
+      "precio_unit_soles": 82.0,
+      "costo_soles": 1082.4,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:58+00:00",
+        "consulta_original": "Tubo PVC SAP pesado 75 mm",
+        "consulta_usada": "tubo pvc sap",
+        "consultas_intentadas": [
+          "tubo pvc sap pesado 75 mm",
+          "tubo pvc sap pesado",
+          "tubo pvc 75 mm",
+          "tubo pvc sap",
+          "tubo pvc"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tubo PVC SAP 1/2¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028729",
+            "precio_texto": "S/ 8.53",
+            "precio_soles": 8.53,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028729-tubo-pvc-sap-1-2-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028729 SAP012T Tubo PVC SAP 1/2¨ x3mts S/ 8.53 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "75mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tubo PVC SAP 3/4¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1026759",
+            "precio_texto": "S/ 11.01",
+            "precio_soles": 11.01,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026759-tubo-pvc-sap-3-4-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1026759 SAP034T Tubo PVC SAP 3/4¨ x3mts S/ 11.01 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 5.45,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "75mm"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tubo PVC SAP 1¨ x3mts",
+            "marca": "TUBOPLAS",
+            "sku": "1028728",
+            "precio_texto": "S/ 14.70",
+            "precio_soles": 14.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1028728-tubo-pvc-sap-1-x-3mts.html",
+            "texto_visible": "TUBOPLAS SKU 1028728 SAP100T Tubo PVC SAP 1¨ x3mts S/ 14.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tubo pvc sap",
+            "coincidencia_score": 4.7,
+            "familia_requerida": "tubo_pvc",
+            "familia_candidato": "tubo_pvc",
+            "tokens_coincidentes": [
+              "pvc",
+              "sap",
+              "tubo"
+            ],
+            "especificaciones_requeridas": [
+              "75mm"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:tubo_pvc=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:5.450=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Cable electrico cobre LSZH 2.5 mm2",
+      "descripcion_partida": "Conductor Cu LSZH 2.5 mm2, tendido e identificado",
+      "codigo": "CAB-2.5",
+      "categoria": "03 Conductores",
+      "unidad": "m",
+      "cantidad": 2072.4,
+      "precio_unit_soles": 4.8,
+      "costo_soles": 9947.52,
+      "precio_presupuesto_tipo": "referencia_web_comparable",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:46:57+00:00",
+        "consulta_original": "Cable electrico cobre LSZH 2.5 mm2",
+        "consulta_usada": "cable electrico",
+        "consultas_intentadas": [
+          "cable electrico cobre lszh 2.5 mm2",
+          "cable electrico cobre lszh",
+          "cable 2.5 mm2",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Alicate pela cable p/cable D=20-55mm L=287mm",
+            "marca": "DERANCOURT",
+            "sku": "1039522",
+            "precio_texto": "S/ 1,450.18",
+            "precio_soles": 1450.18,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1039522-alicate-pela-cable-p-cable-d-20-55mm-l-287mm.html",
+            "texto_visible": "DERANCOURT SKU 1039522 PBT 20-20 B Alicate pela cable p/cable D=20-55mm L=287mm S/ 1,450.18 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.45,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "cable"
+            ],
+            "especificaciones_requeridas": [
+              "2.5mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal",
+            "marca": "3M",
+            "sku": "1016486",
+            "precio_texto": "S/ 1,681.63",
+            "precio_soles": 1681.63,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1016486-terminacion-interior-unipolar-15kv-3-1x-35-70-mm2-qt-iii-s-terminal.html",
+            "texto_visible": "3M SKU 1016486 80610834097 Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal S/ 1,681.63 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 2.5 mm2",
+            "coincidencia_score": -0.05,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "2.5mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Terminación interior unipolar 25kV 3-1x(35-120)mm2 QT-III s/terminal",
+            "marca": "3M",
+            "sku": "1000890",
+            "precio_texto": "S/ 2,722.92",
+            "precio_soles": 2722.92,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000890-terminacion-interior-unipolar-25kv-3-1x35-120mm2-qt-iii.html",
+            "texto_visible": "3M SKU 1000890 80610834279 Terminación interior unipolar 25kV 3-1x(35-120)mm2 QT-III s/terminal S/ 2,722.92 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 2.5 mm2",
+            "coincidencia_score": -0.05,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "2.5mm2"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.450=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Cable electrico cobre LSZH 4 mm2",
+      "descripcion_partida": "Conductor Cu LSZH 4 mm2, tendido e identificado",
+      "codigo": "CAB-4",
+      "categoria": "03 Conductores",
+      "unidad": "m",
+      "cantidad": 2422.2,
+      "precio_unit_soles": 7.2,
+      "costo_soles": 17439.84,
+      "precio_presupuesto_tipo": "referencia_web_comparable",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:14+00:00",
+        "consulta_original": "Cable electrico cobre LSZH 4 mm2",
+        "consulta_usada": "cable electrico",
+        "consultas_intentadas": [
+          "cable electrico cobre lszh 4 mm2",
+          "cable electrico cobre lszh",
+          "cable 4 mm2",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Alicate pela cable p/cable D=20-55mm L=287mm",
+            "marca": "DERANCOURT",
+            "sku": "1039522",
+            "precio_texto": "S/ 1,450.18",
+            "precio_soles": 1450.18,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1039522-alicate-pela-cable-p-cable-d-20-55mm-l-287mm.html",
+            "texto_visible": "DERANCOURT SKU 1039522 PBT 20-20 B Alicate pela cable p/cable D=20-55mm L=287mm S/ 1,450.18 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.45,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "cable"
+            ],
+            "especificaciones_requeridas": [
+              "4mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Terminación interior unipolar 15kV 3-1x(70-185)mm2 s/terminal",
+            "marca": "TYCO ELECTRONICS",
+            "sku": "1000852",
+            "precio_texto": "S/ 573.70",
+            "precio_soles": 573.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000852-terminacion-interior-unipolar-termocontraible-15kv-3-1x70-185mm2-s-terminal.html",
+            "texto_visible": "TYCO ELECTRONICS SKU 1000852 485335-000 Terminación interior unipolar 15kV 3-1x(70-185)mm2 s/terminal S/ 573.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 4 mm2",
+            "coincidencia_score": -0.05,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "4mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Terminación interior unipolar 25kV 3-1x(150-400)mm2 QT-III s/terminal",
+            "marca": "3M",
+            "sku": "1000917",
+            "precio_texto": null,
+            "precio_soles": null,
+            "disponible": null,
+            "stock_texto": "SIN STOCK",
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000917-terminacion-interior-unipolar-25kv-3-1x150-400mm2-qt-iii.html",
+            "texto_visible": "3M SKU 1000917 80610834287 Terminación interior unipolar 25kV 3-1x(150-400)mm2 QT-III s/terminal SIN STOCK Ver producto Agregar a favoritos Comparar",
+            "consulta": "cable 4 mm2",
+            "coincidencia_score": -0.4,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "4mm2"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.450=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Cable electrico cobre XLPE LSZH 6 mm2",
+      "descripcion_partida": "Conductor Cu XLPE/LSZH 6 mm2, tendido e identificado",
+      "codigo": "CAB-6",
+      "categoria": "03 Conductores",
+      "unidad": "m",
+      "cantidad": 61.6,
+      "precio_unit_soles": 10.5,
+      "costo_soles": 646.8,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:21+00:00",
+        "consulta_original": "Cable electrico cobre XLPE LSZH 6 mm2",
+        "consulta_usada": "cable 6 mm2",
+        "consultas_intentadas": [
+          "cable electrico cobre xlpe lszh 6 mm2",
+          "cable electrico cobre xlpe",
+          "cable 6 mm2",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Cortador de cable hasta CU 600MCM / AL 750MCM M12",
+            "marca": "MILWAUKEE",
+            "sku": "1042601",
+            "precio_texto": "S/ 2,920.51",
+            "precio_soles": 2920.51,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/cortador-de-cable-hasta-cu-600mcm-al-750mcm-m12-1042601.html",
+            "texto_visible": "MILWAUKEE SKU 1042601 2472-21XC Cortador de cable hasta CU 600MCM / AL 750MCM M12 S/ 2,920.51 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 6 mm2",
+            "coincidencia_score": 3.2,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "cable"
+            ],
+            "especificaciones_requeridas": [
+              "6mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Alicate pela cable p/cable D=20-55mm L=287mm",
+            "marca": "DERANCOURT",
+            "sku": "1039522",
+            "precio_texto": "S/ 1,450.18",
+            "precio_soles": 1450.18,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1039522-alicate-pela-cable-p-cable-d-20-55mm-l-287mm.html",
+            "texto_visible": "DERANCOURT SKU 1039522 PBT 20-20 B Alicate pela cable p/cable D=20-55mm L=287mm S/ 1,450.18 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.45,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "cable"
+            ],
+            "especificaciones_requeridas": [
+              "6mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Solvente para limpieza de cables",
+            "marca": "Outlet PLYON",
+            "sku": "1005507",
+            "precio_texto": "S/ 13.11",
+            "precio_soles": 13.11,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1005507-solvente-para-limpieza-de-cables.html",
+            "texto_visible": "Outlet PLYON SKU 1005507 9684 Solvente para limpieza de cables S/ 13.11 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": -0.65,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "6mm2"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:3.200=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Cable electrico cobre XLPE LSZH 10 mm2",
+      "descripcion_partida": "Conductor Cu XLPE/LSZH 10 mm2, tendido e identificado",
+      "codigo": "CAB-10",
+      "categoria": "03 Conductores",
+      "unidad": "m",
+      "cantidad": 70.4,
+      "precio_unit_soles": 16.5,
+      "costo_soles": 1161.6,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:17+00:00",
+        "consulta_original": "Cable electrico cobre XLPE LSZH 10 mm2",
+        "consulta_usada": "cable electrico",
+        "consultas_intentadas": [
+          "cable electrico cobre xlpe lszh 10 mm2",
+          "cable electrico cobre xlpe",
+          "cable 10 mm2",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Alicate pela cable p/cable D=20-55mm L=287mm",
+            "marca": "DERANCOURT",
+            "sku": "1039522",
+            "precio_texto": "S/ 1,450.18",
+            "precio_soles": 1450.18,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1039522-alicate-pela-cable-p-cable-d-20-55mm-l-287mm.html",
+            "texto_visible": "DERANCOURT SKU 1039522 PBT 20-20 B Alicate pela cable p/cable D=20-55mm L=287mm S/ 1,450.18 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.45,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "cable"
+            ],
+            "especificaciones_requeridas": [
+              "10mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Terminación interior unipolar 15kV 3-1x(70-185)mm2 s/terminal",
+            "marca": "TYCO ELECTRONICS",
+            "sku": "1000852",
+            "precio_texto": "S/ 573.70",
+            "precio_soles": 573.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000852-terminacion-interior-unipolar-termocontraible-15kv-3-1x70-185mm2-s-terminal.html",
+            "texto_visible": "TYCO ELECTRONICS SKU 1000852 485335-000 Terminación interior unipolar 15kV 3-1x(70-185)mm2 s/terminal S/ 573.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 10 mm2",
+            "coincidencia_score": -0.05,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "10mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Terminación exterior unipolar 35kV 3-1x(70-240)mm2 s/terminal",
+            "marca": "TYCO ELECTRONICS",
+            "sku": "1000914",
+            "precio_texto": "S/ 1,259.24",
+            "precio_soles": 1259.24,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000914-terminacion-exterior-unipolar-termocontraible-35kv-3-1x70-240mm2-s-terminal.html",
+            "texto_visible": "TYCO ELECTRONICS SKU 1000914 1599461-1 Terminación exterior unipolar 35kV 3-1x(70-240)mm2 s/terminal S/ 1,259.24 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 10 mm2",
+            "coincidencia_score": -0.05,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "10mm2"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.450=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Cable electrico cobre XLPE LSZH 16 mm2",
+      "descripcion_partida": "Conductor Cu XLPE 16 mm2, tendido e identificado",
+      "codigo": "CAB-16",
+      "categoria": "03 Conductores",
+      "unidad": "m",
+      "cantidad": 13.2,
+      "precio_unit_soles": 25.0,
+      "costo_soles": 330.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:21+00:00",
+        "consulta_original": "Cable electrico cobre XLPE LSZH 16 mm2",
+        "consulta_usada": "cable electrico",
+        "consultas_intentadas": [
+          "cable electrico cobre xlpe lszh 16 mm2",
+          "cable electrico cobre xlpe",
+          "cable 16 mm2",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Alicate pela cable p/cable D=20-55mm L=287mm",
+            "marca": "DERANCOURT",
+            "sku": "1039522",
+            "precio_texto": "S/ 1,450.18",
+            "precio_soles": 1450.18,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1039522-alicate-pela-cable-p-cable-d-20-55mm-l-287mm.html",
+            "texto_visible": "DERANCOURT SKU 1039522 PBT 20-20 B Alicate pela cable p/cable D=20-55mm L=287mm S/ 1,450.18 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.45,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "cable"
+            ],
+            "especificaciones_requeridas": [
+              "16mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Terminación interior unipolar 15kV 3-1x(70-185)mm2 s/terminal",
+            "marca": "TYCO ELECTRONICS",
+            "sku": "1000852",
+            "precio_texto": "S/ 573.70",
+            "precio_soles": 573.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000852-terminacion-interior-unipolar-termocontraible-15kv-3-1x70-185mm2-s-terminal.html",
+            "texto_visible": "TYCO ELECTRONICS SKU 1000852 485335-000 Terminación interior unipolar 15kV 3-1x(70-185)mm2 s/terminal S/ 573.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 16 mm2",
+            "coincidencia_score": -0.05,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "16mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal",
+            "marca": "3M",
+            "sku": "1016486",
+            "precio_texto": "S/ 1,681.63",
+            "precio_soles": 1681.63,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1016486-terminacion-interior-unipolar-15kv-3-1x-35-70-mm2-qt-iii-s-terminal.html",
+            "texto_visible": "3M SKU 1016486 80610834097 Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal S/ 1,681.63 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 16 mm2",
+            "coincidencia_score": -0.05,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "16mm2"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.450=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Cable electrico cobre XLPE LSZH 35 mm2",
+      "descripcion_partida": "Conductor Cu XLPE 35 mm2, tendido e identificado",
+      "codigo": "CAB-35",
+      "categoria": "03 Conductores",
+      "unidad": "m",
+      "cantidad": 52.8,
+      "precio_unit_soles": 49.0,
+      "costo_soles": 2587.2,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:35+00:00",
+        "consulta_original": "Cable electrico cobre XLPE LSZH 35 mm2",
+        "consulta_usada": "cable electrico",
+        "consultas_intentadas": [
+          "cable electrico cobre xlpe lszh 35 mm2",
+          "cable electrico cobre xlpe",
+          "cable 35 mm2",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Alicate pela cable p/cable D=20-55mm L=287mm",
+            "marca": "DERANCOURT",
+            "sku": "1039522",
+            "precio_texto": "S/ 1,450.18",
+            "precio_soles": 1450.18,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1039522-alicate-pela-cable-p-cable-d-20-55mm-l-287mm.html",
+            "texto_visible": "DERANCOURT SKU 1039522 PBT 20-20 B Alicate pela cable p/cable D=20-55mm L=287mm S/ 1,450.18 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.45,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "cable"
+            ],
+            "especificaciones_requeridas": [
+              "35mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal",
+            "marca": "3M",
+            "sku": "1016486",
+            "precio_texto": "S/ 1,681.63",
+            "precio_soles": 1681.63,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1016486-terminacion-interior-unipolar-15kv-3-1x-35-70-mm2-qt-iii-s-terminal.html",
+            "texto_visible": "3M SKU 1016486 80610834097 Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal S/ 1,681.63 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 35 mm2",
+            "coincidencia_score": 0.3,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "35",
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "35mm2"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Terminación interior unipolar 25kV 3-1x(35-120)mm2 QT-III s/terminal",
+            "marca": "3M",
+            "sku": "1000890",
+            "precio_texto": "S/ 2,722.92",
+            "precio_soles": 2722.92,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000890-terminacion-interior-unipolar-25kv-3-1x35-120mm2-qt-iii.html",
+            "texto_visible": "3M SKU 1000890 80610834279 Terminación interior unipolar 25kV 3-1x(35-120)mm2 QT-III s/terminal S/ 2,722.92 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 35 mm2",
+            "coincidencia_score": 0.3,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "35",
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "35mm2"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.450=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "TGE metalico IP54",
+      "descripcion_partida": "TGE metalico IP54, barras N/PE, reserva, montaje y rotulo",
+      "codigo": "TAB-01",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 6200.0,
+      "costo_soles": 6200.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:22+00:00",
+        "consulta_original": "TGE metalico IP54",
+        "consulta_usada": "tge metalico ip54",
+        "consultas_intentadas": [
+          "tge metalico ip54"
+        ],
+        "busqueda_relajada": false,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tablero p/adosar metálico 800x1000x250mm con 2 puertas",
+            "marca": "Outlet BHARTIA",
+            "sku": "1012361",
+            "precio_texto": "S/ 367.06",
+            "precio_soles": 367.06,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1012361-tablero-p-adosar-metalico-800x1000x250mm-con-2-puertas.html",
+            "texto_visible": "Outlet BHARTIA SKU 1012361 BIL-50510 Tablero p/adosar metálico 800x1000x250mm con 2 puertas S/ 367.06 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tge metalico ip54",
+            "coincidencia_score": 0.7,
+            "familia_requerida": "general",
+            "familia_candidato": "tablero",
+            "tokens_coincidentes": [
+              "metalico"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.700=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "TDF metalico IP54",
+      "descripcion_partida": "TDF metalico IP54, barras N/PE, reserva, montaje y rotulo",
+      "codigo": "TAB-02",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 4200.0,
+      "costo_soles": 4200.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "NO_ENCONTRADO",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:27+00:00",
+        "consulta_original": "TDF metalico IP54",
+        "consulta_usada": null,
+        "consultas_intentadas": [
+          "tdf metalico ip54"
+        ],
+        "busqueda_relajada": false,
+        "requiere_revision": true,
+        "mensaje": "Promelsa no devolvio candidatos ni con busqueda relajada.",
+        "candidatos": []
+      }
+    },
+    {
+      "item": "TDE metalico IP54",
+      "descripcion_partida": "TDE metalico IP54, barras N/PE, reserva, montaje y rotulo",
+      "codigo": "TAB-03",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 4800.0,
+      "costo_soles": 4800.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:26+00:00",
+        "consulta_original": "TDE metalico IP54",
+        "consulta_usada": "tde metalico ip54",
+        "consultas_intentadas": [
+          "tde metalico ip54"
+        ],
+        "busqueda_relajada": false,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tablero p/adosar metálico 800x1000x250mm con 2 puertas",
+            "marca": "Outlet BHARTIA",
+            "sku": "1012361",
+            "precio_texto": "S/ 367.06",
+            "precio_soles": 367.06,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1012361-tablero-p-adosar-metalico-800x1000x250mm-con-2-puertas.html",
+            "texto_visible": "Outlet BHARTIA SKU 1012361 BIL-50510 Tablero p/adosar metálico 800x1000x250mm con 2 puertas S/ 367.06 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tde metalico ip54",
+            "coincidencia_score": 0.7,
+            "familia_requerida": "general",
+            "familia_candidato": "tablero",
+            "tokens_coincidentes": [
+              "metalico"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.700=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Tablero administrativo TD-A1/TD-A2/TD-A3",
+      "descripcion_partida": "Tablero administrativo TD-A1/TD-A2/TD-A3 equipado",
+      "codigo": "TAB-04",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 3.0,
+      "precio_unit_soles": 2200.0,
+      "costo_soles": 6600.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:45+00:00",
+        "consulta_original": "Tablero administrativo TD-A1/TD-A2/TD-A3",
+        "consulta_usada": "tablero electrico",
+        "consultas_intentadas": [
+          "tablero administrativo td a1/td a2/td a3",
+          "tablero administrativo td a1 td a2 td a3",
+          "tablero administrativo td a1",
+          "tablero electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Marcador de bornes WDU 4mm2 x600und",
+            "marca": "WEIDMULLER",
+            "sku": "1044421",
+            "precio_texto": "S/ 41.95",
+            "precio_soles": 41.95,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/marcador-de-bornes-wdu-4mm2-x600und-1044421.html",
+            "texto_visible": "WEIDMULLER SKU 1044421 2007120000 Marcador de bornes WDU 4mm2 x600und S/ 41.95 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tablero electrico",
+            "coincidencia_score": 0.35,
+            "familia_requerida": "tablero",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Resistencia calefactora PTC 250W 110..230VAC/DC",
+            "marca": "FINDER",
+            "sku": "1045422",
+            "precio_texto": "S/ 432.08",
+            "precio_soles": 432.08,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/resistencia-calefactora-ptc-250w-110-230vac-dc-1045422.html",
+            "texto_visible": "FINDER SKU 1045422 7H5181100250 Resistencia calefactora PTC 250W 110..230VAC/DC S/ 432.08 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tablero electrico",
+            "coincidencia_score": 0.35,
+            "familia_requerida": "tablero",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Luminaria LED para tablero 600Lm 9W para interruptor",
+            "marca": "FINDER",
+            "sku": "1041164",
+            "precio_texto": "S/ 290.49",
+            "precio_soles": 290.49,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/luminaria-led-para-tablero-600lm-9w-para-interruptor-1041164.html",
+            "texto_visible": "FINDER SKU 1041164 7L4300240100 Luminaria LED para tablero 600Lm 9W para interruptor S/ 290.49 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tablero electrico",
+            "coincidencia_score": -2.3,
+            "familia_requerida": "tablero",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "tablero"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:tablero=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.350=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Interruptor principal MCCB 4P 80 A",
+      "descripcion_partida": "Interruptor principal MCCB 4P 80 A, Icu minimo 25 kA",
+      "codigo": "PRO-01",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 1850.0,
+      "costo_soles": 1850.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:44+00:00",
+        "consulta_original": "Interruptor principal MCCB 4P 80 A",
+        "consulta_usada": "interruptor mccb 4 p 80",
+        "consultas_intentadas": [
+          "interruptor principal mccb 4 p 80 a",
+          "interruptor mccb 4 p 80",
+          "interruptor mccb 4 p"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Interruptor termomagnético regulable 3x56-80A 36kA 220/440V NSX100F",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1044108",
+            "precio_texto": "S/ 600.96",
+            "precio_soles": 600.96,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-termomagnetico-regulable-3x56-80a-36ka-220-440v-nsx100f-1044108.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1044108 C10F3TM080 Interruptor termomagnético regulable 3x56-80A 36kA 220/440V NSX100F S/ 600.96 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor mccb 4 p 80",
+            "coincidencia_score": 0.1,
+            "familia_requerida": "interruptor_control",
+            "familia_candidato": "interruptor_termomagnetico",
+            "tokens_coincidentes": [
+              "80",
+              "interruptor"
+            ],
+            "especificaciones_requeridas": [
+              "4p",
+              "80a"
+            ],
+            "especificaciones_coincidentes": [
+              "80a"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Interruptor termomagnético regulable 3x17.5-25A 85/35kA 220/440V NSX100F",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1044230",
+            "precio_texto": "S/ 576.28",
+            "precio_soles": 576.28,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-termomagnetico-regulable-3x17-5-25a-85-35ka-220-440v-nsx100f-1044230.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1044230 C10F3TM025 Interruptor termomagnético regulable 3x17.5-25A 85/35kA 220/440V NSX100F S/ 576.28 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor mccb 4 p 80",
+            "coincidencia_score": -2.25,
+            "familia_requerida": "interruptor_control",
+            "familia_candidato": "interruptor_termomagnetico",
+            "tokens_coincidentes": [
+              "interruptor"
+            ],
+            "especificaciones_requeridas": [
+              "4p",
+              "80a"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Interruptor termomagnético regulable 3x35-50A 36kA 220/440V NSX100F",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1044107",
+            "precio_texto": "S/ 588.86",
+            "precio_soles": 588.86,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-termomagnetico-regulable-3x35-50a-36ka-220-440v-nsx100f-1044107.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1044107 C10F3TM050 Interruptor termomagnético regulable 3x35-50A 36kA 220/440V NSX100F S/ 588.86 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor mccb 4 p",
+            "coincidencia_score": -2.25,
+            "familia_requerida": "interruptor_control",
+            "familia_candidato": "interruptor_termomagnetico",
+            "tokens_coincidentes": [
+              "interruptor"
+            ],
+            "especificaciones_requeridas": [
+              "4p",
+              "80a"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:interruptor_control=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.100=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Interruptor alimentador 4P 20--40 A",
+      "descripcion_partida": "Interruptor alimentador 4P 20--40 A, minimo 10 kA",
+      "codigo": "PRO-02",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 5.0,
+      "precio_unit_soles": 320.0,
+      "costo_soles": 1600.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:45+00:00",
+        "consulta_original": "Interruptor alimentador 4P 20--40 A",
+        "consulta_usada": "interruptor 4 p 20 40",
+        "consultas_intentadas": [
+          "interruptor alimentador 4 p 20 40 a",
+          "interruptor 4 p 20 40",
+          "interruptor 4 p 20"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Interruptor termomagnético 3x40A 20/10/6kA 240/400/440V tipo C IC60N DIN",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1008325",
+            "precio_texto": "S/ 196.16",
+            "precio_soles": 196.16,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-termomagnetico-3x40a-20-10-6ka-240-400-440v-tipo-c-ic60n-din-1008325.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1008325 A9F74340 Interruptor termomagnético 3x40A 20/10/6kA 240/400/440V tipo C IC60N DIN S/ 196.16 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor 4 p 20 40",
+            "coincidencia_score": 0.1,
+            "familia_requerida": "interruptor_control",
+            "familia_candidato": "interruptor_termomagnetico",
+            "tokens_coincidentes": [
+              "20",
+              "interruptor"
+            ],
+            "especificaciones_requeridas": [
+              "40a",
+              "4p"
+            ],
+            "especificaciones_coincidentes": [
+              "40a"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Interruptor termomagnético regulable 3x14-20A (690V) 25/15kA 230/440V",
+            "marca": "ABB",
+            "sku": "1003377",
+            "precio_texto": "S/ 338.39",
+            "precio_soles": 338.39,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1003377-interruptor-termomagnetico-regulable-3x14-20a-690v-25-15ka-230-440v.html",
+            "texto_visible": "ABB SKU 1003377 1SDA066800R1 Interruptor termomagnético regulable 3x14-20A (690V) 25/15kA 230/440V S/ 338.39 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor 4 p 20",
+            "coincidencia_score": -1.9,
+            "familia_requerida": "interruptor_control",
+            "familia_candidato": "interruptor_termomagnetico",
+            "tokens_coincidentes": [
+              "20",
+              "interruptor"
+            ],
+            "especificaciones_requeridas": [
+              "40a",
+              "4p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Interruptor termomagnético fijo 3x200A 50/20kA 220/440V",
+            "marca": "ABB",
+            "sku": "1004728",
+            "precio_texto": "S/ 589.00",
+            "precio_soles": 589.0,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1004728-interruptor-termomagnetico-fijo-3x200a-50-20ka-220-440v.html",
+            "texto_visible": "ABB SKU 1004728 1SDA066778R1 Interruptor termomagnético fijo 3x200A 50/20kA 220/440V S/ 589.00 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor 4 p 20",
+            "coincidencia_score": -2.25,
+            "familia_requerida": "interruptor_control",
+            "familia_candidato": "interruptor_termomagnetico",
+            "tokens_coincidentes": [
+              "interruptor"
+            ],
+            "especificaciones_requeridas": [
+              "40a",
+              "4p"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:interruptor_control=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.100=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "RCBO 2P 10 A",
+      "descripcion_partida": "RCBO 2P 10 A, 30 mA, curva C",
+      "codigo": "PRO-03",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 13.0,
+      "precio_unit_soles": 185.0,
+      "costo_soles": 2405.0,
+      "precio_presupuesto_tipo": "referencia_web_comparable",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:47+00:00",
+        "consulta_original": "RCBO 2P 10 A",
+        "consulta_usada": "rcbo 2 p 10",
+        "consultas_intentadas": [
+          "rcbo 2 p 10 a",
+          "rcbo 2 p 10"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Selector luminoso rojo 24VAC/DC 2 posiciones fijas 1NA+1NC",
+            "marca": "Outlet TC",
+            "sku": "1009497",
+            "precio_texto": "S/ 10.30",
+            "precio_soles": 10.3,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009497-selector-luminoso-rojo-24vac-dc-2-posiciones-fijas-1na-1nc.html",
+            "texto_visible": "Outlet TC SKU 1009497 RCB2-BK124 Selector luminoso rojo 24VAC/DC 2 posiciones fijas 1NA+1NC S/ 10.30 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 10",
+            "coincidencia_score": 2.85,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "10a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Pulsador luminoso rasante verde 22mm c/lámpara 130VAC s/block",
+            "marca": "Outlet TC",
+            "sku": "1009199",
+            "precio_texto": "S/ 4.07",
+            "precio_soles": 4.07,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009199-pulsador-luminoso-verde-22mm-c-lampara-130vac-s-block.html",
+            "texto_visible": "Outlet TC SKU 1009199 RCB2-BW336 Pulsador luminoso rasante verde 22mm c/lámpara 130VAC s/block S/ 4.07 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 10",
+            "coincidencia_score": -0.4,
+            "familia_requerida": "general",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "10a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Pulsador luminoso rasante rojo 22mm c/lámpara 130VAC s/block",
+            "marca": "Outlet TC",
+            "sku": "1009200",
+            "precio_texto": "S/ 4.44",
+            "precio_soles": 4.44,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009200-pulsador-luminoso-rojo-22mm-c-lampara-130vac-s-block.html",
+            "texto_visible": "Outlet TC SKU 1009200 RCB2-BW346 Pulsador luminoso rasante rojo 22mm c/lámpara 130VAC s/block S/ 4.44 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 10",
+            "coincidencia_score": -0.4,
+            "familia_requerida": "general",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "10a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:2.850=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "RCBO 2P 16 A",
+      "descripcion_partida": "RCBO 2P 16 A, 30 mA, curva C",
+      "codigo": "PRO-04",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 7.0,
+      "precio_unit_soles": 195.0,
+      "costo_soles": 1365.0,
+      "precio_presupuesto_tipo": "referencia_web_comparable",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:53+00:00",
+        "consulta_original": "RCBO 2P 16 A",
+        "consulta_usada": "rcbo 2 p 16",
+        "consultas_intentadas": [
+          "rcbo 2 p 16 a",
+          "rcbo 2 p 16"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Pulsador no luminoso rasante verde 22mm 1NA IP65",
+            "marca": "TC",
+            "sku": "1009179",
+            "precio_texto": "S/ 7.06",
+            "precio_soles": 7.06,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009179-pulsador-rasante-verde-22mm-con-block-1na-ip65.html",
+            "texto_visible": "TC SKU 1009179 RCB2-BA31 Pulsador no luminoso rasante verde 22mm 1NA IP65 S/ 7.06 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 16",
+            "coincidencia_score": 3.6,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "16a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Cabeza para selector manija corta no luminoso 2 posiciones fijas 22mm",
+            "marca": "TC",
+            "sku": "1009286",
+            "precio_texto": "S/ 8.84",
+            "precio_soles": 8.84,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009286-cabeza-de-selector-manija-corta-2-posiciones-fijas-22mm-sin-block.html",
+            "texto_visible": "TC SKU 1009286 RCB2-BD21 Cabeza para selector manija corta no luminoso 2 posiciones fijas 22mm S/ 8.84 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 16",
+            "coincidencia_score": 3.6,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "16a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Selector luminoso rojo 24VAC/DC 2 posiciones fijas 1NA+1NC",
+            "marca": "Outlet TC",
+            "sku": "1009497",
+            "precio_texto": "S/ 10.30",
+            "precio_soles": 10.3,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009497-selector-luminoso-rojo-24vac-dc-2-posiciones-fijas-1na-1nc.html",
+            "texto_visible": "Outlet TC SKU 1009497 RCB2-BK124 Selector luminoso rojo 24VAC/DC 2 posiciones fijas 1NA+1NC S/ 10.30 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 16",
+            "coincidencia_score": 2.85,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "16a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:3.600=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "RCBO 2P 20 A",
+      "descripcion_partida": "RCBO 2P 20 A, 30 mA, curva C/D segun carga",
+      "codigo": "PRO-05",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 12.0,
+      "precio_unit_soles": 230.0,
+      "costo_soles": 2760.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:56+00:00",
+        "consulta_original": "RCBO 2P 20 A",
+        "consulta_usada": "rcbo 2 p 20",
+        "consultas_intentadas": [
+          "rcbo 2 p 20 a",
+          "rcbo 2 p 20"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Pulsador luminoso rasante rojo 22mm 240VAC NA+NC",
+            "marca": "TC",
+            "sku": "1009491",
+            "precio_texto": "S/ 14.27",
+            "precio_soles": 14.27,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009491-pulsador-luminoso-rojo-22mm-c-led-240vac-con-block-nanc.html",
+            "texto_visible": "TC SKU 1009491 RCB2-BWL3475240VAC Pulsador luminoso rasante rojo 22mm 240VAC NA+NC S/ 14.27 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 20",
+            "coincidencia_score": 3.6,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "20a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Pulsador luminoso rasante verde 22mm 240VAC NA+NC",
+            "marca": "TC",
+            "sku": "1009490",
+            "precio_texto": "S/ 14.47",
+            "precio_soles": 14.47,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009490-pulsador-luminoso-verde-22mm-c-led-240vac-con-block-nanc.html",
+            "texto_visible": "TC SKU 1009490 RCB2-BWL3375240VAC Pulsador luminoso rasante verde 22mm 240VAC NA+NC S/ 14.47 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 20",
+            "coincidencia_score": 3.6,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "20a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Piloto rojo 240VAC plástico",
+            "marca": "TC",
+            "sku": "1009504",
+            "precio_texto": "S/ 9.39",
+            "precio_soles": 9.39,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1009504-piloto-rojo-240vac-plastico.html",
+            "texto_visible": "TC SKU 1009504 RCB7-IVL-74240VAC Piloto rojo 240VAC plástico S/ 9.39 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "rcbo 2 p 20",
+            "coincidencia_score": 2.85,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "20a",
+              "2p"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:3.600=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Proteccion 3P de motor con diferencial y guardamotor coordinado",
+      "descripcion_partida": "Proteccion 3P de motor con diferencial y guardamotor coordinado",
+      "codigo": "PRO-06",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 3.0,
+      "precio_unit_soles": 680.0,
+      "costo_soles": 2040.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:12+00:00",
+        "consulta_original": "Proteccion 3P de motor con diferencial y guardamotor coordinado",
+        "consulta_usada": "interruptor diferencial 3 p",
+        "consultas_intentadas": [
+          "proteccion 3 p de motor con diferencial y guardamotor coordinado",
+          "3 p motor diferencial guardamotor coordinado",
+          "3 p motor diferencial",
+          "interruptor diferencial 3 p",
+          "diferencial"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Interruptor diferencial 2x40A 30mA 230V 2 módulos DIN",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1007642",
+            "precio_texto": "S/ 215.09",
+            "precio_soles": 215.09,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-diferencial-2x40a-30ma-230v-2-modulos-din-1007642.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1007642 A9R71240 Interruptor diferencial 2x40A 30mA 230V 2 módulos DIN S/ 215.09 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor diferencial 3 p",
+            "coincidencia_score": 3.95,
+            "familia_requerida": "interruptor_diferencial",
+            "familia_candidato": "interruptor_diferencial",
+            "tokens_coincidentes": [
+              "diferencial"
+            ],
+            "especificaciones_requeridas": [
+              "3p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Interruptor diferencial 2x40A 30mA 230V 2 módulos DIN IDSI",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1003048",
+            "precio_texto": "S/ 294.03",
+            "precio_soles": 294.03,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-diferencial-2x40a-30ma-230v-2-modulos-din-idsi-1003048.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1003048 A9R91240 Interruptor diferencial 2x40A 30mA 230V 2 módulos DIN IDSI S/ 294.03 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "interruptor diferencial 3 p",
+            "coincidencia_score": 3.95,
+            "familia_requerida": "interruptor_diferencial",
+            "familia_candidato": "interruptor_diferencial",
+            "tokens_coincidentes": [
+              "diferencial"
+            ],
+            "especificaciones_requeridas": [
+              "3p"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Interruptor diferencial 4x25A 30mA 230V 4 módulos riel DIN ID",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1003113",
+            "precio_texto": "S/ 331.56",
+            "precio_soles": 331.56,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-diferencial-4x25a-30ma-230v-4-modulos-riel-din-id-1003113.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1003113 A9R71425 Interruptor diferencial 4x25A 30mA 230V 4 módulos riel DIN ID S/ 331.56 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "diferencial",
+            "coincidencia_score": 3.95,
+            "familia_requerida": "interruptor_diferencial",
+            "familia_candidato": "interruptor_diferencial",
+            "tokens_coincidentes": [
+              "diferencial"
+            ],
+            "especificaciones_requeridas": [
+              "3p"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:interruptor_diferencial=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:3.950=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "SPD Tipo 1+2",
+      "descripcion_partida": "SPD Tipo 1+2, 3P+N, coordinado con TGE",
+      "codigo": "PRO-07",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 1650.0,
+      "costo_soles": 1650.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:47:58+00:00",
+        "consulta_original": "SPD Tipo 1+2",
+        "consulta_usada": "spd 1 2",
+        "consultas_intentadas": [
+          "spd tipo 1 2",
+          "spd 1 2"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Rele de falta de fase trifásico 208-480VAC,1 SPDT DIN",
+            "marca": "COEL",
+            "sku": "1042261",
+            "precio_texto": "S/ 101.27",
+            "precio_soles": 101.27,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/rele-de-falta-de-fase-trifasico-208-480vac-1-spdt-din-1042261.html",
+            "texto_visible": "COEL SKU 1042261 BVF1-S Rele de falta de fase trifásico 208-480VAC,1 SPDT DIN S/ 101.27 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "spd 1 2",
+            "coincidencia_score": 4.35,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Temporizador/contador digital 110-240VAC 2 SPDT 8A 48x48mm",
+            "marca": "COEL",
+            "sku": "1034068",
+            "precio_texto": "S/ 173.78",
+            "precio_soles": 173.78,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1034068-temporizador-contador-digital-110-240vac-2-spdt-8a-48x48.html",
+            "texto_visible": "COEL SKU 1034068 T42HLRR Temporizador/contador digital 110-240VAC 2 SPDT 8A 48x48mm S/ 173.78 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "spd 1 2",
+            "coincidencia_score": 4.35,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Temporizador electrónico 0.05s-100h 4A 24-48VDC/24-240VAC 1 SPDT",
+            "marca": "ABB",
+            "sku": "1040587",
+            "precio_texto": "S/ 208.81",
+            "precio_soles": 208.81,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1040587-temporizador-electronico-0-05s-100h-4a-24-48vdc-24-240vac-1-spdt.html",
+            "texto_visible": "ABB SKU 1040587 1SVR508100R0000 Temporizador electrónico 0.05s-100h 4A 24-48VDC/24-240VAC 1 SPDT S/ 208.81 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "spd 1 2",
+            "coincidencia_score": 4.35,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:4.350=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "SPD Tipo 2",
+      "descripcion_partida": "SPD Tipo 2, 3P+N, para tableros secundarios",
+      "codigo": "PRO-08",
+      "categoria": "04 Tableros y protecciones",
+      "unidad": "und",
+      "cantidad": 3.0,
+      "precio_unit_soles": 720.0,
+      "costo_soles": 2160.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:04+00:00",
+        "consulta_original": "SPD Tipo 2",
+        "consulta_usada": "spd 2",
+        "consultas_intentadas": [
+          "spd tipo 2",
+          "spd 2"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Limitador de sobretensión T1+2 3P 60kA 275V",
+            "marca": "FINDER",
+            "sku": "1033728",
+            "precio_texto": null,
+            "precio_soles": null,
+            "disponible": null,
+            "stock_texto": "SIN STOCK",
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1033728-limitador-de-sobretensiones-t1-2-3p-60ka-275v.html",
+            "texto_visible": "FINDER SKU 1033728 7P1382751012 Limitador de sobretensión T1+2 3P 60kA 275V SIN STOCK Ver producto Agregar a favoritos Comparar",
+            "consulta": "spd 2",
+            "coincidencia_score": 4.0,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Interruptor termomagnético 1x2A 10/6kA 230/400V curva C DIN IEC 60898-1",
+            "marca": "STECK",
+            "sku": "1043710",
+            "precio_texto": "S/ 6.54",
+            "precio_soles": 6.54,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-termomagnetico-1x2a-6ka-230-400v-curva-c-din-1043710.html",
+            "texto_visible": "STECK SKU 1043710 SDZD61C02 Interruptor termomagnético 1x2A 10/6kA 230/400V curva C DIN IEC 60898-1 S/ 6.54 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "spd tipo 2",
+            "coincidencia_score": 0.35,
+            "familia_requerida": "general",
+            "familia_candidato": "interruptor_termomagnetico",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Interruptor diferencial 4x40A 30mA 230/400VAC curva A",
+            "marca": "STECK",
+            "sku": "1043709",
+            "precio_texto": "S/ 84.23",
+            "precio_soles": 84.23,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/interruptor-diferencial-4x40a-30ma-230-400vac-curva-a-1043709.html",
+            "texto_visible": "STECK SKU 1043709 SDR44030A Interruptor diferencial 4x40A 30mA 230/400VAC curva A S/ 84.23 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "spd tipo 2",
+            "coincidencia_score": 0.35,
+            "familia_requerida": "general",
+            "familia_candidato": "interruptor_diferencial",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=OK",
+            "precio_visible=NO",
+            "disponibilidad_no_negativa=OK",
+            "score:4.000=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Luminaria LED 100 W IP66 para marquesina",
+      "descripcion_partida": "Luminaria LED 100 W IP66 para marquesina; aptitud de area por confirmar",
+      "codigo": "ALU-01",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "und",
+      "cantidad": 18.0,
+      "precio_unit_soles": 780.0,
+      "costo_soles": 14040.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:34+00:00",
+        "consulta_original": "Luminaria LED 100 W IP66 para marquesina",
+        "consulta_usada": "lampara led 100 w",
+        "consultas_intentadas": [
+          "luminaria led 100 w ip66 para marquesina",
+          "luminaria led 100 w ip66 marquesina",
+          "luminaria led 100 w",
+          "foco led 100 w",
+          "lampara led 100 w",
+          "luminaria led",
+          "foco led"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Lampara Led Alta Potencia 30W/865 2700LM 100-240Veco",
+            "marca": "LEDVANCE",
+            "sku": "1044841",
+            "precio_texto": "S/ 6.93",
+            "precio_soles": 6.93,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/lampara-led-alta-potencia-30w-865-2700lm-100-240veco-1044841.html",
+            "texto_visible": "LEDVANCE SKU 1044841 7023316 Lampara Led Alta Potencia 30W/865 2700LM 100-240Veco S/ 6.93 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "lampara led 100 w",
+            "coincidencia_score": 4.3,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "100",
+              "led"
+            ],
+            "especificaciones_requeridas": [
+              "100w"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Lampara Led Alta Potencia 40W/865 3600LM 100-240Veco",
+            "marca": "LEDVANCE",
+            "sku": "1044842",
+            "precio_texto": "S/ 9.70",
+            "precio_soles": 9.7,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/lampara-led-alta-potencia-40w-865-3600lm-100-240veco-1044842.html",
+            "texto_visible": "LEDVANCE SKU 1044842 7023317 Lampara Led Alta Potencia 40W/865 3600LM 100-240Veco S/ 9.70 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "lampara led 100 w",
+            "coincidencia_score": 4.3,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "100",
+              "led"
+            ],
+            "especificaciones_requeridas": [
+              "100w"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Luminaria de emergencia LED R1W5 2W 1.5h 220Lm NICD",
+            "marca": "PHILIPS",
+            "sku": "1036792",
+            "precio_texto": "S/ 58.20",
+            "precio_soles": 58.2,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1036792-luminaria-de-emergencia-led-r1-w5-2w-1-5h-220lm-nicd.html",
+            "texto_visible": "PHILIPS SKU 1036792 919406020731 Luminaria de emergencia LED R1W5 2W 1.5h 220Lm NICD S/ 58.20 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "luminaria led 100 w",
+            "coincidencia_score": 4.3,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "led",
+              "luminaria"
+            ],
+            "especificaciones_requeridas": [
+              "100w"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:luminaria=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:4.300=OK",
+            "semantica:potencia_real_o_equivalente_ambigua=NO"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Luminaria exterior LED 120 W con poste",
+      "descripcion_partida": "Luminaria exterior LED 120 W con poste, brazo, cimentacion y conexion",
+      "codigo": "ALU-02",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "und",
+      "cantidad": 8.0,
+      "precio_unit_soles": 1780.0,
+      "costo_soles": 14240.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:38+00:00",
+        "consulta_original": "Luminaria exterior LED 120 W con poste",
+        "consulta_usada": "lampara led 120 w",
+        "consultas_intentadas": [
+          "luminaria exterior led 120 w con poste",
+          "luminaria exterior led 120 w poste",
+          "luminaria exterior led 120",
+          "foco led 120 w",
+          "lampara led 120 w",
+          "luminaria led",
+          "foco led"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Lampara Led Alta Potencia 30W/865 2700LM 100-240Veco",
+            "marca": "LEDVANCE",
+            "sku": "1044841",
+            "precio_texto": "S/ 6.93",
+            "precio_soles": 6.93,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/lampara-led-alta-potencia-30w-865-2700lm-100-240veco-1044841.html",
+            "texto_visible": "LEDVANCE SKU 1044841 7023316 Lampara Led Alta Potencia 30W/865 2700LM 100-240Veco S/ 6.93 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "lampara led 120 w",
+            "coincidencia_score": 3.95,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "led"
+            ],
+            "especificaciones_requeridas": [
+              "120w"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Lámpara Led Globo 9-60W/827 E27 LC 220V 15000H",
+            "marca": "Outlet PHILIPS",
+            "sku": "1025410",
+            "precio_texto": "S/ 8.14",
+            "precio_soles": 8.14,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/lampara-led-globo-9-60w-827-e27-lc-220v-15000h-1025410.html",
+            "texto_visible": "Outlet PHILIPS SKU 1025410 929001179901 Lámpara Led Globo 9-60W/827 E27 LC 220V 15000H S/ 8.14 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "lampara led 120 w",
+            "coincidencia_score": 3.95,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "led"
+            ],
+            "especificaciones_requeridas": [
+              "120w"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Linterna para casco 3W 120Lm + correa de sujección",
+            "marca": "MACROLED",
+            "sku": "1040953",
+            "precio_texto": "S/ 8.39",
+            "precio_soles": 8.39,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1040953-linterna-para-casco-3w-120lm-correa-de-sujeccion.html",
+            "texto_visible": "MACROLED SKU 1040953 LMFP-120-3AAA Linterna para casco 3W 120Lm + correa de sujección S/ 8.39 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "luminaria exterior led 120",
+            "coincidencia_score": 3.95,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "120"
+            ],
+            "especificaciones_requeridas": [
+              "120w"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:luminaria=OK",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:3.950=NO",
+            "semantica:potencia_real_o_equivalente_ambigua=NO"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Panel/luminaria LED interior 60 W",
+      "descripcion_partida": "Panel/luminaria LED interior 60 W, instalada",
+      "codigo": "ALU-03",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "und",
+      "cantidad": 60.0,
+      "precio_unit_soles": 245.0,
+      "costo_soles": 14700.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:49+00:00",
+        "consulta_original": "Panel/luminaria LED interior 60 W",
+        "consulta_usada": "lampara led 60 w",
+        "consultas_intentadas": [
+          "panel/luminaria led interior 60 w",
+          "panel luminaria led interior 60 w",
+          "panel luminaria led interior",
+          "foco led 60 w",
+          "lampara led 60 w",
+          "luminaria led",
+          "foco led"
+        ],
+        "busqueda_relajada": true,
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:luminaria=OK",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:6.300=OK",
+            "semantica:potencia_real_o_equivalente_ambigua=NO"
+          ]
+        },
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Lámpara LED Bulb A60 9-60W/830 E27 Toledo",
+            "marca": "Outlet SYLVANIA",
+            "sku": "1031939",
+            "precio_texto": "S/ 2.11",
+            "precio_soles": 2.11,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1031939-lampara-led-bulb-a60-9-60w-830-e27-toledo.html",
+            "texto_visible": "Outlet SYLVANIA SKU 1031939 P27620-19 Lámpara LED Bulb A60 9-60W/830 E27 Toledo S/ 2.11 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "lampara led 60 w",
+            "coincidencia_score": 6.3,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "60",
+              "led"
+            ],
+            "especificaciones_requeridas": [
+              "60w"
+            ],
+            "especificaciones_coincidentes": [
+              "60w"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Lámpara Led Globo 9-60W/827 E27 LC 220V 15000H",
+            "marca": "Outlet PHILIPS",
+            "sku": "1025410",
+            "precio_texto": "S/ 8.14",
+            "precio_soles": 8.14,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/lampara-led-globo-9-60w-827-e27-lc-220v-15000h-1025410.html",
+            "texto_visible": "Outlet PHILIPS SKU 1025410 929001179901 Lámpara Led Globo 9-60W/827 E27 LC 220V 15000H S/ 8.14 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "lampara led 60 w",
+            "coincidencia_score": 6.3,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "60",
+              "led"
+            ],
+            "especificaciones_requeridas": [
+              "60w"
+            ],
+            "especificaciones_coincidentes": [
+              "60w"
+            ]
+          },
+          {
+            "opcion": 3,
+            "nombre": "Panel LED P48 48W/845 4800Lm 605x605mm para empotrar",
+            "marca": "MACROLED",
+            "sku": "1041378",
+            "precio_texto": "S/ 83.98",
+            "precio_soles": 83.98,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1041378-panel-led-p48-48w-845-4800lm-605x605mm-para-empotrar.html",
+            "texto_visible": "MACROLED SKU 1041378 P48-605-PMMA-4800LM-NW Panel LED P48 48W/845 4800Lm 605x605mm para empotrar S/ 83.98 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "panel luminaria led interior",
+            "coincidencia_score": 4.3,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "led",
+              "panel"
+            ],
+            "especificaciones_requeridas": [
+              "60w"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "actualizacion_precio": {
+          "precio_actualizado": false
+        },
+        "producto_descartado_por_revalidacion": {
+          "nombre": "Lámpara LED Bulb A60 9-60W/830 E27 Toledo",
+          "sku": "1031939",
+          "codigo_fabricante": "P27620-19",
+          "marca": "SYLVANIA",
+          "precio_texto": "S/ 2.11",
+          "precio_soles": 2.11,
+          "stock_texto": "Stock disponible : 39",
+          "stock_cantidad": 39,
+          "disponible": true,
+          "url": "https://www.promelsa.com.pe/1031939-lampara-led-bulb-a60-9-60w-830-e27-toledo.html",
+          "descripcion": "Lámpara LED tipo bulbo modelo Toledo A60 de 9W (eq. 60W) con flujo luminoso de 750 lúmenes, base E27, temperatura de color 3000K, tensión de operación 100-240V, tiempo de vida 15,000 horas.",
+          "atributos": {
+            "Ficha Técnica": "",
+            "Marca": "SYLVANIA",
+            "Modelo": "TOLEDO 9W/830",
+            "Referencia De Fabricante": "P27620-19",
+            "Tipo De Artículo": "Saldo",
+            "País De Fabricación": "China",
+            "Observaciones adicionales": "La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+          },
+          "ficha_tecnica_url": "https://www.promelsa.com.pe/media/PDF/1031939-01.pdf",
+          "ficha_tecnica_urls": [
+            "https://www.promelsa.com.pe/media/PDF/1031939-01.pdf"
+          ],
+          "texto_tecnico": "Lámpara LED Bulb A60 9-60W/830 E27 Toledo | Lámpara LED tipo bulbo modelo Toledo A60 de 9W (eq. 60W) con flujo luminoso de 750 lúmenes, base E27, temperatura de color 3000K, tensión de operación 100-240V, tiempo de vida 15,000 horas. | Marca: SYLVANIA | Modelo: TOLEDO 9W/830 | Referencia De Fabricante: P27620-19 | Tipo De Artículo: Saldo | País De Fabricación: China | Observaciones adicionales: La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+        },
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "revalidacion": {
+          "fecha": "2026-08-02T17:50:51+00:00",
+          "resultado": "candidato_descartado_por_filtros_vigentes"
+        }
+      }
+    },
+    {
+      "item": "Luminaria o señal autonoma de emergencia",
+      "descripcion_partida": "Luminaria o señal autonoma de emergencia",
+      "codigo": "ALU-04",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "und",
+      "cantidad": 12.0,
+      "precio_unit_soles": 195.0,
+      "costo_soles": 2340.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:30+00:00",
+        "consulta_original": "Luminaria o señal autonoma de emergencia",
+        "consulta_usada": "luminaria led",
+        "consultas_intentadas": [
+          "luminaria o senal autonoma de emergencia",
+          "luminaria o senal autonoma emergencia",
+          "luminaria o senal autonoma",
+          "luminaria led"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Luminaria hermética LED WT120C LED40S/865 PSU L1200",
+            "marca": "PHILIPS",
+            "sku": "1043703",
+            "precio_texto": "S/ 117.17",
+            "precio_soles": 117.17,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/luminaria-hermetica-led-wt120c-led40s-865-psu-l1200-1043703.html",
+            "texto_visible": "PHILIPS SKU 1043703 911401824381 Luminaria hermética LED WT120C LED40S/865 PSU L1200 S/ 117.17 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "luminaria led",
+            "coincidencia_score": 4.7,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "luminaria"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Luminaria hermética LED WT120C LED60S/865 PSU L1500",
+            "marca": "PHILIPS",
+            "sku": "1044263",
+            "precio_texto": "S/ 137.07",
+            "precio_soles": 137.07,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/luminaria-hermetica-led-wt120c-led60s-865-psu-l1500-1044263.html",
+            "texto_visible": "PHILIPS SKU 1044263 911401824581 Luminaria hermética LED WT120C LED60S/865 PSU L1500 S/ 137.07 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "luminaria led",
+            "coincidencia_score": 4.7,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [
+              "luminaria"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Panel LED P48 48W/845 4800Lm 605x605mm para empotrar",
+            "marca": "MACROLED",
+            "sku": "1041378",
+            "precio_texto": "S/ 83.98",
+            "precio_soles": 83.98,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1041378-panel-led-p48-48w-845-4800lm-605x605mm-para-empotrar.html",
+            "texto_visible": "MACROLED SKU 1041378 P48-605-PMMA-4800LM-NW Panel LED P48 48W/845 4800Lm 605x605mm para empotrar S/ 83.98 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "luminaria led",
+            "coincidencia_score": 4.35,
+            "familia_requerida": "luminaria",
+            "familia_candidato": "luminaria",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:luminaria=OK",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:4.700=OK",
+            "semantica:funcion_emergencia=NO"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Tomacorriente doble 2P+T con caja",
+      "descripcion_partida": "Tomacorriente doble 2P+T con caja, placa y conexion",
+      "codigo": "DIS-01",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "pto",
+      "cantidad": 56.0,
+      "precio_unit_soles": 78.0,
+      "costo_soles": 4368.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "OK",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:05+00:00",
+        "consulta_original": "Tomacorriente doble 2P+T con caja",
+        "consulta_usada": "tomacorriente doble",
+        "consultas_intentadas": [
+          "tomacorriente doble 2 p t con caja",
+          "tomacorriente doble 2 p t caja",
+          "tomacorriente doble 2 p",
+          "tomacorriente",
+          "tomacorriente doble"
+        ],
+        "busqueda_relajada": true,
+        "seleccion": {
+          "opcion": 1,
+          "decision": "coincidencia_heuristica_trazable",
+          "requiere_revision": true,
+          "justificacion": "Coinciden familia y especificacion nominal; hay precio visible y no se detecto falta de stock. Requiere validacion humana antes de compra.",
+          "criterios": [
+            "familia:tomacorriente=OK",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:6.300=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        },
+        "producto": {
+          "nombre": "Tomacorriente universal doble 2x16A 250V Domino Sencia",
+          "sku": "1026452",
+          "codigo_fabricante": "AP1212",
+          "marca": "BTICINO",
+          "precio_texto": "S/ 16.30",
+          "precio_soles": 16.3,
+          "stock_texto": "Stock disponible : 96",
+          "stock_cantidad": 96,
+          "disponible": true,
+          "url": "https://www.promelsa.com.pe/1026452-tomacorriente-universal-doble-2x16a-250v-domino-sencia.html",
+          "descripcion": "Tomacorriente universal doble 2x16A para 250V. Línea Domino Sencia.",
+          "atributos": {
+            "Ficha Técnica": "",
+            "Marca": "BTICINO",
+            "Modelo": "AP1212",
+            "Garantía": "12 meses",
+            "Tipo De Artículo": "Saldo",
+            "Línea": "Domino Sencia",
+            "Color": "Blanco",
+            "N° De Módulos": "3",
+            "N° De Polos": "2P",
+            "País De Fabricación": "Italia",
+            "Observaciones adicionales": "La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+          },
+          "ficha_tecnica_url": "https://www.promelsa.com.pe/media/PDF/1026452-01.pdf",
+          "ficha_tecnica_urls": [
+            "https://www.promelsa.com.pe/media/PDF/1026452-01.pdf",
+            "https://www.promelsa.com.pe/media/PDF/1026452-03.pdf"
+          ],
+          "texto_tecnico": "Tomacorriente universal doble 2x16A 250V Domino Sencia | Tomacorriente universal doble 2x16A para 250V. Línea Domino Sencia. | Marca: BTICINO | Modelo: AP1212 | Garantía: 12 meses | Tipo De Artículo: Saldo | Línea: Domino Sencia | Color: Blanco | N° De Módulos: 3 | N° De Polos: 2P | País De Fabricación: Italia | Observaciones adicionales: La imagen del producto es referencial, los accesorios podrían variar, consulta la ficha técnica para mayor detalle."
+        },
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Tomacorriente universal doble 2x16A 250V Domino Sencia",
+            "marca": "BTICINO",
+            "sku": "1026452",
+            "precio_texto": "S/ 16.30",
+            "precio_soles": 16.3,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026452-tomacorriente-universal-doble-2x16a-250v-domino-sencia.html",
+            "texto_visible": "BTICINO SKU 1026452 AP1212 Tomacorriente universal doble 2x16A 250V Domino Sencia S/ 16.30 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tomacorriente doble",
+            "coincidencia_score": 6.3,
+            "familia_requerida": "tomacorriente",
+            "familia_candidato": "tomacorriente",
+            "tokens_coincidentes": [
+              "doble",
+              "tomacorriente"
+            ],
+            "especificaciones_requeridas": [
+              "2p"
+            ],
+            "especificaciones_coincidentes": [
+              "2p"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Tomacorriente universal doble 2x16A+T 250V Domino Sencia",
+            "marca": "BTICINO",
+            "sku": "1026458",
+            "precio_texto": "S/ 20.98",
+            "precio_soles": 20.98,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1026458-tomacorriente-universal-doble-2x16at-250v-domino-sencia.html",
+            "texto_visible": "BTICINO SKU 1026458 AP1222 Tomacorriente universal doble 2x16A+T 250V Domino Sencia S/ 20.98 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tomacorriente doble",
+            "coincidencia_score": 6.3,
+            "familia_requerida": "tomacorriente",
+            "familia_candidato": "tomacorriente",
+            "tokens_coincidentes": [
+              "doble",
+              "tomacorriente"
+            ],
+            "especificaciones_requeridas": [
+              "2p"
+            ],
+            "especificaciones_coincidentes": [
+              "2p"
+            ]
+          },
+          {
+            "opcion": 3,
+            "nombre": "Tomacorriente duplex 2x15A+T 250V 3 módulos de resina blanco Living- Light",
+            "marca": "BTICINO",
+            "sku": "1014706",
+            "precio_texto": "S/ 64.22",
+            "precio_soles": 64.22,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1014706-tomacorriente-doble-2x15a-t-250v-3-modulos-de-resina-blanco-living-light.html",
+            "texto_visible": "BTICINO SKU 1014706 N4188S Tomacorriente duplex 2x15A+T 250V 3 módulos de resina blanco Living- Light S/ 64.22 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "tomacorriente doble",
+            "coincidencia_score": 5.95,
+            "familia_requerida": "tomacorriente",
+            "familia_candidato": "tomacorriente",
+            "tokens_coincidentes": [
+              "tomacorriente"
+            ],
+            "especificaciones_requeridas": [
+              "2p"
+            ],
+            "especificaciones_coincidentes": [
+              "2p"
+            ]
+          }
+        ],
+        "actualizacion_precio": {
+          "precio_actualizado": false
+        }
+      }
+    },
+    {
+      "item": "Punto de conexion para carga especial/equipo",
+      "descripcion_partida": "Punto de conexion para carga especial/equipo",
+      "codigo": "DIS-02",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "pto",
+      "cantidad": 20.0,
+      "precio_unit_soles": 145.0,
+      "costo_soles": 2900.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "NO_ENCONTRADO",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:51+00:00",
+        "consulta_original": "Punto de conexion para carga especial/equipo",
+        "consulta_usada": null,
+        "consultas_intentadas": [
+          "punto de conexion para carga especial/equipo",
+          "punto conexion carga especial equipo",
+          "punto conexion carga especial"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "Promelsa no devolvio candidatos ni con busqueda relajada.",
+        "candidatos": []
+      }
+    },
+    {
+      "item": "Estacion de paro de emergencia",
+      "descripcion_partida": "Estacion de paro de emergencia, contactos y rotulo",
+      "codigo": "DIS-03",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "und",
+      "cantidad": 3.0,
+      "precio_unit_soles": 1250.0,
+      "costo_soles": 3750.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:48:49+00:00",
+        "consulta_original": "Estacion de paro de emergencia",
+        "consulta_usada": "estacion de paro de emergencia",
+        "consultas_intentadas": [
+          "estacion de paro de emergencia",
+          "estacion paro emergencia"
+        ],
+        "busqueda_relajada": false,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Botonera c/paro emergencia NA+NC, 2 salidas 3/4¨, CL1.ZONA 1",
+            "marca": "TRAMONTINA",
+            "sku": "1017598",
+            "precio_texto": "S/ 458.06",
+            "precio_soles": 458.06,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1017598-botonera-c-paro-emergencia-nanc-2-salidas-3-4-cl1-zona-1.html",
+            "texto_visible": "TRAMONTINA SKU 1017598 56561/016 Botonera c/paro emergencia NA+NC, 2 salidas 3/4¨, CL1.ZONA 1 S/ 458.06 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "estacion de paro de emergencia",
+            "coincidencia_score": 5.05,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "emergencia",
+              "paro"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Botonera c/paro emergencia NA+NC, 2XM25, ZONA 1,21",
+            "marca": "CZ ELECTRIC",
+            "sku": "1036481",
+            "precio_texto": "S/ 789.77",
+            "precio_soles": 789.77,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1036481-botonera-c-paro-emergencia-nanc-2xm25-zona-121.html",
+            "texto_visible": "CZ ELECTRIC SKU 1036481 CZ1242/001L-T1/X-A03/S-H03 Botonera c/paro emergencia NA+NC, 2XM25, ZONA 1,21 S/ 789.77 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "estacion de paro de emergencia",
+            "coincidencia_score": 5.05,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "emergencia",
+              "paro"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Pulsador con paro de emergencia NA+NC sin caja Clase 1 División 1 UL",
+            "marca": "CROUSE HINDS",
+            "sku": "1044385",
+            "precio_texto": "S/ 900.23",
+            "precio_soles": 900.23,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/pulsador-con-paro-de-emergencia-na-nc-sin-caja-clase-1-division-1-ul-1044385.html",
+            "texto_visible": "CROUSE HINDS SKU 1044385 DSD918 S769 SA Pulsador con paro de emergencia NA+NC sin caja Clase 1 División 1 UL S/ 900.23 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "estacion de paro de emergencia",
+            "coincidencia_score": 1.05,
+            "familia_requerida": "general",
+            "familia_candidato": "caja",
+            "tokens_coincidentes": [
+              "emergencia",
+              "paro"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:5.050=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Cableado de control e interbloqueo del paro de emergencia",
+      "descripcion_partida": "Cableado de control e interbloqueo del paro de emergencia",
+      "codigo": "DIS-04",
+      "categoria": "05 Alumbrado y dispositivos",
+      "unidad": "glb",
+      "cantidad": 1.0,
+      "precio_unit_soles": 6200.0,
+      "costo_soles": 6200.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:13+00:00",
+        "consulta_original": "Cableado de control e interbloqueo del paro de emergencia",
+        "consulta_usada": "cable electrico",
+        "consultas_intentadas": [
+          "cableado de control e interbloqueo del paro de emergencia",
+          "cableado control interbloqueo paro emergencia",
+          "cableado control interbloqueo paro",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Solvente para limpieza de cables",
+            "marca": "Outlet PLYON",
+            "sku": "1005507",
+            "precio_texto": "S/ 13.11",
+            "precio_soles": 13.11,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1005507-solvente-para-limpieza-de-cables.html",
+            "texto_visible": "Outlet PLYON SKU 1005507 9684 Solvente para limpieza de cables S/ 13.11 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.85,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Alicate pela cable p/cable D=20-55mm L=287mm",
+            "marca": "DERANCOURT",
+            "sku": "1039522",
+            "precio_texto": "S/ 1,450.18",
+            "precio_soles": 1450.18,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1039522-alicate-pela-cable-p-cable-d-20-55mm-l-287mm.html",
+            "texto_visible": "DERANCOURT SKU 1039522 PBT 20-20 B Alicate pela cable p/cable D=20-55mm L=287mm S/ 1,450.18 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.85,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Conector RJ45 para Tesys T-Mod.Voltaje",
+            "marca": "SCHNEIDER ELECTRIC",
+            "sku": "1043767",
+            "precio_texto": "S/ 46.86",
+            "precio_soles": 46.86,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/conector-rj45-para-tesys-t-mod-voltaje-1043767.html",
+            "texto_visible": "SCHNEIDER ELECTRIC SKU 1043767 LTMCC004 Conector RJ45 para Tesys T-Mod.Voltaje S/ 46.86 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable electrico",
+            "coincidencia_score": 0.35,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:0.850=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Conductor Cu desnudo 35 mm2 para anillo equipotencial",
+      "descripcion_partida": "Conductor Cu desnudo 35 mm2 para anillo equipotencial, instalado",
+      "codigo": "PAT-01",
+      "categoria": "06 PAT, equipotencialidad y rayo",
+      "unidad": "m",
+      "cantidad": 300.0,
+      "precio_unit_soles": 46.0,
+      "costo_soles": 13800.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:18+00:00",
+        "consulta_original": "Conductor Cu desnudo 35 mm2 para anillo equipotencial",
+        "consulta_usada": "conductor cu desnudo 35",
+        "consultas_intentadas": [
+          "conductor cu desnudo 35 mm2 para anillo equipotencial",
+          "conductor cu desnudo 35 mm2 anillo equipotencial",
+          "conductor cu desnudo 35",
+          "cable 35 mm2",
+          "cable electrico"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Cable de cobre desnudo 35mm2 temple blando",
+            "marca": "INDECO",
+            "sku": "1000015",
+            "precio_texto": null,
+            "precio_soles": null,
+            "disponible": false,
+            "stock_texto": "Consulta disponibilidad",
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1000015-cable-de-cobre-desnudo-35mm2-temple-blando.html",
+            "texto_visible": "INDECO SKU 1000015 10000070 Cable de cobre desnudo 35mm2 temple blando Consulta disponibilidad Cotizar aquí Agregar a favoritos Comparar",
+            "consulta": "conductor cu desnudo 35",
+            "coincidencia_score": 5.95,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "35",
+              "desnudo",
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "35mm2"
+            ],
+            "especificaciones_coincidentes": [
+              "35mm2"
+            ]
+          },
+          {
+            "opcion": 2,
+            "nombre": "Cable de cobre desnudo 35mm2 temple blando",
+            "marca": "MIGUELEZ",
+            "sku": "1006596",
+            "precio_texto": null,
+            "precio_soles": null,
+            "disponible": false,
+            "stock_texto": "Consulta disponibilidad",
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1006596-cable-de-cobre-desnudo-35mm2-temple-blando.html",
+            "texto_visible": "MIGUELEZ SKU 1006596 80403 Cable de cobre desnudo 35mm2 temple blando Consulta disponibilidad Cotizar aquí Agregar a favoritos Comparar",
+            "consulta": "conductor cu desnudo 35",
+            "coincidencia_score": 5.95,
+            "familia_requerida": "cable",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "35",
+              "desnudo",
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "35mm2"
+            ],
+            "especificaciones_coincidentes": [
+              "35mm2"
+            ]
+          },
+          {
+            "opcion": 3,
+            "nombre": "Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal",
+            "marca": "3M",
+            "sku": "1016486",
+            "precio_texto": "S/ 1,681.63",
+            "precio_soles": 1681.63,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1016486-terminacion-interior-unipolar-15kv-3-1x-35-70-mm2-qt-iii-s-terminal.html",
+            "texto_visible": "3M SKU 1016486 80610834097 Terminación interior unipolar 15kV 3-1x(35-70)mm2 QT-III s/terminal S/ 1,681.63 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "cable 35 mm2",
+            "coincidencia_score": 0.3,
+            "familia_requerida": "cable",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [
+              "35",
+              "mm2"
+            ],
+            "especificaciones_requeridas": [
+              "35mm2"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:cable=OK",
+            "especificacion=OK",
+            "precio_visible=NO",
+            "disponibilidad_no_negativa=NO",
+            "score:5.950=OK",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Electrodo cobreado 5/8 x 2.40 m con caja y conexion certificada",
+      "descripcion_partida": "Electrodo cobreado 5/8 x 2.40 m con caja y conexion certificada",
+      "codigo": "PAT-02",
+      "categoria": "06 PAT, equipotencialidad y rayo",
+      "unidad": "und",
+      "cantidad": 8.0,
+      "precio_unit_soles": 590.0,
+      "costo_soles": 4720.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:26+00:00",
+        "consulta_original": "Electrodo cobreado 5/8 x 2.40 m con caja y conexion certificada",
+        "consulta_usada": "caja pase",
+        "consultas_intentadas": [
+          "electrodo cobreado 5/8 x 2.40 m con caja y conexion certificada",
+          "electrodo cobreado 5 8 x 2.40 m caja conexion certificada",
+          "electrodo cobreado 5 8",
+          "caja electrica",
+          "caja pase",
+          "caja rectangular"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Caja de derivación PVC 120x80x50mm con 6 pasacables PG21 IP55",
+            "marca": "SCAME",
+            "sku": "1004481",
+            "precio_texto": "S/ 9.52",
+            "precio_soles": 9.52,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1004481-caja-de-derivacion-pvc-120x80x50mm-con-6-pasacables-pg21-ip55.html",
+            "texto_visible": "SCAME SKU 1004481 689.005 Caja de derivación PVC 120x80x50mm con 6 pasacables PG21 IP55 S/ 9.52 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "caja pase",
+            "coincidencia_score": -2.3,
+            "familia_requerida": "electrodo_tierra",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "caja"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Caja de derivación PVC 150x110x70mm con 10 pasacables PG21 IP55",
+            "marca": "SCAME",
+            "sku": "1005143",
+            "precio_texto": "S/ 15.28",
+            "precio_soles": 15.28,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1005143-caja-de-derivacion-pvc-150x110x70mm-con-10-pasacables-pg21-ip55.html",
+            "texto_visible": "SCAME SKU 1005143 689.006 Caja de derivación PVC 150x110x70mm con 10 pasacables PG21 IP55 S/ 15.28 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "caja pase",
+            "coincidencia_score": -2.3,
+            "familia_requerida": "electrodo_tierra",
+            "familia_candidato": "cable",
+            "tokens_coincidentes": [
+              "caja"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Caja Condulet rectangular tipo T 2 1/2\" rosca BSP",
+            "marca": "TRAMONTINA",
+            "sku": "1013808",
+            "precio_texto": "S/ 28.97",
+            "precio_soles": 28.97,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1013808-caja-condulet-rectangular-tipo-t-2-1-2-rosca-bsp.html",
+            "texto_visible": "TRAMONTINA SKU 1013808 56106/047 Caja Condulet rectangular tipo T 2 1/2\" rosca BSP S/ 28.97 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "caja rectangular",
+            "coincidencia_score": -2.3,
+            "familia_requerida": "electrodo_tierra",
+            "familia_candidato": "caja",
+            "tokens_coincidentes": [
+              "caja"
+            ],
+            "especificaciones_requeridas": [],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:electrodo_tierra=NO",
+            "especificacion=OK",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:-2.300=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "Enlace equipotencial a tanque",
+      "descripcion_partida": "Enlace equipotencial a tanque, tuberia, surtidor o estructura",
+      "codigo": "PAT-03",
+      "categoria": "06 PAT, equipotencialidad y rayo",
+      "unidad": "pto",
+      "cantidad": 24.0,
+      "precio_unit_soles": 285.0,
+      "costo_soles": 6840.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "NO_ENCONTRADO",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:18+00:00",
+        "consulta_original": "Enlace equipotencial a tanque",
+        "consulta_usada": null,
+        "consultas_intentadas": [
+          "enlace equipotencial a tanque",
+          "enlace equipotencial tanque"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "Promelsa no devolvio candidatos ni con busqueda relajada.",
+        "candidatos": []
+      }
+    },
+    {
+      "item": "Sistema de captacion y bajantes contra rayo",
+      "descripcion_partida": "Sistema de captacion y bajantes contra rayo, sujeto a IEC 62305",
+      "codigo": "LPS-01",
+      "categoria": "06 PAT, equipotencialidad y rayo",
+      "unidad": "glb",
+      "cantidad": 1.0,
+      "precio_unit_soles": 18500.0,
+      "costo_soles": 18500.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "NO_ENCONTRADO",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:25+00:00",
+        "consulta_original": "Sistema de captacion y bajantes contra rayo",
+        "consulta_usada": null,
+        "consultas_intentadas": [
+          "sistema de captacion y bajantes contra rayo",
+          "sistema captacion bajantes rayo"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "Promelsa no devolvio candidatos ni con busqueda relajada.",
+        "candidatos": []
+      }
+    },
+    {
+      "item": "Grupo electrogeno encapsulado 30 kW / 37.5 kVA standby comparable",
+      "descripcion_partida": "Grupo electrogeno encapsulado 30 kW / 37.5 kVA standby comparable",
+      "codigo": "RES-01",
+      "categoria": "07 Respaldo y control",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 35100.0,
+      "costo_soles": 35100.0,
+      "precio_presupuesto_tipo": "referencia_web_comparable",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "NO_ENCONTRADO",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:31+00:00",
+        "consulta_original": "Grupo electrogeno encapsulado 30 kW / 37.5 kVA standby comparable",
+        "consulta_usada": null,
+        "consultas_intentadas": [
+          "grupo electrogeno encapsulado 30 kw / 37.5 kva standby comparable",
+          "grupo electrogeno encapsulado 30 kw 37.5 kva standby comparable",
+          "grupo electrogeno encapsulado 30"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "Promelsa no devolvio candidatos ni con busqueda relajada.",
+        "candidatos": []
+      }
+    },
+    {
+      "item": "ATS 4P 63 A con neutro conmutado",
+      "descripcion_partida": "ATS 4P 63 A con neutro conmutado, tablero y conexion",
+      "codigo": "RES-02",
+      "categoria": "07 Respaldo y control",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 6800.0,
+      "costo_soles": 6800.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "SIN_SELECCION",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:31+00:00",
+        "consulta_original": "ATS 4P 63 A con neutro conmutado",
+        "consulta_usada": "ats 4 p 63",
+        "consultas_intentadas": [
+          "ats 4 p 63 a con neutro conmutado",
+          "ats 4 p 63 neutro conmutado",
+          "ats 4 p 63"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+        "candidatos": [
+          {
+            "opcion": 1,
+            "nombre": "Prensaestopa p/TECK90 OD (0.65-1) 3/4¨, CL1.DIV1 UL",
+            "marca": "CROUSE HINDS",
+            "sku": "1003109",
+            "precio_texto": "S/ 293.63",
+            "precio_soles": 293.63,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1003109-prensaestopa-p-teck90-od0-65-1-3-4-cl1-div1-ul.html",
+            "texto_visible": "CROUSE HINDS SKU 1003109 TMCX285 Prensaestopa p/TECK90 OD (0.65-1) 3/4¨, CL1.DIV1 UL S/ 293.63 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "ats 4 p 63",
+            "coincidencia_score": 2.85,
+            "familia_requerida": "general",
+            "familia_candidato": "general",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "4p",
+              "63a"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 2,
+            "nombre": "Cinta aislante autofundente PLY-69W 3/4¨ x9.15mts",
+            "marca": "PLYON",
+            "sku": "1033469",
+            "precio_texto": "S/ 5.44",
+            "precio_soles": 5.44,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1033469-cinta-aislante-autofundente-ply-69w-3-4x9-15mts.html",
+            "texto_visible": "PLYON SKU 1033469 PLY-69W Cinta aislante autofundente PLY-69W 3/4¨ x9.15mts S/ 5.44 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "ats 4 p 63",
+            "coincidencia_score": -0.4,
+            "familia_requerida": "general",
+            "familia_candidato": "cinta",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "4p",
+              "63a"
+            ],
+            "especificaciones_coincidentes": []
+          },
+          {
+            "opcion": 3,
+            "nombre": "Cinta aislante autofundente PLY-69L 3/4¨ x9.15mts",
+            "marca": "PLYON",
+            "sku": "1033468",
+            "precio_texto": "S/ 6.96",
+            "precio_soles": 6.96,
+            "disponible": true,
+            "stock_texto": null,
+            "stock_cantidad": null,
+            "url": "https://www.promelsa.com.pe/1033468-cinta-aislante-autofundente-ply-69l-3-4x9-15mts.html",
+            "texto_visible": "PLYON SKU 1033468 PLY-69L Cinta aislante autofundente PLY-69L 3/4¨ x9.15mts S/ 6.96 - + Agregar Agregar a favoritos Comparar",
+            "consulta": "ats 4 p 63",
+            "coincidencia_score": -1.15,
+            "familia_requerida": "general",
+            "familia_candidato": "cinta",
+            "tokens_coincidentes": [],
+            "especificaciones_requeridas": [
+              "4p",
+              "63a"
+            ],
+            "especificaciones_coincidentes": []
+          }
+        ],
+        "seleccion": {
+          "opcion": null,
+          "decision": "sin_opcion_segura",
+          "requiere_revision": true,
+          "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+          "criterios": [
+            "familia:general=NO",
+            "especificacion=NO",
+            "precio_visible=OK",
+            "disponibilidad_no_negativa=OK",
+            "score:2.850=NO",
+            "semantica:sin_restriccion_adicional=OK"
+          ]
+        }
+      }
+    },
+    {
+      "item": "UPS online senoidal 3 kVA",
+      "descripcion_partida": "UPS online senoidal 3 kVA, autonomia minima 15 min",
+      "codigo": "RES-03",
+      "categoria": "07 Respaldo y control",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 5200.0,
+      "costo_soles": 5200.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "NO_ENCONTRADO",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:32+00:00",
+        "consulta_original": "UPS online senoidal 3 kVA",
+        "consulta_usada": null,
+        "consultas_intentadas": [
+          "ups online senoidal 3 kva",
+          "ups online senoidal 3"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "Promelsa no devolvio candidatos ni con busqueda relajada.",
+        "candidatos": []
+      }
+    },
+    {
+      "item": "UPS online senoidal 2 kVA",
+      "descripcion_partida": "UPS online senoidal 2 kVA, autonomia minima 15 min",
+      "codigo": "RES-04",
+      "categoria": "07 Respaldo y control",
+      "unidad": "und",
+      "cantidad": 1.0,
+      "precio_unit_soles": 3900.0,
+      "costo_soles": 3900.0,
+      "precio_presupuesto_tipo": "estimado_anteproyecto",
+      "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+      "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+      "cotizacion_promelsa": {
+        "estado": "NO_ENCONTRADO",
+        "fuente": "Promelsa",
+        "modo": "heuristico",
+        "fecha_consulta": "2026-08-02T17:49:32+00:00",
+        "consulta_original": "UPS online senoidal 2 kVA",
+        "consulta_usada": null,
+        "consultas_intentadas": [
+          "ups online senoidal 2 kva",
+          "ups online senoidal 2"
+        ],
+        "busqueda_relajada": true,
+        "requiere_revision": true,
+        "mensaje": "Promelsa no devolvio candidatos ni con busqueda relajada.",
+        "candidatos": []
+      }
+    }
+  ],
+  "agente_compras": {
+    "fuente": "Promelsa",
+    "ultima_actualizacion": "2026-08-02T17:49:32+00:00"
+  }
+}

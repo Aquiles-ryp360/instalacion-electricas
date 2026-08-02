@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -60,14 +61,18 @@ def main() -> int:
         run([str(python), str(project / "scripts" / script)], cwd=root)
 
     quote = root / "build/unidad-2-industrial/cotizaciones/promelsa.json"
-    if quote.is_file():
-        run([str(python), str(project / "scripts/revalidar_cotizacion_automatica.py")], cwd=root)
-        run([str(python), str(project / "scripts/resumir_cotizacion_automatica.py")], cwd=root)
-    else:
-        raise SystemExit(
-            "Falta build/unidad-2-industrial/cotizaciones/promelsa.json. "
-            "Ejecute primero el flujo documentado en presupuesto/README.md."
-        )
+    if not quote.is_file():
+        baseline_quote = project / "presupuesto/datos/promelsa-base-2026-08-02.json"
+        if not baseline_quote.is_file():
+            raise SystemExit(
+                "Falta la cotizacion de build y la evidencia base versionada. "
+                "Ejecute el flujo documentado en presupuesto/README.md."
+            )
+        quote.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(baseline_quote, quote)
+        print(f"Cotizacion base restaurada desde {baseline_quote.relative_to(root)}")
+    run([str(python), str(project / "scripts/revalidar_cotizacion_automatica.py")], cwd=root)
+    run([str(python), str(project / "scripts/resumir_cotizacion_automatica.py")], cwd=root)
 
     plans = root / "build/unidad-2-industrial/cad/planos/planos-electricos-grifo-unap-aquiles.pdf"
     if not plans.is_file():

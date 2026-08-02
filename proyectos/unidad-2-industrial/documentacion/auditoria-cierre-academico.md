@@ -35,6 +35,7 @@ formato del expediente Aquiles de la primera unidad y resultados reproducibles.
 | PDF sin borrosidad | Seis PDF A1 vectoriales, cero imagenes raster | CUMPLE |
 | Rutas y circuitos legibles | Carriles separados, etiquetas de circuito y unifilar ortogonal | CUMPLE |
 | Cotizacion automatica | BOM separado, evidencia JSON/CSV/Markdown y filtros seguros | CUMPLE COMO CONSULTA COMERCIAL |
+| Reproduccion en Windows | Seis entradas versionadas, preparador PowerShell y verificador SHA-256 | CUMPLE |
 
 ## Resultados de control
 
@@ -45,7 +46,7 @@ formato del expediente Aquiles de la primera unidad y resultados reproducibles.
 - Expediente y guia: compilacion LaTeX sin error fatal.
 - Expediente: 31 paginas; las capturas de ubicacion son evidencia raster y las seis paginas de planos A1 permanecen vectoriales.
 - Planos: seis paginas A1 vectoriales, sin `WIPEOUT`; los PNG son solo previsualizacion.
-- Pruebas automatizadas: 43 PASS (cotizacion v0/v1, Renzo y Unidad 2).
+- Pruebas automatizadas: 45 PASS (cotizacion v0/v1, Renzo y Unidad 2).
 
 ## Limite del cierre
 
