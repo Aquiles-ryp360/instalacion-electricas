@@ -1,0 +1,166 @@
+# Memoria de calculo de iluminacion - renzo-industrial
+# Metodo de lumanes (rendimiento) segun NTP ISO 8995 / EM.010.
+# Las dimensiones de ambientes son criterio adoptado del anteproyecto,
+# derivadas de la arquitectura extraida del DWG (layout-grifo.json) y
+# pendientes de verificacion en campo.
+
+schema_version: 1
+project_id: renzo-industrial
+method: lumanes_con_indice_de_local
+normas:
+  - "NTP ISO 8995:2008 - Iluminacion de lugares de trabajo (equivalente a CIE S 008 / ISO 8995)"
+  - "RNE EM.010 art. 6 y tabla de niveles de iluminancia"
+  - "Niveles de despacho de combustibles: practica recomendada para estaciones de servicio"
+status: criterio_academico_pendiente_verificacion_campo
+
+reflectancias_tipo:
+  techo_oficina: 0.7
+  pared_oficina: 0.5
+  piso_oficina: 0.2
+  techo_industrial: 0.5
+  pared_industrial: 0.3
+  piso_industrial: 0.2
+  exterior: 0.1
+
+planos_de_trabajo:
+  oficina_m: 0.85
+  sala_maquinas_m: 0.80
+  sshh_m: 0.80
+  despacho_exterior_m: 0.0
+  patio_exterior_m: 0.0
+
+factores_de_mantenimiento:
+  interior_limpio: 0.80
+  exterior: 0.70
+
+luminarias:
+  panel_oficina:
+    tipo: "Panel LED 595x595 mm empotrado"
+    potencia_w: 36
+    flujo_lm: 3600
+    eficacia_lm_w: 100
+    fuente: "familia de catalogo comparable (LPD <= 10 W/m2 para oficinas)"
+  panel_sshh:
+    tipo: "Panel LED 300x600 mm empotrado"
+    potencia_w: 18
+    flujo_lm: 1800
+    eficacia_lm_w: 100
+    fuente: "familia de catalogo comparable"
+  industrial_highbay:
+    tipo: "Luminaria industrial LED high-bay"
+    potencia_w: 50
+    flujo_lm: 5000
+    eficacia_lm_w: 100
+    fuente: "familia de catalogo comparable"
+  proyector_exterior:
+    tipo: "Proyector LED exterior"
+    potencia_w: 100
+    flujo_lm: 10000
+    eficacia_lm_w: 100
+    fuente: "familia de catalogo comparable"
+  poste_patio:
+    tipo: "Luminaria de poste LED"
+    potencia_w: 80
+    flujo_lm: 8000
+    eficacia_lm_w: 100
+    fuente: "familia de catalogo comparable"
+
+ambientes:
+  - id: ADM
+    nombre: "Administracion y facturacion"
+    uso: "Trabajo administrativo, atencion al cliente y facturacion"
+    largo_m: 6.0
+    ancho_m: 4.0
+    altura_m: 3.0
+    iluminancia_lux: 500
+    iluminancia_fuente: "NTP ISO 8995: oficinas y tareas de lectura/escritura 300-500 lux"
+    reflectancias: ["techo_oficina", "pared_oficina", "piso_oficina"]
+    plano_trabajo_m: 0.85
+    factor_mantenimiento: 0.80
+    luminaria: panel_oficina
+    distribucion: "2 hileras x 4 luminarias, 4 x 3"
+    estado: criterio_academico
+  - id: OFI
+    nombre: "Oficina 01"
+    uso: "Trabajo administrativo individual"
+    largo_m: 5.0
+    ancho_m: 4.0
+    altura_m: 3.0
+    iluminancia_lux: 500
+    iluminancia_fuente: "NTP ISO 8995: oficinas y tareas de lectura/escritura 300-500 lux"
+    reflectancias: ["techo_oficina", "pared_oficina", "piso_oficina"]
+    plano_trabajo_m: 0.85
+    factor_mantenimiento: 0.80
+    luminaria: panel_oficina
+    distribucion: "2 hileras x 3 luminarias"
+    estado: criterio_academico
+  - id: SMAQ
+    nombre: "Sala de maquinas"
+    uso: "Equipos, tableros y maquinaria de servicio"
+    largo_m: 6.0
+    ancho_m: 4.0
+    altura_m: 3.0
+    iluminancia_lux: 200
+    iluminancia_fuente: "NTP ISO 8995: salas de maquinas 200 lux"
+    reflectancias: ["techo_industrial", "pared_industrial", "piso_industrial"]
+    plano_trabajo_m: 0.80
+    factor_mantenimiento: 0.80
+    luminaria: industrial_highbay
+    distribucion: "1 hilera x 2 luminarias"
+    estado: criterio_academico
+  - id: SS1
+    nombre: "SS.HH 1"
+    uso: "Servicio higienico"
+    largo_m: 2.5
+    ancho_m: 2.0
+    altura_m: 2.8
+    iluminancia_lux: 150
+    iluminancia_fuente: "NTP ISO 8995: servicios higienicos 150 lux"
+    reflectancias: ["techo_oficina", "pared_oficina", "piso_oficina"]
+    plano_trabajo_m: 0.80
+    factor_mantenimiento: 0.80
+    luminaria: panel_sshh
+    distribucion: "1 luminaria central"
+    estado: criterio_academico
+  - id: SS2
+    nombre: "SS.HH 2"
+    uso: "Servicio higienico"
+    largo_m: 2.5
+    ancho_m: 2.0
+    altura_m: 2.8
+    iluminancia_lux: 150
+    iluminancia_fuente: "NTP ISO 8995: servicios higienicos 150 lux"
+    reflectancias: ["techo_oficina", "pared_oficina", "piso_oficina"]
+    plano_trabajo_m: 0.80
+    factor_mantenimiento: 0.80
+    luminaria: panel_sshh
+    distribucion: "1 luminaria central"
+    estado: criterio_academico
+  - id: DESP
+    nombre: "Area de despacho y marquesina"
+    uso: "Despacho de combustibles, iluminacion exterior de trabajo"
+    largo_m: 20.0
+    ancho_m: 8.0
+    altura_m: 6.0
+    iluminancia_lux: 150
+    iluminancia_fuente: "practica para estaciones de servicio: zona de surtidores 150-200 lux"
+    reflectancias: ["exterior"]
+    plano_trabajo_m: 0.0
+    factor_mantenimiento: 0.70
+    luminaria: proyector_exterior
+    distribucion: "a lo largo de la marquesina sobre la zona de despacho"
+    estado: criterio_academico
+  - id: PAT
+    nombre: "Patio y circulacion exterior"
+    uso: "Circulacion vehicular y peatonal del patio"
+    largo_m: 28.0
+    ancho_m: 16.0
+    altura_m: 8.0
+    iluminancia_lux: 50
+    iluminancia_fuente: "NTP ISO 8995: areas de circulacion exterior 50 lux (practica de estaciones de servicio)"
+    reflectancias: ["exterior"]
+    plano_trabajo_m: 0.0
+    factor_mantenimiento: 0.70
+    luminaria: poste_patio
+    distribucion: "postes perimetrales del patio"
+    estado: criterio_academico

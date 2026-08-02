@@ -75,13 +75,15 @@ automatizacion:
 
 resultados_build:
   estado: "generados y auditados el 2026-08-02"
-  resumen_calculos: "build/renzo-industrial/resumen-calculos.json (PASS)"
-  planos: "build/renzo-industrial/cad/planos/ (6 laminas IE-01..IE-06 + PDF combinado + manifest.json)"
-  expediente: "build/renzo-industrial/expediente/expediente-renzo-industrial.pdf (23 paginas)"
+  resumen_calculos: "build/renzo-industrial/calculos/resumen-calculos.json (PASS)"
+  iluminacion: "build/renzo-industrial/calculos/iluminacion-resumen.json (PASS, metodo de lumanes, 38 luminarias, ~2,2 kW)"
+  planos: "build/renzo-industrial/cad/planos/ (6 laminas IE-01..IE-06 + PDF combinado + manifest.json, espesores jerarquicos A1)"
+  layout_base: "build/renzo-industrial/expediente/assets/layout-base.pdf (vista esquematica de la geometria base CAD-002)"
+  expediente: "build/renzo-industrial/expediente/main.pdf (44 paginas: memoria, calculos, iluminacion, especificaciones, seguridad, cronograma, metrados, planos, planos base, conclusiones)"
 
 entregables:
   directorio: entregables
-  expediente: "entregables/expediente-renzo-industrial.pdf (26 paginas, compilado 2026-08-02)"
+  expediente: "entregables/expediente-renzo-industrial.pdf (44 paginas, compilado 2026-08-02)"
   planos:
     - "entregables/planos-electricos-grifo-renzo.pdf (IE-01..IE-06, A1)"
   nota: "anteproyecto academico; no construir sin factibilidad, placas reales y revision humana competente"

@@ -1,6 +1,7 @@
 \documentclass[12pt,letterpaper]{report}
 \input{preambulo}
 \input{../../../build/renzo-industrial/expediente/generated/datos}
+\input{../../../build/renzo-industrial/expediente/generated/iluminacion-datos}
 
 \begin{document}
 \hypersetup{pageanchor=false}
@@ -20,6 +21,9 @@
 \renewcommand{\documentfootertext}{CALCULOS JUSTIFICATIVOS - INSTALACIONES ELECTRICAS}
 \input{capitulos/02-calculos}
 \clearpage
+\renewcommand{\documentfootertext}{MEMORIA DE CALCULO DE ILUMINACION}
+\input{capitulos/03-iluminacion}
+\clearpage
 \renewcommand{\documentfootertext}{ESPECIFICACIONES TECNICAS - INSTALACIONES ELECTRICAS}
 \input{capitulos/03-especificaciones}
 \clearpage
@@ -34,6 +38,9 @@
 \clearpage
 \renewcommand{\documentfootertext}{PLANOS DE INSTALACIONES ELECTRICAS}
 \input{capitulos/05-planos}
+\clearpage
+\renewcommand{\documentfootertext}{PLANOS BASE U ORIGINALES}
+\input{capitulos/07-planos-base}
 \clearpage
 \renewcommand{\documentfootertext}{CONCLUSIONES Y RECOMENDACIONES}
 \input{capitulos/06-conclusiones}

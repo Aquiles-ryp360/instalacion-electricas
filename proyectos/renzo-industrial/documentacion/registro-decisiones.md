@@ -104,3 +104,27 @@ Formato: `DEC-NNN | fecha | decision | estado`.
 - Pendiente para publicar: factibilidad/Icc de la concesionaria, placas reales
   y revision humana competente.
 - Estado: aplicado.
+
+## DEC-011 | 2026-08-02 | Mejora integral del anteproyecto (unidad 2)
+
+- Solicitud del estudiante de 7 puntos: planos con jerarquia de espesores y
+  simbolos normalizados, seccion "Planos Base u Originales", memoria de calculo
+  de iluminacion, verificacion normativa expresa, coherencia memoria-planos,
+  mejor presentacion del expediente y auditoria final con listado justificado.
+- Se crea `datos/iluminacion-ambientes.yaml` (7 ambientes) y
+  `scripts/calcular_iluminacion.py` (metodo de lumenes, FU interpolado) que
+  genera `build/renzo-industrial/calculos/iluminacion-resumen.json` (38
+  luminarias, 2202 W, LPD promedio 3,21 W/m2; todos los ambientes cumplen).
+- Nuevos capitulos: `03-iluminacion.tex` (memoria de calculo de iluminacion) y
+  `07-planos-base.tex` (registro CAD-001/CAD-002 con sha256 y uso).
+- `generar_planos_grifo_renzo.py`: capas con jerarquia de lineweights
+  (MARCO 50 .. IE_TABLA 18), simbolos IEC (luminaria, tomacorriente, tablero),
+  arquitectura desde layout; se corrigio lineweight 22 invalido -> 20.
+- `generar_layout_base.py`: reconstruccion vectorial del layout base desde
+  `layout-grifo.json` (viewBox 976x668) incrustada como figura.
+- `02-calculos.tex`: seccion "Verificacion normativa" (tabla CNE-U y EM.010).
+- `05-planos.tex`: seccion "Coherencia entre memoria y planos".
+- Expediente recompilado: 44 paginas; solo warnings benignos resueltos
+  (headheight 15->22 pt).
+- Estado: ejecutado; pendiente revision humana competente antes de publicar en
+  `entregables/` (ver `documentacion/revision-tecnica.md`).

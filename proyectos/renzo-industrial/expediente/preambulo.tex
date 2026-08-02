@@ -3,6 +3,7 @@
 \usepackage[spanish,es-tabla]{babel}
 \usepackage{geometry}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[scaled]{helvet}
 \usepackage{graphicx}
 \usepackage{float}
@@ -41,7 +42,8 @@
   right=2.5cm,
   top=2.5cm,
   bottom=2.5cm,
-  headheight=15pt,
+  headheight=22pt,
+  headsep=18pt,
   footskip=30pt
 }
 
@@ -158,5 +160,16 @@
   \lfoot{\footnotesize \documentfootertext}%
   \rfoot{\thepage}%
 }
+\newcommand{\IlustracionLayout}{%
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,keepaspectratio]{../../../build/renzo-industrial/expediente/assets/layout-base.pdf}
+\caption{Vista esquematica de la geometria base extraida del plano original CAD-002
+(reconstruccion academica de \texttt{layout-grifo.json}). Los limites de areas
+y las cotas deben verificarse en campo.}
+\label{fig:layout-base}
+\end{figure}
+}
+
 \pagestyle{memoria}
 \sloppy

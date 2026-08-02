@@ -1,0 +1,141 @@
+\chapter{Memoria de calculo de iluminacion}
+
+\section{Objetivo y metodologia}
+Esta memoria determina la cantidad de luminarias, la potencia instalada y la
+densidad de potencia de iluminacion (LPD) de cada ambiente del grifo mediante
+el \textbf{metodo de lumanes (metodo de rendimiento o de factor de
+utilizacion)}. El procedimiento es el siguiente:
+
+\begin{enumerate}
+\item Definir el nivel de iluminancia objetivo \(E\) segun el uso del ambiente,
+  con base en la NTP ISO 8995 y la EM.010 del RNE.
+\item Calcular el \textbf{indice de local} \(K\), que relaciona las
+  dimensiones del ambiente con la altura de montaje sobre el plano de trabajo:
+  \[
+    K = \frac{L \cdot A}{H_m\,(L + A)}
+  \]
+  siendo \(L\) el largo, \(A\) el ancho y \(H_m\) la altura de montaje
+  (altura del local menos la altura del plano de trabajo).
+\item Adoptar el \textbf{factor de utilizacion} \(F_U\), estimado por
+  interpolacion de tablas tipicas de luminarias LED segun \(K\) y las
+  reflectancias del ambiente.
+\item Adoptar el \textbf{factor de mantenimiento} \(F_M\) (\(0,80\) en
+  interiores limpios y \(0,70\) en exteriores), que considera el ensuciamiento
+  de la luminaria y la depreciacion del flujo luminoso.
+\item Calcular el \textbf{flujo luminoso requerido}:
+  \[
+    \Phi = \frac{E \cdot S}{F_U \cdot F_M}
+  \]
+  siendo \(S\) el area del ambiente.
+\item Determinar la cantidad de luminarias:
+  \[
+    N = \left\lceil \frac{\Phi}{\phi_l} \right\rceil
+  \]
+  con \(\phi_l\) el flujo luminoso de la luminaria seleccionada.
+\item Calcular la \textbf{potencia instalada}, la \textbf{densidad de potencia
+  de iluminacion} \(\text{LPD} = P/S\) y la \textbf{iluminancia resultante}:
+  \[
+    E_{res} = \frac{N \cdot \phi_l \cdot F_U \cdot F_M}{S} \geq E
+  \]
+\end{enumerate}
+
+Todos los valores son un criterio academico de anteproyecto. La seleccion
+final de luminaria se confirma con catalogo vigente y la verificacion de campo.
+
+\section{Parametros de diseno}
+\begin{itemize}
+\item Niveles de iluminancia segun NTP ISO 8995 y EM.010 (oficinas 300--500~lux,
+  sala de maquinas 200~lux, servicios higienicos 150~lux, zona de despacho
+  150--200~lux, circulacion exterior 50~lux).
+\item Factor de mantenimiento \(F_M=0,80\) interior y \(F_M=0,70\) exterior.
+\item Luminarias LED de 100~lm/W (panel de oficina 36~W, panel SS.HH 18~W,
+  high-bay industrial 50~W, proyector exterior 100~W, poste de patio 80~W),
+  referenciales de familias de catalogo comparables.
+\item Reflectancias tipicas: techo 0,7, pared 0,5 y piso 0,2 en interiores;
+  reflectancia exterior 0,1.
+\end{itemize}
+
+\section{Ejemplo de calculo completo}
+Se desarrolla el ambiente \textbf{\IllumEjNombre} con las siguientes entradas:
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l l X@{}}
+\toprule
+Parametro & Valor & Fuente / nota \\
+\midrule
+Dimensiones & \IllumEjLargo~m \(\times\) \IllumEjAncho~m \(\times\) \IllumEjAltura~m &
+  arquitectura extraida del DWG (criterio adoptado) \\
+Area & \IllumEjArea~m\textsuperscript{2} & \(S = L \cdot A\) \\
+Iluminancia objetivo & \IllumEjLux~lux & NTP ISO 8995 \\
+Altura de montaje & \IllumEjAltura~m \(-\,0,85\)~m = 2,15~m & plano de trabajo 0,85~m \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Indice de local.}
+\[
+K = \frac{L \cdot A}{H_m\,(L+A)}
+  = \frac{\IllumEjLargo \cdot \IllumEjAncho}{2,15\,(\IllumEjLargo + \IllumEjAncho)}
+  = \IllumEjK
+\]
+
+\textbf{Factores.} Para \(K = \IllumEjK\) y reflectancias tipicas de oficina se
+adopta \(F_U = \IllumEjFu\); el factor de mantenimiento es \(F_M = \IllumEjFm\).
+
+\textbf{Flujo luminoso requerido.}
+\[
+\Phi = \frac{E \cdot S}{F_U \cdot F_M}
+     = \frac{\IllumEjLux \cdot \IllumEjArea}{\IllumEjFu \cdot \IllumEjFm}
+     = \IllumEjFlujoReq~\text{lm}
+\]
+
+\textbf{Cantidad de luminarias.} Con la luminaria seleccionada (panel LED de
+\IllumEjLumFlujo~lm y \IllumEjLumPot~W):
+\[
+N = \left\lceil \frac{\IllumEjFlujoReq}{\IllumEjLumFlujo} \right\rceil
+  = \IllumEjN~\text{luminarias}
+\]
+
+\textbf{Potencia instalada y densidad de potencia.}
+\[
+P = N \cdot P_l = \IllumEjN \cdot \IllumEjLumPot~\text{W} = \IllumEjPot~\text{W},
+\qquad
+\text{LPD} = \frac{P}{S} = \frac{\IllumEjPot}{\IllumEjArea} = \IllumEjLpd~\text{W/m}^2
+\]
+
+\textbf{Verificacion del nivel de iluminacion obtenido.}
+\[
+E_{res} = \frac{N \cdot \phi_l \cdot F_U \cdot F_M}{S}
+        = \frac{\IllumEjN \cdot \IllumEjLumFlujo \cdot \IllumEjFu \cdot \IllumEjFm}{\IllumEjArea}
+        = \IllumEjResult~\text{lux} \geq \IllumEjLux~\text{lux}
+        \quad \checkmark
+\]
+
+El nivel resultante supera el objetivo, por lo que el ambiente CUMPLE.
+
+\section{Resultados por ambiente}
+\IllumNotaN
+
+\ILLUMTAB
+
+\section{Verificacion de densidad de potencia (LPD)}
+La potencia total de iluminacion instalada es de aproximadamente
+\SI{2.2}{kW} (38 luminarias), con una densidad promedio de
+\SI{3.2}{W/m^2}. Todos los ambientes cumplen los limites practicos de LPD para
+iluminacion LED y el objetivo de iluminancia se alcanza en todos los casos.
+Estas potencias son coherentes con los circuitos de alumbrado del cuadro de
+cargas (L-01 marquesina y area de despacho, L-02 postes de patio, A1-01
+alumbrado interior administrativo y A1-02 alumbrado de SS.HH y sala de
+maquinas).
+
+\section{Criterios normativos}
+\begin{itemize}
+\item NTP ISO 8995:2008, Iluminacion de lugares de trabajo (equivalente a la
+  CIE S 008), de la que se toman los niveles de iluminancia por uso.
+\item EM.010 del RNE, articulo 6, niveles de iluminancia, y articulo 11.1,
+  alumbrado de emergencia y senales de evacuacion (tratado en el capitulo de
+  calculos y especificaciones).
+\item Practica recomendada de estaciones de servicio para la zona de despacho
+  (150--200~lux) y la circulacion exterior (50~lux).
+\end{itemize}

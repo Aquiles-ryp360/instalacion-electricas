@@ -64,22 +64,25 @@ def new_document() -> ezdxf.document.Drawing:
     doc.header["$INSUNITS"] = 6
     doc.header["$LUNITS"] = 2
     doc.header["$LUPREC"] = 3
+    # Jerarquia de espesores para A1 (1/100 mm):
+    # marco/rotulo = grueso, arquitectura = medio-grueso, circuitos = medio,
+    # canalizaciones/tierra = medio, tableros/equipos = medio, textos/tablas = fino.
     layers = (
-        ("MARCO", 7, 35, "CONTINUOUS"),
-        ("ROTULO", 5, 25, "CONTINUOUS"),
-        ("ROTULO_TEXTO", 7, 18, "CONTINUOUS"),
+        ("MARCO", 7, 50, "CONTINUOUS"),
+        ("ROTULO", 5, 35, "CONTINUOUS"),
+        ("ROTULO_TEXTO", 7, 20, "CONTINUOUS"),
         ("ADVERTENCIA", 1, 25, "CONTINUOUS"),
-        ("IE_ALUMBRADO", 2, 25, "CONTINUOUS"),
-        ("IE_FUERZA", 1, 30, "CONTINUOUS"),
-        ("IE_EMERGENCIA", 6, 30, "CONTINUOUS"),
-        ("IE_CANALIZACION", 4, 18, "DASHED"),
-        ("IE_TIERRA", 3, 35, "CONTINUOUS"),
-        ("IE_RAYO", 30, 30, "CONTINUOUS"),
-        ("IE_ZONA_1", 1, 35, "DASHED"),
-        ("IE_ZONA_2", 30, 25, "DASHED"),
-        ("IE_TABLA", 7, 13, "CONTINUOUS"),
-        ("IE_TEXTO", 7, 18, "CONTINUOUS"),
-        ("ARQ_REFERENCIA", 8, 9, "CONTINUOUS"),
+        ("IE_ALUMBRADO", 2, 30, "CONTINUOUS"),
+        ("IE_FUERZA", 1, 35, "CONTINUOUS"),
+        ("IE_EMERGENCIA", 6, 35, "CONTINUOUS"),
+        ("IE_CANALIZACION", 4, 30, "DASHED"),
+        ("IE_TIERRA", 3, 40, "CONTINUOUS"),
+        ("IE_RAYO", 30, 35, "CONTINUOUS"),
+        ("IE_ZONA_1", 1, 40, "DASHED"),
+        ("IE_ZONA_2", 30, 30, "DASHED"),
+        ("IE_TABLA", 7, 18, "CONTINUOUS"),
+        ("IE_TEXTO", 7, 20, "CONTINUOUS"),
+        ("ARQ_REFERENCIA", 8, 40, "CONTINUOUS"),
     )
     for layer in layers:
         add_layer(doc, *layer)
@@ -119,24 +122,34 @@ def local_to_page(x: float, y: float) -> tuple[float, float]:
 
 
 def add_architecture(doc: ezdxf.document.Drawing, architecture: dict[str, Any]) -> None:
-    """Dibuja la arquitectura del grifo desde el layout canonico."""
+    """Dibuja la arquitectura del grifo desde el layout canonico con jerarquia
+    de espesores: lote y edificio en trazo grueso, ambientes en trazo medio."""
     msp = doc.modelspace()
     layer = "ARQ_REFERENCIA"
     lote = architecture["lote_a_ejecutar"]["poligono_local"]
-    msp.add_lwpolyline([local_to_page(x, y) for x, y in lote], dxfattribs={"layer": layer}, close=True)
+    msp.add_lwpolyline([local_to_page(x, y) for x, y in lote], dxfattribs={"layer": layer, "lineweight": 50}, close=True)
+
+    bbox = architecture["edificio"]["bbox_local"]
+    (x0, y0, x1, y1) = bbox
+    msp.add_lwpolyline(
+        [local_to_page(x0, y0), local_to_page(x1, y0), local_to_page(x1, y1), local_to_page(x0, y1)],
+        dxfattribs={"layer": layer, "lineweight": 40}, close=True,
+    )
 
     for ambiente in architecture["ambientes"]:
         cx, cy = local_to_page(*ambiente["centro_local"])
+        # Volumen aproximado del ambiente: caja de 4.0 x 3.0 m centrada en su centro.
+        rect(msp, cx - 2.0, cy - 1.5, cx + 2.0, cy + 1.5, layer, 8)
         text_center(msp, ambiente["nombre"], cx, cy, 0.20, layer)
 
     for tanque in architecture["tanques"]:
         cx, cy = local_to_page(*tanque["pos_local"])
-        msp.add_circle((cx, cy), 0.45, dxfattribs={"layer": layer})
+        msp.add_circle((cx, cy), 0.45, dxfattribs={"layer": layer, "lineweight": 35})
         text_left(msp, f"{tanque['numero']} {tanque['combustible']}", cx + 0.5, cy, 0.18, layer)
 
     for punto in architecture["dispensadores_y_surtidores"]["posiciones_local"]:
         cx, cy = local_to_page(*punto)
-        rect(msp, cx - 0.4, cy - 0.4, cx + 0.4, cy + 0.4, layer)
+        rect(msp, cx - 0.4, cy - 0.4, cx + 0.4, cy + 0.4, layer, 8)
         text_center(msp, "SURT", cx, cy - 0.55, 0.16, layer)
 
 
@@ -194,24 +207,27 @@ def add_title_block(msp: ezdxf.layouts.BaseLayout, title_data: dict[str, Any], s
 def add_luminaire(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], label: str = "", emergency: bool = False) -> None:
     x, y = point
     layer = "IE_EMERGENCIA" if emergency else "IE_ALUMBRADO"
-    msp.add_circle((x, y), 0.22, dxfattribs={"layer": layer})
-    msp.add_line((x - 0.15, y - 0.15), (x + 0.15, y + 0.15), dxfattribs={"layer": layer})
-    msp.add_line((x - 0.15, y + 0.15), (x + 0.15, y - 0.15), dxfattribs={"layer": layer})
+    msp.add_circle((x, y), 0.22, dxfattribs={"layer": layer, "lineweight": 35})
+    msp.add_line((x - 0.15, y - 0.15), (x + 0.15, y + 0.15), dxfattribs={"layer": layer, "lineweight": 25})
+    msp.add_line((x - 0.15, y + 0.15), (x + 0.15, y - 0.15), dxfattribs={"layer": layer, "lineweight": 25})
+    if emergency:
+        text_left(msp, "E", x, y + 0.35, 0.14, layer)
     if label:
         text_left(msp, label, x + 0.28, y + 0.15, 0.18, layer)
 
 
 def add_outlet(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], label: str = "TC") -> None:
     x, y = point
-    msp.add_circle((x, y), 0.20, dxfattribs={"layer": "IE_FUERZA"})
-    msp.add_line((x - 0.13, y), (x + 0.13, y), dxfattribs={"layer": "IE_FUERZA"})
-    msp.add_line((x, y), (x, y + 0.13), dxfattribs={"layer": "IE_FUERZA"})
-    text_left(msp, label, x + 0.25, y + 0.10, 0.17, "IE_FUERZA")
+    # Simbolo IEC 60617 de tomacorriente (semicirculo sobre soporte vertical).
+    msp.add_line((x, y - 0.14), (x, y + 0.14), dxfattribs={"layer": "IE_FUERZA", "lineweight": 30})
+    msp.add_arc(center=(x, y), radius=0.20, start_angle=0.0, end_angle=180.0, dxfattribs={"layer": "IE_FUERZA", "lineweight": 30})
+    msp.add_line((x - 0.20, y), (x + 0.20, y), dxfattribs={"layer": "IE_FUERZA", "lineweight": 30})
+    text_left(msp, label, x + 0.28, y + 0.10, 0.17, "IE_FUERZA")
 
 
 def add_panel(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], label: str, layer: str = "IE_FUERZA") -> None:
     x, y = point
-    rect(msp, x - 0.32, y - 0.25, x + 0.32, y + 0.25, layer)
+    rect(msp, x - 0.32, y - 0.25, x + 0.32, y + 0.25, layer, 1)
     text_center(msp, label, x, y, 0.18, layer)
 
 
@@ -421,6 +437,9 @@ def render(doc: ezdxf.document.Drawing, png_path: Path, pdf_path: Path) -> None:
     def render_filter(entity: ezdxf.entities.DXFGraphic) -> bool:
         return entity.dxftype() not in {"HATCH", "SOLID", "TRACE", "IMAGE"}
 
+    from ezdxf.addons.drawing.config import Configuration
+
+    config = Configuration(lineweight_scaling=2.0, min_lineweight=0.18)
     ezdxf_matplotlib.qsave(
         doc.modelspace(),
         png_path,
@@ -429,6 +448,7 @@ def render(doc: ezdxf.document.Drawing, png_path: Path, pdf_path: Path) -> None:
         dpi=220,
         size_inches=(16.54, 11.69),
         filter_func=render_filter,
+        config=config,
     )
     ezdxf_matplotlib.qsave(
         doc.modelspace(),
@@ -437,6 +457,7 @@ def render(doc: ezdxf.document.Drawing, png_path: Path, pdf_path: Path) -> None:
         fg="#111111",
         size_inches=(33.11, 23.39),
         filter_func=render_filter,
+        config=config,
     )
 
 

@@ -1,0 +1,95 @@
+\chapter{Planos base u originales}
+
+\section{Objeto}
+Este capítulo documenta los planos originales recibidos como fuente del
+proyecto y explica como sirvieron de base para el desarrollo del anteproyecto
+electrico. Los archivos DWG originales se conservan intactos en
+\texttt{fuentes/local/cad/} y no se modifican. La geometria de trabajo se
+extrajo de ellos y se estructuro en
+\texttt{arquitectura/datos/layout-grifo.json}.
+
+\section{Registro de planos originales}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l p{3.4cm} p{3.4cm} X@{}}
+\toprule
+Campo & CAD-001 (ubicacion) & CAD-002 (distribucion) & Nota \\
+\midrule
+Nombre del plano & PLANO DE UBICACION & PLANO DE DISTRIBUCION &
+  nombre del archivo DWG recibido \\
+Codigo & CAD-001 & CAD-002 & codigo interno del proyecto \\
+Escala & no verificado en fuente & no verificado en fuente &
+  verificar el cajetin del DWG original \\
+Fecha & no disponible en fuente & no disponible en fuente &
+  consultar sello del plano original \\
+Version & unica recibida & unica recibida & \\
+Descripcion & Ubicacion del predio Rustico Reumita, Parcela B-8 y B-9, comunidad
+  San Francisco de Buenavista, carretera Juliaca--Puno & Planta arquitectonica
+  de distribucion: ambientes, tanques, surtidores, circulacion y equipos
+  electricos observados &
+  texto transcrito por el estudiante del rotulo \\
+Observaciones & Distrito y provincia San Roman, departamento Puno; altitud
+  aproximada 3830~m s.n.m. & Se observan TG, TG2, PAT, pararrayo (R=20~m,
+  h=12~m), pulsador de emergencia, tanques TK-1..TK-3 y puntos PM (ambiguos,
+  por confirmar) &
+  CAD-002 es la fuente de la geometria de trabajo \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Huella de verificacion de las fuentes}
+La integridad de los archivos originales se registra con su resumen SHA-256 en
+\texttt{proyecto.yaml}:
+\begin{itemize}
+\item CAD-001 (PLANO DE UBICACION.dwg): \texttt{35d41698d64d82adec580cd0cf17424ea6fa55ec3dd9702ace8ab112566d40ae}.
+\item CAD-002 (PLANO DE DISTRIBUCION.dwg): \texttt{2ddd45113a7d94eb27b595272c3fe6d9ea2142999354b5cf4c350247f3db506b}.
+\end{itemize}
+
+\section{Uso de cada plano original}
+\subsection{CAD-001 (ubicacion)}
+Sirvio para confirmar la ubicacion geografica del predio, el distrito y la
+provincia (San Roman, Puno) y la condicion rural del lote. Estos datos definen
+la altitud de referencia (3830~m s.n.m.), que condiciona el desrating de los
+conductores y la correccion por altitud del grupo electrogeno, asi como la
+empresa distribuidora asumida (Electro Puno).
+
+\subsection{CAD-002 (distribucion)}
+Es la fuente principal de la geometria. De el se extrajeron:
+\begin{itemize}
+\item Los ambientes (administracion, oficina 01, sala de maquinas, SS.HH),
+  cuyas dimensiones alimentan la memoria de calculo de iluminacion.
+\item La zona de tanques (TK-1 Gasohol Premium, TK-2 Gasohol Regular, TK-3
+  Diesel B5-S50) y las islas de despacho, que definen la ubicacion de las
+  bombas sumergibles (STP), las cabezas electronicas y las areas peligrosas de
+  la lamina IE-06.
+\item Los equipos electricos observados (TG, TG2, interruptor general, PAT,
+  pararrayo, pulsador de emergencia), que se replantearon como tableros TDE,
+  TDF y TD-A1 en el diseno del anteproyecto.
+\end{itemize}
+
+\section{Reconstruccion vectorial de la geometria}
+Debido a que no se dispone de un convertidor de DWG en el entorno de trabajo,
+la vista esquematica de la planta siguiente se reconstruyo a partir de la
+geometria extraida y validada (\texttt{layout-grifo.json}), y es la base sobre
+la que se dibujaron las laminas IE-01 a IE-06.
+
+\IlustracionLayout
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+Elemento & Uso en el diseno electrico \\
+\midrule
+Ambientes administrativos & definen los circuitos de alumbrado y
+  tomacorrientes de TD-A1 y los calculos de iluminacion \\
+Zona de tanques e islas & definen las STP, cabezas electronicas y los limites
+  academicos de zonas 1 y 2 (IE-06) \\
+TG / TG2 / interruptor general & replanteados como tablero general y tableros
+  de emergencia, fuerza y administracion \\
+PAT, pararrayo y pulsador & definen la puesta a tierra, la proteccion contra
+  el rayo y el paro de emergencia (IE-03, IE-04) \\
+\bottomrule
+\end{tabularx}
+\end{center}

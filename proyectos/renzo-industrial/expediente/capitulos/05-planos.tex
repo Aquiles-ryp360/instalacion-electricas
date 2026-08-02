@@ -21,3 +21,38 @@ IE-06 & 1:100 / IND. & Clasificacion de areas peligrosas y detalles \\
 Los limites de areas peligrosas de la lamina IE-06 son una propuesta
 academica; deben revisarse con la normativa sectorial y un profesional
 colegiado antes de construir.
+
+\section{Coherencia entre memoria y planos}
+Se verifico la correspondencia entre los documentos del expediente y las
+laminas, conforme a las entradas canonicas de diseno
+(\texttt{diseno-electrico/datos/cargas.yaml}):
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}L X L@{}}
+\toprule
+Elemento & Correspondencia & Fuente \\
+\midrule
+Circuitos F-01..F-03 (STP) & laminas IE-03 y IE-01; bombas sumergibles junto a
+  los tanques TK-1..TK-3 & cuadro de circuitos \\
+Circuitos F-04..F-06 (surtidores, ATG) & lamina IE-03; cabezas electronicas en
+  las islas de despacho & cuadro de circuitos \\
+Circuitos F-07..F-09 (compresor, bombas) & lamina IE-03; equipos de servicio &
+  cuadro de circuitos \\
+Circuitos L-01..L-03 (alumbrado exterior) & lamina IE-01; marquesina, postes y
+  totem & memoria de iluminacion \\
+Circuitos A1-01..A1-05 (edificio) & lamina IE-02; alumbrado y tomacorrientes de
+  TD-A1 & cuadro de circuitos \\
+Circuitos S-01..S-05 (servicios) & lamina IE-01 e IE-03; POS, alarma, paro de
+  emergencia y monitoreo & cuadro de circuitos \\
+Tableros TDE, TDF, TD-A1 & laminas IE-01, IE-02 e IE-03 & esquema unifilar IE-05 \\
+Puesta a tierra y pararrayo & lamina IE-04 & layout CAD-002 \\
+Areas peligrosas zonas 1 y 2 & lamina IE-06 & regla 120-000 CNE-U \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Los nombres de tableros, circuitos y equipos en las laminas coinciden con el
+cuadro de circuitos y con la memoria descriptiva. Las luminarias de la memoria
+de iluminacion suman una potencia compatible con los circuitos L-01, L-02,
+A1-01 y A1-02 del cuadro de cargas.

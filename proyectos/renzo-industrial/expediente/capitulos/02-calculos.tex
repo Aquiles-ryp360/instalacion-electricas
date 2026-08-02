@@ -99,3 +99,46 @@ standby entrega \GrupoDisp, por lo que la verificacion CUMPLE.
 Las UPS se dimensionan por sus cargas conectadas: la UPS de
 combustible/control y la UPS de POS-CCTV-comunicaciones quedan por encima de
 sus potencias nominales de forma holgada.
+
+\section{Verificacion normativa}
+El diseno del anteproyecto se verifica contra las reglas aplicables del Codigo
+Nacional de Electricidad--Utilizacion (CNE-U) y la norma EM.010 del RNE. La
+siguiente tabla resume el criterio empleado, la regla citada y el resultado.
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}L l X@{}}
+\toprule
+Criterio & Regla / norma & Verificacion \\
+\midrule
+Seccion minima de conductores & CNE-U Regla 030-002 &
+  minimo 2,5~mm\textsuperscript{2} cobre en fuerza y alumbrado; se usa
+  2,5~mm\textsuperscript{2} o mayor en todos los circuitos \\
+Capacidad de corriente & CNE-U Regla 030-004 y Tabla 2 &
+  \(I_b \leq I_z\) corregido por desrating 0,80 (temperatura, agrupamiento y
+  altitud); verificado en todos los circuitos y alimentadores \\
+Coordinacion de protecciones & CNE-U Regla 050-104 &
+  \(I_b \leq I_n \leq I_z\) en todos los circuitos y subalimentadores \\
+Caida de tension & CNE-U Regla 050-102 &
+  ramal \(\leq\) 2,5~\% y total \(\leq\) 4~\%; el peor caso del anteproyecto
+  es \dVAlim~en el alimentador principal \\
+Demanda para usos no residenciales & CNE-U Regla 050-210 y Tabla 14 &
+  cota de 25~W/m\textsuperscript{2} superada por las cargas instaladas del
+  grifo; la demanda se calcula con cargas proyectadas (EM.010 art. 7) \\
+Puesta a tierra & CNE-U Regla 060-712 y Tabla 16 &
+  objetivo de 10~ohm (limite 25~ohm), enlace equipotencial segun Tabla 16 \\
+Lugares peligrosos & CNE-U Regla 120-000 y Seccion 110 &
+  clasificacion de areas como propuesta academica (lamina IE-06), sujeta a
+  revision competente \\
+Interruptor general & CNE-U Regla 050-100 &
+  \(I_{cu} \geq\) \Icu~kA cubre el Icc asumido de \IccAsumido~kA \\
+Iluminacion y emergencia & EM.010 arts. 6 y 11.1 &
+  niveles de iluminancia segun NTP ISO 8995 y alumbrado de emergencia con
+  senales de evacuacion \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Los criterios se adoptaron segun la normativa peruana vigente citada en el
+capitulo de seguridad; la confirmacion de la factibilidad, el Icc real y las
+placas de equipos queda pendiente antes de la construccion.
