@@ -5,27 +5,41 @@ ambos archivos y `proyecto.yaml`.
 
 ## Fase actual
 
-El proyecto esta en **preparacion** y la tipologia esta **por confirmar**.
-Hospital, laboratorio, taller y grifo son alternativas, no decisiones.
+El proyecto esta en **revision del paquete academico completo**. Los calculos
+electrico, de alumbrado y de metrados/presupuesto estan en PASS; existen seis
+laminas A1 vectoriales, expediente con el formato grafico Aquiles, cronograma y
+guia de sustentacion en `build/`. GLP y GNV estan excluidos. Para una eventual
+obra siguen faltando fichas definitivas, factibilidad de Electro Puno,
+verificacion de campo y revision profesional de areas clasificadas.
 
 ## Acciones permitidas ahora
 
 - Registrar la consigna, rubrica y acuerdos del docente.
 - Guardar fuentes originales sin modificarlas.
 - Verificar normativa en sitios oficiales y anotar fecha de consulta.
-- Comparar tipologias y preparar cuestionarios.
-- Crear plantillas vacias o con valores `null` / `por confirmar`.
+- Preparar y completar el cuestionario y el archivo de dudas del grifo.
+- Separar, limpiar, renderizar y medir copias derivadas del DXF en `build/`.
+- Crear la arquitectura canonica con trazabilidad al DXF.
+- Desarrollar calculos, cuadros y planos de anteproyecto con datos observados,
+  calculados o criterios adoptados claramente identificados.
+- Seleccionar potencias de catalogos comparables cuando no exista placa,
+  registrando fabricante/familia, fecha y margen usado.
+- Regenerar calculos, planos PDF/DXF y expediente desde las entradas canonicas.
+- Corregir observaciones visuales sin rasterizar los PDF de planos.
 
-## Acciones bloqueadas hasta elegir el caso
+## Acciones bloqueadas o condicionadas
 
-- Inventar dimensiones, ambientes, equipos, potencias, tension o fases.
+- Presentar como observado cualquier dimension, equipo, potencia, tension o
+  fase que en realidad sea un criterio adoptado.
 - Crear cuadro de cargas, circuitos, conductores o protecciones como si fueran
   definitivos.
 - Copiar los 380 V, 20 x 40 m, motores, factores o circuitos de
   `proyectos/nave-industrial/`.
-- Clasificar un laboratorio, taller o grifo como lugar peligroso sin evidencia
-  del proceso y sustancias.
-- Generar planos o publicar archivos en `entregables/`.
+- Dibujar limites definitivos de zonas peligrosas sin trazar su regla normativa
+  y sin advertir la necesidad de revision competente. Se permite una propuesta
+  academica basada en las fuentes geometricas disponibles.
+- Publicar archivos en `entregables/` antes de compilarlos y revisarlos en
+  `build/`.
 - Activar el pipeline en `proyecto.yaml`.
 
 ## Fuentes de verdad
@@ -48,19 +62,18 @@ fuente de datos tecnicos.
 - Distinguir requisito obligatorio, guia facultativa y criterio de ingenieria.
 - Verificar el CNE-U junto con sus modificaciones y el RNE vigente antes del
   expediente final.
-- Si se elige hospital o grifo, detener el diseno hasta completar la normativa
-  sectorial y la clasificacion de areas/cargas criticas.
+- Por tratarse de un grifo, no cerrar ni publicar el diseno sin completar la
+  normativa sectorial y revisar la clasificacion de areas/cargas criticas.
 - Toda decision tecnica requiere revision humana competente antes de pasar a
   `entregables/`.
 
-## Cambio de fase
+## Siguiente cambio de fase
 
-Solo despues de recibir la consigna y elegir el caso se debe:
+Antes de activar el pipeline de entregables se debe:
 
-1. Actualizar `tipologia.seleccionada` y `estado` en `proyecto.yaml`.
-2. Registrar la decision y su evidencia.
-3. Crear la arquitectura canonica.
-4. Levantar equipos y cargas con fichas o supuestos aprobados.
-5. Seleccionar las secciones del CNE-U y normas sectoriales aplicables.
-6. Habilitar calculos; CAD continua bloqueado hasta validar arquitectura y
-   clasificacion de riesgos.
+1. Revisar `documentacion/dudas-pendientes.md` con el estudiante.
+2. Sustituir familias de catalogo por placas cuando se reciban.
+3. Obtener factibilidad, punto de entrega e Icc de Electro Puno.
+4. Verificar cotas, alturas, PAT y areas clasificadas en campo.
+5. Ejecutar revision humana competente de calculos, CAD y expediente.
+6. Solo despues de esa revision copiar desde `build/` a `entregables/`.

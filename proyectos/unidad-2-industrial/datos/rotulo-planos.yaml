@@ -1,0 +1,74 @@
+schema_version: 1
+proyecto_id: unidad-2-industrial
+estado: aprobado_por_estudiante
+
+institucion:
+  universidad: "UNIVERSIDAD NACIONAL DEL ALTIPLANO"
+  facultad: "FACULTAD DE INGENIERIA MECANICA ELECTRICA, ELECTRONICA Y SISTEMAS"
+  escuela: "ESCUELA PROFESIONAL DE INGENIERIA MECANICA ELECTRICA"
+  sigla: UNAP
+  sede: "PUNO - PERU"
+  fuente: "portadas confirmadas del proyecto Aquiles de la primera unidad"
+
+academico:
+  curso: "INSTALACIONES ELECTRICAS I"
+  docente: "MG. GREGORIO MEZA MAROCHO"
+  estudiante: "AQUILES TAYLOR RAMOS YAPO"
+  modalidad: INDIVIDUAL
+  codigo_estudiante: null
+  semestre_academico: null
+  estado_datos_faltantes: "registrados en D-003; no bloquean los planos"
+
+proyecto:
+  titulo: "INSTALACIONES ELECTRICAS INTERIORES EN BAJA TENSION PARA GRIFO DE COMBUSTIBLES LIQUIDOS"
+  naturaleza: "PROYECTO ACADEMICO NUEVO"
+  propietario: "MIGUEL MAMANI CHUQUICALLATA"
+  propietario_nota: "DATO CONSIGNADO EN DOCUMENTACION TECNICA DE REFERENCIA FACILITADA POR LA DREM"
+  direccion: "PREDIO RUSTICO REUMITA, PARCELAS B-8 Y B-9, LADO ESTE; C.C. SAN FRANCISCO DE BUENAVISTA; CARRETERA JULIACA-PUNO"
+  distrito: CARACOTO
+  provincia: SAN_ROMAN
+  departamento: PUNO
+  combustibles: "DIESEL B5 S-50 / GASOHOL REGULAR / GASOHOL PREMIUM"
+  exclusiones: "NO INCLUYE GLP NI GNV"
+
+responsabilidades:
+  disenado_por: "AQUILES TAYLOR RAMOS YAPO"
+  dibujado_por: "AQUILES TAYLOR RAMOS YAPO"
+  revision_docente: "MG. GREGORIO MEZA MAROCHO"
+  revision_docente_estado: "campo academico; no afirmar aprobacion ni firma"
+  ingeniero_responsable: null
+  cip: null
+  nota: "No inventar firma, sello, CIP ni aprobacion profesional."
+
+presentacion:
+  formato_preferente: A1_horizontal
+  color_institucional_principal: azul
+  color_seguridad_areas_clasificadas: rojo
+  fecha_base: "AGOSTO 2026"
+  escala_general: "1:100 o indicada"
+  unidad_modelo: m
+  idioma: es-PE
+  advertencia: "PROYECTO ACADEMICO - NO CONSTRUIR SIN FACTIBILIDAD, VERIFICACION DE CAMPO Y REVISION PROFESIONAL"
+
+campos_variables_por_lamina:
+  - codigo
+  - titulo_lamina
+  - escala
+  - fecha
+  - revision
+  - numero_lamina
+  - total_laminas
+
+laminas_previstas:
+  - codigo: IE-01
+    titulo: "DISTRIBUCION GENERAL Y ALUMBRADO EXTERIOR"
+  - codigo: IE-02
+    titulo: "ALUMBRADO Y TOMACORRIENTES - EDIFICIO ADMINISTRATIVO"
+  - codigo: IE-03
+    titulo: "FUERZA, SURTIDORES, BOMBAS Y PARO DE EMERGENCIA"
+  - codigo: IE-04
+    titulo: "PUESTA A TIERRA, EQUIPOTENCIALIDAD Y PROTECCION CONTRA EL RAYO"
+  - codigo: IE-05
+    titulo: "DIAGRAMA UNIFILAR, CUADROS DE CARGA Y TABLEROS"
+  - codigo: IE-06
+    titulo: "CLASIFICACION DE AREAS PELIGROSAS Y DETALLES"

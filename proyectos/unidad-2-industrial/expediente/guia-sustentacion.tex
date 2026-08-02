@@ -1,0 +1,111 @@
+\documentclass[12pt,letterpaper]{report}
+\input{preambulo}
+\input{../../../build/unidad-2-industrial/expediente/generated/datos}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
+\begin{titlepage}
+\centering
+\vspace*{0.35in}
+{\Large\bfseries UNIVERSIDAD NACIONAL DEL ALTIPLANO\par}
+\vspace{0.15in}
+\includegraphics[height=1.15in]{../../../build/unidad-2-industrial/expediente/assets/unap_logo.pdf}
+\vspace{0.25in}
+{\Large\bfseries GUIA PERSONAL DE SUSTENTACION\par}
+\vspace{0.15in}
+{\large Proyecto de instalaciones electricas para grifo de combustibles liquidos\par}
+\vspace{0.45in}
+\begin{tabular}{>{\bfseries}p{1.65in}p{3.4in}}
+Estudiante: & Aquiles Taylor Ramos Yapo \\
+Docente: & Mg. Gregorio Meza Marocho \\
+Curso: & Instalaciones Electricas I \\
+Ubicacion: & Caracoto, San Roman, Puno \\
+Tiempo: & 10 a 15 minutos \\
+\end{tabular}
+\vfill
+{\small Agosto de 2026\par}
+{\footnotesize Documento personal de preparacion; no reemplaza el expediente.\par}
+\end{titlepage}
+\clearpage
+\hypersetup{pageanchor=true}
+\pagenumbering{arabic}
+\renewcommand{\documentfootertext}{GUIA PERSONAL DE SUSTENTACION}
+\pagestyle{memoria}
+
+\chapter*{Datos clave}
+\thispagestyle{memoria}
+\addcontentsline{toc}{chapter}{Datos clave}
+\begin{tabularx}{\textwidth}{@{}L L@{}}
+\toprule Magnitud & Valor \\
+\midrule
+Sistema & 3 x 380/220 V, 60 Hz, 3F+N+PE \\
+Circuitos & 35 \\
+Potencia instalada & \PotenciaInstaladaKW{} kW / \PotenciaInstaladaKVA{} kVA \\
+Maxima demanda & \MaximaDemandaKW{} kW / \MaximaDemandaKVA{} kVA \\
+Demanda con reserva & \DemandaReservaKVA{} kVA \\
+Principal & 4P--80 A; Cu 4 x 35 mm$^2$ + PE 16 mm$^2$ \\
+Caida principal / peor total & \CaidaPrincipal{}\% / 3.17\% \\
+Desbalance & \DesbalanceFases{}\% \\
+Grupo & \GrupoSeleccionadoKVA{} kVA standby; \GrupoDisponibleKVA{} kVA en sitio \\
+Presupuesto & S/ \PresupuestoTotal{} (referencial, incluido IGV) \\
+Planos & IE-01 a IE-06, A1 vectoriales y DXF editables \\
+\bottomrule
+\end{tabularx}
+
+\section*{Guion de siete minutos}
+\begin{enumerate}
+\item Presentar el proyecto como diseño electrico nuevo y el DXF como fuente arquitectonica facilitada por la DREM.
+\item Delimitar Diesel B5 S-50, Regular y Premium; excluir GLP/GNV.
+\item Explicar cuatro tanques, tres islas, seis surtidores, edificio de tres niveles y 35 circuitos.
+\item Exponer maxima demanda, servicio de 50 kVA, principal de 80 A y conductor de 35 mm$^2$.
+\item Explicar areas clasificadas, paro, RCBO, PAT, equipotencialidad, SPD y rayo.
+\item Sustentar grupo de 37.5 kVA, ATS 4P, dos UPS y alumbrado.
+\item Cerrar con seis planos, presupuesto y pendientes antes de obra.
+\end{enumerate}
+
+\chapter*{Preguntas de calculo y criterio}
+\thispagestyle{memoria}
+\addcontentsline{toc}{chapter}{Preguntas de calculo y criterio}
+\begin{enumerate}
+\item \textbf{¿Por que 50 kVA?} La demanda es \MaximaDemandaKVA{} kVA y con 20\% de reserva \DemandaReservaKVA{} kVA; 50 kVA deja margen, sujeto a factibilidad.
+\item \textbf{¿Por que 80 A?} La maxima corriente con reserva es \CorrienteMaximaA{} A y la ampacidad corregida del alimentador es 97.60 A.
+\item \textbf{¿Por que Cu 35 mm$^2$?} Cumple ampacidad y caida, conservando margen por instalacion y verificacion futura.
+\item \textbf{¿Cumple caida?} Si: \CaidaPrincipal{}\% en principal y 3.17\% en el peor recorrido, menores a 2.5\% parcial y 4\% total.
+\item \textbf{¿Como se balanceo?} Repartiendo cargas monofasicas entre R, S y T; el resultado es \DesbalanceFases{}\%.
+\item \textbf{¿Por que RCBO de 30 mA?} Protege contra corriente residual por circuito y evita que una falla desconecte todo el establecimiento.
+\item \textbf{¿25 kA es definitivo?} No; es un minimo conservador. Se recalcula con la Icc de Electro Puno y tablas del fabricante.
+\item \textbf{¿Como se calculo alumbrado?} Con el metodo de lumenes. Falta simulacion IES/LDT para uniformidad y deslumbramiento.
+\item \textbf{¿Como se eligio el grupo?} El arranque con margen exige \GrupoArranqueKVA{} kVA en sitio; a la altitud adoptada el grupo de \GrupoSeleccionadoKVA{} kVA entrega \GrupoDisponibleKVA{} kVA.
+\item \textbf{¿Por que ATS 4P?} Para conmutar el neutro y evitar uniones no controladas entre red y grupo.
+\end{enumerate}
+
+\chapter*{Preguntas de seguridad y alcance}
+\thispagestyle{memoria}
+\addcontentsline{toc}{chapter}{Preguntas de seguridad y alcance}
+\begin{enumerate}
+\item \textbf{¿El DXF ya tenia el proyecto electrico?} No; solo aporta arquitectura y datos documentales. El diseño electrico es nuevo.
+\item \textbf{¿La DREM aprobo el proyecto?} No. Solo se declara que la referencia fue facilitada por la DREM.
+\item \textbf{¿Por que figura Miguel Mamani?} Es el propietario consignado en la fuente; no se afirma verificacion registral.
+\item \textbf{¿Que combustibles abarca?} Diesel B5 S-50, Gasohol Regular y Premium. GLP y GNV estan excluidos.
+\item \textbf{¿Que es un area clasificada?} Una zona con posibilidad de atmosfera inflamable donde el equipo requiere proteccion certificada.
+\item \textbf{¿IP66 significa a prueba de explosion?} No. IP trata ingreso de polvo/agua; la aptitud Ex requiere marcado, grupo y temperatura.
+\item \textbf{¿Que hace el paro?} Desenergiza bombas y surtidores sin anular alarma, comunicaciones de emergencia ni alumbrado seguro.
+\item \textbf{¿Criterio PAT?} Anillo comun, ocho electrodos iniciales y equipotencialidad; objetivo 10 ohm, limite CNE 25 ohm, sujeto a medicion.
+\item \textbf{¿Por que UPS separadas?} Una para combustible/control y otra para POS--CCTV--comunicaciones, evitando fallas comunes.
+\item \textbf{¿El grupo es obligatorio para todo grifo?} No se afirma; se adopta como criterio de continuidad del caso.
+\item \textbf{¿Que incluye el presupuesto?} Instalacion electrica, respaldo, PAT/rayo y pruebas; no compra tanques, surtidores ni STP.
+\item \textbf{¿El total es cotizacion?} No. Es referencial con fecha base y debe sustituirse por proformas antes de compra.
+\item \textbf{¿Que falta para construir?} Factibilidad/Icc, placas, campo, PAT, fotometria, selectividad y revision/firma profesional.
+\end{enumerate}
+
+\chapter*{Errores que se deben evitar}
+\thispagestyle{memoria}
+\begin{itemize}
+\item No decir que la DREM aprobo el expediente.
+\item No confundir IP65/IP66 con certificacion para atmosfera explosiva.
+\item No presentar 50 kVA, 25 kA, 10 ohm o los modelos como datos observados.
+\item No incluir GLP ni GNV en la explicacion del alcance.
+\item No llamar cotizacion al presupuesto referencial.
+\end{itemize}
+\end{document}

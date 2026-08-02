@@ -1,0 +1,105 @@
+schema_version: 1
+project_id: unidad-2-industrial
+status: criterio_academico_calculado_pendiente_fotometria_ies
+method: lumen_method
+
+rules:
+  formula: "E = N * flujo_luminaria * CU * FM / area"
+  maintenance_factor_default: 0.80
+  source_interior: "RNE EM.010, articulo 3, tabla de iluminancias para ambientes al interior"
+  exterior_note: "la EM.010 no fija en su tabla interior un valor especifico para playa/marquesina; se adoptan objetivos de ingenieria y se exige simulacion fotometrica"
+
+zones:
+  - id: CANOPY
+    description: Marquesina sobre tres islas
+    area_m2: 366.75
+    target_lux: 200
+    target_state: adopted_engineering_criterion
+    fixtures: 18
+    fixture_power_w: 100
+    fixture_flux_lm: 14000
+    utilization_factor: 0.65
+    maintenance_factor: 0.80
+    circuit_ids: [L-01, L-02, L-03]
+  - id: EXTERIOR
+    description: Circulacion exterior y perimetro
+    area_m2: 1120.40
+    target_lux: 20
+    target_state: adopted_engineering_criterion
+    fixtures: 8
+    fixture_power_w: 120
+    fixture_flux_lm: 18000
+    utilization_factor: 0.35
+    maintenance_factor: 0.75
+    circuit_ids: [L-04, L-05]
+  - id: N1-MIN
+    description: Minimarket de autoservicio, reparto de area adoptado
+    area_m2: 60.00
+    target_lux: 500
+    target_state: mandatory_RNE_EM010_self_service_store
+    fixtures: 12
+    fixture_power_w: 60
+    fixture_flux_lm: 8500
+    utilization_factor: 0.60
+    maintenance_factor: 0.80
+    circuit_ids: [A1-01]
+  - id: N1-ADM
+    description: Administracion, atencion y areas restantes del primer nivel
+    area_m2: 60.35
+    target_lux: 500
+    target_state: mandatory_RNE_EM010_general_office_governing
+    fixtures: 8
+    fixture_power_w: 60
+    fixture_flux_lm: 8500
+    utilization_factor: 0.60
+    maintenance_factor: 0.80
+    circuit_ids: [A1-01]
+  - id: N2-OFF
+    description: Oficinas 1 a 3, reparto de area adoptado
+    area_m2: 120.00
+    target_lux: 500
+    target_state: mandatory_RNE_EM010_general_office
+    fixtures: 16
+    fixture_power_w: 60
+    fixture_flux_lm: 8500
+    utilization_factor: 0.60
+    maintenance_factor: 0.80
+    circuit_ids: [A2-01]
+  - id: N2-SER
+    description: Hall, escalera y servicios del segundo nivel
+    area_m2: 40.20
+    target_lux: 150
+    target_state: mandatory_RNE_EM010_stair_governing
+    fixtures: 4
+    fixture_power_w: 60
+    fixture_flux_lm: 8500
+    utilization_factor: 0.60
+    maintenance_factor: 0.80
+    circuit_ids: [A2-01]
+  - id: N3-OFF
+    description: Oficinas 4 a 6, reparto de area adoptado
+    area_m2: 120.00
+    target_lux: 500
+    target_state: mandatory_RNE_EM010_general_office
+    fixtures: 16
+    fixture_power_w: 60
+    fixture_flux_lm: 8500
+    utilization_factor: 0.60
+    maintenance_factor: 0.80
+    circuit_ids: [A3-01]
+  - id: N3-SER
+    description: Hall, escalera y servicios del tercer nivel
+    area_m2: 40.20
+    target_lux: 150
+    target_state: mandatory_RNE_EM010_stair_governing
+    fixtures: 4
+    fixture_power_w: 60
+    fixture_flux_lm: 8500
+    utilization_factor: 0.60
+    maintenance_factor: 0.80
+    circuit_ids: [A3-01]
+
+limitations:
+  - "No sustituye una simulacion punto por punto con archivo IES/LDT."
+  - "La uniformidad, deslumbramiento, altura de montaje y reflectancias requieren fichas y geometria confirmadas."
+  - "Las areas internas por uso son repartos adoptados dentro de las areas totales observadas."

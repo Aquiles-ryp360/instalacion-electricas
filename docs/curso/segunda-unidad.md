@@ -2,15 +2,31 @@
 
 ## Estado
 
-El tema exacto todavia no esta definido. Las alternativas iniciales son un
-hospital o clinica, un laboratorio, un taller y un grifo o estacion de
-servicio.
+El estudiante selecciono un **grifo** como tema el 2026-08-01. Falta confirmar
+si el caso sera un grifo de combustibles liquidos solamente o si incluira GLP,
+GNV u otros servicios, porque esa decision cambia la normativa y la
+clasificacion de areas.
 
 Aunque en clase se use la expresion "instalacion industrial", estas opciones
 no pertenecen a una sola tipologia normativa. Un hospital es una edificacion de
 salud; un grifo incorpora regulacion de hidrocarburos y areas peligrosas; un
 taller puede ser industrial; y un laboratorio depende de si es educativo,
-sanitario o industrial. La clasificacion debe confirmarse antes de disenar.
+sanitario o industrial. Para este proyecto se adopta la tipologia declarada por
+el estudiante, pero el alcance tecnico todavia debe definirse.
+
+La evidencia compartida por el grupo de WhatsApp indica:
+
+- docente actual: Mg. Gregorio Meza Marocho;
+- entrega/presentacion del expediente el 2026-08-03;
+- examen personalizado sobre el propio trabajo;
+- exposicion de 10 a 15 minutos;
+- memoria descriptiva, calculos justificativos, especificaciones tecnicas,
+  metrados y presupuesto, y planos;
+- estudio de cargas, iluminacion y calculo de conductores como parte del
+  desarrollo mostrado en pizarra.
+
+La transcripcion y sus incertidumbres estan en
+[`documentacion/consigna-extraida-whatsapp.md`](../../proyectos/unidad-2-industrial/documentacion/consigna-extraida-whatsapp.md).
 
 ## Objetivo provisional
 

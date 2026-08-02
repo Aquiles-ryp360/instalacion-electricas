@@ -1,0 +1,29 @@
+\chapter{Calculos justificativos}
+\thispagestyle{memoria}\pagestyle{memoria}
+
+\section{Demanda y suministro}
+El modelo reproducible obtuvo estado \textbf{\EstadoCalculo}. La potencia instalada es \PotenciaInstaladaKW{} kW (\PotenciaInstaladaKVA{} kVA), la maxima demanda es \MaximaDemandaKW{} kW (\MaximaDemandaKVA{} kVA) y con 20\% de reserva resulta \DemandaReservaKVA{} kVA. El suministro propuesto de 50 kVA conserva margen sin convertirlo en un dato de factibilidad.
+
+La corriente maxima de fase con reserva es \CorrienteMaximaA{} A. Se selecciona interruptor general 80 A, cuatro polos, Icu minimo de 25 kA sujeto a la Icc real, y alimentador Cu 4~x~35 mm\(^2\) mas PE 16 mm\(^2\). La ampacidad corregida calculada es 97.60 A. El desbalance de demanda es \DesbalanceFases\%, menor al objetivo de 10\%.
+
+\section{Conductores y caida de tension}
+La comprobacion usa capacidades de la Tabla 2 del CNE-U para cobre XLPE/EPR a 90~\(^\circ\)C y secciones PE de la Tabla 16. Para motores, el conductor se verifica como minimo al 125\% de la corriente nominal. Se adopta conductor minimo de 2.5 mm\(^2\) en potencia y alumbrado, y proteccion diferencial no mayor de 30 mA por circuito.
+
+La Regla 050-102 se aplica con 2.5\% maximo en alimentador o circuito derivado y 4\% total. La caida del alimentador principal es \CaidaPrincipal\%; el peor circuito total permanece por debajo de 4\%.
+
+\input{../../../build/unidad-2-industrial/expediente/generated/alimentadores}
+
+\section{Cuadro de circuitos}
+\small
+\input{../../../build/unidad-2-industrial/expediente/generated/circuitos}
+\normalsize
+
+\section{Alumbrado}
+La verificacion por el metodo de lumenes tiene estado \textbf{\EstadoAlumbrado}. Para interiores gobiernan las iluminancias del articulo 3 de la EM.010: 500 lx para oficinas generales y tiendas de autoservicio, 150 lx para escaleras y 100 lx para pasillos/baños. Marquesina y exterior usan objetivos de ingenieria declarados porque la tabla citada corresponde a ambientes interiores.
+
+\input{../../../build/unidad-2-industrial/expediente/generated/alumbrado}
+
+Los resultados son promedios. Antes de construir se requiere simulacion punto por punto con archivos IES/LDT, alturas, reflectancias, uniformidad, deslumbramiento y fotometria del fabricante.
+
+\section{Grupo electrogeno y UPS}
+La carga critica permanente es 12.47 kVA. El arranque secuencial de la mayor bomba, con margen de 25\%, exige \GrupoArranqueKVA{} kVA en sitio. A 3830 m se adopta factor de altitud \FactorAltitud; el grupo de \GrupoSeleccionadoKVA{} kVA standby entrega aproximadamente \GrupoDisponibleKVA{} kVA, por lo que cumple el escenario academico. El fabricante debe confirmar el derrateo y la respuesta transitoria.

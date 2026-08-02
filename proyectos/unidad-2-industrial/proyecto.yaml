@@ -1,59 +1,96 @@
 schema_version: 1
 id: unidad-2-industrial
-proyecto: "Instalacion electrica no residencial - segunda unidad"
+proyecto: "Instalaciones electricas interiores para un grifo - segunda unidad"
 curso: "Instalaciones Electricas I"
-docente: "Richar Renzo Julio Amachi Quispe"
-propietario: null
-estado: "preparacion - tipologia por confirmar"
+docente: "Gregorio Meza Marocho"
+docente_estado: confirmado_por_estudiante_y_separatas_2026
+autor_estudiante: "Aquiles Taylor Ramos Yapo"
+modalidad: individual
+propietario: "Miguel Mamani Chuquicallata"
+propietario_estado: "dato consignado en la documentacion tecnica de referencia facilitada por la DREM; no implica verificacion registral"
+estado: "paquete academico completo en build: expediente, cronograma, metrados/presupuesto, seis planos vectoriales y guia de sustentacion; pendiente revision del estudiante"
+
+naturaleza_proyecto:
+  tipo: anteproyecto_academico_nuevo
+  descripcion: "Diseno nuevo de instalaciones electricas para un grifo de combustibles liquidos, desarrollado a partir de una planta arquitectonica de referencia."
+  no_es:
+    - copia_del_proyecto_electrico_preexistente
+    - expediente_aprobado_por_la_DREM
+    - regularizacion_de_una_instalacion_electrica_existente
 
 tipologia:
-  seleccionada: null
-  estado: por_confirmar
+  seleccionada: grifo_o_estacion_de_servicio
+  estado: definida_por_estudiante
+  fecha_decision: "2026-08-01"
   alternativas:
     - hospital_o_clinica
     - laboratorio
     - taller
     - grifo_o_estacion_de_servicio
-  fuente: "alternativas indicadas por el estudiante; falta consigna docente"
+  fuente: "decision directa del estudiante en conversacion con Codex"
 
 ubicacion:
-  distrito: null
-  provincia: null
-  departamento: null
-  direccion: null
-  estado: por_confirmar
-  fuente: null
+  distrito: Caracoto
+  provincia: San Roman
+  departamento: Puno
+  direccion: "Predio rustico Reumita, parcelas B-8 y B-9, lado este; Comunidad Campesina San Francisco de Buenavista; carretera Juliaca-Puno"
+  estado: observado_en_plano_fuente
+  fuente: "fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf, lamina A-01"
 
 suministro:
-  nivel_tension: null
-  tension_v: null
-  fases: null
-  frecuencia_hz: null
-  sistema_puesta_tierra: null
-  punto_entrega: null
-  empresa_distribuidora: null
-  estado: por_confirmar
-  fuente: null
+  nivel_tension: baja_tension
+  tension_v: "380/220"
+  fases: "3F+N+PE"
+  frecuencia_hz: 60
+  sistema_puesta_tierra: "conductores N y PE separados aguas abajo del origen; configuracion final condicionada a factibilidad"
+  punto_entrega: por_confirmar_en_campo
+  empresa_distribuidora: Electro_Puno
+  estado: "criterio_academico_adoptado; requiere factibilidad y corriente de cortocircuito de la concesionaria"
+  fuente: "DEC-007 y sistemas BT publicados por Electro Puno"
 
 alcance:
-  baja_tension: por_confirmar
-  media_tension: por_confirmar
-  subestacion: por_confirmar
-  generacion_emergencia: por_confirmar
-  ups: por_confirmar
-  alarma_y_bomba_contra_incendio: por_confirmar
-  areas_peligrosas: por_confirmar
+  baja_tension: incluido
+  media_tension: excluida
+  subestacion: excluida
+  generacion_emergencia: incluida_para_cargas_criticas_como_criterio_de_diseno
+  ups: incluida_para_control_POS_CCTV_y_comunicaciones
+  alarma_y_bomba_contra_incendio: "alarma incluida; bomba condicionada al sistema hidraulico y a la norma sectorial"
+  areas_peligrosas: incluida_clasificacion_CNE_U_120
+  glp: excluido
+  gnv: excluido
+  combustibles_liquidos:
+    - Diesel_B5_S50
+    - Gasohol_Regular
+    - Gasohol_Premium
 
 entradas:
   criterios: datos/criterios-diseno.yaml
-  layout: null
-  cargas: null
-  consigna: null
+  rotulo_planos: datos/rotulo-planos.yaml
+  layout: arquitectura/datos/grifo.json
+  cargas: diseno-electrico/datos/cargas.yaml
+  alumbrado: diseno-electrico/datos/alumbrado.yaml
+  presupuesto: presupuesto/datos/partidas.yaml
+  consigna: documentacion/consigna-extraida-whatsapp.md
+  cuestionario: documentacion/cuestionario-inicial-grifo.md
+  dudas: documentacion/dudas-pendientes.md
+  cad_fuente_local: "fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf"
+  cad_fuente_sha256: "7980dda84d5ea40ed85e5458b487edfc219584d8c4b6e62f7fd9442e7443d805"
 
 automatizacion:
   pipeline_habilitado: false
-  razon_bloqueo: "faltan tipologia, arquitectura, suministro y cargas confirmadas"
+  razon_bloqueo: "los resultados estan compilados, pero faltan factibilidad, placas, verificacion de campo y revision profesional de la clasificacion de areas"
   requiere_revision_humana: true
+
+resultados_build:
+  calculo_electrico: build/unidad-2-industrial/calculos/resumen-calculos.json
+  calculo_alumbrado: build/unidad-2-industrial/calculos/resumen-alumbrado.json
+  metrados_presupuesto: build/unidad-2-industrial/presupuesto/resumen-metrados-presupuesto.json
+  planos_dxf_pdf: build/unidad-2-industrial/cad/planos
+  planos_pdf_conjunto: build/unidad-2-industrial/cad/planos/planos-electricos-grifo-unap-aquiles.pdf
+  expediente_pdf: build/unidad-2-industrial/expediente/main.pdf
+  guia_sustentacion_pdf: build/unidad-2-industrial/expediente/guia-sustentacion.pdf
+  paquete_revision_zip: build/unidad-2-industrial/paquete-academico-grifo-aquiles-revision.zip
+  estado_revision: "calculos, presupuesto y compilacion PASS; revision visual automatica realizada; pendiente lectura/impresion del estudiante y revision humana competente para uso constructivo"
 
 entregables:
   directorio: entregables
@@ -61,8 +98,10 @@ entregables:
   planos: []
 
 siguiente_hito:
-  nombre: "seleccionar tipologia y registrar consigna"
+  nombre: "revision e impresion academica del paquete; no habilita construccion"
   criterios_salida:
-    - "consigna y rubrica guardadas en fuentes"
-    - "tipologia validada por el grupo y docente"
-    - "alcance y entregables confirmados"
+    - "revisar documentacion/dudas-pendientes.md y completar codigo/semestre si corresponden"
+    - "sustituir potencias de familia por placas cuando esten disponibles"
+    - "obtener factibilidad e Icc de Electro Puno"
+    - "verificar geometria, alturas y clasificacion de areas en campo"
+    - "obtener revision humana competente antes de copiar a entregables"

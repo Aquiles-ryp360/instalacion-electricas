@@ -1,0 +1,83 @@
+schema_version: 1
+project_id: unidad-2-industrial
+fecha_base: "2026-08-02"
+moneda: PEN
+estado: presupuesto_referencial_academico_no_cotizacion
+
+alcance:
+  incluye: "suministro, montaje, conexionado y pruebas de las instalaciones electricas representadas en IE-01 a IE-06"
+  excluye:
+    - "surtidores, bombas sumergibles STP, tanques y tuberias de combustible; solo se metrada su conexion electrica"
+    - "obra civil general, licencias, factibilidad, medidor y derechos de conexion de Electro Puno"
+    - "sistema hidraulico contra incendio y equipos GLP/GNV"
+    - "transporte extraordinario, campamento y trabajos no visibles en la arquitectura de referencia"
+
+factores:
+  holgura_rutas: 1.10
+  holgura_conductores: 1.10
+  gastos_generales_pct: 10.0
+  utilidad_pct: 8.0
+  igv_pct: 18.0
+
+# Los precios son costos directos instalados. Los verificados en web son referencias
+# comparables; los demas son estimaciones de anteproyecto que requieren cotizacion.
+catalogo:
+  COND-25-I: {descripcion: "Canalizacion PVC SAP pesada 25 mm empotrada/aparente, instalada", unidad: m, precio_unitario: 22.00, tipo_precio: estimado_anteproyecto}
+  COND-25-D: {descripcion: "Canalizacion PVC SAP pesada 25 mm enterrada, instalada y sellada", unidad: m, precio_unitario: 32.00, tipo_precio: estimado_anteproyecto}
+  COND-32-I: {descripcion: "Canalizacion PVC SAP pesada 32 mm interior, instalada", unidad: m, precio_unitario: 28.00, tipo_precio: estimado_anteproyecto}
+  COND-32-D: {descripcion: "Canalizacion PVC SAP pesada 32 mm enterrada, instalada y sellada", unidad: m, precio_unitario: 39.00, tipo_precio: estimado_anteproyecto}
+  COND-40-I: {descripcion: "Canalizacion PVC SAP pesada 40 mm interior, instalada", unidad: m, precio_unitario: 36.00, tipo_precio: estimado_anteproyecto}
+  COND-50-I: {descripcion: "Canalizacion PVC SAP pesada 50 mm interior, instalada", unidad: m, precio_unitario: 48.00, tipo_precio: estimado_anteproyecto}
+  COND-75-D: {descripcion: "Canalizacion pesada 75 mm para alimentador general, instalada", unidad: m, precio_unitario: 82.00, tipo_precio: estimado_anteproyecto}
+  CAB-2.5: {descripcion: "Conductor Cu LSZH 2.5 mm2, tendido e identificado", unidad: m, precio_unitario: 4.80, tipo_precio: referencia_web_comparable, fuente: "Promart, cable LSZH 2.5 mm2, consulta 2026-08-02"}
+  CAB-4: {descripcion: "Conductor Cu LSZH 4 mm2, tendido e identificado", unidad: m, precio_unitario: 7.20, tipo_precio: referencia_web_comparable, fuente: "Promart, cable LSZH 4 mm2, consulta 2026-08-02"}
+  CAB-6: {descripcion: "Conductor Cu XLPE/LSZH 6 mm2, tendido e identificado", unidad: m, precio_unitario: 10.50, tipo_precio: estimado_anteproyecto}
+  CAB-10: {descripcion: "Conductor Cu XLPE/LSZH 10 mm2, tendido e identificado", unidad: m, precio_unitario: 16.50, tipo_precio: estimado_anteproyecto}
+  CAB-16: {descripcion: "Conductor Cu XLPE 16 mm2, tendido e identificado", unidad: m, precio_unitario: 25.00, tipo_precio: estimado_anteproyecto}
+  CAB-35: {descripcion: "Conductor Cu XLPE 35 mm2, tendido e identificado", unidad: m, precio_unitario: 49.00, tipo_precio: estimado_anteproyecto}
+
+partidas_fijas:
+  - {id: PRE-01, grupo: "01 Obras preliminares", descripcion: "Replanteo, compatibilizacion y señalizacion temporal", unidad: glb, cantidad: 1, precio_unitario: 2400.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRE-02, grupo: "01 Obras preliminares", descripcion: "Seguridad para trabajos electricos y control de fuentes de ignicion", unidad: glb, cantidad: 1, precio_unitario: 1800.00, tipo_precio: estimado_anteproyecto}
+
+  - {id: TAB-01, grupo: "04 Tableros y protecciones", descripcion: "TGE metalico IP54, barras N/PE, reserva, montaje y rotulo", unidad: und, cantidad: 1, precio_unitario: 6200.00, tipo_precio: estimado_anteproyecto}
+  - {id: TAB-02, grupo: "04 Tableros y protecciones", descripcion: "TDF metalico IP54, barras N/PE, reserva, montaje y rotulo", unidad: und, cantidad: 1, precio_unitario: 4200.00, tipo_precio: estimado_anteproyecto}
+  - {id: TAB-03, grupo: "04 Tableros y protecciones", descripcion: "TDE metalico IP54, barras N/PE, reserva, montaje y rotulo", unidad: und, cantidad: 1, precio_unitario: 4800.00, tipo_precio: estimado_anteproyecto}
+  - {id: TAB-04, grupo: "04 Tableros y protecciones", descripcion: "Tablero administrativo TD-A1/TD-A2/TD-A3 equipado", unidad: und, cantidad: 3, precio_unitario: 2200.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRO-01, grupo: "04 Tableros y protecciones", descripcion: "Interruptor principal MCCB 4P 80 A, Icu minimo 25 kA", unidad: und, cantidad: 1, precio_unitario: 1850.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRO-02, grupo: "04 Tableros y protecciones", descripcion: "Interruptor alimentador 4P 20--40 A, minimo 10 kA", unidad: und, cantidad: 5, precio_unitario: 320.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRO-03, grupo: "04 Tableros y protecciones", descripcion: "RCBO 2P 10 A, 30 mA, curva C", unidad: und, cantidad_desde_modelo: rcbo_2p_10, precio_unitario: 185.00, tipo_precio: referencia_web_comparable}
+  - {id: PRO-04, grupo: "04 Tableros y protecciones", descripcion: "RCBO 2P 16 A, 30 mA, curva C", unidad: und, cantidad_desde_modelo: rcbo_2p_16, precio_unitario: 195.00, tipo_precio: referencia_web_comparable}
+  - {id: PRO-05, grupo: "04 Tableros y protecciones", descripcion: "RCBO 2P 20 A, 30 mA, curva C/D segun carga", unidad: und, cantidad_desde_modelo: rcbo_2p_20, precio_unitario: 230.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRO-06, grupo: "04 Tableros y protecciones", descripcion: "Proteccion 3P de motor con diferencial y guardamotor coordinado", unidad: und, cantidad_desde_modelo: proteccion_motor_3p, precio_unitario: 680.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRO-07, grupo: "04 Tableros y protecciones", descripcion: "SPD Tipo 1+2, 3P+N, coordinado con TGE", unidad: und, cantidad: 1, precio_unitario: 1650.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRO-08, grupo: "04 Tableros y protecciones", descripcion: "SPD Tipo 2, 3P+N, para tableros secundarios", unidad: und, cantidad: 3, precio_unitario: 720.00, tipo_precio: estimado_anteproyecto}
+
+  - {id: ALU-01, grupo: "05 Alumbrado y dispositivos", descripcion: "Luminaria LED 100 W IP66 para marquesina; aptitud de area por confirmar", unidad: und, cantidad: 18, precio_unitario: 780.00, tipo_precio: estimado_anteproyecto}
+  - {id: ALU-02, grupo: "05 Alumbrado y dispositivos", descripcion: "Luminaria exterior LED 120 W con poste, brazo, cimentacion y conexion", unidad: und, cantidad: 8, precio_unitario: 1780.00, tipo_precio: estimado_anteproyecto}
+  - {id: ALU-03, grupo: "05 Alumbrado y dispositivos", descripcion: "Panel/luminaria LED interior 60 W, instalada", unidad: und, cantidad: 60, precio_unitario: 245.00, tipo_precio: estimado_anteproyecto}
+  - {id: ALU-04, grupo: "05 Alumbrado y dispositivos", descripcion: "Luminaria o señal autonoma de emergencia", unidad: und, cantidad: 12, precio_unitario: 195.00, tipo_precio: estimado_anteproyecto}
+  - {id: DIS-01, grupo: "05 Alumbrado y dispositivos", descripcion: "Tomacorriente doble 2P+T con caja, placa y conexion", unidad: pto, cantidad: 56, precio_unitario: 78.00, tipo_precio: estimado_anteproyecto}
+  - {id: DIS-02, grupo: "05 Alumbrado y dispositivos", descripcion: "Punto de conexion para carga especial/equipo", unidad: pto, cantidad: 20, precio_unitario: 145.00, tipo_precio: estimado_anteproyecto}
+  - {id: DIS-03, grupo: "05 Alumbrado y dispositivos", descripcion: "Estacion de paro de emergencia, contactos y rotulo", unidad: und, cantidad: 3, precio_unitario: 1250.00, tipo_precio: estimado_anteproyecto}
+  - {id: DIS-04, grupo: "05 Alumbrado y dispositivos", descripcion: "Cableado de control e interbloqueo del paro de emergencia", unidad: glb, cantidad: 1, precio_unitario: 6200.00, tipo_precio: estimado_anteproyecto}
+
+  - {id: PAT-01, grupo: "06 PAT, equipotencialidad y rayo", descripcion: "Conductor Cu desnudo 35 mm2 para anillo equipotencial, instalado", unidad: m, cantidad: 300, precio_unitario: 46.00, tipo_precio: estimado_anteproyecto}
+  - {id: PAT-02, grupo: "06 PAT, equipotencialidad y rayo", descripcion: "Electrodo cobreado 5/8 x 2.40 m con caja y conexion certificada", unidad: und, cantidad: 8, precio_unitario: 590.00, tipo_precio: estimado_anteproyecto}
+  - {id: PAT-03, grupo: "06 PAT, equipotencialidad y rayo", descripcion: "Enlace equipotencial a tanque, tuberia, surtidor o estructura", unidad: pto, cantidad: 24, precio_unitario: 285.00, tipo_precio: estimado_anteproyecto}
+  - {id: LPS-01, grupo: "06 PAT, equipotencialidad y rayo", descripcion: "Sistema de captacion y bajantes contra rayo, sujeto a IEC 62305", unidad: glb, cantidad: 1, precio_unitario: 18500.00, tipo_precio: estimado_anteproyecto}
+
+  - {id: RES-01, grupo: "07 Respaldo y control", descripcion: "Grupo electrogeno encapsulado 30 kW / 37.5 kVA standby comparable", unidad: und, cantidad: 1, precio_unitario: 35100.00, tipo_precio: referencia_web_comparable, fuente: "AutoSolar Peru, grupo de 30 kW, consulta 2026-08-02; confirmar Cummins y derrateo"}
+  - {id: RES-02, grupo: "07 Respaldo y control", descripcion: "ATS 4P 63 A con neutro conmutado, tablero y conexion", unidad: und, cantidad: 1, precio_unitario: 6800.00, tipo_precio: estimado_anteproyecto}
+  - {id: RES-03, grupo: "07 Respaldo y control", descripcion: "UPS online senoidal 3 kVA, autonomia minima 15 min", unidad: und, cantidad: 1, precio_unitario: 5200.00, tipo_precio: estimado_anteproyecto}
+  - {id: RES-04, grupo: "07 Respaldo y control", descripcion: "UPS online senoidal 2 kVA, autonomia minima 15 min", unidad: und, cantidad: 1, precio_unitario: 3900.00, tipo_precio: estimado_anteproyecto}
+
+  - {id: PRU-01, grupo: "08 Pruebas y entrega", descripcion: "Pruebas de aislamiento, continuidad, lazo, RCBO, fases, ATS y UPS", unidad: glb, cantidad: 1, precio_unitario: 5200.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRU-02, grupo: "08 Pruebas y entrega", descripcion: "Medicion de PAT y protocolo con telurimetro", unidad: glb, cantidad: 1, precio_unitario: 1600.00, tipo_precio: estimado_anteproyecto}
+  - {id: PRU-03, grupo: "08 Pruebas y entrega", descripcion: "Rotulado, planos conforme a obra y dossier de pruebas", unidad: glb, cantidad: 1, precio_unitario: 2800.00, tipo_precio: estimado_anteproyecto}
+
+fuentes_web:
+  - "https://www.promart.pe/l/cables-electricos-y-accesorios-celsa"
+  - "https://www.promart.pe/l/cables-libres-de-halogenos-4mm"
+  - "https://www.falabella.com.pe/falabella-pe/product/121015689/INTERRUPTOR-DIFERENCIAL-2P-25A-30ma-230V-Easy9-Schneider/121015690"
+  - "https://autosolar.pe/generadores/grupos-electrogenos"

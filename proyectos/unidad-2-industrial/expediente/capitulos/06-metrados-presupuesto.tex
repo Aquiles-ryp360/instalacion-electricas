@@ -1,0 +1,32 @@
+\chapter{Metrados y presupuesto}
+\thispagestyle{memoria}\pagestyle{memoria}
+
+\section{Base del metrado}
+Los metrados se generan desde las longitudes de los 35 circuitos y cinco
+alimentadores del modelo electrico, mas el alimentador general y las cantidades
+de alumbrado, tableros, respaldo, puesta a tierra y dispositivos declaradas en
+los datos canonicos. Se aplica 10\% de holgura a rutas y conductores. Las
+longitudes deben contrastarse en campo antes de comprar.
+
+\section{Alcance economico}
+El presupuesto tiene fecha base 2 de agosto de 2026 y estado
+\textbf{\EstadoPresupuesto}. Es una estimacion academica reproducible, no una
+cotizacion. Los precios visibles en tiendas peruanas solo sirven como referencias
+comparables; los equipos industriales y trabajos especializados requieren
+proformas formales. Se excluyen surtidores, STP, tanques, tuberias de combustible,
+licencias, derechos de conexion y obra civil general.
+
+El costo directo calculado es \textbf{S/ \CostoDirecto} y el total referencial,
+incluidos gastos generales, utilidad e IGV, es \textbf{S/ \PresupuestoTotal}.
+
+\section{Cuadro de metrados y presupuesto}
+\footnotesize
+\input{../../../build/unidad-2-industrial/expediente/generated/metrados-presupuesto}
+\normalsize
+
+\section{Regla de actualizacion}
+Antes de una compra real se deben reemplazar todas las filas
+\texttt{estimado\_anteproyecto} por cotizaciones vigentes, confirmar marcas y
+certificaciones, recalcular cantidades con recorrido de obra y registrar flete a
+Caracoto. Una diferencia de precio no autoriza reducir seccion, poder de corte,
+grado de proteccion ni certificacion para area clasificada.

@@ -1,69 +1,129 @@
 schema_version: 1
 proyecto_id: unidad-2-industrial
-estado_general: por_confirmar
+estado_general: anteproyecto_electrico_calculado_planos_en_generacion
 
 clasificacion:
-  tipologia: null
-  actividad_principal: null
-  categoria_sectorial: null
-  ocupacion: null
-  horario_operacion: null
-  fuente: null
-  estado: por_confirmar
+  tipologia: grifo_o_estacion_de_servicio
+  actividad_principal: venta_al_publico_de_combustibles_liquidos
+  categoria_sectorial: hidrocarburos
+  ocupacion: comercio_y_servicios_asociados_a_grifo
+  horario_operacion: "continuo como criterio conservador; por confirmar con operador"
+  fuente: "decision del estudiante, 2026-08-01"
+  estado: alcance_confirmado
 
 arquitectura:
-  area_terreno_m2: null
-  area_techada_m2: null
-  numero_niveles: null
+  area_terreno_m2: 5983.00
+  area_destinada_proyecto_m2: 2167.00
+  area_edificio_administrativo_m2:
+    nivel_1: 120.35
+    nivel_2: 160.20
+    nivel_3: 160.20
+  area_marquesina_m2: 366.75
+  area_isla_m2: 14.51
+  cantidad_islas: 3
+  area_zona_tanques_m2: 108.24
+  area_libre_m2: 1120.40
+  numero_niveles: 3
   altura_libre_m: null
-  ambientes: []
-  fuente: null
-  estado: por_confirmar
+  ambientes:
+    - minimarket
+    - administracion
+    - oficina_atencion
+    - secretaria
+    - hall
+    - cuarto_maquinas
+    - servicios_higienicos_damas_y_varones
+    - oficinas_1_a_6
+    - almacenamiento_residuos
+    - servicio_aire_y_agua
+  fuente: "DXF de referencia, laminas A-01/S-01/M-01"
+  estado: observado_en_fuente_pendiente_normalizacion_geometrica
 
 suministro:
-  tension_v: null
-  fases: null
-  frecuencia_hz: null
+  tension_v: "380/220"
+  fases: "trifasico_4_hilos_mas_PE"
+  frecuencia_hz: 60
   potencia_disponible_kw: null
   corriente_cortocircuito_punto_entrega_ka: null
-  empresa_distribuidora: null
+  empresa_distribuidora: Electro_Puno
   factibilidad_disponible: false
-  fuente: null
-  estado: por_confirmar
+  fuente: "criterio academico DEC-007; pendiente documento de factibilidad"
+  estado: criterio_adoptado_pendiente_verificacion_concesionaria
 
 ambiente_y_riesgo:
-  gases_inflamables: por_confirmar
-  liquidos_inflamables: por_confirmar
-  polvos_combustibles: por_confirmar
-  fibras_combustibles: por_confirmar
-  humedad_alta: por_confirmar
-  agentes_corrosivos: por_confirmar
-  areas_de_pacientes: por_confirmar
-  cargas_que_comprometen_vida: por_confirmar
-  clasificacion_areas: null
-  fuente: null
-  estado: por_confirmar
+  gases_inflamables: presentes_por_vapores_de_combustibles_liquidos
+  liquidos_inflamables: presentes
+  glp: excluido
+  gnv: excluido
+  polvos_combustibles: no_aplica_segun_alcance
+  fibras_combustibles: no_aplica_segun_alcance
+  humedad_alta: exterior_intemperie_y_lavado_ocasional
+  agentes_corrosivos: "exposicion ambiental y a hidrocarburos segun zona"
+  areas_de_pacientes: no_aplica
+  cargas_que_comprometen_vida: alumbrado_de_emergencia_y_sistemas_de_alarma
+  clasificacion_areas: "CNE-U 120 con sistema de zonas para proyecto nuevo; contraste con divisiones del DS 054-93-EM"
+  fuente: "DXF de referencia, CNE-U 120 y DEC-005"
+  estado: geometria_fuente_identificada_aplicacion_en_proceso
 
 cargas:
-  equipos: []
-  motores: []
+  equipos:
+    - seis_cabezales_de_surtidor_220V
+    - sistema_ATG_y_control_de_playa
+    - refrigeracion_de_minimarket
+    - POS_CCTV_comunicaciones_y_alarma
+  motores:
+    - cuatro_bombas_sumergibles_STP_1_5_hp
+    - compresor_de_servicio_2_2_kW
+    - bomba_de_agua_1_5_kW
+    - bomba_de_efluentes_1_5_kW
   soldadoras: []
   diagnostico_por_imagenes: []
   climatizacion: []
-  bombas: []
-  iluminacion: []
-  cargas_especiales: []
-  estado: por_confirmar
+  bombas:
+    - cuatro_STP_de_combustible
+    - una_bomba_de_agua
+    - una_bomba_de_efluentes
+  iluminacion:
+    - marquesina_18x100W_en_tres_circuitos
+    - exterior_8x120W_en_dos_circuitos
+    - edificio_administrativo_por_niveles
+    - emergencia_y_senalizacion
+  cargas_especiales:
+    - UPS_FUEL_3_kVA
+    - UPS_IT_2_kVA
+    - grupo_electrogeno_37_5_kVA_standby
+  potencia_instalada_calculada_kw: 34.7962
+  potencia_instalada_calculada_kva: 40.7664
+  maxima_demanda_calculada_kw: 28.4002
+  maxima_demanda_calculada_kva: 33.3114
+  demanda_con_reserva_20_por_ciento_kva: 39.9737
+  fuente: "diseno-electrico/datos/cargas.yaml y scripts/calcular_proyecto.py"
+  estado: calculo_academico_PASS_pendiente_sustituir_por_placas
 
 criterios_electricos:
-  sistema_puesta_tierra: null
-  caida_tension_admisible: null
-  factor_potencia_objetivo: null
-  metodo_demanda: null
-  respaldo_emergencia: null
-  tiempo_autonomia: null
-  fuente: null
-  estado: por_confirmar
+  sistema_puesta_tierra: "N y PE separados en la instalacion; red equipotencial para masas, marquesina, tanques y equipos"
+  caida_tension_admisible: "2.5 % maximo en alimentador o circuito derivado y 4 % total, CNE-U 050-102"
+  factor_potencia_objetivo: 0.95
+  metodo_demanda: "EM.010 art. 7, metodo de cargas reales/adoptadas con factores de simultaneidad justificados"
+  respaldo_emergencia: "grupo electrogeno y UPS para cargas criticas; criterio de diseno, no obligacion general atribuida al grifo"
+  tiempo_autonomia: "UPS criticas: minimo 15 min; grupo segun combustible y operacion, por confirmar"
+  suministro_propuesto: "50 kVA, 3 x 380/220 V, 60 Hz, BT directa"
+  interruptor_principal: "80 A, 4P, Icu >= 25 kA sujeto a Icc de factibilidad"
+  alimentador_principal: "Cu 4 x 35 mm2 + PE 16 mm2, metodo D adoptado"
+  desbalance_fases_calculado_por_ciento: 3.7351
+  maxima_corriente_fase_con_reserva_a: 61.8772
+  maxima_caida_total_calculada_por_ciento: 3.1655
+  puesta_tierra_limite_cne_ohm: 25
+  puesta_tierra_objetivo_diseno_ohm: 10
+  grupo_electrogeno:
+    referencia: Cummins_C30D6
+    potencia_standby_placa_kva: 37.5
+    factor_altitud_adoptado: 0.8302
+    potencia_disponible_sitio_kva: 31.1325
+    potencia_requerida_arranque_con_margen_kva: 27.6936
+    verificacion: CUMPLE
+  fuente: "DEC-007, DEC-008, CNE-U 050/060, EM.010 y calculo reproducible PASS"
+  estado: anteproyecto_calculado_pendiente_factibilidad_placas_y_mediciones
 
 normativa:
   base:
@@ -71,5 +131,17 @@ normativa:
       estado: fuente_verificada_aplicacion_pendiente
     - codigo: RNE-EM.010
       estado: fuente_verificada_aplicacion_pendiente
-  especial: []
+  especial:
+    - codigo: CNE-U-110
+      tema: lugares_peligrosos
+      estado: aplicacion_y_clasificacion_pendientes
+    - codigo: CNE-U-120
+      tema: lugares_de_manipulacion_de_combustibles
+      estado: reglas_120_004_a_120_014_extraidas_aplicacion_en_proceso
+    - codigo: GUIA-001-OS-DSR-UTH
+      tema: areas_clasificadas_en_grifos_y_estaciones
+      estado: guia_facultativa_revisada
+    - codigo: DS-054-93-EM-y-modificatorias
+      tema: seguridad_de_establecimientos_de_venta_de_combustibles
+      estado: articulos_34_36_38_39_41_42_43_y_47_revisados
   fecha_ultima_revision: "2026-08-01"

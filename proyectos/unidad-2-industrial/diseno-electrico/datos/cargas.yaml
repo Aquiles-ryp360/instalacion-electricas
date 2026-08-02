@@ -1,0 +1,313 @@
+schema_version: 1
+project_id: unidad-2-industrial
+status: criterios_de_diseno_catalogados_pendientes_de_placas
+
+system:
+  line_to_line_v: 380.0
+  line_to_neutral_v: 220.0
+  frequency_hz: 60.0
+  conductors: 3F+N+PE
+  service_capacity_kva: 50.0
+  main_breaker_a: 80
+  main_breaker_poles: 4
+  main_breaker_icu_ka_min: 25
+  main_feeder_phase_mm2: 35
+  main_feeder_neutral_mm2: 35
+  main_feeder_pe_mm2: 16
+  main_feeder_length_m: 12.0
+  reserve_factor: 1.20
+  source_state: academic_design_criterion_pending_utility_feasibility
+
+calculation:
+  cne_voltage_drop_branch_percent_max: 2.5
+  cne_voltage_drop_total_percent_max: 4.0
+  copper_resistivity_ohm_mm2_per_m_at_operating_temperature: 0.021
+  cable_reactance_ohm_per_km: 0.08
+  minimum_power_and_lighting_conductor_mm2: 2.5
+  default_derating_factor: 0.80
+  demand_method: EM.010_art_7_method_1
+  phase_unbalance_target_percent: 10.0
+
+generator:
+  model_reference: Cummins_C30D6
+  standby_kva_nameplate: 37.5
+  standby_kw_nameplate: 30.0
+  prime_kva_nameplate: 33.8
+  site_altitude_m: 3830.0
+  altitude_state: official_reference_for_Caracoto_capital_pending_site_verification
+  derating_start_altitude_m: 1000.0
+  derating_percent_per_500m: 3.0
+  starting_multiplier_largest_STP: 5.0
+  starting_sequence: one_STP_at_a_time
+  design_margin: 1.25
+  ats_poles: 4
+  ats_rating_a: 63
+  neutral_switched: true
+  state: adopted_design_criterion_pending_manufacturer_confirmation
+
+ups:
+  - id: UPS-FUEL
+    rating_kva: 3.0
+    input_output_v: 220
+    waveform: pure_sine
+    minimum_autonomy_min: 15
+    purpose: six_dispenser_heads_and_fuel_control
+  - id: UPS-IT
+    rating_kva: 2.0
+    input_output_v: 220
+    waveform: pure_sine
+    minimum_autonomy_min: 15
+    purpose: POS_communications_and_CCTV
+
+feeders:
+  - {id: AL-TDF, panel: TDF, breaker_a: 40, poles: 4, phase_mm2: 10, neutral_mm2: 10, pe_mm2: 6, length_m: 8, method: B1, derating_factor: 0.80}
+  - {id: AL-TD-A1, panel: TD-A1, breaker_a: 25, poles: 4, phase_mm2: 6, neutral_mm2: 6, pe_mm2: 4, length_m: 10, method: B1, derating_factor: 0.80}
+  - {id: AL-TD-A2, panel: TD-A2, breaker_a: 20, poles: 4, phase_mm2: 4, neutral_mm2: 4, pe_mm2: 2.5, length_m: 18, method: B1, derating_factor: 0.80}
+  - {id: AL-TD-A3, panel: TD-A3, breaker_a: 20, poles: 4, phase_mm2: 4, neutral_mm2: 4, pe_mm2: 2.5, length_m: 24, method: B1, derating_factor: 0.80}
+  - {id: AL-TDE, panel: TDE, breaker_a: 40, poles: 4, phase_mm2: 10, neutral_mm2: 10, pe_mm2: 6, length_m: 8, method: B1, derating_factor: 0.80}
+
+profiles:
+  stp:
+    supply: 1P
+    installed_kva: 2.42
+    power_factor: 0.75
+    demand_factor: 1.0
+    rated_current_a: 11.0
+    motor: true
+    conductor_factor: 1.25
+    conductor_mm2: 4
+    pe_mm2: 4
+    breaker_a: 20
+    breaker_poles: 2
+    curve: D
+    rcd_ma: 30
+    method: D
+    derating_factor: 0.80
+    source_state: manufacturer_family_criterion
+    source_ref: Franklin_FE_PETRO_1.5_hp_60_Hz
+  dispenser:
+    supply: 1P
+    installed_kva: 0.103
+    power_factor: 0.90
+    demand_factor: 1.0
+    motor: false
+    conductor_factor: 1.0
+    conductor_mm2: 2.5
+    pe_mm2: 2.5
+    breaker_a: 16
+    breaker_poles: 2
+    curve: C
+    rcd_ma: 30
+    method: D
+    derating_factor: 0.80
+    source_state: manufacturer_family_criterion
+    source_ref: Gilbarco_220V_50_60Hz_103VA
+  lighting_D_2_5:
+    supply: 1P
+    power_factor: 0.95
+    demand_factor: 1.0
+    motor: false
+    conductor_factor: 1.0
+    conductor_mm2: 2.5
+    pe_mm2: 2.5
+    breaker_a: 10
+    breaker_poles: 2
+    curve: C
+    rcd_ma: 30
+    method: D
+    derating_factor: 0.80
+    source_state: lighting_design_criterion
+  lighting_D_4:
+    supply: 1P
+    power_factor: 0.95
+    demand_factor: 1.0
+    motor: false
+    conductor_factor: 1.0
+    conductor_mm2: 4
+    pe_mm2: 4
+    breaker_a: 10
+    breaker_poles: 2
+    curve: C
+    rcd_ma: 30
+    method: D
+    derating_factor: 0.80
+    source_state: lighting_design_criterion
+  lighting_B1:
+    supply: 1P
+    power_factor: 0.95
+    demand_factor: 1.0
+    motor: false
+    conductor_factor: 1.0
+    conductor_mm2: 2.5
+    pe_mm2: 2.5
+    breaker_a: 10
+    breaker_poles: 2
+    curve: C
+    rcd_ma: 30
+    method: B1
+    derating_factor: 0.80
+    source_state: lighting_design_criterion
+  outlets_4:
+    supply: 1P
+    power_factor: 0.90
+    demand_factor: 0.60
+    motor: false
+    conductor_factor: 1.0
+    conductor_mm2: 4
+    pe_mm2: 4
+    breaker_a: 20
+    breaker_poles: 2
+    curve: C
+    rcd_ma: 30
+    method: B1
+    derating_factor: 0.80
+    source_state: adopted_design_criterion
+  service_2_5:
+    supply: 1P
+    power_factor: 0.90
+    demand_factor: 1.0
+    motor: false
+    conductor_factor: 1.0
+    conductor_mm2: 2.5
+    pe_mm2: 2.5
+    breaker_a: 10
+    breaker_poles: 2
+    curve: C
+    rcd_ma: 30
+    method: B1
+    derating_factor: 0.80
+    source_state: adopted_design_criterion
+  refrigeration:
+    supply: 1P
+    installed_kva: 1.60
+    power_factor: 0.85
+    demand_factor: 0.90
+    motor: false
+    conductor_factor: 1.0
+    conductor_mm2: 4
+    pe_mm2: 4
+    breaker_a: 20
+    breaker_poles: 2
+    curve: C
+    rcd_ma: 30
+    method: B1
+    derating_factor: 0.80
+    source_state: adopted_design_criterion
+    source_ref: commercial_refrigeration_equivalent
+
+circuits:
+  - {id: F-01, profile: stp, description: "STP tanque 1 Diesel B5 S-50", panel: TDE, phase: R, emergency: true, length_m: 25}
+  - {id: F-02, profile: stp, description: "STP tanque 2 Diesel B5 S-50", panel: TDF, phase: S, emergency: false, length_m: 27}
+  - {id: F-03, profile: stp, description: "STP tanque 3 Gasohol Regular", panel: TDE, phase: T, emergency: true, length_m: 30}
+  - {id: F-04, profile: stp, description: "STP tanque 4 Gasohol Premium", panel: TDF, phase: R, emergency: false, length_m: 31}
+
+  - {id: F-05, profile: dispenser, description: "Cabeza electronica surtidor SD-01A", panel: UPS-FUEL, phase: R, emergency: true, length_m: 42}
+  - {id: F-06, profile: dispenser, description: "Cabeza electronica surtidor SD-01B", panel: UPS-FUEL, phase: S, emergency: true, length_m: 45}
+  - {id: F-07, profile: dispenser, description: "Cabeza electronica surtidor SD-02A", panel: UPS-FUEL, phase: T, emergency: true, length_m: 33}
+  - {id: F-08, profile: dispenser, description: "Cabeza electronica surtidor SD-02B", panel: UPS-FUEL, phase: R, emergency: true, length_m: 36}
+  - {id: F-09, profile: dispenser, description: "Cabeza electronica surtidor SD-03A", panel: UPS-FUEL, phase: S, emergency: true, length_m: 24}
+  - {id: F-10, profile: dispenser, description: "Cabeza electronica surtidor SD-03B", panel: UPS-FUEL, phase: T, emergency: true, length_m: 27}
+  - id: F-11
+    profile: service_2_5
+    description: Control de playa y medicion automatica de tanques
+    panel: UPS-FUEL
+    phase: S
+    emergency: true
+    installed_kva: 0.50
+    length_m: 15
+    source_ref: controller_ATG_and_interfaces
+
+  - id: F-12
+    description: Compresor de aire de servicio
+    panel: TDF
+    phase: RST
+    supply: 3P
+    installed_kva: 2.75
+    power_factor: 0.80
+    demand_factor: 0.60
+    rated_current_a: 4.2
+    motor: true
+    conductor_factor: 1.25
+    emergency: false
+    length_m: 18
+    conductor_mm2: 4
+    pe_mm2: 4
+    breaker_a: 16
+    breaker_poles: 3
+    curve: D
+    rcd_ma: 30
+    method: B1
+    derating_factor: 0.80
+    source_state: manufacturer_family_criterion
+    source_ref: Atlas_Copco_2.2kW_50_60Hz
+  - id: F-13
+    description: Bomba de agua de servicio
+    panel: TDF
+    phase: RST
+    supply: 3P
+    installed_kva: 1.875
+    power_factor: 0.80
+    demand_factor: 0.60
+    rated_current_a: 3.0
+    motor: true
+    conductor_factor: 1.25
+    emergency: false
+    length_m: 35
+    conductor_mm2: 4
+    pe_mm2: 4
+    breaker_a: 10
+    breaker_poles: 3
+    curve: D
+    rcd_ma: 30
+    method: D
+    derating_factor: 0.80
+    source_state: manufacturer_family_criterion
+    source_ref: Grundfos_1.5kW_input_380V_60Hz
+  - id: F-14
+    description: Bomba de efluentes / tanque septico
+    panel: TDF
+    phase: RST
+    supply: 3P
+    installed_kva: 1.875
+    power_factor: 0.80
+    demand_factor: 0.40
+    rated_current_a: 3.0
+    motor: true
+    conductor_factor: 1.25
+    emergency: false
+    length_m: 45
+    conductor_mm2: 4
+    pe_mm2: 4
+    breaker_a: 10
+    breaker_poles: 3
+    curve: D
+    rcd_ma: 30
+    method: D
+    derating_factor: 0.80
+    source_state: adopted_design_criterion
+    source_ref: sanitary_coordination_pending
+
+  - {id: L-01, profile: lighting_D_2_5, description: "Alumbrado critico de marquesina, 6 LED x 100 W", panel: TDE, phase: R, emergency: true, installed_kw: 0.60, length_m: 38, source_ref: "18 luminarias en 3 circuitos"}
+  - {id: L-02, profile: lighting_D_2_5, description: "Alumbrado normal de marquesina, 6 LED x 100 W", panel: TDF, phase: S, emergency: false, installed_kw: 0.60, length_m: 42, source_ref: "18 luminarias en 3 circuitos"}
+  - {id: L-03, profile: lighting_D_2_5, description: "Alumbrado normal de marquesina, 6 LED x 100 W", panel: TDF, phase: T, emergency: false, installed_kw: 0.60, length_m: 47, source_ref: "18 luminarias en 3 circuitos"}
+  - {id: L-04, profile: lighting_D_4, description: "Alumbrado critico exterior, 4 LED x 120 W", panel: TDE, phase: R, emergency: true, installed_kw: 0.48, length_m: 65, source_ref: "postes exteriores"}
+  - {id: L-05, profile: lighting_D_4, description: "Alumbrado normal exterior, 4 LED x 120 W", panel: TDF, phase: S, emergency: false, installed_kw: 0.48, length_m: 75, source_ref: "postes exteriores"}
+  - {id: L-06, profile: lighting_D_2_5, description: "Letrero de precios, fachada y senalizacion luminosa", panel: TDF, phase: T, emergency: false, installed_kw: 0.64, length_m: 38, source_state: adopted_design_criterion, source_ref: "aviso a mas de 3 m de llenado y venteos"}
+
+  - {id: A1-01, profile: lighting_B1, description: "Alumbrado primer nivel y minimarket", panel: TD-A1, phase: R, emergency: false, installed_kw: 1.20, length_m: 30, source_ref: "20 LED x 60 W; calculo de iluminacion EM.010"}
+  - {id: A1-02, profile: outlets_4, description: "Tomacorrientes generales primer nivel - sector A", panel: TD-A1, phase: R, emergency: false, installed_kva: 1.60, length_m: 32, source_ref: "cargas de oficina/minimarket agrupadas"}
+  - {id: A1-03, profile: outlets_4, description: "Tomacorrientes generales primer nivel - sector B", panel: TD-A1, phase: T, emergency: false, installed_kva: 1.60, length_m: 35, source_ref: "cargas de oficina/minimarket agrupadas"}
+  - {id: A1-04, profile: service_2_5, description: "Tomacorrientes criticos de caja/POS", panel: TDE, phase: S, emergency: true, installed_kva: 0.80, length_m: 22, breaker_a: 16, source_ref: "caja y POS"}
+  - {id: A1-05, profile: refrigeration, description: "Refrigeracion minimarket - circuito 1", panel: TDE, phase: S, emergency: true, length_m: 28}
+  - {id: A1-06, profile: refrigeration, description: "Refrigeracion minimarket - circuito 2", panel: TDE, phase: T, emergency: true, length_m: 30}
+
+  - {id: A2-01, profile: lighting_B1, description: "Alumbrado segundo nivel", panel: TD-A2, phase: R, emergency: false, installed_kw: 1.20, length_m: 35, source_ref: "20 LED x 60 W; calculo de iluminacion EM.010"}
+  - {id: A2-02, profile: outlets_4, description: "Tomacorrientes segundo nivel - sector A", panel: TD-A2, phase: S, emergency: false, installed_kva: 1.80, length_m: 38, source_ref: "cargas de oficinas agrupadas"}
+  - {id: A2-03, profile: outlets_4, description: "Tomacorrientes segundo nivel - sector B", panel: TD-A2, phase: T, emergency: false, installed_kva: 1.80, length_m: 40, source_ref: "cargas de oficinas agrupadas"}
+  - {id: A3-01, profile: lighting_B1, description: "Alumbrado tercer nivel", panel: TD-A3, phase: T, emergency: false, installed_kw: 1.20, length_m: 40, source_ref: "20 LED x 60 W; calculo de iluminacion EM.010"}
+  - {id: A3-02, profile: outlets_4, description: "Tomacorrientes tercer nivel - sector A", panel: TD-A3, phase: S, emergency: false, installed_kva: 1.80, length_m: 43, source_ref: "cargas de oficinas agrupadas"}
+  - {id: A3-03, profile: outlets_4, description: "Tomacorrientes tercer nivel - sector B", panel: TD-A3, phase: T, emergency: false, installed_kva: 1.80, length_m: 45, source_ref: "cargas de oficinas agrupadas"}
+
+  - {id: S-01, profile: service_2_5, description: "POS, comunicaciones y CCTV", panel: UPS-IT, phase: S, emergency: true, installed_kva: 1.20, length_m: 30, source_ref: "operacion y monitoreo del grifo"}
+  - {id: S-02, profile: service_2_5, description: "Central de alarma y deteccion", panel: TDE, phase: R, emergency: true, installed_kva: 0.20, length_m: 25, source_ref: "coordinacion con sistema de seguridad"}
+  - {id: S-03, profile: service_2_5, description: "Alumbrado de emergencia y senales de evacuacion", panel: TDE, phase: R, emergency: true, installed_kva: 0.30, length_m: 45, source_state: mandatory_function_design_criterion, source_ref: "EM.010 art. 11.1"}

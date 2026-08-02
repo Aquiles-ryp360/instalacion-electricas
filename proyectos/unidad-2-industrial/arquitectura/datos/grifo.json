@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "project_id": "unidad-2-industrial",
+  "status": "observaciones_consolidadas_geometria_en_normalizacion",
+  "source": {
+    "id": "CAD-001",
+    "local_path": "proyectos/unidad-2-industrial/fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf",
+    "sha256": "7980dda84d5ea40ed85e5458b487edfc219584d8c4b6e62f7fd9442e7443d805",
+    "format": "DXF AC1032",
+    "immutable": true,
+    "inventory": "proyectos/unidad-2-industrial/fuentes/inventario-cad.md"
+  },
+  "coordinate_interpretation": {
+    "source_insunits": {"value": 4, "meaning": "millimetres in DXF header", "state": "observed", "confidence": "high"},
+    "working_unit": {
+      "value": "m",
+      "state": "adopted_criterion",
+      "basis": "printed dimensions, project areas and plot scale are coherent with metre-like geometry",
+      "confidence": "medium",
+      "warning": "verify sensitive dimensions against an approved dimensioned plan or field survey before construction"
+    },
+    "source_origin_preserved": true,
+    "derived_sheet_origin": "lower-left corner of each source sheet is translated to 0,0 in build products"
+  },
+  "sheets": [
+    {"code": "A-01", "title": "DISTRIBUCION Y CIRCULACION", "source_bbox": [1596.7895, 1521.3837, 1764.9895, 1640.1837], "state": "observed", "confidence": "high"},
+    {"code": "S-01", "title": "SEGURIDAD Y SCI", "source_bbox": [1791.827, 1521.3837, 1960.027, 1640.1837], "state": "observed", "confidence": "high"},
+    {"code": "M-01", "title": "MONITOREO", "source_bbox": [1982.3884, 1518.1668, 2150.5884, 1636.9668], "state": "observed", "confidence": "high"}
+  ],
+  "identity": {
+    "new_electrical_project_author": {"value": "Aquiles Taylor Ramos Yapo", "state": "confirmed_by_student", "confidence": "high"},
+    "owner_named_in_reference": {
+      "value": "Miguel Mamani Chuquicallata",
+      "state": "transcribed_from_reference",
+      "confidence": "high",
+      "qualification": "not independently verified as a registry record"
+    },
+    "location": {
+      "address": "Predio rustico Reumita, parcelas B-8 y B-9, lado este; Comunidad Campesina San Francisco de Buenavista; carretera Juliaca-Puno",
+      "district": "Caracoto",
+      "province": "San Roman",
+      "department": "Puno",
+      "state": "transcribed_from_A-01",
+      "confidence": "high"
+    }
+  },
+  "areas": {
+    "total_land": {"value": 5983.0, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"},
+    "project_site": {"value": 2167.0, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"},
+    "administrative_building": {
+      "level_1": {"value": 120.35, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"},
+      "level_2": {"value": 160.2, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"},
+      "level_3": {"value": 160.2, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"}
+    },
+    "canopy": {"value": 366.75, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"},
+    "dispensing_island_each": {"value": 14.51, "unit": "m2", "state": "observed_in_area_table_and_labels", "confidence": "high"},
+    "tank_zone": {"value": 108.24, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"},
+    "free_area": {"value": 1120.4, "unit": "m2", "state": "observed_in_area_table", "confidence": "high"}
+  },
+  "fuel_scope": {
+    "included": ["Diesel B5 S-50", "Gasohol Regular", "Gasohol Premium"],
+    "excluded": ["GLP", "GNV"],
+    "state": "confirmed_by_student_and_cross_checked_with_tank_labels",
+    "confidence": "high"
+  },
+  "fuel_storage": {
+    "tank_count": {"value": 4, "state": "observed", "confidence": "high"},
+    "tanks": [
+      {"id": "TQ-01", "product": "Diesel B5 S-50", "capacity": 9200, "capacity_unit": "US_gal_as_labelled", "local_A01_center": [73.519, 68.139], "local_A01_bbox": [69.319, 66.989, 77.719, 69.289], "position_state": "calculated_from_tank_outline", "confidence": "high", "source": "DXF handles 2A7 and tank label"},
+      {"id": "TQ-02", "product": "Diesel B5 S-50", "capacity": 9200, "capacity_unit": "US_gal_as_labelled", "local_A01_center": [73.519, 65.339], "local_A01_bbox": [69.319, 64.189, 77.719, 66.489], "position_state": "calculated_from_tank_outline", "confidence": "high", "source": "DXF handles 2A8 and tank label"},
+      {"id": "TQ-03", "product": "Gasohol Regular", "capacity": 6580, "capacity_unit": "US_gal_as_labelled", "local_A01_center": [81.219, 65.339], "local_A01_bbox": [78.219, 64.189, 84.219, 66.489], "position_state": "calculated_from_tank_outline", "confidence": "high", "source": "DXF handles 2AA and tank label"},
+      {"id": "TQ-04", "product": "Gasohol Premium", "capacity": 6580, "capacity_unit": "US_gal_as_labelled", "local_A01_center": [81.219, 68.139], "local_A01_bbox": [78.219, 66.989, 84.219, 69.289], "position_state": "calculated_from_tank_outline", "confidence": "high", "source": "DXF handles 2A9 and tank label"}
+    ],
+    "tank_zone_local_A01_bbox": {
+      "value": [68.569, 63.439, 84.969, 70.039],
+      "state": "observed_outer_polylines",
+      "confidence": "high",
+      "source": "DXF handles 2A5 and 2A6"
+    },
+    "vent_points_local_A01": [
+      {"id": "VT-01", "product": "Gasohol Regular", "point": [83.567, 77.224]},
+      {"id": "VT-02", "product": "Gasohol Premium", "point": [83.727, 77.224]},
+      {"id": "VT-03", "product": "Diesel B5 S-50", "point": [83.887, 77.224]},
+      {"id": "VT-04", "product": "Diesel B5 S-50", "point": [84.048, 77.224]}
+    ],
+    "vent_points_state": "calculated_from_symbol_centres_and_adjacent_labels",
+    "vent_points_confidence": "medium",
+    "fill_points_local_A01": [
+      {"id": "LL-01", "product": "Gasohol Premium", "point": [85.292, 77.144]},
+      {"id": "LL-02", "product": "Gasohol Regular", "point": [85.592, 77.144]},
+      {"id": "LL-03", "product": "Diesel B5 S-50", "point": [85.892, 77.144]},
+      {"id": "LL-04", "product": "Diesel B5 S-50", "point": [86.192, 77.144]}
+    ],
+    "fill_points_state": "calculated_from_symbol_centres_and_adjacent_labels",
+    "fill_points_confidence": "medium"
+  },
+  "dispensing": {
+    "island_count": {"value": 3, "state": "observed", "confidence": "high"},
+    "dispensers_per_island": {"value": 2, "state": "calculated_from_repeated_geometry", "confidence": "high"},
+    "dispenser_count": {"value": 6, "state": "calculated_from_repeated_geometry", "confidence": "high"},
+    "island_finished_level": {"value": 0.35, "unit": "m", "state": "observed_label_NPT", "confidence": "high"},
+    "dispensers_local_A01": [
+      {"id": "SD-01A", "island": 1, "point": [74.027, 37.454]},
+      {"id": "SD-01B", "island": 1, "point": [79.568, 37.507]},
+      {"id": "SD-02A", "island": 2, "point": [74.027, 47.454]},
+      {"id": "SD-02B", "island": 2, "point": [79.568, 47.507]},
+      {"id": "SD-03A", "island": 3, "point": [74.027, 57.454]},
+      {"id": "SD-03B", "island": 3, "point": [79.568, 57.507]}
+    ],
+    "coordinates_state": "calculated_from_clusters_on_layer_SURTIDORES",
+    "coordinates_confidence": "high"
+  },
+  "spaces": [
+    {"id": "MIN", "name": "Minimarket", "state": "observed_label", "confidence": "high"},
+    {"id": "ADM", "name": "Administracion", "state": "observed_label", "confidence": "high"},
+    {"id": "ATE", "name": "Oficina de atencion", "state": "observed_label", "confidence": "high"},
+    {"id": "SEC", "name": "Secretaria", "state": "observed_label", "confidence": "high"},
+    {"id": "HAL", "name": "Hall", "state": "observed_label", "confidence": "high"},
+    {"id": "CMA", "name": "Cuarto de maquinas", "state": "observed_label", "confidence": "high"},
+    {"id": "SHD", "name": "SS.HH. damas", "state": "observed_label", "confidence": "high"},
+    {"id": "SHV", "name": "SS.HH. varones", "state": "observed_label", "confidence": "high"},
+    {"id": "OF1-OF6", "name": "Oficinas 1 a 6", "state": "observed_label", "confidence": "high"},
+    {"id": "RES", "name": "Almacenamiento de residuos", "state": "observed_label", "confidence": "medium"},
+    {"id": "AYA", "name": "Servicio de aire y agua", "state": "observed_symbol_and_label", "confidence": "medium"}
+  ],
+  "electrical_reference_observations": {
+    "generator_marker": {"value": "G.E.", "state": "observed_label", "confidence": "medium", "use": "candidate location only; verify outside classified areas"},
+    "earthing_symbol_groups_per_sheet": {"value": 9, "state": "observed_on_layer_PUESTA_A_TIERRA", "confidence": "medium", "warning": "not proof of an existing compliant earthing system"},
+    "existing_complete_electrical_plan": false,
+    "existing_substation": false,
+    "existing_lightning_protection_plan": false
+  },
+  "open_geometry": [
+    "field verification and elevations of fill points and vents",
+    "room polygons and usable dimensions",
+    "candidate panel, generator and point-of-delivery coordinates",
+    "verification of the source unit discrepancy"
+  ]
+}
