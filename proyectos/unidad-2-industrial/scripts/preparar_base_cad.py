@@ -20,7 +20,6 @@ from pathlib import Path
 from typing import Iterable
 
 import ezdxf
-from PIL import Image
 from ezdxf import bbox, select
 from ezdxf.addons import Importer
 from ezdxf.addons.drawing import matplotlib as ezdxf_matplotlib
@@ -108,7 +107,7 @@ def translate_to_local_origin(
     return warnings
 
 
-def render_review_png(doc: ezdxf.document.Drawing, destination: Path) -> None:
+def render_review(doc: ezdxf.document.Drawing, destination: Path) -> None:
     # Los HATCH importados del levantamiento hacen que un render vectorial
     # completo tarde varios minutos y no aportan a la revision geometrica.
     # El DXF derivado conserva esas entidades; solo se omiten en la vista.
@@ -124,11 +123,6 @@ def render_review_png(doc: ezdxf.document.Drawing, destination: Path) -> None:
         size_inches=(12.0, 0.0),
         filter_func=review_filter,
     )
-
-
-def png_to_pdf(source: Path, destination: Path) -> None:
-    with Image.open(source) as image:
-        image.convert("RGB").save(destination, "PDF", resolution=120.0)
 
 
 def main() -> int:
@@ -150,6 +144,11 @@ def main() -> int:
         "--skip-render",
         action="store_true",
         help="genera DXF y manifiesto sin PNG/PDF",
+    )
+    parser.add_argument(
+        "--sheet",
+        choices=[sheet.code for sheet in SHEETS],
+        help="procesa solo una lamina; sin esta opcion procesa las tres",
     )
     args = parser.parse_args()
 
@@ -193,7 +192,8 @@ def main() -> int:
         "sheets": [],
     }
 
-    for sheet in SHEETS:
+    selected_sheets = [sheet for sheet in SHEETS if args.sheet in (None, sheet.code)]
+    for sheet in selected_sheets:
         print(f"Seleccionando {sheet.code}...")
         entities = select_sheet_entities(source_entities, sheet, cache)
         if not entities:
@@ -209,9 +209,9 @@ def main() -> int:
         derived.saveas(dxf_path)
 
         if not args.skip_render:
-            print(f"Renderizando vista liviana {sheet.code} a PNG y PDF...", flush=True)
-            render_review_png(derived, png_path)
-            png_to_pdf(png_path, pdf_path)
+            print(f"Renderizando vista liviana {sheet.code} a PNG y PDF vectorial...", flush=True)
+            render_review(derived, png_path)
+            render_review(derived, pdf_path)
 
         counts = Counter(entity.dxftype() for entity in entities)
         layers = Counter(str(entity.dxf.layer) for entity in entities)

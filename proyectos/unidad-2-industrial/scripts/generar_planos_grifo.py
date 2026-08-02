@@ -28,7 +28,7 @@ PAGE_W = 84.1
 PAGE_H = 59.4
 FRAME = (0.5, 0.5, 83.6, 58.9)
 ARCH_SCALE = 0.5
-TITLE = (54.2, 0.8, 83.6, 14.0)
+TITLE_REFERENCE_EXTENTS = (56.4, 1.5, 83.0, 7.6)
 
 
 def repository_root() -> Path:
@@ -151,58 +151,91 @@ def add_architecture(doc: ezdxf.document.Drawing, source_path: Path) -> int:
     return len(entities)
 
 
-def add_title_block(msp: ezdxf.layouts.BaseLayout, title_data: dict[str, Any], sheet: dict[str, str], number: int, total: int, scale: str) -> None:
-    x0, y0, x1, y1 = TITLE
-    # El WIPEOUT cubre la grilla UTM y cualquier elemento de la referencia que
-    # cruce el cajetin. El rotulo se dibuja despues para conservar su lectura.
-    msp.add_wipeout([(x0, y0), (x1, y0), (x1, y1), (x0, y1)], dxfattribs={"layer": "ROTULO"})
-    rect(msp, x0, y0, x1, y1, "ROTULO", 5)
-    for y in (12.85, 11.65, 9.95, 8.55, 6.95, 5.35, 3.75, 2.15):
-        msp.add_line((x0, y), (x1, y), dxfattribs={"layer": "ROTULO"})
-    for x in (61.7, 69.5, 75.0, 79.2):
-        msp.add_line((x, y0), (x, 3.75), dxfattribs={"layer": "ROTULO"})
-    msp.add_line((68.4, 3.75), (68.4, 6.95), dxfattribs={"layer": "ROTULO"})
+def add_title_block(
+    msp: ezdxf.layouts.BaseLayout,
+    source_path: Path,
+    title_data: dict[str, Any],
+    sheet: dict[str, str],
+    number: int,
+    total: int,
+    scale: str,
+) -> None:
+    """Adapta el cajetin ROTULO del A-01 sin crear una mascara nueva.
 
+    La lamina arquitectonica ya trae un cajetin compacto en la franja inferior
+    derecha. Se importa su geometria y se cambian sus atributos; de esta forma
+    se conserva el lenguaje del expediente de referencia y no se tapa una banda
+    de dibujo mayor que la prevista originalmente.
+    """
+    source = ezdxf.readfile(source_path)
+    source_insert = next(
+        (entity for entity in source.modelspace().query("INSERT") if entity.dxf.name.upper() == "ROTULO"),
+        None,
+    )
+    if source_insert is None:
+        raise ValueError("La base A-01 no contiene el bloque ROTULO que debe adaptarse")
+
+    container_name = f"ROTULO_AQUILES_{sheet['codigo'].replace('-', '_')}"
+    container = msp.doc.blocks.new(name=container_name)
+    importer = Importer(source, msp.doc)
+    importer.import_entities([source_insert], container)
+    importer.finalize()
+    imported_insert = next(iter(container.query("INSERT")))
+
+    # Retira autoria empresarial fija del antecedente. Se conservan lineas,
+    # mapa de Puno y etiquetas de campos del formato original.
+    original_block = msp.doc.blocks.get(imported_insert.dxf.name)
+    obsolete_tokens = (
+        "GHANDY CORPORACION",
+        "DIVISION DE MEDIO AMBIENTE",
+        "DIVISIÓN MEDIO AMBIENTE",
+        "DE INGENIEROS SRL",
+    )
+    for entity in list(original_block):
+        if entity.dxftype() not in {"TEXT", "MTEXT"}:
+            continue
+        value = str(getattr(entity.dxf, "text", "")).upper()
+        if any(token in value for token in obsolete_tokens):
+            original_block.delete_entity(entity)
+
+    project = title_data["proyecto"]
+    replacements = {
+        "AV.INTEROCEANICA": "PREDIO REUMITA B-8/B-9; C.C. SAN FRANCISCO DE BUENAVISTA",
+        "JAVIERCHAMBICHAHUARA": project["propietario"],
+        "CONSTRUCCIONDEGRIFO": "INSTALACIONES ELECTRICAS BT - GRIFO",
+        "DICIEMBRE2016": title_data["presentacion"]["fecha_base"],
+        "1/100": scale.replace(" / IND.", ""),
+        "DISTRIBUCIONYCIRCULACION": sheet["titulo"],
+        "J.CH.CH": "A. T. RAMOS YAPO",
+        "CENTROPOBLADODE": "CARRETERA JULIACA-PUNO",
+        "A-01": sheet["codigo"],
+    }
+    location_values = iter((project["departamento"], project["provincia"].replace("_", " "), project["distrito"]))
+    for attrib in imported_insert.attribs:
+        tag = attrib.dxf.tag.upper()
+        if tag == "PUNO":
+            attrib.dxf.text = next(location_values)
+        elif tag in replacements:
+            attrib.dxf.text = replacements[tag]
+        if tag == "DISTRIBUCIONYCIRCULACION" and len(sheet["titulo"]) > 42:
+            attrib.dxf.height *= 0.72
+        if tag == "AV.INTEROCEANICA":
+            attrib.dxf.height *= 0.82
+
+    msp.add_blockref(
+        container_name,
+        (0.0, 0.0),
+        dxfattribs={"xscale": ARCH_SCALE, "yscale": ARCH_SCALE, "zscale": ARCH_SCALE, "layer": "ROTULO"},
+    )
+
+    # Datos academicos agregados dentro de la misma huella vertical del cajetin.
     inst = title_data["institucion"]
     acad = title_data["academico"]
-    project = title_data["proyecto"]
-    resp = title_data["responsabilidades"]
-    text_center(msp, inst["universidad"], (x0 + x1) / 2, 13.55, 0.50, "ROTULO_TEXTO")
-    text_center(msp, inst["facultad"], (x0 + x1) / 2, 13.15, 0.24, "ROTULO_TEXTO")
-    text_center(msp, inst["escuela"], (x0 + x1) / 2, 12.55, 0.28, "ROTULO_TEXTO")
-    text_center(msp, "PROYECTO: INSTALACIONES ELECTRICAS EN BAJA TENSION", (x0 + x1) / 2, 12.20, 0.25, "ROTULO_TEXTO")
-    text_center(msp, "GRIFO DE COMBUSTIBLES LIQUIDOS - PROYECTO ACADEMICO NUEVO", (x0 + x1) / 2, 11.25, 0.33, "ROTULO_TEXTO")
-    text_center(msp, "DIESEL B5 S-50 / GASOHOL REGULAR / GASOHOL PREMIUM - SIN GLP NI GNV", (x0 + x1) / 2, 10.72, 0.24, "ROTULO_TEXTO")
-    text_center(msp, sheet["titulo"], (x0 + x1) / 2, 9.28, 0.40, "ROTULO_TEXTO")
-
-    text_left(msp, f"PROPIETARIO: {project['propietario']}", x0 + 0.25, 8.08, 0.28, "ROTULO_TEXTO")
-    text_left(msp, "Dato consignado en documentacion tecnica de referencia facilitada por la DREM", x0 + 0.25, 7.63, 0.20, "ROTULO_TEXTO")
-    text_left(msp, "UBICACION: PREDIO REUMITA B-8/B-9, C.C. SAN FRANCISCO DE BUENAVISTA", x0 + 0.25, 7.19, 0.22, "ROTULO_TEXTO")
-    text_left(msp, "CARRETERA JULIACA-PUNO, CARACOTO, SAN ROMAN, PUNO", x0 + 0.25, 6.62, 0.25, "ROTULO_TEXTO")
-
-    text_left(msp, f"CURSO: {acad['curso']}", x0 + 0.25, 6.05, 0.28, "ROTULO_TEXTO")
-    text_left(msp, f"DOCENTE: {acad['docente']}", x0 + 0.25, 5.58, 0.28, "ROTULO_TEXTO")
-    text_left(msp, f"DISENADO Y DIBUJADO: {resp['disenado_por']}", 68.7, 6.05, 0.25, "ROTULO_TEXTO")
-    text_left(msp, "REVISION DOCENTE: CAMPO ACADEMICO - SIN FIRMA NI APROBACION AFIRMADA", 68.7, 5.58, 0.19, "ROTULO_TEXTO")
-
-    text_left(msp, "MODALIDAD: INDIVIDUAL", x0 + 0.25, 4.78, 0.25, "ROTULO_TEXTO")
-    text_left(msp, "CODIGO EST.: __________", x0 + 0.25, 4.30, 0.24, "ROTULO_TEXTO")
-    text_left(msp, "SEMESTRE: __________", 68.7, 4.78, 0.24, "ROTULO_TEXTO")
-    text_left(msp, "SEDE: PUNO - PERU", 68.7, 4.30, 0.24, "ROTULO_TEXTO")
-
-    labels = (
-        (x0 + 0.25, "LAMINA", sheet["codigo"]),
-        (61.95, "ESCALA", scale),
-        (69.75, "FECHA", title_data["presentacion"]["fecha_base"]),
-        (75.25, "REV.", "R00"),
-        (79.45, "HOJA", f"{number:02d}/{total:02d}"),
-    )
-    for x, label, value in labels:
-        text_left(msp, label, x, 3.28, 0.19, "ROTULO_TEXTO")
-        text_left(msp, value, x, 2.63, 0.42 if label == "LAMINA" else 0.29, "ROTULO_TEXTO")
-
-    text_center(msp, "UNAP - PUNO | ANTEPROYECTO SUJETO A VERIFICACION DE CAMPO, FACTIBILIDAD Y REVISION PROFESIONAL", (x0 + x1) / 2, 1.62, 0.20, "ADVERTENCIA")
-    text_center(msp, "NO SE CONSIGNA CIP, SELLO NI FIRMA POR NO EXISTIR ESOS DATOS EN LAS FUENTES", (x0 + x1) / 2, 1.12, 0.19, "ADVERTENCIA")
+    text_center(msp, inst["universidad"], 69.4, 7.42, 0.22, "ROTULO_TEXTO")
+    text_center(msp, f"{acad['curso']} | {acad['estudiante']}", 69.4, 7.13, 0.16, "ROTULO_TEXTO")
+    text_center(msp, f"DOCENTE: {acad['docente']} | HOJA {number:02d}/{total:02d}", 69.4, 6.88, 0.15, "ROTULO_TEXTO")
+    text_left(msp, "PROPIETARIO TRANSCRITO DE REFERENCIA FACILITADA POR DREM; NO ACREDITA APROBACION", 56.7, 1.14, 0.13, "ADVERTENCIA")
+    text_left(msp, "ANTEPROYECTO ACADEMICO: SIN CIP, FIRMA NI SELLO; REQUIERE CAMPO, FACTIBILIDAD Y REVISION PROFESIONAL", 56.7, 0.78, 0.13, "ADVERTENCIA")
 
 
 def add_luminaire(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], label: str = "", emergency: bool = False) -> None:
@@ -229,8 +262,29 @@ def add_panel(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], label: 
     text_center(msp, label, x, y, 0.18, layer)
 
 
-def add_route(msp: ezdxf.layouts.BaseLayout, points: list[tuple[float, float]], layer: str = "IE_CANALIZACION") -> None:
-    msp.add_lwpolyline(points, dxfattribs={"layer": layer, "linetype": "DASHED"})
+def add_route_tag(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], circuit_id: str, layer: str) -> None:
+    x, y = point
+    msp.add_circle((x, y), 0.31, dxfattribs={"layer": layer})
+    text_center(msp, circuit_id, x, y, 0.16 if len(circuit_id) <= 5 else 0.13, layer)
+
+
+def add_route(
+    msp: ezdxf.layouts.BaseLayout,
+    points: list[tuple[float, float]],
+    layer: str = "IE_CANALIZACION",
+    circuit_id: str | None = None,
+    tag_point: tuple[float, float] | None = None,
+) -> None:
+    polyline = msp.add_lwpolyline(points, dxfattribs={"layer": layer, "linetype": "DASHED"})
+    polyline.dxf.const_width = 0.035
+    if circuit_id:
+        add_route_tag(msp, tag_point or points[len(points) // 2], circuit_id, layer)
+
+
+def add_service_point(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], label: str, layer: str = "IE_FUERZA") -> None:
+    x, y = point
+    rect(msp, x - 0.25, y - 0.20, x + 0.25, y + 0.20, layer)
+    text_left(msp, label, x + 0.34, y + 0.02, 0.17, layer)
 
 
 def add_legend(msp: ezdxf.layouts.BaseLayout, title: str, rows: list[tuple[str, str]], x: float = 55.0, y: float = 55.8, width: float = 28.0) -> None:
@@ -248,26 +302,63 @@ def add_legend(msp: ezdxf.layouts.BaseLayout, title: str, rows: list[tuple[str, 
 def sheet_ie01(doc: ezdxf.document.Drawing, _: dict[str, Any], __: dict[str, Any]) -> None:
     msp = doc.modelspace()
     # Marquesina: 18 luminarias en tres circuitos alternados.
+    canopy: list[tuple[float, float]] = []
     index = 0
     for y in (18.0, 20.5, 23.0, 25.5, 28.0, 30.5):
         for x in (36.0, 38.4, 40.8):
             index += 1
+            canopy.append((x, y))
             add_luminaire(msp, (x, y), f"L{index:02d}", emergency=index <= 6)
     exterior = ((26.0, 12.8), (31.0, 13.0), (43.0, 13.0), (49.0, 14.5), (26.0, 36.5), (32.0, 38.5), (43.0, 38.5), (50.0, 36.0))
     for index, point in enumerate(exterior, 1):
         add_luminaire(msp, point, f"PE{index}", emergency=index <= 4)
 
     tge = (31.58, 37.15)
+    tdf = (34.6, 37.15)
+    tde = (33.5, 36.55)
     add_panel(msp, tge, "TGE")
     add_panel(msp, (32.5, 36.6), "ATS", "IE_EMERGENCIA")
-    add_panel(msp, (33.5, 36.6), "TDE", "IE_EMERGENCIA")
-    for point in ((36.0, 18.0), (38.4, 23.0), (40.8, 28.0), (26.0, 12.8), (50.0, 36.0)):
-        add_route(msp, [tge, (34.0, tge[1]), (34.0, point[1]), point])
+    add_panel(msp, tde, "TDE", "IE_EMERGENCIA")
+    add_panel(msp, tdf, "TDF")
+
+    # Cada circuito ocupa un carril y se identifica en una burbuja. Se evita
+    # superponer cinco diagonales desde el tablero, que hacia ilegible la ruta.
+    canopy_circuits = (
+        ("L-01", tde, canopy[0:6], 35.05, "IE_EMERGENCIA"),
+        ("L-02", tdf, canopy[6:12], 34.60, "IE_CANALIZACION"),
+        ("L-03", tdf, canopy[12:18], 34.15, "IE_CANALIZACION"),
+    )
+    for circuit_id, source, points, lane_x, layer in canopy_circuits:
+        first_row = points[:3]
+        second_row = points[3:]
+        route = [
+            source,
+            (lane_x, source[1]),
+            (lane_x, first_row[0][1]),
+            first_row[0],
+            first_row[1],
+            first_row[2],
+            (first_row[2][0], second_row[2][1]),
+            second_row[2],
+            second_row[1],
+            second_row[0],
+        ]
+        add_route(msp, route, layer, circuit_id, (lane_x, (first_row[0][1] + source[1]) / 2))
+
+    exterior_routes = (
+        ("L-04", tde, [tde, (25.5, tde[1]), (25.5, 12.8), exterior[0], (exterior[1][0], 12.8), exterior[1], exterior[2], (exterior[3][0], 13.0), exterior[3]], "IE_EMERGENCIA", (25.5, 25.0)),
+        ("L-05", tdf, [tdf, (50.5, tdf[1]), (50.5, 36.0), exterior[7], (43.0, 36.0), exterior[6], exterior[5], (26.0, 38.5), exterior[4]], "IE_CANALIZACION", (50.5, 33.5)),
+    )
+    for circuit_id, _, route, layer, tag in exterior_routes:
+        add_route(msp, route, layer, circuit_id, tag)
+    sign = (27.0, 10.8)
+    add_service_point(msp, sign, "AVISO PRECIOS")
+    add_route(msp, [tdf, (33.7, tdf[1]), (33.7, 10.8), sign], "IE_CANALIZACION", "L-06", (33.7, 15.3))
     add_legend(msp, "IE-01 | LEYENDA Y CRITERIOS", [
         ("X", "Luminaria LED; verde = circuito normal, magenta = critico"),
         ("TGE", "Tablero general 380/220 V, 80 A, 4P"),
         ("TDE", "Tablero de emergencia mediante ATS 4P, 63 A"),
-        ("---", "Canalizacion enterrada/techo segun tramo; verificar recorrido"),
+        ("(L-xx)", "Burbuja de circuito; rutas en carriles con derivaciones ortogonales"),
         ("NOTA", "18 x 100 W marquesina y 8 x 120 W exterior como criterio"),
         ("CNE", "dV ramal <= 2.5 % y total <= 4 %; PE en todo circuito"),
     ])
@@ -281,19 +372,41 @@ def sheet_ie02(doc: ezdxf.document.Drawing, _: dict[str, Any], __: dict[str, Any
         ("N2", (30.0, 43.0), "TD-A2", ((28.5, 43.0), (30.2, 43.0), (31.8, 43.0), (29.2, 41.4), (31.0, 41.4))),
         ("N3", (30.0, 52.2), "TD-A3", ((28.5, 52.2), (30.2, 52.2), (31.8, 52.2), (29.2, 50.6), (31.0, 50.6))),
     )
+    circuit_map = {
+        "N1": ("A1-01", "A1-02", "A1-03"),
+        "N2": ("A2-01", "A2-02", "A2-03"),
+        "N3": ("A3-01", "A3-02", "A3-03"),
+    }
     for level, panel_point, panel_name, lights in levels:
-        add_panel(msp, (panel_point[0] - 2.2, panel_point[1] + 1.2), panel_name)
+        panel = (panel_point[0] - 2.2, panel_point[1] + 1.2)
+        add_panel(msp, panel, panel_name)
         for index, point in enumerate(lights, 1):
             add_luminaire(msp, point, f"{level}-L{index}")
-        for index, point in enumerate(((lights[0][0] - 0.7, lights[0][1] - 0.7), (lights[2][0] + 0.7, lights[2][1] - 0.7), (lights[4][0] + 0.7, lights[4][1] - 0.7)), 1):
+        outlets = ((lights[0][0] - 0.7, lights[0][1] - 0.7), (lights[2][0] + 0.7, lights[2][1] - 0.7), (lights[4][0] + 0.7, lights[4][1] - 0.7))
+        for index, point in enumerate(outlets, 1):
             add_outlet(msp, point, f"{level}-TC{index}")
-        add_route(msp, [(panel_point[0] - 2.2, panel_point[1] + 1.2), (panel_point[0], panel_point[1] + 1.2), lights[0], lights[1], lights[2]])
+        lighting_id, outlet_a, outlet_b = circuit_map[level]
+        light_route = [panel, (27.8, lights[0][1]), lights[0], lights[1], lights[2], (lights[2][0], lights[3][1]), lights[4], lights[3]]
+        add_route(msp, light_route, "IE_CANALIZACION", lighting_id, (27.8, lights[0][1]))
+        add_route(msp, [panel, (27.35, panel[1]), (27.35, outlets[0][1]), outlets[0], (outlets[1][0], outlets[0][1]), outlets[1]], "IE_FUERZA", outlet_a, (27.35, outlets[0][1]))
+        add_route(msp, [panel, (27.05, panel[1]), (27.05, outlets[2][1]), outlets[2]], "IE_FUERZA", outlet_b, (27.05, outlets[2][1]))
+
+    # Cargas dedicadas del primer nivel, visibles y separadas de los circuitos
+    # generales de tomacorrientes.
+    for circuit_id, label, point, source_x in (
+        ("A1-04", "POS", (28.6, 30.3), 26.75),
+        ("A1-05", "REF-1", (30.4, 30.3), 26.45),
+        ("A1-06", "REF-2", (32.2, 30.3), 26.15),
+    ):
+        add_service_point(msp, point, label, "IE_EMERGENCIA")
+        add_route(msp, [(27.8, 35.0), (source_x, 35.0), (source_x, point[1]), point], "IE_EMERGENCIA", circuit_id, (source_x, 32.2))
     add_legend(msp, "IE-02 | EDIFICIO ADMINISTRATIVO", [
         ("N1", "120.35 m2: minimarket, administracion, atencion y servicios"),
         ("N2", "160.20 m2: oficinas 1 a 3 y SS.HH."),
         ("N3", "160.20 m2: oficinas 4 a 6 y SS.HH."),
         ("TC", "Tomacorriente doble 220 V, 2P+T; RCBO 30 mA"),
         ("L", "Punto de alumbrado LED; conductor minimo 2.5 mm2 Cu"),
+        ("(A#-##)", "Burbuja de circuito; alumbrado, tomas y cargas dedicadas separados"),
         ("NOTA", "Posiciones sujetas a replanteo con arquitectura acotada"),
     ])
 
@@ -301,16 +414,37 @@ def sheet_ie02(doc: ezdxf.document.Drawing, _: dict[str, Any], __: dict[str, Any
 def sheet_ie03(doc: ezdxf.document.Drawing, architecture: dict[str, Any], __: dict[str, Any]) -> None:
     msp = doc.modelspace()
     tdf = (31.58, 37.15)
+    tde = (32.65, 36.55)
+    ups = (33.85, 36.55)
     add_panel(msp, tdf, "TDF")
+    add_panel(msp, tde, "TDE", "IE_EMERGENCIA")
+    add_panel(msp, ups, "UPS-F", "IE_EMERGENCIA")
+
+    dispenser_points: list[tuple[float, float]] = []
     for index, dispenser in enumerate(architecture["dispensing"]["dispensers_local_A01"], 1):
         point = tuple(value * ARCH_SCALE for value in dispenser["point"])
+        dispenser_points.append(point)
         add_panel(msp, point, f"SD{index}", "IE_FUERZA")
-        add_route(msp, [tdf, (34.0, tdf[1]), (34.0, point[1]), point], "IE_FUERZA")
+    # Un corredor UPS-FUEL y seis derivaciones cortas reemplazan seis trazos
+    # superpuestos. Cada derivacion conserva su identificador F-05..F-10.
+    dispenser_trunk_x = 35.25
+    add_route(msp, [ups, (dispenser_trunk_x, ups[1]), (dispenser_trunk_x, min(point[1] for point in dispenser_points))], "IE_EMERGENCIA", "F05-10", (dispenser_trunk_x, 31.0))
+    for index, point in enumerate(dispenser_points, 5):
+        add_route(msp, [(dispenser_trunk_x, point[1]), point], "IE_EMERGENCIA", f"F-{index:02d}", ((dispenser_trunk_x + point[0]) / 2, point[1]))
+
+    tank_points: list[tuple[float, float]] = []
     for index, tank in enumerate(architecture["fuel_storage"]["tanks"], 1):
         point = tuple(value * ARCH_SCALE for value in tank["local_A01_center"])
+        tank_points.append(point)
         msp.add_circle(point, 0.25, dxfattribs={"layer": "IE_FUERZA"})
         text_left(msp, f"STP-{index} 1.5 hp", point[0] + 0.32, point[1], 0.19, "IE_FUERZA")
-        add_route(msp, [tdf, (34.8, tdf[1]), (34.8, point[1]), point], "IE_FUERZA")
+    for circuit_id, source, point, lane_x, layer in (
+        ("F-01", tde, tank_points[0], 34.40, "IE_EMERGENCIA"),
+        ("F-02", tdf, tank_points[1], 34.75, "IE_FUERZA"),
+        ("F-03", tde, tank_points[2], 35.10, "IE_EMERGENCIA"),
+        ("F-04", tdf, tank_points[3], 35.45, "IE_FUERZA"),
+    ):
+        add_route(msp, [source, (lane_x, source[1]), (lane_x, point[1]), point], layer, circuit_id, (lane_x, point[1]))
     for index, point in enumerate(((27.0, 15.7), (46.0, 34.8)), 1):
         msp.add_circle(point, 0.32, dxfattribs={"layer": "IE_EMERGENCIA"})
         text_center(msp, "PE", point[0], point[1], 0.20, "IE_EMERGENCIA")
@@ -321,6 +455,7 @@ def sheet_ie03(doc: ezdxf.document.Drawing, architecture: dict[str, Any], __: di
         ("PE", "Paro de emergencia remoto; corta bombas y surtidores"),
         ("UPS", "UPS-FUEL 3 kVA senoidal para cabezales/control/ATG"),
         ("CNE", "Equipos y sellos certificados para la zona donde se instalen"),
+        ("(F-##)", "Burbuja de circuito; troncales y derivaciones se leen por separado"),
         ("NOTA", "Rutas y placas definitivas requieren coordinacion del proveedor"),
     ])
 
@@ -371,28 +506,52 @@ def breaker_symbol(msp: ezdxf.layouts.BaseLayout, point: tuple[float, float], la
 
 
 def add_unifilar(msp: ezdxf.layouts.BaseLayout) -> None:
-    y = 52.5
-    nodes = ((4.0, "RED\n380/220V"), (12.0, "MEDIDOR"), (20.0, "ITM\n80A 4P"), (29.0, "TGE"), (39.0, "ATS\n63A 4P"), (48.0, "TDE"))
+    y = 53.7
+    nodes = ((3.5, "RED\n380/220V"), (9.5, "MEDIDOR"), (15.5, "ITM\n80A 4P"), (23.0, "TGE"), (35.5, "ATS\n63A 4P"), (44.0, "TDE"))
     for index, (x, label) in enumerate(nodes):
         rect(msp, x - 1.25, y - 1.0, x + 1.25, y + 1.0, "IE_FUERZA")
         for offset, line in enumerate(label.split("\n")):
             text_center(msp, line, x, y + 0.25 - offset * 0.48, 0.26, "IE_TEXTO")
         if index:
             msp.add_line((nodes[index - 1][0] + 1.25, y), (x - 1.25, y), dxfattribs={"layer": "IE_FUERZA"})
-    rect(msp, 37.75, 47.0, 40.25, 49.0, "IE_EMERGENCIA")
-    text_center(msp, "GE 37.5 kVA", 39.0, 48.0, 0.25, "IE_EMERGENCIA")
-    msp.add_line((39.0, 49.0), (39.0, 51.5), dxfattribs={"layer": "IE_EMERGENCIA"})
-    branches = ((29.0, "TDF 40A"), (25.0, "TD-A1 25A"), (21.0, "TD-A2 20A"), (17.0, "TD-A3 20A"))
-    for x, label in branches:
-        msp.add_line((29.0, 51.5), (x, 46.0), dxfattribs={"layer": "IE_FUERZA"})
-        rect(msp, x - 1.3, 44.8, x + 1.3, 46.0, "IE_FUERZA")
-        text_center(msp, label, x, 45.4, 0.22, "IE_TEXTO")
-    for index, label in enumerate(("UPS-FUEL 3kVA", "UPS-IT 2kVA", "CARGAS CRITICAS")):
-        x = 51.0 + index * 7.0
-        msp.add_line((48.0, 51.5), (x, 46.0), dxfattribs={"layer": "IE_EMERGENCIA"})
-        rect(msp, x - 1.7, 44.8, x + 1.7, 46.0, "IE_EMERGENCIA")
-        text_center(msp, label, x, 45.4, 0.21, "IE_TEXTO")
-    text_left(msp, "ALIMENTADOR PRINCIPAL: Cu 4x35 mm2 + PE 16 mm2 | ITM 80 A 4P | Icu >= 25 kA (VALIDAR Icc)", 2.0, 56.2, 0.30, "IE_TEXTO")
+    text_center(msp, "ACOMETIDA / MEDICION: POR CONFIRMAR", 7.0, 55.35, 0.18, "IE_TEXTO")
+    text_center(msp, "Cu 4x35 mm2 + PE 16 mm2 | ducto 75 mm", 19.2, 55.35, 0.18, "IE_TEXTO")
+    text_center(msp, "AL-TDE: Cu 4x10 + PE 6 mm2", 39.8, 55.35, 0.18, "IE_TEXTO")
+
+    rect(msp, 34.0, 48.0, 37.0, 49.7, "IE_EMERGENCIA")
+    text_center(msp, "GE 37.5 kVA", 35.5, 48.85, 0.24, "IE_EMERGENCIA")
+    msp.add_line((35.5, 49.7), (35.5, y - 1.0), dxfattribs={"layer": "IE_EMERGENCIA"})
+
+    # Salidas normales del TGE: barra horizontal y bajantes ortogonales.
+    normal_branches = (
+        (8.0, "TD-A3 20A", "4x4+PE2.5"),
+        (14.0, "TD-A2 20A", "4x4+PE2.5"),
+        (20.0, "TD-A1 25A", "4x6+PE4"),
+        (26.0, "TDF 40A", "4x10+PE6"),
+    )
+    bus_y = 50.8
+    msp.add_line((23.0, y - 1.0), (23.0, bus_y), dxfattribs={"layer": "IE_FUERZA"})
+    msp.add_line((normal_branches[0][0], bus_y), (normal_branches[-1][0], bus_y), dxfattribs={"layer": "IE_FUERZA"})
+    for x, label, cable in normal_branches:
+        msp.add_line((x, bus_y), (x, 47.0), dxfattribs={"layer": "IE_FUERZA"})
+        rect(msp, x - 2.2, 45.6, x + 2.2, 47.0, "IE_FUERZA")
+        text_center(msp, label, x, 46.48, 0.21, "IE_TEXTO")
+        text_center(msp, cable, x, 45.95, 0.16, "IE_TEXTO")
+
+    # Salidas de emergencia: otra barra, sin diagonales cruzadas.
+    emergency_branches = (
+        (50.5, "UPS-FUEL 3kVA", "F-05..F-11"),
+        (58.5, "UPS-IT 2kVA", "S-01"),
+        (66.5, "CARGAS CRITICAS", "L-01/L-04/S-02/03"),
+    )
+    msp.add_line((44.0, y - 1.0), (44.0, bus_y), dxfattribs={"layer": "IE_EMERGENCIA"})
+    msp.add_line((44.0, bus_y), (emergency_branches[-1][0], bus_y), dxfattribs={"layer": "IE_EMERGENCIA"})
+    for x, label, circuits in emergency_branches:
+        msp.add_line((x, bus_y), (x, 47.0), dxfattribs={"layer": "IE_EMERGENCIA"})
+        rect(msp, x - 3.0, 45.6, x + 3.0, 47.0, "IE_EMERGENCIA")
+        text_center(msp, label, x, 46.48, 0.21, "IE_TEXTO")
+        text_center(msp, circuits, x, 45.95, 0.15, "IE_TEXTO")
+    text_left(msp, "DIAGRAMA ORDENADO POR BARRAS: NORMAL (ROJO) Y EMERGENCIA (MAGENTA). N Y PE SEPARADOS.", 2.0, 57.0, 0.28, "IE_TEXTO")
 
 
 def add_load_table(msp: ezdxf.layouts.BaseLayout, calculations: dict[str, Any]) -> None:
@@ -564,7 +723,7 @@ def main() -> int:
     manifest: dict[str, Any] = {
         "schema_version": 1,
         "generated_on": date.today().isoformat(),
-        "title_block_source": "proyectos/unidad-2-industrial/datos/rotulo-planos.yaml",
+        "title_block_source": "bloque ROTULO de la base A-01, adaptado con proyectos/unidad-2-industrial/datos/rotulo-planos.yaml",
         "architecture_source": str(args.architecture_base.resolve()),
         "architecture_source_sha256": sha256(args.architecture_base.resolve()),
         "calculation_source_sha256": calculations["source_sha256"],
@@ -584,7 +743,7 @@ def main() -> int:
             architecture_count = add_architecture(doc, args.architecture_base.resolve())
         SHEET_BUILDERS[code](doc, architecture, calculations)
         scale = "1:100 / IND." if code != "IE-05" else "S/E"
-        add_title_block(msp, title_data, sheet, number, len(all_sheets), scale)
+        add_title_block(msp, args.architecture_base.resolve(), title_data, sheet, number, len(all_sheets), scale)
         stem = sheet_stem(sheet)
         dxf_path = output / f"{stem}.dxf"
         png_path = output / f"{stem}.png"

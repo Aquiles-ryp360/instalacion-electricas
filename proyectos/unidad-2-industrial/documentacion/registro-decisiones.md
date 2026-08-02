@@ -213,3 +213,42 @@ cambia, registrar una nueva entrada que sustituya a la anterior.
 - Impacto: el paquete se puede revisar e imprimir; el pipeline de publicacion permanece deshabilitado
 - Supuestos autorizados: ninguno adicional
 - Pendientes: revision del estudiante, rubrica final e impresion de prueba; para obra siguen pendientes factibilidad, placas, campo y revision profesional
+
+### DEC-016 - Catastro y referencia geografica
+
+- Fecha: 2026-08-02
+- Estado: aprobada como referencia aproximada; requiere campo
+- Decide: correccion solicitada por Aquiles Taylor Ramos Yapo
+- Fuente o evidencia: capturas municipal y Google Maps recibidas el 2026-08-02, grilla UTM y textos de la lamina A-01
+- Decision: incorporar en la memoria el catastro municipal, el contexto satelital y un croquis vectorial A-01; usar E 383250, N 8272300 UTM 19S como centro grafico aproximado, sin colocar un pin ficticio
+- Motivo: documentar la zona sin presentar una captura contextual como levantamiento, certificado catastral o ubicacion exacta
+- Alternativas consideradas: omitir el catastro o deducir una coordenada exacta desde Google Maps
+- Impacto: `datos/ubicacion.yaml` separa lugar administrativo, centro de captura y aproximacion del proyecto; la memoria advierte el alcance de cada figura
+- Supuestos autorizados: conversion matematica UTM/WGS84 del centro aproximado de la grilla A-01
+- Pendientes: enlace GPS o coordenada de campo y fotografias actuales del predio/acceso
+
+### DEC-017 - Adaptacion del rotulo y orden de rutas
+
+- Fecha: 2026-08-02
+- Estado: aprobada y verificada visualmente
+- Decide: correccion solicitada por Aquiles Taylor Ramos Yapo
+- Fuente o evidencia: bloque `ROTULO` de la lamina A-01 y revision de las seis salidas A1
+- Decision: conservar la geometria y huella del rotulo original, retirar solo textos empresariales antiguos y sustituir sus atributos por proyecto, propietario, lugar, estudiante, docente, curso, lamina, escala y fecha; no crear un cajetin superpuesto ni usar `WIPEOUT`
+- Motivo: el rotulo nuevo tapaba informacion y las rutas de cable no se reconocian con facilidad
+- Alternativas consideradas: agregar un rotulo institucional grande sobre la base o conservar el rotulo empresarial sin adaptar
+- Impacto: IE-01 a IE-04 separan circuitos por carriles y rotulos; IE-05 usa barras normal/emergencia ortogonales; cada circuito se identifica sin cruces diagonales innecesarios
+- Supuestos autorizados: abreviaturas compactas dentro de la huella disponible del A-01
+- Pendientes: prueba de ploteo A1 y ajuste final en AutoCAD si el docente exige otro tamaño de texto
+
+### DEC-018 - Cotizacion automatica trazable
+
+- Fecha: 2026-08-02
+- Estado: implementada; revision comercial pendiente
+- Decide: correccion solicitada por Aquiles Taylor Ramos Yapo
+- Fuente o evidencia: `herramientas/cotizacion/v1`, `presupuesto/README.md` y evidencia Promelsa en `build/`
+- Decision: generar un BOM de suministros separado del presupuesto instalado y consultar Promelsa con modo heuristico reproducible, sin clave externa y sin sobrescribir precios; conservar candidatos, SKU, URL, precio visible, fecha, decision y estado
+- Motivo: permitir que Codex u otra IA repita la consulta sin confundir una ficha comercial con una partida instalada
+- Alternativas consideradas: copiar precios manualmente, depender de Gemini o aceptar siempre el primer resultado de busqueda
+- Impacto: 41 consultas produjeron 4 coincidencias trazables, 30 sin seleccion segura y 7 sin resultado; todas las coincidencias conservan revision humana
+- Supuestos autorizados: ninguno para compra; el precio visible es evidencia dinamica de consulta
+- Pendientes: revisar equivalencia, unidad comercial, vigencia, flete y elaborar APU antes de cambiar el presupuesto

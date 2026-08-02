@@ -59,6 +59,27 @@ GEMINI_API_KEY=... python3 herramientas/cotizacion/v1/cli/promelsa.py \
   --key item
 ```
 
+Modo automatico reproducible sin clave externa:
+
+```bash
+python3 herramientas/cotizacion/v1/cli/cotizar.py \
+  --input build/<proyecto>/cotizaciones/bom-cotizable.json \
+  --output build/<proyecto>/cotizaciones/promelsa.json \
+  --modo heuristico \
+  --key item \
+  --no-actualizar-precio \
+  --workers 4
+```
+
+`heuristico` solo selecciona si coinciden familia y especificacion nominal, el
+precio es visible, no hay falta de stock explicita y el puntaje tecnico minimo
+se supera. Las demas partidas quedan `SIN_SELECCION` o `NO_ENCONTRADO`. Toda
+seleccion conserva `requiere_revision: true`: sirve como evidencia de mercado,
+no como autorizacion de compra ni como sustitucion automatica de una partida
+instalada del presupuesto.
+`--workers 4` reduce el tiempo de lotes grandes usando sesiones HTTP
+independientes; el limite admitido es 6 para no sobrecargar la tienda.
+
 Tambien puede usarse `herramientas/cotizacion/.env`; ver `.env.example`.
 
 ## Orquestador v1

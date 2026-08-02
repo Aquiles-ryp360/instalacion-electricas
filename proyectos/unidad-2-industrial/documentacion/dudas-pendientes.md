@@ -22,6 +22,8 @@ Estados: `ABIERTA`, `RESPONDIDA`, `SUPERADA POR EVIDENCIA`, `REQUIERE CAMPO`.
 | D-005 | ABIERTA | ¿El grifo operara 24 horas y cual sera su aforo/personal? | Para demanda, alumbrado exterior y respaldo se usara operacion continua conservadora. | Puede reducir horas de uso y consumo, no la seguridad electrica. |
 | D-006 | ABIERTA | ¿Habra equipos de lavado, lubricentro o taller no representados? | Quedan fuera del alcance; solo se incluye servicio de aire/agua visible en el plano. | Agregaria cargas y posiblemente ambientes. |
 | D-007 | ABIERTA | ¿La sigla `G.E.` del plano confirma ubicacion prevista para grupo electrogeno? | Se considera una ubicacion candidata y se verificara su distancia a las areas clasificadas. | Puede mover el grupo y sus canalizaciones. |
+| D-014 | REQUIERE CAMPO | ¿Cual es el punto GPS o enlace compartido exacto del predio Reumita B-8/B-9? | Se usa E 383250, N 8272300 UTM 19S como centro grafico aproximado del A-01; las capturas municipal y satelital son solo contexto. | Permitira colocar un punto verificable y corregir la memoria de ubicacion. |
+| D-015 | REQUIERE CAMPO | ¿Se entregaran fotografias actuales del acceso, fachada/predio, red electrica cercana y entorno de la zona de tanques? | La memoria incorpora las dos capturas recibidas y declara que no son fotografias de inspeccion. | Permitira documentar condiciones reales, acceso y posibles interferencias. |
 
 ## Equipos y suministro
 

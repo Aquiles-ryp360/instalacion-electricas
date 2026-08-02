@@ -20,6 +20,7 @@ puede ejecutar directamente para depuracion:
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import json
 import os
 import re
@@ -129,9 +130,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
     parser.add_argument(
         "--modo",
-        choices=("auto", "cli"),
+        choices=("heuristico", "auto", "cli"),
         default="cli",
-        help="auto usa Gemini API; cli imprime candidatos y espera una opcion por stdin.",
+        help=(
+            "heuristico selecciona solo coincidencias tecnicas fuertes sin API; "
+            "auto usa Gemini API; cli espera una opcion por stdin."
+        ),
     )
     parser.add_argument(
         "--key",
@@ -161,6 +165,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         type=float,
         default=DEFAULT_DELAY_SECONDS,
         help=f"Segundos de espera entre materiales. Por defecto: {DEFAULT_DELAY_SECONDS}.",
+    )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        help="Consultas concurrentes independientes (1 a 6). Por defecto: 1.",
     )
     parser.add_argument(
         "--timeout",
@@ -633,14 +643,16 @@ def detect_family(value: str) -> str:
         return "union_pvc"
     if "tubo" in text or "tuberia" in text:
         return "tubo_pvc" if "pvc" in text else "tuberia"
-    if "tablero" in text:
-        return "tablero"
     if "luminaria" in text or "foco" in text or "lampara" in text or "led" in text:
         return "luminaria"
+    if "tablero" in text:
+        return "tablero"
     if "tomacorriente" in text or "toma corriente" in text:
         return "tomacorriente"
     if "interruptor" in text:
         return "interruptor_control"
+    if "electrodo" in text and ("cobread" in text or "tierra" in text):
+        return "electrodo_tierra"
     if "caja" in text:
         return "caja"
     if "cinta" in text and "aisl" in text:
@@ -1083,6 +1095,90 @@ def interfaz_cli(material_name: str, candidatos: list[dict[str, Any]], *, format
         print("Entrada invalida. Ingresa un numero de la lista o 0 para omitir.", flush=True)
 
 
+def decidir_heuristico_seguro(material_name: str, candidatos: list[dict[str, Any]]) -> dict[str, Any]:
+    """Selecciona automaticamente solo una coincidencia tecnicamente trazable.
+
+    No intenta reemplazar el juicio profesional. Exige familia compatible,
+    especificaciones nominales coincidentes cuando la consulta las contiene,
+    precio visible y ausencia de una declaracion explicita de falta de stock.
+    Si no se cumplen esas condiciones devuelve una no-seleccion revisable.
+    """
+    if not candidatos:
+        return {
+            "opcion": None,
+            "decision": "sin_opcion_segura",
+            "requiere_revision": True,
+            "justificacion": "La tienda no devolvio candidatos.",
+            "criterios": ["sin_candidatos"],
+        }
+
+    candidate = candidatos[0]
+    required_family = detect_family(material_name)
+    candidate_family = candidate.get("familia_candidato") or detect_family(
+        " ".join(str(candidate.get(key) or "") for key in ("nombre", "texto_visible"))
+    )
+    required_specs = extract_specs(material_name)
+    matching_specs = set(candidate.get("especificaciones_coincidentes") or [])
+    score = float(candidate.get("coincidencia_score") or 0.0)
+    family_ok = required_family == candidate_family and required_family != "general"
+    specs_ok = not required_specs or bool(matching_specs)
+    price_ok = candidate.get("precio_soles") is not None
+    availability_ok = candidate.get("disponible") is not False
+    score_ok = score >= 4.0
+    required_text = normalize_text(material_name)
+    candidate_raw_text = " ".join(str(candidate.get(key) or "") for key in ("nombre", "texto_visible"))
+    candidate_text = normalize_text(candidate_raw_text)
+    semantic_ok = True
+    semantic_reason = "sin_restriccion_adicional"
+    if required_family == "luminaria" and ({"emergencia", "autonoma"} & token_set(required_text)):
+        semantic_ok = bool({"emergencia", "autonoma"} & token_set(candidate_text))
+        semantic_reason = "funcion_emergencia"
+    if required_family == "luminaria":
+        for essential in ("panel", "poste", "ip66"):
+            if essential in token_set(required_text) and essential not in token_set(candidate_text):
+                semantic_ok = False
+                semantic_reason = f"forma_o_aptitud_{essential}"
+        required_watts = [float(spec[:-1]) for spec in required_specs if spec.endswith("w")]
+        candidate_specs = extract_specs(candidate_text)
+        candidate_watts = [float(spec[:-1]) for spec in candidate_specs if spec.endswith("w")]
+        if required_watts and candidate_watts and min(candidate_watts) < min(required_watts) * 0.75:
+            semantic_ok = False
+            semantic_reason = "potencia_real_o_equivalente_ambigua"
+        equivalent_range = re.search(r"(\d+(?:[.,]\d+)?)\s*[-/]\s*(\d+(?:[.,]\d+)?)\s*[wW]", candidate_raw_text)
+        if required_watts and equivalent_range and float(equivalent_range.group(1).replace(",", ".")) < min(required_watts) * 0.75:
+            semantic_ok = False
+            semantic_reason = "potencia_real_o_equivalente_ambigua"
+
+    criteria = [
+        f"familia:{required_family}={'OK' if family_ok else 'NO'}",
+        f"especificacion={'OK' if specs_ok else 'NO'}",
+        f"precio_visible={'OK' if price_ok else 'NO'}",
+        f"disponibilidad_no_negativa={'OK' if availability_ok else 'NO'}",
+        f"score:{score:.3f}={'OK' if score_ok else 'NO'}",
+        f"semantica:{semantic_reason}={'OK' if semantic_ok else 'NO'}",
+    ]
+    if not all((family_ok, specs_ok, price_ok, availability_ok, score_ok, semantic_ok)):
+        return {
+            "opcion": None,
+            "decision": "sin_opcion_segura",
+            "requiere_revision": True,
+            "justificacion": "El primer candidato no supera todos los filtros tecnicos deterministicos.",
+            "criterios": criteria,
+        }
+
+    return {
+        "opcion": int(candidate["opcion"]),
+        "decision": "coincidencia_heuristica_trazable",
+        "requiere_revision": True,
+        "justificacion": (
+            "Coinciden familia y especificacion nominal; hay precio visible y "
+            "no se detecto falta de stock. Requiere validacion humana antes de compra."
+        ),
+        "criterios": criteria,
+        "candidato": candidate,
+    }
+
+
 def parse_attributes_table(soup: BeautifulSoup) -> tuple[dict[str, str], list[str]]:
     attributes: dict[str, str] = {}
     links: list[str] = []
@@ -1395,6 +1491,8 @@ def process_item(
             retries=args.gemini_reintentos,
             backoff=args.gemini_backoff,
         )
+    elif args.modo == "heuristico":
+        decision = decidir_heuristico_seguro(material_name, search_result.candidatos)
     else:
         decision = interfaz_cli(material_name, search_result.candidatos, formato=args.formato_cli)
 
@@ -1471,6 +1569,8 @@ def validate_args(args: argparse.Namespace) -> None:
         raise AgenteComprasError("--limit debe ser mayor o igual a 1.")
     if args.delay < 0:
         raise AgenteComprasError("--delay no puede ser negativo.")
+    if not 1 <= args.workers <= 6:
+        raise AgenteComprasError("--workers debe estar entre 1 y 6.")
     if args.timeout <= 0:
         raise AgenteComprasError("--timeout debe ser positivo.")
     if args.reintentos < 1:
@@ -1493,7 +1593,6 @@ def main(argv: list[str] | None = None) -> int:
         data = load_json(input_path)
         items, path_label = locate_material_items(data, args.items_path)
         selected_items = items[: args.limit] if args.limit else items
-        session = create_session()
         stats: dict[str, int] = {}
 
         if loaded_env_paths:
@@ -1505,9 +1604,10 @@ def main(argv: list[str] | None = None) -> int:
             f"Materiales detectados en '{path_label}': {len(items)}; "
             f"procesando: {len(selected_items)}."
         )
-        for index, item in enumerate(selected_items, start=1):
+        def process_with_guard(index: int, item: dict[str, Any]) -> str:
+            session = create_session()
             try:
-                status = process_item(
+                return process_item(
                     item,
                     item_index=index,
                     total=len(selected_items),
@@ -1515,7 +1615,6 @@ def main(argv: list[str] | None = None) -> int:
                     session=session,
                 )
             except Exception as exc:
-                status = "ERROR"
                 item["cotizacion_promelsa"] = {
                     "estado": "ERROR",
                     "fuente": "Promelsa",
@@ -1525,9 +1624,25 @@ def main(argv: list[str] | None = None) -> int:
                     "requiere_revision": True,
                 }
                 eprint(f"  ERROR: {exc}")
-            stats[status] = stats.get(status, 0) + 1
-            if index < len(selected_items) and args.delay:
-                time.sleep(args.delay)
+                return "ERROR"
+
+        indexed_items = list(enumerate(selected_items, start=1))
+        if args.workers == 1:
+            for index, item in indexed_items:
+                status = process_with_guard(index, item)
+                stats[status] = stats.get(status, 0) + 1
+                if index < len(selected_items) and args.delay:
+                    time.sleep(args.delay)
+        else:
+            eprint(f"Consultas concurrentes: {args.workers} workers independientes.")
+            with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as executor:
+                futures = {
+                    executor.submit(process_with_guard, index, item): index
+                    for index, item in indexed_items
+                }
+                for future in concurrent.futures.as_completed(futures):
+                    status = future.result()
+                    stats[status] = stats.get(status, 0) + 1
 
         recalculate_summary(data, items)
         guardar_resultados(output_path, data)

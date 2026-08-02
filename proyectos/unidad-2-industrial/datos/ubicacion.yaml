@@ -1,0 +1,44 @@
+schema_version: 1
+proyecto_id: unidad-2-industrial
+fecha_registro: "2026-08-02"
+
+ubicacion_administrativa:
+  departamento: Puno
+  provincia: San Roman
+  distrito: Caracoto
+  sector: "Comunidad Campesina San Francisco de Buenavista"
+  predio: "Reumita, parcelas B-8 y B-9, lado este"
+  via: "carretera Juliaca-Puno"
+  estado: observado_en_rotulo_y_textos_del_DXF_A01
+
+referencia_geografica_aproximada:
+  sistema_adoptado: "WGS 84 / UTM zona 19S"
+  este_m: 383250
+  norte_m: 8272300
+  latitud_aproximada: -15.62451
+  longitud_aproximada: -70.08914
+  estado: aproximacion_grafica_no_levantamiento
+  fuente: "centro aproximado de la grilla UTM visible en A-01; conversion matematica inversa a WGS84"
+  advertencia: "No usar para replanteo, tramite catastral ni construccion; confirmar con levantamiento y documento municipal."
+
+capturas_recibidas:
+  - id: LOC-CAT-01
+    tipo: captura_autocad_plan_municipal
+    ruta_local: "fuentes/local/ubicacion/2026-08-02-captura-catastro-municipal-caracoto.png"
+    sha256: "347c550640c2ccc537bf8a0b5acc72c7e2e7003ba003102c5370507a32a03dc2"
+    uso: contexto_catastral_urbano
+    observacion: "La vista muestra la trama y grilla aproximada E 381000 a E 382500; no contiene una marca verificada del predio Reumita."
+  - id: LOC-MAP-01
+    tipo: captura_google_maps
+    ruta_local: "fuentes/local/ubicacion/2026-08-02-captura-google-maps-caracoto.png"
+    sha256: "800cf5a92936dee69398803cbc942433db9758ac52925ab858f2cf80c2aae532"
+    uso: contexto_distrital_y_corredor_vial
+    centro_visible_latitud: -15.5675583
+    centro_visible_longitud: -70.1062164
+    observacion: "El centro visible procede de la URL de la captura y no es la coordenada del proyecto; el predio aproximado del A-01 queda al sur-oriente de este recorte."
+
+fuente_catastral_principal:
+  ruta_local: "fuentes/local/cad/DISTRIBUCION Y CIRCULACION MIGUEL.dxf"
+  lamina: A-01
+  uso: "implantacion, rotulo, grilla UTM y referencia del predio"
+  estado: fuente_documental_recibida_no_certificacion_catastral

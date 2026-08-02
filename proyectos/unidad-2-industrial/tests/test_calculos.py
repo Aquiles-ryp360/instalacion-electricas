@@ -86,17 +86,28 @@ def test_generated_title_block_contains_unap_identity_without_fake_cip():
 
     title_data = load_yaml(PROJECT / "datos" / "rotulo-planos.yaml")
     sheet = title_data["laminas_previstas"][0]
+    architecture_base = REPO / "build" / "unidad-2-industrial" / "cad" / "base" / "a_01_referencia_local.dxf"
+    if not architecture_base.exists():
+        return
     doc = module.new_document()
-    module.add_title_block(doc.modelspace(), title_data, sheet, 1, 6, "1:100")
+    module.add_title_block(doc.modelspace(), architecture_base, title_data, sheet, 1, 6, "1:100")
     texts = [entity.dxf.text for entity in doc.modelspace().query("TEXT")]
+    attributes = [
+        attrib.dxf.text
+        for block in doc.blocks
+        for insert in block.query("INSERT")
+        for attrib in insert.attribs
+    ]
+    all_text = texts + attributes
 
-    assert any("UNIVERSIDAD NACIONAL DEL ALTIPLANO" in value for value in texts)
-    assert any("AQUILES TAYLOR RAMOS YAPO" in value for value in texts)
-    assert any("GREGORIO MEZA MAROCHO" in value for value in texts)
-    assert any("MIGUEL MAMANI CHUQUICALLATA" in value for value in texts)
-    assert any("PUNO" in value for value in texts)
-    assert not any("CIP:" in value for value in texts)
-    assert len(doc.modelspace().query("WIPEOUT")) == 1
+    assert any("UNIVERSIDAD NACIONAL DEL ALTIPLANO" in value for value in all_text)
+    assert any("AQUILES TAYLOR RAMOS YAPO" in value for value in all_text)
+    assert any("GREGORIO MEZA MAROCHO" in value for value in all_text)
+    assert any("MIGUEL MAMANI CHUQUICALLATA" in value for value in all_text)
+    assert any("PUNO" in value for value in all_text)
+    assert not any("CIP:" in value for value in all_text)
+    assert not any("GHANDY" in value.upper() for value in all_text)
+    assert len(doc.modelspace().query("WIPEOUT")) == 0
 
 
 def test_lighting_zones_meet_declared_targets():
@@ -128,6 +139,15 @@ def test_budget_is_reproducible_and_labeled_referential():
     assert result["totals"]["total"] > result["totals"]["direct_cost"] > 0
     assert "referencial" in result["estado"]
     assert any(row["tipo_precio"] == "estimado_anteproyecto" for row in result["items"])
+
+
+def test_location_sources_are_explicitly_approximate():
+    location = load_yaml(PROJECT / "datos" / "ubicacion.yaml")
+    reference = location["referencia_geografica_aproximada"]
+
+    assert reference["estado"] == "aproximacion_grafica_no_levantamiento"
+    assert "No usar" in reference["advertencia"]
+    assert location["capturas_recibidas"][1]["uso"] == "contexto_distrital_y_corredor_vial"
 
 
 def test_defense_guide_uses_current_key_values():

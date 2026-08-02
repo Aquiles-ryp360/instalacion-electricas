@@ -28,6 +28,8 @@ def main() -> int:
     build = root / "build/unidad-2-industrial"
     package = build / "paquete-academico-revision"
     plans_out = package / "planos-editables-y-pdf"
+    if package.exists():
+        shutil.rmtree(package)
     package.mkdir(parents=True, exist_ok=True)
     plans_out.mkdir(parents=True, exist_ok=True)
 
@@ -36,9 +38,16 @@ def main() -> int:
         (build / "expediente/guia-sustentacion.pdf", package / "02-guia-sustentacion-aquiles.pdf"),
         (build / "cad/planos/planos-electricos-grifo-unap-aquiles.pdf", package / "03-planos-electricos-A1-vectoriales.pdf"),
         (build / "presupuesto/metrados-presupuesto.csv", package / "04-metrados-presupuesto.csv"),
+        (build / "cotizaciones/cotizacion-automatica-resumen.md", package / "04a-cotizacion-automatica-resumen.md"),
+        (build / "cotizaciones/cotizacion-automatica-resumen.csv", package / "04b-cotizacion-automatica-resumen.csv"),
+        (build / "cotizaciones/promelsa.json", package / "04c-evidencia-cotizacion-promelsa.json"),
+        (build / "cotizaciones/bom-cotizable.json", package / "04d-bom-cotizable.json"),
         (build / "calculos/cuadro-cargas.csv", package / "05-cuadro-cargas.csv"),
         (project / "documentacion/dudas-pendientes.md", package / "06-dudas-pendientes.md"),
         (project / "documentacion/guia-sustentacion.md", package / "07-guia-sustentacion-editable.md"),
+        (project / "datos/ubicacion.yaml", package / "08-ubicacion-y-trazabilidad.yaml"),
+        (project / "fuentes/inventario-ubicacion.md", package / "09-inventario-ubicacion.md"),
+        (project / "documentacion/prompt-codex-windows-mejora-cad.md", package / "10-prompt-codex-windows-mejora-cad.md"),
     ]
     plan_dir = build / "cad/planos"
     for code in ("IE-01", "IE-02", "IE-03", "IE-04", "IE-05", "IE-06"):
@@ -66,6 +75,8 @@ def main() -> int:
         "Docente: Mg. Gregorio Meza Marocho\n\n"
         "Imprimir el expediente en tamaño carta y las seis laminas IE-01 a IE-06 en A1. "
         "Los PDF de planos son vectoriales; los PNG del build son solo vistas previas.\n\n"
+        "La cotizacion automatica adjunta conserva candidatos, precios visibles, URL, fecha y estados. "
+        "No reemplaza el presupuesto instalado ni autoriza una compra.\n\n"
         "Este paquete esta completo para revision y sustentacion academica, pero NO AUTORIZA CONSTRUCCION. "
         "Antes de obra se requieren factibilidad e Icc de Electro Puno, placas definitivas, verificacion de campo, "
         "fotometria, medicion de PAT, coordinacion de protecciones y revision/firma profesional de areas clasificadas.\n",

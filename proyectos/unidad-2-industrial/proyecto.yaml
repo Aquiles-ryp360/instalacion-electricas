@@ -8,7 +8,7 @@ autor_estudiante: "Aquiles Taylor Ramos Yapo"
 modalidad: individual
 propietario: "Miguel Mamani Chuquicallata"
 propietario_estado: "dato consignado en la documentacion tecnica de referencia facilitada por la DREM; no implica verificacion registral"
-estado: "paquete academico completo en build: expediente, cronograma, metrados/presupuesto, seis planos vectoriales y guia de sustentacion; pendiente revision del estudiante"
+estado: "paquete academico corregido en build: memoria con catastro aproximado, cotizacion trazable, rutas ordenadas, rotulo A-01 adaptado, seis planos vectoriales y guia; pendiente revision del estudiante"
 
 naturaleza_proyecto:
   tipo: anteproyecto_academico_nuevo
@@ -70,6 +70,7 @@ entradas:
   cargas: diseno-electrico/datos/cargas.yaml
   alumbrado: diseno-electrico/datos/alumbrado.yaml
   presupuesto: presupuesto/datos/partidas.yaml
+  ubicacion: datos/ubicacion.yaml
   consigna: documentacion/consigna-extraida-whatsapp.md
   cuestionario: documentacion/cuestionario-inicial-grifo.md
   dudas: documentacion/dudas-pendientes.md
@@ -80,17 +81,26 @@ automatizacion:
   pipeline_habilitado: false
   razon_bloqueo: "los resultados estan compilados, pero faltan factibilidad, placas, verificacion de campo y revision profesional de la clasificacion de areas"
   requiere_revision_humana: true
+  cotizacion_comercial:
+    habilitada: true
+    motor: herramientas/cotizacion/v1/cli/cotizar.py
+    modo_recomendado: heuristico
+    entrada_build: build/unidad-2-industrial/cotizaciones/bom-cotizable.json
+    salida_build: build/unidad-2-industrial/cotizaciones/promelsa.json
+    regla_precio: "usar --no-actualizar-precio; una ficha comercial no sustituye una partida instalada"
 
 resultados_build:
   calculo_electrico: build/unidad-2-industrial/calculos/resumen-calculos.json
   calculo_alumbrado: build/unidad-2-industrial/calculos/resumen-alumbrado.json
   metrados_presupuesto: build/unidad-2-industrial/presupuesto/resumen-metrados-presupuesto.json
+  cotizacion_automatica: build/unidad-2-industrial/cotizaciones/promelsa.json
+  cotizacion_automatica_resumen: build/unidad-2-industrial/cotizaciones/cotizacion-automatica-resumen.md
   planos_dxf_pdf: build/unidad-2-industrial/cad/planos
   planos_pdf_conjunto: build/unidad-2-industrial/cad/planos/planos-electricos-grifo-unap-aquiles.pdf
   expediente_pdf: build/unidad-2-industrial/expediente/main.pdf
   guia_sustentacion_pdf: build/unidad-2-industrial/expediente/guia-sustentacion.pdf
   paquete_revision_zip: build/unidad-2-industrial/paquete-academico-grifo-aquiles-revision.zip
-  estado_revision: "calculos, presupuesto y compilacion PASS; revision visual automatica realizada; pendiente lectura/impresion del estudiante y revision humana competente para uso constructivo"
+  estado_revision: "calculos, presupuesto, cotizacion y compilacion PASS; revision visual de catastro, rotulo, rutas y anexos realizada; pendiente lectura/impresion del estudiante y revision humana competente para uso constructivo"
 
 entregables:
   directorio: entregables

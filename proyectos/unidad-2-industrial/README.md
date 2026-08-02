@@ -11,7 +11,8 @@ propietario consignado en esa fuente facilitada por la DREM.
 El alcance incluye Diesel B5 S-50, Gasohol Regular y Gasohol Premium. GLP y GNV
 estan excluidos. La arquitectura fuente ya esta incorporada. El anteproyecto
 cuenta con cargas, calculos electrico, de alumbrado y de metrados/presupuesto en
-estado PASS, seis laminas A1 vectoriales con rotulo UNAP--Puno, un expediente
+estado PASS, seis laminas A1 vectoriales cuyo rotulo original A-01 fue adaptado
+con los datos academicos de Puno sin tapar el plano, un expediente
 compilado con el formato grafico de la primera unidad de Aquiles y una guia
 separada de sustentacion. El paquete completo permanece en `build/` para revision.
 
@@ -23,6 +24,9 @@ El CAD se documenta en
 [`fuentes/inventario-cad.md`](fuentes/inventario-cad.md) y las preguntas que no
 deben detener el avance se acumulan en
 [`documentacion/dudas-pendientes.md`](documentacion/dudas-pendientes.md).
+Las capturas y el criterio espacial se registran en
+[`datos/ubicacion.yaml`](datos/ubicacion.yaml), y el flujo de cotización
+automática está explicado en [`presupuesto/README.md`](presupuesto/README.md).
 
 ## Como debe empezar una nueva sesion de IA
 
@@ -58,7 +62,10 @@ unidad-2-industrial/
 ## Estado de automatizacion
 
 El paquete academico ya se puede regenerar con
-`scripts/preparar_paquete_academico.py`. El pipeline de publicacion sigue
+`scripts/preparar_paquete_academico.py`. Antes de compilar la memoria se ejecuta
+`scripts/preparar_recursos_ubicacion.py`. El presupuesto genera un BOM para el
+cotizador reusable `herramientas/cotizacion/v1`; su modo `heuristico` funciona
+sin clave externa y deja evidencia JSON/Markdown revisable. El pipeline de publicacion sigue
 deshabilitado: faltan factibilidad e Icc de
 Electro Puno, placas definitivas, verificacion de campo y revision profesional
 de areas clasificadas. Las generaciones actuales permanecen en `build/`; solo

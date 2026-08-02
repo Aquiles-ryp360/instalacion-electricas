@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
@@ -190,6 +191,52 @@ def write_outputs(result: dict[str, Any], output: Path) -> None:
     ])
     lines.extend(f"- Excluye: {item}." for item in result["scope"]["excluye"])
     (output / "memoria-metrados-presupuesto.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    # Adaptador explícito para el cotizador reusable v1. Se excluyen servicios
+    # puros y se conserva el precio instalado del presupuesto sin permitir que
+    # una consulta comercial lo sobrescriba silenciosamente.
+    quotation_items: list[dict[str, Any]] = []
+    for row in result["items"]:
+        if row["id"].startswith(("PRE-", "PRU-")):
+            continue
+        description = str(row["descripcion"])
+        query = re.split(r",|;", description, maxsplit=1)[0]
+        query = re.sub(r"\b(instalad[oa]|tendid[oa]|identificad[oa]|equipado|montaje)\b", "", query, flags=re.IGNORECASE)
+        query = re.sub(r"\s+", " ", query).strip(" .-")
+        if row["id"].startswith("COND-"):
+            diameter = row["id"].split("-")[1]
+            query = f"Tubo PVC SAP pesado {diameter} mm"
+        elif row["id"].startswith("CAB-"):
+            section = row["id"].split("-")[1]
+            insulation = "LSZH" if float(section) <= 4 else "XLPE LSZH"
+            query = f"Cable electrico cobre {insulation} {section} mm2"
+        quotation_items.append({
+            "item": query,
+            "descripcion_partida": description,
+            "codigo": row["id"],
+            "categoria": row["grupo"],
+            "unidad": row["unidad"],
+            "cantidad": row["cantidad"],
+            "precio_unit_soles": row["precio_unitario"],
+            "costo_soles": row["subtotal"],
+            "precio_presupuesto_tipo": row["tipo_precio"],
+            "fuente_metrado": "resumen-metrados-presupuesto.json generado desde cargas y partidas canonicas",
+            "nota": "Cotizar suministro comparable; el precio del presupuesto puede incluir instalacion y no debe sustituirse automaticamente.",
+        })
+    quotation_output = output.parent / "cotizaciones"
+    quotation_output.mkdir(parents=True, exist_ok=True)
+    quotation_bom = {
+        "schema_version": 1,
+        "proyecto": "Anteproyecto electrico academico de grifo - Unidad 2",
+        "fecha": result["fecha_base"],
+        "caracter": "BOM cotizable generado automaticamente; requiere revision tecnica y comercial.",
+        "flujo_recomendado": "herramientas/cotizacion/v1/cli/cotizar.py --modo heuristico --no-actualizar-precio",
+        "resumen": {"cantidad_partidas_cotizables": len(quotation_items)},
+        "materiales": quotation_items,
+    }
+    (quotation_output / "bom-cotizable.json").write_text(
+        json.dumps(quotation_bom, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
 
 
 def main() -> int:

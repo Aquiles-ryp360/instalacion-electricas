@@ -10,7 +10,7 @@ formato del expediente Aquiles de la primera unidad y resultados reproducibles.
 |---|---|---|
 | Trabajo individual | Autor unico en `proyecto.yaml`, portada y rotulos | CUMPLE |
 | Tema industrial: grifo | Arquitectura canonica, memoria y seis laminas | CUMPLE |
-| Memoria descriptiva | Capitulo 1 del expediente | CUMPLE |
+| Memoria descriptiva | Capitulo 1 con datos, catastro, contexto satelital y croquis A-01 | CUMPLE CON UBICACION APROXIMADA |
 | Estudio de cargas | 35 circuitos, cuadro reproducible, capitulos 1 y 2 | CUMPLE |
 | Calculo de iluminacion | Ocho zonas con estado PASS y capitulo 2 | CUMPLE A NIVEL ANTEPROYECTO |
 | Calculo de conductores | Ampacidad, PE y caida por circuito/alimentador | CUMPLE |
@@ -31,17 +31,21 @@ formato del expediente Aquiles de la primera unidad y resultados reproducibles.
 | Proyecto electrico nuevo | Memoria distingue DXF arquitectonico de diseño electrico | CUMPLE |
 | Diesel, Regular y Premium | Tanques, cargas y memoria | CUMPLE |
 | Excluir GLP/GNV | Portada, memoria, rotulos, planos y guia | CUMPLE |
-| Rotulo adaptado a Puno | Seis laminas con UNAP, curso, autor, docente, propietario y lugar | CUMPLE |
+| Rotulo adaptado a Puno | Bloque original A-01, sin mascara ni superposicion; datos academicos sustituidos dentro de su huella | CUMPLE |
 | PDF sin borrosidad | Seis PDF A1 vectoriales, cero imagenes raster | CUMPLE |
+| Rutas y circuitos legibles | Carriles separados, etiquetas de circuito y unifilar ortogonal | CUMPLE |
+| Cotizacion automatica | BOM separado, evidencia JSON/CSV/Markdown y filtros seguros | CUMPLE COMO CONSULTA COMERCIAL |
 
 ## Resultados de control
 
 - Calculo electrico: PASS.
 - Alumbrado por lumenes: PASS.
 - Metrados/presupuesto reproducible: PASS.
+- Cotizacion automatica: 41 consultas; 4 `OK`, 30 `SIN_SELECCION` y 7 `NO_ENCONTRADO`; todas requieren revision.
 - Expediente y guia: compilacion LaTeX sin error fatal.
-- Planos: seis paginas A1 vectoriales; los PNG son solo previsualizacion.
-- Pruebas automatizadas: deben permanecer en PASS antes de regenerar el paquete.
+- Expediente: 31 paginas; las capturas de ubicacion son evidencia raster y las seis paginas de planos A1 permanecen vectoriales.
+- Planos: seis paginas A1 vectoriales, sin `WIPEOUT`; los PNG son solo previsualizacion.
+- Pruebas automatizadas: 43 PASS (cotizacion v0/v1, Renzo y Unidad 2).
 
 ## Limite del cierre
 

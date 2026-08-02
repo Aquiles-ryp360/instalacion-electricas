@@ -44,3 +44,11 @@ Cada tienda debe producir candidatos con:
 
 Las salidas deben ser revisables en JSON primero. Luego se agregaran
 exportadores Markdown/XLSX para revision humana y comparativas.
+
+## Modo automático sin API
+
+La opción `--modo heuristico` permite que agentes locales o la aplicación de
+Codex ejecuten el flujo sin interacción y sin una clave de modelo externo. La
+selección es conservadora: exige familia, especificación, precio, disponibilidad
+no negativa y puntaje mínimo. Si falta una condición, no inventa una
+equivalencia y deja la partida para revisión.
