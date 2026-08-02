@@ -6,7 +6,7 @@ docente: "Gregorio Meza Marocho"
 autor_estudiante: "Renzo Gabriel Mamani Galindo"
 modalidad: individual
 propietario: "por confirmar"
-estado: "proyecto iniciado: fuente CAD incorporada, arquitectura preliminar extraida; diseno electrico en desarrollo"
+estado: "anteproyecto desarrollado: cargas, calculos (PASS), planos CAD y expediente compilados en build/; pendiente revision humana competente antes de publicar en entregables"
 
 naturaleza_proyecto:
   tipo: anteproyecto_academico_nuevo
@@ -70,7 +70,10 @@ automatizacion:
   requiere_revision_humana: true
 
 resultados_build:
-  estado: "sin resultados aun"
+  estado: "generados y auditados el 2026-08-02"
+  resumen_calculos: "build/renzo-industrial/resumen-calculos.json (PASS)"
+  planos: "build/renzo-industrial/cad/planos/ (6 laminas IE-01..IE-06 + PDF combinado + manifest.json)"
+  expediente: "build/renzo-industrial/expediente/expediente-renzo-industrial.pdf (23 paginas)"
 
 entregables:
   directorio: entregables

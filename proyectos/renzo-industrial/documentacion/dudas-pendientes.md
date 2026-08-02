@@ -3,6 +3,10 @@
 Preguntas que no deben detener el avance del anteproyecto, pero deben
 responderse antes de publicar entregables.
 
+Estado 2026-08-02: el anteproyecto (calculos, planos y expediente) esta
+compilado y auditado en `build/`; estas dudas son las confirmaciones que
+requieren el estudiante y/o la concesionaria antes de copiar a `entregables/`.
+
 ## Ubicacion y propietario
 
 - [ ] Confirmar distrito, provincia, departamento y direccion del grifo.

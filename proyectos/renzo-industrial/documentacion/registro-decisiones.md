@@ -56,3 +56,32 @@ Formato: `DEC-NNN | fecha | decision | estado`.
   (`planos-electricos-grifo-renzo.pdf`), todo en `build/`.
 - Estado: ejecutado; pendiente de revision humana antes de publicar en
   `entregables/`.
+
+## DEC-008 | 2026-08-02 | Auditoria final del anteproyecto
+
+- Verificacion independiente de calculos (MD, reserva, desbalance, I fase,
+  dV 3F y grupo de emergencia) contra `resumen-calculos.json`: todos PASS.
+- Verificacion de citas CNE-U contra el PDF oficial por coordenadas:
+  Tabla 2 (ampacidades XLPE/EPR 90 C, 3 conductores: valores B1/D del script
+  coinciden valor a valor) y Tabla 14 (Industrial/Comercial 25 W/m2, fd 100%),
+  reglas 050-102, 030-002 y 060-712.
+- Verificacion de trazabilidad: sha256 de `cargas.yaml` == sha256 del
+  `manifest.json` de planos.
+- Veredicto: aceptable como anteproyecto academico; hallazgos menores
+  (proyecto.yaml desactualizado - corregido; propietario/ubicacion/suministro
+  por confirmar; catalogos referenciales; clasificacion de areas por revisar).
+- Estado: ejecutado.
+
+## DEC-009 | 2026-08-02 | Expediente academico completo compilado
+
+- Se crean `expediente/main.tex`, `preambulo.tex` y 9 capitulos
+  (portada, memoria descriptiva, calculos, especificaciones, seguridad y
+  normativa, cronograma, metrados y presupuesto, planos y conclusiones).
+- Datos numericos alimentados desde `generated/datos` (macros + tablas
+  CIRCUITOSTAB/ALIMENTADORESSTAB), sin valores duplicados a mano.
+- Planos anexados con `\includepdf` al final (6 laminas en orientacion
+  horizontal).
+- Salida: `build/renzo-industrial/expediente/expediente-renzo-industrial.pdf`
+  (23 paginas). Compilacion: 2 pasadas pdflatex; solo overfull benignos
+  (< 5 pt).
+- Estado: ejecutado; pendiente revision humana antes de publicar.

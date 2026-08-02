@@ -15,12 +15,23 @@ diseno a desarrollar.
 
 ## Estado
 
-- Proyecto iniciado.
+- Anteproyecto desarrollado y auditado (2026-08-02).
 - Fuente CAD incorporada con huella verificada.
-- Arquitectura preliminar extraida en `arquitectura/datos/layout-grifo.json`.
-- Diseno electrico (cargas, circuitos, canalizaciones, planos) en desarrollo.
-- Pipeline deshabilitado hasta contar con cargas confirmadas, factibilidad y
-  revision humana.
+- Arquitectura extraida en `arquitectura/datos/layout-grifo.json`.
+- Diseno electrico completo: cargas, calculos (PASS), 22 circuitos y
+  3 alimentadores en `diseno-electrico/datos/cargas.yaml`.
+- Planos de anteproyecto IE-01..IE-06 generados en `build/renzo-industrial/cad/planos/`
+  con `manifest.json` (trazabilidad sha256 a cargas.yaml).
+- Expediente academico compilado en `build/renzo-industrial/expediente/expediente-renzo-industrial.pdf`
+  (23 paginas: portada, indice, 8 capitulos y planos anexados).
+- No publicado en `entregables/`: pendiente confirmacion de ubicacion,
+  propietario, suministro, factibilidad e Icc, y revision humana competente
+  (incluye clasificacion de areas peligrosas como propuesta academica).
+
+## Entregables pendientes
+
+Ver `documentacion/dudas-pendientes.md` para la lista completa de confirmaciones
+requeridas antes de copiar `build/` a `entregables/`.
 
 ## Como empezar una nueva sesion
 
