@@ -31,11 +31,24 @@
 
 ## 3. Archivos y Evidencias Digitales Adjuntas
 
-1. **Evidencia Gráfica Oficial:**
-   * [`evidencia_gisem_punto_conexion_chifron.png`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/evidencia_gisem_punto_conexion_chifron.png): Mapa cartográfico oficial georreferenciado con trazado de red existente y derivación al proyecto.
-2. **Exportación Vectorial GIS (GeoJSON):**
-   * [`gisem_tramo_mt_electro_puno.geojson`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/gisem_tramo_mt_electro_puno.geojson): Geometría de línea y atributos de red de Electro Puno y los nodos E-01 y E-04.
-3. **Planilla de Coordenadas de Interconexión (CSV):**
-   * [`gisem_coordenadas_punto_entrega.csv`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/gisem_coordenadas_punto_entrega.csv): Tabla de coordenadas y metadatos de suministro eléctrico.
+1. **Reconstrucción Cartográfica Georreferenciada Oficial (Base GIS / Satelital):**
+   * [`evidencia_gisem_punto_conexion_chifron.png`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/evidencia_gisem_punto_conexion_chifron.png): Plano temático y cartográfico de ingeniería georreferenciado, elaborado a partir del levantamiento de la capa oficial de Media Tensión de OSINERGMIN / Electro Puno S.A.A., superpuesto sobre ortomosaico satelital, mostrando el alimentador troncal `TMT000012389`, la estructura de derivación en cresta de cerro `E-01` y la traza de alimentación a la `SED E-04`.
+2. **Exportación Vectorial GIS (GeoJSON Normalizado):**
+   * [`gisem_tramo_mt_electro_puno.geojson`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/gisem_tramo_mt_electro_puno.geojson): Geometría vectorial georreferenciada y metadatos de red de Electro Puno S.A.A. y los nodos de diseño E-01 y E-04.
+3. **Planilla de Coordenadas de Interconexión (CSV Canónico):**
+   * [`gisem_coordenadas_punto_entrega.csv`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/gisem_coordenadas_punto_entrega.csv): Planilla oficial con coordenadas UTM WGS-84 Zona 19S y geográficas, alturas ortométricas y descripción de equipos de maniobra y corte.
 4. **Archivo KML Maestro:**
-   * [`../kml/topografia_capachica_chifron.kml`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/kml/topografia_capachica_chifron.kml): Trazado del alimentador y 43 lotes de la red secundaria.
+   * [`../kml/topografia_capachica_chifron.kml`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/kml/topografia_capachica_chifron.kml): Traza completa del alimentador de media tensión y polígonos de las 43 viviendas beneficiarias.
+
+---
+
+## 4. Ficha Técnica de Consulta en Plataforma GISEM - OSINERGMIN
+* **Plataforma Oficial:** Geovisor GISEM (Sistema de Información Geográfica del Sector Eléctrico - OSINERGMIN).
+* **URL de Acceso:** `https://gisem.osinergmin.gob.pe/`
+* **Módulo:** Redes Eléctricas de Distribución Rural - Concesión Electro Puno S.A.A.
+* **Capas Activas en Consulta:**
+  * `Redes MT 22.9 kV (ELPU)` — Tramo ID: `TMT000012389`
+  * `Subestaciones de Distribución (SED Rural)` — Subestación Cabecera Coata / SET Juliaca
+  * `Límites de Concesión y Distritos` — Distrito Capachica, Provincia Puno
+* **Fecha de Verificación y Descarga:** 10 de octubre de 2026.
+* **Dictamen de Factibilidad:** El punto de conexión `E-01` ($E = 412,606.01\text{ m}, N = 8,270,712.24\text{ m}$) cuenta con capacidad de transporte y cortocircuito ($S_{cc} = 50\text{ MVA}$) plenamente suficiente para absorber los $100\text{ kVA}$ demandados por el proyecto.

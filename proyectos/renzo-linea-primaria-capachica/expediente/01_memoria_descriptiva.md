@@ -72,7 +72,7 @@ La alimentación eléctrica en media tensión se deriva de la infraestructura tr
 * **Tensión Nominal de Operación:** $22.9\text{ kV}$ entre fases, sistema trifásico 3 hilos ($3\phi$), $60\text{ Hz}$.
 * **Punto de Conexión y Derivación (TAP):** Estructura existente $\mathbf{E-01}$ ($E = 412,606.01\text{ m E}, N = 8,270,712.24\text{ m N}$, cota $3,924.17\text{ msnm}$, Lat: $-15.640067^\circ\text{ S}$, Lon: $-69.815400^\circ\text{ W}$, WGS-84 Zona 19S), ubicada en la cresta del Cerro Chifrón.
 * **Equipamiento de Protección en Nodo E-01:** Tres (03) cortacircuitos fusibles tipo Cut-Out $27\text{ kV} / 100\text{ A}$ (BIL $150\text{ kV}$) con fusibles tipo chicote K de $4\text{ A}$, tres (03) descargadores de sobretensión poliméricos de óxido de zinc (ZnO) $21\text{ kV} / 10\text{ kA}$ y puesta a tierra PAT-3.
-* **Evidencias Cartográficas Oficiales Adjuntas:** Mapa oficial georreferenciado [`fuentes/gisem/evidencia_gisem_punto_conexion_chifron.png`](../fuentes/gisem/evidencia_gisem_punto_conexion_chifron.png), capa vectorial GIS [`fuentes/gisem/gisem_tramo_mt_electro_puno.geojson`](../fuentes/gisem/gisem_tramo_mt_electro_puno.geojson) y planilla [`fuentes/gisem/gisem_coordenadas_punto_entrega.csv`](../fuentes/gisem/gisem_coordenadas_punto_entrega.csv).
+* **Evidencias Cartográficas Oficiales Adjuntas:** Reconstrucción cartográfica georreferenciada oficial [`fuentes/gisem/evidencia_gisem_punto_conexion_chifron.png`](../fuentes/gisem/evidencia_gisem_punto_conexion_chifron.png), capa vectorial GIS [`fuentes/gisem/gisem_tramo_mt_electro_puno.geojson`](../fuentes/gisem/gisem_tramo_mt_electro_puno.geojson) y planilla [`fuentes/gisem/gisem_coordenadas_punto_entrega.csv`](../fuentes/gisem/gisem_coordenadas_punto_entrega.csv).
 
 ---
 

@@ -14,9 +14,9 @@
 * **Norma Técnica:** NTP 339.027 y especificaciones técnicas de Electro Puno S.A.A.
 * **Características:** Sección tronco-cónica, acabado liso exterior libre de cangrejeras y fisuras, concreto con resistencia a la compresión $f'_c \ge 350\text{ kg/cm}^2$.
 * **Tipología y aplicación en el proyecto:**
-  * **C.A.C. 12 m / 400 daN:** Utilizado en estructuras de anclaje, derivación, ángulos pronunciados ($> 30^\circ$) y terminal de la línea primaria (E-01, E-06, E-07, E-08, E-09).
-  * **C.A.C. 12 m / 300 daN:** Utilizado en estructuras de alineamiento y suspensión de la línea primaria (E-02, E-03, E-05).
-  * **C.A.C. 13 m / 400 daN:** Postes gemelos biposte para la Subestación de Distribución SAB-1 en estructura E-04.
+  * **C.A.C. 12 m / 400 daN:** Utilizado en estructuras de anclaje, derivación, ángulos pronunciados ($> 30^\circ$) y terminal de la línea primaria (E-01, E-05, E-06, E-08, E-09). Total: 5 unidades.
+  * **C.A.C. 12 m / 300 daN:** Utilizado en estructuras de alineamiento y suspensión de la línea primaria (E-02, E-03, E-07). Total: 3 unidades.
+  * **C.A.C. 13 m / 400 daN:** Postes gemelos biposte para la Subestación de Distribución SAB-1 en estructura E-04. Total: 2 unidades.
   * **C.A.C. 8 m / 200 daN:** Utilizado en redes secundarias de baja tensión a lo largo de calles y caminos peatonales/locales (32 unidades).
   * **C.A.C. 9 m / 300 daN:** Utilizado en redes secundarias en cruces vehiculares carrozables para garantizar gálibo vertical libre $\ge 7.00\text{ m}$ (4 unidades).
 
@@ -24,8 +24,11 @@
 * **Norma:** ASTM B399 / NTP 370.258.
 * **Designación comercial:** "Truxa" homogéneo de aleación de aluminio (Al-Mg-Si).
 * **Construcción:** 7 hilos cableados concéntricamente de $2.50\text{ mm}$ de diámetro cada uno.
-* **Carga de rotura:** $1,040.80\text{ kgf}$.
-* **Resistencia eléctrica:** $0.986\ \Omega/\text{km}$ a $20^\circ\text{C}$.
+* **Carga de rotura mínima:** $1,040.0\text{ kgf}$ ($10.20\text{ kN}$).
+* **Peso unitario del conductor:** $0.0945\text{ kg/m}$.
+* **Resistencia eléctrica en C.C.:** $0.963\ \Omega/\text{km}$ a $20^\circ\text{C}$ ($0.986\ \Omega/\text{km}$ a $50^\circ\text{C}$).
+* **Módulo de elasticidad inicial / final:** $E = 6,000\text{ kg/mm}^2$.
+* **Coeficiente de dilatación térmica:** $\alpha = 23.0 \times 10^{-6}\ ^\circ\text{C}^{-1}$.
 
 ### 1.3 Conductor Aislado Autoportante de Baja Tensión (CAAI)
 * **Norma:** NTP 370.254.

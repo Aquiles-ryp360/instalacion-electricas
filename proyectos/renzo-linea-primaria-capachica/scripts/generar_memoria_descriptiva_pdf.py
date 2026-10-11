@@ -398,9 +398,9 @@ def build_pdf(output_pdf_path):
     story.append(Paragraph("• <b>Periodo de Proyección (n):</b> 20 años (Horizonte de diseño: 2026 – 2046).", bullet_style))
     story.append(Paragraph("• <b>Factor de Crecimiento Compuesto:</b> (1 + TC)<sup>n</sup> = (1 + 0.03)<sup>20</sup> = <b>1.80611</b>.", bullet_style))
     story.append(Paragraph("• <b>Calificación Eléctrica Asignada:</b> 0.90 kW / usuario.", bullet_style))
-    story.append(Paragraph("• <b>Tensión de Distribución BT:</b> V = 220 V (monofásico) / 380 V (trifásico).", bullet_style))
+    story.append(Paragraph("• <b>Tensión de Distribución BT:</b> Sistema trifásico 380/220 V (Dyn5, 60 Hz).", bullet_style))
     story.append(Paragraph("• <b>Factor de Potencia de Diseño:</b> cos φ = 0.90.", bullet_style))
-    story.append(Paragraph("• <b>Alumbrado Público:</b> Lámparas LED/Sodio normalizadas de 60 W (0.06 kW).", bullet_style))
+    story.append(Paragraph("• <b>Alumbrado Público:</b> Lámparas LED normalizadas de 60 W (0.06 kW).", bullet_style))
 
     story.append(Paragraph("5.2 Algoritmo de Cálculo Paso a Paso", h3_style))
     f_box = [
@@ -409,7 +409,7 @@ def build_pdf(output_pdf_path):
         [Paragraph("3. Alumbrado Público (Lámparas):", meta_label), Paragraph("N° lum = (3.3 · NU<sub>f</sub>) / 18 = (3.3 · 78) / 18 = 14.30 → <b>15 luminarias</b>", meta_val)],
         [Paragraph("4. Potencia Alumbrado:", meta_label), Paragraph("Potencia<sub>alum</sub> = N° lum · 0.06 kW = 15 · 0.06 kW = <b>0.90 kW</b>", meta_val)],
         [Paragraph("5. Demanda Máxima Total Activa:", meta_label), Paragraph("Total<sub>kW</sub> = Potencia<sub>part</sub> + Potencia<sub>alum</sub> = 70.20 + 0.90 = <b>71.10 kW</b>", meta_val)],
-        [Paragraph("6. Corriente Nominal de Servicio:", meta_label), Paragraph("I = (Total<sub>kW</sub> · 1000) / (V · cos φ) = (71.10 · 1000) / (220 · 0.90) = <b>359.09 A</b>", meta_val)],
+        [Paragraph("6. Corriente Nominal Trifásica de Servicio:", meta_label), Paragraph("I<sub>3φ</sub> = (Total<sub>kW</sub> · 1000) / (√3 · V<sub>L</sub> · cos φ) = (71.10 · 1000) / (√3 · 380 · 0.90) = <b>120.03 A</b>", meta_val)],
         [Paragraph("7. Potencia Aparente Requerida:", meta_label), Paragraph("Potencia<sub>kVA</sub> = Total<sub>kW</sub> / cos φ = 71.10 / 0.90 = <b>79.00 kVA</b>", meta_val)],
         [Paragraph("8. Selección del Transformador:", meta_label), Paragraph("Comercial normalizado inmediato superior: <b>S<sub>nom</sub> = 100 kVA (22.9 / 0.38 - 0.22 kV)</b>", meta_val)],
     ]
@@ -437,51 +437,40 @@ def build_pdf(output_pdf_path):
             Paragraph("N° Lum.<br/>(AP)", th_style),
             Paragraph("Pot. AP<br/>(kW)", th_style),
             Paragraph("Demanda<br/>Total (kW)", th_style),
-            Paragraph("Corriente<br/>I (A)", th_style)
+            Paragraph("Corriente<br/>I<sub>3φ</sub> (A)", th_style)
         ],
         [
             Paragraph("<b>C-1</b>", td_center),
-            Paragraph("Sector Sur / Pasaje", td_left),
-            Paragraph("21", td_center),
-            Paragraph("38", td_center),
-            Paragraph("34.20", td_right),
-            Paragraph("7", td_center),
-            Paragraph("0.42", td_right),
-            Paragraph("34.62", td_right),
-            Paragraph("174.85", td_right)
+            Paragraph("Sector Troncal Norte + Lote C31 (Playa y Muelle)", td_left),
+            Paragraph("31", td_center),
+            Paragraph("56", td_center),
+            Paragraph("50.40", td_right),
+            Paragraph("10", td_center),
+            Paragraph("0.60", td_right),
+            Paragraph("51.00", td_right),
+            Paragraph("86.13", td_right)
         ],
         [
             Paragraph("<b>C-2</b>", td_center),
-            Paragraph("Sector Centro / Eje Troncal", td_left),
-            Paragraph("11", td_center),
-            Paragraph("20", td_center),
-            Paragraph("18.00", td_right),
-            Paragraph("4", td_center),
-            Paragraph("0.24", td_right),
-            Paragraph("18.24", td_right),
-            Paragraph("92.12", td_right)
-        ],
-        [
-            Paragraph("<b>C-3</b>", td_center),
-            Paragraph("Sector Norte / Camino Playa", td_left),
-            Paragraph("11", td_center),
-            Paragraph("20", td_center),
-            Paragraph("18.00", td_right),
-            Paragraph("4", td_center),
-            Paragraph("0.24", td_right),
-            Paragraph("18.24", td_right),
-            Paragraph("92.12", td_right)
+            Paragraph("Carretera al Fondo / Pasaje Sur", td_left),
+            Paragraph("12", td_center),
+            Paragraph("22", td_center),
+            Paragraph("19.80", td_right),
+            Paragraph("5", td_center),
+            Paragraph("0.30", td_right),
+            Paragraph("20.10", td_right),
+            Paragraph("33.95", td_right)
         ],
         [
             Paragraph("<b>TOTAL</b>", td_center),
-            Paragraph("<b>Red Completa Chifrón</b>", td_left),
+            Paragraph("<b>Red Completa Chifrón (2 Circuitos BT)</b>", td_left),
             Paragraph("<b>43</b>", td_center),
             Paragraph("<b>78</b>", td_center),
             Paragraph("<b>70.20</b>", td_right),
             Paragraph("<b>15</b>", td_center),
             Paragraph("<b>0.90</b>", td_right),
             Paragraph("<b>71.10</b>", td_right),
-            Paragraph("<b>359.09</b>", td_right)
+            Paragraph("<b>120.03</b>", td_right)
         ]
     ]
     t_cargas = Table(tabla_cargas_data, colWidths=[1.5*cm, 4.3*cm, 1.4*cm, 1.4*cm, 2.0*cm, 1.4*cm, 1.6*cm, 2.0*cm, 1.8*cm])
