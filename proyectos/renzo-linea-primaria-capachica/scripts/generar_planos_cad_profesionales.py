@@ -252,27 +252,26 @@ def generar_plano_p01_profesional(salida_pdf):
                 postes_c1.append({"id": pid, "circuito": "C-1", "este": xe, "norte": yn, "pat": pat, "ret": ret})
                 p_num += 1
 
-    # Procesar Circuito C-2 (Unificación de Rutas 3, 4 y 2)
+    # Procesar Circuito C-2 (EXCLUSIVAMENTE Ruta 3 - Ramal Centro: 184.4 m)
+    # Circuito 3 y Rutas 4 y 2 quedan COMPLETAMENTE ELIMINADAS
     p_num2 = 1
-    for r_clave in ['ruta electrica 3', 'ruta electrica 4', 'ruta electrica 2']:
-        if r_clave not in rutas:
-            continue
-        pts = rutas[r_clave]
-        for i in range(len(pts) - 1):
-            p1 = pts[i]
-            p2 = pts[i+1]
+    if 'ruta electrica 3' in rutas:
+        pts3 = rutas['ruta electrica 3']
+        for i in range(len(pts3) - 1):
+            p1 = pts3[i]
+            p2 = pts3[i+1]
             dist = math.hypot(p2[0] - p1[0], p2[1] - p1[1])
             n_seg = max(1, int(math.ceil(dist / 38.0)))
-            for s in range(n_seg if i == len(pts)-2 else n_seg):
+            for s in range(n_seg if i == len(pts3)-2 else n_seg):
                 ts = s / float(n_seg)
                 xe = p1[0] + ts * (p2[0] - p1[0])
                 yn = p1[1] + ts * (p2[1] - p1[1])
                 if math.hypot(xe - e_sed, yn - n_sed) < 6.0:
                     continue
                 pid = f"P2-{p_num2:02d}"
-                es_fin = (s == 0 and i == 0) or (i == len(pts)-2 and s == n_seg)
+                es_fin = (s == 0 and i == 0) or (i == len(pts3)-2 and s == n_seg)
                 pat = "PAT-1" if (p_num2 % 4 == 0 or es_fin) else None
-                ret = "RET-I" if es_fin or (p_num2 in [4, 8]) else None
+                ret = "RET-I" if es_fin else None
                 postes_c2.append({"id": pid, "circuito": "C-2", "este": xe, "norte": yn, "pat": pat, "ret": ret})
                 p_num2 += 1
 
@@ -309,18 +308,12 @@ def generar_plano_p01_profesional(salida_pdf):
     if 'ruta electrica 1' in rutas:
         pts1 = rutas['ruta electrica 1']
         ax_map.plot([p[0] for p in pts1], [p[1] for p in pts1], color='#1D4ED8', linewidth=2.6, zorder=3,
-                    label='Circuito C-1 BT (Troncal Norte Playa: CAAI 3x35+25+16 mm²)')
-    # 2. Circuito C-2 (Ramal Centro y Sur - CAAI 3x25+25+16 mm²)
+                    label='Circuito C-1 BT (Troncal Norte Ruta 1: CAAI 3x35+25+16 mm²)')
+    # 2. Circuito C-2 (Ramal Centro - CAAI 3x25+25+16 mm²)
     if 'ruta electrica 3' in rutas:
         pts3 = [(e_sed, n_sed)] + rutas['ruta electrica 3']
         ax_map.plot([p[0] for p in pts3], [p[1] for p in pts3], color='#B45309', linewidth=2.4, zorder=3,
-                    label='Circuito C-2 BT (Ramal Centro y Sur: CAAI 3x25+25+16 mm²)')
-    if 'ruta electrica 4' in rutas:
-        pts4 = [(e_sed, n_sed)] + rutas['ruta electrica 4']
-        ax_map.plot([p[0] for p in pts4], [p[1] for p in pts4], color='#B45309', linewidth=2.4, zorder=3)
-    if 'ruta electrica 2' in rutas:
-        pts2 = rutas['ruta electrica 2']
-        ax_map.plot([p[0] for p in pts2], [p[1] for p in pts2], color='#B45309', linewidth=2.4, linestyle=':', zorder=3)
+                    label='Circuito C-2 BT (Ramal Centro Ruta 3: CAAI 3x25+25+16 mm²)')
 
     # Dibujar Postes de BT del Circuito C-1
     for p in postes_c1:
@@ -393,7 +386,7 @@ def generar_plano_p01_profesional(salida_pdf):
     simbolos_cad = [
         ("Red Primaria MT 22.9 kV (AAAC 35 mm²)", '#0284C7', '-', 'line'),
         ("Circuito C-1 BT Troncal Norte (CAAI 3x35+25+16 mm²)", '#1D4ED8', '-', 'line'),
-        ("Circuito C-2 BT Ramal Centro-Sur (CAAI 3x25+25+16 mm²)", '#B45309', '-', 'line'),
+        ("Circuito C-2 BT Ramal Centro (CAAI 3x25+25+16 mm²)", '#B45309', '-', 'line'),
         ("Acometida Concéntrica Aérea SET 2x4 mm²", '#475569', '--', 'line'),
         ("Subestación Distribución Biposte SAB-1 (100 kVA)", '#B91C1C', 'sed', 'sed'),
         ("Poste Concreto C.A.C. BT 8m/200daN (Bloque DGE)", '#0F172A', 'poste', 'poste'),
@@ -439,8 +432,8 @@ def generar_plano_p01_profesional(salida_pdf):
         ("Tasa Crecimiento y Horizonte", "3.0 % anual | 20 años"),
         ("Usuarios Proyectados (NU_f)", "78 abonados"),
         ("Calificación Eléctrica Asignada", "0.90 kW / abonado"),
-        ("Circuito C-1 (Norte: 44 hab / 9 lum)", "40.14 kW (44.60 kVA)"),
-        ("Circuito C-2 (Centro-Sur: 34 hab / 6 lum)", "30.96 kW (34.40 kVA)"),
+        ("Circuito C-1 (Norte Ruta 1: 51 hab / 10 lum)", "46.50 kW (51.67 kVA)"),
+        ("Circuito C-2 (Centro Ruta 3: 27 hab / 5 lum)", "24.60 kW (27.33 kVA)"),
         ("MÁXIMA DEMANDA ACTIVA TOTAL", "71.10 kW"),
         ("Factor de Potencia de Diseño", "cos φ = 0.90"),
         ("POTENCIA APARENTE DEMANDADA", "79.00 kVA"),
@@ -552,8 +545,8 @@ def generar_plano_u01_profesional(salida_pdf):
 
     # EXACTAMENTE 2 CIRCUITOS DE DISTRIBUCIÓN + ALUMBRADO PÚBLICO:
     circuitos_2c = [
-        (0.30, "C-1", "3x80 A", "Troncal Norte (Playa Chifrón)\n44 usuarios proyectados\nDemanda: 40.14 kW (44.6 kVA)\nConductor: CAAI 3x35+25+16 mm²\nLongitud: 819.7 m | ΔV = 3.82%"),
-        (0.52, "C-2", "3x80 A", "Ramal Centro y Sur (Unificado)\n34 usuarios proyectados\nDemanda: 30.96 kW (34.4 kVA)\nConductor: CAAI 3x25+25+16 mm²\nLongitud: 469.2 m | ΔV = 1.68%"),
+        (0.30, "C-1", "3x100 A", "Troncal Norte (Ruta 1 - Playa)\n51 usuarios proyectados\nDemanda: 46.50 kW (51.7 kVA)\nConductor: CAAI 3x35+25+16 mm²\nLongitud: 819.7 m | ΔV = 3.82%"),
+        (0.52, "C-2", "3x63 A", "Ramal Centro (Ruta 3)\n27 usuarios proyectados\nDemanda: 24.60 kW (27.3 kVA)\nConductor: CAAI 3x25+25+16 mm²\nLongitud: 184.4 m | ΔV = 1.15%"),
         (0.72, "AP", "2x16 A", "Alumbrado Público Rural\n15 Luminarias LED 60W\nContactor 25A + Fotocelda\nConductor: CAAI 1x16 mm²\nDemanda: 0.90 kW")
     ]
     for xc, cid, itm, det in circuitos_2c:

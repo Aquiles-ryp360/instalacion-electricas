@@ -128,49 +128,24 @@ def generar_mapa_chifron_satelital(out_dir):
     ax.plot([lon_mt_inicio, lon_sed], [lat_mt_inicio, lat_sed], color='yellow', linewidth=3.0, linestyle='--',
             label='Línea Primaria MT 22.9 kV (Llegada a SED)', zorder=4)
     
-    # Rutas Eléctricas en Baja Tensión partiendo desde la SED:
-    # 1. Ruta Eléctrica 1 (Circuito C-1 Troncal Norte hacia C1 a C30)
+    # Rutas Eléctricas en Baja Tensión partiendo desde la SED (ESTRICTAMENTE 2 CIRCUITOS):
+    # 1. Circuito C-1 (Ruta Eléctrica 1 - Troncal Norte Playa: 819.7 m)
     if 'ruta electrica 1' in rutas:
         pts = rutas['ruta electrica 1']
         lons = [p[0] for p in pts]
         lats = [p[1] for p in pts]
-        ax.plot(lons, lats, color='cyan', linewidth=2.8, label='Circuito C-1 BT (Ruta 1 Troncal Norte: 819.7 m)', zorder=3)
-        # Postes intermedios representativos a lo largo de la ruta 1
+        ax.plot(lons, lats, color='cyan', linewidth=2.8, label='Circuito C-1 BT (Troncal Norte: 819.7 m - 51 hab)', zorder=3)
         ax.plot(lons[::2], lats[::2], 'o', color='cyan', markersize=4, zorder=5)
 
-    # 2. Ruta Eléctrica 3 (Circuito C-2 Sector Centro hacia C31, C33-C37)
-    if 'ruta electrica 3' in rutas:
-        pts3 = rutas['ruta electrica 3']
-        lons3 = [lon_sed] + [p[0] for p in pts3]
-    # 2. Rutas Eléctricas en Baja Tensión partiendo desde la SED (2 CIRCUITOS):
-    # Circuito C-1 (Ruta 1 Troncal Norte)
-    if 'ruta electrica 1' in rutas:
-        pts = rutas['ruta electrica 1']
-        lons = [p[0] for p in pts]
-        lats = [p[1] for p in pts]
-        ax.plot(lons, lats, color='cyan', linewidth=2.8, label='Circuito C-1 BT (Troncal Norte: 819.7 m - 44 hab)', zorder=3)
-        ax.plot(lons[::2], lats[::2], 'o', color='cyan', markersize=4, zorder=5)
-
-    # Circuito C-2 (Rutas 3, 4 y 2 Ramal Centro y Sur)
+    # 2. Circuito C-2 (Ruta Eléctrica 3 - Ramal Centro: 184.4 m)
     if 'ruta electrica 3' in rutas:
         pts3 = rutas['ruta electrica 3']
         lons3 = [lon_sed] + [p[0] for p in pts3]
         lats3 = [lat_sed] + [p[1] for p in pts3]
-        ax.plot(lons3, lats3, color='#F97316', linewidth=2.4, label='Circuito C-2 BT (Ramal Centro-Sur: 469.2 m - 34 hab)', zorder=3)
+        ax.plot(lons3, lats3, color='#F97316', linewidth=2.4, label='Circuito C-2 BT (Ramal Centro: 184.4 m - 27 hab)', zorder=3)
         ax.plot(lons3, lats3, 'o', color='#F97316', markersize=4, zorder=5)
 
-    if 'ruta electrica 4' in rutas:
-        pts4 = rutas['ruta electrica 4']
-        lons4 = [lon_sed] + [p[0] for p in pts4]
-        lats4 = [lat_sed] + [p[1] for p in pts4]
-        ax.plot(lons4, lats4, color='#F97316', linewidth=2.4, zorder=3)
-        ax.plot(lons4, lats4, 'o', color='#F97316', markersize=4, zorder=5)
-        
-    if 'ruta electrica 2' in rutas:
-        pts2 = rutas['ruta electrica 2']
-        lons2 = [p[0] for p in pts2]
-        lats2 = [p[1] for p in pts2]
-        ax.plot(lons2, lats2, color='#F97316', linewidth=2.4, linestyle=':', zorder=3)
+    # Rutas 4 y 2 han sido TOTALMENTE ELIMINADAS del proyecto por definición topológica.
 
     # Dibujar las 43 Viviendas Censadas
     lons_ab = [a[1] for a in abonados]
@@ -204,9 +179,9 @@ def generar_mapa_chifron_satelital(out_dir):
 
 def generar_grafico_cargas(out_dir):
     fig, ax = plt.subplots(figsize=(8, 4.5), dpi=300)
-    circuitos = ['Circuito C-1 (Troncal Norte)\n(44 abonados proyectados)', 'Circuito C-2 (Ramal Centro-Sur)\n(34 abonados proyectados)']
-    pot_part = [39.60, 30.60]
-    pot_ap = [0.54, 0.36]
+    circuitos = ['Circuito C-1 (Troncal Norte)\n(51 abonados proyectados)', 'Circuito C-2 (Ramal Centro)\n(27 abonados proyectados)']
+    pot_part = [45.90, 24.30]
+    pot_ap = [0.60, 0.30]
     
     bars1 = ax.bar(circuitos, pot_part, label='Servicio Particular (kW)', color='#1E3A8A', width=0.40)
     bars2 = ax.bar(circuitos, pot_ap, bottom=pot_part, label='Alumbrado Público (kW)', color='#D97706', width=0.40)
