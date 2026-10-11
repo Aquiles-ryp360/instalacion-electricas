@@ -93,119 +93,118 @@ def cargar_abonados_csv(csv_path):
     return abonados
 
 # -------------------------------------------------------------------------
-# BLOQUES GRÁFICOS CAD OFICIALES UNE-EN 60617 / DGE-MEM PERÚ
+# BLOQUES GRÁFICOS CAD OFICIALES UNE-EN 60617 / DGE-MEM PERÚ (ESCALA AFINADA)
 # -------------------------------------------------------------------------
-def dibujar_bloque_poste_cad(ax, x, y, radio=1.2, etiqueta="", ap=False, dx_ap=3.5, dy_ap=1.0, pos_etiqueta='top-left'):
+def dibujar_bloque_poste_cad(ax, x, y, radio=0.65, etiqueta="", ap=False, dx_ap=1.6, dy_ap=0.5, pos_etiqueta='top-left'):
     """
     Dibuja un poste de concreto C.A.C. según Norma DGE 09-91-20 / UNE-EN 60617-11:
-    - Círculo limpio de concreto con centro geodésico definido.
+    - Círculo de concreto limpio a escala adecuada con centro coordenado.
     - Símbolo oficial de luminaria AP (UNE-EN 60617-11 nº 11-15-03: círculo con 'X' inscrita).
-    - Etiqueta de código con máscara anticolisión para legibilidad total.
+    - Etiqueta de código con máscara anticolisión ajustada.
     """
-    c = patches.Circle((x, y), radius=radio, facecolor='#FFFFFF', edgecolor='#0F172A', linewidth=1.1, zorder=16)
+    c = patches.Circle((x, y), radius=radio, facecolor='#FFFFFF', edgecolor='#0F172A', linewidth=0.8, zorder=16)
     ax.add_patch(c)
-    ax.plot(x, y, marker='.', color='#0F172A', markersize=3.0, zorder=17)
+    ax.plot(x, y, marker='.', color='#0F172A', markersize=2.0, zorder=17)
     
     # Conjunto de Alumbrado Público: Pastoral con Luminaria LED UNE 11-15-03
     if ap:
         x_lum = x + dx_ap
         y_lum = y + dy_ap
-        ax.plot([x, x_lum], [y, y_lum], color='#334155', linewidth=1.1, zorder=14)
-        r_lum = 0.95
-        lum = patches.Circle((x_lum, y_lum), radius=r_lum, facecolor='#FEF9C3', edgecolor='#CA8A04', linewidth=1.0, zorder=17)
+        ax.plot([x, x_lum], [y, y_lum], color='#334155', linewidth=0.75, zorder=14)
+        r_lum = 0.50
+        lum = patches.Circle((x_lum, y_lum), radius=r_lum, facecolor='#FEF9C3', edgecolor='#CA8A04', linewidth=0.75, zorder=17)
         ax.add_patch(lum)
         # Aspa 'X' normalizada inscrita (UNE-EN 60617-11 nº 11-15-03 / DGE 09-91-24)
         d = r_lum * 0.68
-        ax.plot([x_lum - d, x_lum + d], [y_lum - d, y_lum + d], color='#CA8A04', linewidth=0.85, zorder=18)
-        ax.plot([x_lum - d, x_lum + d], [y_lum + d, y_lum - d], color='#CA8A04', linewidth=0.85, zorder=18)
+        ax.plot([x_lum - d, x_lum + d], [y_lum - d, y_lum + d], color='#CA8A04', linewidth=0.6, zorder=18)
+        ax.plot([x_lum - d, x_lum + d], [y_lum + d, y_lum - d], color='#CA8A04', linewidth=0.6, zorder=18)
         
     if etiqueta:
         if pos_etiqueta == 'top-left':
-            ex, ey = x - radio - 1.2, y + radio + 1.2
+            ex, ey = x - radio - 0.9, y + radio + 0.9
             ha, va = 'right', 'center'
         elif pos_etiqueta == 'top-right':
-            ex, ey = x + radio + 1.2, y + radio + 1.2
+            ex, ey = x + radio + 0.9, y + radio + 0.9
             ha, va = 'left', 'center'
         elif pos_etiqueta == 'bottom-left':
-            ex, ey = x - radio - 1.2, y - radio - 1.2
+            ex, ey = x - radio - 0.9, y - radio - 0.9
             ha, va = 'right', 'center'
         elif pos_etiqueta == 'bottom-right':
-            ex, ey = x + radio + 1.2, y - radio - 1.2
+            ex, ey = x + radio + 0.9, y - radio - 0.9
             ha, va = 'left', 'center'
         elif pos_etiqueta == 'top':
-            ex, ey = x, y + radio + 1.5
+            ex, ey = x, y + radio + 1.1
             ha, va = 'center', 'bottom'
         elif pos_etiqueta == 'bottom':
-            ex, ey = x, y - radio - 1.5
+            ex, ey = x, y - radio - 1.1
             ha, va = 'center', 'top'
         else:
-            ex, ey = x + radio + 1.2, y + radio + 1.2
+            ex, ey = x + radio + 0.9, y + radio + 0.9
             ha, va = 'left', 'center'
             
-        ax.text(ex, ey, etiqueta, fontsize=4.6, fontweight='bold', color='#0F172A', ha=ha, va=va,
-                bbox=dict(boxstyle='square,pad=0.12', fc='white', ec='#64748B', lw=0.4, alpha=0.96), zorder=22)
+        ax.text(ex, ey, etiqueta, fontsize=3.8, fontweight='bold', color='#0F172A', ha=ha, va=va,
+                bbox=dict(boxstyle='square,pad=0.10', fc='white', ec='#64748B', lw=0.35, alpha=0.96), zorder=22)
 
 def dibujar_bloque_sed_cad(ax, x, y):
     """
     Dibuja la Subestación Biposte SAB-1 en planta con simbología normalizada UNE-EN 60617-6 nº 06-09-01:
-    - 2 Postes C.A.C. 13/400.
-    - Plataforma estructural de perfiles de acero.
+    - 2 Postes C.A.C. 13/400 afinados.
+    - Plataforma estructural portatransformador.
     - Símbolo unifilar oficial de transformador: Dos círculos entrelazados.
     """
-    dx = 1.6
+    dx = 1.1
     for px in [x - dx, x + dx]:
-        c = patches.Circle((px, y), radius=1.5, facecolor='white', edgecolor='#B91C1C', linewidth=1.2, zorder=20)
+        c = patches.Circle((px, y), radius=0.85, facecolor='white', edgecolor='#B91C1C', linewidth=0.9, zorder=20)
         ax.add_patch(c)
-        ax.plot(px, y, marker='.', color='#B91C1C', markersize=3.2, zorder=21)
+        ax.plot(px, y, marker='.', color='#B91C1C', markersize=2.2, zorder=21)
     # Plataforma portatransformador
-    rect_plat = patches.Rectangle((x - 3.2, y - 0.8), 6.4, 1.6, facecolor='#FEE2E2', edgecolor='#B91C1C', linewidth=1.0, zorder=19)
+    rect_plat = patches.Rectangle((x - 2.0, y - 0.5), 4.0, 1.0, facecolor='#FEE2E2', edgecolor='#B91C1C', linewidth=0.8, zorder=19)
     ax.add_patch(rect_plat)
     # Símbolo oficial de transformador UNE-EN 60617-6 nº 06-09-01 (dos círculos entrelazados)
-    r_trafo = 1.15
-    c_prim = patches.Circle((x, y + 0.45), radius=r_trafo, facecolor='none', edgecolor='#B45309', linewidth=1.2, zorder=22)
-    c_sec = patches.Circle((x, y - 0.45), radius=r_trafo, facecolor='none', edgecolor='#1D4ED8', linewidth=1.2, zorder=22)
+    r_trafo = 0.65
+    c_prim = patches.Circle((x, y + 0.28), radius=r_trafo, facecolor='none', edgecolor='#B45309', linewidth=0.85, zorder=22)
+    c_sec = patches.Circle((x, y - 0.28), radius=r_trafo, facecolor='none', edgecolor='#1D4ED8', linewidth=0.85, zorder=22)
     ax.add_patch(c_prim)
     ax.add_patch(c_sec)
 
-def dibujar_bloque_pat_cad(ax, x, y, dx=0, dy=-4.5):
+def dibujar_bloque_pat_cad(ax, x, y, dx=0, dy=-2.2):
     """
     Dibuja el símbolo oficial UNE-EN 60617-2 nº 02-15-01 de Puesta a Tierra:
-    Línea vertical de bajada con 3 barras horizontales paralelas decrecientes.
-    SIN texto flotante en planta para evitar saturación del plano (especificado en planilla).
+    Línea vertical de bajada con 3 barras horizontales paralelas decrecientes de escala fina.
     """
     x_end, y_end = x + dx, y + dy
-    ax.plot([x, x_end], [y, y_end], color='#15803D', linewidth=0.9, zorder=12)
-    ax.plot([x_end - 1.8, x_end + 1.8], [y_end, y_end], color='#15803D', linewidth=1.3, zorder=13)
-    ax.plot([x_end - 1.1, x_end + 1.1], [y_end - 0.7, y_end - 0.7], color='#15803D', linewidth=1.3, zorder=13)
-    ax.plot([x_end - 0.5, x_end + 0.5], [y_end - 1.4, y_end - 1.4], color='#15803D', linewidth=1.3, zorder=13)
+    ax.plot([x, x_end], [y, y_end], color='#15803D', linewidth=0.75, zorder=12)
+    ax.plot([x_end - 0.75, x_end + 0.75], [y_end, y_end], color='#15803D', linewidth=0.85, zorder=13)
+    ax.plot([x_end - 0.45, x_end + 0.45], [y_end - 0.32, y_end - 0.32], color='#15803D', linewidth=0.85, zorder=13)
+    ax.plot([x_end - 0.20, x_end + 0.20], [y_end - 0.64, y_end - 0.64], color='#15803D', linewidth=0.85, zorder=13)
 
-def dibujar_bloque_retenida_cad(ax, x, y, dx=-5.5, dy=-5.5):
+def dibujar_bloque_retenida_cad(ax, x, y, dx=-2.8, dy=-2.8):
     """
     Dibuja la retenida mecánica según Norma DGE 09-91-18 / UNE-EN 60617-11:
-    Cable tensor, aislador de tracción 54-1 y bloque de anclaje perpendicular.
-    SIN texto flotante en planta para evitar saturación del plano (especificado en planilla).
+    Cable tensor, aislador de tracción 54-1 y bloque de anclaje perpendicular a escala proporcionada.
     """
     x_ancla, y_ancla = x + dx, y + dy
-    ax.plot([x, x_ancla], [y, y_ancla], color='#C2410C', linewidth=1.1, zorder=12)
+    ax.plot([x, x_ancla], [y, y_ancla], color='#C2410C', linewidth=0.80, zorder=12)
     xm = (x + x_ancla) / 2.0
     ym = (y + y_ancla) / 2.0
-    ax.plot(xm, ym, marker='s', color='#D97706', markersize=2.8, zorder=13)
+    ax.plot(xm, ym, marker='s', color='#D97706', markersize=2.0, zorder=13)
     ang = math.atan2(dy, dx) + math.pi / 2.0
-    bx = 1.8 * math.cos(ang)
-    by = 1.8 * math.sin(ang)
-    ax.plot([x_ancla - bx, x_ancla + bx], [y_ancla - by, y_ancla + by], color='#9A3412', linewidth=2.4, zorder=13)
+    bx = 0.85 * math.cos(ang)
+    by = 0.85 * math.sin(ang)
+    ax.plot([x_ancla - bx, x_ancla + bx], [y_ancla - by, y_ancla + by], color='#9A3412', linewidth=1.5, zorder=13)
 
-def dibujar_bloque_medidor_cad(ax, x, y, cod="", dx_label=1.6, dy_label=1.0, ha='left'):
-    """Dibuja la caja portamedidor monofásica según simbología DGE 09-91-30 con máscara protectora."""
-    rect = patches.Rectangle((x - 0.7, y - 0.7), 1.4, 1.4, facecolor='#FEF2F2', edgecolor='#DC2626', linewidth=0.8, zorder=18)
+def dibujar_bloque_medidor_cad(ax, x, y, cod="", dx_label=1.2, dy_label=0.8, ha='left'):
+    """Dibuja la caja portamedidor monofásica según simbología DGE 09-91-30 con máscara protectora fina."""
+    d = 0.40
+    rect = patches.Rectangle((x - d, y - d), 2*d, 2*d, facecolor='#FEF2F2', edgecolor='#DC2626', linewidth=0.6, zorder=18)
     ax.add_patch(rect)
-    c = patches.Circle((x, y), radius=0.45, facecolor='white', edgecolor='#DC2626', linewidth=0.5, zorder=19)
+    c = patches.Circle((x, y), radius=0.22, facecolor='white', edgecolor='#DC2626', linewidth=0.45, zorder=19)
     ax.add_patch(c)
-    ax.plot(x, y, marker='.', color='#DC2626', markersize=2.0, zorder=20)
+    ax.plot(x, y, marker='.', color='#DC2626', markersize=1.4, zorder=20)
     if cod:
-        ax.text(x + dx_label, y + dy_label, cod, fontsize=4.2, fontweight='bold', color='#1E293B',
+        ax.text(x + dx_label, y + dy_label, cod, fontsize=3.6, fontweight='bold', color='#1E293B',
                 ha=ha, va='center',
-                bbox=dict(boxstyle='round,pad=0.12', fc='white', ec='#DC2626', lw=0.35, alpha=0.96), zorder=25)
+                bbox=dict(boxstyle='round,pad=0.10', fc='white', ec='#DC2626', lw=0.30, alpha=0.96), zorder=25)
 
 # -------------------------------------------------------------------------
 # RÓTULO FORMAL DE INGENIERÍA (MEMBRETE CAD ESTÁNDAR)
@@ -354,22 +353,22 @@ def generar_plano_p01_profesional(salida_pdf):
     for v_nom, pts in vias:
         xs = [p[0] for p in pts]
         ys = [p[1] for p in pts]
-        ax_map.plot(xs, ys, color='#64748B', linewidth=2.5, linestyle='-', zorder=1)
-        ax_map.plot(xs, ys, color='#E2E8F0', linewidth=0.8, linestyle='--', zorder=2)
+        ax_map.plot(xs, ys, color='#94A3B8', linewidth=1.3, linestyle='-', zorder=1)
+        ax_map.plot(xs, ys, color='#E2E8F0', linewidth=0.45, linestyle='--', zorder=2)
 
     # Línea Primaria MT
     traza_mt = [(412380.00, 8270740.00), (412490.00, 8270725.00), (e_sed, n_sed)]
-    ax_map.plot([p[0] for p in traza_mt], [p[1] for p in traza_mt], color='#0284C7', linewidth=2.8, linestyle='-', zorder=4)
+    ax_map.plot([p[0] for p in traza_mt], [p[1] for p in traza_mt], color='#0284C7', linewidth=1.3, linestyle='-', zorder=4)
     for p_mt in traza_mt[:-1]:
-        ax_map.plot(p_mt[0], p_mt[1], marker='s', color='#0284C7', markersize=5.0, zorder=5)
+        ax_map.plot(p_mt[0], p_mt[1], marker='s', color='#0284C7', markersize=3.2, zorder=5)
 
     # Redes BT
     if 'ruta electrica 1' in rutas:
         pts1 = rutas['ruta electrica 1']
-        ax_map.plot([p[0] for p in pts1], [p[1] for p in pts1], color='#1D4ED8', linewidth=2.6, zorder=3)
+        ax_map.plot([p[0] for p in pts1], [p[1] for p in pts1], color='#1D4ED8', linewidth=1.2, zorder=3)
     if pts_c2:
         pts_c2_draw = [(e_sed, n_sed)] + pts_c2
-        ax_map.plot([p[0] for p in pts_c2_draw], [p[1] for p in pts_c2_draw], color='#B45309', linewidth=2.4, zorder=3)
+        ax_map.plot([p[0] for p in pts_c2_draw], [p[1] for p in pts_c2_draw], color='#B45309', linewidth=1.1, zorder=3)
 
     # Postes del Circuito C-1
     for p in postes_c1:
@@ -386,28 +385,28 @@ def generar_plano_p01_profesional(salida_pdf):
             casas_cercanas = [ab for ab in abonados if math.hypot(ab["este"] - p["este"], ab["norte"] - p["norte"]) < 20.0]
             pos_lbl = 'top-right' if (casas_cercanas and casas_cercanas[0]["este"] < p["este"]) else 'top-left'
         
-        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=1.2, etiqueta=p["id"],
-                                 ap=p.get("ap", False), dx_ap=3.5, dy_ap=1.0, pos_etiqueta=pos_lbl)
+        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=0.65, etiqueta=p["id"],
+                                 ap=p.get("ap", False), dx_ap=1.6, dy_ap=0.5, pos_etiqueta=pos_lbl)
         
         if p["pat"]:
             if pid == 'P1-04':
-                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=4.5, dy=4.5)
+                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=1.8, dy=1.8)
             elif pid == 'P1-12':
-                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=4.5, dy=-4.5)
+                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=1.8, dy=-1.8)
             elif pid == 'P1-16':
-                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=4.0, dy=-3.5)
+                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=1.8, dy=-1.5)
             elif pid == 'P1-19':
-                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=-4.5, dy=5.0)
+                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=-1.8, dy=2.0)
             else:
-                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=-3.5, dy=-3.5)
+                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=-1.6, dy=-1.6)
                 
         if p["ret"]:
             if pid == 'P1-12':
-                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=6.5, dy=6.5)
+                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=2.8, dy=2.8)
             elif pid == 'P1-19':
-                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=5.5, dy=7.5)
+                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=2.5, dy=3.0)
             else:
-                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=-6.0, dy=-6.0)
+                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=-2.8, dy=-2.8)
 
     # Postes del Circuito C-2
     for p in postes_c2:
@@ -418,23 +417,23 @@ def generar_plano_p01_profesional(salida_pdf):
             casas_cercanas = [ab for ab in abonados if math.hypot(ab["este"] - p["este"], ab["norte"] - p["norte"]) < 20.0]
             pos_lbl = 'top-right' if (casas_cercanas and casas_cercanas[0]["este"] < p["este"]) else 'top-left'
             
-        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=1.2, etiqueta=p["id"],
-                                 ap=p.get("ap", False), dx_ap=3.5, dy_ap=1.0, pos_etiqueta=pos_lbl)
+        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=0.65, etiqueta=p["id"],
+                                 ap=p.get("ap", False), dx_ap=1.6, dy_ap=0.5, pos_etiqueta=pos_lbl)
         if p["pat"]:
             if pid == 'P2-01':
-                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=4.5, dy=-5.0)
+                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=1.8, dy=-2.0)
             else:
-                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=3.5, dy=-3.5)
+                dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=1.6, dy=-1.6)
         if p["ret"]:
             if pid == 'P2-01':
-                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=-5.5, dy=5.5)
+                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=-2.6, dy=2.6)
             else:
-                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=5.5, dy=-5.5)
+                dibujar_bloque_retenida_cad(ax_map, p["este"], p["norte"], dx=2.6, dy=-2.6)
 
     # Subestación Biposte SAB-1
     dibujar_bloque_sed_cad(ax_map, e_sed, n_sed)
-    dibujar_bloque_pat_cad(ax_map, e_sed, n_sed, dx=0.0, dy=-12.0)
-    dibujar_bloque_retenida_cad(ax_map, e_sed, n_sed, dx=14.0, dy=-12.0)
+    dibujar_bloque_pat_cad(ax_map, e_sed, n_sed, dx=0.0, dy=-3.2)
+    dibujar_bloque_retenida_cad(ax_map, e_sed, n_sed, dx=4.0, dy=-3.2)
     
     # Rótulo de la Subestación al Suroeste
     ax_map.annotate("SED BIPOSTE SAB-1 (100 kVA)\n22.9 / 0.38 - 0.22 kV (Dyn5)\nE: 412606.01 m, N: 8270712.24 m\nOrigen C-1 (Norte) y C-2 (Sur)",
@@ -490,7 +489,7 @@ def generar_plano_p01_profesional(salida_pdf):
             cand = [p for p in todos_postes if p[3] in ["C-2", "SED"]]
         p_cercano = min(cand, key=lambda p: math.hypot(xe_ab - p[0], yn_ab - p[1]))
         pe, pn, pid, pcirc = p_cercano
-        ax_map.plot([pe, xe_ab], [pn, yn_ab], color='#64748B', linewidth=0.75, linestyle='--', zorder=3)
+        ax_map.plot([pe, xe_ab], [pn, yn_ab], color='#64748B', linewidth=0.45, linestyle='--', zorder=3)
         
         dx_l, dy_l, ha_l = label_offsets[ab["cod"]]
         dibujar_bloque_medidor_cad(ax_map, xe_ab, yn_ab, cod=ab['cod'], dx_label=dx_l, dy_label=dy_l, ha=ha_l)
@@ -530,38 +529,38 @@ def generar_plano_p01_profesional(salida_pdf):
     y_l = 0.790
     for desc, col, st, t in simbolos_cad:
         if t == 'line':
-            ax_leg.plot([0.05, 0.18], [y_l, y_l], color=col, linestyle=st, linewidth=2.0)
+            ax_leg.plot([0.05, 0.18], [y_l, y_l], color=col, linestyle=st, linewidth=1.3)
         elif t == 'sed':
-            c1 = patches.Circle((0.09, y_l), radius=0.024, facecolor='none', edgecolor='#B45309', linewidth=1.1)
-            c2 = patches.Circle((0.14, y_l), radius=0.024, facecolor='none', edgecolor='#1D4ED8', linewidth=1.1)
+            c1 = patches.Circle((0.095, y_l), radius=0.016, facecolor='none', edgecolor='#B45309', linewidth=0.85)
+            c2 = patches.Circle((0.135, y_l), radius=0.016, facecolor='none', edgecolor='#1D4ED8', linewidth=0.85)
             ax_leg.add_patch(c1)
             ax_leg.add_patch(c2)
         elif t == 'poste':
-            c_p = patches.Circle((0.115, y_l), radius=0.025, facecolor='white', edgecolor='#0F172A', linewidth=1.0)
+            c_p = patches.Circle((0.115, y_l), radius=0.016, facecolor='white', edgecolor='#0F172A', linewidth=0.8)
             ax_leg.add_patch(c_p)
-            ax_leg.plot(0.115, y_l, marker='.', color='#0F172A', markersize=3.0)
+            ax_leg.plot(0.115, y_l, marker='.', color='#0F172A', markersize=2.0)
         elif t == 'poste_ap':
-            c_p = patches.Circle((0.08, y_l), radius=0.020, facecolor='white', edgecolor='#0F172A', linewidth=0.9)
+            c_p = patches.Circle((0.085, y_l), radius=0.014, facecolor='white', edgecolor='#0F172A', linewidth=0.7)
             ax_leg.add_patch(c_p)
-            ax_leg.plot([0.08, 0.15], [y_l, y_l], color='#334155', linewidth=1.0)
-            c_lum = patches.Circle((0.15, y_l), radius=0.022, facecolor='#FEF9C3', edgecolor='#CA8A04', linewidth=1.0)
+            ax_leg.plot([0.085, 0.145], [y_l, y_l], color='#334155', linewidth=0.75)
+            c_lum = patches.Circle((0.145, y_l), radius=0.015, facecolor='#FEF9C3', edgecolor='#CA8A04', linewidth=0.75)
             ax_leg.add_patch(c_lum)
-            d = 0.022 * 0.68
-            ax_leg.plot([0.15 - d, 0.15 + d], [y_l - d, y_l + d], color='#CA8A04', linewidth=0.8)
-            ax_leg.plot([0.15 - d, 0.15 + d], [y_l + d, y_l - d], color='#CA8A04', linewidth=0.8)
+            d = 0.015 * 0.68
+            ax_leg.plot([0.145 - d, 0.145 + d], [y_l - d, y_l + d], color='#CA8A04', linewidth=0.6)
+            ax_leg.plot([0.145 - d, 0.145 + d], [y_l + d, y_l - d], color='#CA8A04', linewidth=0.6)
         elif t == 'pat':
-            ax_leg.plot([0.115, 0.115], [y_l + 0.025, y_l - 0.015], color='#15803D', linewidth=1.1)
-            ax_leg.plot([0.08, 0.15], [y_l - 0.015, y_l - 0.015], color='#15803D', linewidth=1.3)
-            ax_leg.plot([0.095, 0.135], [y_l - 0.025, y_l - 0.025], color='#15803D', linewidth=1.3)
-            ax_leg.plot([0.105, 0.125], [y_l - 0.035, y_l - 0.035], color='#15803D', linewidth=1.3)
+            ax_leg.plot([0.115, 0.115], [y_l + 0.018, y_l - 0.008], color='#15803D', linewidth=0.8)
+            ax_leg.plot([0.095, 0.135], [y_l - 0.008, y_l - 0.008], color='#15803D', linewidth=0.85)
+            ax_leg.plot([0.103, 0.127], [y_l - 0.016, y_l - 0.016], color='#15803D', linewidth=0.85)
+            ax_leg.plot([0.109, 0.121], [y_l - 0.024, y_l - 0.024], color='#15803D', linewidth=0.85)
         elif t == 'ret':
-            ax_leg.plot([0.06, 0.16], [y_l - 0.02, y_l + 0.02], color='#C2410C', linewidth=1.1)
-            ax_leg.plot(0.11, y_l, marker='s', color='#D97706', markersize=2.5)
-            ax_leg.plot([0.14, 0.18], [y_l + 0.03, y_l + 0.01], color='#9A3412', linewidth=2.2)
+            ax_leg.plot([0.07, 0.15], [y_l - 0.015, y_l + 0.015], color='#C2410C', linewidth=0.80)
+            ax_leg.plot(0.11, y_l, marker='s', color='#D97706', markersize=2.0)
+            ax_leg.plot([0.135, 0.165], [y_l + 0.024, y_l + 0.006], color='#9A3412', linewidth=1.5)
         elif t == 'med':
-            rect_m = patches.Rectangle((0.085, y_l - 0.020), 0.06, 0.040, facecolor='#FEE2E2', edgecolor='#DC2626', linewidth=0.8)
+            rect_m = patches.Rectangle((0.090, y_l - 0.015), 0.05, 0.030, facecolor='#FEE2E2', edgecolor='#DC2626', linewidth=0.6)
             ax_leg.add_patch(rect_m)
-            c_m = patches.Circle((0.115, y_l), radius=0.014, facecolor='white', edgecolor='#DC2626', linewidth=0.5)
+            c_m = patches.Circle((0.115, y_l), radius=0.010, facecolor='white', edgecolor='#DC2626', linewidth=0.45)
             ax_leg.add_patch(c_m)
         ax_leg.text(0.22, y_l, desc, va='center', fontsize=5.1, color='#0F172A')
         y_l -= 0.076
@@ -660,63 +659,63 @@ def generar_plano_u01_profesional(salida_pdf):
     ax_uni.plot([0.04, 0.96], [0.925, 0.925], color='#334155', linewidth=1.0)
 
     # Red Primaria MT 22.9 kV (UNE 03-01-01 / 03-01-05)
-    ax_uni.plot([0.5, 0.5], [0.915, 0.840], color='#0284C7', linewidth=2.5)
+    ax_uni.plot([0.5, 0.5], [0.915, 0.840], color='#0284C7', linewidth=1.6)
     ax_uni.text(0.52, 0.885, "LÍNEA PRIMARIA 22.9 kV (Red Electro Puno S.A.A.)\nTrifásico 3 Hilos — Conductor AAAC 35 mm²", fontsize=6.2, fontweight='bold', color='#0284C7')
 
     # Pararrayos ZnO (UNE 07-21-01 / DGE)
-    ax_uni.plot([0.5, 0.30], [0.840, 0.840], color='#0284C7', linewidth=1.8)
-    ax_uni.plot([0.30, 0.30], [0.840, 0.790], color='#0284C7', linewidth=1.8)
-    rect_par = patches.Rectangle((0.275, 0.755), 0.05, 0.035, facecolor='#FEF2F2', edgecolor='#DC2626', linewidth=1.2)
+    ax_uni.plot([0.5, 0.30], [0.840, 0.840], color='#0284C7', linewidth=1.1)
+    ax_uni.plot([0.30, 0.30], [0.840, 0.790], color='#0284C7', linewidth=1.1)
+    rect_par = patches.Rectangle((0.275, 0.755), 0.05, 0.035, facecolor='#FEF2F2', edgecolor='#DC2626', linewidth=1.0)
     ax_uni.add_patch(rect_par)
     ax_uni.text(0.095, 0.772, "Pararrayos Óxido Metálico (ZnO)\n21 kV / 10 kA (Clase 1 Distribución)", fontsize=5.5, color='#B91C1C')
-    # Puesta a tierra pararrayos (UNE 02-15-01)
-    ax_uni.plot([0.30, 0.30], [0.755, 0.715], color='#15803D', linewidth=1.2)
-    ax_uni.plot([0.27, 0.33], [0.715, 0.715], color='#15803D', linewidth=1.5)
-    ax_uni.plot([0.28, 0.32], [0.705, 0.705], color='#15803D', linewidth=1.5)
-    ax_uni.plot([0.29, 0.31], [0.695, 0.695], color='#15803D', linewidth=1.5)
+    # Puesta a tierra pararrayos (UNE 02-15-01) afinada
+    ax_uni.plot([0.30, 0.30], [0.755, 0.715], color='#15803D', linewidth=0.85)
+    ax_uni.plot([0.275, 0.325], [0.715, 0.715], color='#15803D', linewidth=1.0)
+    ax_uni.plot([0.283, 0.317], [0.707, 0.707], color='#15803D', linewidth=1.0)
+    ax_uni.plot([0.290, 0.310], [0.699, 0.699], color='#15803D', linewidth=1.0)
     ax_uni.text(0.34, 0.710, "PAT-3 (R <= 10 Ω)", fontsize=5.2, fontweight='bold', color='#15803D')
 
     # Seccionadores Cut-Out (UNE 07-21-07)
-    ax_uni.plot([0.5, 0.5], [0.840, 0.800], color='#0284C7', linewidth=1.8)
-    rect_co = patches.Rectangle((0.47, 0.760), 0.06, 0.040, facecolor='#EFF6FF', edgecolor='#1D4ED8', linewidth=1.4)
+    ax_uni.plot([0.5, 0.5], [0.840, 0.800], color='#0284C7', linewidth=1.2)
+    rect_co = patches.Rectangle((0.47, 0.760), 0.06, 0.040, facecolor='#EFF6FF', edgecolor='#1D4ED8', linewidth=1.1)
     ax_uni.add_patch(rect_co)
     ax_uni.text(0.55, 0.780, "Seccionador Fusible Cut-Out\n27 kV / 100 A (Fusible Chicote K 4A)", fontsize=5.8, color='#1D4ED8')
 
     # Bajada a Bornes MT
-    ax_uni.plot([0.5, 0.5], [0.760, 0.695], color='#0284C7', linewidth=1.8)
+    ax_uni.plot([0.5, 0.5], [0.760, 0.695], color='#0284C7', linewidth=1.2)
 
     # Transformador Trifásico 100 kVA (UNE-EN 60617-6 nº 06-09-01)
-    c_mt = patches.Circle((0.5, 0.660), radius=0.035, facecolor='none', edgecolor='#DC2626', linewidth=2.0)
-    c_bt = patches.Circle((0.5, 0.610), radius=0.035, facecolor='none', edgecolor='#1D4ED8', linewidth=2.0)
+    c_mt = patches.Circle((0.5, 0.660), radius=0.035, facecolor='none', edgecolor='#DC2626', linewidth=1.4)
+    c_bt = patches.Circle((0.5, 0.610), radius=0.035, facecolor='none', edgecolor='#1D4ED8', linewidth=1.4)
     ax_uni.add_patch(c_mt)
     ax_uni.add_patch(c_bt)
     ax_uni.text(0.56, 0.640, "TRANSFORMADOR DE DISTRIBUCIÓN 100 kVA\nRelación de Transformación: 22.9 / 0.38 - 0.22 kV\nGrupo Conexión: Dyn5 | Frecuencia: 60 Hz | ONAN\nDemanda Máxima: 79.0 kVA (Reserva Técnica: 21.0%)",
                 fontsize=6.0, fontweight='bold', color='#991B1B')
 
-    # Puesta a tierra Neutro BT (UNE 02-15-01)
-    ax_uni.plot([0.465, 0.38], [0.610, 0.610], color='#15803D', linewidth=1.2)
-    ax_uni.plot([0.38, 0.38], [0.610, 0.565], color='#15803D', linewidth=1.2)
-    ax_uni.plot([0.35, 0.41], [0.565, 0.565], color='#15803D', linewidth=1.5)
-    ax_uni.plot([0.36, 0.40], [0.555, 0.555], color='#15803D', linewidth=1.5)
-    ax_uni.plot([0.37, 0.39], [0.545, 0.545], color='#15803D', linewidth=1.5)
+    # Puesta a tierra Neutro BT (UNE 02-15-01) afinada
+    ax_uni.plot([0.465, 0.38], [0.610, 0.610], color='#15803D', linewidth=0.85)
+    ax_uni.plot([0.38, 0.38], [0.610, 0.565], color='#15803D', linewidth=0.85)
+    ax_uni.plot([0.355, 0.405], [0.565, 0.565], color='#15803D', linewidth=1.0)
+    ax_uni.plot([0.363, 0.397], [0.557, 0.557], color='#15803D', linewidth=1.0)
+    ax_uni.plot([0.370, 0.390], [0.549, 0.549], color='#15803D', linewidth=1.0)
     ax_uni.text(0.20, 0.560, "Puesta a Tierra de Neutro\nR <= 10 Ω (PAT-3)", fontsize=5.2, color='#15803D')
 
     # Bajada a Tablero
-    ax_uni.plot([0.5, 0.5], [0.575, 0.520], color='#1D4ED8', linewidth=2.5)
+    ax_uni.plot([0.5, 0.5], [0.575, 0.520], color='#1D4ED8', linewidth=1.6)
 
     # Gabinete BT IP65
-    rect_tab = patches.Rectangle((0.08, 0.035), 0.84, 0.485, facecolor='#F8FAFC', edgecolor='#0F172A', linewidth=1.5)
+    rect_tab = patches.Rectangle((0.08, 0.035), 0.84, 0.485, facecolor='#F8FAFC', edgecolor='#0F172A', linewidth=1.2)
     ax_uni.add_patch(rect_tab)
     ax_uni.text(0.5, 0.505, "TABLERO GENERAL DE DISTRIBUCIÓN BT (GABINETE FIBRA POLIÉSTER IP65)", ha='center', fontsize=7.0, fontweight='bold', color='#0F172A')
 
     # Totalizador General 3x160A (UNE 07-13-05)
-    rect_gen = patches.Rectangle((0.43, 0.435), 0.14, 0.050, facecolor='#FEF3C7', edgecolor='#D97706', linewidth=1.5)
+    rect_gen = patches.Rectangle((0.43, 0.435), 0.14, 0.050, facecolor='#FEF3C7', edgecolor='#D97706', linewidth=1.2)
     ax_uni.add_patch(rect_gen)
     ax_uni.text(0.5, 0.460, "TOTALIZADOR GENERAL 3x160 A\nTermomagnético Regulable (Icu = 25 kA)", ha='center', va='center', fontsize=5.5, fontweight='bold', color='#92400E')
 
     # Barra Trifásica (UNE 03-01-01)
-    ax_uni.plot([0.5, 0.5], [0.435, 0.380], color='#1D4ED8', linewidth=2.0)
-    ax_uni.plot([0.16, 0.84], [0.380, 0.380], color='#1E293B', linewidth=3.5)
+    ax_uni.plot([0.5, 0.5], [0.435, 0.380], color='#1D4ED8', linewidth=1.3)
+    ax_uni.plot([0.16, 0.84], [0.380, 0.380], color='#1E293B', linewidth=2.4)
     ax_uni.text(0.85, 0.380, "BARRA 380/220 V", va='center', fontsize=5.8, fontweight='bold', color='#1E293B')
 
     circuitos_data = [
@@ -744,7 +743,7 @@ def generar_plano_u01_profesional(salida_pdf):
     ]
     
     for xc, cid, itm_val, lineas_det in circuitos_data:
-        ax_uni.plot([xc, xc], [0.380, 0.345], color='#1D4ED8', linewidth=1.8)
+        ax_uni.plot([xc, xc], [0.380, 0.345], color='#1D4ED8', linewidth=1.2)
         
         rect_it = patches.Rectangle((xc - 0.065, 0.275), 0.13, 0.070, facecolor='#FFFFFF', edgecolor='#1D4ED8', linewidth=1.2)
         ax_uni.add_patch(rect_it)

@@ -183,68 +183,68 @@ def dibujar_bloque_poste_dxf(msp, x, y, pid, ap=False, dx_ap=3.5, dy_ap=0.0):
     - Símbolo oficial de luminaria AP (UNE 11-15-03: círculo con 'X' inscrita).
     - SIN textos flotantes innecesarios para evitar solapes.
     """
-    # Círculo base del poste (limpio DGE)
-    msp.add_circle((x, y), radius=1.0, dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 25})
+    # Círculo base del poste (limpio DGE a escala afinada)
+    msp.add_circle((x, y), radius=0.65, dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 20})
     # Punto central geodésico
-    msp.add_line((x - 0.25, y), (x + 0.25, y), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 15})
-    msp.add_line((x, y - 0.25), (x, y + 0.25), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 15})
+    msp.add_line((x - 0.15, y), (x + 0.15, y), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 13})
+    msp.add_line((x, y - 0.15), (x, y + 0.15), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 13})
     # Rótulo del poste
-    msp.add_text(pid, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.3, "color": colors.GREEN}).set_placement((x + 1.4, y + 0.8))
+    msp.add_text(pid, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.0, "color": colors.GREEN}).set_placement((x + 0.9, y + 0.6))
     
     # Brazo Pastoral y Luminaria UNE-EN 60617-11 nº 11-15-03
     if ap:
-        x_lum = x + dx_ap
-        y_lum = y + dy_ap
+        x_lum = x + (dx_ap * 0.5)
+        y_lum = y + (dy_ap * 0.5)
         # Brazo pastoral de F° G°
-        msp.add_line((x, y), (x_lum, y_lum), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 20})
+        msp.add_line((x, y), (x_lum, y_lum), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
         # Círculo de luminaria
-        r_l = 0.6
-        msp.add_circle((x_lum, y_lum), radius=r_l, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 25})
+        r_l = 0.45
+        msp.add_circle((x_lum, y_lum), radius=r_l, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 18})
         # Aspa 'X' normalizada inscrita (UNE 11-15-03)
         d = r_l * 0.707
-        msp.add_line((x_lum - d, y_lum - d), (x_lum + d, y_lum + d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
-        msp.add_line((x_lum - d, y_lum + d), (x_lum + d, y_lum - d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
+        msp.add_line((x_lum - d, y_lum - d), (x_lum + d, y_lum + d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 13})
+        msp.add_line((x_lum - d, y_lum + d), (x_lum + d, y_lum - d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 13})
 
 def dibujar_simbolo_pat(msp, x, y):
-    """Dibuja el símbolo oficial UNE-EN 60617-2 nº 02-15-01 de Puesta a Tierra (3 barras horizontales decrecientes)."""
-    # Conductor vertical de bajada
-    msp.add_line((x, y), (x, y - 2.0), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3})
+    """Dibuja el símbolo oficial UNE-EN 60617-2 nº 02-15-01 de Puesta a Tierra (3 barras horizontales decrecientes afinadas)."""
+    # Conductor vertical de bajada corto
+    msp.add_line((x, y), (x, y - 1.2), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 15})
     # 3 barras de tierra decrecientes
-    msp.add_line((x - 1.6, y - 2.0), (x + 1.6, y - 2.0), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 25})
-    msp.add_line((x - 1.0, y - 2.6), (x + 1.0, y - 2.6), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 25})
-    msp.add_line((x - 0.4, y - 3.2), (x + 0.4, y - 3.2), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 25})
+    msp.add_line((x - 0.75, y - 1.2), (x + 0.75, y - 1.2), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 18})
+    msp.add_line((x - 0.45, y - 1.5), (x + 0.45, y - 1.5), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 18})
+    msp.add_line((x - 0.20, y - 1.8), (x + 0.20, y - 1.8), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 18})
 
 def dibujar_simbolo_retenida(msp, x, y, az_grados):
-    """Dibuja el tirante de retenida normalizado DGE 09-91-18 con aislador y bloque de anclaje."""
+    """Dibuja el tirante de retenida normalizado DGE 09-91-18 con aislador y bloque de anclaje a escala proporcionada."""
     rad = math.radians(az_grados)
-    long_cable = 8.0
+    long_cable = 3.5
     dx = long_cable * math.sin(rad)
     dy = long_cable * math.cos(rad)
     x_ancla = x + dx
     y_ancla = y + dy
     # Cable de retenida
-    msp.add_line((x, y), (x_ancla, y_ancla), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 20})
+    msp.add_line((x, y), (x_ancla, y_ancla), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 15})
     # Aislador de porcelana 54-1 a media altura
     xm = (x + x_ancla) / 2.0
     ym = (y + y_ancla) / 2.0
-    d_ais = 0.4
+    d_ais = 0.22
     msp.add_lwpolyline([(xm-d_ais, ym-d_ais), (xm+d_ais, ym-d_ais), (xm+d_ais, ym+d_ais), (xm-d_ais, ym+d_ais), (xm-d_ais, ym-d_ais)],
-                       dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 25})
+                       dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 18})
     # Bloque de concreto perpendicular
     rad_perp = rad + math.pi / 2.0
-    dx_p = 1.6 * math.sin(rad_perp)
-    dy_p = 1.6 * math.cos(rad_perp)
-    msp.add_line((x_ancla - dx_p, y_ancla - dy_p), (x_ancla + dx_p, y_ancla + dy_p), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 35})
+    dx_p = 0.85 * math.sin(rad_perp)
+    dy_p = 0.85 * math.cos(rad_perp)
+    msp.add_line((x_ancla - dx_p, y_ancla - dy_p), (x_ancla + dx_p, y_ancla + dy_p), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 25})
 
 def dibujar_medidor_abonado(msp, x, y, cod):
     """Dibuja la caja portamedidor monofásica normalizada M y rótulo de abonado."""
-    d = 0.9
+    d = 0.45
     pts = [(x-d, y-d), (x+d, y-d), (x+d, y+d), (x-d, y+d), (x-d, y-d)]
-    msp.add_lwpolyline(pts, dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "color": 1})
-    msp.add_circle((x, y), radius=0.6, dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "color": 1})
-    msp.add_text("M", dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "height": 0.8, "color": 1}).set_placement((x - 0.25, y - 0.35))
+    msp.add_lwpolyline(pts, dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "color": 1, "lineweight": 15})
+    msp.add_circle((x, y), radius=0.25, dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "color": 1})
+    msp.add_text("M", dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "height": 0.4, "color": 1}).set_placement((x - 0.12, y - 0.15))
     if cod:
-        msp.add_text(cod, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.3, "color": 7}).set_placement((x + 1.2, y + 0.5))
+        msp.add_text(cod, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 0.9, "color": 7}).set_placement((x + 0.7, y + 0.3))
 
 def generar_plano_completo_planta(dxf_out):
     doc = ezdxf.new(dxfversion="R2010")
