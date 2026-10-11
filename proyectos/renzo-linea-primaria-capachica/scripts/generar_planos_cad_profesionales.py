@@ -96,16 +96,29 @@ def cargar_abonados_csv(csv_path):
 # -------------------------------------------------------------------------
 # BLOQUES GRÁFICOS CAD NORMALIZADOS
 # -------------------------------------------------------------------------
-def dibujar_bloque_poste_cad(ax, x, y, radio=1.4, etiqueta=""):
-    """Dibuja un poste de concreto con simbología CAD normalizada DGE (círculo con cuadrantes)."""
+def dibujar_bloque_poste_cad(ax, x, y, radio=1.4, etiqueta="", ap=False, dx_ap=3.5, dy_ap=0.0):
+    """Dibuja un poste de concreto con simbología CAD normalizada DGE (círculo con cuadrantes y opcional pastoral AP)."""
     # Círculo base
     c = patches.Circle((x, y), radius=radio, facecolor='white', edgecolor='black', linewidth=0.8, zorder=10)
     ax.add_patch(c)
-    # Cuadrantes achurados en diagonal
+    # Cuadrantes achurados en diagonal (Norma DGE Símbolos Gráficos)
     w1 = Wedge((x, y), radio, 0, 90, facecolor='black', edgecolor='none', zorder=11)
     w2 = Wedge((x, y), radio, 180, 270, facecolor='black', edgecolor='none', zorder=11)
     ax.add_patch(w1)
     ax.add_patch(w2)
+    
+    # Brazo pastoral y luminaria LED de Alumbrado Público (Norma DGE / AP LED 60W)
+    if ap:
+        x_lum = x + dx_ap
+        y_lum = y + dy_ap
+        # Brazo pastoral de F° G°
+        ax.plot([x, x_lum], [y, y_lum], color='#334155', linewidth=1.3, zorder=12)
+        # Luminaria LED (cápsula con foco luminoso)
+        lum = patches.Circle((x_lum, y_lum), radius=1.0, facecolor='#FEF08A', edgecolor='#CA8A04', linewidth=0.9, zorder=13)
+        ax.add_patch(lum)
+        ax.plot(x_lum, y_lum, marker='o', color='#CA8A04', markersize=2.5, zorder=14)
+        ax.text(x_lum + 1.2, y_lum, "AP-60W", fontsize=4.2, fontweight='bold', color='#854D0E', va='center', zorder=15)
+        
     if etiqueta:
         ax.text(x + radio + 0.8, y + radio + 0.5, etiqueta, fontsize=5.5, fontweight='bold', color='#111827', zorder=15)
 
@@ -249,7 +262,9 @@ def generar_plano_p01_profesional(salida_pdf):
                 es_fin = (s == 0 and i == 0) or (i == len(pts1)-2 and s == n_seg)
                 pat = "PAT-1" if (p_num % 4 == 0 or es_fin) else None
                 ret = "RET-I" if es_fin or (p_num in [6, 12, 18]) else None
-                postes_c1.append({"id": pid, "circuito": "C-1", "este": xe, "norte": yn, "pat": pat, "ret": ret})
+                # Asignar 10 luminarias de Alumbrado Público LED 60W a postes de C-1
+                ap = True if p_num in [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] else False
+                postes_c1.append({"id": pid, "circuito": "C-1", "este": xe, "norte": yn, "pat": pat, "ret": ret, "ap": ap})
                 p_num += 1
 
     # Procesar Circuito C-2 (Rutas 3 y 4 CONTINUAS hasta el final de la carretera: 456.0 m)
@@ -274,7 +289,9 @@ def generar_plano_p01_profesional(salida_pdf):
             es_fin = (s == 0 and i == 0) or (i == len(pts_c2)-2 and s == n_seg)
             pat = "PAT-1" if (p_num2 % 4 == 0 or es_fin) else None
             ret = "RET-I" if es_fin or (p_num2 in [4, 8]) else None
-            postes_c2.append({"id": pid, "circuito": "C-2", "este": xe, "norte": yn, "pat": pat, "ret": ret})
+            # Asignar 5 luminarias de Alumbrado Público LED 60W a postes de C-2
+            ap = True if p_num2 in [1, 3, 6, 9, 12] else False
+            postes_c2.append({"id": pid, "circuito": "C-2", "este": xe, "norte": yn, "pat": pat, "ret": ret, "ap": ap})
             p_num2 += 1
 
     fig = plt.figure(figsize=(16.54, 11.69), dpi=300)
@@ -319,7 +336,8 @@ def generar_plano_p01_profesional(salida_pdf):
 
     # Dibujar Postes de BT del Circuito C-1
     for p in postes_c1:
-        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=1.2, etiqueta=p["id"])
+        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=1.2, etiqueta=p["id"],
+                                 ap=p.get("ap", False), dx_ap=-3.2, dy_ap=1.5)
         if p["pat"]:
             dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=-2.0, dy=-3.0, label="PAT-1")
         if p["ret"]:
@@ -327,7 +345,8 @@ def generar_plano_p01_profesional(salida_pdf):
 
     # Dibujar Postes de BT del Circuito C-2
     for p in postes_c2:
-        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=1.2, etiqueta=p["id"])
+        dibujar_bloque_poste_cad(ax_map, p["este"], p["norte"], radio=1.2, etiqueta=p["id"],
+                                 ap=p.get("ap", False), dx_ap=3.2, dy_ap=-1.5)
         if p["pat"]:
             dibujar_bloque_pat_cad(ax_map, p["este"], p["norte"], dx=2.0, dy=-3.0, label="PAT-1")
         if p["ret"]:
@@ -378,12 +397,12 @@ def generar_plano_p01_profesional(salida_pdf):
     # PANEL DERECHO: LEYENDA TÉCNICA DGE, CUADRO DE CARGAS Y RÓTULO
     # ---------------------------------------------------------------------
     # Leyenda Normalizada DGE
-    ax_leg = fig.add_axes([0.72, 0.66, 0.25, 0.28])
+    ax_leg = fig.add_axes([0.72, 0.655, 0.25, 0.295])
     ax_leg.axis('off')
     rect_leg = patches.Rectangle((0, 0), 1, 1, facecolor='#FFFFFF', edgecolor='#334155', linewidth=1.2)
     ax_leg.add_patch(rect_leg)
     ax_leg.text(0.5, 0.94, "SIMBOLOGÍA TÉCNICA NORMALIZADA (DGE / CNE)", ha='center', va='center', fontsize=7.2, fontweight='bold', color='#1E3A8A')
-    ax_leg.plot([0.04, 0.96], [0.88, 0.88], color='#334155', linewidth=0.8)
+    ax_leg.plot([0.04, 0.96], [0.89, 0.89], color='#334155', linewidth=0.8)
     
     simbolos_cad = [
         ("Red Primaria MT 22.9 kV (AAAC 35 mm²)", '#0284C7', '-', 'line'),
@@ -392,37 +411,46 @@ def generar_plano_p01_profesional(salida_pdf):
         ("Acometida Concéntrica Aérea SET 2x4 mm²", '#475569', '--', 'line'),
         ("Subestación Distribución Biposte SAB-1 (100 kVA)", '#B91C1C', 'sed', 'sed'),
         ("Poste Concreto C.A.C. BT 8m/200daN (Bloque DGE)", '#0F172A', 'poste', 'poste'),
+        ("Poste C.A.C. con Pastoral y Luminaria AP 60W LED", '#CA8A04', 'poste_ap', 'poste_ap'),
         ("Caja Portamedidor Monofásico de Abonado (M)", '#DC2626', 'med', 'med'),
         ("Puesta a Tierra Normalizada (PAT-3 / PAT-1)", '#15803D', 'pat', 'pat'),
         ("Retenida Inclinada / Contraviento (RET-I / RET-CV)", '#9A3412', 'ret', 'ret')
     ]
-    y_l = 0.80
+    y_l = 0.82
     for desc, col, st, t in simbolos_cad:
         if t == 'line':
             ax_leg.plot([0.06, 0.20], [y_l, y_l], color=col, linestyle=st, linewidth=2.0)
         elif t == 'sed':
-            rect_s = patches.Rectangle((0.10, y_l - 0.025), 0.07, 0.05, facecolor='#FEF3C7', edgecolor='#B45309', linewidth=1.0)
+            rect_s = patches.Rectangle((0.10, y_l - 0.020), 0.07, 0.040, facecolor='#FEF3C7', edgecolor='#B45309', linewidth=1.0)
             ax_leg.add_patch(rect_s)
         elif t == 'poste':
-            c_p = patches.Circle((0.13, y_l), radius=0.025, facecolor='white', edgecolor='black', linewidth=0.8)
+            c_p = patches.Circle((0.13, y_l), radius=0.022, facecolor='white', edgecolor='black', linewidth=0.8)
             ax_leg.add_patch(c_p)
-            w_p = Wedge((0.13, y_l), 0.025, 0, 90, facecolor='black', edgecolor='none')
+            w_p = Wedge((0.13, y_l), 0.022, 0, 90, facecolor='black', edgecolor='none')
             ax_leg.add_patch(w_p)
+        elif t == 'poste_ap':
+            c_p = patches.Circle((0.10, y_l), radius=0.018, facecolor='white', edgecolor='black', linewidth=0.7)
+            ax_leg.add_patch(c_p)
+            w_p = Wedge((0.10, y_l), 0.018, 0, 90, facecolor='black', edgecolor='none')
+            ax_leg.add_patch(w_p)
+            ax_leg.plot([0.10, 0.17], [y_l, y_l], color='#334155', linewidth=1.2)
+            c_lum = patches.Circle((0.17, y_l), radius=0.015, facecolor='#FEF08A', edgecolor='#CA8A04', linewidth=0.8)
+            ax_leg.add_patch(c_lum)
         elif t == 'med':
-            rect_m = patches.Rectangle((0.10, y_l - 0.025), 0.06, 0.05, facecolor='#FEE2E2', edgecolor='#DC2626', linewidth=0.8)
+            rect_m = patches.Rectangle((0.10, y_l - 0.020), 0.06, 0.040, facecolor='#FEE2E2', edgecolor='#DC2626', linewidth=0.8)
             ax_leg.add_patch(rect_m)
             ax_leg.text(0.13, y_l, "M", ha='center', va='center', fontsize=4.0, fontweight='bold', color='#DC2626')
         elif t == 'pat':
-            ax_leg.plot([0.13, 0.13], [y_l - 0.02, y_l + 0.02], color='#15803D', linewidth=1.2)
-            ax_leg.plot([0.09, 0.17], [y_l - 0.02, y_l - 0.02], color='#15803D', linewidth=1.5)
+            ax_leg.plot([0.13, 0.13], [y_l - 0.018, y_l + 0.018], color='#15803D', linewidth=1.2)
+            ax_leg.plot([0.09, 0.17], [y_l - 0.018, y_l - 0.018], color='#15803D', linewidth=1.5)
         elif t == 'ret':
             ax_leg.plot([0.08, 0.18], [y_l, y_l], color='#C2410C', linewidth=1.5)
-            ax_leg.plot([0.18, 0.18], [y_l - 0.02, y_l + 0.02], color='#9A3412', linewidth=2.5)
-        ax_leg.text(0.24, y_l, desc, va='center', fontsize=5.8, color='#0F172A')
-        y_l -= 0.088
+            ax_leg.plot([0.18, 0.18], [y_l - 0.018, y_l + 0.018], color='#9A3412', linewidth=2.5)
+        ax_leg.text(0.24, y_l, desc, va='center', fontsize=5.6, color='#0F172A')
+        y_l -= 0.076
 
     # Cuadro de Cargas de los 2 Circuitos
-    ax_car = fig.add_axes([0.72, 0.36, 0.25, 0.28])
+    ax_car = fig.add_axes([0.72, 0.355, 0.25, 0.285])
     ax_car.axis('off')
     rect_car = patches.Rectangle((0, 0), 1, 1, facecolor='#FFFFFF', edgecolor='#334155', linewidth=1.2)
     ax_car.add_patch(rect_car)
