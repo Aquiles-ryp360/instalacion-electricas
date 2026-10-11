@@ -149,11 +149,10 @@ Este expediente técnico se desarrolla bajo la cátedra de la asignatura de espe
     \begin{itemize}
         \item Ubicar y dimensionar la \textbf{Subestación de Distribución Biposte (SED-01)} en las coordenadas geográficas exactas de diseño: $\mathbf{\text{Lat: } -15.640067^\circ\text{ S}}$, $\mathbf{\text{Lon: } -69.815400^\circ\text{ W}}$, con una capacidad nominal estandarizada de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$, armado DGE SAB-1).
         \item Suministrar energía en Media Tensión ($22.9\text{ kV}$) a la SED mediante derivación desde la red troncal de Electro Puno S.A.A.
-        \item Diseñar las redes secundarias de distribución en Baja Tensión ($380/220\text{ V}$) que parten desde el transformador centralizado y se ramifican por las tres rutas principales:
+        \item Diseñar las redes secundarias de distribución en Baja Tensión ($380/220\text{ V}$) que parten desde el transformador centralizado estructuradas en \textbf{dos (02) circuitos radiales principales}:
         \begin{itemize}
-            \item \textbf{Circuito C-1 (Ruta Eléctrica 1):} Troncal Norte ($819.7\text{ m}$) alimentando a 21 viviendas iniciales (38 futuras) a lo largo del camino principal hacia el borde norte de la playa.
-            \item \textbf{Circuito C-2 (Ruta Eléctrica 3):} Ramal Centro ($184.4\text{ m}$) alimentando a 11 viviendas iniciales (20 futuras).
-            \item \textbf{Circuito C-3 (Rutas Eléctricas 4 y 2):} Ramal Sur ($284.8\text{ m}$) alimentando a 11 viviendas iniciales (20 futuras).
+            \item \textbf{Circuito C-1 (Ruta Eléctrica 1):} Troncal Norte ($819.7\text{ m}$) alimentando a 24 viviendas censadas (44 proyectadas al año 20) a lo largo del camino principal hacia el borde norte de la playa de Chifrón.
+            \item \textbf{Circuito C-2 (Rutas Eléctricas 3, 4 y 2):} Ramal Centro y Sur unificado ($469.2\text{ m}$) alimentando a 19 viviendas censadas (34 proyectadas al año 20).
         \end{itemize}
         \item Instalar las $\mathbf{43\text{ acometidas domiciliarias}}$ monofásicas con cajas portamedidor normalizadas y $15\text{ luminarias}$ de alumbrado público.
         \item Cumplir rigurosamente las exigencias del \textit{Código Nacional de Electricidad (CNE Suministro 2011)} y las \textit{Normas DGE de Electrificación Rural}.
@@ -271,19 +270,18 @@ El dimensionamiento de la demanda eléctrica sigue la formulación oficial del c
 
 \begin{table}[H]
 \centering
-\caption{Cuadro Oficial de Cargas y Máxima Demanda por Circuitos de Distribución}
+\caption{Cuadro Oficial de Cargas y Máxima Demanda por Circuitos de Distribución (2 Circuitos)}
 \label{tab:cuadro_cargas}
 \small
 \begin{tabular}{clccccccr}
 \toprule
 \textbf{Circ.} & \textbf{Sector / Zona} & \textbf{$NU_0$} & \textbf{$NU_f$} & \textbf{Part. (kW)} & \textbf{$N^\circ$ Lum} & \textbf{AP (kW)} & \textbf{Total (kW)} & \textbf{$I$ (A)} \\
 \midrule
-\textbf{C-1} & Sector Sur / Pasaje & 21 & 38 & 34.20 & 7 & 0.42 & 34.62 & 174.85 \\
-\textbf{C-2} & Sector Centro / Eje & 11 & 20 & 18.00 & 4 & 0.24 & 18.24 & 92.12 \\
-\textbf{C-3} & Sector Norte / Playa & 11 & 20 & 18.00 & 4 & 0.24 & 18.24 & 92.12 \\
+\textbf{C-1} & Sector Norte (Playa Chifrón) & 24 & 44 & 39.60 & 9 & 0.54 & 40.14 & 67.75 \\
+\textbf{C-2} & Sector Centro y Sur (Unificado) & 19 & 34 & 30.60 & 6 & 0.36 & 30.96 & 52.25 \\
 \midrule
 \rowcolor{LightBg}
-\textbf{TOT} & \textbf{Red Chifrón} & \textbf{43} & \textbf{78} & \textbf{70.20} & \textbf{15} & \textbf{0.90} & \textbf{71.10} & \textbf{359.09} \\
+\textbf{TOT} & \textbf{Red Chifrón Proyectada} & \textbf{43} & \textbf{78} & \textbf{70.20} & \textbf{15} & \textbf{0.90} & \textbf{71.10} & \textbf{120.00} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -528,16 +526,15 @@ Con el fin de garantizar la máxima rigurosidad técnica, seguridad de las perso
 \subsection{Verificación en los 3 Circuitos y Acometidas}
 \begin{table}[H]
 \centering
-\caption{Verificación de Caída de Tensión por Circuitos y Límite Normativo CNE}
+\caption{Verificación de Caída de Tensión por Circuitos y Límite Normativo CNE (2 Circuitos)}
 \label{tab:auditoria_tension}
 \small
 \begin{tabular}{lcccc c}
 \toprule
 \textbf{Circuito} & \textbf{Longitud (m)} & \textbf{Conductor} & \textbf{$\Delta V$ Línea (\%)} & \textbf{$\Delta V$ Acometida (\%)} & \textbf{$\Delta V$ Total (\%)} \\
 \midrule
-C-1 (Troncal Norte) & $819.7$ & CAAI $3\times35+25+16$ & $3.82\%$ & $0.44\%$ & $\mathbf{4.26\% \le 5.0\%}$ \\
-C-2 (Ramal Centro)  & $184.4$ & CAAI $3\times25+25+16$ & $1.15\%$ & $0.37\%$ & $\mathbf{1.52\% \le 5.0\%}$ \\
-C-3 (Ramal Sur)     & $284.8$ & CAAI $3\times25+25+16$ & $1.76\%$ & $0.39\%$ & $\mathbf{2.15\% \le 5.0\%}$ \\
+C-1 (Troncal Norte)    & $819.7$ & CAAI $3\times35+25+16$ & $3.82\%$ & $0.44\%$ & $\mathbf{4.26\% \le 5.0\%}$ \\
+C-2 (Ramal Centro-Sur) & $469.2$ & CAAI $3\times25+25+16$ & $1.68\%$ & $0.39\%$ & $\mathbf{2.07\% \le 5.0\%}$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -631,17 +628,27 @@ Habiéndose subsanado e integrado el 100\% de las observaciones identificadas en
 % =========================================================================
 \chapter{Planos Oficiales de Ingeniería del Proyecto}
 
-A continuación se compilan las tres (03) láminas oficiales de ingeniería a escala normalizada en formato A3 apaisado ($420\times297\text{ mm}$), conteniendo la simbología reglamentaria del Código Nacional de Electricidad, diagramas unifilares y detalles constructivos de montaje:
+A continuación se compila el juego oficial completo de planos y láminas de ingeniería electromecánica normalizadas según los estándares del Código Nacional de Electricidad (CNE Suministro 2011), las Normas DGE de Electrificación Rural y la empresa concesionaria \textbf{Electro Puno S.A.A.}:
 \begin{enumerate}
-    \item \textbf{Lámina P-01:} Plano de Redes de Distribución en Planta General, Acometidas Domiciliarias, Retenidas y Puesta a Tierra (Georreferenciado UTM WGS-84 Zona 19S, Escala 1:2500).
-    \item \textbf{Lámina U-01:} Diagrama Unifilar General y Detalles Constructivos de Montaje Electromecánico (SED 100 kVA, Tablero BT, Puesta a Tierra PAT-3, Retenida R-1 y Acometida Monofásica en Mureta).
-    \item \textbf{Lámina PL-01:} Perfil Longitudinal Topográfico y Distribución de Estructuras de la Línea Primaria 22.9 kV (Catenarias, Spotting y Distancia de Seguridad CNE).
+    \item \textbf{Lámina P-01:} Plano de Redes de Distribución en Planta General, Acometidas Domiciliarias y Retenidas (Georreferenciado WGS-84 Zona 19S, Escala 1:2500, Formato A3). Muestra los dos (02) circuitos de baja tensión (C-1 Norte y C-2 Sur) con origen en la SED 100 kVA.
+    \item \textbf{Lámina U-01:} Diagrama Unifilar General y Esquema de Protecciones (Formato CAD Normalizado A3). Muestra la protección Cut-Out 27 kV, pararrayos 21 kV, transformador 100 kVA Dyn5 y salidas en BT para Circuito C-1 (3x80A), Circuito C-2 (3x80A) y Alumbrado Público (2x16A).
+    \item \textbf{Lámina D-01:} Detalle Constructivo Oficial de Subestación Biposte Aérea 100 kVA (Armado DGE SAB-1, Plano Oficial de Ingeniería Electro Puno S.A.A. con vistas de elevación, corte y lista de materiales).
+    \item \textbf{Lámina D-02:} Detalle Constructivo de Soporte Metálico y Plataforma del Transformador (Perfiles $F^\circ G^\circ$, dados y riostras).
+    \item \textbf{Lámina D-03:} Detalle Constructivo Oficial de Sistema de Puesta a Tierra PAT-3 (Varilla de cobre de $16\text{ mm} \times 2.40\text{ m}$, caja de registro de concreto, plancha antirrobo y conector Anderson).
+    \item \textbf{Lámina D-04:} Detalle Constructivo Oficial de Retenida Mecánica Vertical en "Y" e Inclinada (Cable de acero Siemens-Martin $3/8''$, aislador de tracción 54-1, varilla de anclaje y bloque de concreto).
+    \item \textbf{Lámina D-05:} Detalle Constructivo de Seccionamiento Aéreo y Montaje de Cortacircuitos Fusibles Cut-Out $27\text{ kV}$.
+    \item \textbf{Lámina PL-01:} Perfil Longitudinal Topográfico y Distribución de Estructuras de la Línea Primaria 22.9 kV (Catenarias, Spotting y Distancia de Seguridad CNE, Formato A3).
 \end{enumerate}
 
 \newpage
-% INSERCIÓN DE LAS LÁMINAS OFICIALES A3 EN ALTA DEFINICIÓN
+% INSERCIÓN DE LAS LÁMINAS OFICIALES CAD Y PLANOS DGE (CONSERVANDO ESCALA Y FORMATO)
 \includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_P01_redes_planta.pdf}
 \includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf}
+\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SUBESTACION_SAB1.pdf}
+\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SOPORTE_SUBESTACION.pdf}
+\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_PUESTA_A_TIERRA_PAT3.pdf}
+\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_RETENIDA_MECANICA.pdf}
+\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SECCIONAMIENTO_CUTOUT.pdf}
 \includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_PL01_perfil_longitudinal.pdf}
 
 \vfill

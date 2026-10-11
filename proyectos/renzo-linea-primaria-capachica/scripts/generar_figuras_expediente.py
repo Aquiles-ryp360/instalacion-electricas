@@ -142,23 +142,35 @@ def generar_mapa_chifron_satelital(out_dir):
     if 'ruta electrica 3' in rutas:
         pts3 = rutas['ruta electrica 3']
         lons3 = [lon_sed] + [p[0] for p in pts3]
+    # 2. Rutas Eléctricas en Baja Tensión partiendo desde la SED (2 CIRCUITOS):
+    # Circuito C-1 (Ruta 1 Troncal Norte)
+    if 'ruta electrica 1' in rutas:
+        pts = rutas['ruta electrica 1']
+        lons = [p[0] for p in pts]
+        lats = [p[1] for p in pts]
+        ax.plot(lons, lats, color='cyan', linewidth=2.8, label='Circuito C-1 BT (Troncal Norte: 819.7 m - 44 hab)', zorder=3)
+        ax.plot(lons[::2], lats[::2], 'o', color='cyan', markersize=4, zorder=5)
+
+    # Circuito C-2 (Rutas 3, 4 y 2 Ramal Centro y Sur)
+    if 'ruta electrica 3' in rutas:
+        pts3 = rutas['ruta electrica 3']
+        lons3 = [lon_sed] + [p[0] for p in pts3]
         lats3 = [lat_sed] + [p[1] for p in pts3]
-        ax.plot(lons3, lats3, color='#F97316', linewidth=2.4, label='Circuito C-2 BT (Ruta 3 Sector Centro: 184.4 m)', zorder=3)
+        ax.plot(lons3, lats3, color='#F97316', linewidth=2.4, label='Circuito C-2 BT (Ramal Centro-Sur: 469.2 m - 34 hab)', zorder=3)
         ax.plot(lons3, lats3, 'o', color='#F97316', markersize=4, zorder=5)
 
-    # 3. Ruta Eléctrica 4 & 2 (Circuito C-3 Sector Sur hacia C32, C43, C38-C42)
     if 'ruta electrica 4' in rutas:
         pts4 = rutas['ruta electrica 4']
         lons4 = [lon_sed] + [p[0] for p in pts4]
         lats4 = [lat_sed] + [p[1] for p in pts4]
-        ax.plot(lons4, lats4, color='#A855F7', linewidth=2.4, label='Circuito C-3 BT (Rutas 4 y 2 Sector Sur: 284.8 m)', zorder=3)
-        ax.plot(lons4, lats4, 'o', color='#A855F7', markersize=4, zorder=5)
+        ax.plot(lons4, lats4, color='#F97316', linewidth=2.4, zorder=3)
+        ax.plot(lons4, lats4, 'o', color='#F97316', markersize=4, zorder=5)
         
     if 'ruta electrica 2' in rutas:
         pts2 = rutas['ruta electrica 2']
         lons2 = [p[0] for p in pts2]
         lats2 = [p[1] for p in pts2]
-        ax.plot(lons2, lats2, color='#A855F7', linewidth=2.4, linestyle=':', zorder=3)
+        ax.plot(lons2, lats2, color='#F97316', linewidth=2.4, linestyle=':', zorder=3)
 
     # Dibujar las 43 Viviendas Censadas
     lons_ab = [a[1] for a in abonados]
@@ -167,7 +179,7 @@ def generar_mapa_chifron_satelital(out_dir):
 
     # DIBUJAR EL TRANSFORMADOR / SED BIPOSTE 100 kVA (UBICACIÓN EXACTA DEL USUARIO)
     ax.plot(lon_sed, lat_sed, marker='s', color='#EC4899', markersize=12, markeredgecolor='white', markeredgewidth=1.8, zorder=8)
-    ax.annotate("TRANSFORMADOR PROYECTADO 100 kVA\nSED BIPOSTE (Armado SAB-1)\nLat: -15.640067°  Lon: -69.815400°\n(Origen de Circuitos BT 1, 2 y 3)",
+    ax.annotate("TRANSFORMADOR PROYECTADO 100 kVA\nSED BIPOSTE (Armado SAB-1)\nLat: -15.640067°  Lon: -69.815400°\n(Origen de Circuitos BT C-1 y C-2)",
                 xy=(lon_sed, lat_sed), xytext=(lon_sed - 0.0068, lat_sed + 0.0018),
                 arrowprops=dict(facecolor='#EC4899', shrink=0.08, width=2.0, headwidth=8),
                 bbox=dict(boxstyle="round,pad=0.4", fc="black", ec="#EC4899", alpha=0.9),
@@ -177,7 +189,7 @@ def generar_mapa_chifron_satelital(out_dir):
     ax.set_xlim(-69.822, -69.810)
     ax.set_ylim(-15.642, -15.632)
     
-    ax.set_title("VISTA SATELITAL REAL Y TRAZADO ELECTROMECÁNICO DEFINITIVO — SECTOR CHIFRÓN\nUbicación de SED 100 kVA en Lat: -15.640067, Lon: -69.815400 y Redes de BT (Rutas 1, 2, 3)",
+    ax.set_title("VISTA SATELITAL REAL Y TRAZADO ELECTROMECÁNICO DEFINITIVO — SECTOR CHIFRÓN\nUbicación de SED 100 kVA en Lat: -15.640067, Lon: -69.815400 y 2 Circuitos de BT (C-1 y C-2)",
                  fontsize=10.5, fontweight='bold', color='navy')
     ax.set_xlabel("Longitud Oeste (WGS-84)", fontsize=8.5)
     ax.set_ylabel("Latitud Sur (WGS-84)", fontsize=8.5)
@@ -192,12 +204,12 @@ def generar_mapa_chifron_satelital(out_dir):
 
 def generar_grafico_cargas(out_dir):
     fig, ax = plt.subplots(figsize=(8, 4.5), dpi=300)
-    circuitos = ['Circuito C-1 (Ruta 1)\n(Troncal Norte: 38 hab)', 'Circuito C-2 (Ruta 3)\n(Sector Centro: 20 hab)', 'Circuito C-3 (Rutas 4 y 2)\n(Sector Sur: 20 hab)']
-    pot_part = [34.20, 18.00, 18.00]
-    pot_ap = [0.42, 0.24, 0.24]
+    circuitos = ['Circuito C-1 (Troncal Norte)\n(44 abonados proyectados)', 'Circuito C-2 (Ramal Centro-Sur)\n(34 abonados proyectados)']
+    pot_part = [39.60, 30.60]
+    pot_ap = [0.54, 0.36]
     
-    bars1 = ax.bar(circuitos, pot_part, label='Servicio Particular (kW)', color='#1E3A8A', width=0.45)
-    bars2 = ax.bar(circuitos, pot_ap, bottom=pot_part, label='Alumbrado Público (kW)', color='#D97706', width=0.45)
+    bars1 = ax.bar(circuitos, pot_part, label='Servicio Particular (kW)', color='#1E3A8A', width=0.40)
+    bars2 = ax.bar(circuitos, pot_ap, bottom=pot_part, label='Alumbrado Público (kW)', color='#D97706', width=0.40)
     
     ax.axhline(y=71.10, color='red', linestyle='--', linewidth=1.5, label='Demanda Máxima Total = 71.10 kW (79.00 kVA)')
     ax.axhline(y=100.0, color='green', linestyle=':', linewidth=1.5, label='Capacidad SED en Origen = 100 kVA (Reserva 21%)')
@@ -207,7 +219,7 @@ def generar_grafico_cargas(out_dir):
         ax.text(b1.get_x() + b1.get_width()/2., tot + 1.2, f"{tot:.2f} kW", ha='center', va='bottom', fontsize=9, fontweight='bold')
         
     ax.set_ylabel("Potencia Activa Demandada (kW)", fontsize=9, fontweight='bold')
-    ax.set_title("DISTRIBUCIÓN DE MÁXIMA DEMANDA POR CIRCUITOS DESDE EL TRANSFORMADOR\nSED Biposte 100 kVA (Lat: -15.640067, Lon: -69.815400)", fontsize=10, fontweight='bold', color='navy')
+    ax.set_title("DISTRIBUCIÓN DE MÁXIMA DEMANDA EN LOS 2 CIRCUITOS DE BAJA TENSIÓN\nSED Biposte 100 kVA (Lat: -15.640067, Lon: -69.815400)", fontsize=10, fontweight='bold', color='navy')
     ax.set_ylim(0, 115)
     ax.legend(loc='upper right', fontsize=8)
     ax.grid(axis='y', linestyle='--', alpha=0.5)
