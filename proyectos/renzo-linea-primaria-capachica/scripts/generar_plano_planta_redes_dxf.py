@@ -2,17 +2,17 @@
 """
 generar_plano_planta_redes_dxf.py
 Genera el Plano General de Redes de Distribución en Planta (Georreferenciado UTM WGS-84 Zona 19S)
-en formato AutoCAD DXF R2010 con simbología 100% oficial normalizada DGE / CNE / MEM / Electro Puno:
+en formato AutoCAD DXF R2010 con simbología estrictamente normalizada UNE-EN 60617 y Norma DGE Perú:
 1. Traza de Línea Primaria MT (22.9 kV, AAAC 35 mm²) y Subestación Biposte SAB-1 (100 kVA, 22.9/0.38-0.22 kV).
 2. Traza de Red Secundaria BT (380/220 V) con exactamente 2 CIRCUITOS DE DISTRIBUCIÓN:
-   - Circuito C-1: Troncal Norte hacia la Playa de Chifrón (Ruta 1 - 820.0 m, 56 usuarios proyectados, incluye vivienda C31).
+   - Circuito C-1: Troncal Norte hacia la Playa de Chifrón (Ruta 1 - 820.0 m, 56 usuarios proyectados, incluye C31).
    - Circuito C-2: Troncal Carretera al Fondo continua (Rutas 3 y 4 - 456.0 m, 22 usuarios proyectados).
-3. Postes de MT (C.A.C. 13/400) y BT (C.A.C. 8/200) con bloque oficial DGE (círculo y cuadrantes achurados).
-4. Red de Alumbrado Público con brazos pastorales y luminarias LED 60W (10 en C-1 y 5 en C-2 = 15 luminarias = 0.90 kW).
-5. Retenidas normalizadas (RET-I, RET-CV) con cable de acero Siemens-Martin, aislador 54-1 y bloque de concreto.
-6. Puestas a tierra normalizadas (PAT-3 en SED con R <= 10 ohm; PAT-1 en red BT con R <= 25 ohm).
+3. Postes C.A.C. limpios (DGE 09-91-20 / UNE 11-11-01) con identificación limpia.
+4. Alumbrado Público UNE-EN 60617-11 nº 11-15-03 (círculo con 'X' inscrita en pastoral, sin textos flotantes).
+5. Puestas a tierra UNE-EN 60617-2 nº 02-15-01 (3 barras paralelas decrecientes, sin textos flotantes en planta).
+6. Retenidas DGE 09-91-18 / UNE 11-11-01 (tirante, aislador 54-1 y ancla, sin textos flotantes en planta).
 7. Acometidas domiciliarias concéntricas aéreas SET 2x4 mm² y cajas portamedidor monofásico "M" para 43 abonados.
-8. Leyenda técnica normalizada DGE/CNE y cuadro resumen de cargas de los 2 circuitos.
+8. Leyenda oficial técnica UNE/DGE, planilla de estructuras y cuadro resumen de cargas de los 2 circuitos.
 
 Autor: Br. Renzo Gabriel Mamani Galindo (Cód. 228447)
 Curso: MEC330 - Instalaciones Eléctricas II | FIME - UNA Puno
@@ -177,40 +177,45 @@ def generar_postes_bt(rutas):
     return postes_bt
 
 def dibujar_bloque_poste_dxf(msp, x, y, pid, ap=False, dx_ap=3.5, dy_ap=0.0):
-    """Dibuja un poste C.A.C. con bloque normalizado DGE (círculo con cuadrantes) y pastoral AP opcional."""
-    # Círculo base del poste
+    """
+    Dibuja un poste C.A.C. normalizado DGE 09-91-20 / UNE 11-11-01:
+    - Círculo limpio con centro definido.
+    - Símbolo oficial de luminaria AP (UNE 11-15-03: círculo con 'X' inscrita).
+    - SIN textos flotantes innecesarios para evitar solapes.
+    """
+    # Círculo base del poste (limpio DGE)
     msp.add_circle((x, y), radius=1.0, dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 25})
-    # Cruz divisoria de cuadrantes DGE
-    msp.add_line((x - 1.0, y), (x + 1.0, y), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 15})
-    msp.add_line((x, y - 1.0), (x, y + 1.0), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 15})
-    # Achurado de cuadrantes opuestos (I y III)
-    msp.add_line((x, y), (x + 0.707, y + 0.707), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 25})
-    msp.add_line((x, y), (x - 0.707, y - 0.707), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 25})
+    # Punto central geodésico
+    msp.add_line((x - 0.25, y), (x + 0.25, y), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 15})
+    msp.add_line((x, y - 0.25), (x, y + 0.25), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 15})
     # Rótulo del poste
     msp.add_text(pid, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.3, "color": colors.GREEN}).set_placement((x + 1.4, y + 0.8))
     
-    # Brazo Pastoral y Luminaria LED 60W de Alumbrado Público
+    # Brazo Pastoral y Luminaria UNE-EN 60617-11 nº 11-15-03
     if ap:
         x_lum = x + dx_ap
         y_lum = y + dy_ap
         # Brazo pastoral de F° G°
         msp.add_line((x, y), (x_lum, y_lum), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 20})
-        # Luminaria LED
-        msp.add_circle((x_lum, y_lum), radius=0.6, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 25})
-        msp.add_text("AP 60W LED", dxfattribs={"layer": "ALUMBRADO_PUBLICO", "height": 1.0, "color": colors.YELLOW}).set_placement((x_lum + 0.8, y_lum - 0.4))
+        # Círculo de luminaria
+        r_l = 0.6
+        msp.add_circle((x_lum, y_lum), radius=r_l, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 25})
+        # Aspa 'X' normalizada inscrita (UNE 11-15-03)
+        d = r_l * 0.707
+        msp.add_line((x_lum - d, y_lum - d), (x_lum + d, y_lum + d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
+        msp.add_line((x_lum - d, y_lum + d), (x_lum + d, y_lum - d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
 
 def dibujar_simbolo_pat(msp, x, y):
-    """Dibuja el símbolo normalizado DGE de Puesta a Tierra (3 barras horizontales decrecientes)."""
+    """Dibuja el símbolo oficial UNE-EN 60617-2 nº 02-15-01 de Puesta a Tierra (3 barras horizontales decrecientes)."""
     # Conductor vertical de bajada
     msp.add_line((x, y), (x, y - 2.0), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3})
     # 3 barras de tierra decrecientes
     msp.add_line((x - 1.6, y - 2.0), (x + 1.6, y - 2.0), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 25})
     msp.add_line((x - 1.0, y - 2.6), (x + 1.0, y - 2.6), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 25})
     msp.add_line((x - 0.4, y - 3.2), (x + 0.4, y - 3.2), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 25})
-    msp.add_text("PAT", dxfattribs={"layer": "PUESTAS_A_TIERRA", "height": 1.2, "color": 3}).set_placement((x + 1.0, y - 3.0))
 
-def dibujar_simbolo_retenida(msp, x, y, az_grados, tipo="RET-I"):
-    """Dibuja el tirante de retenida con su bloque de anclaje de concreto."""
+def dibujar_simbolo_retenida(msp, x, y, az_grados):
+    """Dibuja el tirante de retenida normalizado DGE 09-91-18 con aislador y bloque de anclaje."""
     rad = math.radians(az_grados)
     long_cable = 8.0
     dx = long_cable * math.sin(rad)
@@ -219,12 +224,17 @@ def dibujar_simbolo_retenida(msp, x, y, az_grados, tipo="RET-I"):
     y_ancla = y + dy
     # Cable de retenida
     msp.add_line((x, y), (x_ancla, y_ancla), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 20})
+    # Aislador de porcelana 54-1 a media altura
+    xm = (x + x_ancla) / 2.0
+    ym = (y + y_ancla) / 2.0
+    d_ais = 0.4
+    msp.add_lwpolyline([(xm-d_ais, ym-d_ais), (xm+d_ais, ym-d_ais), (xm+d_ais, ym+d_ais), (xm-d_ais, ym+d_ais), (xm-d_ais, ym-d_ais)],
+                       dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 25})
     # Bloque de concreto perpendicular
     rad_perp = rad + math.pi / 2.0
     dx_p = 1.6 * math.sin(rad_perp)
     dy_p = 1.6 * math.cos(rad_perp)
     msp.add_line((x_ancla - dx_p, y_ancla - dy_p), (x_ancla + dx_p, y_ancla + dy_p), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 35})
-    msp.add_text(tipo, dxfattribs={"layer": "RETENIDAS", "height": 1.4, "color": 30}).set_placement((x_ancla + 1.0, y_ancla + 0.5))
 
 def dibujar_medidor_abonado(msp, x, y, cod):
     """Dibuja la caja portamedidor monofásica normalizada M y rótulo de abonado."""
@@ -233,7 +243,8 @@ def dibujar_medidor_abonado(msp, x, y, cod):
     msp.add_lwpolyline(pts, dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "color": 1})
     msp.add_circle((x, y), radius=0.6, dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "color": 1})
     msp.add_text("M", dxfattribs={"layer": "MEDIDORES_ACOMETIDAS", "height": 0.8, "color": 1}).set_placement((x - 0.25, y - 0.35))
-    msp.add_text(cod, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.3, "color": 7}).set_placement((x + 1.2, y + 0.5))
+    if cod:
+        msp.add_text(cod, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.3, "color": 7}).set_placement((x + 1.2, y + 0.5))
 
 def generar_plano_completo_planta(dxf_out):
     doc = ezdxf.new(dxfversion="R2010")
@@ -248,85 +259,105 @@ def generar_plano_completo_planta(dxf_out):
         ("POSTES_BT", colors.GREEN),
         ("ACOMETIDAS_DOMICILIARIAS", colors.BLUE),
         ("MEDIDORES_ACOMETIDAS", colors.RED),
-        ("RETENIDAS", 30),
         ("PUESTAS_A_TIERRA", 3),
+        ("RETENIDAS", 30),
         ("VIAS_ACCESO", 8),
         ("TEXTOS_ROTULOS", colors.WHITE),
         ("MEMBRETE_LEYENDA", colors.WHITE)
     ]
-    for c_name, c_color in capas:
-        doc.layers.add(c_name, color=c_color)
+    for c_nom, c_col in capas:
+        if c_nom not in doc.layers:
+            doc.layers.add(c_nom, color=c_col)
 
-    # 1. Cargar datos
+    # 1. Rutas y Vías KML
     kml_path = r"C:\Users\renzo\instalacion-electricas\proyectos\renzo-linea-primaria-capachica\fuentes\kml\topografia_capachica_chifron.kml"
     csv_path = r"C:\Users\renzo\instalacion-electricas\proyectos\renzo-linea-primaria-capachica\datos\cargas\censo_43_abonados.csv"
     
     rutas, vias = cargar_rutas_kml(kml_path)
     abonados = cargar_abonados_csv(csv_path)
+    
+    # Dibujar Vías
+    for v_nom, pts in vias:
+        for i in range(len(pts) - 1):
+            msp.add_line(pts[i], pts[i+1], dxfattribs={"layer": "VIAS_ACCESO", "color": 8, "lineweight": 13})
+
+    # 2. Línea Primaria MT 22.9 kV
+    for i in range(len(TRAZA_MT) - 1):
+        msp.add_line(TRAZA_MT[i], TRAZA_MT[i+1], dxfattribs={"layer": "RED_PRIMARIA_MT", "color": colors.CYAN, "lineweight": 40})
+        # Textos de tramo MT
+        p1, p2 = TRAZA_MT[i], TRAZA_MT[i+1]
+        dist = math.hypot(p2[0]-p1[0], p2[1]-p1[1])
+        xm = (p1[0] + p2[0]) / 2.0
+        ym = (p1[1] + p2[1]) / 2.0
+        msp.add_text(f"LP 22.9 kV AAAC 35mm2 (L={dist:.1f}m)", dxfattribs={"layer": "RED_PRIMARIA_MT", "height": 1.6, "color": colors.CYAN}).set_placement((xm - 15.0, ym + 2.5))
+
+    # Subestación Biposte SAB-1
+    for p_mt in POSTES_MT:
+        x, y = p_mt["este"], p_mt["norte"]
+        # Dos postes de la SED (C.A.C. 13/400)
+        msp.add_circle((x - 1.5, y), radius=1.2, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
+        msp.add_circle((x + 1.5, y), radius=1.2, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
+        # Plataforma estructural portatransformador
+        msp.add_line((x - 3.0, y - 0.7), (x + 3.0, y - 0.7), dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 25})
+        msp.add_line((x - 3.0, y + 0.7), (x + 3.0, y + 0.7), dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 25})
+        # Símbolo oficial de transformador UNE 06-09-01 (dos círculos entrelazados)
+        msp.add_circle((x, y + 0.5), radius=1.0, dxfattribs={"layer": "POSTES_MT", "color": colors.RED, "lineweight": 25})
+        msp.add_circle((x, y - 0.5), radius=1.0, dxfattribs={"layer": "POSTES_MT", "color": colors.BLUE, "lineweight": 25})
+        msp.add_text("SED BIPOSTE SAB-1 (100 kVA - 22.9/0.38-0.22 kV)", dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.8, "color": colors.YELLOW}).set_placement((x + 4.0, y + 2.0))
+        # Puesta a tierra y retenida SED
+        dibujar_simbolo_pat(msp, x - 3.5, y)
+        dibujar_simbolo_retenida(msp, x + 3.5, y, p_mt["ret_az"])
+
+    # 3. Red Secundaria BT (2 Circuitos)
     postes_bt = generar_postes_bt(rutas)
     
-    # 2. Vías y Calles
-    for v_name, pts in vias:
-        if len(pts) > 1:
-            msp.add_lwpolyline(pts, dxfattribs={"layer": "VIAS_ACCESO", "color": 8, "lineweight": 13})
+    # Líneas BT C-1
+    if 'ruta electrica 1' in rutas:
+        pts1 = rutas['ruta electrica 1']
+        for i in range(len(pts1) - 1):
+            msp.add_line(pts1[i], pts1[i+1], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
+        # Rótulo C-1
+        p_mid = pts1[len(pts1)//2]
+        msp.add_text("CIRCUITO C-1 (Troncal Norte CAAI 3x35+25+16 mm2 - L=820m)", dxfattribs={"layer": "RED_SECUNDARIA_BT", "height": 1.6, "color": colors.MAGENTA}).set_placement((p_mid[0] + 3.0, p_mid[1] + 2.0))
 
-    # 3. Línea Primaria MT 22.9 kV
-    msp.add_lwpolyline(TRAZA_MT, dxfattribs={"layer": "RED_PRIMARIA_MT", "color": colors.CYAN, "lineweight": 50})
-    
-    # Subestación Biposte SAB-1
-    for p in POSTES_MT:
-        xe, yn = p["este"], p["norte"]
-        msp.add_circle((xe - 1.2, yn), radius=1.2, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
-        msp.add_circle((xe + 1.2, yn), radius=1.2, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
-        msp.add_line((xe - 1.2, yn), (xe + 1.2, yn), dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
-        
-        msp.add_text(f"{p['id']} - SED BIPOSTE 100 kVA (22.9/0.38-0.22 kV)", dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 2.4, "color": colors.YELLOW}).set_placement((xe + 3.0, yn + 2.0))
-        msp.add_text("Lat: -15.640067, Lon: -69.815400 (Origen C-1 Norte y C-2 Sur)", dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.6, "color": colors.WHITE}).set_placement((xe + 3.0, yn - 0.5))
-        
-        if p["pat"]:
-            dibujar_simbolo_pat(msp, xe - 3.5, yn - 2.0)
-        if p["ret"] and p["ret_az"] is not None:
-            dibujar_simbolo_retenida(msp, xe, yn, p["ret_az"], p["ret"])
-
-    # 4. Red Secundaria BT (2 Circuitos)
-    # Circuito C-1 (Ruta 1)
-    if 'ruta electrica 1' in rutas and len(rutas['ruta electrica 1']) > 1:
-        msp.add_lwpolyline(rutas['ruta electrica 1'], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
-    # Circuito C-2 (Rutas 3 y 4 continuas)
+    # Líneas BT C-2
     pts_c2 = []
     if 'ruta electrica 3' in rutas:
         pts_c2 += rutas['ruta electrica 3']
     if 'ruta electrica 4' in rutas:
         pts_c2 += rutas['ruta electrica 4']
-    if len(pts_c2) > 1:
-        msp.add_lwpolyline([(412606.01, 8270712.24)] + pts_c2, dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
+    if pts_c2:
+        msp.add_line((412606.01, 8270712.24), pts_c2[0], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
+        for i in range(len(pts_c2) - 1):
+            msp.add_line(pts_c2[i], pts_c2[i+1], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
+        # Rótulo C-2
+        p_mid2 = pts_c2[len(pts_c2)//2]
+        msp.add_text("CIRCUITO C-2 (Carretera Fondo CAAI 3x25+25+16 mm2 - L=456m)", dxfattribs={"layer": "RED_SECUNDARIA_BT", "height": 1.6, "color": colors.MAGENTA}).set_placement((p_mid2[0] + 3.0, p_mid2[1] + 2.0))
 
-    # Dibujar Postes de BT
+    # 4. Postes BT y Equipamiento Asociado
     for p in postes_bt:
-        xe, yn = p["este"], p["norte"]
-        dibujar_bloque_poste_dxf(msp, xe, yn, p['id'], ap=p.get('ap', False), dx_ap=p.get('dx_ap', 3.5), dy_ap=p.get('dy_ap', 0.0))
-        
+        x, y = p["este"], p["norte"]
+        dibujar_bloque_poste_dxf(msp, x, y, p["id"], ap=p["ap"], dx_ap=p["dx_ap"], dy_ap=p["dy_ap"])
         if p["pat"]:
-            dibujar_simbolo_pat(msp, xe - 2.0, yn - 1.0)
+            dibujar_simbolo_pat(msp, x, y - 1.5)
         if p["ret"]:
-            dibujar_simbolo_retenida(msp, xe, yn, 180.0, "RET-I")
+            az_ret = 45.0 if p["circuito"] == "C-1" else 225.0
+            dibujar_simbolo_retenida(msp, x, y, az_ret)
 
     # 5. Acometidas Domiciliarias a los 43 Abonados
-    todos_los_postes = [(p["este"], p["norte"], p["id"], p["circuito"]) for p in postes_bt] + [(p["este"], p["norte"], p["id"], "SED") for p in POSTES_MT]
-    
     total_long_acometidas = 0.0
     for ab in abonados:
         xe_ab, yn_ab = ab["este"], ab["norte"]
         if ab["cod"] == "C31":
-            cand = [p for p in todos_los_postes if p[3] == "C-1"]
+            cand = [p for p in postes_bt if p["circuito"] == "C-1"]
         elif int(ab["cod"][1:]) <= 30:
-            cand = [p for p in todos_los_postes if p[3] in ["C-1", "SED"]]
+            cand = [p for p in postes_bt if p["circuito"] == "C-1"]
         else:
-            cand = [p for p in todos_los_postes if p[3] in ["C-2", "SED"]]
+            cand = [p for p in postes_bt if p["circuito"] == "C-2"]
             
-        p_cercano = min(cand, key=lambda p: math.hypot(xe_ab - p[0], yn_ab - p[1]))
-        dist_min = math.hypot(xe_ab - p_cercano[0], yn_ab - p_cercano[1])
-        p_e, p_n, p_id, _ = p_cercano
+        p_cercano = min(cand, key=lambda p: math.hypot(xe_ab - p["este"], yn_ab - p["norte"]))
+        p_e, p_n = p_cercano["este"], p_cercano["norte"]
+        dist_min = math.hypot(xe_ab - p_e, yn_ab - p_n)
         
         total_long_acometidas += dist_min
         msp.add_line((p_e, p_n), (xe_ab, yn_ab), dxfattribs={"layer": "ACOMETIDAS_DOMICILIARIAS", "color": colors.BLUE, "lineweight": 18})
@@ -339,12 +370,12 @@ def generar_plano_completo_planta(dxf_out):
     # 6. Cuadro de Simbología y Leyenda Normalizada DGE
     x_leg = 412500.0
     y_leg = 8270860.0
-    w_leg = 100.0
-    h_leg = 135.0
+    w_leg = 105.0
+    h_leg = 145.0
     
     pts_leg = [(x_leg, y_leg), (x_leg + w_leg, y_leg), (x_leg + w_leg, y_leg - h_leg), (x_leg, y_leg - h_leg), (x_leg, y_leg)]
     msp.add_lwpolyline(pts_leg, dxfattribs={"layer": "MEMBRETE_LEYENDA", "color": colors.WHITE, "lineweight": 30})
-    msp.add_text("LEYENDA Y SIMBOLOGÍA TÉCNICA (DGE / CNE)", dxfattribs={"layer": "MEMBRETE_LEYENDA", "height": 2.8, "color": colors.YELLOW}).set_placement((x_leg + 4.0, y_leg - 6.0))
+    msp.add_text("SIMBOLOGÍA NORMALIZADA UNE-EN 60617 / DGE-MEM", dxfattribs={"layer": "MEMBRETE_LEYENDA", "height": 2.6, "color": colors.YELLOW}).set_placement((x_leg + 4.0, y_leg - 6.0))
     msp.add_line((x_leg, y_leg - 9.0), (x_leg + w_leg, y_leg - 9.0), dxfattribs={"layer": "MEMBRETE_LEYENDA"})
 
     items_leyenda = [
@@ -352,13 +383,13 @@ def generar_plano_completo_planta(dxf_out):
         ("CIRCUITO C-1 BT TRONCAL NORTE + C31 (CAAI 3x35+25+16 mm2)", "RED_SECUNDARIA_BT", colors.MAGENTA, "LINEA"),
         ("CIRCUITO C-2 BT CARRETERA AL FONDO (CAAI 3x25+25+16 mm2)", "RED_SECUNDARIA_BT", colors.MAGENTA, "LINEA"),
         ("ACOMETIDA DOMICILIARIA CONCÉNTRICA (SET 2x4 mm2)", "ACOMETIDAS_DOMICILIARIAS", colors.BLUE, "LINEA"),
-        ("POSTE C.A.C. MEDIA TENSIÓN (13m/400daN)", "POSTES_MT", colors.YELLOW, "CIRCULO_MT"),
-        ("POSTE C.A.C. BAJA TENSIÓN 8m/200daN (BLOQUE DGE)", "POSTES_BT", colors.GREEN, "POSTE_DGE"),
-        ("POSTE C.A.C. CON PASTORAL Y LUMINARIA AP 60W LED", "ALUMBRADO_PUBLICO", colors.YELLOW, "POSTE_AP"),
-        ("SUBESTACIÓN DISTRIBUCIÓN BIPOSTE (SAB-1 100 kVA)", "POSTES_MT", colors.YELLOW, "SED"),
-        ("PUESTA A TIERRA NORMALIZADA (PAT-3 / PAT-1)", "PUESTAS_A_TIERRA", 3, "PAT"),
-        ("RETENIDA CON BLOQUE ANCLAJE CONCRETO (RET-I/RET-CV)", "RETENIDAS", 30, "RET"),
-        ("CAJA PORTAMEDIDOR MONOFÁSICO DE ABONADO (M)", "MEDIDORES_ACOMETIDAS", colors.RED, "MEDIDOR"),
+        ("POSTE C.A.C. MEDIA TENSIÓN 13m/400daN (DGE 09-91-20)", "POSTES_MT", colors.YELLOW, "CIRCULO_MT"),
+        ("POSTE C.A.C. BAJA TENSIÓN 8m/200daN (DGE 09-91-20)", "POSTES_BT", colors.GREEN, "POSTE_DGE"),
+        ("PASTORAL CON LUMINARIA LED 60W AP (UNE 11-15-03)", "ALUMBRADO_PUBLICO", colors.YELLOW, "POSTE_AP"),
+        ("SUBESTACIÓN DISTRIBUCIÓN BIPOSTE 100 kVA (UNE 06-09-01)", "POSTES_MT", colors.YELLOW, "SED"),
+        ("PUESTA A TIERRA NORMALIZADA PAT-1 / PAT-3 (UNE 02-15-01)", "PUESTAS_A_TIERRA", 3, "PAT"),
+        ("RETENIDA DE ACERO SM 3/8\" CON ANCLA (DGE 09-91-18)", "RETENIDAS", 30, "RET"),
+        ("CAJA PORTAMEDIDOR MONOFÁSICO DE ABONADO (DGE 09-91-30)", "MEDIDORES_ACOMETIDAS", colors.RED, "MEDIDOR"),
         ("VÍA DE ACCESO / CARRETERA AFIRMADA", "VIAS_ACCESO", 8, "LINEA")
     ]
 
@@ -368,28 +399,29 @@ def generar_plano_completo_planta(dxf_out):
         if tipo_simb == "LINEA":
             msp.add_line((xs - 4.0, y_cur), (xs + 4.0, y_cur), dxfattribs={"layer": capa, "color": col, "lineweight": 30})
         elif tipo_simb == "CIRCULO_MT":
-            msp.add_circle((xs, y_cur), radius=1.6, dxfattribs={"layer": capa, "color": col})
+            msp.add_circle((xs, y_cur), radius=1.4, dxfattribs={"layer": capa, "color": col})
         elif tipo_simb == "POSTE_DGE":
             msp.add_circle((xs, y_cur), radius=1.0, dxfattribs={"layer": capa, "color": col})
-            msp.add_line((xs - 1.0, y_cur), (xs + 1.0, y_cur), dxfattribs={"layer": capa, "color": col})
-            msp.add_line((xs, y_cur - 1.0), (xs, y_cur + 1.0), dxfattribs={"layer": capa, "color": col})
+            msp.add_line((xs - 0.25, y_cur), (xs + 0.25, y_cur), dxfattribs={"layer": capa, "color": col})
+            msp.add_line((xs, y_cur - 0.25), (xs, y_cur + 0.25), dxfattribs={"layer": capa, "color": col})
         elif tipo_simb == "POSTE_AP":
             msp.add_circle((xs, y_cur), radius=0.9, dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN})
             msp.add_line((xs, y_cur), (xs + 3.0, y_cur), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW})
-            msp.add_circle((xs + 3.0, y_cur), radius=0.5, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW})
+            msp.add_circle((xs + 3.0, y_cur), radius=0.6, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW})
+            msp.add_line((xs + 2.6, y_cur - 0.4), (xs + 3.4, y_cur + 0.4), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW})
+            msp.add_line((xs + 2.6, y_cur + 0.4), (xs + 3.4, y_cur - 0.4), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW})
         elif tipo_simb == "SED":
-            msp.add_circle((xs - 1.2, y_cur), radius=1.0, dxfattribs={"layer": capa, "color": col})
-            msp.add_circle((xs + 1.2, y_cur), radius=1.0, dxfattribs={"layer": capa, "color": col})
-            msp.add_line((xs - 1.2, y_cur), (xs + 1.2, y_cur), dxfattribs={"layer": capa, "color": col})
+            msp.add_circle((xs - 0.8, y_cur), radius=0.9, dxfattribs={"layer": capa, "color": colors.RED})
+            msp.add_circle((xs + 0.8, y_cur), radius=0.9, dxfattribs={"layer": capa, "color": colors.BLUE})
         elif tipo_simb == "PAT":
             dibujar_simbolo_pat(msp, xs, y_cur + 1.0)
         elif tipo_simb == "RET":
-            dibujar_simbolo_retenida(msp, xs - 2.0, y_cur, 90.0, "")
+            dibujar_simbolo_retenida(msp, xs - 2.0, y_cur, 90.0)
         elif tipo_simb == "MEDIDOR":
             dibujar_medidor_abonado(msp, xs, y_cur, "")
             
-        msp.add_text(texto, dxfattribs={"layer": "MEMBRETE_LEYENDA", "height": 1.5, "color": colors.WHITE}).set_placement((xs + 8.0, y_cur - 0.7))
-        y_cur -= 8.5
+        msp.add_text(texto, dxfattribs={"layer": "MEMBRETE_LEYENDA", "height": 1.4, "color": colors.WHITE}).set_placement((xs + 8.0, y_cur - 0.6))
+        y_cur -= 8.2
 
     # 7. Resumen de Cargas en el Plano
     msp.add_line((x_leg, y_cur + 2.0), (x_leg + w_leg, y_cur + 2.0), dxfattribs={"layer": "MEMBRETE_LEYENDA"})
