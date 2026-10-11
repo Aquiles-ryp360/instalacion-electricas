@@ -144,12 +144,10 @@ def generar_postes_bt(rutas):
                 })
                 p_idx += 1
                 
-    # 2. Circuito C-2 (Rutas 3 y 4 continuas)
-    pts_c2 = []
-    if 'ruta electrica 3' in rutas:
-        pts_c2 += rutas['ruta electrica 3']
-    if 'ruta electrica 4' in rutas:
-        pts_c2 += rutas['ruta electrica 4']
+    # 2. Circuito C-2 (Bifurcación limpia desde P1-03 hacia carretera al fondo)
+    pts3 = rutas.get('ruta electrica 3', [])
+    pts4 = rutas.get('ruta electrica 4', [])
+    pts_c2 = pts3[1:] + pts4
     p_idx2 = 1
     for i in range(len(pts_c2) - 1):
         p1 = pts_c2[i]
@@ -160,14 +158,12 @@ def generar_postes_bt(rutas):
             ts = s / float(n_seg)
             xe = p1[0] + ts * (p2[0] - p1[0])
             yn = p1[1] + ts * (p2[1] - p1[1])
-            if math.hypot(xe - 412606.01, yn - 8270712.24) < 5.0 and len(postes_bt) > 0:
-                continue
             pid = f"P2-{p_idx2:02d}"
             es_extremo = (s == 0 and i == 0) or (i == len(pts_c2)-2 and s == n_seg)
             pat = "PAT-1" if (p_idx2 % 4 == 0 or es_extremo) else None
             ret = "RET-I" if (es_extremo or p_idx2 in [4, 8]) else None
-            # Exactamente 5 luminarias de AP en C-2
-            ap = True if p_idx2 in [1, 3, 6, 9, 12] else False
+            # Luminarias de AP en C-2
+            ap = True if p_idx2 in [1, 3, 6, 9] else False
             postes_bt.append({
                 "id": pid, "circuito": "C-2", "este": xe, "norte": yn,
                 "pat": pat, "ret": ret, "ap": ap, "dx_ap": 3.5, "dy_ap": -1.5
@@ -179,62 +175,51 @@ def generar_postes_bt(rutas):
 def dibujar_bloque_poste_dxf(msp, x, y, pid, ap=False, dx_ap=3.5, dy_ap=0.0):
     """
     Dibuja un poste C.A.C. normalizado DGE 09-91-20 / UNE 11-11-01:
-    - Círculo limpio con centro definido.
+    - Círculo limpio con centro definido (radio 1.5 m).
     - Símbolo oficial de luminaria AP (UNE 11-15-03: círculo con 'X' inscrita).
-    - SIN textos flotantes innecesarios para evitar solapes.
     """
-    # Círculo base del poste (limpio DGE a escala afinada)
-    msp.add_circle((x, y), radius=0.65, dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 20})
-    # Punto central geodésico
-    msp.add_line((x - 0.15, y), (x + 0.15, y), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 13})
-    msp.add_line((x, y - 0.15), (x, y + 0.15), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 13})
-    # Rótulo del poste
-    msp.add_text(pid, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.0, "color": colors.GREEN}).set_placement((x + 0.9, y + 0.6))
+    msp.add_circle((x, y), radius=1.5, dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 25})
+    msp.add_line((x - 0.4, y), (x + 0.4, y), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 13})
+    msp.add_line((x, y - 0.4), (x, y + 0.4), dxfattribs={"layer": "POSTES_BT", "color": colors.GREEN, "lineweight": 13})
+    msp.add_text(pid, dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.4, "color": colors.GREEN}).set_placement((x + 1.8, y + 1.2))
     
     # Brazo Pastoral y Luminaria UNE-EN 60617-11 nº 11-15-03
     if ap:
-        x_lum = x + (dx_ap * 0.5)
-        y_lum = y + (dy_ap * 0.5)
-        # Brazo pastoral de F° G°
-        msp.add_line((x, y), (x_lum, y_lum), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
-        # Círculo de luminaria
-        r_l = 0.45
-        msp.add_circle((x_lum, y_lum), radius=r_l, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 18})
-        # Aspa 'X' normalizada inscrita (UNE 11-15-03)
+        x_lum = x + dx_ap
+        y_lum = y + dy_ap
+        msp.add_line((x, y), (x_lum, y_lum), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 18})
+        r_l = 1.2
+        msp.add_circle((x_lum, y_lum), radius=r_l, dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 20})
         d = r_l * 0.707
-        msp.add_line((x_lum - d, y_lum - d), (x_lum + d, y_lum + d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 13})
-        msp.add_line((x_lum - d, y_lum + d), (x_lum + d, y_lum - d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 13})
+        msp.add_line((x_lum - d, y_lum - d), (x_lum + d, y_lum + d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
+        msp.add_line((x_lum - d, y_lum + d), (x_lum + d, y_lum - d), dxfattribs={"layer": "ALUMBRADO_PUBLICO", "color": colors.YELLOW, "lineweight": 15})
 
 def dibujar_simbolo_pat(msp, x, y):
-    """Dibuja el símbolo oficial UNE-EN 60617-2 nº 02-15-01 de Puesta a Tierra (3 barras horizontales decrecientes afinadas)."""
-    # Conductor vertical de bajada corto
-    msp.add_line((x, y), (x, y - 1.2), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 15})
-    # 3 barras de tierra decrecientes
-    msp.add_line((x - 0.75, y - 1.2), (x + 0.75, y - 1.2), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 18})
-    msp.add_line((x - 0.45, y - 1.5), (x + 0.45, y - 1.5), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 18})
-    msp.add_line((x - 0.20, y - 1.8), (x + 0.20, y - 1.8), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 18})
+    """Dibuja el símbolo oficial UNE-EN 60617-2 nº 02-15-01 de Puesta a Tierra con espaciado amplio y nítido."""
+    msp.add_line((x, y), (x, y - 2.5), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 18})
+    # 3 barras de tierra decrecientes (espaciado 1.2 m)
+    msp.add_line((x - 2.2, y - 2.5), (x + 2.2, y - 2.5), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 20})
+    msp.add_line((x - 1.4, y - 3.7), (x + 1.4, y - 3.7), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 20})
+    msp.add_line((x - 0.6, y - 4.9), (x + 0.6, y - 4.9), dxfattribs={"layer": "PUESTAS_A_TIERRA", "color": 3, "lineweight": 20})
 
 def dibujar_simbolo_retenida(msp, x, y, az_grados):
     """Dibuja el tirante de retenida normalizado DGE 09-91-18 con aislador y bloque de anclaje a escala proporcionada."""
     rad = math.radians(az_grados)
-    long_cable = 3.5
+    long_cable = 6.0
     dx = long_cable * math.sin(rad)
     dy = long_cable * math.cos(rad)
     x_ancla = x + dx
     y_ancla = y + dy
-    # Cable de retenida
-    msp.add_line((x, y), (x_ancla, y_ancla), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 15})
-    # Aislador de porcelana 54-1 a media altura
+    msp.add_line((x, y), (x_ancla, y_ancla), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 18})
     xm = (x + x_ancla) / 2.0
     ym = (y + y_ancla) / 2.0
-    d_ais = 0.22
+    d_ais = 0.5
     msp.add_lwpolyline([(xm-d_ais, ym-d_ais), (xm+d_ais, ym-d_ais), (xm+d_ais, ym+d_ais), (xm-d_ais, ym+d_ais), (xm-d_ais, ym-d_ais)],
-                       dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 18})
-    # Bloque de concreto perpendicular
+                       dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 22})
     rad_perp = rad + math.pi / 2.0
-    dx_p = 0.85 * math.sin(rad_perp)
-    dy_p = 0.85 * math.cos(rad_perp)
-    msp.add_line((x_ancla - dx_p, y_ancla - dy_p), (x_ancla + dx_p, y_ancla + dy_p), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 25})
+    dx_p = 1.8 * math.sin(rad_perp)
+    dy_p = 1.8 * math.cos(rad_perp)
+    msp.add_line((x_ancla - dx_p, y_ancla - dy_p), (x_ancla + dx_p, y_ancla + dy_p), dxfattribs={"layer": "RETENIDAS", "color": 30, "lineweight": 30})
 
 def dibujar_medidor_abonado(msp, x, y, cod):
     """Dibuja la caja portamedidor monofásica normalizada M y rótulo de abonado."""
@@ -327,7 +312,9 @@ def generar_plano_completo_planta(dxf_out):
     if 'ruta electrica 4' in rutas:
         pts_c2 += rutas['ruta electrica 4']
     if pts_c2:
-        msp.add_line((412606.01, 8270712.24), pts_c2[0], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
+        p1_03_list = [p for p in postes_bt if p["id"] == "P1-03"]
+        if p1_03_list:
+            msp.add_line((p1_03_list[0]["este"], p1_03_list[0]["norte"]), pts_c2[0], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
         for i in range(len(pts_c2) - 1):
             msp.add_line(pts_c2[i], pts_c2[i+1], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
         # Rótulo C-2
