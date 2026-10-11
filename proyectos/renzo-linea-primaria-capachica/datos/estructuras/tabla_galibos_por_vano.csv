@@ -1,0 +1,9 @@
+Vano,Longitud_m,Desnivel_m,Flecha_Max_Calor_m,Tiro_Calor_kgf,Galibo_Libre_m,Norma_CNE_m,Margen_Seguridad_m,Estado,Tipo_Terreno
+E-01-E-02,105.0,-29.17,1.054,123.6,9.546,5.5,4.046,Conforme,Ladera / Pendiente
+E-02-E-03,105.0,-30.0,1.054,123.6,9.546,5.5,4.046,Conforme,Ladera / Pendiente
+E-03-E-04,95.21,-25.44,0.889,120.4,10.161,6.5,3.661,Conforme,Bajada hacia SED
+E-04-E-05,97.22,-22.52,0.922,121.1,10.128,6.5,3.628,Conforme,Salida SED a Vía
+E-05-E-06,115.59,10.23,1.244,126.8,9.356,6.5,2.856,Conforme,Cruce Vía / Vano Crítico
+E-06-E-07,110.51,-2.66,1.151,125.3,9.449,6.5,2.949,Conforme,Borde Lago / Camino
+E-07-E-08,79.81,0.0,0.653,115.2,9.947,6.5,3.447,Conforme,Acceso Muelle Plano
+E-08-E-09,108.26,0.0,1.111,124.6,9.489,6.5,2.989,Conforme,Tramo Final Llano

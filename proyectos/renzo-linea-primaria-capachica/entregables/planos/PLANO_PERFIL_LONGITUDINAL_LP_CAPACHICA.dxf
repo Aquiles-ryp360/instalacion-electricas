@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461325.475925926
+2461325.5204861113
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461325.475925926
+2461325.5204861113
   9
 $TDUUPDATE
  40
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{54D28CB7-48CC-463D-B8DF-F75234A61DE4}
+{189CA4A1-B655-4060-9D97-2DCFA7E19B0C}
   9
 $VERSIONGUID
   2
-{E9D71ADC-16E1-4E13-9DD8-8221B5052AEA}
+{E16CF101-0CE9-4A9C-9E4D-C69D335F793B}
   9
 $EXTNAMES
 290
@@ -1323,9 +1323,9 @@ ISM
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -1339,9 +1339,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -5467,7 +5467,7 @@ AcDbText
  40
 2.5
   1
-0.0°
+0.0%%d
  50
 90.0
  11
@@ -5779,7 +5779,7 @@ AcDbText
  40
 2.5
   1
-0.0°
+0.0%%d
  50
 90.0
  11
@@ -6091,7 +6091,7 @@ AcDbText
  40
 2.5
   1
-0.0°
+0.0%%d
  50
 90.0
  11
@@ -6403,7 +6403,7 @@ AcDbText
  40
 2.5
   1
--35.2°
+-35.2%%d
  50
 90.0
  11
@@ -6715,7 +6715,7 @@ AcDbText
  40
 2.5
   1
--36.1°
+-36.1%%d
  50
 90.0
  11
@@ -7027,7 +7027,7 @@ AcDbText
  40
 2.5
   1
-31.4°
+31.4%%d
  50
 90.0
  11
@@ -7339,7 +7339,7 @@ AcDbText
  40
 2.5
   1
--6.0°
+-6.0%%d
  50
 90.0
  11
@@ -7651,7 +7651,7 @@ AcDbText
  40
 2.5
   1
-33.0°
+33.0%%d
  50
 90.0
  11
@@ -7963,7 +7963,7 @@ AcDbText
  40
 2.5
   1
-0.0°
+0.0%%d
  50
 90.0
  11
@@ -9041,7 +9041,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-11T16:25:20.131798+00:00
+1.4.4 @ 2026-10-11T17:29:30.282424+00:00
   0
 DICTIONARYVAR
   5
@@ -9053,7 +9053,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-11T16:25:20.137526+00:00
+1.4.4 @ 2026-10-11T17:29:30.294713+00:00
   0
 ENDSEC
   0

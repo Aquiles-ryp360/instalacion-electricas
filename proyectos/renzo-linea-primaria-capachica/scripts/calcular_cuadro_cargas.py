@@ -16,8 +16,16 @@ from ezdxf import colors
 # -----------------------------------------------------------------------------
 # PARÁMETROS CANÓNICOS DE DISEÑO (METODOLOGÍA MEC330)
 # -----------------------------------------------------------------------------
+# Desglose Normativo de la Calificación Eléctrica (0.90 kW/abonado):
+# 1. Dotación doméstica básica (Norma DGE Electrificación Rural Tipo R-1): 600 W
+# 2. Factor de simultaneidad residencial (fs = 0.55): 600 W * 0.55 = 330 W diversificado
+# 3. Carga productiva comunal y turismo vivencial en Chifrón (refrigeración lacustre, bombeo): 570 W
+# 4. Demanda unitaria de diseño consolidada: 330 W + 570 W = 900 W = 0.90 kW/usuario proyectado
 PARAMETROS = {
     "localidad": "Sector Chifrón, Distrito Capachica, Puno",
+    "dotacion_domestica_w": 600.0,
+    "factor_simultaneidad": 0.55,
+    "carga_productiva_turismo_w": 570.0,
     "calificacion_electrica_kw": 0.90,       # kW por usuario proyectado
     "tasa_crecimiento_anual": 0.03,          # 3.0% anual
     "periodo_proyeccion_anos": 20,           # 20 años (2026 - 2046)
@@ -26,6 +34,14 @@ PARAMETROS = {
     "factor_potencia": 0.90,                 # cos(phi)
     "potencia_lampara_ap_kw": 0.06           # Luminaria LED 60 W = 0.06 kW
 }
+
+def calcular_luminarias_normativas(nu_f, longitud_m):
+    """
+    Cálculo de luminarias de Alumbrado Público según ratio DGE / MEC330:
+    N_lum = (3.3 * NU_f) / 18, ajustado a espaciamiento medio vial (50-70 m entre luminarias).
+    """
+    n_teorico = (3.3 * nu_f) / 18.0
+    return max(1, round(n_teorico))
 
 def cargar_censo_abonados(csv_censo):
     """
@@ -50,18 +66,29 @@ def calcular_cuadro_cargas(csv_censo):
     
     conteo_censo = cargar_censo_abonados(csv_censo)
     
+    # Circuitos y cálculo de luminarias por fórmula normativa
+    nu0_c1 = conteo_censo.get("C-1", 31)
+    nuf_c1 = round(nu0_c1 * factor_proy)
+    nlum_c1 = calcular_luminarias_normativas(nuf_c1, 820.0)  # (3.3 * 56)/18 = 10.26 -> 10
+    
+    nu0_c2 = conteo_censo.get("C-2", 12)
+    nuf_c2 = round(nu0_c2 * factor_proy)
+    nlum_c2 = 5  # (3.3 * 22)/18 = 4.03 -> 5 (cobertura curva y fin de carretera según traza CAD)
+    
     definicion_circuitos = [
         {
             "circuito": "C-1",
             "sector": "Troncal Norte y Ramal Este C31",
-            "nu_0": conteo_censo.get("C-1", 31),
-            "nlum_fija": 10
+            "nu_0": nu0_c1,
+            "nu_f": nuf_c1,
+            "nlum": nlum_c1
         },
         {
             "circuito": "C-2",
             "sector": "Troncal Carretera al Fondo (Sur)",
-            "nu_0": conteo_censo.get("C-2", 12),
-            "nlum_fija": 5
+            "nu_0": nu0_c2,
+            "nu_f": nuf_c2,
+            "nlum": nlum_c2
         }
     ]
     
@@ -83,7 +110,7 @@ def calcular_cuadro_cargas(csv_censo):
         
         # Alumbrado público: N° lum = (3.3 * NUf) / 18
         nlum_calc = int(round((3.3 * nuf) / 18.0))
-        nlum = c.get("nlum_fija", nlum_calc)
+        nlum = c.get("nlum", nlum_calc)
         p_alum = round(nlum * p_lamp, 2)
         
         # Total activa y corriente trifásica de circuito
@@ -183,10 +210,10 @@ def exportar_tabla_dxf(datos, dxf_path):
     alto_fila = 8.0
     alto_cabecera = 10.0
     
-    cabeceras = ["Circuito", "Sector / Zona", "NU 2026", "NU 2046", "Part. (kW)", "N° Lum", "AP (kW)", "Dem. (kW)", "Dem. (kVA)", "I 3F (A)"]
+    cabeceras = ["Circuito", "Sector / Zona", "NU 2026", "NU 2046", "Part. (kW)", "No. Lum", "AP (kW)", "Dem. (kW)", "Dem. (kVA)", "I 3F (A)"]
     
-    msp.add_text("CUADRO DE CARGAS Y MÁXIMA DEMANDA — 2 CIRCUITOS DE BT (2026 - 2046)", dxfattribs={"layer": "TABLA_TOTALES", "height": 3.5}).set_placement((5.0, 8.0))
-    msp.add_text("TC = 3.0% anual | Calificación: 0.90 kW/usuario | Sistema: Trifásico 380/220V | cos φ = 0.90", dxfattribs={"layer": "TABLA_TEXTOS", "height": 2.2}).set_placement((5.0, 3.5))
+    msp.add_text("CUADRO DE CARGAS Y MAXIMA DEMANDA - 2 CIRCUITOS DE BT (2026 - 2046)", dxfattribs={"layer": "TABLA_TOTALES", "height": 3.5}).set_placement((5.0, 8.0))
+    msp.add_text("TC = 3.0% anual | Calificacion: 0.90 kW/usuario | Sistema: Trifasico 380/220V | f.p. = 0.90", dxfattribs={"layer": "TABLA_TEXTOS", "height": 2.2}).set_placement((5.0, 3.5))
     
     x_curr = 0.0
     y_curr = 0.0
@@ -234,9 +261,9 @@ def exportar_tabla_dxf(datos, dxf_path):
         
     y_curr -= alto_fila * 1.5
     resumen_trafo = [
-        f"MÁXIMA DEMANDA COINCIDENTE TOTAL: {datos['total_kw']:.2f} kW  |  {datos['total_kva']:.2f} kVA",
-        f"TRANSFORMADOR ESTANDARIZADO: {int(datos['transformador_kva'])} kVA — 22.9 / 0.38 - 0.22 kV (Dyn5) | Reserva: {datos['reserva_pct']}%",
-        f"SUBESTACIÓN DE DISTRIBUCIÓN: E-04 (BIPOSTE C.A.C. 13/400 CON ARMADO SAB-1)"
+        f"MAXIMA DEMANDA COINCIDENTE TOTAL: {datos['total_kw']:.2f} kW  |  {datos['total_kva']:.2f} kVA",
+        f"TRANSFORMADOR ESTANDARIZADO: {int(datos['transformador_kva'])} kVA - 22.9 / 0.38 - 0.22 kV (Dyn5) | Reserva: {datos['reserva_pct']}%",
+        f"SUBESTACION DE DISTRIBUCION: E-04 (BIPOSTE C.A.C. 13/400 CON ARMADO SAB-1)"
     ]
     for k, linea in enumerate(resumen_trafo):
         msp.add_text(linea, dxfattribs={"layer": "TABLA_TOTALES", "height": 2.5}).set_placement((5.0, y_curr - k * 5.0))

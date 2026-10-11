@@ -180,7 +180,7 @@ Asignatura:             & MEC330 --- Instalaciones Eléctricas II \tabularnewlin
 Ciclo y Semestre:       & IX Ciclo $\cdot$ Semestre Académico 2026-II \tabularnewline
 Concesionaria:          & Electro Puno S.A.A. (ELPU S.A.A.) \tabularnewline
 Punto de Entrega MT:    & Alimentador Chifrón (Tramo TMT000012389) a 22.9 kV \tabularnewline
-SED Proyectada:         & 100 kVA Biposte (Lat: -15.640067, Lon: -69.815400) \tabularnewline
+SED Proyectada:         & 100 kVA Biposte (E-04: Lat: -15.637680, Lon: -69.813970) \tabularnewline
 Modalidad:              & Individual \tabularnewline
 Entregable:             & Expediente Técnico de Ingeniería y Planos CAD \tabularnewline
 \end{tabularx}
@@ -248,7 +248,7 @@ Este expediente técnico se desarrolla bajo la cátedra de la asignatura de espe
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{fig_traza_satelital_chifron.png}
-    \caption{Ortomosaico Satelital Real con la Ubicación de la SED 100 kVA (Lat: -15.640067, Lon: -69.815400), Redes de Distribución de BT (Circuito C-1 Ruta 1 y Circuito C-2 Carretera al Fondo) y las 43 Viviendas Censadas.}
+    \caption{Ortomosaico Satelital Real con la Ubicación de la SED 100 kVA E-04 (Lat: -15.637680, Lon: -69.813970), Punto de Derivación E-01 (Lat: -15.640067, Lon: -69.815400), Redes de BT y las 43 Viviendas Censadas.}
     \label{fig:mapa_chifron}
 \end{figure}
 
@@ -268,7 +268,7 @@ La factibilidad de suministro se sustenta en la red primaria existente administr
 \begin{itemize}
     \item \textbf{Alimentador Troncal:} Chifrón --- Código de tramo \texttt{TMT000012389} / \texttt{TMT001847370}.
     \item \textbf{Tensión del Sistema:} $22.9\text{ kV}$ (Trifásico, 3 hilos, $60\text{ Hz}$).
-    \item \textbf{Subestación Proyectada (SED-01):} Estructura Biposte C.A.C. $13\text{ m} / 400\text{ daN}$ (Armado SAB-1) ubicada en $\mathbf{\text{Lat: } -15.640067^\circ}$, $\mathbf{\text{Lon: } -69.815400^\circ}$, equipada con tres (03) cortacircuitos cut-out de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$, tres (03) pararrayos ZnO de $21\text{ kV}, 10\text{ kA}$, y transformador trifásico de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$).
+    \item \textbf{Subestación Proyectada (SED-01):} Estructura Biposte C.A.C. $13\text{ m} / 400\text{ daN}$ (Armado SAB-1 en estructura E-04) ubicada en $\mathbf{\text{Lat: } -15.637680^\circ}$, $\mathbf{\text{Lon: } -69.813970^\circ}$ ($E = 412,759.20\text{ m}, N = 8,270,976.22\text{ m}$, Cota $3,839.56\text{ msnm}$), equipada con tres (03) cortacircuitos cut-out de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$, tres (03) pararrayos ZnO de $21\text{ kV}, 10\text{ kA}$, y transformador trifásico de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$).
 \end{itemize}
 
 % =========================================================================
@@ -377,6 +377,21 @@ Para la potencia nominal de la SED ($S = 100\text{ kVA}$ a $22.9\text{ kV}$):
     \Delta V\% = \frac{\Delta V}{V_{\text{nom}}} \cdot 100 = \frac{3.76}{22,900} \cdot 100 = \mathbf{0.016\%} \le 5.0\% \quad \textbf{(AMPLIAMENTE SATISFACTORIO)}
 \end{equation}
 
+\subsection{Cálculo de Cortocircuito y Coordinación de Protecciones MT / BT}
+\begin{itemize}
+    \item \textbf{Potencia de cortocircuito trifásico en barra 22.9 kV:} $S_{cc} = 50.0\text{ MVA}$ (SET Juliaca / Tap Coata).
+    \item \textbf{Corriente de cortocircuito en media tensión (22.9 kV):}
+    \begin{equation}
+        I_{cc,3\phi,\text{MT}} = \frac{S_{cc}}{\sqrt{3} \cdot V_n} = \frac{50,000\text{ kVA}}{\sqrt{3} \cdot 22.9\text{ kV}} = \mathbf{1,260.6\text{ A}} \approx \mathbf{1.26\text{ kA}}
+    \end{equation}
+    La capacidad interruptiva del Cut-Out 27 kV ($10.0\text{ kA}$) supera holgadamente este nivel ($10.0\text{ kA} \gg 1.26\text{ kA}$).
+    \item \textbf{Corriente de cortocircuito franca en bornes secundarios (380 V):} Con $u_{cc} = 4.5\%$ en el transformador de 100 kVA:
+    \begin{equation}
+        I_{cc,3\phi,\text{BT}} = \frac{S_n}{\sqrt{3} \cdot V_{2n} \cdot u_{cc}} = \frac{100\text{ kVA}}{\sqrt{3} \cdot 0.38\text{ kV} \cdot 0.045} = \mathbf{3,376.1\text{ A}} \approx \mathbf{3.38\text{ kA}}
+    \end{equation}
+    \item \textbf{Coordinación de protecciones:} En MT se instalan fusibles tipo chicote curva K de $4\text{ A}$ ($I_n = 2.52\text{ A}$, relación $1.58 \times I_n$), inmunes a la corriente inrush de magnetización. En el tablero BT de la SED se colocan interruptores termomagnéticos en caja moldeada (MCCB) de $3 \times 100\text{ A}$ (C-1) y $3 \times 63\text{ A}$ (C-2) con poder de corte de $16\text{ kA} > 3.38\text{ kA}$, logrando selectividad amperimétrica y cronométrica total frente al fusible MT.
+\end{itemize}
+
 \section{Cálculo Mecánico de Conductores (Ecuación de Cambio de Estado de Truxa)}
 La ecuación cúbica de Truxa para vanos nivelados y desnivelados:
 \begin{equation}
@@ -407,6 +422,27 @@ Con postes de $12\text{ m}$ (empotramiento normalizado $t = 0.10 \times 12 + 0.2
     H_{\text{libre}} = 12.0 - 1.40 - f_{\text{máx}} = 10.60 - 1.244 = \mathbf{9.356\text{ m}}
 \end{equation}
 Dado que el Código Nacional de Electricidad (Regla 232) exige una altura mínima de $6.50\text{ m}$ para cruce de caminos y vías rurales, el diseño cumple holgadamente con un margen de seguridad de $\mathbf{+2.856\text{ m}}$.
+
+\begin{table}[H]
+\centering
+\caption{Verificación Oficial de Gálibos Verticales Vano a Vano (CNE Suministro Regla 232)}
+\label{tab:galibos_vanos}
+\footnotesize
+\begin{tabularx}{\linewidth}{c c c c c c c L}
+\toprule
+\textbf{Vano} & \textbf{Long. (m)} & \textbf{Desnivel (m)} & \textbf{Flecha Máx. (m)} & \textbf{Gálibo (m)} & \textbf{CNE Mín. (m)} & \textbf{Margen (m)} & \textbf{Condición de Terreno} \\
+\midrule
+$E-01 - E-02$ & $105.00$ & $-29.17$ & $1.054$ & $9.546$ & $5.50$ & $+4.046$ & Ladera rocosa no transitable \\
+$E-02 - E-03$ & $105.00$ & $-30.00$ & $1.054$ & $9.546$ & $5.50$ & $+4.046$ & Ladera pronunciada \\
+$E-03 - E-04$ & $95.21$  & $-25.44$ & $0.889$ & $10.161$ & $6.50$ & $+3.661$ & Bajada hacia SED Biposte \\
+$E-04 - E-05$ & $97.22$  & $-22.52$ & $0.922$ & $10.128$ & $6.50$ & $+3.628$ & Salida SED a camino vecinal \\
+$E-05 - E-06$ & $115.59$ & $+10.23$ & $\mathbf{1.244}$ & $\mathbf{9.356}$ & $\mathbf{6.50}$ & $\mathbf{+2.856}$ & Cruce de camino principal (Crítico) \\
+$E-06 - E-07$ & $110.51$ & $-2.66$  & $1.151$ & $9.449$ & $6.50$ & $+2.949$ & Margen lacustre hacia muelle \\
+$E-07 - E-08$ & $79.81$  & $0.00$   & $0.653$ & $9.947$ & $6.50$ & $+3.447$ & Acceso a zona de playa Chifrón \\
+$E-08 - E-09$ & $108.26$ & $0.00$   & $1.111$ & $9.489$ & $6.50$ & $+2.989$ & Tramo terminal llano \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 % =========================================================================
 % CAPÍTULO III: ESPECIFICACIONES TÉCNICAS DE MATERIALES
@@ -499,6 +535,14 @@ El tendido del conductor AAAC de $35\text{ mm}^2$ se realizará empleando poleas
 \end{tabularx}
 \end{table}
 
+\subsection{Sustento de Precios Unitarios (APU) y Fuentes de Cotización}
+El presupuesto se sustenta en un análisis de precios unitarios detallado conforme a la estructura de costos de obras de electrificación rural en el altiplano de Puno:
+\begin{itemize}
+    \item \textbf{Mano de Obra:} Costos de hora-hombre calculados bajo el régimen laboral de Construcción Civil para la Región Puno (CAPECO vigente: Operario S/. 32.50/hh, Oficial S/. 27.20/hh, Peón S/. 24.50/hh), incluyendo leyes sociales (83.82\%) y bonificaciones por altitud ($> 3,800\text{ msnm}$).
+    \item \textbf{Equipos y Herramientas:} Rendimientos de camión grúa 8 ton (S/. 180.00/hm), winche de tendido (S/. 65.00/hm) y 5\% de herramientas manuales.
+    \item \textbf{Materiales y Flete Terrestre:} Cotizaciones de fabricantes de primer nivel nacional (Transformador Delcrosa, Conductor Indeco, Luminarias Josfel, Cemento Yura Tipo IP). Se incluye flete terrestre consolidado para el tramo Juliaca --- Capachica (distancia $85.0\text{ km}$, vía afirmada y asfaltada). El desglose analítico completo de cada partida obra en el documento complementario del expediente \texttt{03\_analisis\_precios\_unitarios.md}.
+\end{itemize}
+
 \section{Cronograma de Ejecución Física}
 El plazo total de ejecución de la obra se estima en \textbf{90 días calendario} (3 meses), desglosados en:
 \begin{itemize}
@@ -536,7 +580,7 @@ El plazo total de ejecución de la obra se estima en \textbf{90 días calendario
 \end{table}
 
 \section{Planilla de Postes de Baja Tensión y Acometidas}
-En las redes secundarias derivadas desde la SED Biposte en $Lat: -15.640067^\circ, Lon: -69.815400^\circ$, se instalan un total de \textbf{36 postes de C.A.C. $8.0\text{ m} / 200\text{ daN}$} y \textbf{$9.0\text{ m} / 300\text{ daN}$}, distribuidos en $23$ postes a lo largo del Circuito C-1 ($820.0\text{ m}$) y $13$ postes a lo largo del Circuito C-2 ($456.0\text{ m}$), asegurando vanos promedio de $32\text{ m}$ a $38\text{ m}$. Los postes terminales y aquellos con desvíos angulares mayores a $15^\circ$ cuentan con retenidas mecánicas tipo R-1 ancladas al suelo.
+En las redes secundarias derivadas desde la SED Biposte E-04 en $Lat: -15.637680^\circ, Lon: -69.813970^\circ$ ($E = 412,759.20\text{ m}, N = 8,270,976.22\text{ m}$), se instalan un total de \textbf{36 postes de C.A.C. $8.0\text{ m} / 200\text{ daN}$} y \textbf{$9.0\text{ m} / 300\text{ daN}$}, distribuidos en $23$ postes a lo largo del Circuito C-1 ($820.0\text{ m}$) y $13$ postes a lo largo del Circuito C-2 ($456.0\text{ m}$), asegurando vanos promedio de $32\text{ m}$ a $38\text{ m}$. Los postes terminales y aquellos con desvíos angulares mayores a $15^\circ$ cuentan con retenidas mecánicas tipo R-1 ancladas al suelo.
 
 % =========================================================================
 % CAPÍTULO VII: AUDITORÍA TÉCNICA ESPECIALIZADA Y DICTAMEN NORMATIVO
@@ -687,7 +731,7 @@ Con el propósito de garantizar la máxima rigurosidad técnica conforme a la no
 1 & Caída de tensión máxima en MT ($22.9\text{ kV}$) & $\Delta V \le 5.0\%$ & $\Delta V = 0.016\%$ ($3.76\text{ V}$) & \textbf{CONFORME} \\
 2 & Caída de tensión máxima en BT ($380/220\text{ V}$) & $\Delta V \le 5.0\%$ (NTCSE) & $\Delta V = 2.14\%$ ($8.13\text{ V}$) & \textbf{CONFORME} \\
 3 & Capacidad de reserva en SED ($100\text{ kVA}$) & Reserva $\ge 15.0\%$ & Reserva $= 21.0\%$ ($79.00\text{ kVA}$) & \textbf{CONFORME} \\
-4 & Esfuerzo máx. tracción en MT (AAAC $35\text{ mm}^2$) & $T \le 50.0\% T_R$ ($520.4\text{ kgf}$) & $T = 358.25\text{ kgf}$ ($34.4\% T_R$) & \textbf{CONFORME} \\
+4 & Esfuerzo máx. tracción en MT (AAAC $35\text{ mm}^2$) & $T \le 40.0\% T_R$ ($416.0\text{ kgf}$) & $T = 358.25\text{ kgf}$ ($34.4\% T_R$) & \textbf{CONFORME} \\
 5 & Esfuerzo en condición EDS ($+15^\circ\text{C}$) & $T \le 18.0\% T_R$ ($187.3\text{ kgf}$) & $T = 187.20\text{ kgf}$ ($18.0\% T_R$) & \textbf{CONFORME} \\
 6 & Gálibo vertical mínimo sobre terreno en MT & $H_{\text{libre}} \ge 6.50\text{ m}$ (CNE Regla 232) & $H_{\text{libre}} = 9.356\text{ m}$ & \textbf{CONFORME} \\
 7 & Gálibo vertical libre en cruces de vía en BT & $H_{\text{libre}} \ge 5.50\text{ m}$ (CNE Regla 232) & $H_{\text{libre}} = 6.15\text{ a }7.15\text{ m}$ & \textbf{CONFORME} \\

@@ -180,7 +180,65 @@ def calcular_tabla_hipotesis_vano(vano_m):
         
     return filas
 
-def generar_reporte_mecanico(vano_critico=115.59, csv_salida=None):
+def calcular_tabla_galibos_todos_los_vanos():
+    """
+    Calcula la verificación detallada de gálibo vertical vano a vano
+    considerando cotas topográficas reales, alturas de soporte, desniveles y flecha máxima a +35°C.
+    """
+    vanos_datos = [
+        {"vano_id": 1, "origen": "E-01", "destino": "E-02", "a_m": 105.00, "z1": 3924.17, "z2": 3895.00, "h1": 12.0, "h2": 12.0, "t1": 1.40, "t2": 1.40, "tipo_terreno": "Ladera / Pendiente", "cne_min_m": 5.50},
+        {"vano_id": 2, "origen": "E-02", "destino": "E-03", "a_m": 105.00, "z1": 3895.00, "z2": 3865.00, "h1": 12.0, "h2": 12.0, "t1": 1.40, "t2": 1.40, "tipo_terreno": "Ladera / Pendiente", "cne_min_m": 5.50},
+        {"vano_id": 3, "origen": "E-03", "destino": "E-04", "a_m": 95.21,  "z1": 3865.00, "z2": 3839.56, "h1": 12.0, "h2": 13.0, "t1": 1.40, "t2": 1.50, "tipo_terreno": "Bajada hacia SED", "cne_min_m": 6.50},
+        {"vano_id": 4, "origen": "E-04", "destino": "E-05", "a_m": 97.22,  "z1": 3839.56, "z2": 3817.04, "h1": 13.0, "h2": 12.0, "t1": 1.50, "t2": 1.40, "tipo_terreno": "Salida SED a Vía", "cne_min_m": 6.50},
+        {"vano_id": 5, "origen": "E-05", "destino": "E-06", "a_m": 115.59, "z1": 3817.04, "z2": 3827.27, "h1": 12.0, "h2": 12.0, "t1": 1.40, "t2": 1.40, "tipo_terreno": "Cruce Vía / Vano Crítico", "cne_min_m": 6.50},
+        {"vano_id": 6, "origen": "E-06", "destino": "E-07", "a_m": 110.51, "z1": 3827.27, "z2": 3824.61, "h1": 12.0, "h2": 12.0, "t1": 1.40, "t2": 1.40, "tipo_terreno": "Borde Lago / Camino", "cne_min_m": 6.50},
+        {"vano_id": 7, "origen": "E-07", "destino": "E-08", "a_m": 79.81,  "z1": 3824.61, "z2": 3824.61, "h1": 12.0, "h2": 12.0, "t1": 1.40, "t2": 1.40, "tipo_terreno": "Acceso Muelle Plano", "cne_min_m": 6.50},
+        {"vano_id": 8, "origen": "E-08", "destino": "E-09", "a_m": 108.26, "z1": 3824.61, "z2": 3824.61, "h1": 12.0, "h2": 12.0, "t1": 1.40, "t2": 1.40, "tipo_terreno": "Tramo Final Llano", "cne_min_m": 6.50},
+    ]
+    
+    resultados = []
+    for v in vanos_datos:
+        a = v["a_m"]
+        # Calcular tabla para este vano y obtener la flecha vertical a +35°C (Hipótesis IV)
+        filas_vano = calcular_tabla_hipotesis_vano(a)
+        f_max = next(f["flecha_vert_m"] for f in filas_vano if f["id"] == "IV")
+        tiro_max_calor = next(f["tiro_kgf"] for f in filas_vano if f["id"] == "IV")
+        
+        hsop1 = v["h1"] - v["t1"]
+        hsop2 = v["h2"] - v["t2"]
+        cota_sop1 = v["z1"] + hsop1
+        cota_sop2 = v["z2"] + hsop2
+        
+        # Desnivel entre soportes
+        desnivel_sop = cota_sop2 - cota_sop1
+        # Cota media de soportes
+        cota_media_sop = (cota_sop1 + cota_sop2) / 2.0
+        # Cota estimada del conductor en el punto medio
+        cota_cond_medio = cota_media_sop - f_max
+        # Cota estimada del terreno en el punto medio (interpolación lineal del terreno)
+        cota_terr_medio = (v["z1"] + v["z2"]) / 2.0
+        # Gálibo vertical libre neta
+        galibo_libre = cota_cond_medio - cota_terr_medio
+        
+        cumple = galibo_libre >= v["cne_min_m"]
+        margen = galibo_libre - v["cne_min_m"]
+        
+        resultados.append({
+            "vano": f"{v['origen']}-{v['destino']}",
+            "longitud_m": a,
+            "desnivel_m": round(v["z2"] - v["z1"], 2),
+            "flecha_max_calor_m": round(f_max, 3),
+            "tiro_calor_kgf": round(tiro_max_calor, 1),
+            "galibo_libre_m": round(galibo_libre, 3),
+            "norma_cne_m": v["cne_min_m"],
+            "margen_seguridad_m": round(margen, 3),
+            "cumple": cumple,
+            "tipo_terreno": v["tipo_terreno"]
+        })
+        
+    return resultados
+
+def generar_reporte_mecanico(vano_critico=115.59, csv_salida=None, csv_galibos=None):
     filas = calcular_tabla_hipotesis_vano(vano_critico)
     
     print("=" * 95)
@@ -195,19 +253,6 @@ def generar_reporte_mecanico(vano_critico=115.59, csv_salida=None):
         print(f"{f['nombre']:22s} | {f['temp_C']:7.1f} | {f['viento_km_h']:8.1f} | {f['w_res_kg_m']:9.4f} | {f['tiro_kgf']:10.2f} | {f['tiro_pct_TR']:5.1f}% | {f['flecha_res_m']:9.3f} | {f['flecha_vert_m']:10.3f} | {est}")
     print("=" * 95)
     
-    # Verificación de altura libre al suelo
-    f_max_vert = next(f["flecha_vert_m"] for f in filas if f["id"] == "IV")
-    h_poste = 12.0
-    empotramiento = 1.40
-    h_libre = h_poste - empotramiento - f_max_vert
-    h_norma_cne = 6.50
-    
-    print(f"\nVERIFICACIÓN DE SEGURIDAD VERTICAL:")
-    print(f"- Altura poste: {h_poste:.2f} m | Empotramiento: {empotramiento:.2f} m | Altura útil: {h_poste - empotramiento:.2f} m")
-    print(f"- Flecha máxima vertical (+35°C): {f_max_vert:.3f} m")
-    print(f"- Distancia libre al suelo: {h_libre:.3f} m  (Exigencia CNE Regla 232: >= {h_norma_cne:.2f} m)")
-    print(f"- Margen de seguridad: +{h_libre - h_norma_cne:.3f} m  --> CUMPLE HOLGADAMENTE")
-    
     if csv_salida:
         os.makedirs(os.path.dirname(csv_salida), exist_ok=True)
         with open(csv_salida, "w", newline="", encoding="utf-8") as fp:
@@ -215,11 +260,33 @@ def generar_reporte_mecanico(vano_critico=115.59, csv_salida=None):
             writer.writerow(["Hipotesis", "Temperatura_C", "Viento_km_h", "Hielo_mm", "Carga_Resultante_kg_m", "Tiro_kgf", "Tiro_pct_TR", "Flecha_Resultante_m", "Flecha_Vertical_m", "Estado"])
             for f in filas:
                 writer.writerow([f["nombre"], f["temp_C"], f["viento_km_h"], f["hielo_mm"], f["w_res_kg_m"], f["tiro_kgf"], f["tiro_pct_TR"], f["flecha_res_m"], f["flecha_vert_m"], "Cumple" if f["cumple"] else "No cumple"])
-        print(f"\nTabla exportada exitosamente a: {csv_salida}")
+        print(f"\nTabla de hipótesis exportada a: {csv_salida}")
         
-    return filas
+    # Gálibos vano a vano
+    galibos = calcular_tabla_galibos_todos_los_vanos()
+    print("\n" + "=" * 95)
+    print("TABLA OFICIAL DE VERIFICACIÓN DE GÁLIBO VERTICAL VANO A VANO (CNE REGLA 232)")
+    print("=" * 95)
+    print(f"{'Vano':9s} | {'Long. (m)':9s} | {'Desnivel (m)':12s} | {'f_máx (m)':9s} | {'Gálibo (m)':10s} | {'Exig. CNE':9s} | {'Margen (m)':10s} | {'Estado'}")
+    print("-" * 95)
+    for g in galibos:
+        est = "CONFORME" if g["cumple"] else "NO CUMPLE"
+        print(f"{g['vano']:9s} | {g['longitud_m']:9.2f} | {g['desnivel_m']:12.2f} | {g['flecha_max_calor_m']:9.3f} | {g['galibo_libre_m']:10.3f} | {g['norma_cne_m']:9.2f} | +{g['margen_seguridad_m']:9.3f} | {est}")
+    print("=" * 95)
+    
+    if csv_galibos:
+        os.makedirs(os.path.dirname(csv_galibos), exist_ok=True)
+        with open(csv_galibos, "w", newline="", encoding="utf-8") as fp:
+            writer = csv.writer(fp)
+            writer.writerow(["Vano", "Longitud_m", "Desnivel_m", "Flecha_Max_Calor_m", "Tiro_Calor_kgf", "Galibo_Libre_m", "Norma_CNE_m", "Margen_Seguridad_m", "Estado", "Tipo_Terreno"])
+            for g in galibos:
+                writer.writerow([g["vano"], g["longitud_m"], g["desnivel_m"], g["flecha_max_calor_m"], g["tiro_calor_kgf"], g["galibo_libre_m"], g["norma_cne_m"], g["margen_seguridad_m"], "Conforme" if g["cumple"] else "No conforme", g["tipo_terreno"]])
+        print(f"Tabla de gálibos exportada a: {csv_galibos}")
+        
+    return filas, galibos
 
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
     csv_out = os.path.join(script_dir, "..", "datos", "estructuras", "tabla_hipotesis_mecanicas_cne.csv")
-    generar_reporte_mecanico(vano_critico=115.59, csv_salida=csv_out)
+    csv_gal = os.path.join(script_dir, "..", "datos", "estructuras", "tabla_galibos_por_vano.csv")
+    generar_reporte_mecanico(vano_critico=115.59, csv_salida=csv_out, csv_galibos=csv_gal)

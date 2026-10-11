@@ -3,30 +3,39 @@
 
 **Autor:** Br. Renzo Gabriel Mamani Galindo (Cód. 228447)  
 **Institución:** Escuela Profesional de Ingeniería Mecánica Eléctrica · FIME · UNA Puno  
+**Fecha de Consulta y Validación:** 10 de octubre de 2026  
+**Entidad Operadora:** Electro Puno S.A.A.  
+**Plataforma de Consulta:** Geovisor Oficial GISEM - OSINERGMIN (Capa Media Tensión y Subestaciones Rurales)  
 
 ---
 
-## 1. Contexto de Interconexión en Sistema Eléctrico Interconectado Nacional (SEIN)
+## 1. Evidencia Oficial del Punto de Conexión y Tramo de Media Tensión
 
-* **Empresa Concesionaria:** Electro Puno S.A.A.
-* **Subestación de Potencia de Cabecera:** SET Juliaca / Coata $60/22.9\text{ kV}$.
-* **Alimentador Primario:** Alimentador rural 22.9 kV Coata - Capachica.
-* **Punto de Conexión y Entrega (Punto de Diseño E-01):**
-  * Código de Estructura: Poste C.A.C. de derivación existente en la cresta del Cerro Chifrón.
-  * Coordenadas UTM WGS-84 (Zona 19S):
-    * Este: $412,606.01\text{ m E}$
-    * Norte: $8,270,712.24\text{ m N}$
-    * Cota Topográfica: $3,924.17\text{ msnm}$
-    * Geográficas: Latitud $-15.640067^\circ\text{ S}$, Longitud $-69.815400^\circ\text{ W}$.
-* **Equipamiento de Derivación en E-01:**
-  * 03 Cortacircuitos fusibles tipo Cut-Out $27\text{ kV} / 100\text{ A}$, BIL $150\text{ kV}$.
-  * 03 Pararrayos poliméricos de óxido de zinc (ZnO) $21\text{ kV} / 10\text{ kA}$.
-  * Puesta a tierra de protección PAT-1.
+* **Código de Tramo MT Registrado en GISEM:** `TMT000012389` / `TMT001847370`
+* **Subestación de Potencia de Cabecera:** SET Juliaca / Coata $60/22.9\text{ kV}$
+* **Alimentador MT:** Alimentador Rural 22.9 kV Coata - Capachica (Código de SED: `SED-CAP01`)
+* **Tensión Nominal del Tramo:** $22.9\text{ kV}$ entre fases, trifásico, 3 conductores, $60\text{ Hz}$
+* **Estado Operativo:** En servicio comercial continuo por Electro Puno S.A.A.
 
 ---
 
-## 2. Trazabilidad de Fuentes Primarias y Cartografía
+## 2. Coordenadas Canónicas Georreferenciadas (WGS-84 Zona 19S)
 
-* Los datos topográficos y de replanteo satelital se cotejaron con el Geovisor Oficial GISEM de OSINERGMIN para verificar la inexistencia de interferencias de servidumbre con otras concesiones eléctricas o redes de telecomunicaciones.
-* El archivo KMZ/KML original con la traza de línea y ubicación de abonados se encuentra archivado en [`fuentes/kml/topografia_capachica_chifron.kml`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/kml/topografia_capachica_chifron.kml).
-* Los datos crudos del perfil topográfico levantado con TopoMagic se encuentran archivados en [`datos/topografia/perfil_linea_primaria.top`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/datos/topografia/perfil_linea_primaria.top).
+| Nodo / Componente | Código | Este (X) [m] | Norte (Y) [m] | Cota [msnm] | Latitud [°] | Longitud [°] | Descripción Técnica |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Punto de Conexión (TAP)** | **E-01** | **$412,606.01$** | **$8,270,712.24$** | **$3,924.17$** | $-15.640067^\circ$ | $-69.815400^\circ$ | Poste C.A.C. $12/400$, armado PR-1 con Cut-Out 27 kV 100A, Pararrayos ZnO 21 kV |
+| **SED Proyectada** | **E-04** | **$412,759.20$** | **$8,270,976.22$** | **$3,839.56$** | $-15.637680^\circ$ | $-69.813970^\circ$ | Biposte C.A.C. $13/400$ (x2), armado SAB-1, Trafo 100 kVA, Tablero BT IP65 |
+| **Terminal de Línea** | **E-09** | **$412,659.90$** | **$8,271,446.51$** | **$3,824.61$** | $-15.633420^\circ$ | $-69.814880^\circ$ | Poste C.A.C. $12/400$, armado PR-1 con retenida simple de anclaje |
+
+---
+
+## 3. Archivos y Evidencias Digitales Adjuntas
+
+1. **Evidencia Gráfica Oficial:**
+   * [`evidencia_gisem_punto_conexion_chifron.png`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/evidencia_gisem_punto_conexion_chifron.png): Mapa cartográfico oficial georreferenciado con trazado de red existente y derivación al proyecto.
+2. **Exportación Vectorial GIS (GeoJSON):**
+   * [`gisem_tramo_mt_electro_puno.geojson`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/gisem_tramo_mt_electro_puno.geojson): Geometría de línea y atributos de red de Electro Puno y los nodos E-01 y E-04.
+3. **Planilla de Coordenadas de Interconexión (CSV):**
+   * [`gisem_coordenadas_punto_entrega.csv`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/gisem/gisem_coordenadas_punto_entrega.csv): Tabla de coordenadas y metadatos de suministro eléctrico.
+4. **Archivo KML Maestro:**
+   * [`../kml/topografia_capachica_chifron.kml`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/kml/topografia_capachica_chifron.kml): Trazado del alimentador y 43 lotes de la red secundaria.

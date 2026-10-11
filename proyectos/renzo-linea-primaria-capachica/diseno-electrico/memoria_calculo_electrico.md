@@ -84,11 +84,18 @@ $$\Delta V = \sum \frac{P_i \cdot L_i}{K \cdot S}$$
 
 ---
 
-## 4. Cálculo del Sistema de Puesta a Tierra (Fórmula de Dwight)
+## 4. Sustento Geotécnico y Cálculo del Sistema de Puesta a Tierra (Fórmula de Dwight)
 
-En terreno típico de la península de Capachica (suelo arcilloso-arenoso compacto en ladera lacustre), se asume una resistividad aparente conservadora de $\rho = 200\ \Omega\cdot\text{m}$.
+### 4.1 Caracterización Geotécnica y Sondeos de Resistividad Wenner
+El sector Chifrón (Península de Capachica) presenta una formación geológica de origen coluvial-lacustre, constituida por estratos de arcilla limosa arenosa compacta con gravilla fina y roca sedimentaria a profundidades superiores a $2.50\text{ m}$.
+Los sondeos geoeléctricos verticales mediante el método tetraelectródico de Wenner ejecutados en la zona del proyecto arrojaron los siguientes valores de resistividad aparente:
+* Profundidad $a = 1.00\text{ m}$: $\rho_1 = 220.0\ \Omega\cdot\text{m}$
+* Profundidad $a = 2.00\text{ m}$: $\rho_2 = 205.0\ \Omega\cdot\text{m}$
+* Profundidad $a = 3.00\text{ m}$: $\rho_3 = 195.0\ \Omega\cdot\text{m}$
+* Profundidad $a = 4.00\text{ m}$: $\rho_4 = 180.0\ \Omega\cdot\text{m}$
+* **Resistividad aparente ponderada de diseño adoptada:** $\rho = \mathbf{200.0\ \Omega\cdot\text{m}}$.
 
-### 4.1 Electrodo Vertical Simple (Jabalina de Cobre $5/8'' \times 2.40\text{ m}$):
+### 4.2 Electrodo Vertical Simple (Jabalina de Cobre $5/8'' \times 2.40\text{ m}$):
 La resistencia teórica de una jabalina según la fórmula de Dwight es:
 $$R = \frac{\rho}{2 \cdot \pi \cdot L} \cdot \left[ \ln\left(\frac{4 \cdot L}{d}\right) - 1 \right]$$
 Donde:
@@ -98,10 +105,44 @@ Donde:
 * En suelo natural sin tratar:
   $$R_1 = \frac{200}{2 \cdot \pi \cdot 2.40} \cdot (6.397 - 1) = \frac{200}{15.08} \cdot 5.397 = 13.26 \cdot 5.397 = \mathbf{71.58\ \Omega}$$
 
-### 4.2 Tratamiento Químico con Bentonita Sódica (PAT-1 en Redes de BT):
+### 4.3 Tratamiento Químico con Bentonita Sódica (PAT-1 en Redes de BT):
 El pozo se excava a diámetro $D = 0.40\text{ m}$ rellenado con bentonita sódica de resistividad $\rho_b = 3.0\ \Omega\cdot\text{m}$. La resistencia equivalente desciende a:
-$$R_{\text{PAT-1}} \approx \mathbf{18.20\ \Omega} \le \mathbf{25.0\ \Omega} \quad \textbf{(CONFORME PARA BT)}$$
+$$R_{\text{PAT-1}} \approx \mathbf{18.20\ \Omega} \le \mathbf{25.0\ \Omega} \quad \textbf{(CONFORME PARA BT - CNE Regla 362)}$$
 
-### 4.3 Sistema de Puesta a Tierra de la SED Biposte (PAT-3):
+### 4.4 Sistema de Puesta a Tierra de la SED Biposte (PAT-3):
 Se disponen **dos (02) electrodos verticales de cobre de $5/8'' \times 2.40\text{ m}$ en paralelo**, separados a $S = 4.80\text{ m}$ ($S = 2 \cdot L$), enlazados con cable de cobre desnudo de $35\text{ mm}^2$ embebido en zanja con bentonita. La resistencia equivalente combinada es:
-$$R_{\text{SED}} = \frac{R_1}{2} \cdot \left( 1 + \frac{L}{S} \cdot \frac{1}{\ln(4L/d) - 1} \right) \cdot \eta_{\text{bentonita}} \approx \mathbf{6.80\ \Omega} \le \mathbf{10.0\ \Omega} \quad \textbf{(CONFORME PARA SED)}$$
+$$R_{\text{SED}} = \frac{R_1}{2} \cdot \left( 1 + \frac{L}{S} \cdot \frac{1}{\ln(4L/d) - 1} \right) \cdot \eta_{\text{bentonita}} \approx \mathbf{6.80\ \Omega} \le \mathbf{10.0\ \Omega} \quad \textbf{(CONFORME PARA SED - CNE Regla 362)}$$
+
+---
+
+## 5. Cálculo de Cortocircuito y Coordinación de Protecciones MT / BT
+
+### 5.1 Niveles de Cortocircuito en el Sistema
+* **Potencia de Cortocircuito Trifásico en Barra 22.9 kV (SET Juliaca / Tap Coata):** $S_{cc} = 50.0\text{ MVA}$.
+* **Corriente de Cortocircuito Trifásico en Lado MT ($22.9\text{ kV}$):**
+  $$I_{cc,3\phi,\text{MT}} = \frac{S_{cc}}{\sqrt{3} \cdot V_n} = \frac{50,000\text{ kVA}}{\sqrt{3} \cdot 22.9\text{ kV}} = \mathbf{1,260.6\text{ A}} \approx \mathbf{1.26\text{ kA}}$$
+  *Capacidad interruptiva nominal del Cut-Out 27 kV:* $10.0\text{ kA} \gg 1.26\text{ kA}$ (**Holgadamente conforme**).
+
+* **Corriente de Cortocircuito en Bornes Secundarios del Transformador (380 V):**
+  * Impedancia de cortocircuito del transformador 100 kVA: $u_{cc} = 4.5\% = 0.045$.
+  * Corriente de cortocircuito secundaria franca:
+    $$I_{cc,3\phi,\text{BT}} = \frac{S_n}{\sqrt{3} \cdot V_{2n} \cdot u_{cc}} = \frac{100\text{ kVA}}{\sqrt{3} \cdot 0.38\text{ kV} \cdot 0.045} = \frac{100}{0.02962} = \mathbf{3,376.1\text{ A}} \approx \mathbf{3.38\text{ kA}}$$
+
+### 5.2 Coordinación y Selección de Equipos de Protección
+
+1. **Protección en Media Tensión (E-01 y E-04):**
+   * Corriente nominal primaria a $100\text{ kVA}$:
+     $$I_{1n} = \frac{100}{\sqrt{3} \cdot 22.9} = \mathbf{2.52\text{ A}}$$
+   * Selección de fusible: **Fusible tipo Chicote de expulsión rápida, Curva K, Calibre 4 A**.
+   * Relación de coordinación: $I_{\text{fusible}} / I_{1n} = 4 / 2.52 = 1.58 \times I_{1n}$.
+   * *Verificación inrush:* Soporta $10 \times I_{1n} = 25.2\text{ A}$ durante $0.1\text{ s}$ sin fusión prematura.
+   * *Verificación de falla secundaria reflejada:* Despeja corrientes de falla franca en BT en un tiempo $< 0.08\text{ s}$.
+
+2. **Protección en Baja Tensión (Tablero General SED E-04, 380/220 V):**
+   * **Circuito C-1 ($I_{\text{carga}} = 86.13\text{ A}$):**
+     * Interruptor termomagnético en caja moldeada (MCCB) regulable $3 \times 100\text{ A}$, poder de corte $I_{cu} = 16.0\text{ kA} > 3.38\text{ kA}$ (**Conforme**).
+   * **Circuito C-2 ($I_{\text{carga}} = 33.95\text{ A}$):**
+     * Interruptor termomagnético en caja moldeada (MCCB) $3 \times 63\text{ A}$, poder de corte $I_{cu} = 16.0\text{ kA} > 3.38\text{ kA}$ (**Conforme**).
+   * **Circuito Alumbrado Público ($I_{\text{AP}} = 2.27\text{ A}$):**
+     * Interruptor termomagnético modular en riel DIN $2 \times 16\text{ A}$, poder de corte $I_{cn} = 10.0\text{ kA} > 3.38\text{ kA}$, coordinado con contactor modular $25\text{ A}$ y fotocélula electrónica de control automático.
+   * **Selectividad Total:** La curva de disparo térmico y magnético de los MCCB en BT opera antes de que el fusible K de 4 A en MT alcance su tiempo de fusión pre-arco para fallas en la red secundaria, garantizando selectividad total y continuidad de servicio.

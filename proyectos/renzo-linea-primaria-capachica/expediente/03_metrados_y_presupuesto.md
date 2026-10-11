@@ -20,11 +20,11 @@
 | 01.04 | Suministro e izaje de poste de concreto C.A.C. 12m / 400 daN | und | $5.00$ |
 | 01.05 | Cimentación con concreto ciclópeo $f'_c = 140\text{ kg/cm}^2 + 30\%$ P.M. | m³ | $5.60$ |
 | 01.06 | Montaje de armado de anclaje de derivación PR-1 (E-01) | cjto | $1.00$ |
-| 01.07 | Montaje de armados de alineamiento y suspensión PS-1 (E-02, E-03, E-05) | cjto | $3.00$ |
-| 01.08 | Montaje de armados de ángulo y retención PA-1 (E-06, E-07, E-08) | cjto | $3.00$ |
+| 01.07 | Montaje de armados de alineamiento y suspensión PS-1 (E-02, E-03, E-07) | cjto | $3.00$ |
+| 01.08 | Montaje de armados de ángulo y retención PA-1 (E-05, E-06, E-08) | cjto | $3.00$ |
 | 01.09 | Montaje de armado terminal de línea primaria PR-1 (E-09) | cjto | $1.00$ |
 | 01.10 | Suministro y tendido de conductor de aleación de aluminio AAAC 35 mm² | m | $2,550.00$ |
-| 01.11 | Suministro e instalación de retenidas mecánicas a tierra R-1 con cable de acero 3/8'' | und | $6.00$ |
+| 01.11 | Suministro e instalación de retenidas mecánicas a tierra R-1 (E-01, E-05, E-06, E-08, E-09) | und | $5.00$ |
 | 01.12 | Suministro e instalación de cortacircuitos Cut-Out 27 kV / 100 A con fusibles chicote 4A | cjto | $1.00$ |
 | 01.13 | Suministro e instalación de pararrayos poliméricos de óxido de zinc (ZnO) 21 kV / 10 kA | cjto | $1.00$ |
 
@@ -79,3 +79,9 @@
 * **PRESUPUESTO TOTAL DE INVERSIÓN (S/.):** **S/. 197,790.42**
 
 *(Son: Ciento noventa y siete mil setecientos noventa con 42/100 Soles).*
+
+---
+
+### Sustento de Costos y Cotizaciones:
+El detalle pormenorizado del cálculo de costos unitarios directos, rendimientos de mano de obra según la tabla salarial CAPECO vigente para la región Puno, cotizaciones referenciales de fábrica de transformadores y materiales homologados, y cálculo de flete Juliaca-Capachica, se encuentra íntegramente desarrollado en el documento:
+* [**`expediente/03_analisis_precios_unitarios.md`**](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/expediente/03_analisis_precios_unitarios.md)

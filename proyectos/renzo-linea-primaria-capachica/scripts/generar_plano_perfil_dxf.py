@@ -275,7 +275,7 @@ def generar_dxf_perfil(dxf_salida):
             
         msp.add_text(e["poste"].split()[1], dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 73.0))
         msp.add_text(e["armado"].split()[0], dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 88.0))
-        msp.add_text(f"{e['angulo']:.1f}°", dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 103.0))
+        msp.add_text(f"{e['angulo']:.1f}%%d", dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 103.0))
         
         # Banda PAT
         pat_txt = "PAT-3" if e["id"] in ["E-01", "E-04", "E-09"] else "---"
