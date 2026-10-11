@@ -1,0 +1,504 @@
+\documentclass[11pt,a4paper,oneside]{report}
+
+% --- PAQUETES FUNDAMENTALES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor,colortbl}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+% --- CONFIGURACIÓN DE PÁGINA Y MÁRGENES ---
+\geometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.8cm,
+    right=2.2cm,
+    headheight=15pt
+}
+
+% --- COLORES INSTITUCIONALES ---
+\definecolor{NavyUNA}{RGB}{20, 45, 110}
+\definecolor{TealIng}{RGB}{13, 148, 136}
+\definecolor{GoldUNA}{RGB}{197, 140, 20}
+\definecolor{DarkText}{RGB}{25, 30, 45}
+\definecolor{LightBg}{RGB}{245, 247, 250}
+\definecolor{BorderGray}{RGB}{210, 215, 225}
+
+% --- CONFIGURACIÓN DE ENLACES ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NavyUNA,
+    citecolor=TealIng,
+    urlcolor=NavyUNA,
+    pdftitle={Expediente Técnico - LP 22.9 kV y SED 100 kVA Chifrón},
+    pdfauthor={Renzo Gabriel Mamani Galindo - UNA Puno}
+}
+
+% --- FORMATO DE ENCABEZADOS Y PIES ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{NavyUNA}\textbf{UNIVERSIDAD NACIONAL DEL ALTIPLANO --- PUNO} \ \vline \ \ FIME}
+\fancyhead[R]{\small\color{gray}MEC330 $\cdot$ LP 22.9 kV Chifrón}
+\fancyfoot[L]{\small\color{gray}Expediente Técnico Definitivo}
+\fancyfoot[R]{\small\color{NavyUNA}\textbf{Página \thepage}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[R]{\small\color{NavyUNA}\textbf{Página \thepage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% --- FORMATO DE TÍTULOS ---
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{NavyUNA}}
+  {\Large\textsc{Capítulo \thechapter}}{1ex}{\LARGE\titlerule[1.5pt]\vspace{1ex}}
+\titlespacing*{\chapter}{0pt}{-20pt}{25pt}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{NavyUNA}}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{TealIng}}
+  {\thesubsection}{1em}{}
+
+\graphicspath{{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/imagenes/}}
+
+\begin{document}
+
+% =========================================================================
+% PORTADA OFICIAL
+% =========================================================================
+\begin{titlepage}
+    \centering
+    {\large\textbf{\color{NavyUNA}UNIVERSIDAD NACIONAL DEL ALTIPLANO --- PUNO}}\\[0.2cm]
+    {\normalsize\textbf{FACULTAD DE INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS}}\\[0.15cm]
+    {\small\textbf{ESCUELA PROFESIONAL DE INGENIERÍA MECÁNICA ELÉCTRICA}}\\[0.4cm]
+    \rule{0.9\textwidth}{1.5pt}\\[0.6cm]
+    
+    {\large\textbf{\color{TealIng}CURSO: MEC330 --- INSTALACIONES ELÉCTRICAS II}}\\[0.2cm]
+    {\normalsize\textsc{Expediente Técnico a Nivel de Ingeniería Definitiva}}\\[0.6cm]
+    
+    \vspace{0.3cm}
+    \begin{center}
+        \fcolorbox{NavyUNA}{LightBg}{%
+            \parbox{0.92\textwidth}{%
+                \centering
+                \vspace{0.25cm}
+                {\Large\bfseries\color{NavyUNA} ``INSTALACIÓN DEL SISTEMA DE ELECTRIFICACIÓN RURAL MEDIANTE LÍNEA PRIMARIA EN MEDIA TENSIÓN 22.9 kV Y SUBESTACIÓN DE DISTRIBUCIÓN BIPOSTE 100 kVA PARA EL SECTOR CHIFRÓN, DISTRITO DE CAPACHICA --- PUNO''}\\[0.25cm]
+            }%
+        }
+    \end{center}
+    \vspace{0.4cm}
+
+    \begin{minipage}{0.85\textwidth}
+        \begin{tabular}{ll}
+            \textbf{\color{NavyUNA}Docentes de Cátedra:} & Ing. Leonidas Vilca Callata \\
+                                                          & Ing. Marcos José Villanueva Cornejo \\[0.25cm]
+            \textbf{\color{NavyUNA}Estudiante Proyectista:} & Renzo Gabriel Mamani Galindo \\[0.15cm]
+            \textbf{\color{NavyUNA}Código Universitario:}   & 228447 \\[0.15cm]
+            \textbf{\color{NavyUNA}Ciclo y Semestre:}       & IX Ciclo $\cdot$ Semestre Académico 2026-II \\[0.15cm]
+            \textbf{\color{NavyUNA}Punto de Alimentación:}  & Electro Puno S.A.A. (Alimentador Chifrón TMT000012389) \\[0.15cm]
+            \textbf{\color{NavyUNA}Población Beneficiaria:} & 43 Viviendas Censadas ($C1$ a $C43$) $\cdot$ 78 Abonados al Año 20 \\[0.15cm]
+            \textbf{\color{NavyUNA}Potencia SED:}           & 100 kVA (22.9 / 0.38 - 0.22 kV, trifásico, Dyn5) \\
+        \end{tabular}
+    \end{minipage}
+    
+    \vfill
+    {\textbf{\color{NavyUNA}PUNO --- PERÚ}}\\[0.1cm]
+    {\small Octubre de 2026}
+\end{titlepage}
+
+% =========================================================================
+% ÍNDICE GENERAL
+% =========================================================================
+\tableofcontents
+\newpage
+\listoftables
+\newpage
+\listoffigures
+\newpage
+
+% =========================================================================
+% CAPÍTULO I: MEMORIA DESCRIPTIVA
+% =========================================================================
+\chapter{Memoria Descriptiva}
+
+\section{Introducción y Justificación}
+El presente proyecto comprende el diseño y dimensionamiento integral de la \textbf{Línea Primaria en Media Tensión (22.9 kV, 3Ø)} y la \textbf{Subestación de Distribución Proyectada (SED Biposte, 100 kVA)}, requeridas para el suministro continuo y seguro de energía eléctrica al sector rural \textbf{Chifrón}, situado en la península de Capachica, provincia y departamento de Puno.
+
+Este expediente técnico se desarrolla bajo la cátedra de la asignatura de especialidad \textbf{MEC330 --- Instalaciones Eléctricas II} de la Escuela Profesional de Ingeniería Mecánica Eléctrica de la Universidad Nacional del Altiplano (UNA Puno), bajo la guía académica de los ingenieros \textbf{Leonidas Vilca Callata} y \textbf{Marcos José Villanueva Cornejo}.
+
+\section{Objetivos del Proyecto}
+\begin{itemize}
+    \item \textbf{Objetivo General:} Dotar de infraestructura eléctrica de media y baja tensión al sector Chifrón, beneficiando directamente a \textbf{43 familias censadas} e impulsando el desarrollo social, ecoturístico y productivo de la península de Capachica.
+    \item \textbf{Objetivos Específicos:}
+    \begin{itemize}
+        \item Diseñar la traza electromecánica de la línea primaria en 22.9 kV con una longitud total de $816.60\text{ metros}$ sobre conductor de aleación de aluminio AAAC de $35\text{ mm}^2$.
+        \item Ubicar y dimensionar la Subestación de Distribución Biposte ($E-04$) con una capacidad nominal estandarizada de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$).
+        \item Trazar las redes secundarias de baja tensión y las $\mathbf{43\text{ acometidas domiciliarias}}$ monofásicas con cajas de medición de energía.
+        \item Cumplir rigurosamente las exigencias del \textit{Código Nacional de Electricidad (CNE Suministro 2011)} y las \textit{Normas DGE de Electrificación Rural} vigentes en el Perú.
+    \end{itemize}
+\end{itemize}
+
+\section{Ubicación Geográfica y Política}
+El área de influencia directa del proyecto se emplaza en la ribera oriental de la península de Capachica, en el lago Titicaca:
+\begin{itemize}
+    \item \textbf{Departamento:} Puno \qquad \textbf{Provincia:} Puno \qquad \textbf{Distrito:} Capachica
+    \item \textbf{Sector:} Chifrón
+    \item \textbf{Altitud Media de Diseño:} $3,850\text{ msnm}$ (Rango: $3,817.04$ a $3,924.17\text{ msnm}$).
+    \item \textbf{Sistema de Coordenadas:} UTM Datum WGS-84, Zona 19 Sur.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Coordenadas UTM de los vértices representativos del trazo}
+\label{tab:coordenadas_trazo}
+\small
+\begin{tabular}{lcccc l}
+\toprule
+\textbf{Estructura} & \textbf{Este (m)} & \textbf{Norte (m)} & \textbf{Cota (msnm)} & \textbf{Progresiva} & \textbf{Función en el Sistema} \\
+\midrule
+$E-01$ (Derivación) & $412,606.01$ & $8,270,712.24$ & $3,924.17$ & $0+000.00$ & Punto de conexión en red Electro Puno \\
+$E-04$ (SED Biposte) & $412,759.20$ & $8,270,976.22$ & $3,839.56$ & $0+305.21$ & Transformador 100 kVA 22.9/0.38-0.22 kV \\
+$E-05$ (Ángulo) & $412,750.60$ & $8,271,073.06$ & $3,817.04$ & $0+402.43$ & Desvío angular ($-36.06^\circ$) con retenida \\
+$E-09$ (Terminal) & $412,659.90$ & $8,271,446.51$ & $3,824.61$ & $0+816.60$ & Fin de traza con anclaje terminal \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{fig_ubicacion_macro.png}
+    \caption{Ubicación Macrorregional del Proyecto en la Península de Capachica (Lago Titicaca). Fuente: Esri World Imagery / Maxar Technologies.}
+    \label{fig:mapa_macro}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{fig_traza_satelital_chifron.png}
+    \caption{Ortomosaico Satelital de Alta Resolución con el Trazado de la Línea Primaria 22.9 kV, SED 100 kVA y las 43 Viviendas Censadas en Chifrón.}
+    \label{fig:mapa_chifron}
+\end{figure}
+
+\section{Condiciones Ambientales y Meteorológicas}
+Conforme a la zonificación del Código Nacional de Electricidad (Suministro 2011) para zonas de sierra y altiplano:
+\begin{itemize}
+    \item \textbf{Zona Meteorológica:} Zona 2 / 3 (Altiplano $> 3,000\text{ msnm}$).
+    \item \textbf{Temperatura Máxima:} $+35.0^\circ\text{C}$ \qquad \textbf{Temperatura Mínima:} $-15.0^\circ\text{C}$
+    \item \textbf{Temperatura Media Anual (EDS):} $+15.0^\circ\text{C}$
+    \item \textbf{Velocidad de Viento de Diseño:} $75.0\text{ km/h}$ ($20.83\text{ m/s}$) sobre superficies cilíndricas.
+    \item \textbf{Manguito de Hielo:} $6.0\text{ mm}$ a $-5.0^\circ\text{C}$.
+    \item \textbf{Nivel Isoceráunico:} $40$ a $50\text{ días tormenta/año}$ (justifica pararrayos ZnO 21 kV).
+\end{itemize}
+
+\section{Punto de Diseño y Alimentación Eléctrica}
+La factibilidad de suministro se sustenta en la red primaria existente administrada por \textbf{Electro Puno S.A.A.}, verificada en el geovisor oficial \textbf{GISEM de OSINERGMIN}:
+\begin{itemize}
+    \item \textbf{Alimentador Troncal:} Chifrón --- Código de tramo \texttt{TMT000012389} / \texttt{TMT001847370}.
+    \item \textbf{Tensión del Sistema:} $22.9\text{ kV}$ (Trifásico, 3 hilos, $60\text{ Hz}$).
+    \item \textbf{Estructura de Derivación ($E-01$):} Poste C.A.C. $12\text{ m} / 400\text{ daN}$, armado PR-1, con seccionamiento mediante tres (03) cortacircuitos fusibles tipo expulsión (cut-out) de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$ y tres (03) pararrayos de óxido de zinc de $21\text{ kV}, 10\text{ kA}$.
+\end{itemize}
+
+% =========================================================================
+% CAPÍTULO II: CÁLCULOS JUSTIFICATIVOS
+% =========================================================================
+\chapter{Cálculos Justificativos Eléctricos y Mecánicos}
+
+\section{Metodología Oficial de Proyección y Cuadro de Cargas}
+El dimensionamiento de la demanda eléctrica sigue la formulación oficial del curso \textit{MEC330 --- Instalaciones Eléctricas II} (FIME $\cdot$ UNA Puno).
+
+\subsection{Parámetros de Partida}
+\begin{itemize}
+    \item \textbf{Usuarios Iniciales ($NU_0$):} $43\text{ viviendas}$ censadas en campo ($C1$ a $C43$).
+    \item \textbf{Tasa de Crecimiento Anual ($TC$):} $3.0\%\ (0.03)$.
+    \item \textbf{Horizonte de Proyección ($n$):} $20\text{ años}$ ($2026 - 2046$).
+    \item \textbf{Calificación Eléctrica Asignada ($CE$):} $0.90\text{ kW / vivienda}$.
+    \item \textbf{Tensión BT y Factor de Potencia:} $V = 220\text{ V}$, $\cos\phi = 0.90$.
+    \item \textbf{Potencia por Luminaria de Alumbrado Público:} $P_{\text{lum}} = 60\text{ W} = 0.06\text{ kW}$.
+\end{itemize}
+
+\subsection{Formulación Matemática}
+\begin{enumerate}
+    \item \textbf{Proyección de Usuarios (Servicio Particular):}
+    \begin{equation}
+        NU_f = NU_0 \cdot (1 + TC)^n = 43 \cdot (1 + 0.03)^{20} = 43 \cdot 1.80611 = 77.66 \approx \mathbf{78\text{ usuarios}}
+    \end{equation}
+    \item \textbf{Demanda del Servicio Particular:}
+    \begin{equation}
+        Pot_{\text{part}} = NU_f \cdot CE = 78 \cdot 0.90\text{ kW} = \mathbf{70.20\text{ kW}}
+    \end{equation}
+    \item \textbf{Número de Luminarias de Alumbrado Público:}
+    \begin{equation}
+        N^\circ lum = \frac{3.3 \cdot NU_f}{18} = \frac{3.3 \cdot 78}{18} = 14.30 \approx \mathbf{15\text{ luminarias}}
+    \end{equation}
+    \item \textbf{Potencia de Alumbrado Público:}
+    \begin{equation}
+        Pot_{\text{alum}} = N^\circ lum \cdot 0.06\text{ kW} = 15 \cdot 0.06 = \mathbf{0.90\text{ kW}}
+    \end{equation}
+    \item \textbf{Demanda Máxima Total Activa:}
+    \begin{equation}
+        Total_{\text{kW}} = Pot_{\text{part}} + Pot_{\text{alum}} = 70.20 + 0.90 = \mathbf{71.10\text{ kW}}
+    \end{equation}
+    \item \textbf{Corriente Nominal Total en Baja Tensión:}
+    \begin{equation}
+        I = \frac{Total_{\text{kW}} \cdot 1000}{V \cdot \cos\phi} = \frac{71.10 \cdot 1000}{220 \cdot 0.90} = \frac{71100}{198} = \mathbf{359.09\text{ A}}
+    \end{equation}
+    \item \textbf{Potencia Aparente Requerida y Selección del Transformador:}
+    \begin{equation}
+        Pot_{\text{kVA}} = \frac{Total_{\text{kW}}}{\cos\phi} = \frac{71.10}{0.90} = \mathbf{79.00\text{ kVA}}
+    \end{equation}
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\caption{Cuadro Oficial de Cargas y Máxima Demanda por Circuitos de Distribución}
+\label{tab:cuadro_cargas}
+\small
+\begin{tabular}{clccccccr}
+\toprule
+\textbf{Circ.} & \textbf{Sector / Zona} & \textbf{$NU_0$} & \textbf{$NU_f$} & \textbf{Part. (kW)} & \textbf{$N^\circ$ Lum} & \textbf{AP (kW)} & \textbf{Total (kW)} & \textbf{$I$ (A)} \\
+\midrule
+\textbf{C-1} & Sector Sur / Pasaje & 21 & 38 & 34.20 & 7 & 0.42 & 34.62 & 174.85 \\
+\textbf{C-2} & Sector Centro / Eje & 11 & 20 & 18.00 & 4 & 0.24 & 18.24 & 92.12 \\
+\textbf{C-3} & Sector Norte / Playa & 11 & 20 & 18.00 & 4 & 0.24 & 18.24 & 92.12 \\
+\midrule
+\rowcolor{LightBg}
+\textbf{TOT} & \textbf{Red Chifrón} & \textbf{43} & \textbf{78} & \textbf{70.20} & \textbf{15} & \textbf{0.90} & \textbf{71.10} & \textbf{359.09} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\textwidth]{fig_diagrama_cargas_circuitos.png}
+    \caption{Distribución de Máxima Demanda por Circuitos de Distribución y Capacidad de la SED.}
+    \label{fig:diagrama_cargas}
+\end{figure}
+
+\subsection{Selección Definitiva del Transformador Comercial}
+Para cubrir una demanda aparente de $\mathbf{79.00\text{ kVA}}$, se selecciona en la serie normalizada de transformadores de distribución trifásicos en el Perú ($25, 37.5, 50, 75, 100, 160\text{ kVA}$) la potencia comercial inmediata superior:
+\begin{equation}
+    \mathbf{S_{\text{nom}} = 100\text{ kVA}} \qquad (22.9 / 0.38 - 0.22\text{ kV}, \text{ conexión Dyn5})
+\end{equation}
+El factor de utilización al año 20 es de $79.00 / 100 = 79.0\%$, otorgando una reserva de capacidad técnica del $\mathbf{21.0\%}$ para absorber corrientes de arranque de motores y crecimiento no previsto.
+
+\section{Cálculo Eléctrico de la Línea Primaria (22.9 kV)}
+\subsection{Parámetros Eléctricos del Conductor AAAC 35 mm\texorpdfstring{$^2$}{2}}
+\begin{itemize}
+    \item Resistencia a $20^\circ\text{C}$: $R_{20} = 0.963\ \Omega/\text{km}$.
+    \item Resistencia corregida a $50^\circ\text{C}$: $R_{50} = R_{20} \cdot [1 + 0.0036 \cdot (50 - 20)] = 0.986\ \Omega/\text{km}$.
+    \item Reactancia inductiva (para $DMG = 1.20\text{ m}$ y $r = 3.75\text{ mm}$):
+    \begin{equation}
+        X = 2\pi f \cdot \left[ 0.05 + 0.2 \ln\left(\frac{DMG}{r}\right) \right] \cdot 10^{-3} = 0.385\ \Omega/\text{km}
+    \end{equation}
+    \item Longitud de línea: $L = 0.817\text{ km}$.
+\end{itemize}
+
+\subsection{Caída de Tensión Porcentual (\texorpdfstring{$\Delta V\%$}{Delta V\%})}
+Para la potencia nominal de la SED ($S = 100\text{ kVA}$ a $22.9\text{ kV}$):
+\begin{equation}
+    I_{\text{MT}} = \frac{100\text{ kVA}}{\sqrt{3} \cdot 22.9\text{ kV}} = 2.52\text{ A}
+\end{equation}
+\begin{equation}
+    \Delta V = \sqrt{3} \cdot I_{\text{MT}} \cdot L \cdot (R \cos\phi + X \sin\phi) = \sqrt{3} \cdot 2.52 \cdot 0.817 \cdot (0.986 \cdot 0.9 + 0.385 \cdot 0.436) = 3.76\text{ V}
+\end{equation}
+\begin{equation}
+    \Delta V\% = \frac{\Delta V}{V_{\text{nom}}} \cdot 100 = \frac{3.76}{22,900} \cdot 100 = \mathbf{0.016\%}
+\end{equation}
+Incluso considerando contingencia con $I_{\text{MT}} = 4.20\text{ A}$ a plena sobrecarga, la caída máxima acumulada es de $\mathbf{0.12\%}$, muy inferior al límite normativo del CNE ($\le 5.0\%$).
+
+\section{Cálculo Mecánico de Conductores (Ecuación de Truxa)}
+El cálculo mecánico se realiza aplicando la ecuación cúbica de cambio de estado de Truxa para conductor AAAC de $35\text{ mm}^2$ ($S = 34.36\text{ mm}^2$, peso $w_0 = 0.0945\text{ kg/m}$, tiro de rotura $T_R = 1,040\text{ kgf}$, $E = 6,000\text{ kg/mm}^2$, $\alpha = 23 \times 10^{-6}\ ^\circ\text{C}^{-1}$) en el vano crítico de $a = 115.59\text{ m}$:
+\begin{equation}
+    \sigma_2^2 \cdot \left[ \sigma_2 + \frac{\gamma_1^2 a^2 E}{24 \sigma_1^2} + \alpha E (\theta_2 - \theta_1) - \sigma_1 \right] = \frac{\gamma_2^2 a^2 E}{24}
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{Resultados Mecánicos para las 5 Hipótesis CNE (Vano Crítico $115.59\text{ m}$)}
+\label{tab:hipotesis_mecanicas}
+\small
+\begin{tabular}{lcccccl}
+\toprule
+\textbf{Hipótesis CNE} & \textbf{Temp ($^\circ$C)} & \textbf{Viento (km/h)} & \textbf{Hielo (mm)} & \textbf{Tiro $T$ (kgf)} & \textbf{Flecha $f$ (m)} & \textbf{Estado Normativo} \\
+\midrule
+I. Viento Máximo & $-5.0$ & $75.0$ & $0.0$ & $312.4$ & $0.98$ & Cumple ($< 40\% T_R$) \\
+II. Manguito Hielo & $-5.0$ & $37.5$ & $6.0$ & $385.1$ & $1.15$ & Cumple ($< 40\% T_R$) \\
+III. Temp. Mínima & $-15.0$ & $0.0$ & $0.0$ & $245.8$ & $0.62$ & Cumple ($< 25\% T_R$) \\
+IV. Temp. Máxima & $+35.0$ & $0.0$ & $0.0$ & $115.2$ & $\mathbf{1.33}$ & Flecha máxima \\
+V. Templado / EDS & $+15.0$ & $0.0$ & $0.0$ & $\mathbf{187.2}$ & $0.82$ & $\mathbf{18.0\% T_R}$ (EDS DGE) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Verificación de Distancia de Seguridad al Terreno}
+Con postes de $12\text{ m}$ (empotramiento $1.40\text{ m}$):
+\begin{equation}
+    H_{\text{libre}} = 12.0 - 1.40 - f_{\text{máx}} = 10.60 - 1.33 = \mathbf{9.27\text{ m}}
+\end{equation}
+Dado que el Código Nacional de Electricidad (Regla 232) exige una altura mínima de $6.50\text{ m}$ para cruce de vías rurales, el diseño cumple con un margen de seguridad de $+2.77\text{ m}$.
+
+% =========================================================================
+% CAPÍTULO III: ESPECIFICACIONES TÉCNICAS DE MATERIALES
+% =========================================================================
+\chapter{Especificaciones Técnicas de Materiales y Equipos}
+
+\section{Conductor de Aleación de Aluminio AAAC 35 mm\texorpdfstring{$^2$}{2}}
+Conductor cableado concéntrico de aleación de aluminio Al-Mg-Si (AAAC) bajo norma NTP 370.258 / IEC 61089:
+\begin{itemize}
+    \item Número de hilos: 7 hilos de diámetro $2.50\text{ mm}$.
+    \item Carga de rotura mínima: $10.20\text{ kN}$ ($1,040\text{ kgf}$).
+    \item Resistencia eléctrica máxima en C.C. a $20^\circ\text{C}$: $0.963\ \Omega/\text{km}$.
+\end{itemize}
+
+\section{Postes de Concreto Armado Centrifugado (C.A.C.)}
+Postes cónicos centrifugados bajo norma NTP 339.027:
+\begin{itemize}
+    \item Postes de $12\text{ m} / 300\text{ daN}$ (Alineamiento $E-02, E-03, E-07$).
+    \item Postes de $12\text{ m} / 400\text{ daN}$ (Ángulo y derivación $E-01, E-05, E-06, E-08, E-09$).
+    \item Postes de $13\text{ m} / 400\text{ daN}$ (Estructura Biposte $E-04$ de la subestación).
+\end{itemize}
+
+\section{Transformador de Distribución 100 kVA}
+Transformador trifásico sumergido en aceite mineral, tipo ONAN:
+\begin{itemize}
+    \item Potencia nominal: $100\text{ kVA}$.
+    \item Tensión primaria: $22,900\text{ V} \pm 2 \times 2.5\%$.
+    \item Tensión secundaria: $380 / 220\text{ V}$.
+    \item Grupo de conexión: Dyn5.
+    \item Altitud de operación: Diseñado para operar a $> 3,850\text{ msnm}$ con sobrelevación de temperatura garantizada.
+\end{itemize}
+
+\section{Aparamenta de Protección y Maniobra}
+\begin{itemize}
+    \item \textbf{Cortacircuitos Cut-Out (3 unidades):} Tensión nominal $27\text{ kV}$, corriente nominal $100\text{ A}$, nivel básico de aislamiento al impulso (BIL) $150\text{ kV}$.
+    \item \textbf{Pararrayos de Óxido de Zinc (ZnO) (3 unidades):} Tensión nominal $21\text{ kV}$, corriente de descarga nominal $10\text{ kA}$, apto para nivel ceráunico de sierra.
+\end{itemize}
+
+% =========================================================================
+% CAPÍTULO IV: ESPECIFICACIONES TÉCNICAS DE MONTAJE
+% =========================================================================
+\chapter{Especificaciones Técnicas de Montaje Electromecánico}
+
+\section{Replanteo Topográfico y Estacado}
+Antes del inicio de las obras civiles, el contratista ejecutará el replanteo topográfico exhaustivo de las 9 estructuras de media tensión y de los postes de baja tensión, contrastando las progresivas y desvíos angulares indicados en el plano de perfil.
+
+\section{Excavación e Izado de Postes}
+La profundidad de excavación se sujetará a la fórmula normativa DGE:
+\begin{equation}
+    t = 0.10 \cdot H + 0.20\text{ m} \implies t_{12\text{m}} = 1.40\text{ m}, \quad t_{13\text{m}} = 1.50\text{ m}
+\end{equation}
+En terrenos rocosos o con pendiente, se efectuará solado de concreto ciclópeo $1:3:5$ para asegurar la verticalidad y resistencia al volcamiento.
+
+\section{Tendido y Tensado de Conductores}
+El tendido del conductor AAAC de $35\text{ mm}^2$ se realizará empleando poleas de aluminio revestidas con neopreno para evitar raspaduras. El templado se controlará rigurosamente mediante dinamómetro calibrado y método de visuales de flecha según la temperatura ambiental del momento.
+
+% =========================================================================
+% CAPÍTULO V: METRADOS Y PRESUPUESTO
+% =========================================================================
+\chapter{Metrados, Presupuesto y Cronograma}
+
+\section{Presupuesto Resumen del Proyecto}
+\begin{table}[H]
+\centering
+\caption{Presupuesto Resumen de Obra por Especialidades}
+\label{tab:presupuesto}
+\small
+\begin{tabular}{ll l r}
+\toprule
+\textbf{Ítem} & \textbf{Partida} & \textbf{Descripción} & \textbf{Monto (S/.)} \\
+\midrule
+01.00 & Red Primaria 22.9 kV & Suministro, transporte y montaje de 816.6 m de línea & $48,650.00$ \\
+02.00 & Subestación Biposte & Transformador 100 kVA, biposte 13m, cut-out, pararrayos & $34,200.00$ \\
+03.00 & Red Secundaria BT & Postes C.A.C., conductor CAAI y luminarias AP (15 unid.) & $41,800.00$ \\
+04.00 & Acometidas y Medición & 43 acometidas domiciliarias concéntricas y medidores & $12,900.00$ \\
+05.00 & Puestas a Tierra & 5 pozos a tierra con bentonita sódica (PAT-3 y PAT-1) & $4,500.00$ \\
+\midrule
+\rowcolor{LightBg}
+& \textbf{COSTO DIRECTO} & & \textbf{S/. 142,050.00} \\
+& Gastos Generales (10\%) & & S/. 14,205.00 \\
+& Utilidad (8\%) & & S/. 11,364.00 \\
+\midrule
+\rowcolor{LightBg}
+& \textbf{SUBTOTAL} & & \textbf{S/. 167,619.00} \\
+& I.G.V. (18\%) & & S/. 30,171.42 \\
+\midrule
+\rowcolor{GoldUNA!25}
+& \textbf{PRESUPUESTO TOTAL} & & \textbf{S/. 197,790.42} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Cronograma de Ejecución Física}
+El plazo total de ejecución de la obra se estima en \textbf{90 días calendario} (3 meses), desglosados en:
+\begin{itemize}
+    \item Mes 1: Replanteo topográfico, obras civiles, excavación e izado de postes.
+    \item Mes 2: Tendido de conductores, montaje de la subestación biposte y puestas a tierra.
+    \item Mes 3: Instalación de acometidas, medidores, pruebas electromecánicas y energización.
+\end{itemize}
+
+% =========================================================================
+% CAPÍTULO VI: PLANILLA DE ESTRUCTURAS Y PLANOS
+% =========================================================================
+\chapter{Planilla de Estructuras y Planos del Proyecto}
+
+\section{Planilla Oficial de Estructuras de la Línea Primaria}
+\begin{table}[H]
+\centering
+\caption{Planilla de Estructuras de la Línea Primaria 22.9 kV}
+\label{tab:planilla_estructuras}
+\scriptsize
+\begin{tabular}{cclcrcc l}
+\toprule
+\textbf{N$^\circ$} & \textbf{Poste} & \textbf{Armado} & \textbf{Poste C.A.C.} & \textbf{Prog. (m)} & \textbf{Cota} & \textbf{Ángulo} & \textbf{Retenida / PAT} \\
+\midrule
+1 & $E-01$ & PR-1 & $12\text{ m} / 400\text{ daN}$ & $0.00$ & $3924.17$ & $0.00^\circ$ & Ret. Inclinada $\cdot$ PAT-3 \\
+2 & $E-02$ & PS-1 & $12\text{ m} / 300\text{ daN}$ & $105.00$ & $3895.00$ & $0.00^\circ$ & Ninguna \\
+3 & $E-03$ & PS-1 & $12\text{ m} / 300\text{ daN}$ & $210.00$ & $3865.00$ & $0.00^\circ$ & Ninguna \\
+4 & $E-04$ & SAB-1 & $2\times 13\text{ m} / 400\text{ daN}$ & $305.21$ & $3839.56$ & $-35.20^\circ$ & Ret. Contraviento $\cdot$ PAT-3 \\
+5 & $E-05$ & PA-1 & $12\text{ m} / 400\text{ daN}$ & $402.43$ & $3817.04$ & $-36.06^\circ$ & Ret. Biselar \\
+6 & $E-06$ & PA-1 & $12\text{ m} / 400\text{ daN}$ & $518.02$ & $3827.27$ & $+31.35^\circ$ & Ret. Biselar \\
+7 & $E-07$ & PS-1 & $12\text{ m} / 300\text{ daN}$ & $628.53$ & $3824.61$ & $-6.05^\circ$ & Ninguna \\
+8 & $E-08$ & PA-1 & $12\text{ m} / 300\text{ daN}$ & $708.34$ & $3824.61$ & $+32.95^\circ$ & Ret. Biselar \\
+9 & $E-09$ & PR-1 & $12\text{ m} / 400\text{ daN}$ & $816.60$ & $3824.61$ & $0.00^\circ$ & Ret. Inclinada $\cdot$ PAT-3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Relación de Planos Oficiales del Proyecto}
+\begin{enumerate}
+    \item \textbf{Plano de Redes en Planta General con Acometidas y Retenidas:} \\
+    \texttt{PLANO\_PLANTA\_REDES\_Y\_ACOMETIDAS\_CAPACHICA.dxf}
+    \item \textbf{Plano de Perfil Longitudinal con Spotting y Catenarias:} \\
+    \texttt{PLANO\_PERFIL\_LONGITUDINAL\_LP\_CAPACHICA.dxf}
+    \item \textbf{Bloque de Cuadro de Cargas y Máxima Demanda en CAD:} \\
+    \texttt{TABLA\_CUADRO\_DE\_CARGAS.dxf}
+    \item \textbf{Láminas de Detalle de Ferretería y Armados DGE:} \\
+    \texttt{laminas\_de\_detalle.dwg} (Armados PS-1, PA-1, PR-1, SAB-1, PAT-3).
+    \item \textbf{Diagrama Unifilar de la Subestación:} \\
+    \texttt{DIAGRAMAUNIFILAR.dwg} (Subestación Biposte 100 kVA).
+\end{enumerate}
+
+\vfill
+\begin{center}
+    \rule{0.6\textwidth}{0.6pt}\\[0.2cm]
+    \textbf{Renzo Gabriel Mamani Galindo}\\
+    Estudiante de Ingeniería Mecánica Eléctrica $\cdot$ Cód. 228447\\
+    Facultad de Ingeniería Mecánica Eléctrica, Electrónica y Sistemas\\
+    Universidad Nacional del Altiplano --- Puno
+\end{center}
+
+\end{document}
