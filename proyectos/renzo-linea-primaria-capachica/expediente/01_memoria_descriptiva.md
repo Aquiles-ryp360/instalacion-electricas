@@ -1,0 +1,205 @@
+# CAPÍTULO I: MEMORIA DESCRIPTIVA
+
+**PROYECTO:**  
+*INSTALACIÓN DEL SISTEMA DE ELECTRIFICACIÓN RURAL MEDIANTE LÍNEA PRIMARIA EN MEDIA TENSIÓN 22.9 kV Y SUBESTACIÓN DE DISTRIBUCIÓN 25 kVA PARA EL SECTOR CHIFRÓN, DISTRITO DE CAPACHICA — PUNO*
+
+---
+
+## 1. GENERALIDADES
+
+### 1.1 Introducción
+El presente proyecto corresponde al diseño definitivo a nivel de ingeniería de detalle de la **Línea Primaria en Media Tensión (22.9 kV, 3Ø)** y la **Subestación de Distribución Proyectada (SED Biposte, 25 kVA)**, destinada a suministrar energía eléctrica continua y confiable a las viviendas e infraestructura comunal del sector **Chifrón**, ubicado en la península de Capachica, Provincia y Departamento de Puno.
+
+El desarrollo de este estudio técnico forma parte del curso de especialidad **MEC330 — Instalaciones Eléctricas II**, dictado en la Escuela Profesional de Ingeniería Mecánica Eléctrica de la Facultad de Ingeniería Mecánica Eléctrica, Electrónica y Sistemas (FIME) de la Universidad Nacional del Altiplano (UNA Puno), bajo la cátedra de los ingenieros **Leonidas Vilca Callata** y **Marcos José Villanueva Cornejo**.
+
+### 1.2 Objetivo del Proyecto
+* Dotar de suministro eléctrico al sector rural de Chifrón, beneficiando directamente a **43 familias censadas** ($C1$ a $C43$) con energía para uso doméstico, alumbrado público y pequeñas actividades socioproductivas.
+* Desarrollar la ingeniería electromecánica conforme a los requerimientos del **Código Nacional de Electricidad (CNE Suministro 2011)** y la **Norma DGE "Bases para el Diseño de Líneas y Redes Primarias para Electrificación Rural" (R.D. 018-2003-EM/DGE)**.
+* Optimizar la selección de materiales, cálculo de esfuerzos mecánicos de los conductores y soportes, respetando las severas condiciones climáticas del Altiplano peruano ($>3,800\text{ msnm}$).
+
+---
+
+## 2. UBICACIÓN GEOGRÁFICA Y POLÍTICA
+
+El área del proyecto se ubica en el extremo oriental de la península de Capachica, adyacente a las orillas del Lago Titicaca:
+
+* **Departamento:** Puno
+* **Provincia:** Puno
+* **Distrito:** Capachica
+* **Sector:** Chifrón
+* **Altitud de Diseño:** Variable entre $3,817.04\text{ msnm}$ y $3,924.17\text{ msnm}$ (Altitud media de cálculo: $3,850\text{ msnm}$).
+* **Zona UTM:** Zona 19 Sur
+* **Datum Horizontal:** WGS-84
+
+### Coordenadas del Área de Influencia:
+* **Punto de Conexión / Derivación ($E-01$):**
+  * Este: $412,606.01\text{ m E}$
+  * Norte: $8,270,712.24\text{ m N}$
+  * Cota: $3,924.17\text{ msnm}$
+* **Subestación Proyectada ($E-04$):**
+  * Este: $412,759.20\text{ m E}$
+  * Norte: $8,270,976.22\text{ m N}$
+  * Cota: $3,839.56\text{ msnm}$
+* **Fin de Traza Primaria ($E-09$):**
+  * Este: $412,659.90\text{ m E}$
+  * Norte: $8,271,446.51\text{ m N}$
+  * Cota: $3,824.61\text{ msnm}$
+
+### Acceso a la Zona
+El acceso desde la ciudad de Puno se realiza por la carretera asfaltada Puno – Paucarcolla – Capachica ($62\text{ km}$), y luego por la trocha carrozable afirmada que conecta la capital distrital de Capachica con el sector Chifrón ($4.5\text{ km}$), permitiendo el transporte de postes de concreto armado y equipos pesados.
+
+---
+
+## 3. CONDICIONES CLIMÁTICAS Y AMBIENTALES
+
+De acuerdo con la zonificación meteorológica del Código Nacional de Electricidad (Suministro 2011) y las Normas DGE para la Sierra Sur del Perú:
+
+* **Zona Meteorológica:** Zona 2 / 3 (Altiplano > $3,000\text{ msnm}$)
+* **Temperatura Máxima Absoluta:** $+35.0^\circ\text{C}$
+* **Temperatura Mínima Absoluta:** $-15.0^\circ\text{C}$
+* **Temperatura Media Anual (Templado / EDS):** $+15.0^\circ\text{C}$
+* **Velocidad de Viento Máxima de Diseño:** $75.0\text{ km/h}$ ($20.83\text{ m/s}$)
+* **Espesor de Manguito de Hielo:** $6.0\text{ mm}$ (a $-5.0^\circ\text{C}$)
+* **Nivel de Contaminación Ambiental:** Ligero / Medio (zona rural lacustre)
+* **Nivel Isoceráunico:** $40\text{ a } 50\text{ días de tormenta al año}$ (requiere protección pararrayos ZnO)
+
+---
+
+## 4. PUNTO DE DISEÑO Y ALIMENTACIÓN ELÉCTRICA
+
+La factibilidad de suministro eléctrico se sustenta en la red primaria de media tensión operada por la concesionaria **Electro Puno S.A.A.**, verificada en el geovisor oficial **GISEM de OSINERGMIN**:
+* **Código de Alimentador / Tramo:** `TMT000012389` / `TMT001847370`
+* **Naturaleza de la Red:** Línea aérea de Media Tensión
+* **Tensión Nominal del Sistema:** $22.9\text{ kV}$ (Trifásica, $60\text{ Hz}$, neutro sólidamente conectado a tierra o a través de transformador de zigzag).
+* **Estructura de Derivación ($E-01$):** Poste C.A.C. $12\text{ m} / 400\text{ daN}$, equipado con seccionamiento mediante tres (03) cortacircuitos fusibles tipo expulsión (cut-out) de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$ y tres (03) pararrayos de óxido de zinc de $21\text{ kV}, 10\text{ kA}$, garantizando el aislamiento de la nueva línea ante fallas operativas.
+
+---
+
+## 5. ESTUDIO DE MERCADO Y MÁXIMA DEMANDA
+
+### 5.1 Censo de Abonados
+El censo georreferenciado ejecutado en Google Earth Pro identificó:
+* **Abonados Domésticos:** 43 viviendas ($C1$ a $C43$).
+* **Usos Comunales / Institucionales:** 01 Local Comunal / Capilla / Campo deportivo.
+* **Alumbrado Público:** Sistema de luminarias LED alimentadas desde la red secundaria.
+
+### 5.2 Parámetros de Cálculo de Demanda (Norma DGE ER)
+* Dotación de Demanda Unitaria por Lote: $400\text{ W / lote}$
+* Factor de Simultaneidad ($F_s$ para 43 abonados): $0.58$
+* Demanda Coincidente Doméstica:
+  $$MD_{\text{dom}} = 43 \times 400\text{ W} \times 0.58 = 9,976\text{ W} \approx 9.98\text{ kW}$$
+* Demanda de Alumbrado Público ($AP \approx 20\%$ de la demanda doméstica):
+  $$MD_{AP} = 0.20 \times 9.98\text{ kW} = 2.00\text{ kW}$$
+* Usos Especiales / Bombeo menor / Comunal: $2.50\text{ kW}$
+* **Máxima Demanda en Año 0:**
+  $$MD_0 = 9.98 + 2.00 + 2.50 = 14.48\text{ kW}$$
+
+### 5.3 Proyección a 20 Años
+Considerando una tasa de crecimiento anual $r = 2.0\%$ (tasa censal INEI Puno rural):
+$$MD_{20} = MD_0 \times (1 + r)^{20} = 14.48 \times (1.02)^{20} = 21.52\text{ kW}$$
+
+Asumiendo un factor de potencia $\cos\phi = 0.90$:
+$$S_{\text{proyectada}} = \frac{21.52\text{ kW}}{0.90} = 23.91\text{ kVA}$$
+
+**Selección del Transformador de Distribución:**  
+Se selecciona un transformador trifásico normalizado de **$25\text{ kVA}$**, con relación de transformación **$22.9 / 0.38 - 0.22\text{ kV}$**, el cual operará al $58\%$ de su capacidad en el año inicial y al $96\%$ al final del horizonte de diseño (20 años), cumpliendo holgadamente los criterios técnico-económicos de la DGE.
+
+---
+
+## 6. DESCRIPCIÓN TÉCNICA DE LA LÍNEA PRIMARIA (22.9 kV)
+
+### 6.1 Características del Trazado
+* **Longitud Total:** $816.60\text{ metros}$ ($0.817\text{ km}$)
+* **Número de Estructuras:** 9 postes ($E-01$ a $E-09$)
+* **Vano Promedio:** $\approx 102\text{ metros}$ (Vano mínimo: $79.8\text{ m}$, Vano máximo: $115.6\text{ m}$)
+* **Topografía:** Descenso pronunciado en los primeros $305\text{ m}$ (desnivel de $84.6\text{ m}$ entre $E-01$ y $E-04$), seguido de terreno ondulado suave hacia el borde del caserío.
+
+### 6.2 Conductor Seleccionado
+* **Tipo:** Conductor desnudo de Aleación de Aluminio (**AAAC** — *All Aluminium Alloy Conductor*).
+* **Sección Nominal:** **$35\text{ mm}^2$** (sección real: $34.36\text{ mm}^2$, 7 hilos de $2.50\text{ mm}$ de diámetro).
+* **Diámetro Exterior:** $7.50\text{ mm}$
+* **Peso Unitario:** $0.0945\text{ kg/m}$
+* **Tiro de Rotura Nominal:** $1,040\text{ kg}$ ($10.20\text{ kN}$)
+* **Módulo de Elasticidad Final ($E$):** $6,000\text{ kg/mm}^2$ ($58,860\text{ MPa}$)
+* **Coeficiente de Dilatación Lineal ($\alpha$):** $23.0 \times 10^{-6}\ ^\circ\text{C}^{-1}$
+* **Resistencia Eléctrica a $20^\circ\text{C}$:** $0.963\ \Omega\text{/km}$ (corregida a $50^\circ\text{C}$: $0.986\ \Omega\text{/km}$)
+* **Reactancia Inductiva ($x$ a DMG $1.20\text{ m}$):** $0.385\ \Omega\text{/km}$
+
+### 6.3 Soportes (Postes)
+* **Material:** Concreto Armado Centrifugado (**C.A.C.**), acabado liso, conicidad $1.5\%$.
+* **Tipos Empleados:**
+  * Postes de Suspensión / Alineamiento: **C.A.C. $12\text{ m} / 300\text{ daN}$** ($E-02, E-03, E-07$)
+  * Postes de Ángulo y Terminales: **C.A.C. $12\text{ m} / 400\text{ daN}$** ($E-01, E-05, E-06, E-08, E-09$)
+  * Estructura Biposte de Subestación: **02 Postes C.A.C. $13\text{ m} / 400\text{ daN}$** ($E-04$)
+* **Empotramiento de Postes:**
+  * Postes de $12\text{ m}$: $t = 0.10 \times H + 0.20 = 1.40\text{ m}$
+  * Postes de $13\text{ m}$: $t = 0.10 \times H + 0.20 = 1.50\text{ m}$
+
+### 6.4 Aislamiento y Ferretería
+* **Aisladores de Suspensión:** Tipo polimérico de goma de silicona, tensión nominal $25\text{ kV}$, longitud de línea de fuga mínima $720\text{ mm}$ (adaptada a altitud $>3,800\text{ msnm}$ según IEC 60071-1).
+* **Aisladores de Espiga (Pin):** Tipo pin de porcelana ANSI 56-3 con espiga de acero galvanizado en caliente de $13/8" \times 10"$.
+* **Crucetas:** Crucetas de madera tratada o perfil de fierro galvanizado en caliente (F°G°) de $2.00\text{ m} \times 75\text{ mm} \times 75\text{ mm} \times 6.4\text{ mm}$.
+* **Ferretería General:** Todo el material ferroso es galvanizado en caliente bajo norma ASTM A-153.
+
+### 6.5 Armados Normalizados DGE
+De conformidad con las láminas oficiales del archivo de ferretería [`laminas_de_detalle.dwg`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/laminas_de_detalle.dwg):
+* **Armado PS-1:** Estructura de suspensión trifásica vertical con aisladores poliméricos/pin.
+* **Armado PA-1:** Estructura de alineamiento con ángulo hasta $30^\circ$ con aisladores pin reforzados.
+* **Armado PR-1:** Estructura de anclaje/retención terminal con aisladores poliméricos de suspensión y grapas pistolas.
+* **Armado SAB-1:** Estructura biposte para montaje de transformador de distribución, pararrayos, cut-out y tablero de distribución BT.
+
+### 6.6 Sistema de Puesta a Tierra (PAT)
+* **Tipo:** Armado normalizado **PAT-3**.
+* **Configuración:** Electrodo vertical de cobre electrolítico de $\phi 5/8" \times 2.40\text{ m}$, conductor de bajada de cobre desnudo de $35\text{ mm}^2$, conectado mediante soldadura exotérmica (cadweld).
+* **Tratamiento del Terreno:** Relleno de zanja con tierra cernida mezclada con bentonita sódica / sales electrolíticas para garantizar una resistencia de puesta a tierra:
+  * En neutro de transformador: $R_{\text{pat}} \le 10\ \Omega$
+  * En estructuras de derivación y pararrayos: $R_{\text{pat}} \le 15\ \Omega$
+
+---
+
+## 7. RESUMEN DE LA PLANILLA DE ESTRUCTURAS
+
+| N° | Estructura | Progresiva (m) | Cota (msnm) | Poste C.A.C. | Armado DGE | Función en el Sistema |
+| :-: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **1** | **E-01** | $0+000.00$ | $3,924.17$ | $12\text{ m} / 400\text{ daN}$ | **PR-1** | Derivación con cut-out y pararrayos en red Electro Puno |
+| **2** | **E-02** | $0+105.00$ | $3,895.00$ | $12\text{ m} / 300\text{ daN}$ | **PS-1** | Suspensión en bajada de ladera |
+| **3** | **E-03** | $0+210.00$ | $3,865.00$ | $12\text{ m} / 300\text{ daN}$ | **PS-1** | Suspensión |
+| **4** | **E-04** | $0+305.21$ | $3,839.56$ | $13\text{ m} / 400\text{ daN}$ (x2) | **SAB-1** | **Subestación Biposte (Trafo 25 kVA 22.9/0.38-0.22 kV)** |
+| **5** | **E-05** | $0+402.43$ | $3,817.04$ | $12\text{ m} / 400\text{ daN}$ | **PA-1** | Vértice de ángulo ($-36.06^\circ$) con retenida biselar |
+| **6** | **E-06** | $0+518.02$ | $3,827.27$ | $12\text{ m} / 400\text{ daN}$ | **PA-1** | Vértice de ángulo ($+31.35^\circ$) con retenida biselar |
+| **7** | **E-07** | $0+628.53$ | $3,824.61$ | $12\text{ m} / 300\text{ daN}$ | **PS-1** | Suspensión / Alineamiento |
+| **8** | **E-08** | $0+708.34$ | $3,824.61$ | $12\text{ m} / 300\text{ daN}$ | **PA-1** | Ángulo leve ($+32.95^\circ$) con retenida |
+| **9** | **E-09** | $0+816.60$ | $3,824.61$ | $12\text{ m} / 400\text{ daN}$ | **PR-1** | Retención terminal con retenida terminal simple |
+
+---
+
+## 8. RESULTADOS DE LOS CÁLCULOS JUSTIFICATIVOS
+
+### 8.1 Cálculo Eléctrico
+* **Caída de Tensión Máxima en MT:** $\Delta V = 26.88\text{ V} \rightarrow \mathbf{0.12\%}$ (Límite normativo CNE: $\le 5.0\%$). **CUMPLE AMPLIAMENTE**.
+* **Pérdidas de Potencia Activa en MT:** $\Delta P = 0.183\text{ kW} \rightarrow \mathbf{0.12\%}$ de la potencia transmitida.
+* **Corriente de Carga en MT:** $I_{\text{nominal}} = 4.20\text{ A}$ a plena carga del transformador.
+
+### 8.2 Cálculo Mecánico de Conductores (Ecuación de Cambio de Estado)
+* **Hipótesis Base EDS ($+15^\circ\text{C}$):** Tiro de templado $T_{\text{EDS}} = 187.20\text{ kg}$ ($18.0\%$ del tiro de rotura).
+* **Hipótesis IV (Temp. Máxima $+35^\circ\text{C}$):** Flecha máxima en el vano crítico de $115.6\text{ m}$ es $f_{\text{máx}} = 1.33\text{ m}$.
+* **Distancia Vertical al Suelo:** 
+  * Altura de soporte útil: $12.0 - 1.4 = 10.60\text{ m}$
+  * Altura mínima del conductor: $10.60 - 1.33 = \mathbf{9.27\text{ m}} > 6.50\text{ m}$ (exigido por CNE Suministro Regla 232 para cruce de vías). **CUMPLE HOLGADAMENTE**.
+
+---
+
+## 9. PLANOS Y ENTREGABLES ASOCIADOS
+
+El proyecto cuenta con la documentación gráfica y documental requerida para su tramitación:
+1. **Plano de Perfil Longitudinal y Distribución de Estructuras (DXF/DWG):** [`PLANO_PERFIL_LONGITUDINAL_LP_CAPACHICA.dxf`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/PLANO_PERFIL_LONGITUDINAL_LP_CAPACHICA.dxf)
+2. **Láminas de Detalle de Ferretería y Armados (DWG):** [`laminas_de_detalle.dwg`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/laminas_de_detalle.dwg)
+3. **Diagrama Unifilar de Subestación (DWG):** [`DIAGRAMAUNIFILAR.dwg`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/DIAGRAMAUNIFILAR.dwg)
+4. **Planilla de Estructuras (CSV):** [`planilla_estructuras_lp_capachica.csv`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/datos/estructuras/planilla_estructuras_lp_capachica.csv)
+5. **Censo de Cargas Georreferenciado (CSV):** [`censo_43_abonados.csv`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/datos/cargas/censo_43_abonados.csv)
+
+---
+*Puno, Octubre de 2026*  
+**Renzo Gabriel Mamani Galindo**  
+Estudiante de Ingeniería Mecánica Eléctrica — UNA Puno  
+Código: 228447
