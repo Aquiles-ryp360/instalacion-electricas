@@ -1,33 +1,34 @@
 schema_version: 1
 id: renzo-linea-primaria-capachica
-proyecto: "Diseno de Linea Primaria en Media Tension y Subestacion de Distribucion para Localidad Rural en Capachica"
-curso: "Instalaciones Electricas II (MEC330)"
+proyecto: "Diseño de Línea Primaria 22.9 kV y Subestación de Distribución Biposte 100 kVA para el Sector Chifrón (Capachica)"
+curso: "Instalaciones Eléctricas II (MEC330)"
 docentes:
   - "Ing. Leonidas Vilca Callata"
-  - "Ing. Marcos Jose Villanueva Cornejo"
+  - "Ing. Marcos José Villanueva Cornejo"
 autor_estudiante: "Renzo Gabriel Mamani Galindo"
 codigo_estudiante: "228447"
 semestre_academico: "2026-II"
 ciclo: "IX"
 fecha_inicio: "2026-10-10"
-estado: "en diseno preliminar - punto de conexion validado en GISEM Electro Puno"
+estado: "Diseño Definitivo - Expediente Técnico de Ingeniería de Detalle"
 
 naturaleza_proyecto:
-  tipo: anteproyecto_linea_primaria_rural
-  descripcion: "Diseno de linea primaria de distribucion en media tension y subestacion proyectada (SED) para electrificacion rural en la peninsula de Capachica, Puno."
+  tipo: ingenieria_detalle_linea_primaria_rural
+  descripcion: "Diseño definitivo de ingeniería de detalle de la línea primaria en media tensión 22.9 kV (0.817 km, AAAC 35 mm2), subestación aérea biposte SAB-1 (100 kVA, 22.9/0.38-0.22 kV) y redes secundarias de baja tensión (380/220 V, 2 circuitos) para el sector Chifrón, Capachica, Puno."
   flujo_digital:
-    - "Google Earth Pro (traza de ruta y coordenadas KML)"
-    - "TopoMagic (extraccion de perfil topografico DEM)"
-    - "RedCAD (calculo mecanico, spotting de estructuras y planos)"
-    - "AutoCAD (planos ejecutivos de perfil y armados)"
+    - "Google Earth Pro (traza de ruta y coordenadas georreferenciadas KML)"
+    - "Levantamiento topográfico DEM / SRTM (perfil longitudinal y cotas)"
+    - "Cálculo analítico Truxa y caída de tensión (Python / numpy)"
+    - "AutoCAD / ezdxf / Matplotlib (planos ejecutivos P-01, U-01, PL-01 en formato A3)"
 
 ubicacion:
   departamento: "Puno"
   provincia: "Puno"
   distrito: "Capachica"
-  sector_origen: "Chifron"
-  localidad_destino: "por definir por el estudiante"
-  altitud_promedio_msnm: 3820
+  sector_origen: "Chifrón (Vértice Derivación E-01)"
+  localidad_destino: "Sector Chifrón (Subestación SED E-04 y caserío)"
+  altitud_rango_msnm: "3,817.04 - 3,924.17"
+  altitud_promedio_msnm: 3850
   zona_utm: "19 Sur"
   datum: "WGS84"
 
@@ -35,50 +36,71 @@ punto_diseno:
   concesionaria: "Electro Puno S.A.A."
   fuente_informacion: "Geovisor GISEM OSINERGMIN"
   tramo_existente_mt: "TMT000012389 / TMT001847370"
-  tipo_centro: "CT (Centro de Transformacion / SED existente)"
-  coordenadas_gcs:
-    latitud: -15.640067
-    longitud: -69.815400
-  coordenadas_utm:
-    este_m: 412602.07
-    norte_m: 8270710.08
-  estructura_derivacion: "E-00 (Poste CAC proyectado con seccionador cut-out y pararrayos ZnO)"
+  tipo_centro: "CT (Centro de Transformación / Derivación MT existente)"
+  coordenadas_derivacion_e01:
+    este_m: 412606.01
+    norte_m: 8270712.24
+    cota_msnm: 3924.17
+    estructura: "E-01 (Poste CAC 12/400 con armado PR-1, Cut-Out 27 kV 100A y Pararrayos ZnO 21 kV)"
+  coordenadas_sed_proyectada_e04:
+    este_m: 412759.20
+    norte_m: 8270976.22
+    cota_msnm: 3839.56
+    estructura: "E-04 (Biposte CAC 13/400 x2 con armado SAB-1, Trafo 100 kVA y Tablero BT IP65)"
+  coordenadas_terminal_e09:
+    este_m: 412659.90
+    norte_m: 8271446.51
+    cota_msnm: 3824.61
+    estructura: "E-09 (Poste CAC 12/400 terminal con armado PR-1 y retenida simple)"
 
 suministro_y_sistema:
-  nivel_tension_kv: 22.9
-  sistema: "Trifasico (o Monofasico 13.2 kV MRT segun tramo definitivo)"
+  nivel_tension_mt_kv: 22.9
+  sistema_mt: "Trifásico 3 hilos (3Ø)"
+  nivel_tension_bt_v: "380 / 220"
+  sistema_bt: "Trifásico 4 hilos con neutro corrido aterrado (3Ø + N)"
   frecuencia_hz: 60
-  conductor_proyectado: "AAAC 35 mm2 (o 50 mm2)"
-  aisladores: "Polimericos tipo suspension y tipo pin ANSI 56-3"
-  estructuras_soporte: "Postes de Concreto Armado Centrifugado (C.A.C.) 12m/300 daN, 12m/400 daN y 13m/400 daN"
+  conductor_mt: "AAAC 35 mm² (sección real 34.36 mm², 7 hilos)"
+  conductor_bt: "Autoportante de aluminio CAAI 3x35+25+16 mm² (C-1) y 3x25+25+16 mm² (C-2)"
+  transformador_sed: "100 kVA, 22.9 / 0.38 - 0.22 kV, Dyn5, ONAN, 60 Hz"
+  aisladores_mt: "Poliméricos tipo suspensión 25 kV y tipo pin ANSI 56-3"
+  estructuras_soporte: "Postes C.A.C. 12m/300 daN, 12m/400 daN y 13m/400 daN (biposte)"
 
 hipotesis_climaticas_puno:
-  zona_cne: "Zona 2/3 (Altiplano > 3000 msnm)"
+  zona_cne: "Zona 2/3 (Altiplano > 3000 msnm, CNE Suministro 2011 Tabla 250-1)"
   hipotesis_1_viento_maximo:
-    temperatura_c: 10
-    viento_km_h: 75
-    hielo_mm: 0
+    temperatura_c: 10.0
+    viento_km_h: 75.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
   hipotesis_2_hielo_maximo:
-    temperatura_c: -5
-    viento_km_h: 0
+    temperatura_c: -5.0
+    viento_km_h: 37.5
     hielo_mm: 6.0
+    limite_tiro_pct: 40.0
   hipotesis_3_temperatura_minima:
-    temperatura_c: -15
-    viento_km_h: 0
-    hielo_mm: 0
+    temperatura_c: -15.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
   hipotesis_4_temperatura_maxima:
-    temperatura_c: 35
-    viento_km_h: 0
-    hielo_mm: 0
+    temperatura_c: 35.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
   hipotesis_5_eds_templado:
-    temperatura_c: 15
-    viento_km_h: 0
-    hielo_mm: 0
-    tiro_rotura_porcentaje: 18
+    temperatura_c: 15.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 18.0
+    tiro_rotura_porcentaje: 18.0
+    tiro_eds_kgf: 187.20
 
 entregables:
-  memoria_descriptiva: "expediente/memoria_descriptiva.md"
+  memoria_descriptiva: "expediente/01_memoria_descriptiva.md"
   calculos_electricos: "diseno-electrico/memoria_calculo_electrico.md"
   calculos_mecanicos: "calculo-mecanico/memoria_calculo_mecanico.md"
-  planos_dwg: "entregables/planos/"
-  expediente_final_pdf: "entregables/expediente_tecnico.pdf"
+  especificaciones_tecnicas: "expediente/02_especificaciones_tecnicas.md"
+  metrados_y_presupuesto: "expediente/03_metrados_y_presupuesto.md"
+  cronograma: "expediente/04_cronograma_obra.md"
+  planos_cad: "entregables/planos/"
+  expediente_final_pdf: "entregables/expediente_tecnico_completo.pdf"

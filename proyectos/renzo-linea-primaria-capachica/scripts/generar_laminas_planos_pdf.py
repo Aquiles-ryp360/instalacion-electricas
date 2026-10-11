@@ -554,7 +554,7 @@ def generar_lamina_pl01(salida_pdf):
         ("E-05", 402.43, 3817.04, "PA-1 (12/400)", "Ángulo 36° - Ret. Biselar"),
         ("E-06", 518.02, 3827.27, "PA-1 (12/400)", "Ángulo 31° - Ret. Biselar"),
         ("E-07", 628.53, 3824.61, "PS-1 (12/300)", "Suspensión"),
-        ("E-08", 708.34, 3824.61, "PA-1 (12/300)", "Ángulo 33° - Ret. Biselar"),
+        ("E-08", 708.34, 3824.61, "PA-1 (12/400)", "Ángulo 33° - Ret. Biselar"),
         ("E-09", 816.60, 3824.61, "PR-1 (12/400)", "Terminal Fin de Línea - Ret. Inclinada / PAT-3")
     ]
     
@@ -647,13 +647,9 @@ def generar_lamina_pl01(salida_pdf):
 
 
 if __name__ == "__main__":
-    out_dir = r"C:\Users\renzo\instalacion-electricas\proyectos\renzo-linea-primaria-capachica\entregables\planos"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    out_dir = os.path.join(script_dir, "..", "entregables", "planos")
     os.makedirs(out_dir, exist_ok=True)
     
-    pdf_p01 = os.path.join(out_dir, "plano_P01_redes_planta.pdf")
-    pdf_u01 = os.path.join(out_dir, "plano_U01_diagrama_unifilar_detalles.pdf")
     pdf_pl01 = os.path.join(out_dir, "plano_PL01_perfil_longitudinal.pdf")
-    
-    generar_lamina_p01(pdf_p01)
-    generar_lamina_u01(pdf_u01)
     generar_lamina_pl01(pdf_pl01)

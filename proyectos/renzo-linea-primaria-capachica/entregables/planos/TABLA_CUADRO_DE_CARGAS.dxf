@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461324.8120023147
+2461325.474513889
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461324.8120023147
+2461325.474513889
   9
 $TDUUPDATE
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-67
+62
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{1D05E68D-32A1-4A72-BDC1-1B2CBED73EE0}
+{9647C939-9652-4F52-95A6-94581D718B15}
   9
 $VERSIONGUID
   2
-{A05CA786-C885-48B0-A2B7-3CA5078BE278}
+{5F8EA16F-9D04-484F-8EB5-EE927454486F}
   9
 $EXTNAMES
 290
@@ -1773,7 +1773,7 @@ ACAD
   0
 APPID
   5
-64
+5F
 330
 3
 100
@@ -1787,7 +1787,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-65
+60
 330
 3
 100
@@ -2115,7 +2115,7 @@ AcDbText
  40
 3.5
   1
-CUADRO DE CARGAS Y MÁXIMA DEMANDA - CAPACHICA CHIFRÓN (2026 - 2046)
+CUADRO DE CARGAS Y MÁXIMA DEMANDA — 2 CIRCUITOS DE BT (2026 - 2046)
  11
 5.0
  21
@@ -2145,7 +2145,7 @@ AcDbText
  40
 2.2
   1
-TC = 3.0% anual | Calificación: 0.90 kW/usuario | V = 220V | cos phi = 0.90
+TC = 3.0% anual | Calificación: 0.90 kW/usuario | Sistema: Trifásico 380/220V | cos φ = 0.90
  11
 5.0
  21
@@ -2227,7 +2227,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-57.0
+64.0
  20
 -6.0
  30
@@ -2237,7 +2237,7 @@ AcDbText
   1
 NU 2026
  11
-57.0
+64.0
  21
 -6.0
  31
@@ -2257,7 +2257,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-75.0
+82.0
  20
 -6.0
  30
@@ -2267,7 +2267,7 @@ AcDbText
   1
 NU 2046
  11
-75.0
+82.0
  21
 -6.0
  31
@@ -2287,7 +2287,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-93.0
+100.0
  20
 -6.0
  30
@@ -2295,9 +2295,9 @@ AcDbText
  40
 2.0
   1
-Partic. (kW)
+Part. (kW)
  11
-93.0
+100.0
  21
 -6.0
  31
@@ -2317,7 +2317,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-117.0
+124.0
  20
 -6.0
  30
@@ -2327,7 +2327,7 @@ AcDbText
   1
 N° Lum
  11
-117.0
+124.0
  21
 -6.0
  31
@@ -2347,7 +2347,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-135.0
+142.0
  20
 -6.0
  30
@@ -2357,7 +2357,7 @@ AcDbText
   1
 AP (kW)
  11
-135.0
+142.0
  21
 -6.0
  31
@@ -2377,7 +2377,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-159.0
+166.0
  20
 -6.0
  30
@@ -2385,9 +2385,9 @@ AcDbText
  40
 2.0
   1
-Total (kW)
+Dem. (kW)
  11
-159.0
+166.0
  21
 -6.0
  31
@@ -2407,7 +2407,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-181.0
+188.0
  20
 -6.0
  30
@@ -2415,9 +2415,9 @@ AcDbText
  40
 2.0
   1
-I Nom (A)
+Dem. (kVA)
  11
-181.0
+188.0
  21
 -6.0
  31
@@ -2428,6 +2428,36 @@ AcDbText
 TEXT
   5
 3D
+330
+17
+100
+AcDbEntity
+  8
+TABLA_TEXTOS
+100
+AcDbText
+ 10
+210.0
+ 20
+-6.0
+ 30
+0.0
+ 40
+2.0
+  1
+I 3F (A)
+ 11
+210.0
+ 21
+-6.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+3E
 330
 17
 100
@@ -2457,36 +2487,6 @@ AcDbText
   0
 TEXT
   5
-3E
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TEXTOS
-100
-AcDbText
- 10
-22.0
- 20
--15.5
- 30
-0.0
- 40
-2.0
-  1
-Sector Sur / Pasaje
- 11
-22.0
- 21
--15.5
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
 3F
 330
 17
@@ -2497,7 +2497,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-57.0
+22.0
  20
 -15.5
  30
@@ -2505,9 +2505,9 @@ AcDbText
  40
 2.0
   1
-21
+Troncal Norte y Ramal Este C31
  11
-57.0
+22.0
  21
 -15.5
  31
@@ -2527,7 +2527,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-75.0
+64.0
  20
 -15.5
  30
@@ -2535,9 +2535,9 @@ AcDbText
  40
 2.0
   1
-38
+31
  11
-75.0
+64.0
  21
 -15.5
  31
@@ -2557,7 +2557,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-93.0
+82.0
  20
 -15.5
  30
@@ -2565,9 +2565,9 @@ AcDbText
  40
 2.0
   1
-34.20
+56
  11
-93.0
+82.0
  21
 -15.5
  31
@@ -2587,7 +2587,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-117.0
+100.0
  20
 -15.5
  30
@@ -2595,9 +2595,9 @@ AcDbText
  40
 2.0
   1
-7
+50.40
  11
-117.0
+100.0
  21
 -15.5
  31
@@ -2617,7 +2617,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-135.0
+124.0
  20
 -15.5
  30
@@ -2625,9 +2625,9 @@ AcDbText
  40
 2.0
   1
-0.42
+10
  11
-135.0
+124.0
  21
 -15.5
  31
@@ -2647,7 +2647,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-159.0
+142.0
  20
 -15.5
  30
@@ -2655,9 +2655,9 @@ AcDbText
  40
 2.0
   1
-34.62
+0.60
  11
-159.0
+142.0
  21
 -15.5
  31
@@ -2677,7 +2677,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-181.0
+166.0
  20
 -15.5
  30
@@ -2685,9 +2685,9 @@ AcDbText
  40
 2.0
   1
-174.85
+51.00
  11
-181.0
+166.0
  21
 -15.5
  31
@@ -2698,6 +2698,66 @@ AcDbText
 TEXT
   5
 46
+330
+17
+100
+AcDbEntity
+  8
+TABLA_TEXTOS
+100
+AcDbText
+ 10
+188.0
+ 20
+-15.5
+ 30
+0.0
+ 40
+2.0
+  1
+56.67
+ 11
+188.0
+ 21
+-15.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+47
+330
+17
+100
+AcDbEntity
+  8
+TABLA_TEXTOS
+100
+AcDbText
+ 10
+210.0
+ 20
+-15.5
+ 30
+0.0
+ 40
+2.0
+  1
+86.10
+ 11
+210.0
+ 21
+-15.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+48
 330
 17
 100
@@ -2727,66 +2787,6 @@ AcDbText
   0
 TEXT
   5
-47
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TEXTOS
-100
-AcDbText
- 10
-22.0
- 20
--23.5
- 30
-0.0
- 40
-2.0
-  1
-Sector Centro / Eje
- 11
-22.0
- 21
--23.5
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-48
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TEXTOS
-100
-AcDbText
- 10
-57.0
- 20
--23.5
- 30
-0.0
- 40
-2.0
-  1
-11
- 11
-57.0
- 21
--23.5
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
 49
 330
 17
@@ -2797,7 +2797,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-75.0
+22.0
  20
 -23.5
  30
@@ -2805,9 +2805,9 @@ AcDbText
  40
 2.0
   1
-20
+Troncal Carretera al Fondo (Sur)
  11
-75.0
+22.0
  21
 -23.5
  31
@@ -2827,7 +2827,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-93.0
+64.0
  20
 -23.5
  30
@@ -2835,9 +2835,9 @@ AcDbText
  40
 2.0
   1
-18.00
+12
  11
-93.0
+64.0
  21
 -23.5
  31
@@ -2857,7 +2857,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-117.0
+82.0
  20
 -23.5
  30
@@ -2865,9 +2865,9 @@ AcDbText
  40
 2.0
   1
-4
+22
  11
-117.0
+82.0
  21
 -23.5
  31
@@ -2887,7 +2887,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-135.0
+100.0
  20
 -23.5
  30
@@ -2895,9 +2895,9 @@ AcDbText
  40
 2.0
   1
-0.24
+19.80
  11
-135.0
+100.0
  21
 -23.5
  31
@@ -2917,7 +2917,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-159.0
+124.0
  20
 -23.5
  30
@@ -2925,9 +2925,9 @@ AcDbText
  40
 2.0
   1
-18.24
+5
  11
-159.0
+124.0
  21
 -23.5
  31
@@ -2947,7 +2947,7 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-181.0
+142.0
  20
 -23.5
  30
@@ -2955,9 +2955,9 @@ AcDbText
  40
 2.0
   1
-92.12
+0.30
  11
-181.0
+142.0
  21
 -23.5
  31
@@ -2977,19 +2977,19 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-2.0
+166.0
  20
--31.5
+-23.5
  30
 0.0
  40
 2.0
   1
-C-3
+20.10
  11
-2.0
+166.0
  21
--31.5
+-23.5
  31
 0.0
 100
@@ -3007,19 +3007,19 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-22.0
+188.0
  20
--31.5
+-23.5
  30
 0.0
  40
 2.0
   1
-Sector Norte / Camino
+22.33
  11
-22.0
+188.0
  21
--31.5
+-23.5
  31
 0.0
 100
@@ -3037,19 +3037,19 @@ TABLA_TEXTOS
 100
 AcDbText
  10
-57.0
+210.0
  20
--31.5
+-23.5
  30
 0.0
  40
 2.0
   1
-11
+33.93
  11
-57.0
+210.0
  21
--31.5
+-23.5
  31
 0.0
 100
@@ -3063,21 +3063,21 @@ TEXT
 100
 AcDbEntity
   8
-TABLA_TEXTOS
+TABLA_TOTALES
 100
 AcDbText
  10
-75.0
+2.0
  20
 -31.5
  30
 0.0
  40
-2.0
+2.2
   1
-20
+TOTAL
  11
-75.0
+2.0
  21
 -31.5
  31
@@ -3093,21 +3093,21 @@ TEXT
 100
 AcDbEntity
   8
-TABLA_TEXTOS
+TABLA_TOTALES
 100
 AcDbText
  10
-93.0
+22.0
  20
 -31.5
  30
 0.0
  40
-2.0
+2.2
   1
-18.00
+Red Completa (2 Circuitos)
  11
-93.0
+22.0
  21
 -31.5
  31
@@ -3123,21 +3123,21 @@ TEXT
 100
 AcDbEntity
   8
-TABLA_TEXTOS
+TABLA_TOTALES
 100
 AcDbText
  10
-117.0
+64.0
  20
 -31.5
  30
 0.0
  40
-2.0
+2.2
   1
-4
+43
  11
-117.0
+64.0
  21
 -31.5
  31
@@ -3153,21 +3153,21 @@ TEXT
 100
 AcDbEntity
   8
-TABLA_TEXTOS
+TABLA_TOTALES
 100
 AcDbText
  10
-135.0
+82.0
  20
 -31.5
  30
 0.0
  40
-2.0
+2.2
   1
-0.24
+78
  11
-135.0
+82.0
  21
 -31.5
  31
@@ -3183,21 +3183,21 @@ TEXT
 100
 AcDbEntity
   8
-TABLA_TEXTOS
+TABLA_TOTALES
 100
 AcDbText
  10
-159.0
+100.0
  20
 -31.5
  30
 0.0
  40
-2.0
+2.2
   1
-18.24
+70.20
  11
-159.0
+100.0
  21
 -31.5
  31
@@ -3213,21 +3213,21 @@ TEXT
 100
 AcDbEntity
   8
-TABLA_TEXTOS
+TABLA_TOTALES
 100
 AcDbText
  10
-181.0
+124.0
  20
 -31.5
  30
 0.0
  40
-2.0
+2.2
   1
-92.12
+15
  11
-181.0
+124.0
  21
 -31.5
  31
@@ -3247,19 +3247,19 @@ TABLA_TOTALES
 100
 AcDbText
  10
-2.0
+142.0
  20
--39.5
+-31.5
  30
 0.0
  40
 2.2
   1
-TOTAL
+0.90
  11
-2.0
+142.0
  21
--39.5
+-31.5
  31
 0.0
 100
@@ -3277,19 +3277,19 @@ TABLA_TOTALES
 100
 AcDbText
  10
-22.0
+166.0
  20
--39.5
+-31.5
  30
 0.0
  40
 2.2
   1
-Red Completa
+71.10
  11
-22.0
+166.0
  21
--39.5
+-31.5
  31
 0.0
 100
@@ -3307,19 +3307,19 @@ TABLA_TOTALES
 100
 AcDbText
  10
-57.0
+188.0
  20
--39.5
+-31.5
  30
 0.0
  40
 2.2
   1
-43
+79.00
  11
-57.0
+188.0
  21
--39.5
+-31.5
  31
 0.0
 100
@@ -3337,19 +3337,19 @@ TABLA_TOTALES
 100
 AcDbText
  10
-75.0
+210.0
  20
--39.5
+-31.5
  30
 0.0
  40
 2.2
   1
-78
+120.03
  11
-75.0
+210.0
  21
--39.5
+-31.5
  31
 0.0
 100
@@ -3367,19 +3367,19 @@ TABLA_TOTALES
 100
 AcDbText
  10
-93.0
+5.0
  20
--39.5
+-38.0
  30
 0.0
  40
-2.2
+2.5
   1
-70.20
+MÁXIMA DEMANDA COINCIDENTE TOTAL: 71.10 kW  |  79.00 kVA
  11
-93.0
+5.0
  21
--39.5
+-38.0
  31
 0.0
 100
@@ -3397,19 +3397,19 @@ TABLA_TOTALES
 100
 AcDbText
  10
-117.0
+5.0
  20
--39.5
+-43.0
  30
 0.0
  40
-2.2
+2.5
   1
-15
+TRANSFORMADOR ESTANDARIZADO: 100 kVA — 22.9 / 0.38 - 0.22 kV (Dyn5) | Reserva: 21.0%
  11
-117.0
+5.0
  21
--39.5
+-43.0
  31
 0.0
 100
@@ -3427,169 +3427,19 @@ TABLA_TOTALES
 100
 AcDbText
  10
-135.0
- 20
--39.5
- 30
-0.0
- 40
-2.2
-  1
-0.90
- 11
-135.0
- 21
--39.5
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-5F
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TOTALES
-100
-AcDbText
- 10
-159.0
- 20
--39.5
- 30
-0.0
- 40
-2.2
-  1
-71.10
- 11
-159.0
- 21
--39.5
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-60
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TOTALES
-100
-AcDbText
- 10
-181.0
- 20
--39.5
- 30
-0.0
- 40
-2.2
-  1
-359.09
- 11
-181.0
- 21
--39.5
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-61
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TOTALES
-100
-AcDbText
- 10
 5.0
  20
--46.0
+-48.0
  30
 0.0
  40
 2.5
   1
-POTENCIA APARENTE CALCULADA: 79.00 kVA
+SUBESTACIÓN DE DISTRIBUCIÓN: E-04 (BIPOSTE C.A.C. 13/400 CON ARMADO SAB-1)
  11
 5.0
  21
--46.0
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-62
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TOTALES
-100
-AcDbText
- 10
-5.0
- 20
--51.0
- 30
-0.0
- 40
-2.5
-  1
-TRANSFORMADOR SELECCIONADO (ESTANDARIZADO): 100 kVA - 22.9 / 0.38 - 0.22 kV
- 11
-5.0
- 21
--51.0
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-63
-330
-17
-100
-AcDbEntity
-  8
-TABLA_TOTALES
-100
-AcDbText
- 10
-5.0
- 20
--56.0
- 30
-0.0
- 40
-2.5
-  1
-ESTRUCTURA DE SUBESTACIÓN: E-04 (BIPOSTE CAC 13/400 CON ARMADO SAB-1)
- 11
-5.0
- 21
--56.0
+-48.0
  31
 0.0
 100
@@ -4585,7 +4435,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-66
+61
   0
 DICTIONARYVAR
   5
@@ -4597,11 +4447,11 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-11T00:29:17.418517+00:00
+1.4.4 @ 2026-10-11T16:23:18.199763+00:00
   0
 DICTIONARYVAR
   5
-66
+61
 330
 2D
 100
@@ -4609,7 +4459,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-11T00:29:17.421180+00:00
+1.4.4 @ 2026-10-11T16:23:18.205513+00:00
   0
 ENDSEC
   0

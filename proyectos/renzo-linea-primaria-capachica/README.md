@@ -14,14 +14,19 @@ Diseño definitivo de una **Línea Primaria de Distribución en Media Tensión (
 
 El punto de diseño y derivación está validado en la infraestructura oficial de **Electro Puno S.A.A.** extraída del geovisor **GISEM de OSINERGMIN**:
 - **Tramo MT existente:** `TMT000012389` / `TMT001847370`
-- **Punto de Conexión:** Estructura $E_0$ en Centro de Transformación (`CT`) existente en Chifrón.
-- **Coordenadas WGS84:**
-  - Latitud: `-15.640067°`
-  - Longitud: `-69.815400°`
-- **Coordenadas UTM Zona 19S:**
-  - Este (X): `412,602.07 m`
-  - Norte (Y): `8,270,710.08 m`
-  - Altitud media: `3,820 msnm`
+- **Punto de Conexión / Derivación (E-01):** Estructura en cresta del Cerro Chifrón (red existente Electro Puno).
+  - Coordenadas UTM WGS-84 Zona 19S:
+    - Este (X): `412,606.01 m E`
+    - Norte (Y): `8,270,712.24 m N`
+    - Cota: `3,924.17 msnm` (Progresiva `0+000.00 m`)
+    - Latitud: `-15.640067° S`, Longitud: `-69.815400° W`
+- **Subestación de Distribución Biposte Proyectada (SED E-04):**
+  - Coordenadas UTM WGS-84 Zona 19S:
+    - Este (X): `412,759.20 m E`
+    - Norte (Y): `8,270,976.22 m N`
+    - Cota: `3,839.56 msnm` (Progresiva `0+305.21 m`)
+    - Potencia: `100 kVA`, $22.9 / 0.38 - 0.22\text{ kV}$, Grupo Dyn5
+  - Altitud de diseño del proyecto: `3,817.04` a `3,924.17 msnm` (Media: `3,850 msnm`)
 
 ---
 

@@ -102,11 +102,11 @@ ESTRUCTURAS = [
         "id": "E-08",
         "prog": 708.34,
         "cota": 3824.61,
-        "poste": "C.A.C. 12/300",
+        "poste": "C.A.C. 12/400",
         "h_poste": 12.0,
         "empotramiento": 1.4,
-        "armado": "PS-1 (Alineamiento)",
-        "funcion": "PASO / SUSPENSION",
+        "armado": "PA-1 (Angulo)",
+        "funcion": "CAMBIO DE DIRECCION",
         "angulo": 32.95,
         "retenida": "Biselar simple"
     },
@@ -291,5 +291,6 @@ def generar_dxf_perfil(dxf_salida):
     print(f"=== PLANO DE PERFIL LONGITUDINAL GENERADO EN DXF: {dxf_salida} ===")
 
 if __name__ == "__main__":
-    dxf_dest = r"C:\Users\renzo\instalacion-electricas\proyectos\renzo-linea-primaria-capachica\entregables\planos\PLANO_PERFIL_LONGITUDINAL_LP_CAPACHICA.dxf"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    dxf_dest = os.path.join(script_dir, "..", "entregables", "planos", "PLANO_PERFIL_LONGITUDINAL_LP_CAPACHICA.dxf")
     generar_dxf_perfil(dxf_dest)

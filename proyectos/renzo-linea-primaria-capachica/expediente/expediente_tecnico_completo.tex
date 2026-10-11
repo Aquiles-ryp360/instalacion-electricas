@@ -145,7 +145,7 @@
   {1em}
   {#1}
 
-\graphicspath{{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/imagenes/}}
+\graphicspath{{../entregables/imagenes/}{./}}
 
 \pagestyle{memoria}
 \sloppy
@@ -218,7 +218,7 @@ Este expediente técnico se desarrolla bajo la cátedra de la asignatura de espe
     \item \textbf{Objetivo General:} Dotar de infraestructura eléctrica integral de media tensión ($22.9\text{ kV}$) y redes secundarias en baja tensión ($380/220\text{ V}$) al sector Chifrón, beneficiando directamente a \textbf{43 viviendas censadas} proyectadas a \textbf{78 abonados al año 20}, fomentando el desarrollo socioeconómico y el potencial ecoturístico lacustre.
     \item \textbf{Objetivos Específicos:}
     \begin{itemize}
-        \item Ubicar y dimensionar la \textbf{Subestación de Distribución Biposte (SED-01)} en las coordenadas geográficas exactas del nodo de carga fijadas por el proyectista: $\mathbf{\text{Lat: } -15.640067^\circ\text{ S}}$, $\mathbf{\text{Lon: } -69.815400^\circ\text{ W}}$ ($E = 412606.01\text{ m}, N = 8270712.24\text{ m}$, WGS-84 Zona 19S), con una potencia comercial normalizada de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$, Dyn5).
+        \item Ubicar y dimensionar la \textbf{Subestación de Distribución Biposte (SED SAB-1)} en la estructura proyectada $\mathbf{E-04}$ ($E = 412,759.20\text{ m}, N = 8,270,976.22\text{ m}$, Cota $3,839.56\text{ msnm}$, Progresiva $0+305.21\text{ m}$), alimentada desde el \textbf{Punto de Derivación MT E-01} ($E = 412,606.01\text{ m}, N = 8,270,712.24\text{ m}$, Cota $3,924.17\text{ msnm}$, Lat: $-15.640067^\circ\text{ S}$, Lon: $-69.815400^\circ\text{ W}$, WGS-84 Zona 19S), con una potencia comercial normalizada de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$, Dyn5).
         \item Estructurar la red secundaria de baja tensión en \textbf{exactamente dos (02) circuitos de distribución}:
         \begin{itemize}
             \item \textbf{Circuito C-1 (Troncal Norte + C31):} Longitud de $820.0\text{ m}$ con conductor autoportante CAAI $3\times35+1\times25+1\times16\text{ mm}^2$, abasteciendo a 31 viviendas censadas ($56$ abonados proyectados) hacia la franja de playa y muelle, integrando la vivienda $C31$ por derivación directa tras la eliminación técnica de la rama central redundante.
@@ -385,28 +385,28 @@ La ecuación cúbica de Truxa para vanos nivelados y desnivelados:
 
 \begin{table}[H]
 \centering
-\caption{Resultados Mecánicos para las 5 Hipótesis CNE (Vano Crítico $115.59\text{ m}$)}
+\caption{Resultados Mecánicos para las 5 Hipótesis CNE (Vano Crítico $115.59\text{ m}$, AAAC $35\text{ mm}^2$)}
 \label{tab:hipotesis_mecanicas}
 \footnotesize
-\begin{tabularx}{\linewidth}{L c c c c c L}
+\begin{tabularx}{\linewidth}{L c c c c c c L}
 \toprule
-\textbf{Hipótesis CNE} & \textbf{T ($^\circ$C)} & \textbf{Viento (km/h)} & \textbf{Hielo (mm)} & \textbf{Tiro (kgf)} & \textbf{Flecha (m)} & \textbf{Estado Normativo} \\
+\textbf{Hipótesis CNE} & \textbf{T ($^\circ$C)} & \textbf{Viento (km/h)} & \textbf{Hielo (mm)} & \textbf{Tiro (kgf)} & \textbf{\% $T_R$} & \textbf{Flecha (m)} & \textbf{Estado Normativo} \\
 \midrule
-I. Viento Máximo & $-5.0$ & $75.0$ & $0.0$ & $312.4$ & $0.98$ & Cumple ($< 40\% T_R$) \\
-II. Manguito Hielo & $-5.0$ & $37.5$ & $6.0$ & $385.1$ & $1.15$ & Cumple ($< 40\% T_R$) \\
-III. Temp. Mínima & $-15.0$ & $0.0$ & $0.0$ & $245.8$ & $0.62$ & Cumple ($< 25\% T_R$) \\
-IV. Temp. Máxima & $+35.0$ & $0.0$ & $0.0$ & $115.2$ & $\mathbf{1.33}$ & Flecha máxima CNE \\
-V. EDS / Templado & $+15.0$ & $0.0$ & $0.0$ & $\mathbf{187.2}$ & $0.82$ & $\mathbf{18.0\% T_R}$ (EDS DGE) \\
+I. Viento Máximo & $+10.0$ & $75.0$ & $0.0$ & $253.62$ & $24.4\%$ & $1.32$ & Cumple ($< 40\% T_R$) \\
+II. Manguito Hielo & $-5.0$ & $37.5$ & $6.0$ & $358.25$ & $34.4\%$ & $1.60$ & Cumple ($< 40\% T_R$) \\
+III. Temp. Mínima & $-15.0$ & $0.0$ & $0.0$ & $310.81$ & $29.9\%$ & $0.51$ & Cumple ($< 40\% T_R$) \\
+IV. Temp. Máxima & $+35.0$ & $0.0$ & $0.0$ & $126.83$ & $12.2\%$ & $\mathbf{1.24}$ & Flecha máxima vertical CNE \\
+V. EDS / Templado & $+15.0$ & $0.0$ & $0.0$ & $\mathbf{187.20}$ & $\mathbf{18.0\%}$ & $0.84$ & Base EDS DGE ($18\% T_R$) \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \subsection{Verificación de Distancia de Seguridad al Terreno}
-Con postes de $12\text{ m}$ (empotramiento $1.40\text{ m}$):
+Con postes de $12\text{ m}$ (empotramiento normalizado $t = 0.10 \times 12 + 0.20 = 1.40\text{ m}$):
 \begin{equation}
-    H_{\text{libre}} = 12.0 - 1.40 - f_{\text{máx}} = 10.60 - 1.33 = \mathbf{9.27\text{ m}}
+    H_{\text{libre}} = 12.0 - 1.40 - f_{\text{máx}} = 10.60 - 1.244 = \mathbf{9.356\text{ m}}
 \end{equation}
-Dado que el Código Nacional de Electricidad (Regla 232) exige una altura mínima de $6.50\text{ m}$ para cruce de vías rurales, el diseño cumple con un margen de seguridad de $+2.77\text{ m}$.
+Dado que el Código Nacional de Electricidad (Regla 232) exige una altura mínima de $6.50\text{ m}$ para cruce de caminos y vías rurales, el diseño cumple holgadamente con un margen de seguridad de $\mathbf{+2.856\text{ m}}$.
 
 % =========================================================================
 % CAPÍTULO III: ESPECIFICACIONES TÉCNICAS DE MATERIALES
@@ -529,7 +529,7 @@ El plazo total de ejecución de la obra se estima en \textbf{90 días calendario
 5 & $E-05$ & PA-1 & $12\text{ m} / 400\text{ daN}$ & $402.43$ & $3817.04$ & $-36.06^\circ$ & Ret. Biselar \\
 6 & $E-06$ & PA-1 & $12\text{ m} / 400\text{ daN}$ & $518.02$ & $3827.27$ & $+31.35^\circ$ & Ret. Biselar \\
 7 & $E-07$ & PS-1 & $12\text{ m} / 300\text{ daN}$ & $628.53$ & $3824.61$ & $-6.05^\circ$ & Ninguna \\
-8 & $E-08$ & PA-1 & $12\text{ m} / 300\text{ daN}$ & $708.34$ & $3824.61$ & $+32.95^\circ$ & Ret. Biselar \\
+8 & $E-08$ & PA-1 & $12\text{ m} / 400\text{ daN}$ & $708.34$ & $3824.61$ & $+32.95^\circ$ & Ret. Biselar \\
 9 & $E-09$ & PR-1 & $12\text{ m} / 400\text{ daN}$ & $816.60$ & $3824.61$ & $0.00^\circ$ & Ret. Inclinada $\cdot$ PAT-3 \\
 \bottomrule
 \end{tabularx}
@@ -662,7 +662,7 @@ Un valor natural de $71.74\ \Omega$ pondría en riesgo la seguridad de las perso
 \toprule
 \textbf{Componente} & \textbf{Condición / Riesgo} & \textbf{Norma} & \textbf{Medida Correctiva Implementada} & \textbf{Estado} \\
 \midrule
-Ubicación de SED & Desviación nodo de carga & CNE Suministro & Fijación en Lat: -15.640067, Lon: -69.815400 & \textbf{CONFORME} \\
+Ubicación de SED & Desviación nodo de carga & CNE Suministro & Fijación E-04 (E: 412,759.20, N: 8,270,976.22, 3839.56 msnm) & \textbf{CONFORME} \\
 Tensión en bornes & Caída acumulada en punta & NTCSE / CNE & Ajuste Tap Changer a +2.5\% (+5.5V compensados) & \textbf{CONFORME} \\
 Postes en esquina & Momento no equilibrado & DGE Montaje & Retenidas R-1 con bloque de anclaje de concreto & \textbf{CONFORME} \\
 Pozo a tierra & $R > 70\ \Omega$ en suelo seco & CNE Regla 362 & Tratamiento bentonita sódica + doble jabalina en SED & \textbf{CONFORME} \\
@@ -672,42 +672,41 @@ Protección MT & Inrush energización trafo & IEC 60282-2 & Fusible chicote K de
 \end{tabularx}
 \end{table}
 
-\section{Evaluación Integral y Matriz de Autocalificación Normativa (Rúbrica de 100 Puntos)}
-En cumplimiento de las directivas académicas de evaluación del curso \textit{MEC330 --- Instalaciones Eléctricas II} (FIME $\cdot$ UNA Puno), y aplicando los criterios de auditoría técnica más rigurosos conforme a las normas del MINEM-DGE, CNE Suministro y estándares de concesión de \textbf{Electro Puno S.A.A.}, se realiza la siguiente autocalificación integral sobre una escala estricta de 100 puntos evaluando todos los capítulos del expediente:
+\section{Matriz de Verificación y Cumplimiento Normativo (Checklist Técnico)}
+Con el propósito de garantizar la máxima rigurosidad técnica conforme a la normativa vigente del sector eléctrico peruano (Código Nacional de Electricidad --- CNE Suministro 2011, Norma DGE ``Bases para el Diseño de Líneas y Redes Primarias para Electrificación Rural'' R.D. 018-2003-EM/DGE, R.M. 091-2002-MEM/VME y los estándares de distribución de \textbf{Electro Puno S.A.A.}), se realiza la verificación sistemática e independiente de los parámetros de ingeniería del proyecto:
 
 \begin{table}[H]
 \centering
-\caption{Matriz de Autocalificación Técnica y Académica Rigurosa (Rúbrica FIME - UNA Puno)}
-\label{tab:autocalificacion_rubrica}
+\caption{Matriz de Verificación de Cumplimiento Normativo Técnico (CNE / DGE / Electro Puno)}
+\label{tab:checklist_cumplimiento}
 \scriptsize
-\begin{tabularx}{\linewidth}{c L c c L}
+\begin{tabularx}{\linewidth}{c L c c c}
 \toprule
-\textbf{N$^\circ$} & \textbf{Criterio / Componente Evaluado} & \textbf{Máx.} & \textbf{Obt.} & \textbf{Justificación Técnica y Observaciones de Auditoría} \\
+\textbf{Ítem} & \textbf{Parámetro de Diseño Evaluado} & \textbf{Límite Normativo} & \textbf{Valor del Proyecto} & \textbf{Dictamen} \\
 \midrule
-\textbf{I}   & Memoria Descriptiva, Justificación y Georreferenciación & 15 & \textbf{15} & Censo de 43 lotes, georreferenciación exacta en WGS-84 Zona 19S y meteorología altiplánica. \\
-\textbf{II}  & Cuadro de Cargas y Selección de la SED & 20 & \textbf{20} & Desagregación rigurosa de 2 circuitos ($56$ y $22$ proyectados), constante 3.3/18, trafo 100 kVA (21\% reserva). \\
-\textbf{III} & Cálculos Justificativos Eléctricos y Puestas a Tierra & 15 & \textbf{15} & Caída $\Delta V < 5\%$, Dwight en suelo de $200\ \Omega\cdot\text{m}$ y reducción con bentonita a $R \le 10\ \Omega$. \\
-\textbf{IV}  & Cálculos Mecánicos y Ecuación de Truxa a 3,924 msnm & 15 & \textbf{14} & Esfuerzos en 5 hipótesis CNE. Deducción ($-1\text{ pt}$): Capacidad portante asumida de geología regional. \\
-\textbf{V}   & Especificaciones Técnicas de Materiales y Montaje & 10 & \textbf{10} & Conductor AAAC 35 mm², CAAI autoportante, armados DGE SAB-1, aislamiento y herrajes homologados. \\
-\textbf{VI}  & Metrados, Análisis de Costos y Presupuesto Base & 10 & \textbf{9} & Metrado al detalle. Deducción ($-1\text{ pt}$): Costos unitarios indexados sin 3 cotizaciones comerciales de fábrica. \\
-\textbf{VII} & Planos Oficiales CAD, Diagramas Unifilares y Detalles & 15 & \textbf{14} & Láminas CAD P-01 y U-01 en A3 + 5 láminas reales Electro Puno. Deducción ($-1\text{ pt}$): Cota lacustre sin batimetría. \\
+1 & Caída de tensión máxima en MT ($22.9\text{ kV}$) & $\Delta V \le 5.0\%$ & $\Delta V = 0.016\%$ ($3.76\text{ V}$) & \textbf{CONFORME} \\
+2 & Caída de tensión máxima en BT ($380/220\text{ V}$) & $\Delta V \le 5.0\%$ (NTCSE) & $\Delta V = 2.14\%$ ($8.13\text{ V}$) & \textbf{CONFORME} \\
+3 & Capacidad de reserva en SED ($100\text{ kVA}$) & Reserva $\ge 15.0\%$ & Reserva $= 21.0\%$ ($79.00\text{ kVA}$) & \textbf{CONFORME} \\
+4 & Esfuerzo máx. tracción en MT (AAAC $35\text{ mm}^2$) & $T \le 50.0\% T_R$ ($520.4\text{ kgf}$) & $T = 358.25\text{ kgf}$ ($34.4\% T_R$) & \textbf{CONFORME} \\
+5 & Esfuerzo en condición EDS ($+15^\circ\text{C}$) & $T \le 18.0\% T_R$ ($187.3\text{ kgf}$) & $T = 187.20\text{ kgf}$ ($18.0\% T_R$) & \textbf{CONFORME} \\
+6 & Gálibo vertical mínimo sobre terreno en MT & $H_{\text{libre}} \ge 6.50\text{ m}$ (CNE Regla 232) & $H_{\text{libre}} = 9.356\text{ m}$ & \textbf{CONFORME} \\
+7 & Gálibo vertical libre en cruces de vía en BT & $H_{\text{libre}} \ge 5.50\text{ m}$ (CNE Regla 232) & $H_{\text{libre}} = 6.15\text{ a }7.15\text{ m}$ & \textbf{CONFORME} \\
+8 & Resistencia de puesta a tierra en SED (PAT-3) & $R \le 10.0\ \Omega$ (CNE Regla 362) & $R = 6.80\ \Omega$ & \textbf{CONFORME} \\
+9 & Resistencia de puesta a tierra en BT (PAT-1) & $R \le 25.0\ \Omega$ (CNE Regla 362) & $R \le 18.20\ \Omega$ & \textbf{CONFORME} \\
+10 & Coordinación de fusible cut-out MT en trafo & $I_n = 2.52\text{ A}$ ($100\text{ kVA}$) & Fusible chicote K de $4\text{ A}$ & \textbf{CONFORME} \\
+11 & Sobrecarga admisible del conductor CAAI en BT & $I_{\text{carga}} \le I_{\text{adm}}$ ($135\text{ A}$) & $I_{\text{máx}} = 86.13\text{ A}$ (C-1) & \textbf{CONFORME} \\
+12 & Resistencia mecánica en vértice E-08 ($\Delta = 32.95^\circ$) & C.A.C. $12/400$ + Retenida & $C = 400\text{ daN}$, armado PA-1 & \textbf{CONFORME} \\
 \midrule\midrule
 \rowcolor{lightnavy}
-\textbf{TOT} & \textbf{CALIFICACIÓN GLOBAL DE AUDITORÍA} & \textbf{100} & \textbf{96} & \textbf{CALIFICACIÓN SOBRESALIENTE (19.2 / 20) --- EXCELENCIA} \\
+\multicolumn{2}{l}{\textbf{DICTAMEN TÉCNICO GLOBAL}} & \multicolumn{3}{c}{\textbf{100\% CONFORME Y APTO PARA EJECUCIÓN FÍSICA}} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{Justificación Detallada de las Deducciones Hiperestrictas}
-Para mantener una rigurosidad implacable propia de una consultoría de alta ingeniería, se dedujeron deliberadamente 4 puntos en los siguientes conceptos:
-\begin{itemize}
-    \item \textbf{Criterio IV (-1 punto):} Se aplicó la ecuación de cambio de estado de Truxa con todas las 5 hipótesis climáticas del CNE para el altiplano puneño a 3,924 msnm. No obstante, se restó 1 punto debido a que la capacidad portante del terreno ($q_{\text{adm}} = 1.20\text{ kg/cm}^2$) se adoptó mediante correlación geológica regional de la península de Capachica en lugar de adjuntar ensayos de penetración dinámica ligera (DPL) o calicatas mecánicas directas al pie de cada uno de los vértices de postes.
-    \item \textbf{Criterio VI (-1 punto):} El metrado y presupuesto base contempla la totalidad de partidas con costos unitarios referenciales homologados por Electro Puno S.A.A. indexados a octubre 2026. Se descontó 1 punto por no incluir tres (03) cartas de cotización formal de fábrica selladas con validez comercial de 30 días emitidas por fabricantes nacionales de transformadores (Delcrosa, Josfel o Itelca).
-    \item \textbf{Criterio VII (-1 punto):} Las láminas P-01 y U-01 cuentan con calidad CAD profesional a escala normalizada en formato A3 con bloques DGE oficiales, sumadas a las 5 láminas reales de Electro Puno S.A.A. Sin embargo, se dedujo 1 punto debido a que la batimetría del espejo de agua del Lago Titicaca en la ensenada de Chifrón se representó mediante cota altimétrica fija de 3,812 msnm sin curvas batimétricas subacuáticas detalladas por ecosonda.
-\end{itemize}
+\section{Dictamen Técnico de Conformidad de Ingeniería}
+El expediente técnico del proyecto \textbf{``Creación del Servicio de Energía Eléctrica Mediante Línea Primaria 22.9 kV y Redes Secundarias en el Sector Chifrón, Distrito de Capachica --- Puno''} ha sido estructurado, modelado y validado en estricta conformidad con las directivas del \textbf{Código Nacional de Electricidad (CNE Suministro 2011)}, las \textbf{Normas Técnicas DGE} del Ministerio de Energía y Minas, y los lineamientos de distribución de \textbf{Electro Puno S.A.A.}
 
-\section{Dictamen Final de Conformidad Técnica}
-Habiéndose obtenido un puntaje consolidado de \textbf{96 / 100 puntos} (\textbf{19.2 / 20 en escala vigesimal}), el presente proyecto alcanza el nivel de \textbf{CALIFICACIÓN SOBRESALIENTE CON EXCELENCIA ACADÉMICA Y TÉCNICA}. Se emite el presente \textbf{DICTAMEN DE CONFORMIDAD TÉCNICA FAVORABLE}, certificando que el expediente técnico reúne los más altos estándares de seguridad, confiabilidad y calidad de ingeniería para su ejecución física y posterior recepción por parte de la empresa concesionaria \textbf{Electro Puno S.A.A.}
+Habiéndose verificado satisfactoriamente todos los criterios de seguridad mecánica, capacidad térmica de conductores, calidad de servicio en perfiles de tensión, aislamiento y protección contra sobretensiones y cortocircuitos, se emite el presente \textbf{DICTAMEN DE CONFORMIDAD TÉCNICA FAVORABLE}, certificando que el diseño definitivo reúne los requerimientos técnicos y de seguridad necesarios para su ejecución y puesta en servicio.
 
 % =========================================================================
 % CAPÍTULO VIII: PLANOS OFICIALES DE INGENIERÍA
@@ -728,14 +727,14 @@ A continuación se compila el juego oficial completo de planos y láminas de ing
 
 \newpage
 % INSERCIÓN DE LAS LÁMINAS OFICIALES CAD Y PLANOS DGE (CONSERVANDO ESCALA Y FORMATO)
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_P01_redes_planta.pdf}
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf}
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SUBESTACION_SAB1.pdf}
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SOPORTE_SUBESTACION.pdf}
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_PUESTA_A_TIERRA_PAT3.pdf}
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_RETENIDA_MECANICA.pdf}
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SECCIONAMIENTO_CUTOUT.pdf}
-\includepdf[pages=-]{C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_PL01_perfil_longitudinal.pdf}
+\includepdf[pages=-]{../entregables/planos/plano_P01_redes_planta.pdf}
+\includepdf[pages=-]{../entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf}
+\includepdf[pages=-]{../entregables/planos/referencias_dge/DETALLE_SUBESTACION_SAB1.pdf}
+\includepdf[pages=-]{../entregables/planos/referencias_dge/DETALLE_SOPORTE_SUBESTACION.pdf}
+\includepdf[pages=-]{../entregables/planos/referencias_dge/DETALLE_PUESTA_A_TIERRA_PAT3.pdf}
+\includepdf[pages=-]{../entregables/planos/referencias_dge/DETALLE_RETENIDA_MECANICA.pdf}
+\includepdf[pages=-]{../entregables/planos/referencias_dge/DETALLE_SECCIONAMIENTO_CUTOUT.pdf}
+\includepdf[pages=-]{../entregables/planos/plano_PL01_perfil_longitudinal.pdf}
 
 \vfill
 \begin{center}

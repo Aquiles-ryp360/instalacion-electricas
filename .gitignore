@@ -34,6 +34,7 @@
 *.out
 *.synctex.gz
 *.toc
+/proyectos/*/expediente/*.pdf
 
 # Python
 .venv/

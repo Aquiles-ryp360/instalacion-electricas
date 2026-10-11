@@ -12,10 +12,11 @@ El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar
 ├── docs/                     arquitectura, flujo y politica de datos
 ├── herramientas/             motores reutilizables
 ├── proyectos/
-│   ├── aquiles/              vivienda de dos pisos
-│   ├── renzo/                vivienda de tres pisos
-│   ├── renzo-industrial/     estacion de servicio (grifo) - unidad 2 de Renzo
-│   └── unidad-2-industrial/  estacion de servicio (grifo) - unidad 2 de Aquiles
+│   ├── aquiles/                          vivienda de dos pisos
+│   ├── renzo/                            vivienda de tres pisos
+│   ├── renzo-industrial/                 estacion de servicio (grifo) - unidad 2 de Renzo
+│   ├── renzo-linea-primaria-capachica/   linea primaria 22.9 kV y redes secundarias Chifron (Capachica)
+│   └── unidad-2-industrial/              estacion de servicio (grifo) - unidad 2 de Aquiles
 ├── referencias/              normativa versionada y material local ignorado
 └── build/                    resultados regenerables, ignorados por Git
 ```

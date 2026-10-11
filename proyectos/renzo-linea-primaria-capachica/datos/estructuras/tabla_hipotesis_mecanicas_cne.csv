@@ -1,0 +1,6 @@
+Hipotesis,Temperatura_C,Viento_km_h,Hielo_mm,Carga_Resultante_kg_m,Tiro_kgf,Tiro_pct_TR,Flecha_Resultante_m,Flecha_Vertical_m,Estado
+I. Viento Máximo,10.0,75.0,0.0,0.2008,253.62,24.4,1.322,0.622,Cumple
+II. Manguito de Hielo,-5.0,37.5,6.0,0.3434,358.25,34.4,1.601,1.508,Cumple
+III. Temperatura Mínima,-15.0,0.0,0.0,0.0945,310.81,29.9,0.508,0.508,Cumple
+IV. Temperatura Máxima,35.0,0.0,0.0,0.0945,126.83,12.2,1.244,1.244,Cumple
+V. Templado / EDS,15.0,0.0,0.0,0.0945,187.2,18.0,0.843,0.843,Cumple
