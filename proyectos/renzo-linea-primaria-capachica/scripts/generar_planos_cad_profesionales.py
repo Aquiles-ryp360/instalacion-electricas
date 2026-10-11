@@ -212,67 +212,76 @@ def dibujar_bloque_medidor_cad(ax, x, y, cod="", dx_label=2.4, dy_label=1.4, ha=
 def dibujar_recuadro_detalles_tecnicos(ax):
     """
     Dibuja un recuadro formal de detalles constructivos normalizados en la zona noroeste
-    (E: 412365 - 412560, N: 8271100 - 8271465), garantizando legibilidad total y cero colisiones.
+    (E: 412362 - 412594, N: 8271100 - 8271465), garantizando holgura total,
+    cajas interiores ampliadas y cero textos que se salgan de sus marcos.
     """
-    x0, y0 = 412365.0, 8271100.0
-    w, h = 195.0, 365.0
+    x0, y0 = 412362.0, 8271100.0
+    w, h = 232.0, 365.0
     
-    rect_box = patches.Rectangle((x0, y0), w, h, facecolor='#FFFFFF', edgecolor='#1E3A8A', linewidth=1.1, zorder=10)
+    # Marco exterior del recuadro
+    rect_box = patches.Rectangle((x0, y0), w, h, facecolor='#FFFFFF', edgecolor='#1E3A8A', linewidth=1.2, zorder=10)
     ax.add_patch(rect_box)
     
+    # Encabezado con ancho completo
     rect_title = patches.Rectangle((x0, y0 + h - 18.0), w, 18.0, facecolor='#1E3A8A', edgecolor='#1E3A8A', linewidth=1.0, zorder=11)
     ax.add_patch(rect_title)
     ax.text(x0 + w/2.0, y0 + h - 9.0, "DETALLES CONSTRUCTIVOS DE INGENIERÍA (NORMAS DGE / MEM)",
-            ha='center', va='center', fontsize=5.5, fontweight='bold', color='#FFFFFF', zorder=12)
+            ha='center', va='center', fontsize=5.2, fontweight='bold', color='#FFFFFF', zorder=12)
     
     # ---------------------------------------------------------------------
-    # DETALLE 1: SUBESTACIÓN BIPOSTE SAB-1 100 kVA
+    # DETALLE 1: SUBESTACIÓN BIPOSTE SAB-1 100 kVA (ESC. 1:75)
     # ---------------------------------------------------------------------
-    y_d1_top = y0 + h - 26.0
+    y_d1_top = y0 + h - 25.0
     ax.text(x0 + 8.0, y_d1_top, "DETALLE 1: ESTRUCTURA SED BIPOSTE SAB-1 100 kVA (ESC. 1:75)",
             fontsize=4.8, fontweight='bold', color='#B91C1C', zorder=12)
-    ax.plot([x0 + 6.0, x0 + w - 6.0], [y_d1_top - 4.0, y_d1_top - 4.0], color='#CBD5E1', lw=0.6, zorder=11)
+    ax.plot([x0 + 6.0, x0 + w - 6.0], [y_d1_top - 3.8, y_d1_top - 3.8], color='#CBD5E1', lw=0.6, zorder=11)
     
-    x_c = x0 + 45.0
-    y_base = y_d1_top - 85.0
-    ax.plot([x_c - 35.0, x_c + 35.0], [y_base, y_base], color='#475569', lw=1.0, zorder=12)
-    ax.text(x_c + 38.0, y_base, "N.T.N. ±0.00", fontsize=3.4, color='#475569', va='center', zorder=12)
+    x_c = x0 + 52.0
+    y_base = y_d1_top - 84.0
+    ax.plot([x_c - 42.0, x_c + 42.0], [y_base, y_base], color='#475569', lw=1.0, zorder=12)
+    ax.text(x_c + 45.0, y_base, "N.T.N. ±0.00", fontsize=3.4, color='#475569', va='center', zorder=12)
     
-    d_p = 14.0
+    d_p = 16.0
     for xp in [x_c - d_p, x_c + d_p]:
-        poly_p = patches.Polygon([[xp - 2.5, y_base], [xp + 2.5, y_base], [xp + 1.6, y_base + 66.0], [xp - 1.6, y_base + 66.0]],
+        poly_p = patches.Polygon([[xp - 2.8, y_base], [xp + 2.8, y_base], [xp + 1.8, y_base + 66.0], [xp - 1.8, y_base + 66.0]],
                                  facecolor='#F1F5F9', edgecolor='#334155', lw=0.7, zorder=13)
         ax.add_patch(poly_p)
+    ax.text(x_c - d_p - 4.5, y_base + 14.0, "C.A.C. 13/400", fontsize=3.1, color='#334155', ha='right', zorder=14)
+    ax.text(x_c + d_p + 4.5, y_base + 14.0, "C.A.C. 13/400", fontsize=3.1, color='#334155', ha='left', zorder=14)
     
+    # Cruceta de Media Tensión
     y_cruc = y_base + 62.0
-    rect_cr = patches.Rectangle((x_c - 32.0, y_cruc - 1.8), 64.0, 3.6, facecolor='#FEF3C7', edgecolor='#B45309', lw=0.7, zorder=14)
+    rect_cr = patches.Rectangle((x_c - 36.0, y_cruc - 1.8), 72.0, 3.6, facecolor='#FEF3C7', edgecolor='#B45309', lw=0.7, zorder=14)
     ax.add_patch(rect_cr)
+    ax.text(x_c, y_cruc + 4.2, "Cruceta F°G° 2.50 m\n(Cut-Out 27 kV + Pararrayos ZnO)",
+            fontsize=3.0, fontweight='bold', color='#B45309', ha='center', va='bottom', linespacing=1.1, zorder=14)
     
+    # Plataforma portatransformador
     y_plat = y_base + 30.0
-    rect_pl = patches.Rectangle((x_c - 20.0, y_plat - 2.0), 40.0, 4.0, facecolor='#E2E8F0', edgecolor='#1E293B', lw=0.8, zorder=14)
+    rect_pl = patches.Rectangle((x_c - 24.0, y_plat - 2.0), 48.0, 4.0, facecolor='#E2E8F0', edgecolor='#1E293B', lw=0.8, zorder=14)
     ax.add_patch(rect_pl)
     
-    rect_tr = patches.Rectangle((x_c - 10.0, y_plat + 1.5), 20.0, 16.0, facecolor='#EFF6FF', edgecolor='#1D4ED8', lw=0.85, zorder=15)
+    # Cuba del Transformador ampliada
+    rect_tr = patches.Rectangle((x_c - 13.0, y_plat + 2.0), 26.0, 18.0, facecolor='#EFF6FF', edgecolor='#1D4ED8', lw=0.85, zorder=15)
     ax.add_patch(rect_tr)
-    ax.text(x_c, y_plat + 11.5, "Trafo 100 kVA", fontsize=3.3, fontweight='bold', color='#1D4ED8', ha='center', va='center', zorder=16)
-    ax.text(x_c, y_plat + 5.0, "Dyn5 22.9 kV", fontsize=3.0, color='#1D4ED8', ha='center', va='center', zorder=16)
+    ax.text(x_c, y_plat + 9.5, "Trafo 100 kVA\nDyn5  22.9/0.38 kV", fontsize=3.2, fontweight='bold', color='#1D4ED8', ha='center', va='center', linespacing=1.2, zorder=16)
     
+    # Tablero de BT ampliado
     y_tab = y_base + 6.0
-    rect_tb = patches.Rectangle((x_c - 8.0, y_tab), 16.0, 13.0, facecolor='#FEF2F2', edgecolor='#DC2626', lw=0.75, zorder=15)
+    rect_tb = patches.Rectangle((x_c - 11.0, y_tab), 22.0, 14.0, facecolor='#FEF2F2', edgecolor='#DC2626', lw=0.75, zorder=15)
     ax.add_patch(rect_tb)
-    ax.text(x_c, y_tab + 8.0, "Tablero BT", fontsize=3.1, fontweight='bold', color='#991B1B', ha='center', va='center', zorder=16)
-    ax.text(x_c, y_tab + 3.5, "IP65 3x160A", fontsize=3.0, color='#991B1B', ha='center', va='center', zorder=16)
+    ax.text(x_c, y_tab + 7.0, "Tablero BT IP65\nITM Gen. 3x160A", fontsize=3.0, fontweight='bold', color='#991B1B', ha='center', va='center', linespacing=1.2, zorder=16)
 
-    # Textos de Especificaciones Técnicas SED (una sola línea por viñeta para cero colisiones)
-    x_esp_sed = x0 + 88.0
+    # Especificaciones Técnicas SED (columna derecha holgada)
+    x_esp_sed = x0 + 108.0
     y_esp_s = y_d1_top - 12.0
     sed_textos = [
         "• Potencia: 100 kVA (Dyn5, 60 Hz)",
-        "• Tensión: 22.9 / 0.38-0.22 kV",
-        "• Postes: 2xC.A.C. 13m/400daN",
-        "• Cut-Out: 27 kV / 100A (Fus. 4A)",
-        "• Pararrayos: ZnO 21 kV / 10 kA",
-        "• Tablero BT: Gabinete IP65 3x160A",
+        "• Tensión: 22.9 / 0.38 - 0.22 kV",
+        "• Estructura: 2 x C.A.C. 13m / 400 daN",
+        "• Protección MT: Cut-Out 27 kV 100A (4A)",
+        "• Pararrayos MT: ZnO 21 kV / 10 kA",
+        "• Tablero BT: PRFV IP65 con ITM 3x160A",
         "• Puesta a Tierra: PAT-3 (R <= 10 Ω)"
     ]
     for lin in sed_textos:
@@ -280,73 +289,79 @@ def dibujar_recuadro_detalles_tecnicos(ax):
         y_esp_s -= 10.5
 
     # ---------------------------------------------------------------------
-    # DETALLE 2: POZO DE PUESTA A TIERRA PAT-1 / PAT-3 (NORMA DGE)
+    # DETALLE 2: POZO DE PUESTA A TIERRA PAT-1 / PAT-3 (ESC. 1:25)
     # ---------------------------------------------------------------------
     y_d2_top = y_base - 14.0
     ax.text(x0 + 8.0, y_d2_top, "DETALLE 2: POZO DE PUESTA A TIERRA PAT-1 / PAT-3 (ESC. 1:25)",
             fontsize=4.8, fontweight='bold', color='#15803D', zorder=12)
-    ax.plot([x0 + 6.0, x0 + w - 6.0], [y_d2_top - 4.0, y_d2_top - 4.0], color='#CBD5E1', lw=0.6, zorder=11)
+    ax.plot([x0 + 6.0, x0 + w - 6.0], [y_d2_top - 3.8, y_d2_top - 3.8], color='#CBD5E1', lw=0.6, zorder=11)
     
-    x_pzt = x0 + 35.0
+    x_pzt = x0 + 38.0
     y_pzt = y_d2_top - 16.0
-    rect_caj = patches.Rectangle((x_pzt - 9.0, y_pzt - 6.0), 18.0, 6.0, facecolor='#F1F5F9', edgecolor='#475569', lw=0.7, zorder=13)
+    # Caja de registro ampliada en parte superior
+    rect_caj = patches.Rectangle((x_pzt - 15.0, y_pzt - 3.0), 30.0, 7.5, facecolor='#F1F5F9', edgecolor='#475569', lw=0.7, zorder=13)
     ax.add_patch(rect_caj)
-    ax.text(x_pzt, y_pzt - 3.0, "Caja 0.40x0.40m", fontsize=3.0, ha='center', color='#475569', zorder=14)
+    ax.text(x_pzt, y_pzt + 0.8, "Caja Registro 0.40x0.40 m", fontsize=2.9, ha='center', va='center', color='#334155', fontweight='bold', zorder=14)
     
-    rect_pozo = patches.Rectangle((x_pzt - 12.0, y_pzt - 54.0), 24.0, 48.0, facecolor='#FDF6B2', edgecolor='#CA8A04', lw=0.6, linestyle='--', zorder=12)
+    # Pozo
+    rect_pozo = patches.Rectangle((x_pzt - 15.0, y_pzt - 54.0), 30.0, 48.0, facecolor='#FDF6B2', edgecolor='#CA8A04', lw=0.6, linestyle='--', zorder=12)
     ax.add_patch(rect_pozo)
     
-    ax.plot([x_pzt, x_pzt], [y_pzt - 2.0, y_pzt - 50.0], color='#B45309', lw=2.0, zorder=14)
-    ax.plot(x_pzt, y_pzt - 2.0, marker='s', color='#D97706', markersize=3.2, zorder=15)
-    ax.text(x_pzt + 3.0, y_pzt - 24.0, "Varilla Cu\n5/8\"x2.40m", fontsize=3.1, color='#78350F', fontweight='bold', va='center', zorder=15)
+    ax.plot([x_pzt, x_pzt], [y_pzt - 4.5, y_pzt - 50.0], color='#B45309', lw=2.2, zorder=14)
+    ax.plot(x_pzt, y_pzt - 7.5, marker='s', color='#D97706', markersize=3.4, zorder=15)
+    ax.text(x_pzt + 4.5, y_pzt - 7.5, "Conector Bronce", fontsize=2.9, color='#B45309', va='center', zorder=15)
+    ax.text(x_pzt + 4.5, y_pzt - 26.0, "Varilla Cu\n5/8\" x 2.40 m", fontsize=3.0, color='#78350F', fontweight='bold', va='center', linespacing=1.1, zorder=15)
+    ax.text(x_pzt, y_pzt - 47.0, "Bentonita Sódica", fontsize=2.9, ha='center', color='#854D0E', zorder=15)
     
-    x_esp_pat = x0 + 88.0
+    # Especificaciones PAT
+    x_esp_pat = x0 + 108.0
     y_esp_p = y_d2_top - 14.0
     pat_textos = [
-        "• PAT-1 (Redes BT): R <= 25 Ω",
-        "• PAT-3 (SED 100kVA): R <= 10 Ω",
-        "• Electrodo: Cobre 5/8\" x 2.40 m",
-        "• Conductor: Cu desnudo 35 mm²",
-        "• Tratamiento: Bentonita sódica"
+        "• PAT-1 (Redes Secundarias): R <= 25 Ω",
+        "• PAT-3 (Neutro y Masa SED): R <= 10 Ω",
+        "• Electrodo: Cobre Puro 5/8\" x 2.40 m",
+        "• Conductor Enlace: Cu Desnudo 35 mm²",
+        "• Tratamiento: Bentonita / Gel Electrolítico"
     ]
     for lin in pat_textos:
         ax.text(x_esp_pat, y_esp_p, lin, fontsize=3.5, color='#0F172A', zorder=13)
         y_esp_p -= 10.5
 
     # ---------------------------------------------------------------------
-    # DETALLE 3: ARMADO DE RETENIDA INCLINADA RET-I (DGE 09-91-18)
+    # DETALLE 3: ARMADO DE RETENIDA INCLINADA RET-I (ESC. 1:50)
     # ---------------------------------------------------------------------
     y_d3_top = y_d2_top - 76.0
     ax.text(x0 + 8.0, y_d3_top, "DETALLE 3: ARMADO RETENIDA INCLINADA RET-I (ESC. 1:50)",
             fontsize=4.8, fontweight='bold', color='#9A3412', zorder=12)
-    ax.plot([x0 + 6.0, x0 + w - 6.0], [y_d3_top - 4.0, y_d3_top - 4.0], color='#CBD5E1', lw=0.6, zorder=11)
+    ax.plot([x0 + 6.0, x0 + w - 6.0], [y_d3_top - 3.8, y_d3_top - 3.8], color='#CBD5E1', lw=0.6, zorder=11)
     
-    x_ret_base = x0 + 25.0
+    x_ret_base = x0 + 22.0
     y_ret_base = y_d3_top - 44.0
-    ax.plot([x_ret_base, x_ret_base], [y_ret_base, y_ret_base + 36.0], color='#334155', lw=2.0, zorder=13)
-    ax.text(x_ret_base - 2.5, y_ret_base + 18.0, "Poste BT", fontsize=3.0, color='#334155', ha='right', zorder=14)
+    ax.plot([x_ret_base, x_ret_base], [y_ret_base, y_ret_base + 36.0], color='#334155', lw=2.2, zorder=13)
+    ax.text(x_ret_base - 3.0, y_ret_base + 18.0, "Poste C.A.C.", fontsize=3.1, color='#334155', ha='right', zorder=14)
     
-    x_ret_ancla = x_ret_base + 32.0
-    ax.plot([x_ret_base, x_ret_ancla], [y_ret_base + 32.0, y_ret_base], color='#C2410C', lw=1.1, zorder=13)
+    x_ret_ancla = x_ret_base + 26.0
+    ax.plot([x_ret_base, x_ret_ancla], [y_ret_base + 32.0, y_ret_base], color='#C2410C', lw=1.2, zorder=13)
     
     xm_r = (x_ret_base + x_ret_ancla) / 2.0
     ym_r = (y_ret_base + 32.0 + y_ret_base) / 2.0
     ax.plot(xm_r, ym_r, marker='s', color='#D97706', markeredgecolor='#9A3412', markersize=3.8, zorder=14)
-    ax.text(xm_r + 2.5, ym_r, "Aislador 54-1", fontsize=3.0, color='#9A3412', va='center', zorder=15)
+    ax.text(xm_r + 3.0, ym_r, "Aislador 54-1\n(H > 3.0 m)", fontsize=3.0, color='#9A3412', va='center', linespacing=1.1, zorder=15)
     
-    ax.plot([x_ret_ancla, x_ret_ancla + 7.0], [y_ret_base, y_ret_base - 8.0], color='#9A3412', lw=1.4, zorder=13)
-    rect_blq = patches.Rectangle((x_ret_ancla + 3.0, y_ret_base - 12.0), 9.0, 5.0, facecolor='#E2E8F0', edgecolor='#475569', lw=0.6, zorder=13)
+    ax.plot([x_ret_ancla, x_ret_ancla + 6.0], [y_ret_base, y_ret_base - 7.0], color='#9A3412', lw=1.5, zorder=13)
+    rect_blq = patches.Rectangle((x_ret_ancla + 1.0, y_ret_base - 13.0), 14.0, 6.0, facecolor='#E2E8F0', edgecolor='#475569', lw=0.6, zorder=13)
     ax.add_patch(rect_blq)
+    ax.text(x_ret_ancla + 8.0, y_ret_base - 17.0, "Bloque Concreto\n0.50x0.50x0.20 m", fontsize=2.9, color='#475569', ha='center', va='top', linespacing=1.1, zorder=14)
     
-    x_esp_ret = x0 + 88.0
+    # Especificaciones RET
+    x_esp_ret = x0 + 108.0
     y_esp_r = y_d3_top - 14.0
     ret_textos = [
-        "• Cable: Acero SM 3/8\" (7 hilos)",
-        "• Aislador: Tracción ANSI 54-1",
-        "• Varilla: F°G° 5/8\" x 2.40 m",
-        "• Inclinación: 45° a la vertical",
-        "• Bloque: Concreto 0.5x0.5x0.2m",
-        "• Tracción mín.: 3 800 daN"
+        "• Cable Tirante: Acero SM 3/8\" (7 hilos)",
+        "• Aislador Tracción: Porcelana ANSI 54-1",
+        "• Varilla Anclaje: F°G° 5/8\" x 2.40 m",
+        "• Inclinación Normal: 45° a la vertical",
+        "• Carga Rotura Mínima: 3 800 daN"
     ]
     for lin in ret_textos:
         ax.text(x_esp_ret, y_esp_r, lin, fontsize=3.5, color='#0F172A', zorder=13)
@@ -490,7 +505,7 @@ def generar_plano_p01_profesional(salida_pdf):
     ax_box.add_patch(rect_borde_int)
 
     # MAPA GEOGRÁFICO DE DISTRIBUCIÓN
-    ax_map = fig.add_axes([0.04, 0.05, 0.60, 0.90])
+    ax_map = fig.add_axes([0.04, 0.05, 0.60, 0.88])
     
     # Vías
     for v_nom, pts in vias:
@@ -727,22 +742,22 @@ def generar_plano_p01_profesional(salida_pdf):
     ax_est.plot([0.04, 0.96], [0.875, 0.875], color='#334155', linewidth=0.7)
 
     filas_est = [
-        ("Postes C.A.C. 8 m / 200 daN en Red BT", "30 unidades", "Total postes C-1 y C-2"),
-        ("Postes C.A.C. 13 m / 400 daN en SED SAB-1", "02 unidades", "Estructura biposte MT/BT"),
-        ("Armado E1 (Alineamiento / Suspensión)", "18 estructuras", "11 en C-1  |  7 en C-2"),
-        ("Armado PA1 (Ángulo con Retenida RET-I)", "06 estructuras", "04 en C-1  |  02 en C-2"),
-        ("Armado PS1 (Fin de Línea con RET-I)", "04 estructuras", "03 en C-1  |  01 en C-2"),
-        ("Armado E2 (Derivación Secundaria)", "02 estructuras", "Vértices de bifurcación"),
-        ("Retenidas Inclinadas RET-I (Acero 3/8\")", "08 retenidas", "Varilla 5/8\"x2.4m + bloque"),
-        ("Puestas a Tierra PAT-1 (R <= 25 Ω)", "09 PAT-1", "Electrodo Cu 5/8\"x2.40m"),
-        ("Puesta a Tierra SED PAT-3 (R <= 10 Ω)", "01 PAT-3", "2 electrodos Cu en paralelo"),
-        ("Luminarias AP 60W LED + Pastoral 1.5m", "15 unidades", "10 en C-1  |  05 en C-2 (0.90 kW)"),
-        ("Acometidas Aéreas SET 2x4 mm² + Caja M", "43 abonados", "C01 - C43 georreferenciados")
+        ("Postes C.A.C. 8 m / 200 daN en Red BT", "30 unid.", "Total C-1 y C-2"),
+        ("Postes C.A.C. 13 m / 400 daN en SED SAB-1", "02 unid.", "Biposte MT/BT"),
+        ("Armado E1 (Alineamiento / Suspensión)", "18 unid.", "11 C-1 / 7 C-2"),
+        ("Armado PA1 (Ángulo con Retenida RET-I)", "06 unid.", "4 C-1 / 2 C-2"),
+        ("Armado PS1 (Fin de Línea con RET-I)", "04 unid.", "3 C-1 / 1 C-2"),
+        ("Armado E2 (Derivación Secundaria)", "02 unid.", "Bifurcaciones"),
+        ("Retenidas Inclinadas RET-I (Acero 3/8\")", "08 unid.", "Varilla + Bloque"),
+        ("Puestas a Tierra PAT-1 (R <= 25 Ω)", "09 unid.", "Electrodo Cu 5/8\""),
+        ("Puesta a Tierra SED PAT-3 (R <= 10 Ω)", "01 unid.", "2 electrodos Cu"),
+        ("Luminarias AP 60W LED + Pastoral 1.5m", "15 unid.", "10 C-1 / 5 C-2"),
+        ("Acometidas Aéreas SET 2x4 mm² + Caja M", "43 unid.", "C01 al C43")
     ]
     y_e = 0.815
     for item, cant, obs in filas_est:
-        ax_est.text(0.04, y_e, item, va='center', fontsize=5.1, fontweight='bold' if 'Postes' in item or 'Luminarias' in item else 'normal', color='#0F172A')
-        ax_est.text(0.68, y_e, cant, va='center', fontsize=5.1, fontweight='bold', color='#1E3A8A' if 'Postes' in item else ('#15803D' if 'PAT' in item else '#B45309'))
+        ax_est.text(0.04, y_e, item, va='center', fontsize=5.0, fontweight='bold' if 'Postes' in item or 'Luminarias' in item else 'normal', color='#0F172A')
+        ax_est.text(0.56, y_e, cant, va='center', fontsize=5.0, fontweight='bold', color='#1E3A8A' if 'Postes' in item else ('#15803D' if 'PAT' in item else '#B45309'))
         ax_est.text(0.96, y_e, obs, ha='right', va='center', fontsize=4.8, color='#64748B')
         y_e -= 0.068
 
