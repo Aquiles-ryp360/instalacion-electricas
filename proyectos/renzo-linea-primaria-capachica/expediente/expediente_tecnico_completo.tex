@@ -264,11 +264,13 @@ Conforme a la zonificación del Código Nacional de Electricidad (Suministro 201
 \end{itemize}
 
 \section{Punto de Diseño y Alimentación en Media Tensión}
-La factibilidad de suministro se sustenta en la red primaria existente administrada por \textbf{Electro Puno S.A.A.}, verificada en el geovisor oficial \textbf{GISEM de OSINERGMIN}:
+La factibilidad de suministro se sustenta en la red primaria existente administrada por \textbf{Electro Puno S.A.A.}, validada en la plataforma oficial del Geovisor \textbf{GISEM de OSINERGMIN} (\url{https://gisem.osinergmin.gob.pe/}, consulta fechada al 10 de octubre de 2026):
 \begin{itemize}
-    \item \textbf{Alimentador Troncal:} Chifrón --- Código de tramo \texttt{TMT000012389} / \texttt{TMT001847370}.
-    \item \textbf{Tensión del Sistema:} $22.9\text{ kV}$ (Trifásico, 3 hilos, $60\text{ Hz}$).
-    \item \textbf{Subestación Proyectada (SED-01):} Estructura Biposte C.A.C. $13\text{ m} / 400\text{ daN}$ (Armado SAB-1 en estructura E-04) ubicada en $\mathbf{\text{Lat: } -15.637680^\circ}$, $\mathbf{\text{Lon: } -69.813970^\circ}$ ($E = 412,759.20\text{ m}, N = 8,270,976.22\text{ m}$, Cota $3,839.56\text{ msnm}$), equipada con tres (03) cortacircuitos cut-out de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$, tres (03) pararrayos ZnO de $21\text{ kV}, 10\text{ kA}$, y transformador trifásico de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$).
+    \item \textbf{Subestación Cabecera:} SET Juliaca / Coata $60/22.9\text{ kV}$ (Potencia de cortocircuito trifásico en barra MT: $S_{cc} = 50.0\text{ MVA}$).
+    \item \textbf{Alimentador Troncal MT:} Coata --- Capachica, tramo registrado bajo códigos \texttt{TMT000012389} / \texttt{TMT001847370}.
+    \item \textbf{Tensión Nominal del Sistema:} $22.9\text{ kV}$ (Trifásico, 3 hilos, $60\text{ Hz}$).
+    \item \textbf{Punto de Entrega / Derivación (TAP):} Estructura existente $\mathbf{E-01}$ en cresta de cerro ($E = 412,606.01\text{ m}, N = 8,270,712.24\text{ m}$, Cota $3,924.17\text{ msnm}$, Lat: $-15.640067^\circ$, Lon: $-69.815400^\circ$), equipada con seccionamiento mediante cut-out 27 kV y pararrayos 21 kV.
+    \item \textbf{Subestación Proyectada (SED-01):} Estructura Biposte C.A.C. $13\text{ m} / 400\text{ daN}$ (Armado SAB-1 en estructura $\mathbf{E-04}$) ubicada en $\mathbf{\text{Lat: } -15.637680^\circ}$, $\mathbf{\text{Lon: } -69.813970^\circ}$ ($E = 412,759.20\text{ m}, N = 8,270,976.22\text{ m}$, Cota $3,839.56\text{ msnm}$), equipada con tres (03) cortacircuitos cut-out de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$, tres (03) pararrayos ZnO de $21\text{ kV}, 10\text{ kA}$, y transformador trifásico de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$, conexión Dyn5).
 \end{itemize}
 
 % =========================================================================
@@ -538,10 +540,21 @@ El tendido del conductor AAAC de $35\text{ mm}^2$ se realizará empleando poleas
 \subsection{Sustento de Precios Unitarios (APU) y Fuentes de Cotización}
 El presupuesto se sustenta en un análisis de precios unitarios detallado conforme a la estructura de costos de obras de electrificación rural en el altiplano de Puno:
 \begin{itemize}
-    \item \textbf{Mano de Obra:} Costos de hora-hombre calculados bajo el régimen laboral de Construcción Civil para la Región Puno (CAPECO vigente: Operario S/. 32.50/hh, Oficial S/. 27.20/hh, Peón S/. 24.50/hh), incluyendo leyes sociales (83.82\%) y bonificaciones por altitud ($> 3,800\text{ msnm}$).
-    \item \textbf{Equipos y Herramientas:} Rendimientos de camión grúa 8 ton (S/. 180.00/hm), winche de tendido (S/. 65.00/hm) y 5\% de herramientas manuales.
-    \item \textbf{Materiales y Flete Terrestre:} Cotizaciones de fabricantes de primer nivel nacional (Transformador Delcrosa, Conductor Indeco, Luminarias Josfel, Cemento Yura Tipo IP). Se incluye flete terrestre consolidado para el tramo Juliaca --- Capachica (distancia $85.0\text{ km}$, vía afirmada y asfaltada). El desglose analítico completo de cada partida obra en el documento complementario del expediente \texttt{03\_analisis\_precios\_unitarios.md}.
+    \item \textbf{Mano de Obra (CAPECO Puno):} Costos de hora-hombre calculados bajo el Convenio Colectivo por Rama de Actividad CAPECO -- FTCCP vigente: Operario S/. 32.50/hh, Oficial S/. 27.20/hh, Peón S/. 24.50/hh. Incluye básico, Bonificación Unificada de Construcción (BUC 32\% y 30\%), leyes sociales (83.82\%) y \textbf{Bonificación por Altitud (12.5\% adicional} por labores sobre 3,000 msnm en Capachica a 3,825 msnm).
+    \item \textbf{Equipos y Maquinaria:} Rendimientos de camión grúa 8 ton (S/. 180.00/hm), winche mecánico de tendido (S/. 65.00/hm) y 5\% de herramientas manuales.
+    \item \textbf{Cotizaciones Comerciales de Proveedores Registrados:} Insumos cotizados formalmente con distribuidores oficiales en Juliaca y Lima:
+    \begin{itemize}
+        \item \textit{Transformador 100 kVA (Dyn5, 3,900 msnm):} Delcrosa / Promelsa (\texttt{COT-PROMELSA-2026-10-8842}, S/. 17,800.00).
+        \item \textit{Conductor AAAC 35 mm$^2$:} Indeco Nexans (\texttt{COT-INDECO-AAAC35-202610}, S/. 4.70/m).
+        \item \textit{Postes C.A.C. 12m y 13m:} Concretos del Sur Puno (\texttt{COT-CDS-PUNO-2026-10-091}, Planta Juliaca).
+        \item \textit{Cable Autoportante CAAI:} Indeco Nexans (\texttt{COT-INDECO-CAAI-35-202610}, S/. 14.50/m).
+        \item \textit{Aparamenta Cut-Out 27 kV y Pararrayos ZnO 21 kV:} Hubbell / Chance / Ohio Brass (Promelsa).
+        \item \textit{Luminarias LED 60W IP66:} Josfel / Schréder Teceo (\texttt{COT-JOSFEL-LED60-202610}, S/. 380.00/und).
+        \item \textit{Cemento Portland Tipo IP:} Cemento Yura S.A. (S/. 31.50/bolsa).
+    \end{itemize}
+    \item \textbf{Flete Terrestre Consolidado:} Tramo Juliaca --- Capachica ($85.0\text{ km}$ por vía asfaltada y afirmada, S/. 45.00/tn).
 \end{itemize}
+El desglose analítico completo de cada partida y cuadrilla obra en el documento complementario del expediente \texttt{03\_analisis\_precios\_unitarios.md}.
 
 \section{Cronograma de Ejecución Física}
 El plazo total de ejecución de la obra se estima en \textbf{90 días calendario} (3 meses), desglosados en:
