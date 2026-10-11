@@ -133,6 +133,8 @@ def generar_dxf_perfil(dxf_salida):
         ("TERRENO_NATURAL", colors.GREEN),
         ("CONDUCTOR_MT", colors.RED),
         ("ESTRUCTURAS_CAC", colors.CYAN),
+        ("RETENIDAS_PERFIL", 30), # Naranja
+        ("PUESTAS_TIERRA_PERFIL", 3), # Verde
         ("GUITARRA_RETICULA", colors.WHITE),
         ("TEXTOS_COTAS", colors.YELLOW),
         ("MARCO_ROTULO", colors.BLUE)
@@ -154,7 +156,7 @@ def generar_dxf_perfil(dxf_salida):
     pts_terreno = [transform(e["prog"], e["cota"]) for e in ESTRUCTURAS]
     msp.add_lwpolyline(pts_terreno, dxfattribs={"layer": "TERRENO_NATURAL", "lineweight": 35})
     
-    # 3. Dibujar Postes y Catenarias
+    # 3. Dibujar Postes, Retenidas Físicas y Puestas a Tierra
     pts_cabeza_poste = []
     for e in ESTRUCTURAS:
         cota_util = e["cota"] + (e["h_poste"] - e["empotramiento"])
@@ -168,6 +170,35 @@ def generar_dxf_perfil(dxf_salida):
         msp.add_line((x_top - 2.0, y_top), (x_top + 2.0, y_top), dxfattribs={"layer": "ESTRUCTURAS_CAC", "lineweight": 40})
         # Texto identificador sobre el poste
         msp.add_text(e["id"], dxfattribs={"layer": "TEXTOS_COTAS", "height": 3.0}).set_placement((x_top - 4.0, y_top + 4.0))
+
+        # Dibujar Retenidas físicas en el perfil
+        if "Inclinada" in e["retenida"] or "Biselar" in e["retenida"] or "Contraviento" in e["retenida"]:
+            # Lado de la retenida: hacia atrás en E-01, hacia adelante en E-09, o según ángulo
+            dx_ret = -10.0 if e["id"] in ["E-01", "E-05"] else 10.0
+            x_ancla = e["prog"] + dx_ret
+            # Buscar cota del terreno en el anclaje
+            y_ancla = y_base - 0.5 * exag_v
+            # Cable diagonal de retenida (desde 2/3 de altura del poste)
+            y_tiro = y_base + (y_top - y_base) * 0.75
+            msp.add_line((e["prog"], y_tiro), (x_ancla, y_ancla), dxfattribs={"layer": "RETENIDAS_PERFIL", "color": 30, "lineweight": 25})
+            # Bloque de anclaje de concreto armado
+            msp.add_line((x_ancla - 1.5, y_ancla - 1.0), (x_ancla + 1.5, y_ancla - 1.0), dxfattribs={"layer": "RETENIDAS_PERFIL", "color": 30, "lineweight": 40})
+            msp.add_text(e["retenida"].split()[0], dxfattribs={"layer": "RETENIDAS_PERFIL", "height": 1.6, "color": 30}).set_placement((x_ancla - 2.0, y_ancla - 3.5))
+
+            if "Contraviento" in e["retenida"]: # Retenida doble en E-04
+                x_ancla_2 = e["prog"] - dx_ret
+                msp.add_line((e["prog"], y_tiro), (x_ancla_2, y_ancla), dxfattribs={"layer": "RETENIDAS_PERFIL", "color": 30, "lineweight": 25})
+                msp.add_line((x_ancla_2 - 1.5, y_ancla - 1.0), (x_ancla_2 + 1.5, y_ancla - 1.0), dxfattribs={"layer": "RETENIDAS_PERFIL", "color": 30, "lineweight": 40})
+
+        # Dibujar Puesta a Tierra (PAT) bajo el terreno
+        if e["id"] in ["E-01", "E-04", "E-09"]:
+            y_pat_fin = y_base - 2.4 * exag_v
+            msp.add_line((e["prog"], y_base), (e["prog"], y_pat_fin), dxfattribs={"layer": "PUESTAS_TIERRA_PERFIL", "color": 3, "lineweight": 30})
+            # Símbolo PAT
+            msp.add_line((e["prog"] - 1.5, y_pat_fin), (e["prog"] + 1.5, y_pat_fin), dxfattribs={"layer": "PUESTAS_TIERRA_PERFIL", "color": 3, "lineweight": 30})
+            msp.add_line((e["prog"] - 0.9, y_pat_fin - 1.5), (e["prog"] + 0.9, y_pat_fin - 1.5), dxfattribs={"layer": "PUESTAS_TIERRA_PERFIL", "color": 3, "lineweight": 30})
+            msp.add_line((e["prog"] - 0.3, y_pat_fin - 3.0), (e["prog"] + 0.3, y_pat_fin - 3.0), dxfattribs={"layer": "PUESTAS_TIERRA_PERFIL", "color": 3, "lineweight": 30})
+            msp.add_text("PAT-3", dxfattribs={"layer": "PUESTAS_TIERRA_PERFIL", "height": 1.6, "color": 3}).set_placement((e["prog"] + 1.5, y_pat_fin - 2.0))
 
     # 4. Dibujar Catenarias entre postes (Parábola con flecha calculada)
     for i in range(len(ESTRUCTURAS) - 1):
@@ -204,7 +235,9 @@ def generar_dxf_perfil(dxf_salida):
         ("VANO (m)", 3),
         ("POSTE C.A.C.", 4),
         ("ARMADO DGE", 5),
-        ("DESVIO ANGULAR", 6)
+        ("DESVIO ANGULAR", 6),
+        ("PUESTA A TIERRA (PAT)", 7),
+        ("RETENIDAS DE ANCLAJE", 8)
     ]
     
     x_min = 0.0
@@ -243,6 +276,14 @@ def generar_dxf_perfil(dxf_salida):
         msp.add_text(e["poste"].split()[1], dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 73.0))
         msp.add_text(e["armado"].split()[0], dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 88.0))
         msp.add_text(f"{e['angulo']:.1f}°", dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 103.0))
+        
+        # Banda PAT
+        pat_txt = "PAT-3" if e["id"] in ["E-01", "E-04", "E-09"] else "---"
+        msp.add_text(pat_txt, dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 118.0))
+        
+        # Banda Retenidas
+        ret_txt = e["retenida"].split()[0] if e["retenida"] != "Ninguna" else "---"
+        msp.add_text(ret_txt, dxfattribs={"layer": "TEXTOS_COTAS", "height": 2.5, "rotation": 90}).set_placement((prog - 1.5, y_banda_base - 133.0))
 
     # Guardar DXF
     os.makedirs(os.path.dirname(dxf_salida), exist_ok=True)
