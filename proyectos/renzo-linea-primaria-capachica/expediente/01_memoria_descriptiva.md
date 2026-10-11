@@ -1,14 +1,14 @@
 # CAPÍTULO I: MEMORIA DESCRIPTIVA
 
 **PROYECTO:**  
-*INSTALACIÓN DEL SISTEMA DE ELECTRIFICACIÓN RURAL MEDIANTE LÍNEA PRIMARIA EN MEDIA TENSIÓN 22.9 kV Y SUBESTACIÓN DE DISTRIBUCIÓN 25 kVA PARA EL SECTOR CHIFRÓN, DISTRITO DE CAPACHICA — PUNO*
+*INSTALACIÓN DEL SISTEMA DE ELECTRIFICACIÓN RURAL MEDIANTE LÍNEA PRIMARIA EN MEDIA TENSIÓN 22.9 kV Y SUBESTACIÓN DE DISTRIBUCIÓN 100 kVA PARA EL SECTOR CHIFRÓN, DISTRITO DE CAPACHICA — PUNO*
 
 ---
 
 ## 1. GENERALIDADES
 
 ### 1.1 Introducción
-El presente proyecto corresponde al diseño definitivo a nivel de ingeniería de detalle de la **Línea Primaria en Media Tensión (22.9 kV, 3Ø)** y la **Subestación de Distribución Proyectada (SED Biposte, 25 kVA)**, destinada a suministrar energía eléctrica continua y confiable a las viviendas e infraestructura comunal del sector **Chifrón**, ubicado en la península de Capachica, Provincia y Departamento de Puno.
+El presente proyecto corresponde al diseño definitivo a nivel de ingeniería de detalle de la **Línea Primaria en Media Tensión (22.9 kV, 3Ø)** y la **Subestación de Distribución Proyectada (SED Biposte, 100 kVA)**, destinada a suministrar energía eléctrica continua y confiable a las viviendas e infraestructura comunal del sector **Chifrón**, ubicado en la península de Capachica, Provincia y Departamento de Puno.
 
 El desarrollo de este estudio técnico forma parte del curso de especialidad **MEC330 — Instalaciones Eléctricas II**, dictado en la Escuela Profesional de Ingeniería Mecánica Eléctrica de la Facultad de Ingeniería Mecánica Eléctrica, Electrónica y Sistemas (FIME) de la Universidad Nacional del Altiplano (UNA Puno), bajo la cátedra de los ingenieros **Leonidas Vilca Callata** y **Marcos José Villanueva Cornejo**.
 
@@ -156,7 +156,7 @@ La factibilidad de suministro eléctrico se sustenta en la red primaria de media
 
 ### 6.4 Aislamiento y Ferretería
 * **Aisladores de Suspensión:** Tipo polimérico de goma de silicona, tensión nominal $25\text{ kV}$, longitud de línea de fuga mínima $720\text{ mm}$ (adaptada a altitud $>3,800\text{ msnm}$ según IEC 60071-1).
-* **Aisladores de Espiga (Pin):** Tipo pin de porcelana ANSI 56-3 con espiga de acero galvanizado en caliente de $13/8" \times 10"$.
+* **Aisladores de Espiga (Pin):** Tipo pin de porcelana ANSI 56-3 con espiga de acero galvanizado en caliente de $1\ 3/8'' \times 10''$.
 * **Crucetas:** Crucetas de madera tratada o perfil de fierro galvanizado en caliente (F°G°) de $2.00\text{ m} \times 75\text{ mm} \times 75\text{ mm} \times 6.4\text{ mm}$.
 * **Ferretería General:** Todo el material ferroso es galvanizado en caliente bajo norma ASTM A-153.
 
@@ -169,7 +169,7 @@ De conformidad con las láminas oficiales del archivo de ferretería [`laminas_d
 
 ### 6.6 Sistema de Puesta a Tierra (PAT)
 * **Tipo:** Armado normalizado **PAT-3**.
-* **Configuración:** Electrodo vertical de cobre electrolítico de $\phi 5/8" \times 2.40\text{ m}$, conductor de bajada de cobre desnudo de $35\text{ mm}^2$, conectado mediante soldadura exotérmica (cadweld).
+* **Configuración:** Electrodo vertical de cobre electrolítico de $5/8'' \times 2.40\text{ m}$, conductor de bajada de cobre desnudo de $35\text{ mm}^2$, conectado mediante soldadura exotérmica (cadweld).
 * **Tratamiento del Terreno:** Relleno de zanja con tierra cernida mezclada con bentonita sódica / sales electrolíticas para garantizar una resistencia de puesta a tierra:
   * En neutro de transformador: $R_{\text{pat}} \le 10\ \Omega$
   * En estructuras de derivación y pararrayos: $R_{\text{pat}} \le 15\ \Omega$
