@@ -47,17 +47,17 @@ def latlon_to_utm(lat, lon):
     northing = k0 * (M + N*math.tan(lat_rad)*(A**2/2 + (5 - T + 9*C + 4*C**2)*A**4/24 + (61 - 58*T + T**2 + 600*C - 330*e_prime2)*A**6/720)) + 10000000.0
     return easting, northing
 
-# Postes de Media Tensión (E-01 a E-09)
+# Subestación de Distribución Proyectada (SED Biposte 100 kVA)
+# Ubicación fijada por usuario: Lat: -15.640067, Lon: -69.815400 (Origen de Circuitos BT 1, 2, 3)
 POSTES_MT = [
-    {"id": "E-01", "este": 412606.01, "norte": 8270712.24, "tipo": "C.A.C. 12/400", "armado": "PR-1", "pat": "PAT-3", "ret": "RET-I", "ret_az": 210.0, "desc": "Derivación con Cut-Out y Pararrayos ZnO"},
-    {"id": "E-02", "este": 412658.20, "norte": 8270802.10, "tipo": "C.A.C. 12/300", "armado": "PS-1", "pat": None, "ret": None, "ret_az": None, "desc": "Suspensión alineamiento"},
-    {"id": "E-03", "este": 412710.40, "norte": 8270891.90, "tipo": "C.A.C. 12/300", "armado": "PS-1", "pat": None, "ret": None, "ret_az": None, "desc": "Suspensión alineamiento"},
-    {"id": "E-04", "este": 412759.20, "norte": 8270976.22, "tipo": "2xC.A.C. 13/400", "armado": "SAB-1", "pat": "PAT-3", "ret": "RET-CV", "ret_az": 120.0, "desc": "SED Biposte 100 kVA (22.9/0.38-0.22 kV)"},
-    {"id": "E-05", "este": 412750.60, "norte": 8271073.06, "tipo": "C.A.C. 12/400", "armado": "PA-1", "pat": None, "ret": "RET-B", "ret_az": 30.0, "desc": "Ángulo (-36.06°) con retenida biselar"},
-    {"id": "E-06", "este": 412688.54, "norte": 8271218.86, "tipo": "C.A.C. 12/400", "armado": "PA-1", "pat": None, "ret": "RET-B", "ret_az": 320.0, "desc": "Ángulo (+31.35°) con retenida biselar"},
-    {"id": "E-07", "este": 412656.92, "norte": 8271306.91, "tipo": "C.A.C. 12/300", "armado": "PS-1", "pat": None, "ret": None, "ret_az": None, "desc": "Suspensión alineamiento"},
-    {"id": "E-08", "este": 412660.46, "norte": 8271391.24, "tipo": "C.A.C. 12/300", "armado": "PA-1", "pat": None, "ret": "RET-B", "ret_az": 290.0, "desc": "Ángulo leve (+32.95°) con retenida"},
-    {"id": "E-09", "este": 412659.90, "norte": 8271446.51, "tipo": "C.A.C. 12/400", "armado": "PR-1", "pat": "PAT-3", "ret": "RET-I", "ret_az": 0.0, "desc": "Retención terminal con retenida"},
+    {"id": "SED-01", "este": 412606.01, "norte": 8270712.24, "tipo": "2xC.A.C. 13/400 (Biposte)", "armado": "SAB-1", "pat": "PAT-3", "ret": "RET-CV", "ret_az": 210.0, "desc": "Subestación Biposte 100 kVA (22.9/0.38-0.22 kV)"},
+]
+
+# Línea Primaria MT 22.9 kV de alimentación desde red Electro Puno hasta la SED
+TRAZA_MT = [
+    (412380.00, 8270740.00), # Punto de derivación red Electro Puno en carretera
+    (412490.00, 8270725.00), # Poste intermedio MT
+    (412606.01, 8270712.24)  # Llegada a SED-01
 ]
 
 def cargar_rutas_kml(kml_path):
@@ -106,11 +106,16 @@ def generar_postes_bt(rutas):
     postes_bt = []
     p_idx = 1
     
-    for r_name in ['ruta electrica 2', 'ruta electrica 3', 'ruta electrica 4']:
+    for r_name in ['ruta electrica 1', 'ruta electrica 3', 'ruta electrica 4', 'ruta electrica 2']:
         if r_name not in rutas:
             continue
         pts = rutas[r_name]
-        circuito = "C-1" if "2" in r_name else ("C-2" if "3" in r_name else "C-3")
+        if '1' in r_name:
+            circuito = "C-1"
+        elif '3' in r_name:
+            circuito = "C-2"
+        else:
+            circuito = "C-3"
         
         # Subdividir tramos largos en vanos <= 38 m
         for i in range(len(pts) - 1):
@@ -124,8 +129,8 @@ def generar_postes_bt(rutas):
                 xe = p1[0] + ts * (p2[0] - p1[0])
                 yn = p1[1] + ts * (p2[1] - p1[1])
                 
-                # Evitar duplicar exactamente la SED E-04
-                if math.hypot(xe - 412759.20, yn - 8270976.22) < 5.0 and len(postes_bt) > 0:
+                # Evitar duplicar exactamente la SED-01
+                if math.hypot(xe - 412606.01, yn - 8270712.24) < 5.0 and len(postes_bt) > 0:
                     continue
                     
                 pid = f"P-BT-{p_idx:02d}"
@@ -227,29 +232,30 @@ def generar_plano_completo_planta(dxf_out):
             msp.add_lwpolyline(pts, dxfattribs={"layer": "VIAS_ACCESO", "color": 8, "lineweight": 13})
 
     # 3. Dibujar Línea Primaria MT (22.9 kV)
-    pts_mt = [(p["este"], p["norte"]) for p in POSTES_MT]
-    msp.add_lwpolyline(pts_mt, dxfattribs={"layer": "RED_PRIMARIA_MT", "color": colors.CYAN, "lineweight": 50})
+    msp.add_lwpolyline(TRAZA_MT, dxfattribs={"layer": "RED_PRIMARIA_MT", "color": colors.CYAN, "lineweight": 50})
     
-    # Dibujar Postes de MT
+    # Dibujar Subestación de Distribución Biposte SED-01 (100 kVA)
     for p in POSTES_MT:
         xe, yn = p["este"], p["norte"]
-        # Círculo del poste
-        msp.add_circle((xe, yn), radius=1.6, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
-        msp.add_circle((xe, yn), radius=0.6, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW})
-        # Rótulo del poste MT
-        msp.add_text(f"{p['id']} ({p['armado']})", dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 2.2, "color": colors.YELLOW}).set_placement((xe + 2.5, yn + 1.5))
-        msp.add_text(p['tipo'], dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.4, "color": colors.WHITE}).set_placement((xe + 2.5, yn - 1.0))
+        # Estructura biposte: dos círculos
+        msp.add_circle((xe - 1.2, yn), radius=1.2, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
+        msp.add_circle((xe + 1.2, yn), radius=1.2, dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
+        msp.add_line((xe - 1.2, yn), (xe + 1.2, yn), dxfattribs={"layer": "POSTES_MT", "color": colors.YELLOW, "lineweight": 35})
         
-        # Puesta a tierra si aplica
+        # Rótulo de la SED
+        msp.add_text(f"{p['id']} - SED BIPOSTE 100 kVA (22.9/0.38-0.22 kV)", dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 2.4, "color": colors.YELLOW}).set_placement((xe + 3.0, yn + 2.0))
+        msp.add_text("Lat: -15.640067, Lon: -69.815400 (Origen C-1, C-2, C-3)", dxfattribs={"layer": "TEXTOS_ROTULOS", "height": 1.6, "color": colors.WHITE}).set_placement((xe + 3.0, yn - 0.5))
+        
+        # Puesta a tierra normada PAT-3
         if p["pat"]:
-            dibujar_simbolo_pat(msp, xe - 3.0, yn - 1.5)
+            dibujar_simbolo_pat(msp, xe - 3.5, yn - 2.0)
             
-        # Retenida si aplica
+        # Retenida contraviento
         if p["ret"] and p["ret_az"] is not None:
             dibujar_simbolo_retenida(msp, xe, yn, p["ret_az"], p["ret"])
 
     # 4. Dibujar Red Secundaria BT (380/220 V)
-    for r_name in ['ruta electrica 2', 'ruta electrica 3', 'ruta electrica 4']:
+    for r_name in ['ruta electrica 1', 'ruta electrica 2', 'ruta electrica 3', 'ruta electrica 4']:
         if r_name in rutas and len(rutas[r_name]) > 1:
             msp.add_lwpolyline(rutas[r_name], dxfattribs={"layer": "RED_SECUNDARIA_BT", "color": colors.MAGENTA, "lineweight": 35})
 
@@ -265,7 +271,7 @@ def generar_plano_completo_planta(dxf_out):
             dibujar_simbolo_retenida(msp, xe, yn, 180.0, "RET-BT")
 
     # 5. Dibujar Acometidas Domiciliarias a los 43 Abonados (C1 a C43)
-    todos_los_postes = [(p["este"], p["norte"], p["id"]) for p in postes_bt] + [(p["este"], p["norte"], p["id"]) for p in POSTES_MT if p["id"] in ["E-04", "E-05", "E-06", "E-07", "E-08", "E-09"]]
+    todos_los_postes = [(p["este"], p["norte"], p["id"]) for p in postes_bt] + [(p["este"], p["norte"], p["id"]) for p in POSTES_MT]
     
     total_long_acometidas = 0.0
     for ab in abonados:

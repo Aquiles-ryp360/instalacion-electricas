@@ -143,13 +143,19 @@ Este expediente técnico se desarrolla bajo la cátedra de la asignatura de espe
 
 \section{Objetivos del Proyecto}
 \begin{itemize}
-    \item \textbf{Objetivo General:} Dotar de infraestructura eléctrica de media y baja tensión al sector Chifrón, beneficiando directamente a \textbf{43 familias censadas} e impulsando el desarrollo social, ecoturístico y productivo de la península de Capachica.
+    \item \textbf{Objetivo General:} Dotar de infraestructura eléctrica integral de media tensión, subestación y redes secundarias al sector Chifrón, beneficiando directamente a \textbf{43 familias censadas} e impulsando el desarrollo social, ecoturístico y productivo de la península de Capachica.
     \item \textbf{Objetivos Específicos:}
     \begin{itemize}
-        \item Diseñar la traza electromecánica de la línea primaria en 22.9 kV con una longitud total de $816.60\text{ metros}$ sobre conductor de aleación de aluminio AAAC de $35\text{ mm}^2$.
-        \item Ubicar y dimensionar la Subestación de Distribución Biposte ($E-04$) con una capacidad nominal estandarizada de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$).
-        \item Trazar las redes secundarias de baja tensión y las $\mathbf{43\text{ acometidas domiciliarias}}$ monofásicas con cajas de medición de energía.
-        \item Cumplir rigurosamente las exigencias del \textit{Código Nacional de Electricidad (CNE Suministro 2011)} y las \textit{Normas DGE de Electrificación Rural} vigentes en el Perú.
+        \item Ubicar y dimensionar la \textbf{Subestación de Distribución Biposte (SED-01)} en las coordenadas geográficas exactas de diseño: $\mathbf{\text{Lat: } -15.640067^\circ\text{ S}}$, $\mathbf{\text{Lon: } -69.815400^\circ\text{ W}}$, con una capacidad nominal estandarizada de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$, armado DGE SAB-1).
+        \item Suministrar energía en Media Tensión ($22.9\text{ kV}$) a la SED mediante derivación desde la red troncal de Electro Puno S.A.A.
+        \item Diseñar las redes secundarias de distribución en Baja Tensión ($380/220\text{ V}$) que parten desde el transformador centralizado y se ramifican por las tres rutas principales:
+        \begin{itemize}
+            \item \textbf{Circuito C-1 (Ruta Eléctrica 1):} Troncal Norte ($819.7\text{ m}$) alimentando a 21 viviendas iniciales (38 futuras) a lo largo del camino principal hacia el borde norte de la playa.
+            \item \textbf{Circuito C-2 (Ruta Eléctrica 3):} Ramal Centro ($184.4\text{ m}$) alimentando a 11 viviendas iniciales (20 futuras).
+            \item \textbf{Circuito C-3 (Rutas Eléctricas 4 y 2):} Ramal Sur ($284.8\text{ m}$) alimentando a 11 viviendas iniciales (20 futuras).
+        \end{itemize}
+        \item Instalar las $\mathbf{43\text{ acometidas domiciliarias}}$ monofásicas con cajas portamedidor normalizadas y $15\text{ luminarias}$ de alumbrado público.
+        \item Cumplir rigurosamente las exigencias del \textit{Código Nacional de Electricidad (CNE Suministro 2011)} y las \textit{Normas DGE de Electrificación Rural}.
     \end{itemize}
 \end{itemize}
 
@@ -164,17 +170,17 @@ El área de influencia directa del proyecto se emplaza en la ribera oriental de 
 
 \begin{table}[H]
 \centering
-\caption{Coordenadas UTM de los vértices representativos del trazo}
+\caption{Vértices Representativos de la Infraestructura Proyectada}
 \label{tab:coordenadas_trazo}
 \small
 \begin{tabular}{lcccc l}
 \toprule
-\textbf{Estructura} & \textbf{Este (m)} & \textbf{Norte (m)} & \textbf{Cota (msnm)} & \textbf{Progresiva} & \textbf{Función en el Sistema} \\
+\textbf{Elemento} & \textbf{Este (m)} & \textbf{Norte (m)} & \textbf{Cota (msnm)} & \textbf{Coord. Geográficas} & \textbf{Función en el Sistema} \\
 \midrule
-$E-01$ (Derivación) & $412,606.01$ & $8,270,712.24$ & $3,924.17$ & $0+000.00$ & Punto de conexión en red Electro Puno \\
-$E-04$ (SED Biposte) & $412,759.20$ & $8,270,976.22$ & $3,839.56$ & $0+305.21$ & Transformador 100 kVA 22.9/0.38-0.22 kV \\
-$E-05$ (Ángulo) & $412,750.60$ & $8,271,073.06$ & $3,817.04$ & $0+402.43$ & Desvío angular ($-36.06^\circ$) con retenida \\
-$E-09$ (Terminal) & $412,659.90$ & $8,271,446.51$ & $3,824.61$ & $0+816.60$ & Fin de traza con anclaje terminal \\
+\textbf{SED Biposte 100 kVA} & $\mathbf{412,606.01}$ & $\mathbf{8,270,712.24}$ & $3,924.17$ & $-15.640067^\circ, -69.815400^\circ$ & Transformador SAB-1 y Origen de BT \\
+Fin Ruta 1 (Troncal Norte) & $412,659.90$ & $8,271,446.51$ & $3,824.61$ & $-15.633412^\circ, -69.814834^\circ$ & Extremo terminal norte de baja tensión \\
+Fin Ruta 3 (Ramal Centro) & $412,827.22$ & $8,270,784.20$ & $3,830.00$ & $-15.639405^\circ, -69.813297^\circ$ & Extremo ramal centro de baja tensión \\
+Fin Ruta 4 (Ramal Sur) & $412,959.90$ & $8,270,761.05$ & $3,820.00$ & $-15.639619^\circ, -69.812060^\circ$ & Extremo ramal sur playa baja tensión \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -189,7 +195,7 @@ $E-09$ (Terminal) & $412,659.90$ & $8,271,446.51$ & $3,824.61$ & $0+816.60$ & Fi
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{fig_traza_satelital_chifron.png}
-    \caption{Ortomosaico Satelital de Alta Resolución con el Trazado de la Línea Primaria 22.9 kV, SED 100 kVA y las 43 Viviendas Censadas en Chifrón.}
+    \caption{Ortomosaico Satelital Real con la Ubicación de la SED 100 kVA (Lat: -15.640067, Lon: -69.815400), Redes de Distribución de BT (Rutas 1, 2, 3) y las 43 Viviendas Censadas en Chifrón.}
     \label{fig:mapa_chifron}
 \end{figure}
 
@@ -201,7 +207,7 @@ Conforme a la zonificación del Código Nacional de Electricidad (Suministro 201
     \item \textbf{Temperatura Media Anual (EDS):} $+15.0^\circ\text{C}$
     \item \textbf{Velocidad de Viento de Diseño:} $75.0\text{ km/h}$ ($20.83\text{ m/s}$) sobre superficies cilíndricas.
     \item \textbf{Manguito de Hielo:} $6.0\text{ mm}$ a $-5.0^\circ\text{C}$.
-    \item \textbf{Nivel Isoceráunico:} $40$ a $50\text{ días tormenta/año}$ (justifica pararrayos ZnO 21 kV).
+    \item \textbf{Nivel Isoceráunico:} $40$ a $50\text{ días tormenta/año}$ (justifica pararrayos ZnO 21 kV en SED).
 \end{itemize}
 
 \section{Punto de Diseño y Alimentación Eléctrica}
@@ -209,7 +215,7 @@ La factibilidad de suministro se sustenta en la red primaria existente administr
 \begin{itemize}
     \item \textbf{Alimentador Troncal:} Chifrón --- Código de tramo \texttt{TMT000012389} / \texttt{TMT001847370}.
     \item \textbf{Tensión del Sistema:} $22.9\text{ kV}$ (Trifásico, 3 hilos, $60\text{ Hz}$).
-    \item \textbf{Estructura de Derivación ($E-01$):} Poste C.A.C. $12\text{ m} / 400\text{ daN}$, armado PR-1, con seccionamiento mediante tres (03) cortacircuitos fusibles tipo expulsión (cut-out) de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$ y tres (03) pararrayos de óxido de zinc de $21\text{ kV}, 10\text{ kA}$.
+    \item \textbf{Subestación Proyectada (SED-01):} Estructura Biposte C.A.C. $13\text{ m} / 400\text{ daN}$ (Armado SAB-1) ubicada en $\mathbf{\text{Lat: } -15.640067^\circ}$, $\mathbf{\text{Lon: } -69.815400^\circ}$, equipada con tres (03) cortacircuitos fusibles cut-out de $27\text{ kV}, 100\text{ A}, 150\text{ kV BIL}$, tres (03) pararrayos de óxido de zinc de $21\text{ kV}, 10\text{ kA}$, y transformador trifásico de $\mathbf{100\text{ kVA}}$ ($22.9 / 0.38 - 0.22\text{ kV}$).
 \end{itemize}
 
 % =========================================================================
