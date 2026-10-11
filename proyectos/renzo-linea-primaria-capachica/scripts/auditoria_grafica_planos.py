@@ -35,4 +35,5 @@ def auditar_pdf(pdf_path):
         print(f"  Colision: '{s[0]}' con '{s[1]}' en pos ({s[2][0]:.1f}, {s[2][1]:.1f})")
 
 auditar_pdf("proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_P01_redes_planta.pdf")
+auditar_pdf("proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_PL01_perfil_longitudinal.pdf")
 auditar_pdf("proyectos/renzo-linea-primaria-capachica/entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf")
