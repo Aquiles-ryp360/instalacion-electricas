@@ -57,7 +57,7 @@ ESTRUCTURAS = [
         "poste": "C.A.C. 13/400 (Biposte)",
         "h_poste": 13.0,
         "empotramiento": 1.5,
-        "armado": "SAB-1 / Trafo 25 kVA",
+        "armado": "SAB-1 / Trafo 100 kVA",
         "funcion": "SUBESTACION DE DISTRIBUCION (SED)",
         "angulo": -35.20,
         "retenida": "Contraviento doble"

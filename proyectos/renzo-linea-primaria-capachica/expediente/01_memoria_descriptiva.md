@@ -75,34 +75,53 @@ La factibilidad de suministro eléctrico se sustenta en la red primaria de media
 
 ---
 
-## 5. ESTUDIO DE MERCADO Y MÁXIMA DEMANDA
+## 5. ESTUDIO DE MERCADO, PROYECCIÓN Y CUADRO DE CARGAS
 
-### 5.1 Censo de Abonados
-El censo georreferenciado ejecutado en Google Earth Pro identificó:
-* **Abonados Domésticos:** 43 viviendas ($C1$ a $C43$).
-* **Usos Comunales / Institucionales:** 01 Local Comunal / Capilla / Campo deportivo.
-* **Alumbrado Público:** Sistema de luminarias LED alimentadas desde la red secundaria.
+### 5.1 Parámetros de Partida (Metodología Oficial MEC330)
+* **Usuarios Iniciales ($NU_0$):** $43\text{ viviendas}$ (Censo georreferenciado $C1$ a $C43$).
+* **Tasa de Crecimiento Anual ($TC$):** $3.0\%\ (0.03)$
+* **Periodo de Proyección ($n$):** $20\text{ años}$ ($2026 - 2046$)
+* **Factor de Proyección:**
+  $$(1 + TC)^n = (1 + 0.03)^{20} = 1.80611$$
+* **Calificación Eléctrica Asignada:** $0.90\text{ kW / usuario}$
+* **Tensión de Servicio BT:** $V = 220\text{ V}$
+* **Factor de Potencia del Sistema:** $\cos\phi = 0.90$
+* **Alumbrado Público (Lámparas de 60 W):** $P_{\text{lámpara}} = 0.06\text{ kW}$
 
-### 5.2 Parámetros de Cálculo de Demanda (Norma DGE ER)
-* Dotación de Demanda Unitaria por Lote: $400\text{ W / lote}$
-* Factor de Simultaneidad ($F_s$ para 43 abonados): $0.58$
-* Demanda Coincidente Doméstica:
-  $$MD_{\text{dom}} = 43 \times 400\text{ W} \times 0.58 = 9,976\text{ W} \approx 9.98\text{ kW}$$
-* Demanda de Alumbrado Público ($AP \approx 20\%$ de la demanda doméstica):
-  $$MD_{AP} = 0.20 \times 9.98\text{ kW} = 2.00\text{ kW}$$
-* Usos Especiales / Bombeo menor / Comunal: $2.50\text{ kW}$
-* **Máxima Demanda en Año 0:**
-  $$MD_0 = 9.98 + 2.00 + 2.50 = 14.48\text{ kW}$$
+### 5.2 Formulación Matemática Aplicada
+1. **Proyección de Usuarios al Año 20:**
+   $$NU_f = NU_0 \cdot (1 + TC)^n \quad \text{(redondeado al entero)}$$
+2. **Potencia del Servicio Particular:**
+   $$Potencia_{\text{part}} = NU_f \cdot 0.90\text{ kW}$$
+3. **Número de Luminarias de Alumbrado Público:**
+   $$N^\circ lum = \frac{3.3 \cdot NU_f}{18} \quad \text{(redondeado al entero)}$$
+4. **Potencia de Alumbrado Público:**
+   $$Potencia_{\text{alum}} = N^\circ lum \cdot 0.06\text{ kW}$$
+5. **Demanda Máxima Total Activa:**
+   $$Total_{\text{kW}} = Potencia_{\text{part}} + Potencia_{\text{alum}}$$
+6. **Corriente Nominal de Servicio:**
+   $$I = \frac{Total_{\text{kW}} \cdot 1000}{V \cdot \cos\phi} = \frac{Total_{\text{kW}} \cdot 1000}{220 \cdot 0.90} = \frac{Total_{\text{kW}} \cdot 1000}{198}$$
+7. **Potencia Aparente y Selección de Transformador:**
+   $$Potencia_{\text{kVA}} = \frac{Total_{\text{kW}}}{\cos\phi} = \frac{Total_{\text{kW}}}{0.90}$$
 
-### 5.3 Proyección a 20 Años
-Considerando una tasa de crecimiento anual $r = 2.0\%$ (tasa censal INEI Puno rural):
-$$MD_{20} = MD_0 \times (1 + r)^{20} = 14.48 \times (1.02)^{20} = 21.52\text{ kW}$$
+### 5.3 Cuadro Oficial de Cargas y Máxima Demanda por Circuitos
 
-Asumiendo un factor de potencia $\cos\phi = 0.90$:
-$$S_{\text{proyectada}} = \frac{21.52\text{ kW}}{0.90} = 23.91\text{ kVA}$$
+| Circuito | Sector / Zona de Red | $NU_0$ (2026) | $NU_f$ (2046) | Servicio Part. (kW) | $N^\circ$ Lum | Pot. AP (kW) | Total (kW) | Corriente $I$ (A) |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **C-1** | Sector Sur / Pasaje | 21 | 38 | $34.20$ | 7 | $0.42$ | $34.62$ | $174.85$ |
+| **C-2** | Sector Centro / Eje | 11 | 20 | $18.00$ | 4 | $0.24$ | $18.24$ | $92.12$ |
+| **C-3** | Sector Norte / Camino | 11 | 20 | $18.00$ | 4 | $0.24$ | $18.24$ | $92.12$ |
+| **TOTAL** | **Red Completa Chifrón** | **43** | **78** | **$70.20$** | **15** | **$0.90$** | **$71.10$** | **$359.09$** |
 
-**Selección del Transformador de Distribución:**  
-Se selecciona un transformador trifásico normalizado de **$25\text{ kVA}$**, con relación de transformación **$22.9 / 0.38 - 0.22\text{ kV}$**, el cual operará al $58\%$ de su capacidad en el año inicial y al $96\%$ al final del horizonte de diseño (20 años), cumpliendo holgadamente los criterios técnico-económicos de la DGE.
+### 5.4 Potencia Aparente y Selección Definitiva del Transformador
+* **Demanda Máxima Total Activa:** $Total_{\text{kW}} = 71.10\text{ kW}$
+* **Potencia Aparente Requerida:**
+  $$Potencia_{\text{kVA}} = \frac{71.10\text{ kW}}{0.90} = \mathbf{79.00\text{ kVA}}$$
+* **Selección del Transformador Comercial:**
+  En el catálogo de transformadores de distribución trifásicos estandarizados en el Perú ($25, 37.5, 50, 75, 100, 160\text{ kVA}$), la potencia comercial normalizada inmediata superior es:
+  $$\mathbf{S_{\text{nom}} = 100\text{ kVA}}$$
+  * **Relación de Transformación:** $22.9 / 0.38 - 0.22\text{ kV}$ (Trifásico, $60\text{ Hz}$).
+  * **Factor de Carga al Año 20:** $\frac{79.00}{100} = 79.0\%$, asegurando un $21\%$ de margen de reserva técnica para sobrecargas y ampliaciones futuras.
 
 ---
 
@@ -164,7 +183,7 @@ De conformidad con las láminas oficiales del archivo de ferretería [`laminas_d
 | **1** | **E-01** | $0+000.00$ | $3,924.17$ | $12\text{ m} / 400\text{ daN}$ | **PR-1** | Derivación con cut-out y pararrayos en red Electro Puno |
 | **2** | **E-02** | $0+105.00$ | $3,895.00$ | $12\text{ m} / 300\text{ daN}$ | **PS-1** | Suspensión en bajada de ladera |
 | **3** | **E-03** | $0+210.00$ | $3,865.00$ | $12\text{ m} / 300\text{ daN}$ | **PS-1** | Suspensión |
-| **4** | **E-04** | $0+305.21$ | $3,839.56$ | $13\text{ m} / 400\text{ daN}$ (x2) | **SAB-1** | **Subestación Biposte (Trafo 25 kVA 22.9/0.38-0.22 kV)** |
+| **4** | **E-04** | $0+305.21$ | $3,839.56$ | $13\text{ m} / 400\text{ daN}$ (x2) | **SAB-1** | **Subestación Biposte (Trafo 100 kVA 22.9/0.38-0.22 kV)** |
 | **5** | **E-05** | $0+402.43$ | $3,817.04$ | $12\text{ m} / 400\text{ daN}$ | **PA-1** | Vértice de ángulo ($-36.06^\circ$) con retenida biselar |
 | **6** | **E-06** | $0+518.02$ | $3,827.27$ | $12\text{ m} / 400\text{ daN}$ | **PA-1** | Vértice de ángulo ($+31.35^\circ$) con retenida biselar |
 | **7** | **E-07** | $0+628.53$ | $3,824.61$ | $12\text{ m} / 300\text{ daN}$ | **PS-1** | Suspensión / Alineamiento |

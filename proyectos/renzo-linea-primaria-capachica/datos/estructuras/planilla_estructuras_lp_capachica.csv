@@ -2,7 +2,7 @@ item,id_estructura,progresiva_m,cota_terreno_msnm,cota_soporte_msnm,poste_cac,al
 1,E-01,0.00,3924.17,3934.77,C.A.C. 12/400,12.0,400,PR-1,Derivacion MT,0.00,0.0,105.0,52.5,52.5,Inclinada simple,Punto de diseno en estructura existente Electro Puno
 2,E-02,105.00,3895.00,3905.60,C.A.C. 12/300,12.0,300,PS-1,Suspension,0.00,105.0,105.0,105.0,105.0,Ninguna,Poste de paso en bajada pronunciada
 3,E-03,210.00,3865.00,3875.60,C.A.C. 12/300,12.0,300,PS-1,Suspension,0.00,105.0,95.2,100.1,100.1,Ninguna,Poste de paso
-4,E-04,305.21,3839.56,3851.06,C.A.C. 13/400 Biposte,13.0,400,SAB-1,Subestacion SED,-35.20,95.2,97.2,96.2,96.2,Contraviento doble,Subestacion Aerea Biposte con Trafo 25 kVA 22.9/0.38-0.22 kV
+4,E-04,305.21,3839.56,3851.06,C.A.C. 13/400 Biposte,13.0,400,SAB-1,Subestacion SED,-35.20,95.2,97.2,96.2,96.2,Contraviento doble,Subestacion Aerea Biposte con Trafo 100 kVA 22.9/0.38-0.22 kV
 5,E-05,402.43,3817.04,3827.64,C.A.C. 12/400,12.0,400,PA-1,Angulo,-36.06,97.2,115.6,106.4,106.4,Biselar simple,Vertice de angulo hacia camino secundario
 6,E-06,518.02,3827.27,3837.87,C.A.C. 12/400,12.0,400,PA-1,Angulo,31.35,115.6,110.5,113.1,113.1,Biselar simple,Vertice de angulo
 7,E-07,628.53,3824.61,3835.21,C.A.C. 12/300,12.0,300,PS-1,Suspension,-6.05,110.5,79.8,95.2,95.2,Ninguna,Poste de alineamiento

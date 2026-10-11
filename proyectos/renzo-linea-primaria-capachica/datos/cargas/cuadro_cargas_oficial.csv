@@ -1,0 +1,5 @@
+Circuito,Sector,NU_2026,NU_2046,Potencia_Particular_kW,N_Luminarias_AP,Potencia_Alumbrado_kW,Total_kW,Corriente_A
+C-1,Sector Sur / Pasaje,21,38,34.20,7,0.42,34.62,174.85
+C-2,Sector Centro / Eje,11,20,18.00,4,0.24,18.24,92.12
+C-3,Sector Norte / Camino,11,20,18.00,4,0.24,18.24,92.12
+TOTALES,General,43,78,70.20,15,0.90,71.10,359.09
