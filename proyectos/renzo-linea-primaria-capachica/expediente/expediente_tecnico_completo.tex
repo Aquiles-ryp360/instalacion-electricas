@@ -383,7 +383,7 @@ Para la potencia nominal de la SED ($S = 100\text{ kVA}$ a $22.9\text{ kV}$):
     \Delta V = \sqrt{3} \cdot I_{\text{MT}} \cdot L \cdot (R \cos\phi + X \sin\phi) = \sqrt{3} \cdot 2.52 \cdot 0.817 \cdot (0.986 \cdot 0.9 + 0.385 \cdot 0.436) = 3.76\text{ V}
 \end{equation}
 \begin{equation}
-    \Delta V\% = \frac{\Delta V}{V_{\text{nom}}} \cdot 100 = \frac{3.76}{22,900} \cdot 100 = \mathbf{0.016\%} \le 5.0\% \quad \textbf{(AMPLIAMENTE SATISFACTORIO)}
+    \Delta V\% = \frac{\Delta V}{V_{\text{nom}}} \cdot 100 = \frac{3.76}{22,900} \cdot 100 = \mathbf{0.016\%} \le 5.0\% \quad \text{(Conforme CNE)}
 \end{equation}
 
 \subsection{Cálculo de Cortocircuito y Coordinación de Protecciones MT / BT}
@@ -425,30 +425,35 @@ V. EDS / Templado & $+15.0$ & $0.0$ & $0.0$ & $\mathbf{187.20}$ & $\mathbf{18.0\
 \end{tabularx}
 \end{table}
 
+\clearpage
 \subsection{Verificación de Distancia de Seguridad al Terreno}
-Con postes de $12\text{ m}$ (empotramiento normalizado $t = 0.10 \times 12 + 0.20 = 1.40\text{ m}$):
+Con postes normalizados de concreto armado de $12.0\text{ m}$ (profundidad de empotramiento reglamentaria $t = 0.10 \times H + 0.20 = 1.40\text{ m}$):
 \begin{equation}
-    H_{\text{libre}} = 12.0 - 1.40 - f_{\text{máx}} = 10.60 - 1.244 = \mathbf{9.356\text{ m}}
+    H_{\text{libre}} = H - t - f_{\text{máx}} = 12.00 - 1.40 - 1.244 = \mathbf{9.356\text{ m}}
 \end{equation}
-Dado que el Código Nacional de Electricidad (Regla 232) exige una altura mínima de $6.50\text{ m}$ para cruce de caminos y vías rurales, el diseño cumple holgadamente con un margen de seguridad de $\mathbf{+2.856\text{ m}}$.
+El Código Nacional de Electricidad (Regla 232: Alturas mínimas de conductores sobre el nivel del suelo) exige una distancia vertical mínima de $\mathbf{6.50\text{ m}}$ para cruces y recorridos a lo largo de caminos y vías rurales, y $\mathbf{5.50\text{ m}}$ en laderas no transitables. El vano crítico ($E-05 - E-06$) garantiza un margen de seguridad holgado de $\mathbf{+2.856\text{ m}}$ sobre la exigencia normativa más severa.
 
 \begin{table}[H]
 \centering
 \caption{Verificación Oficial de Gálibos Verticales Vano a Vano (CNE Suministro Regla 232)}
 \label{tab:galibos_vanos}
-\footnotesize
-\begin{tabularx}{\linewidth}{c c c c c c c L}
+\small
+\setlength{\tabcolsep}{4.0pt}
+\renewcommand{\arraystretch}{1.20}
+\begin{tabularx}{\linewidth}{c r r r r r r L}
 \toprule
-\textbf{Vano} & \textbf{Long. (m)} & \textbf{Desnivel (m)} & \textbf{Flecha Máx. (m)} & \textbf{Gálibo (m)} & \textbf{CNE Mín. (m)} & \textbf{Margen (m)} & \textbf{Condición de Terreno} \\
+\textbf{Vano} & \textbf{Long.} & \textbf{Desniv.} & \textbf{Flecha} & \textbf{Gálibo} & \textbf{CNE} & \textbf{Margen} & \textbf{Condición del Terreno /} \\
+              & \textbf{(m)}   & \textbf{(m)}     & \textbf{(m)}    & \textbf{(m)}    & \textbf{(m)} & \textbf{(m)}    & \textbf{Zona de Cruce} \\
 \midrule
 $E-01 - E-02$ & $105.00$ & $-29.17$ & $1.054$ & $9.546$ & $5.50$ & $+4.046$ & Ladera rocosa no transitable \\
-$E-02 - E-03$ & $105.00$ & $-30.00$ & $1.054$ & $9.546$ & $5.50$ & $+4.046$ & Ladera pronunciada \\
+$E-02 - E-03$ & $105.00$ & $-30.00$ & $1.054$ & $9.546$ & $5.50$ & $+4.046$ & Ladera de pendiente pronunciada \\
 $E-03 - E-04$ & $95.21$  & $-25.44$ & $0.889$ & $10.161$ & $6.50$ & $+3.661$ & Bajada hacia SED Biposte \\
-$E-04 - E-05$ & $97.22$  & $-22.52$ & $0.922$ & $10.128$ & $6.50$ & $+3.628$ & Salida SED a camino vecinal \\
-$E-05 - E-06$ & $115.59$ & $+10.23$ & $\mathbf{1.244}$ & $\mathbf{9.356}$ & $\mathbf{6.50}$ & $\mathbf{+2.856}$ & Cruce de camino principal (Crítico) \\
+$E-04 - E-05$ & $97.22$  & $-22.52$ & $0.922$ & $10.128$ & $6.50$ & $+3.628$ & Salida de SED hacia camino vecinal \\
+\rowcolor{lightnavy}
+$\mathbf{E-05 - E-06}$ & $\mathbf{115.59}$ & $\mathbf{+10.23}$ & $\mathbf{1.244}$ & $\mathbf{9.356}$ & $\mathbf{6.50}$ & $\mathbf{+2.856}$ & \textbf{Cruce camino principal (Crítico)} \\
 $E-06 - E-07$ & $110.51$ & $-2.66$  & $1.151$ & $9.449$ & $6.50$ & $+2.949$ & Margen lacustre hacia muelle \\
 $E-07 - E-08$ & $79.81$  & $0.00$   & $0.653$ & $9.947$ & $6.50$ & $+3.447$ & Acceso a zona de playa Chifrón \\
-$E-08 - E-09$ & $108.26$ & $0.00$   & $1.111$ & $9.489$ & $6.50$ & $+2.989$ & Tramo terminal llano \\
+$E-08 - E-09$ & $108.26$ & $0.00$   & $1.111$ & $9.489$ & $6.50$ & $+2.989$ & Tramo terminal llano hacia muelle \\
 \bottomrule
 \end{tabularx}
 \end{table}
