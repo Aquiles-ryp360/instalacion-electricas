@@ -8,18 +8,18 @@ El proyecto cuenta con un conjunto integral de láminas técnicas elaboradas en 
 \begin{table}[H]
 \centering
 \small
-\begin{tabular}{|c|l|c|c|c|}
+\begin{tabular}{|c|p{7.2cm}|c|c|p{4.2cm}|}
 \hline
-\textbf{Código} & \textbf{Título Oficial de la Lámina} & \textbf{Escala} & \textbf{Formato} & \textbf{Archivo Digital} \\
+\textbf{Cód.} & \textbf{Título Oficial de la Lámina} & \textbf{Escala} & \textbf{Formato} & \textbf{Archivo Digital} \\
 \hline
-\textbf{PL-01} & Plano Clave General: Redes MT, SEDs, BT y Catastro & 1:2,500 & A3 / A1 & \texttt{PL-01\_plano\_clave\_general.pdf} \\
-\textbf{PL-02} & Trazo y Perfil Longitudinal MT 10 kV con Catenarias & H: 1:2000, V: 1:200 & A3 / A1 & \texttt{PL-02\_perfil\_longitudinal\_mt.pdf} \\
-\textbf{PL-03} & Detalle Electromecánico Subestaciones SAB (50 y 100 kVA) & 1:50 / 1:25 & A3 / A1 & \texttt{PL-03\_subestacion\_sab\_detalles.pdf} \\
-\textbf{PL-04} & Red de Distribución Secundaria CAAI y Alumbrado Público & 1:1,000 / Indic. & A3 / A1 & \texttt{PL-04\_redes\_bt\_alumbrado\_publico.pdf} \\
-\textbf{PL-05} & Armados Normalizados DGE (PS-3, PA-3, PR-3) y Puesta a Tierra & Indicadas & A3 / A1 & \texttt{PL-05\_armados\_normalizados\_dge\_pat.pdf} \\
+\textbf{PL-01} & Plano Clave General: Redes MT 10 kV, SEDs, Redes BT CAAI, 587 Acometidas y Catastro Urbano & 1:2,500 & A3 / A1 & \texttt{PL-01\_plano\_clave\_general.pdf} \\
+\textbf{PL-02} & Trazo y Perfil Longitudinal MT 10 kV con Catenarias de Conductor AAAC 35 mm² & H: 1:2000, V: 1:200 & A3 / A1 & \texttt{PL-02\_perfil\_longitudinal\_mt.pdf} \\
+\textbf{PL-03} & Detalle Electromecánico Subestaciones SAB (50 y 100 kVA, 10/0.38-0.22 kV) & 1:50 / 1:25 & A3 / A1 & \texttt{PL-03\_subestacion\_sab\_detalles.pdf} \\
+\textbf{PL-04} & Red de Distribución Secundaria CAAI, Alumbrado Público LED 50W y Cajas L-T & 1:1,000 / Indic. & A3 / A1 & \texttt{PL-04\_redes\_bt\_alumbrado\_publico.pdf} \\
+\textbf{PL-05} & Armados Normalizados DGE (PS-3, PA-3, PR-3, Retenidas, PAT y Acometidas) & Indicadas & A3 / A1 & \texttt{PL-05\_armados\_normalizados\_dge\_pat.pdf} \\
 \hline
 \end{tabular}
-\caption{Relación oficial de láminas de planos del expediente técnico.}
+\caption{Relación oficial de láminas de planos del expediente técnico de electrificación de Limbani.}
 \label{tab:relacion_planos}
 \end{table}
 
@@ -29,7 +29,7 @@ Con el propósito de garantizar máxima compatibilidad con el entorno de softwar
 
 \begin{enumerate}
     \item \textbf{Archivo Nativo AutoCAD (\texttt{catastro\_limbani\_redes\_electricas.dwg}):} Compilado directamente con el motor \textit{AutoCAD Core Engine} bajo versión AC1032 (AutoCAD 2018--2027), configurado con el encuadre centrado (\textit{Zoom Extents}) y límites visuales en el casco urbano de Limbani. Al abrir este archivo en cualquier versión moderna de AutoCAD, el modelo se despliega centrado de manera inmediata y sin requerir comandos adicionales.
-    \item \textbf{Archivo de Intercambio Universal (\texttt{catastro\_limbani\_redes\_electricas.dxf}):} Formato ASCII estándar (AC1024) con definición completa de capas DGE (\texttt{01\_RED\_MT\_10KV\_CONDUCTOR}, \texttt{02\_POSTES\_MT\_10KV}, \texttt{03\_SUBESTACIONES\_SED}, etc.), polilíneas con anchos geométricos visibles (\textit{const\_width}), bloques de simbología y pestañas de espacio modelo (\textit{Model}) y espacio papel (\textit{Layout1}).
+    \item \textbf{Archivo de Intercambio Universal (\texttt{catastro\_limbani\_redes\_electricas.dxf}):} Formato ASCII estándar (AC1024) con definición completa de capas DGE (\texttt{01\_RED\_MT\_10KV\_CONDUCTOR}, \texttt{02\_POSTES\_MT\_10KV}, \texttt{03\_SUBESTACIONES\_SED}, \texttt{04\_RED\_BT\_CAAI\_CONDUCTOR}, \texttt{05\_POSTES\_BT\_ALUMBRADO}, \texttt{06\_LUMINARIAS\_AP\_50W}, \texttt{07\_RETENIDAS\_MECANICAS}, \texttt{08\_PUESTAS\_A\_TIERRA\_PAT}, \texttt{11\_ACOMETIDAS\_DOMICILIARIAS}, \texttt{12\_CAJAS\_PORTAMEDIDOR\_LT}), polilíneas con anchos geométricos visibles (\textit{const\_width}), bloques de simbología y pestañas de espacio modelo (\textit{Model}) y espacio papel (\textit{Layout1}).
 \end{enumerate}
 
 \noindent\fbox{\parbox{0.98\textwidth}{
@@ -41,38 +41,125 @@ Si se abre el archivo DXF y el visualizador se posiciona en el origen de coorden
 Alternativamente, haga clic en la pestaña inferior \textbf{\texttt{Layout1}} para visualizar la lámina A3 encuadrada de forma automática, o abra directamente el archivo nativo \texttt{catastro\_limbani\_redes\_electricas.dwg}.
 }}
 
-\subsection{Detalles Constructivos y Armados Normalizados DGE en el Modelo CAD}
-Para facilitar el cálculo, replanteo y estandarización técnica exigida por el usuario y la DGE/MEM, se han incorporado al espacio modelo CAD (ubicados al este del casco urbano, franja $X = 426,800$ a $427,700\text{ m}$) un total de \textbf{8 bloques técnicos normalizados} completamente detallados con cotas, tablas de materiales y especificaciones de montaje:
+\subsection{Estructuras y Armados Normalizados DGE Incorporados en el Modelo CAD}
+Para cumplir estrictamente con las directrices de la Dirección General de Electricidad (MEM) y los requerimientos de replanteo electromecánico, se han incorporado al espacio modelo CAD (franja Este $X = 426,800$ a $427,700\text{ m}$) un total de \textbf{8 bloques técnicos normalizados} vectoriales acompañados de las láminas oficiales escaneadas del Ministerio de Energía y Minas:
 \begin{enumerate}
-    \item \textbf{Bloque 1 -- Armado PS-3 (Suspensión MT 10 kV):} Poste CAC $12.0\text{ m} / 300\text{ daN}$, cruceta simétrica de acero galvanizado $75 \times 75 \times 6.4\text{ mm} \times 2.0\text{ m}$, 3 aisladores tipo Pin ANSI 55-5 y conductor AAAC $35\text{ mm}^2$.
-    \item \textbf{Bloque 2 -- Armado PA-3 (Ángulo MT 10 kV):} Poste CAC $12.0\text{ m} / 400\text{ daN}$, cruceta angular reforzada, aisladores pin con doble cuello y retenida biselar de contra-tiro.
-    \item \textbf{Bloque 3 -- Armado PR-3 (Retención / Fin de Línea MT):} Postes CAC $13.0\text{ m} / 400\text{ daN}$ y $13.0\text{ m} / 600\text{ daN}$ (cruces especiales), cadenas de aisladores de suspensión poliméricos 15 kV / 70 kN y grapas de compresión.
-    \item \textbf{Bloque 4 -- Subestación Aérea Biposte (SAB 50/100 kVA):} Biposte $2 \times \text{CAC } 13.0\text{ m} / 400\text{ daN}$ separados $2.00\text{ m}$, plataforma metálica UPN 120, seccionadores cut-out 15 kV / 100 A, pararrayos ZnO 12 kV / 10 kA, tablero BT adosado IP54 y doble sistema de PAT (protección y neutro).
-    \item \textbf{Bloque 5 -- Estructura de Baja Tensión y Alumbrado Público:} Postes CAC $8.0\text{ m} / 200\text{ daN}$ y $9.0\text{ m} / 300\text{ daN}$, cable autoportante CAAI con vanos calculados $\le 32.0\text{ m}$, pastoral de tubo de $F^\circ G^\circ\ 1\ 1/2'' \times 1.5\text{ m}$ y luminaria LED de 50 W IP66.
-    \item \textbf{Bloque 6 -- Retenida Mecánica de Anclaje:} Cable de acero Siemens Martin $\phi\ 5/16''$, aislador de porcelana tipo nuez/tracción de 15 kV, varilla de anclaje de $5/8'' \times 2.0\text{ m}$ y bloque de concreto ciclópeo $0.50 \times 0.50 \times 0.30\text{ m}$ empotrado a $1.80\text{ m}$.
-    \item \textbf{Bloque 7 -- Pozo de Puesta a Tierra (PAT):} Excavación de $\phi\ 0.80\text{ m} \times 2.60\text{ m}$, electrodo de cobre Copperweld $\phi\ 5/8'' \times 2.40\text{ m}$, relleno con bentonita sódica tratada con dosis química de Thor-Gel, cable de cobre desnudo de $25\text{ mm}^2$ y caja de registro de concreto $0.40 \times 0.40\text{ m}$ con tapa rotulada.
-    \item \textbf{Bloque 8 -- Acometida Domiciliaria Monofásica:} Cable concéntrico bipolar tipo SET $2 \times 4.0\text{ mm}^2$, conector bimetálico tipo cuña a la red CAAI, mástil de tubo galvanizado de $1''$, caja portamedidor de policarbonato reforzado tipo L-T e interruptor termomagnético $2 \times 16\text{ A}$.
+    \item \textbf{Bloque 1 -- Armado PS-3 (Suspensión MT 10 kV):} Poste CAC $12.0\text{ m} / 300\text{ daN}$, cruceta simétrica de acero galvanizado $75 \times 75 \times 6.4\text{ mm} \times 2.0\text{ m}$, 3 aisladores tipo Pin ANSI 55-5 y conductor AAAC $35\text{ mm}^2$ (R.D. N° 024-2003-EM/DGE, Lám. 004).
+    \item \textbf{Bloque 2 -- Armado PA-3 (Ángulo MT 10 kV):} Poste CAC $12.0\text{ m} / 400\text{ daN}$, cruceta angular reforzada, aisladores pin con doble atadura lateral y retenida biselar de contra-tiro (R.D. N° 024-2003-EM/DGE, Lám. 008).
+    \item \textbf{Bloque 3 -- Armado PR-3 (Retención / Fin de Línea MT 10 kV):} Postes CAC $13.0\text{ m} / 400\text{ daN}$ y $13.0\text{ m} / 600\text{ daN}$ (cruces fluviales), cadenas de aisladores poliméricos de suspensión 15 kV / 70 kN y grapas de compresión (R.D. N° 024-2003-EM/DGE, Lám. 020).
+    \item \textbf{Bloque 4 -- Subestación Aérea Biposte (SAB 50 y 100 kVA):} Biposte $2 \times \text{CAC } 13.0\text{ m} / 400\text{ daN}$ separados $2.00\text{ m}$, plataforma metálica UPN 120, seccionadores fusibles cut-out 15 kV / 100 A, pararrayos ZnO 12 kV / 10 kA, tablero BT adosado IP54 y doble PAT (R.D. N° 024-2003-EM/DGE, Lám. 064).
+    \item \textbf{Bloque 5 -- Estructura E-1 Red Secundaria CAAI y Alumbrado Público:} Postes CAC $8.0\text{ m} / 200\text{ daN}$ y $9.0\text{ m} / 300\text{ daN}$, cable autoportante CAAI, vanos $\le 32.0\text{ m}$, pastoral de $F^\circ G^\circ\ 1\ 1/2'' \times 1.5\text{ m}$ y luminaria LED de 50 W IP66 (R.D. N° 023-2003-EM-DGE, Lám. 001).
+    \item \textbf{Bloque 6 -- Retenida Mecánica de Anclaje Normalizada:} Conforme al CNE Suministro Regla 261 y R.M. N° 091-2002-EM/VME Sección 9: cable de acero grado Siemens Martin $\phi\ 5/16''$, aislador de porcelana tipo nuez ANSI 54-1 a $H \ge 3.0\text{ m}$, tubo protector de PVC amarillo $\phi\ 1\ 1/2'' \times 1.80\text{ m}$, varilla de anclaje de $5/8'' \times 2.0\text{ m}$ y bloque de concreto ciclópeo CAV $0.50 \times 0.50 \times 0.20\text{ m}$ empotrado a $1.80\text{ m}$ (R.D. N° 024-2003-EM/DGE Lám. 074 y R.D. N° 023-2003-EM-DGE Lám. 014).
+    \item \textbf{Bloque 7 -- Pozo de Puesta a Tierra (PAT):} Excavación cilíndrica $\phi\ 0.80\text{ m} \times 2.60\text{ m}$, electrodo de cobre Copperweld $\phi\ 5/8'' \times 2.40\text{ m}$, relleno compactado con tierra cernida tratada con bentonita sódica y sales electrolíticas, conductor de cobre desnudo $25\text{ mm}^2$ y caja de registro de concreto $0.40 \times 0.40\text{ m}$ (R.D. N° 024-2003-EM/DGE Lám. 077 y R.D. N° 023-2003-EM-DGE Lám. 012).
+    \item \textbf{Bloque 8 -- Acometida Domiciliaria Monofásica Aérea Tipo L-T:} Cable concéntrico bipolar SET $2 \times 4\text{ mm}^2$, conector cuña bimetálico para derivación desde el neutro portador y fase CAAI, mástil de $F^\circ G^\circ\ 1''$, caja portamedidor de policarbonato L-T e interruptor termomagnético $2 \times 16\text{ A}$ (R.D. N° 023-2003-EM-DGE, Lám. 007).
 \end{enumerate}
 
+\newpage
+\section{LÁMINAS OFICIALES DGE DE ARMADOS NORMALIZADOS Y DETALLES DE MONTAJE}
+
+En cumplimiento de las resoluciones directorales R.D. N° 024-2003-EM/DGE y R.D. N° 023-2003-EM-DGE del Ministerio de Energía y Minas, a continuación se presentan los detalles técnicos normalizados que rigen el montaje físico de las redes del proyecto:
+
+\subsection{Armado de Suspensión PS-3 (Media Tensión 10 kV)}
+Utilizado en los apoyos de alineamiento con ángulo topográfico de desvío entre $0^\circ$ y $5^\circ$. Está conformado por poste CAC 12/300, cruceta de acero galvanizado simétrica de 2.00 m y 3 aisladores tipo Pin ANSI 55-5 sobre espigas de acero galvanizado:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd024_pag_008.jpg}
+\caption{Lámina 004 R.D. N° 024-2003-EM/DGE: Armado de Suspensión PS-3 para Red Primaria Trifásica 10 kV.}
+\label{fig:dge_ps3}
+\end{figure}
+
+\subsection{Armado de Ángulo PA-3 (Media Tensión 10 kV)}
+Instalado en vértices con deflexión horizontal entre $5^\circ$ y $30^\circ$. Incorpora cruceta angular reforzada, aisladores tipo pin con doble amarre de conductor y retenida inclinada de contra-tiro para equilibrar la resultante de tensiones:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd024_pag_012.jpg}
+\caption{Lámina 008 R.D. N° 024-2003-EM/DGE: Armado de Ángulo PA-3 para Red Primaria Trifásica 10 kV.}
+\label{fig:dge_pa3}
+\end{figure}
+
+\newpage
+\subsection{Armado de Retención / Anclaje PR-3 (Media Tensión 10 kV)}
+Aplicado en vértices mayores a $30^\circ$, cruces fluviales de gran envergadura (cruce Río Chinchalamani de 110 m) y terminales de línea. Emplea postes CAC 13/400 o 13/600, cadenas de aisladores de suspensión poliméricos de 15 kV y retenidas mecánicas pesadas:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd024_pag_024.jpg}
+\caption{Lámina 020 R.D. N° 024-2003-EM/DGE: Armado de Retención PR-3 para Red Primaria Trifásica 10 kV.}
+\label{fig:dge_pr3}
+\end{figure}
+
+\subsection{Subestación Aérea Biposte SAB (50 kVA y 100 kVA)}
+Estructura biposte compuesta por 2 postes CAC 13/400 distanciados 2.00 m entre ejes, plataforma de soporte de transformador, seccionadores cut-out 15 kV, pararrayos de óxido de zinc y tablero de distribución en baja tensión:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd024_pag_071.jpg}
+\caption{Lámina 064(1/2) R.D. N° 024-2003-EM/DGE: Subestación Aérea Biposte (SAB) 10 / 0.38-0.22 kV.}
+\label{fig:dge_sab}
+\end{figure}
+
+\newpage
+\subsection{Retenida Mecánica de Anclaje Inclinada (Media Tensión y Baja Tensión)}
+Diseñada estrictamente bajo la Regla 261 del CNE Suministro 2011 y las láminas Lám. 074 (RD 024) y Lám. 014 (RD 023). El cable de acero de 5/16'' se ancla a un bloque CAV de concreto ciclópeo a 1.80 m de profundidad, contando con aislador de nuez dieléctrico a más de 3.0 m de altura y guarda protectora de PVC amarillo para seguridad peatonal:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd024_pag_090.jpg}
+\caption{Lámina 074 R.D. N° 024-2003-EM/DGE: Retenida Simple Inclinada para Redes Eléctricas Rurales.}
+\label{fig:dge_retenida}
+\end{figure}
+
+\subsection{Sistema de Puesta a Tierra (PAT)}
+Compuesto por varilla de Copperweld de $\phi\ 5/8'' \times 2.40\text{ m}$, pozo con tratamiento electrolítico de bentonita sódica para asegurar resistencia $R \le 10\ \Omega$ en subestaciones y $R \le 25\ \Omega$ en baja tensión:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd024_pag_094.jpg}
+\caption{Lámina 077 R.D. N° 024-2003-EM/DGE: Pozo de Puesta a Tierra PAT con Electrodo Vertical.}
+\label{fig:dge_pat}
+\end{figure}
+
+\newpage
+\subsection{Estructura E-1 para Red Secundaria Autoportante CAAI}
+Soporte normalizado para alineamiento y ángulos menores en baja tensión con cable autoportante tipo CAAI, incorporando brazo pastoral de acero galvanizado y luminaria LED de alumbrado público:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd023_pag_04.jpg}
+\caption{Lámina 001 R.D. N° 023-2003-EM-DGE: Estructura E-1 para Conductor Autoportante CAAI en Red Secundaria.}
+\label{fig:dge_e1}
+\end{figure}
+
+\subsection{Acometida Domiciliaria Monofásica Aérea Tipo L-T}
+Configuración normalizada de conexión de servicio particular para los 587 predios del casco urbano, con cable concéntrico SET $2 \times 4\text{ mm}^2$, caja de policarbonato con visor de policarbonato e interruptor termomagnético:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.48\textheight,keepaspectratio]{figuras/normas_dge/rd023_pag_10.jpg}
+\caption{Lámina 007 R.D. N° 023-2003-EM-DGE: Acometida Domiciliaria Monofásica Aérea y Caja Tipo L-T.}
+\label{fig:dge_acometida}
+\end{figure}
 
 \newpage
 \section{VISTAS GRÁFICAS DE INSPECCIÓN ELECTROMECÁNICA}
 
-A continuación se presentan las visualizaciones de ingeniería que demuestran la completa integración de las redes proyectadas sobre la trama física del catastro urbano:
+A continuación se presentan las visualizaciones de ingeniería del modelo georreferenciado:
 
 \subsection{Plano Clave General de Redes Eléctricas y Catastro Urbano (Lámina PL-01)}
-La Figura~\ref{fig:redes_detalladas} exhibe la totalidad del sistema eléctrico distribuido: la línea primaria en 10 kV (roja, 1,967.87 m), los 26 apoyos de media tensión, las 3 subestaciones aéreas biposte (SED-01 50 kVA, SED-02 100 kVA, SED-03 100 kVA), los 360 postes de baja tensión (azul), las 165 luminarias LED de 50 W (amarillo) y los 11.76 km de cable autoportante CAAI sobre los 623 lotes urbanos:
+La Figura~\ref{fig:redes_detalladas} exhibe la totalidad del sistema eléctrico distribuido: la línea primaria en 10 kV (roja, 1,967.87 m), los 26 apoyos de media tensión, las 3 subestaciones aéreas biposte (SED-01 50 kVA, SED-02 100 kVA, SED-03 100 kVA), los 243 postes de baja tensión (azul, concentrados rigurosamente en el casco urbano sin postes innecesarios en carreteras periféricas), las 166 luminarias LED de 50 W (amarillo), los 6,206.73 m de cable autoportante CAAI y las 587 acometidas domiciliarias georreferenciadas:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.88\textwidth,height=0.68\textheight,keepaspectratio]{figuras/07_redes_electricas_detalladas_catastro.png}
+\includegraphics[width=0.92\textwidth,height=0.68\textheight,keepaspectratio]{figuras/07_redes_electricas_detalladas_catastro.png}
 \caption{Plano General de Redes Eléctricas, Postería CAC y Subestaciones Aéreas Biposte georreferenciadas en Limbani (WGS 84 Z19S).}
 \label{fig:redes_detalladas}
 \end{figure}
 
 \newpage
 \subsection{Detalle Sector Norte: Casa de Máquinas MCH Limbani (200 kW) y SED-01 (50 kVA)}
-La Figura~\ref{fig:sector_norte} detalla el inicio de la transmisión eléctrica: la Casa de Máquinas de la Minicentral Hidroeléctrica (200 kW con turbina Michell-Banki), el pórtico de salida elevador 0.38/10 kV en el apoyo E-01 (CAC 13/400 con armado de anclaje PR-3, cortacircuitos cut-out y pararrayos), el descenso por la ladera norte (apoyos E-02 a E-05) y la llegada a la Subestación SED-01 en el Jr. Villa Hermosa (apoyo E-06, biposte 2xC.A.C. 13/400, SAB-1, 50 kVA), alimentando a 142 predios norteños:
+La Figura~\ref{fig:sector_norte} detalla el inicio de la transmisión eléctrica: la Casa de Máquinas de la Minicentral Hidroeléctrica (200 kW con turbina Michell-Banki), el pórtico de salida elevador 0.38/10 kV en el apoyo E-01 (CAC 13/400 con armado de anclaje PR-3, cortacircuitos cut-out y pararrayos), el descenso por la ladera norte (apoyos E-02 a E-05) y la llegada a la Subestación SED-01 en el Jr. Villa Hermosa (apoyo E-06, biposte 2xC.A.C. 13/400, SAB-1, 50 kVA), alimentando a 112 predios norteños:
 
 \begin{figure}[H]
 \centering
@@ -83,7 +170,7 @@ La Figura~\ref{fig:sector_norte} detalla el inicio de la transmisión eléctrica
 
 \newpage
 \subsection{Detalle Sector Centro: Plaza de Armas, Municipalidad y SED-02 (100 kVA)}
-La Figura~\ref{fig:sector_centro} exhibe el núcleo administrativo, cívico y comercial de Limbani: el trazo de la línea de 10 kV por el Jr. Progreso y Calle Municipal (apoyos E-08 a E-15), la ubicación estratégica de la Subestación SED-02 en la Plaza de Armas (apoyo E-13, biposte 2xC.A.C. 13/400, SAB-2, 100 kVA) y la densa malla de baja tensión con postes CAC 9m/300 daN, luminarias LED de 50 W y acometidas para 348 usuarios del casco central:
+La Figura~\ref{fig:sector_centro} exhibe el núcleo administrativo, cívico y comercial de Limbani: el trazo de la línea de 10 kV por el Jr. Progreso y Calle Municipal (apoyos E-08 a E-15), la ubicación estratégica de la Subestación SED-02 en la Plaza de Armas (apoyo E-13, biposte 2xC.A.C. 13/400, SAB-2, 100 kVA) y la densa malla de baja tensión con postes CAC 9m/300 daN, luminarias LED de 50 W y acometidas para 268 usuarios del casco central:
 
 \begin{figure}[H]
 \centering
@@ -94,7 +181,7 @@ La Figura~\ref{fig:sector_centro} exhibe el núcleo administrativo, cívico y co
 
 \newpage
 \subsection{Detalle Sector Sur: Cruce Aéreo Río Chinchalamani, Estadio Municipal y SED-03 (100 kVA)}
-La Figura~\ref{fig:sector_sur} ilustra el tramo de mayor exigencia topográfica y mecánica: el vano especial de cruce fluvial de $110\text{ m}$ sobre el Río Chinchalamani soportado por postes reforzados CAC 13m/600 daN con armados de retención PR-3 y retenidas pesadas en E-17 y E-18, la derivación hacia el Estadio Municipal (E-19 a E-21), la Subestación SED-03 (apoyo E-22, biposte 2xC.A.C. 13/400, SAB-3, 100 kVA para 274 predios del sector piscina) y el remate final en el pórtico terminal E-24 con seccionamiento para futura interconexión regional:
+La Figura~\ref{fig:sector_sur} ilustra el tramo de mayor exigencia topográfica y mecánica: el vano especial de cruce fluvial de $110\text{ m}$ sobre el Río Chinchalamani soportado por postes reforzados CAC 13m/600 daN con armados de retención PR-3 y retenidas mecánicas pesadas en E-17 y E-18, la derivación hacia el Estadio Municipal (E-19 a E-21), la Subestación SED-03 (apoyo E-22, biposte 2xC.A.C. 13/400, SAB-3, 100 kVA para 207 predios del sector sur y piscina) y el remate final en el pórtico terminal E-24 con seccionamiento para futura interconexión regional:
 
 \begin{figure}[H]
 \centering

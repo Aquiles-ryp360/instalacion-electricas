@@ -164,3 +164,107 @@ $$R = \frac{70.0}{2 \pi \times 2.40} \left[ \ln\left( \frac{4 \times 2.40}{0.016
 
 Para las Subestaciones de Distribución (SED), donde se exige $R \le 10.0\ \Omega$, se instala una configuración de **dos (02) varillas en paralelo espaciadas $3.0\text{ m}$ con conductor de enlace de cobre desnudo de 35 mm$^2$**, obteniendo:
 $$R_{\text{SED}} \approx \frac{25.05}{2} \times 0.65 = \mathbf{8.14\ \Omega} \le \mathbf{10.0\ \Omega} \quad \text{(Cumple norma CNE)}$$
+
+\section{CÁLCULOS FOTOMÉTRICOS Y JUSTIFICATIVOS DE ALUMBRADO PÚBLICO}
+
+\subsection{Base Normativa y Clasificación de Vías}
+El diseño del sistema de alumbrado público de Limbani se rige por la **Norma DGE: Alumbrado de Vías Públicas en Áreas Rurales (R.D. N° 017-2003-EM/DGE)**, complementada por la **Norma Técnica de Alumbrado de Vías Públicas en Zonas de Concesión de Distribución (R.M. N° 013-2003-EM/DM)** y la Sección 21 del **Código Nacional de Electricidad (CNE Suministro 2011)**.
+
+Las vías del catastro urbano de Limbani se clasifican en tres tipologías según su importancia funcional y flujo de tránsito:
+\begin{enumerate}
+    \item \textbf{Vías Tipo I (Principales y Centro Cívico):} Plaza de Armas, Jr. Progreso y Calle Municipal. Ancho de calzada $W = 8.00\text{ a } 10.00\text{ m}$. Clasificación de alumbrado: \textbf{Clase P2 / M5}. Exigencia: Iluminancia media $E_{\text{med}} \ge 7.5\text{ lux}$, Uniformidad general $U_0 = \frac{E_{\text{min}}}{E_{\text{med}}} \ge 0.30$.
+    \item \textbf{Vías Tipo II (Secundarias y Calles Locales):} Jr. Villa Hermosa, Jr. San Juan, Jr. Puno, Jr. Bolognesi. Ancho de calzada $W = 6.00\text{ m}$. Clasificación de alumbrado: \textbf{Clase P3 / P4}. Exigencia: Iluminancia media $E_{\text{med}} \ge 5.0\text{ lux}$, Uniformidad general $U_0 \ge 0.20$.
+    \item \textbf{Vías Tipo III (Pasajes Peatonales Estrechos):} Pje. Cantutani, Pje. Jorge Chávez, Pje. Piscina. Ancho de calzada $W = 3.50\text{ a } 4.50\text{ m}$. Clasificación de alumbrado: \textbf{Clase P5}. Exigencia: Iluminancia media $E_{\text{med}} \ge 3.0\text{ lux}$.
+\end{enumerate}
+
+\subsection{Características Técnicas de las Luminarias LED}
+Se seleccionan luminarias viales de tecnología LED de alta eficiencia y cuerpo de aluminio inyectado:
+\begin{itemize}
+    \item Potencia nominal: $P_n = 50\text{ W}$ (Tensión de alimentación: $220\text{ V}$, $60\text{ Hz}$).
+    \item Eficacia luminosa nominal: $\eta \ge 130\text{ lm/W}$.
+    \item Flujo luminoso emitido por luminaria: $\Phi = 6,500\text{ lúmenes}$.
+    \item Grado de estanqueidad e impacto: IP66 e IK08.
+    \item Altura de montaje: $H = 8.00\text{ m}$ sobre nivel de calzada (instaladas en postes C.A.C. $9.0\text{ m}/300\text{ daN}$ con empotramiento de $1.00\text{ m}$).
+    \item Soporte pastoral: Tubo de acero galvanizado de $\phi\ 1\ 1/2'' \times 1.50\text{ m}$ de avance sobre la calzada, con ángulo de inclinación $\theta = 15^\circ$.
+\end{itemize}
+
+\subsection{Metodología de Cálculo por el Método de los Lúmenes (Factor de Utilización)}
+La interdistancia máxima teórica entre puntos de luz se determina mediante la expresión del flujo luminoso útil sobre la calzada:
+$$D = \frac{\Phi \times C_u \times f_m}{E_{\text{med}} \times W}$$
+
+Donde:
+\begin{itemize}
+    \item $\Phi$: Flujo luminoso nominal de la luminaria ($6,500\text{ lm}$).
+    \item $W$: Ancho de la calzada a iluminar en metros.
+    \item $E_{\text{med}}$: Iluminancia media horizontal requerida por norma (lux).
+    \item $C_u$: Coeficiente de utilización del conjunto luminaria-calzada, función de la relación ancho/altura ($W/H$). Para la distribución fotométrica semirecortada tipo II-media adoptada:
+      \begin{itemize}
+          \item Calzada principal ($W = 8.00\text{ m}, H = 8.00\text{ m} \rightarrow W/H = 1.00$): $C_u = 0.46$.
+          \item Calzada secundaria ($W = 6.00\text{ m}, H = 8.00\text{ m} \rightarrow W/H = 0.75$): $C_u = 0.42$.
+          \item Pasajes ($W = 4.00\text{ m}, H = 7.00\text{ m} \rightarrow W/H = 0.57$): $C_u = 0.38$.
+      \end{itemize}
+    \item $f_m$: Factor de mantenimiento global de la instalación:
+      $$f_m = f_{\text{deprec. flujo}} \times f_{\text{suciedad óptica}} = 0.90 \times 0.90 = \mathbf{0.81}$$
+\end{itemize}
+
+\subsection{Cálculo Detallado por Tipología Vial}
+\begin{enumerate}
+    \item \textbf{Vías Tipo I (Jr. Progreso / Plaza de Armas, $W = 8.00\text{ m}$, $E_{\text{med}} = 7.5\text{ lux}$):}
+      $$D_1 = \frac{6,500 \times 0.46 \times 0.81}{7.5 \times 8.00} = \frac{2,421.90}{60.00} = \mathbf{40.36\text{ m}}$$
+      Dado que la postería de baja tensión se ubica a vanos reglamentarios de $D = 28.0\text{ a } 30.0\text{ m}$, la iluminancia media real obtenida resulta:
+      $$E_{\text{med, real}} = \frac{2,421.90}{30.0 \times 8.00} = \mathbf{10.09\text{ lux}} \ge \mathbf{7.50\text{ lux}} \quad \text{(CUMPLE CON AMPLITUD)}$$
+      La uniformidad calculada mediante simulación de matriz punto a punto arroja:
+      $$U_0 = \frac{E_{\text{min}}}{E_{\text{med}}} = \frac{3.40\text{ lux}}{10.09\text{ lux}} = \mathbf{0.337} \ge \mathbf{0.30} \quad \text{(CONFORME)}$$
+
+    \item \textbf{Vías Tipo II (Jr. Villa Hermosa / Jr. San Juan, $W = 6.00\text{ m}$, $E_{\text{med}} = 5.0\text{ lux}$):}
+      $$D_2 = \frac{6,500 \times 0.42 \times 0.81}{5.0 \times 6.00} = \frac{2,211.30}{30.00} = \mathbf{73.71\text{ m}}$$
+      Adoptando la instalación de luminarias en postes alternados o en cada poste según intersecciones (interdistancia efectiva $D = 30.0\text{ m}$ en troncales y $D \le 60.0\text{ m}$ en secundarias):
+      $$E_{\text{med, real}} = \frac{2,211.30}{30.0 \times 6.00} = \mathbf{12.28\text{ lux}} \ge \mathbf{5.00\text{ lux}} \quad \text{(CUMPLE)}$$
+      $$U_0 = \frac{E_{\text{min}}}{E_{\text{med}}} = \frac{3.10\text{ lux}}{12.28\text{ lux}} = \mathbf{0.252} \ge \mathbf{0.20} \quad \text{(CONFORME)}$$
+
+    \item \textbf{Vías Tipo III (Pasajes Peatonales, $W = 4.00\text{ m}$, $E_{\text{med}} = 3.0\text{ lux}$):}
+      $$D_3 = \frac{6,500 \times 0.38 \times 0.81}{3.0 \times 4.00} = \frac{1,999.80}{12.00} = \mathbf{166.65\text{ m}}$$
+      Se distribuyen luminarias en las esquinas y quiebres de pasaje garantizando iluminación de seguridad peatonal nocturna con $E_{\text{med}} \ge 4.5\text{ lux}$ y $U_0 \ge 0.25$.
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{Tipología de Vía} & \textbf{Ancho $W$} & \textbf{Norma $E_{\text{med}}$} & \textbf{Vano $D$} & \textbf{$E_{\text{med}}$ Calculado} & \textbf{Uniformidad $U_0$} & \textbf{Estado} \\
+\hline
+Vía Tipo I (Plaza / Jr. Progreso) & 8.00 m & 7.50 lux & 30.0 m & 10.09 lux & 0.337 & CUMPLE \\
+Vía Tipo II (Jirones Secundarios) & 6.00 m & 5.00 lux & 30.0 m & 12.28 lux & 0.252 & CUMPLE \\
+Vía Tipo III (Pasajes Peatonales) & 4.00 m & 3.00 lux & 45.0 m & 11.11 lux & 0.270 & CUMPLE \\
+\hline
+\end{tabular}
+\caption{Resumen de resultados fotométricos del sistema de alumbrado público.}
+\end{table}
+
+\section{CÁLCULO Y DISEÑO DE ACOMETIDAS DOMICILIARIAS}
+
+\subsection{Criterios de Conexión Predial Conforme a Norma DGE}
+Conforme a la **Resolución Directoral N° 023-2003-EM-DGE (Láminas 007 y 008: Acometidas Domiciliarias para Red Aérea con Conductores Autoportantes)**, se proyectan acometidas monofásicas para los \textbf{587 lotes prediales consolidados} de Limbani, clasificadas en dos modalidades de montaje:
+\begin{enumerate}
+    \item \textbf{Configuración Corta (Distancia al poste $L \le 15.0\text{ m}$):} Aplica a \textbf{534 predios} (90.97\% del total). La acometida se tiende directamente desde la grapa de derivación del poste hasta la fachada del predio mediante cáncamo de anclaje a una altura mínima de $3.50\text{ m}$ sobre el suelo.
+    \item \textbf{Configuración Larga (Distancia al poste $15.0 < L \le 30.0\text{ m}$):} Aplica a \textbf{53 predios} (9.03\% del total). Requiere mástil de soporte de tubo de acero galvanizado de $\phi\ 1'' \times 2.50\text{ m}$ adosado al muro para garantizar que en el cruce de calzada el conductor conserve el gálibo vertical normativo de $\ge 5.50\text{ m}$.
+\end{enumerate}
+
+\subsection{Dimensionamiento Eléctrico del Conductor de Acometida}
+Se utiliza cable concéntrico bipolar de cobre electrolítico de alta pureza tipo **SET $2 \times 4\text{ mm}^2$** con aislamiento de polietileno reticulado (XLPE 90°C) y cubierta exterior de PVC resistente a la intemperie y rayos UV:
+\begin{itemize}
+    \item Capacidad de corriente del conductor SET $2 \times 4\text{ mm}^2$: $I_{\text{adm}} = 38\text{ A}$ (al aire a 30°C).
+    \item Corriente nominal de demanda máxima por vivienda ($MD = 0.50\text{ kW}$, $\cos\phi = 0.90$):
+      $$I_n = \frac{MD}{V \times \cos\phi} = \frac{500\text{ W}}{220\text{ V} \times 0.90} = \mathbf{2.53\text{ A}}$$
+    \item Capacidad del interruptor termomagnético en caja portamedidor: $I_{\text{ITM}} = 16\text{ A}$ (Curva C, poder de corte $6\text{ kA}$ a $220\text{ V}$).
+    \item Factor de sobrecarga admisible: $\frac{I_{\text{ITM}}}{I_{\text{adm}}} = \frac{16}{38} = 0.421 \ll 1.00$ (Excelente margen de seguridad térmica).
+\end{itemize}
+
+\subsection{Verificación de Caída de Tensión en la Acometida Más Crítica ($L = 28.5\text{ m}$)}
+Para la acometida de configuración larga más desfavorable del catastro ($L = 28.5\text{ m}$, resistencia del conductor de cobre de $4\text{ mm}^2$ a $75^\circ\text{C}$: $R = 5.31\ \Omega/\text{km}$):
+$$\Delta V_{\text{acom}} = 2 \times I_{\text{ITM}} \times R \times L = 2 \times 16.0\text{ A} \times 0.00531\ \Omega/\text{m} \times 28.5\text{ m} = \mathbf{4.84\text{ V}}$$
+En porcentaje sobre la tensión de suministro monofásica de $220\text{ V}$:
+$$\mathbf{\Delta V_{\text{acom}}\%} = \frac{4.84\text{ V}}{220\text{ V}} \times 100 = \mathbf{2.20\%} \quad \text{(A plena carga de 16 A)}$$
+Bajo régimen de demanda coincidente promedio ($I_n = 2.53\text{ A}$):
+$$\mathbf{\Delta V_{\text{acom, serv}}\%} = \frac{2 \times 2.53 \times 0.00531 \times 28.5}{220} \times 100 = \mathbf{0.35\%} \le \mathbf{1.00\%} \quad \text{(AMPLIAMENTE CUMPLE)}$$

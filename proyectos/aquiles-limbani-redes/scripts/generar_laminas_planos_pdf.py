@@ -122,23 +122,35 @@ def generar_lamina_pl01(dxf_redes_path, out_pdf):
     for e in msp:
         if e.dxf.layer == '02_CALLES_Y_VIAS' and e.dxftype() == 'LWPOLYLINE':
             pts = e.get_points('xy')
-            ax.plot([p[0] for p in pts], [p[1] for p in pts], color='#64748B', linewidth=0.8, alpha=0.6, zorder=4)
+            ax.plot([p[0] for p in pts], [p[1] for p in pts], color='#475569', linewidth=0.7, alpha=0.5, zorder=3)
 
-    # Redes BT
+    # Acometidas Domiciliarias a los 587 predios
+    for e in msp:
+        if e.dxf.layer == '11_ACOMETIDAS_DOMICILIARIAS' and e.dxftype() == 'LWPOLYLINE':
+            pts = e.get_points('xy')
+            ax.plot([p[0] for p in pts], [p[1] for p in pts], color='#38BDF8', linewidth=0.35, alpha=0.6, zorder=4)
+
+    # Retenidas normalizadas MT y BT
+    for e in msp:
+        if e.dxf.layer == '04_RETENIDAS_MT_BT' and e.dxftype() == 'LWPOLYLINE':
+            pts = e.get_points('xy')
+            ax.plot([p[0] for p in pts], [p[1] for p in pts], color='#EC4899', linewidth=1.2, zorder=5)
+
+    # Redes BT CAAI
     for e in msp:
         if 'RED_BT' in e.dxf.layer and e.dxftype() == 'LWPOLYLINE':
             pts = e.get_points('xy')
-            c_line = '#10B981' if 'TRONCAL' in e.dxf.layer else '#38BDF8'
-            lw = 1.4 if 'TRONCAL' in e.dxf.layer else 0.9
-            ax.plot([p[0] for p in pts], [p[1] for p in pts], color=c_line, linewidth=lw, alpha=0.9, zorder=5)
+            c_line = '#10B981' if 'TRONCAL' in e.dxf.layer else '#06B6D4'
+            lw = 1.3 if 'TRONCAL' in e.dxf.layer else 0.8
+            ax.plot([p[0] for p in pts], [p[1] for p in pts], color=c_line, linewidth=lw, alpha=0.9, zorder=6)
 
     # Postes BT
     pts_pbt = [e.dxf.center for e in msp if e.dxf.layer == '07_POSTES_BT_CAC' and e.dxftype() == 'CIRCLE' and e.dxf.radius > 1.0]
-    ax.scatter([p[0] for p in pts_pbt], [p[1] for p in pts_pbt], s=16, color='#60A5FA', edgecolors='#1E3A8A', linewidths=0.5, zorder=6)
+    ax.scatter([p[0] for p in pts_pbt], [p[1] for p in pts_pbt], s=14, color='#60A5FA', edgecolors='#1E3A8A', linewidths=0.5, zorder=7)
 
     # Alumbrado AP
     pts_ap = [e.dxf.center for e in msp if e.dxf.layer == '08_ALUMBRADO_PUBLICO_LED' and e.dxftype() == 'CIRCLE']
-    ax.scatter([p[0] for p in pts_ap], [p[1] for p in pts_ap], s=26, color='#FBBF24', edgecolors='#B45309', linewidths=0.6, zorder=7)
+    ax.scatter([p[0] for p in pts_ap], [p[1] for p in pts_ap], s=22, color='#FBBF24', edgecolors='#B45309', linewidths=0.6, zorder=8)
 
     # Línea MT 10 kV
     for e in msp:
@@ -190,10 +202,11 @@ def generar_lamina_pl01(dxf_redes_path, out_pdf):
         ("Poste MT (C.A.C. 12m y 13m)", '#DC2626', 'circulo', 7),
         ("Subestación SAB (50 / 100 kVA)", '#FACC15', 'cuadrado', 8),
         ("Red BT Troncal CAAI 3x35+1x16+NA25", '#10B981', 'linea', 2.2),
-        ("Red BT Derivación CAAI 2x16+1x16+NA25", '#38BDF8', 'linea', 1.8),
+        ("Red BT Derivación CAAI 2x16+1x16+NA25", '#06B6D4', 'linea', 1.8),
         ("Poste BT (C.A.C. 8m y 9m)", '#60A5FA', 'circulo', 5),
-        ("Alumbrado Público LED 50W (165 und)", '#FBBF24', 'circulo', 6),
-        ("Retenida / Anclaje a Tierra", '#EC4899', 'linea_d', 1.5),
+        ("Alumbrado Público LED 50W (166 und)", '#FBBF24', 'circulo', 6),
+        ("Retenida Normalizada (RD 024/023)", '#EC4899', 'linea', 2.0),
+        ("Acometida Domiciliaria (587 lotes)", '#38BDF8', 'linea_d', 1.2),
         ("Río Limbani / Quebradas", '#0284C7', 'linea', 2.0)
     ]
     sy = 0.92
@@ -206,8 +219,8 @@ def generar_lamina_pl01(dxf_redes_path, out_pdf):
             ax_side.plot(0.15, sy, marker='o', markersize=sz, color=col, markeredgecolor='#0F172A')
         elif tipo == 'cuadrado':
             ax_side.plot(0.15, sy, marker='s', markersize=sz, color=col, markeredgecolor='#78350F')
-        ax_side.text(0.26, sy, desc, va='center', fontsize=6.8, color='#0F172A')
-        sy -= 0.038
+        ax_side.text(0.26, sy, desc, va='center', fontsize=6.5, color='#0F172A')
+        sy -= 0.034
 
     # 2. CUADRO RESUMEN DE PARÁMETROS TÉCNICOS
     ax_side.plot([0.05, 0.95], [sy, sy], color='#334155', linewidth=1.0)
@@ -215,7 +228,7 @@ def generar_lamina_pl01(dxf_redes_path, out_pdf):
     ax_side.text(0.5, sy, "RESUMEN TÉCNICO DE REDES", ha='center', va='center', fontsize=8.5, fontweight='bold', color='#1E293B')
     sy -= 0.02
     ax_side.plot([0.05, 0.95], [sy, sy], color='#334155', linewidth=1.0)
-    sy -= 0.025
+    sy -= 0.023
 
     datos_tecnicos = [
         ("Generación MCH Limbani:", "200.0 kW (Michell-Banki, 380 V)"),
@@ -226,17 +239,18 @@ def generar_lamina_pl01(dxf_redes_path, out_pdf):
         ("• SED-01 Norte (Jr. V. Hermosa):", "50 kVA (142 viviendas)"),
         ("• SED-02 Centro (Plaza Armas):", "100 kVA (348 viviendas)"),
         ("• SED-03 Sur (Estadio-Piscina):", "100 kVA (274 viviendas)"),
-        ("Redes Secundarias BT CAAI:", "11,755.60 m (11.76 km)"),
-        ("Total Postería CAC MT / BT:", "26 MT / 360 BT (386 postes)"),
-        ("Alumbrado Público LED:", "165 luminarias LED 50 W"),
+        ("Redes Secundarias BT CAAI:", "6,206.73 m (6.21 km casco urbano)"),
+        ("Total Postería CAC MT / BT:", "26 MT / 243 BT (269 postes)"),
+        ("Alumbrado Público LED:", "166 luminarias LED 50 W"),
+        ("Acometidas Monofásicas:", "587 predios (534 C / 53 L)"),
+        ("Retenidas Normalizadas:", "12 MT / 48 BT (60 und)"),
         ("Demanda Coincidente Total:", "181.80 kW (F.C. = 90.9%)"),
-        ("Pérdidas Joule en MT:", "0.84% (Excelente eficiencia)"),
         ("Caída de Tensión Máx. BT:", "3.82% (Admisible <= 5.0%)")
     ]
     for k, v in datos_tecnicos:
-        ax_side.text(0.06, sy, k, va='center', fontsize=6.2, fontweight='bold', color='#334155')
-        ax_side.text(0.94, sy, v, ha='right', va='center', fontsize=6.2, color='#0F172A')
-        sy -= 0.023
+        ax_side.text(0.06, sy, k, va='center', fontsize=6.0, fontweight='bold', color='#334155')
+        ax_side.text(0.94, sy, v, ha='right', va='center', fontsize=6.0, color='#0F172A')
+        sy -= 0.021
 
     # 3. RÓTULO NORMALIZADO INSTITUCIONAL
     rot_h = 0.22
@@ -597,21 +611,21 @@ def generar_lamina_pl04(out_pdf):
 
     specs_bt = [
         ("Sistema de Distribución:", "380 / 220 V Trifásico tetrafilar"),
-        ("Conductor Troncal CAAI:", "3x35 + 1x16 + NA25 mm² (8.59 km)"),
-        ("Conductor Ramales CAAI:", "2x16 + 1x16 + NA25 mm² (3.16 km)"),
+        ("Conductor Troncal CAAI:", "3x35 + 1x16 + NA25 mm² (3.98 km)"),
+        ("Conductor Ramales CAAI:", "2x16 + 1x16 + NA25 mm² (2.23 km)"),
+        ("Total Red Autoportante BT:", "6,206.73 m (6.21 km casco urbano)"),
         ("Portante Neutro Alfol:", "Aleación de Aluminio NA 25 mm²"),
         ("Aislamiento Conductor:", "Polietileno Reticulado XLPE 90°C"),
-        ("Postes de BT Principales:", "CAC 9m / 300 daN (254 unidades)"),
-        ("Postes de BT Terminales:", "CAC 8m / 300 daN (26 unidades)"),
-        ("Postes de BT en Pasajes:", "CAC 8m / 200 daN (80 unidades)"),
-        ("Total Postes Baja Tensión:", "360 unidades"),
-        ("Luminarias Alumbrado LED:", "165 unidades de 50 W / 220 V"),
+        ("Postes de BT Principales/AP:", "CAC 9m / 300 daN (139 unidades)"),
+        ("Postes de BT Terminales:", "CAC 8m / 300 daN (38 unidades)"),
+        ("Postes de BT en Pasajes:", "CAC 8m / 200 daN (66 unidades)"),
+        ("Total Postes Baja Tensión:", "243 unidades (sin postes en carretera)"),
+        ("Luminarias Alumbrado LED:", "166 unidades de 50 W / 220 V IP66"),
         ("Eficacia Luminosa LED:", ">= 130 lm/W (Flujo >= 6,500 lm)"),
-        ("Grado de Protección AP:", "IP66 / IK08 en aluminio inyectado"),
         ("Pastoral de Alumbrado:", "Tubo de acero F°G° 1.5\" x 1.50 m"),
-        ("Acometidas Domiciliarias:", "764 conexiones (623 predios)"),
-        ("Conductor de Acometida:", "Concéntrico SET 2x6 mm² (Cobre)"),
-        ("Cajas Portamedidor:", "Termoplásticas reforzadas tipo L-T"),
+        ("Acometidas Domiciliarias:", "587 predios (534 C / 53 L)"),
+        ("Conductor de Acometida:", "Concéntrico SET 2x4 mm² (4,604 m)"),
+        ("Cajas Portamedidor:", "587 und policarbonato tipo L-T"),
         ("Medidores de Energía:", "Electrónicos digitales homologados"),
         ("Caída de Tensión Máxima:", "3.82% en extremo sur (Norma <= 5%)")
     ]
@@ -646,82 +660,99 @@ def generar_lamina_pl05(out_pdf):
     rect_m = patches.Rectangle((0, 0), 100, 100, facecolor='#F8FAFC', edgecolor='#334155', linewidth=1.2)
     ax.add_patch(rect_m)
 
-    ax.text(50, 96, "ARMADOS NORMALIZADOS DGE (PS-3, PA-3, PR-3) Y PUESTA A TIERRA\n"
-                   "ESPECIFICACIONES SEGÚN RESOLUCIÓN DIRECTORAL N° 018-2003-EM/DGE",
+    ax.text(50, 96, "ARMADOS NORMALIZADOS DGE (PS-3, PA-3, PR-3), RETENIDAS Y PUESTA A TIERRA\n"
+                   "CONFORME A R.D. N° 024-2003-EM/DGE Y R.D. N° 023-2003-EM-DGE",
             ha='center', va='center', fontsize=9.2, fontweight='bold', color='#0F172A')
 
-    # Cuadrante 1: Estructura PS-3 (Suspensión alineamiento) X=5 a 32, Y=50 a 90
-    rect_ps3 = patches.Rectangle((5, 50), 28, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
+    # Cuadrante 1: Estructura PS-3 (Suspensión alineamiento) X=4 a 26, Y=50 a 91
+    rect_ps3 = patches.Rectangle((4, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
     ax.add_patch(rect_ps3)
-    ax.text(19, 89, "ARMADO PS-3\nSuspensión Alineamiento (0° a 5°)\nPoste CAC 12m / 300 daN", ha='center', fontsize=6.2, fontweight='bold', color='#1E3A8A')
-    # Poste
-    ax.plot([19, 19], [53, 83], color='#334155', linewidth=2.0)
-    # Cruceta asimétrica o aisladores tipo Pin
-    ax.plot([13, 25], [80, 80], color='#D97706', linewidth=2.5)
-    for ix in [14, 19, 24]:
-        ax.plot(ix, 80, marker='^', markersize=6, color='#DC2626')
-    ax.text(19, 53, "Sin retenida requerida\nVano <= 95 m", ha='center', fontsize=5.5, color='#475569')
+    ax.text(15, 89, "ARMADO PS-3\nSuspensión (0° a 5°)\nCAC 12m / 300 daN", ha='center', fontsize=5.8, fontweight='bold', color='#1E3A8A')
+    ax.plot([15, 15], [53, 83], color='#334155', linewidth=2.0)
+    ax.plot([10, 20], [80, 80], color='#D97706', linewidth=2.5)
+    for ix in [11, 15, 19]:
+        ax.plot(ix, 80, marker='^', markersize=5, color='#DC2626')
+    ax.text(15, 53, "Lám. 004 RD 024\nVano <= 95 m", ha='center', fontsize=5.2, color='#475569')
 
-    # Cuadrante 2: Estructura PA-3 (Ángulo) X=36 a 64, Y=50 a 90
-    rect_pa3 = patches.Rectangle((36, 50), 28, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
+    # Cuadrante 2: Estructura PA-3 (Ángulo) X=28 a 50, Y=50 a 91
+    rect_pa3 = patches.Rectangle((28, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
     ax.add_patch(rect_pa3)
-    ax.text(50, 89, "ARMADO PA-3\nÁngulo (5° a 30°)\nPoste CAC 12m / 400 daN", ha='center', fontsize=6.2, fontweight='bold', color='#1E3A8A')
-    ax.plot([50, 50], [53, 83], color='#334155', linewidth=2.0)
-    ax.plot([44, 56], [80, 80], color='#D97706', linewidth=2.5)
-    for ix in [45, 50, 55]:
-        ax.plot(ix, 80, marker='^', markersize=6, color='#DC2626')
-    # Retenida biselar
-    ax.plot([50, 62], [79, 53], color='#EC4899', linewidth=1.5, linestyle='--')
-    ax.plot(62, 53, marker='o', markersize=4, color='#EC4899')
-    ax.text(50, 53, "Con Retenida Biselar Simple\nCable acero SIEMENS 5/16\"", ha='center', fontsize=5.5, color='#475569')
+    ax.text(39, 89, "ARMADO PA-3\nÁngulo (5° a 30°)\nCAC 12m / 400 daN", ha='center', fontsize=5.8, fontweight='bold', color='#1E3A8A')
+    ax.plot([39, 39], [53, 83], color='#334155', linewidth=2.0)
+    ax.plot([34, 44], [80, 80], color='#D97706', linewidth=2.5)
+    for ix in [35, 39, 43]:
+        ax.plot(ix, 80, marker='^', markersize=5, color='#DC2626')
+    ax.plot([39, 48], [79, 53], color='#EC4899', linewidth=1.4)
+    ax.plot(44, 66, marker='d', markersize=4, color='#F59E0B')
+    ax.text(39, 53, "Lám. 008 RD 024\nRetenida Biselar", ha='center', fontsize=5.2, color='#475569')
 
-    # Cuadrante 3: Estructura PR-3 (Anclaje / Terminal) X=68 a 96, Y=50 a 90
-    rect_pr3 = patches.Rectangle((68, 50), 28, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
+    # Cuadrante 3: Estructura PR-3 (Anclaje / Terminal) X=52 a 74, Y=50 a 91
+    rect_pr3 = patches.Rectangle((52, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
     ax.add_patch(rect_pr3)
-    ax.text(82, 89, "ARMADO PR-3\nRetención / Terminal (> 30°)\nPoste CAC 13m / 600 daN", ha='center', fontsize=6.2, fontweight='bold', color='#1E3A8A')
-    ax.plot([82, 82], [53, 83], color='#334155', linewidth=2.2)
-    ax.plot([76, 88], [80, 80], color='#D97706', linewidth=3.0)
-    # Aisladores de suspensión poliméricos en retención
-    for ix in [77, 82, 87]:
-        ax.plot([ix, ix + 2], [80, 80], color='#DC2626', linewidth=2.5)
-    # Retenida pesada
-    ax.plot([82, 94], [79, 53], color='#EC4899', linewidth=2.0, linestyle='--')
-    ax.plot(94, 53, marker='s', markersize=5, color='#EC4899')
-    ax.text(82, 53, "Retenida Inclinada Pesada\nBloque concreto 0.5x0.5x0.3m", ha='center', fontsize=5.5, color='#475569')
+    ax.text(63, 89, "ARMADO PR-3\nRetención (> 30°)\nCAC 13m / 600 daN", ha='center', fontsize=5.8, fontweight='bold', color='#1E3A8A')
+    ax.plot([63, 63], [53, 83], color='#334155', linewidth=2.2)
+    ax.plot([58, 68], [80, 80], color='#D97706', linewidth=3.0)
+    for ix in [59, 63, 67]:
+        ax.plot([ix, ix + 1.5], [80, 80], color='#DC2626', linewidth=2.5)
+    ax.plot([63, 72], [79, 53], color='#EC4899', linewidth=1.8)
+    ax.plot(68, 66, marker='d', markersize=4, color='#F59E0B')
+    ax.text(63, 53, "Lám. 020 RD 024\nRetenida Pesada", ha='center', fontsize=5.2, color='#475569')
 
-    # Parte inferior: Detalle Pozo de Puesta a Tierra (PAT) X=10 a 90, Y=5 a 45
-    rect_pat = patches.Rectangle((5, 5), 91, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
+    # Cuadrante 4: DETALLE RETENIDA INCLINADA NORMALIZADA X=76 a 97, Y=50 a 91
+    rect_ret = patches.Rectangle((76, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
+    ax.add_patch(rect_ret)
+    ax.text(86.5, 89, "RETENIDA INCLINADA\nCNE Regla 261\nLám. 074 RD 024 / 014 RD 023", ha='center', fontsize=5.5, fontweight='bold', color='#9D174D')
+    # Poste
+    ax.plot([80, 80], [53, 85], color='#334155', linewidth=2.0)
+    ax.plot([78, 96], [53, 53], color='#78350F', linewidth=1.5)  # Terreno
+    # Abrazadera en poste (Y=82)
+    ax.plot([79, 81], [82, 82], color='#0F172A', linewidth=3.0)
+    # Cable Siemens Martin 5/16" a 45°
+    ax.plot([80, 93], [82, 53], color='#EC4899', linewidth=1.5)
+    # Aislador tracción nuez ANSI 54-1 (Y=68, H>=3.0m)
+    ax.plot(86.5, 67.5, marker='o', markersize=5, color='#F59E0B')
+    ax.text(88, 68, "Aislador 54-1\n(H >= 3m)", fontsize=4.8, color='#D97706')
+    # Protector PVC amarillo
+    ax.plot([90.5, 93], [58.5, 53], color='#EAB308', linewidth=3.0)
+    # Varilla de ancla y bloque concreto
+    ax.plot([93, 95.5], [53, 47.5], color='#334155', linewidth=1.5)
+    rect_blk = patches.Rectangle((93.5, 45.5), 4, 3, facecolor='#64748B', edgecolor='#0F172A', linewidth=0.8)
+    ax.add_patch(rect_blk)
+    ax.text(86.5, 51.5, "Bloque 0.5x0.5x0.2m\n(h = 1.80 m)", ha='center', fontsize=4.8, color='#0F172A')
+
+    # Parte inferior: Detalle Pozo de Puesta a Tierra (PAT) X=4 a 97, Y=5 a 46
+    rect_pat = patches.Rectangle((4, 5), 93, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
     ax.add_patch(rect_pat)
-    ax.text(50, 43, "DETALLE CONSTRUCTIVO POZO DE PUESTA A TIERRA VERTICAL (PAT NORMALIZADO)",
-            ha='center', fontsize=7.2, fontweight='bold', color='#166534')
+    ax.text(50, 43, "DETALLE CONSTRUCTIVO POZO DE PUESTA A TIERRA VERTICAL (PAT NORMALIZADO)\n"
+                   "CONFORME A R.D. N° 024-2003-EM/DGE LÁMINA 077 Y CNE SUMINISTRO REGLA 060",
+            ha='center', fontsize=6.8, fontweight='bold', color='#166534')
 
-    # Pozo excavado (X=20 a 35)
-    ax.fill_between([22, 32], [8, 8], [38, 38], color='#FDE68A', alpha=0.4)
-    ax.plot([22, 22], [8, 38], color='#78350F', linewidth=1.5)
-    ax.plot([32, 32], [8, 38], color='#78350F', linewidth=1.5)
-    ax.plot([22, 32], [8, 8], color='#78350F', linewidth=1.5)
+    # Pozo excavado (X=15 a 30)
+    ax.fill_between([17, 27], [8, 8], [38, 38], color='#FDE68A', alpha=0.4)
+    ax.plot([17, 17], [8, 38], color='#78350F', linewidth=1.5)
+    ax.plot([27, 27], [8, 38], color='#78350F', linewidth=1.5)
+    ax.plot([17, 27], [8, 8], color='#78350F', linewidth=1.5)
     # Caja de registro de concreto (Y=35 a 40)
-    rect_reg = patches.Rectangle((20, 35), 14, 5, facecolor='#E2E8F0', edgecolor='#334155', linewidth=1.2)
+    rect_reg = patches.Rectangle((15, 35), 14, 5, facecolor='#E2E8F0', edgecolor='#334155', linewidth=1.2)
     ax.add_patch(rect_reg)
-    ax.text(27, 37.5, "Caja Registro 0.40x0.40 m", ha='center', fontsize=5.2, color='#0F172A')
+    ax.text(22, 37.5, "Caja Registro 0.40x0.40 m", ha='center', fontsize=5.0, color='#0F172A')
 
     # Electrodo de Cobre Copperweld 5/8" x 2.40 m
-    ax.plot([27, 27], [10, 37], color='#B45309', linewidth=3.5)
-    ax.plot(27, 36, marker='o', markersize=6, color='#F59E0B')
-    ax.text(27, 6, "Electrodo Copperweld 5/8\" x 2.40 m", ha='center', fontsize=5.5, fontweight='bold', color='#B45309')
+    ax.plot([22, 22], [10, 37], color='#B45309', linewidth=3.5)
+    ax.plot(22, 36, marker='o', markersize=6, color='#F59E0B')
+    ax.text(22, 6, "Electrodo Copperweld 5/8\" x 2.40 m", ha='center', fontsize=5.2, fontweight='bold', color='#B45309')
 
     # Relleno de tierra tratada y bentonita
-    ax.text(55, 30, "ESPECIFICACIONES DE INSTALACIÓN PAT:\n"
-                   "1. Pozo excavado de 0.80 m de diámetro por 2.60 m de profundidad.\n"
-                   "2. Electrodo de cobre o acero recubierto de cobre (Copperweld) 5/8\" x 2.40 m.\n"
-                   "3. Conector de bronce de alta presión tipo AB o soldadura exotérmica (Cadweld).\n"
-                   "4. Relleno con tierra vegetal cernida tratada con bentonita sódica (2 dosis de 25 kg).\n"
-                   "5. Dosis química de sales electrolíticas de baja resistividad (Thor-Gel o Lab-Gel).\n"
-                   "6. Conductor de bajada de cobre desnudo de 35 mm² en tubo PVC-P de 3/4\".\n"
-                   "7. Resistencia máxima de PAT:\n"
-                   "   • Masa y Pararrayos MT: R <= 10 Ohmios (R.D. 018-2003-EM/DGE)\n"
-                   "   • Neutro de Subestación BT: R <= 5 Ohmios (CNE Suministro 2011)",
-            ha='left', va='center', fontsize=6.2, color='#0F172A')
+    ax.text(48, 25, "ESPECIFICACIONES DE INSTALACIÓN PAT (R.D. N° 024-2003-EM / CNE SECCIÓN 060):\n"
+                   "1. Pozo excavado de 0.80 m de diámetro por 2.60 m de profundidad total.\n"
+                   "2. Electrodo Copperweld 5/8\" x 2.40 m con conector de bronce de alta presión tipo AB.\n"
+                   "3. Relleno con tierra vegetal cernida tratada con bentonita sódica (2 sacos de 25 kg).\n"
+                   "4. Tratamiento con dosis química de sales electrolíticas Thor-Gel / Lab-Gel.\n"
+                   "5. Conductor de bajada de cobre desnudo recocido 35 mm² en tubo PVC-P de 3/4\".\n"
+                   "6. Resistencia máxima de PAT:\n"
+                   "   • Subestaciones MT / Pararrayos: R <= 10 Ohmios (R.D. 024-2003-EM/DGE Lám. 077)\n"
+                   "   • Neutro de Servicio BT: R <= 5 Ohmios (CNE Suministro 2011 Regla 060)",
+            ha='left', va='center', fontsize=5.8, color='#0F172A')
 
     # Panel lateral derecho y Rótulo
     ax_side = fig.add_axes([0.70, 0.04, 0.28, 0.92])
@@ -737,27 +768,27 @@ def generar_lamina_pl05(out_pdf):
     ax_side.plot([0.05, 0.95], [0.95, 0.95], color='#334155', linewidth=1.0)
 
     normas = [
-        ("Base Legal:", "Código Nacional de Electricidad (CNE-Suministro)"),
-        ("Norma Técnica DGE:", "R.D. N° 018-2003-EM/DGE (Bases para Líneas MT)"),
-        ("Armados Normalizados:", "R.D. N° 026-2003-EM/DGE (Especificaciones)"),
-        ("Aisladores MT:", "Poliméricos tipo Pin y Suspensión clase ANSI 55-4"),
-        ("Tensión de Aislamiento:", "15 kV / BIL 110 kV pico"),
+        ("Base Legal Principal:", "Código Nacional de Electricidad (CNE-Suministro)"),
+        ("Soportes Normalizados MT:", "R.D. N° 024-2003-EM/DGE (Láminas 004, 008, 020)"),
+        ("Soportes Normalizados BT:", "R.D. N° 023-2003-EM-DGE (Láminas 001, 007, 014)"),
+        ("Alumbrado de Vías Rurales:", "R.D. N° 017-2003-EM/DGE / R.M. 013-2003-EM"),
+        ("Símbolos Gráficos DGE:", "R.M. N° 091-2002-EM/VME (Sección 9)"),
+        ("Aisladores MT:", "Poliméricos tipo Pin y Suspensión clase ANSI 55-5"),
+        ("Tensión de Aislamiento MT:", "15 kV / BIL 110 kV pico"),
         ("Distancia de Fuga:", ">= 31 mm/kV (Zona de alta humedad y lluvia)"),
-        ("Herrajes y Pernos:", "Acero forjado galvanizado en caliente (ASTM A153)"),
-        ("Crucetas MT:", "Madera tratada o perfil F°G° 100x100x6.4 mm"),
-        ("Retenidas:", "Cable acero grado Siemens Martin 5/16\" (7 hilos)"),
-        ("Anclaje a Tierra:", "Varilla de ancla F°G° 5/8\"x2.0m + Bloque concreto"),
-        ("Protección Catódica:", "Zincado electrolítico mínimo 610 g/m²"),
-        ("Puesta a Tierra:", "Electrodo 5/8\"x2.4m, conductor Cu 35 mm²"),
-        ("Tratamiento Químico:", "Bentonita sódica + Gel activador electrolítico")
+        ("Retenidas Mecánicas:", "Cable Siemens Martin 5/16\" (7 hilos, rotura >=35 kN)"),
+        ("Aislador de Tracción:", "Porcelana ANSI 54-1 a altura >= 3.0 m de suelo"),
+        ("Varilla de Anclaje:", "F°G° 5/8\"x2.0m c/guardacabo y bloque CAV 0.5x0.5m"),
+        ("Protector de Retenida:", "Tubo PVC amarillo 1.80m con franjas reflectivas"),
+        ("Protección Catódica:", "Galvanizado en caliente s/norma ASTM A153")
     ]
     sy = 0.92
     for k, v in normas:
-        ax_side.text(0.06, sy, k, va='center', fontsize=6.0, fontweight='bold', color='#334155')
-        ax_side.text(0.94, sy, v, ha='right', va='center', fontsize=5.8, color='#0F172A')
-        sy -= 0.025
+        ax_side.text(0.06, sy, k, va='center', fontsize=5.8, fontweight='bold', color='#334155')
+        ax_side.text(0.94, sy, v, ha='right', va='center', fontsize=5.6, color='#0F172A')
+        sy -= 0.024
 
-    dibujar_rotulo_oficial(ax_side, 0.02, 0.015, 0.96, 0.22, "PL-05", "ARMADOS NORMALIZADOS DGE Y PUESTA A TIERRA", "Indicadas")
+    dibujar_rotulo_oficial(ax_side, 0.02, 0.015, 0.96, 0.22, "PL-05", "ARMADOS NORMALIZADOS DGE Y PAT", "Indicadas")
 
     os.makedirs(os.path.dirname(out_pdf), exist_ok=True)
     fig.savefig(out_pdf, format='pdf', dpi=300)

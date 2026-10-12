@@ -1,25 +1,22 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-generar_redes_electricas_dxf.py
-Genera el Plano Maestro de Ingeniería Electromecánica en formato DXF y DWG nativo:
-- Simbología oficial normalizada CNE Suministro 2011 y Norma DGE (R.M. N° 091-2002-EM/VME Sección 9).
-- Vanos y distancias reglamentarias verificadas (BT <= 35m, MT <= 85m, cruce río 110m).
-- Inclusión directa en el espacio CAD de los 8 PLANOS Y BLOQUES DE DETALLE CONSTRUCTIVO:
-  1. ARMADO PS-3: Suspensión Alineamiento MT 10 kV (CAC 12m/300 daN)
-  2. ARMADO PA-3: Ángulo MT 10 kV (CAC 12m/400 daN con Retenida Biselar)
-  3. ARMADO PR-3: Retención / Anclaje MT 10 kV (CAC 13m/400 y 13m/600 daN con Retenida Pesada)
-  4. SUBESTACIÓN AÉREA BIPOSTE SAB 10/0.38-0.22 kV (dyn5, 50 y 100 kVA con seccionamiento y PAT)
-  5. ESTRUCTURA DE BAJA TENSIÓN CAC 8m/9m CON CONDUCTOR CAAI Y ALUMBRADO PÚBLICO LED 50W
-  6. DETALLE CONSTRUCTIVO DE RETENIDA INCLINADA Y CONTRAVIENTO CON ANCLAJE DE CONCRETO
-  7. DETALLE CONSTRUCTIVO DE POZO DE PUESTA A TIERRA VERTICAL (PAT NORMALIZADO DGE)
-  8. DETALLE DE ACOMETIDA DOMICILIARIA Y CAJA PORTAMEDIDOR TIPO L-T
-- Cámara y vista inicial VPORT centrada directamente en Limbani.
-- Compilación a DWG nativo de AutoCAD mediante AutoCAD Core Engine (accoreconsole.exe).
-- Generación de láminas gráficas de alta resolución: Planta General y Zooms Sectoriales.
+SCRIPT: generar_redes_electricas_dxf.py
+PROYECTO: EXPEDIENTE TÉCNICO - ELECTRIFICACIÓN Y REDES DE DISTRIBUCIÓN LIMBANI
+AUTOR: Br. Aquiles Taylor Ramos Yapo (Cód. 227368) - FIME / UNA Puno
+FECHA: Octubre 2026
 
-Autor: Br. Aquiles Taylor Ramos Yapo (Cód. 227368)
-Curso: Instalaciones Eléctricas II / Redes Eléctricas | FIME - UNA Puno
+DESCRIPCIÓN:
+Genera el modelo digital integrado en CAD (DXF y compilación nativa DWG con AutoCAD 2027 Core Engine)
+incorporando:
+1. Línea Primaria en Media Tensión 10.0 kV (AAAC 35 mm2, 24 apoyos / 26 postes).
+2. Tres Subestaciones Aéreas Biposte (SAB-01 50 kVA, SAB-02 100 kVA, SAB-03 100 kVA).
+3. Redes Secundarias de Baja Tensión autoportantes CAAI en casco urbano consolidado
+   (excluyendo carreteras rurales deshabitadas). Vanos estrictos <= 30.0 m (CNE Suministro 2011).
+4. Red completa de Acometidas Domiciliarias (587 predios) y cajas portamedidor tipo L-T.
+5. Simbología oficial DGE (R.M. N° 091-2002-EM/VME Sección 9) para postes, SEDs, AP y retenidas
+   mecánicas completas (cable 5/16", aislador nuez, protector PVC y bloque de anclaje).
+6. Los 8 Bloques de Detalle Constructivo Normalizado DGE integrados en el espacio modelo
+   con imágenes oficiales (RD 024-2003-EM y RD 023-2003-EM-DGE), vectores técnicos, cotas y tablas.
+7. Renderizados gráficos de alta definición de la planta general y zooms sectoriales.
 """
 
 import os
@@ -28,11 +25,8 @@ import shutil
 import subprocess
 import ezdxf
 from ezdxf import colors
-import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle, Rectangle
-from matplotlib.lines import Line2D
+import matplotlib.patches as patches
 
 def distancia(p1, p2):
     return math.sqrt((p2[0] - p1[0])**2 + (p2[1] - p1[1])**2)
@@ -41,9 +35,69 @@ def interp_pt(p1, p2, f):
     return (p1[0] + f * (p2[0] - p1[0]), p1[1] + f * (p2[1] - p1[1]))
 
 # -------------------------------------------------------------------------
+# SÍMBOLO NORMALIZADO DE RETENIDA CONFORME A DGE Y CNE SUMINISTRO
+# -------------------------------------------------------------------------
+def agregar_simbolo_retenida_cad(msp, p_poste, p_ancla, layer='04_RETENIDAS_MT_BT', label="RET-1"):
+    """
+    Dibuja el símbolo técnico normalizado de retenida mecánica en planta:
+    - Cable de acero galvanizado Siemens Martin 5/16"
+    - Aislador de tracción / nuez de porcelana 15 kV (rombo a 60% del tiro)
+    - Protector de retenida en tubo PVC amarillo de 1.80 m
+    - Barra transversal de varilla de anclaje
+    - Bloque de anclaje de concreto ciclópeo 0.50 x 0.50 m
+    - Rótulo normativo
+    """
+    dx = p_ancla[0] - p_poste[0]
+    dy = p_ancla[1] - p_poste[1]
+    L = math.sqrt(dx*dx + dy*dy)
+    if L < 0.001: return
+    ux = dx / L
+    uy = dy / L
+    vx = -uy
+    vy = ux
+
+    # 1. Cable de acero (trazo continuo con espesor visible)
+    pl_ret = msp.add_lwpolyline([p_poste, p_ancla], dxfattribs={'layer': layer, 'color': colors.MAGENTA})
+    pl_ret.dxf.const_width = 0.35
+
+    # 2. Aislador de tracción / nuez (rombo + círculo central)
+    p_iso = (p_poste[0] + 0.60 * dx, p_poste[1] + 0.60 * dy)
+    r_sz = 1.0
+    msp.add_lwpolyline([
+        (p_iso[0] + r_sz*ux, p_iso[1] + r_sz*uy),
+        (p_iso[0] + r_sz*vx, p_iso[1] + r_sz*vy),
+        (p_iso[0] - r_sz*ux, p_iso[1] - r_sz*uy),
+        (p_iso[0] - r_sz*vx, p_iso[1] - r_sz*vy),
+        (p_iso[0] + r_sz*ux, p_iso[1] + r_sz*uy)
+    ], dxfattribs={'layer': layer, 'color': colors.YELLOW})
+    msp.add_circle(p_iso, radius=0.35, dxfattribs={'layer': layer, 'color': colors.YELLOW})
+
+    # 3. Protector de retenida (tubo PVC amarillo en los 2.0 m finales)
+    p_prot = (p_ancla[0] - 2.2*ux, p_ancla[1] - 2.2*uy)
+    pl_p = msp.add_lwpolyline([p_prot, p_ancla], dxfattribs={'layer': layer, 'color': colors.YELLOW})
+    pl_p.dxf.const_width = 0.85
+
+    # 4. Barra de anclaje perpendicular
+    bar_w = 1.6
+    b1 = (p_ancla[0] + bar_w * vx, p_ancla[1] + bar_w * vy)
+    b2 = (p_ancla[0] - bar_w * vx, p_ancla[1] - bar_w * vy)
+    msp.add_line(b1, b2, dxfattribs={'layer': layer, 'color': colors.WHITE})
+
+    # 5. Bloque de concreto ciclópeo de anclaje (CAV 0.50x0.50x0.20 m)
+    p_b1 = (b1[0] + 0.6*ux, b1[1] + 0.6*uy)
+    p_b2 = (b2[0] + 0.6*ux, b2[1] + 0.6*uy)
+    p_b3 = (b2[0] - 0.6*ux, b2[1] - 0.6*uy)
+    p_b4 = (b1[0] - 0.6*ux, b1[1] - 0.6*uy)
+    msp.add_lwpolyline([p_b1, p_b2, p_b3, p_b4, p_b1], dxfattribs={'layer': layer, 'color': colors.MAGENTA})
+
+    # Rótulo de la retenida
+    t_ret = msp.add_text(label, dxfattribs={'layer': layer, 'height': 1.6, 'color': colors.MAGENTA})
+    t_ret.dxf.insert = (p_ancla[0] + 1.2*vx, p_ancla[1] + 1.2*vy)
+
+# -------------------------------------------------------------------------
 # BLOQUES DE DETALLES TÉCNICOS NORMALIZADOS DGE DIBUJADOS EN EL ESPACIO CAD
 # -------------------------------------------------------------------------
-def dibujar_marco_detalle(msp, x0, y0, w, h, codigo_armado, titulo_armado, norma="R.D. N° 018-2003-EM/DGE"):
+def dibujar_marco_detalle(msp, x0, y0, w, h, codigo_armado, titulo_armado, norma="R.D. N° 024-2003-EM/DGE"):
     """Dibuja el marco técnico perimetral para una lámina de detalle constructivo en CAD."""
     # Borde exterior
     msp.add_lwpolyline([(x0, y0), (x0 + w, y0), (x0 + w, y0 + h), (x0, y0 + h), (x0, y0)],
@@ -53,141 +107,152 @@ def dibujar_marco_detalle(msp, x0, y0, w, h, codigo_armado, titulo_armado, norma
                         (x0 + w - 4.0, y0 + h - 4.0), (x0 + 4.0, y0 + h - 4.0), (x0 + 4.0, y0 + 4.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
     # Franja superior de título
-    msp.add_lwpolyline([(x0 + 4.0, y0 + h - 28.0), (x0 + w - 4.0, y0 + h - 28.0)],
+    msp.add_lwpolyline([(x0 + 4.0, y0 + h - 26.0), (x0 + w - 4.0, y0 + h - 26.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
     
-    t1 = msp.add_text(f"DETALLE NORMALIZADO: {codigo_armado} — {titulo_armado}",
-                      dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 5.8, 'color': colors.YELLOW})
-    t1.dxf.insert = (x0 + 10.0, y0 + h - 14.0)
+    t1 = msp.add_text(f"ESTRUCTURA NORMALIZADA: {codigo_armado} — {titulo_armado}",
+                      dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 5.2, 'color': colors.YELLOW})
+    t1.dxf.insert = (x0 + 10.0, y0 + h - 13.0)
 
     t2 = msp.add_text(f"NORMATIVA APLICABLE: CNE SUMINISTRO 2011 / {norma} — SECCIÓN 9",
-                      dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 3.6, 'color': colors.CYAN})
-    t2.dxf.insert = (x0 + 10.0, y0 + h - 22.0)
+                      dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 3.4, 'color': colors.CYAN})
+    t2.dxf.insert = (x0 + 10.0, y0 + h - 21.0)
+
+    # Separador vertical central (izquierda: lámina oficial DGE / derecha: vectores y planilla)
+    msp.add_line((x0 + 155.0, y0 + 4.0), (x0 + 155.0, y0 + h - 26.0),
+                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
 
 def dibujar_tabla_materiales(msp, x_t, y_t, items):
     """Dibuja una planilla de metrado de materiales normalizada al pie del bloque de detalle."""
-    w_t = 150.0
-    h_row = 8.0
-    msp.add_lwpolyline([(x_t, y_t), (x_t + w_t, y_t), (x_t + w_t, y_t - len(items)*h_row - 10.0),
-                        (x_t, y_t - len(items)*h_row - 10.0), (x_t, y_t)],
+    w_t = 165.0
+    h_row = 7.5
+    msp.add_lwpolyline([(x_t, y_t), (x_t + w_t, y_t), (x_t + w_t, y_t - len(items)*h_row - 9.0),
+                        (x_t, y_t - len(items)*h_row - 9.0), (x_t, y_t)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
     # Título tabla
     tt = msp.add_text("LISTA DE MATERIALES NORMALIZADOS DGE",
-                      dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 3.5, 'color': colors.YELLOW})
-    tt.dxf.insert = (x_t + 5.0, y_t - 6.5)
-    msp.add_line((x_t, y_t - 9.0), (x_t + w_t, y_t - 9.0),
+                      dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 3.2, 'color': colors.YELLOW})
+    tt.dxf.insert = (x_t + 5.0, y_t - 6.0)
+    msp.add_line((x_t, y_t - 8.5), (x_t + w_t, y_t - 8.5),
                  dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
 
-    curr_y = y_t - 15.0
+    curr_y = y_t - 14.5
     for num, desc, cant in items:
         t_row = msp.add_text(f"{num:02d}. {desc}",
-                             dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'color': colors.WHITE})
+                             dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.5, 'color': colors.WHITE})
         t_row.dxf.insert = (x_t + 3.0, curr_y)
         t_c = msp.add_text(f"{cant}",
-                           dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'color': colors.GREEN})
-        t_c.dxf.insert = (x_t + w_t - 22.0, curr_y)
+                           dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.5, 'color': colors.GREEN})
+        t_c.dxf.insert = (x_t + w_t - 24.0, curr_y)
         curr_y -= h_row
 
-def dibujar_detalle_ps3(msp, x0, y0, w, h):
-    """Lámina de Armado PS-3: Suspensión Alineamiento MT 10 kV."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "ARMADO PS-3", "SUSPENSIÓN ALINEAMIENTO MT 10 kV (ÁNGULO 0° A 5°)")
-    cx = x0 + 80.0
-    # Poste C.A.C. 12m / 300 daN
-    msp.add_lwpolyline([(cx - 3.5, y0 + 30.0), (cx + 3.5, y0 + 30.0), (cx + 1.8, y0 + 200.0), (cx - 1.8, y0 + 200.0), (cx - 3.5, y0 + 30.0)],
-                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    # Línea de terreno y empotramiento (1.40 m)
-    msp.add_line((cx - 20.0, y0 + 50.0), (cx + 20.0, y0 + 50.0),
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
-    msp.add_text("Nivel de Terreno Natural (+- 0.00)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'insert': (cx + 22.0, y0 + 49.0), 'color': colors.YELLOW})
-    msp.add_text("Empotramiento 1.40 m (Solado f'c=140)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.5, 'insert': (cx - 35.0, y0 + 38.0), 'color': colors.CYAN})
+def incrustar_imagen_norma(doc, msp, img_filename, x0, y0, w_img=142.0, h_img=210.0):
+    """Incrusta la lámina oficial escaneada de la norma DGE en el marco CAD."""
+    if os.path.exists(img_filename):
+        try:
+            image_def = doc.add_image_def(filename=os.path.abspath(img_filename), size_in_pixel=(640, 940))
+            msp.add_image(image_def=image_def, insert=(x0 + 8.0, y0 + 8.0), size_in_units=(w_img, h_img))
+        except Exception as e:
+            # Si ya existe la definición de imagen o hay aviso, continuar
+            pass
 
-    # Cruceta de acero galvanizado 75x75x6.4 mm x 2.00 m (a Y = y0 + 190)
-    cy_c = y0 + 190.0
-    msp.add_lwpolyline([(cx - 35.0, cy_c - 2.0), (cx + 35.0, cy_c - 2.0), (cx + 35.0, cy_c + 2.0), (cx - 35.0, cy_c + 2.0), (cx - 35.0, cy_c - 2.0)],
+def dibujar_detalle_ps3(doc, msp, x0, y0, w, h, img_path):
+    """Lámina de Armado PS-3: Suspensión Alineamiento MT 10 kV."""
+    dibujar_marco_detalle(msp, x0, y0, w, h, "ARMADO PS-3", "SUSPENSIÓN ALINEAMIENTO MT 10 kV (0° A 5°)", "R.D. N° 024-2003-EM/DGE LÁMINA 004")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
+    
+    # Detalle vectorial en la mitad derecha (cx = x0 + 235.0)
+    cx = x0 + 235.0
+    # Poste C.A.C. 12m / 300 daN
+    msp.add_lwpolyline([(cx - 3.2, y0 + 25.0), (cx + 3.2, y0 + 25.0), (cx + 1.6, y0 + 165.0), (cx - 1.6, y0 + 165.0), (cx - 3.2, y0 + 25.0)],
+                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
+    # Terreno
+    msp.add_line((cx - 20.0, y0 + 40.0), (cx + 20.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    msp.add_text("N.T.N. (+- 0.00)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.4, 'insert': (cx + 22.0, y0 + 39.0), 'color': colors.YELLOW})
+    msp.add_text("Empotramiento 1.40 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx - 35.0, y0 + 30.0), 'color': colors.CYAN})
+
+    # Cruceta 75x75x6.4 mm x 2.0 m a Y = y0 + 155
+    cy_c = y0 + 155.0
+    msp.add_lwpolyline([(cx - 32.0, cy_c - 1.8), (cx + 32.0, cy_c - 1.8), (cx + 32.0, cy_c + 1.8), (cx - 32.0, cy_c + 1.8), (cx - 32.0, cy_c - 1.8)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
     # 3 Aisladores Pin ANSI 55-5
-    for px_iso in [cx - 28.0, cx, cx + 28.0]:
-        msp.add_lwpolyline([(px_iso - 2.5, cy_c + 2.0), (px_iso + 2.5, cy_c + 2.0), (px_iso + 1.5, cy_c + 12.0), (px_iso - 1.5, cy_c + 12.0), (px_iso - 2.5, cy_c + 2.0)],
+    for px_iso in [cx - 25.0, cx, cx + 25.0]:
+        msp.add_lwpolyline([(px_iso - 2.0, cy_c + 1.8), (px_iso + 2.0, cy_c + 1.8), (px_iso + 1.2, cy_c + 10.0), (px_iso - 1.2, cy_c + 10.0), (px_iso - 2.0, cy_c + 1.8)],
                            dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-        msp.add_circle((px_iso, cy_c + 13.0), radius=1.8, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-        # Conductor AAAC 35 mm2
-        msp.add_line((px_iso - 8.0, cy_c + 13.0), (px_iso + 8.0, cy_c + 13.0),
-                     dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+        msp.add_line((px_iso - 6.0, cy_c + 10.0), (px_iso + 6.0, cy_c + 10.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
 
-    msp.add_text("Poste C.A.C. 12m / 300 daN", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 3.5, 'insert': (cx + 8.0, y0 + 120.0), 'color': colors.WHITE})
-    msp.add_text("Cruceta F°G° 75x75x6.4 mm x 2.00 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 3.0, 'insert': (cx - 40.0, cy_c + 18.0), 'color': colors.CYAN})
+    msp.add_text("Conductor AAAC 35 mm²", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.4, 'insert': (cx - 25.0, cy_c + 13.0), 'color': colors.RED})
+    msp.add_text("Cruceta F°G° 75x75x6.4 mm x 2.0 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx - 30.0, cy_c - 6.0), 'color': colors.WHITE})
 
-    # Lista de materiales PS-3
     items_ps3 = [
-        (1, "Poste C.A.C. 12.0 m / 300 daN", "1 und"),
-        (2, "Cruceta de acero F°G° 75x75x6.4 mm x 2.0 m", "1 und"),
+        (1, "Poste de C.A.C. 12.0 m / 300 daN", "1 und"),
+        (2, "Cruceta simétrica F°G° 75x75x6.4 mm x 2.0 m", "1 und"),
         (3, "Aislador de porcelana tipo Pin ANSI 55-5", "3 und"),
-        (4, "Espiga para aislador de espiga 3/4\" x 8\"", "3 und"),
-        (5, "Perno maquinado F°G° 5/8\" x 8\" con tuerca", "2 und"),
-        (6, "Abrazadera de pletina F°G° de 3 vías p/poste", "1 jgo"),
-        (7, "Alambre de amarre de aluminio plano 35 mm²", "12 m"),
-        (8, "Cinta plana de armar de aleación aluminio", "3 m")
+        (4, "Espiga para aislador de pin F°G° 3/4\" x 8\"", "3 und"),
+        (5, "Perno maquinado F°G° 5/8\" x 8\" con tuercas", "2 und"),
+        (6, "Abrazadera partida platina 50x6 mm con pernos", "1 jgo"),
+        (7, "Alambre de amarre de aluminio recocido #4", "6 m"),
+        (8, "Cinta plana de armar de aleación de aluminio", "3 jgo")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_ps3)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_ps3)
 
-def dibujar_detalle_pa3(msp, x0, y0, w, h):
+def dibujar_detalle_pa3(doc, msp, x0, y0, w, h, img_path):
     """Lámina de Armado PA-3: Ángulo MT 10 kV."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "ARMADO PA-3", "ÁNGULO MT 10 kV (DESVÍO 5° A 30° CON RETENIDA BISELAR)")
-    cx = x0 + 80.0
-    # Poste CAC 12m/400 daN
-    msp.add_lwpolyline([(cx - 3.8, y0 + 30.0), (cx + 3.8, y0 + 30.0), (cx + 2.0, y0 + 200.0), (cx - 2.0, y0 + 200.0), (cx - 3.8, y0 + 30.0)],
-                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    msp.add_line((cx - 20.0, y0 + 50.0), (cx + 20.0, y0 + 50.0),
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    dibujar_marco_detalle(msp, x0, y0, w, h, "ARMADO PA-3", "ÁNGULO PEQUEÑO Y MEDIANO MT 10 kV (5° A 30°)", "R.D. N° 024-2003-EM/DGE LÁMINA 008")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
 
-    cy_c = y0 + 190.0
-    msp.add_lwpolyline([(cx - 35.0, cy_c - 2.0), (cx + 35.0, cy_c - 2.0), (cx + 35.0, cy_c + 2.0), (cx - 35.0, cy_c + 2.0), (cx - 35.0, cy_c - 2.0)],
+    cx = x0 + 235.0
+    msp.add_lwpolyline([(cx - 3.5, y0 + 25.0), (cx + 3.5, y0 + 25.0), (cx + 1.8, y0 + 165.0), (cx - 1.8, y0 + 165.0), (cx - 3.5, y0 + 25.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    for px_iso in [cx - 28.0, cx, cx + 28.0]:
-        msp.add_circle((px_iso, cy_c + 12.0), radius=2.2, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-    
-    # Retenida biselar en ángulo
-    msp.add_line((cx, cy_c - 10.0), (cx + 60.0, y0 + 50.0),
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'linetype': 'DASHED', 'color': colors.MAGENTA})
-    msp.add_circle((cx + 60.0, y0 + 50.0), radius=3.5, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.MAGENTA})
-    msp.add_text("Retenida Biselar Simple 5/16\"", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'insert': (cx + 25.0, y0 + 115.0), 'color': colors.MAGENTA})
+    msp.add_line((cx - 20.0, y0 + 40.0), (cx + 20.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+
+    cy_c = y0 + 155.0
+    msp.add_lwpolyline([(cx - 32.0, cy_c - 2.0), (cx + 32.0, cy_c - 2.0), (cx + 32.0, cy_c + 2.0), (cx - 32.0, cy_c + 2.0), (cx - 32.0, cy_c - 2.0)],
+                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
+    for px_iso in [cx - 25.0, cx, cx + 25.0]:
+        msp.add_lwpolyline([(px_iso - 2.0, cy_c + 2.0), (px_iso + 2.0, cy_c + 2.0), (px_iso + 1.2, cy_c + 10.0), (px_iso - 1.2, cy_c + 10.0), (px_iso - 2.0, cy_c + 2.0)],
+                           dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
+
+    # Retenida biselar inclinada a contra-tiro
+    msp.add_line((cx, cy_c), (cx - 45.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.MAGENTA})
+    msp.add_circle((cx - 27.0, y0 + 90.0), radius=2.2, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    msp.add_text("Retenida Biselar 5/16\"", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx - 50.0, y0 + 85.0), 'color': colors.MAGENTA})
 
     items_pa3 = [
-        (1, "Poste C.A.C. 12.0 m / 400 daN", "1 und"),
+        (1, "Poste de C.A.C. 12.0 m / 400 daN", "1 und"),
         (2, "Cruceta angular F°G° 75x75x6.4 mm x 2.0 m", "1 und"),
         (3, "Aislador de porcelana tipo Pin ANSI 55-5", "3 und"),
-        (4, "Espiga para aislador de espiga 3/4\" x 8\"", "3 und"),
-        (5, "Cable de acero Siemens Martin 5/16\" (retenida)", "25 m"),
-        (6, "Aislador de tracción de porcelana 15 kV (nuez)", "1 und"),
-        (7, "Varilla de anclaje F°G° 5/8\" x 2.0 m con ojo", "1 und"),
-        (8, "Bloque de anclaje de concreto ciclópeo 0.5x0.5m", "1 und")
+        (4, "Espiga para aislador de pin reforzada 3/4\"", "3 und"),
+        (5, "Pernos de maquinado F°G° 5/8\" x 10\" c/tuercas", "2 und"),
+        (6, "Abrazadera partida platina 50x6 mm p/poste", "1 jgo"),
+        (7, "Retenida de acero Siemens Martin 5/16\" compl.", "1 jgo"),
+        (8, "Varilla de ancla 5/8\"x2.0m con bloque concreto", "1 jgo")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_pa3)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_pa3)
 
-def dibujar_detalle_pr3(msp, x0, y0, w, h):
-    """Lámina de Armado PR-3: Retención / Anclaje MT 10 kV."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "ARMADO PR-3", "RETENCIÓN / ANCLAJE Y TERMINAL MT 10 kV (> 30° Y CRUCES)")
-    cx = x0 + 80.0
-    msp.add_lwpolyline([(cx - 4.2, y0 + 30.0), (cx + 4.2, y0 + 30.0), (cx + 2.2, y0 + 205.0), (cx - 2.2, y0 + 205.0), (cx - 4.2, y0 + 30.0)],
+def dibujar_detalle_pr3(doc, msp, x0, y0, w, h, img_path):
+    """Lámina de Armado PR-3: Retención / Fin de Línea MT 10 kV."""
+    dibujar_marco_detalle(msp, x0, y0, w, h, "ARMADO PR-3", "RETENCIÓN / ANCLAJE Y CRUCE ESPECIAL MT 10 kV", "R.D. N° 024-2003-EM/DGE LÁMINA 020")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
+
+    cx = x0 + 235.0
+    msp.add_lwpolyline([(cx - 3.8, y0 + 25.0), (cx + 3.8, y0 + 25.0), (cx + 2.0, y0 + 175.0), (cx - 2.0, y0 + 175.0), (cx - 3.8, y0 + 25.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    msp.add_line((cx - 20.0, y0 + 50.0), (cx + 20.0, y0 + 50.0),
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    msp.add_line((cx - 20.0, y0 + 40.0), (cx + 20.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
 
-    cy_c = y0 + 195.0
+    cy_c = y0 + 165.0
     # Doble cruceta de retención
-    msp.add_lwpolyline([(cx - 40.0, cy_c - 4.0), (cx + 40.0, cy_c - 4.0), (cx + 40.0, cy_c + 4.0), (cx - 40.0, cy_c + 4.0), (cx - 40.0, cy_c - 4.0)],
+    msp.add_lwpolyline([(cx - 32.0, cy_c - 3.0), (cx + 32.0, cy_c - 3.0), (cx + 32.0, cy_c + 3.0), (cx - 32.0, cy_c + 3.0), (cx - 32.0, cy_c - 3.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    # Cadenas de suspensión poliméricas
-    for px_iso in [cx - 32.0, cx, cx + 32.0]:
-        msp.add_lwpolyline([(px_iso, cy_c + 4.0), (px_iso, cy_c + 18.0)], dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-        msp.add_circle((px_iso, cy_c + 11.0), radius=2.5, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-        msp.add_circle((px_iso, cy_c + 18.0), radius=1.5, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    # Cadenas de suspensión polimérica
+    for px_iso in [cx - 25.0, cx, cx + 25.0]:
+        msp.add_line((px_iso, cy_c), (px_iso + 14.0, cy_c), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
+        msp.add_circle((px_iso + 8.0, cy_c), radius=2.5, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
+        msp.add_circle((px_iso + 14.0, cy_c), radius=1.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
 
-    # Doble retenida inclinada contraviento
-    msp.add_line((cx, cy_c - 5.0), (cx - 65.0, y0 + 50.0),
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'linetype': 'DASHED', 'color': colors.MAGENTA})
-    msp.add_circle((cx - 65.0, y0 + 50.0), radius=4.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.MAGENTA})
-    msp.add_text("Retenida Inclinada Pesada 5/16\"", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'insert': (cx - 75.0, y0 + 115.0), 'color': colors.MAGENTA})
+    # Retenida pesada
+    msp.add_line((cx, cy_c), (cx - 50.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.MAGENTA})
+    msp.add_circle((cx - 30.0, y0 + 90.0), radius=2.2, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
 
     items_pr3 = [
         (1, "Poste C.A.C. 13.0 m / 400 daN (o 13/600 cruce río)", "1 und"),
@@ -199,50 +264,38 @@ def dibujar_detalle_pr3(msp, x0, y0, w, h):
         (7, "Aislador de tracción polimérico de 15 kV", "2 und"),
         (8, "Varilla de ancla F°G° 5/8\" x 2.0 m con bloque conc.", "2 jgo")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_pr3)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_pr3)
 
-def dibujar_detalle_sab(msp, x0, y0, w, h):
+def dibujar_detalle_sab(doc, msp, x0, y0, w, h, img_path):
     """Lámina de Subestación Aérea Biposte (SAB 10/0.38-0.22 kV)."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "SUBESTACIÓN SAB", "SUBESTACIÓN AÉREA BIPOSTE 10 / 0.38-0.22 kV (50 kVA Y 100 kVA)")
-    cx = x0 + 80.0
-    # Dos postes CAC 13m / 400 daN separados 2.0m escala (cx - 20, cx + 20)
-    for px_p in [cx - 20.0, cx + 20.0]:
-        msp.add_lwpolyline([(px_p - 3.8, y0 + 30.0), (px_p + 3.8, y0 + 30.0), (px_p + 2.0, y0 + 210.0), (px_p - 2.0, y0 + 210.0), (px_p - 3.8, y0 + 30.0)],
+    dibujar_marco_detalle(msp, x0, y0, w, h, "SUBESTACIÓN SAB", "SUBESTACIÓN AÉREA BIPOSTE 10 / 0.38-0.22 kV (50 kVA Y 100 kVA)", "R.D. N° 024-2003-EM/DGE LÁMINA 064(1/2)")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
+
+    cx = x0 + 235.0
+    for px_p in [cx - 18.0, cx + 18.0]:
+        msp.add_lwpolyline([(px_p - 3.2, y0 + 25.0), (px_p + 3.2, y0 + 25.0), (px_p + 1.8, y0 + 175.0), (px_p - 1.8, y0 + 175.0), (px_p - 3.2, y0 + 25.0)],
                            dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    msp.add_line((cx - 45.0, y0 + 50.0), (cx + 45.0, y0 + 50.0),
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    msp.add_line((cx - 35.0, y0 + 40.0), (cx + 35.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
 
-    # Plataforma de perfiles UPN 120 (a Y = y0 + 120)
-    py_plat = y0 + 120.0
-    msp.add_lwpolyline([(cx - 30.0, py_plat - 3.0), (cx + 30.0, py_plat - 3.0), (cx + 30.0, py_plat + 3.0), (cx - 30.0, py_plat + 3.0), (cx - 30.0, py_plat - 3.0)],
+    # Plataforma UPN 120
+    py_plat = y0 + 105.0
+    msp.add_lwpolyline([(cx - 26.0, py_plat - 2.5), (cx + 26.0, py_plat - 2.5), (cx + 26.0, py_plat + 2.5), (cx - 26.0, py_plat + 2.5), (cx - 26.0, py_plat - 2.5)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    # Transformador dyn5 (rectángulo 24 x 20)
-    msp.add_lwpolyline([(cx - 12.0, py_plat + 3.0), (cx + 12.0, py_plat + 3.0), (cx + 12.0, py_plat + 23.0), (cx - 12.0, py_plat + 23.0), (cx - 12.0, py_plat + 3.0)],
+    # Transformador
+    msp.add_lwpolyline([(cx - 10.0, py_plat + 2.5), (cx + 10.0, py_plat + 2.5), (cx + 10.0, py_plat + 20.0), (cx - 10.0, py_plat + 20.0), (cx - 10.0, py_plat + 2.5)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
-    msp.add_circle((cx, py_plat + 13.0), radius=5.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
-    msp.add_text("TRAFO dyn5\n50/100 kVA", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'insert': (cx - 8.0, py_plat + 12.0), 'color': colors.YELLOW})
+    msp.add_circle((cx, py_plat + 11.0), radius=4.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
 
-    # Cruceta de seccionamiento y pararrayos (a Y = y0 + 200)
-    py_sec = y0 + 200.0
-    msp.add_lwpolyline([(cx - 35.0, py_sec - 2.5), (cx + 35.0, py_sec - 2.5), (cx + 35.0, py_sec + 2.5), (cx - 35.0, py_sec + 2.5), (cx - 35.0, py_sec - 2.5)],
-                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    for px_s in [cx - 18.0, cx, cx + 18.0]:
-        msp.add_line((px_s, py_sec + 2.5), (px_s, py_sec + 12.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-        msp.add_circle((px_s, py_sec + 13.0), radius=2.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
+    # Seccionamiento cut-out y pararrayos
+    py_sec = y0 + 165.0
+    msp.add_line((cx - 30.0, py_sec), (cx + 30.0, py_sec), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
+    for px_s in [cx - 14.0, cx, cx + 14.0]:
+        msp.add_line((px_s, py_sec), (px_s, py_sec + 8.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
+        msp.add_circle((px_s, py_sec + 9.0), radius=1.5, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
 
-    # Tablero BT en poste derecho (a Y = y0 + 80)
-    msp.add_lwpolyline([(cx + 16.0, y0 + 75.0), (cx + 26.0, y0 + 75.0), (cx + 26.0, y0 + 95.0), (cx + 16.0, y0 + 95.0), (cx + 16.0, y0 + 75.0)],
+    # Tablero BT
+    msp.add_lwpolyline([(cx + 15.0, y0 + 65.0), (cx + 25.0, y0 + 65.0), (cx + 25.0, y0 + 82.0), (cx + 15.0, y0 + 82.0), (cx + 15.0, y0 + 65.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.CYAN})
-    msp.add_text("TABLERO BT IP54\nMCCB 100A/160A", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx + 17.0, y0 + 84.0), 'color': colors.CYAN})
-
-    # Doble pozo de puesta a tierra PAT
-    msp.add_line((cx - 20.0, y0 + 50.0), (cx - 35.0, y0 + 25.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'linetype': 'DASHED', 'color': colors.GREEN})
-    msp.add_circle((cx - 35.0, y0 + 25.0), radius=3.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
-    msp.add_text("PAT-1 Protección (R<=10 Ohm)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.4, 'insert': (cx - 65.0, y0 + 22.0), 'color': colors.GREEN})
-
-    msp.add_line((cx + 20.0, y0 + 50.0), (cx + 35.0, y0 + 25.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'linetype': 'DASHED', 'color': colors.GREEN})
-    msp.add_circle((cx + 35.0, y0 + 25.0), radius=3.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
-    msp.add_text("PAT-2 Neutro (R<=5 Ohm)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.4, 'insert': (cx + 38.0, y0 + 22.0), 'color': colors.GREEN})
 
     items_sab = [
         (1, "Poste C.A.C. 13.0 m / 400 daN (estructura biposte)", "2 und"),
@@ -254,34 +307,26 @@ def dibujar_detalle_sab(msp, x0, y0, w, h):
         (7, "Cable de energía N2XOH 0.6/1 kV en tubo F°G° 2\"", "15 m"),
         (8, "Sistema PAT doble (2 pozos, varillas Cu 5/8\"x2.4m)", "2 jgo")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_sab)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_sab)
 
-def dibujar_detalle_bt_ap(msp, x0, y0, w, h):
-    """Lámina de Red Secundaria BT y Alumbrado Público LED."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "RED SECUNDARIA Y AP", "RED SECUNDARIA CAAI 380/220 V Y ALUMBRADO PÚBLICO LED 50 W", "R.D. N° 016-2003-EM/DGE")
-    cx = x0 + 80.0
-    # Poste CAC 9m / 300 daN
-    msp.add_lwpolyline([(cx - 3.2, y0 + 30.0), (cx + 3.2, y0 + 30.0), (cx + 1.6, y0 + 185.0), (cx - 1.6, y0 + 185.0), (cx - 3.2, y0 + 30.0)],
+def dibujar_detalle_bt_ap(doc, msp, x0, y0, w, h, img_path):
+    """Lámina de Red Secundaria BT Autoportante y Alumbrado Público LED."""
+    dibujar_marco_detalle(msp, x0, y0, w, h, "RED SECUNDARIA BT Y AP", "RED AÉREA CAAI 380/220 V Y ALUMBRADO PÚBLICO LED 50 W", "R.D. N° 023-2003-EM/DGE LÁMINA 001")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
+
+    cx = x0 + 235.0
+    msp.add_lwpolyline([(cx - 2.8, y0 + 25.0), (cx + 2.8, y0 + 25.0), (cx + 1.4, y0 + 155.0), (cx - 1.4, y0 + 155.0), (cx - 2.8, y0 + 25.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    msp.add_line((cx - 20.0, y0 + 50.0), (cx + 20.0, y0 + 50.0),
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    msp.add_line((cx - 20.0, y0 + 40.0), (cx + 20.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
 
-    # Cable autoportante CAAI a Y = y0 + 175
-    py_c = y0 + 175.0
-    msp.add_line((cx - 35.0, py_c), (cx + 35.0, py_c), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
-    msp.add_circle((cx, py_c), radius=2.2, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
-    msp.add_text("Cable CAAI 3x35+1x16+NA25", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'insert': (cx - 40.0, py_c + 4.0), 'color': colors.GREEN})
+    py_c = y0 + 145.0
+    msp.add_line((cx - 30.0, py_c), (cx + 30.0, py_c), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
+    msp.add_circle((cx, py_c), radius=2.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
 
-    # Pastoral y luminaria LED 50W
-    msp.add_line((cx, py_c + 2.0), (cx + 25.0, py_c + 12.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': 30})
-    msp.add_line((cx + 25.0, py_c + 12.0), (cx + 30.0, py_c + 8.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': 30})
-    msp.add_lwpolyline([(cx + 28.0, py_c + 6.0), (cx + 36.0, py_c + 6.0), (cx + 36.0, py_c + 10.0), (cx + 28.0, py_c + 10.0), (cx + 28.0, py_c + 6.0)],
+    # Pastoral y luminaria LED
+    msp.add_line((cx, py_c + 2.0), (cx + 22.0, py_c + 10.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': 30})
+    msp.add_lwpolyline([(cx + 22.0, py_c + 7.0), (cx + 30.0, py_c + 7.0), (cx + 30.0, py_c + 11.0), (cx + 22.0, py_c + 11.0), (cx + 22.0, py_c + 7.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
-    msp.add_text("Luminaria LED 50 W (>=6,500 lm, IP66)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx + 10.0, py_c + 15.0), 'color': 30})
-
-    # Regla de vano máximo
-    msp.add_text("VANO REGLAMENTARIO CNE: L <= 35.0 m (Promedio 30-32 m)",
-                 dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 3.2, 'insert': (cx - 40.0, y0 + 130.0), 'color': colors.CYAN})
 
     items_bt = [
         (1, "Poste C.A.C. 9.0 m / 300 daN (troncales y AP)", "1 und"),
@@ -290,58 +335,88 @@ def dibujar_detalle_bt_ap(msp, x0, y0, w, h):
         (4, "Abrazadera de pletina F°G° 2 vías de fijación", "1 jgo"),
         (5, "Pastoral de tubo de acero F°G° 1.5\" x 1.50 m", "1 und"),
         (6, "Luminaria de alumbrado público LED 50 W IP66", "1 und"),
-        (7, "Conector bimetálico tipo cuña o perno partido", "4 und"),
+        (7, "Conector bimetálico tipo cuña perforación", "4 und"),
         (8, "Cinta de acero inoxidable Band-It con hebillas", "2 m")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_bt)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_bt)
 
-def dibujar_detalle_retenida(msp, x0, y0, w, h):
-    """Lámina de Detalle de Retenida Inclinada y Anclaje."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "RETENIDA MECÁNICA", "RETENIDA INCLINADA Y CONTRAVIENTO CON BLOQUE DE ANCLAJE", "CNE REGLA 261")
-    cx = x0 + 80.0
-    # Poste y retenida
-    msp.add_line((cx, y0 + 190.0), (cx + 70.0, y0 + 60.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.MAGENTA})
-    # Aislador de tracción (nuez) a Y = y0 + 140
-    msp.add_circle((cx + 27.0, y0 + 140.0), radius=3.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-    msp.add_text("Aislador de Tracción 15 kV (Huevo)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx + 32.0, y0 + 145.0), 'color': colors.RED})
+def dibujar_detalle_retenida(doc, msp, x0, y0, w, h, img_path):
+    """Lámina de Detalle de Retenida Inclinada Normalizada (CNE Regla 261 / DGE RD 024 Lám 074)."""
+    dibujar_marco_detalle(msp, x0, y0, w, h, "RETENIDA INCLINADA", "DETALLE TÉCNICO DE RETENIDA INCLINADA Y ELEMENTOS DE ANCLAJE", "R.D. N° 024-2003-EM/DGE LÁMINA 074 / RD 023 LÁM 014")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
 
-    # Varilla y bloque de concreto
-    msp.add_line((cx + 70.0, y0 + 60.0), (cx + 85.0, y0 + 35.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    msp.add_lwpolyline([(cx + 75.0, y0 + 20.0), (cx + 95.0, y0 + 20.0), (cx + 95.0, y0 + 35.0), (cx + 75.0, y0 + 35.0), (cx + 75.0, y0 + 20.0)],
-                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
-    msp.add_text("Bloque de Concreto 0.50x0.50x0.30 m\nProfundidad h = 1.80 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx + 40.0, y0 + 15.0), 'color': colors.YELLOW})
+    cx = x0 + 215.0
+    # Poste de concreto
+    msp.add_lwpolyline([(cx - 3.2, y0 + 25.0), (cx + 3.2, y0 + 25.0), (cx + 1.6, y0 + 165.0), (cx - 1.6, y0 + 165.0), (cx - 3.2, y0 + 25.0)],
+                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
+    # Línea de suelo
+    msp.add_line((cx - 20.0, y0 + 40.0), (cx + 80.0, y0 + 40.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    msp.add_text("Nivel de Terreno Natural (+- 0.00)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.4, 'insert': (cx + 25.0, y0 + 42.0), 'color': colors.YELLOW})
+
+    # Abrazadera en cabeza de poste
+    cy_a = y0 + 155.0
+    msp.add_lwpolyline([(cx - 4.5, cy_a - 1.5), (cx + 4.5, cy_a - 1.5), (cx + 4.5, cy_a + 1.5), (cx - 4.5, cy_a + 1.5), (cx - 4.5, cy_a - 1.5)],
+                       dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
+    msp.add_text("Abrazadera platina 50x6 mm", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.0, 'insert': (cx - 38.0, cy_a - 1.0), 'color': colors.WHITE})
+
+    # Cable de acero inclinación 45°
+    px_ancla = cx + 55.0
+    py_ancla = y0 + 40.0
+    msp.add_line((cx, cy_a), (px_ancla, py_ancla), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.MAGENTA})
+
+    # Aislador de tracción / nuez de porcelana ANSI 54-1 (altura >= 3.0m)
+    p_iso = (cx + 25.0, y0 + 95.0)
+    msp.add_circle(p_iso, radius=2.5, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    msp.add_text("Aislador tracción 54-1 (H >= 3.0 m)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (p_iso[0] + 4.0, p_iso[1]), 'color': colors.YELLOW})
+
+    # Protector de retenida (tubo PVC amarillo 1.80m)
+    p_t1 = (px_ancla - 16.0, py_ancla + 16.0)
+    pl_prot = msp.add_lwpolyline([p_t1, (px_ancla, py_ancla)], dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
+    pl_prot.dxf.const_width = 1.0
+    msp.add_text("Tubo PVC amarillo 1.80 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.0, 'insert': (px_ancla - 12.0, py_ancla + 20.0), 'color': colors.YELLOW})
+
+    # Varilla de ancla y bloque de concreto
+    p_b_c = (px_ancla + 14.0, py_ancla - 14.0)
+    msp.add_line((px_ancla, py_ancla), p_b_c, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
+    msp.add_lwpolyline([
+        (p_b_c[0] - 6.0, p_b_c[1] - 4.0), (p_b_c[0] + 6.0, p_b_c[1] - 4.0),
+        (p_b_c[0] + 6.0, p_b_c[1] + 4.0), (p_b_c[0] - 6.0, p_b_c[1] + 4.0),
+        (p_b_c[0] - 6.0, p_b_c[1] - 4.0)
+    ], dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.MAGENTA})
+    msp.add_text("Bloque CAV 0.50x0.50x0.20 m (h = 1.80 m)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.0, 'insert': (p_b_c[0] - 25.0, p_b_c[1] - 8.0), 'color': colors.MAGENTA})
+    msp.add_text("Ángulo de tiro: 45°", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (px_ancla + 8.0, py_ancla + 5.0), 'color': colors.CYAN})
 
     items_ret = [
         (1, "Cable de acero Siemens Martin 5/16\" (7 hilos)", "25 m"),
-        (2, "Aislador de tracción polimérico/porcelana 15 kV", "1 und"),
-        (3, "Varilla de ancla F°G° 5/8\" x 2.0 m con ojal guardac.", "1 und"),
-        (4, "Bloque de anclaje de concreto ciclópeo 0.5x0.5m", "1 und"),
-        (5, "Grapas prensacables de acero forjado 5/16\"", "6 und"),
+        (2, "Aislador de tracción de porcelana clase ANSI 54-1", "1 und"),
+        (3, "Varilla de ancla F°G° 5/8\" x 2.0 m con ojo guardac.", "1 und"),
+        (4, "Bloque de anclaje de concreto CAV 0.50x0.50x0.20m", "1 und"),
+        (5, "Grapas prensacables de acero forjado 5/16\" (3 p.)", "6 und"),
         (6, "Guardacabo de acero forjado galvanizado 5/16\"", "2 und"),
-        (7, "Perno de ojo o abrazadera p/poste de concreto", "1 und"),
+        (7, "Abrazadera partida de platina F°G° 50x6 mm", "1 jgo"),
         (8, "Protector de retenida en tubo PVC amarillo 1.8m", "1 und")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_ret)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_ret)
 
-def dibujar_detalle_pat(msp, x0, y0, w, h):
+def dibujar_detalle_pat(doc, msp, x0, y0, w, h, img_path):
     """Lámina de Detalle de Pozo de Puesta a Tierra (PAT)."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "PUESTA A TIERRA (PAT)", "POZO DE PUESTA A TIERRA VERTICAL NORMALIZADO DGE", "CNE SECCIÓN 060")
-    cx = x0 + 80.0
-    # Pozo excavado (0.80 m x 2.60 m)
-    msp.add_lwpolyline([(cx - 20.0, y0 + 30.0), (cx + 20.0, y0 + 30.0), (cx + 20.0, y0 + 130.0), (cx - 20.0, y0 + 130.0), (cx - 20.0, y0 + 30.0)],
+    dibujar_marco_detalle(msp, x0, y0, w, h, "PUESTA A TIERRA (PAT)", "POZO VERTICAL DE PUESTA A TIERRA CON TRATAMIENTO QUÍMICO", "R.D. N° 024-2003-EM/DGE LÁMINA 077 / RD 023 LÁM 012")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
+
+    cx = x0 + 235.0
+    # Pozo excavado 0.80 x 2.60 m
+    msp.add_lwpolyline([(cx - 16.0, y0 + 20.0), (cx + 16.0, y0 + 20.0), (cx + 16.0, y0 + 115.0), (cx - 16.0, y0 + 115.0), (cx - 16.0, y0 + 20.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
-    msp.add_text("Pozo de Tierra D = 0.80 m x H = 2.60 m\nRelleno con Tierra Vegetal + Bentonita", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx - 45.0, y0 + 15.0), 'color': colors.YELLOW})
-
-    # Caja de registro de concreto (0.40 x 0.40 m) a Y = y0 + 130
-    msp.add_lwpolyline([(cx - 15.0, y0 + 130.0), (cx + 15.0, y0 + 130.0), (cx + 15.0, y0 + 150.0), (cx - 15.0, y0 + 150.0), (cx - 15.0, y0 + 130.0)],
+    # Caja registro de concreto 0.40 x 0.40 m
+    msp.add_lwpolyline([(cx - 12.0, y0 + 115.0), (cx + 12.0, y0 + 115.0), (cx + 12.0, y0 + 130.0), (cx - 12.0, y0 + 130.0), (cx - 12.0, y0 + 115.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    msp.add_text("Caja Registro 0.40x0.40 m c/Tapa", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx - 18.0, y0 + 154.0), 'color': colors.WHITE})
-
     # Electrodo Copperweld 5/8" x 2.40 m
-    msp.add_line((cx, y0 + 40.0), (cx, y0 + 140.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
-    msp.add_circle((cx, y0 + 138.0), radius=2.5, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
-    msp.add_text("Conector AB Bronce", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.4, 'insert': (cx + 4.0, y0 + 138.0), 'color': colors.GREEN})
-    msp.add_text("Electrodo Copperweld 5/8\" x 2.40 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx + 4.0, y0 + 85.0), 'color': colors.RED})
+    msp.add_line((cx, y0 + 25.0), (cx, y0 + 125.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.RED})
+    msp.add_circle((cx, y0 + 122.0), radius=2.0, dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.GREEN})
+
+    msp.add_text("Caja Registro 0.40x0.40 m c/Tapa", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx - 15.0, y0 + 133.0), 'color': colors.WHITE})
+    msp.add_text("Electrodo Copperweld 5/8\" x 2.40 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx + 4.0, y0 + 75.0), 'color': colors.RED})
+    msp.add_text("Tratamiento: Bentonita + Thor-Gel", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx - 20.0, y0 + 10.0), 'color': colors.YELLOW})
 
     items_pat = [
         (1, "Electrodo de cobre Copperweld 5/8\" x 2.40 m", "1 und"),
@@ -353,38 +428,38 @@ def dibujar_detalle_pat(msp, x0, y0, w, h):
         (7, "Dosis de sales electrolíticas Thor-Gel / Lab-Gel", "1 dosis"),
         (8, "Tierra de chacra cernida para relleno compactado", "1.5 m³")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_pat)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_pat)
 
-def dibujar_detalle_acometida(msp, x0, y0, w, h):
-    """Lámina de Detalle de Acometida Domiciliaria y Caja Portamedidor L-T."""
-    dibujar_marco_detalle(msp, x0, y0, w, h, "ACOMETIDA DOMICILIARIA", "ACOMETIDA AÉREA Y CAJA PORTAMEDIDOR TIPO L-T (MONOFÁSICA/TRIFÁSICA)", "NORMA DGE CONEXIONES")
-    cx = x0 + 80.0
-    # Muro de fachada predial
-    msp.add_lwpolyline([(cx + 15.0, y0 + 30.0), (cx + 35.0, y0 + 30.0), (cx + 35.0, y0 + 170.0), (cx + 15.0, y0 + 170.0), (cx + 15.0, y0 + 30.0)],
+def dibujar_detalle_acometida(doc, msp, x0, y0, w, h, img_path):
+    """Lámina de Detalle de Acometida Domiciliaria Monofásica."""
+    dibujar_marco_detalle(msp, x0, y0, w, h, "ACOMETIDAS DOMICILIARIAS", "ACOMETIDA AÉREA CON CABLE CONCÉNTRICO Y CAJA TIPO L-T", "R.D. N° 023-2003-EM/DGE LÁMINAS 007 Y 008")
+    incrustar_imagen_norma(doc, msp, img_path, x0, y0)
+
+    cx = x0 + 235.0
+    # Fachada predial
+    msp.add_lwpolyline([(cx + 12.0, y0 + 25.0), (cx + 28.0, y0 + 25.0), (cx + 28.0, y0 + 145.0), (cx + 12.0, y0 + 145.0), (cx + 12.0, y0 + 25.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.WHITE})
-    msp.add_text("Fachada del Predio", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.8, 'insert': (cx + 16.0, y0 + 175.0), 'color': colors.WHITE})
-
-    # Caja portamedidor L-T en fachada (Y = y0 + 80 a 115)
-    msp.add_lwpolyline([(cx + 16.0, y0 + 80.0), (cx + 30.0, y0 + 80.0), (cx + 30.0, y0 + 115.0), (cx + 16.0, y0 + 115.0), (cx + 16.0, y0 + 80.0)],
+    # Caja portamedidor L-T
+    msp.add_lwpolyline([(cx + 13.0, y0 + 65.0), (cx + 25.0, y0 + 65.0), (cx + 25.0, y0 + 95.0), (cx + 13.0, y0 + 95.0), (cx + 13.0, y0 + 65.0)],
                        dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.YELLOW})
-    msp.add_text("CAJA L-T\nMedidor", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx + 18.0, y0 + 95.0), 'color': colors.YELLOW})
+    # Cable concéntrico SET
+    msp.add_line((cx - 30.0, y0 + 135.0), (cx + 16.0, y0 + 120.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.CYAN})
+    msp.add_line((cx + 16.0, y0 + 120.0), (cx + 16.0, y0 + 95.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.CYAN})
 
-    # Acometida aérea concéntrica desde red BT
-    msp.add_line((cx - 40.0, y0 + 160.0), (cx + 20.0, y0 + 140.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.CYAN})
-    msp.add_line((cx + 20.0, y0 + 140.0), (cx + 20.0, y0 + 115.0), dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'color': colors.CYAN})
-    msp.add_text("Cable Concéntrico SET 2x6 mm²\nVano acometida <= 25.0 m", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.6, 'insert': (cx - 40.0, y0 + 145.0), 'color': colors.CYAN})
+    msp.add_text("Caja L-T (h = 1.40 m)", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx + 14.0, y0 + 80.0), 'color': colors.YELLOW})
+    msp.add_text("Cable Concéntrico SET 2x4 mm²", dxfattribs={'layer': '10_DETALLES_ESTRUCTURAS_DGE', 'height': 2.2, 'insert': (cx - 30.0, y0 + 125.0), 'color': colors.CYAN})
 
     items_acom = [
-        (1, "Caja portamedidor monofásica tipo L-T reforzada", "1 und"),
-        (2, "Medidor de energía electrónico digital homologado", "1 und"),
-        (3, "Interruptor termomagnético bipolar 2x16A 6kA", "1 und"),
-        (4, "Cable concéntrico de cobre tipo SET 2x6 mm²", "15 m"),
-        (5, "Mástil soporte de acometida F°G° 1\" x 2.0 m", "1 und"),
-        (6, "Conector bimetálico perforación p/red secundaria", "2 und"),
-        (7, "Accesorios de fijación, grapa de acometida y cáncamo", "1 jgo"),
-        (8, "Puesta a tierra domiciliaria con varilla 1/2\"x1.5m", "1 jgo")
+        (1, "Caja portamedidor monofásica tipo L-T policarbonato", "1 und"),
+        (2, "Medidor estático monofásico 220 V, 5(60) A, Cl. 1", "1 und"),
+        (3, "Interruptor termomagnético bipolar 2x16A 6kA Curva C", "1 und"),
+        (4, "Cable concéntrico de cobre tipo SET 2x4 mm²", "15 m"),
+        (5, "Mástil soporte de acometida tubo F°G° 1\" x 2.5 m", "1 und"),
+        (6, "Conector bimetálico tipo cuña de perforación a red", "2 und"),
+        (7, "Accesorios de fijación, cáncamos y mordaza cónica", "1 jgo"),
+        (8, "Puesta a tierra de protección con varilla Cu 1/2\"x1.5m", "1 jgo")
     ]
-    dibujar_tabla_materiales(msp, x0 + 155.0, y0 + h - 40.0, items_acom)
+    dibujar_tabla_materiales(msp, x0 + 160.0, y0 + 105.0, items_acom)
 
 # -------------------------------------------------------------------------
 # FUNCIÓN PRINCIPAL DE GENERACIÓN
@@ -395,6 +470,7 @@ def main():
     out_dxf = os.path.join(base_dir, "entregables", "planos", "catastro_limbani_redes_electricas.dxf")
     out_dwg = os.path.join(base_dir, "entregables", "planos", "catastro_limbani_redes_electricas.dwg")
     fig_dir = os.path.join(base_dir, "expediente", "figuras")
+    normas_dir = os.path.join(fig_dir, "normas_dge")
     
     out_img_gen = os.path.join(fig_dir, "07_redes_electricas_detalladas_catastro.png")
     out_img_norte = os.path.join(fig_dir, "08_zoom_norte_hidroelectrica_sed01.png")
@@ -409,9 +485,7 @@ def main():
     doc = ezdxf.readfile(dxf_orig)
     msp = doc.modelspace()
 
-    # -------------------------------------------------------------
-    # CONFIGURAR CÁMARA Y ENCUADRE AUTOMÁTICO EN EL MODEL SPACE Y LAYOUT
-    # -------------------------------------------------------------
+    # Configuración de encuadre
     cx = 425600.0
     cy = 8435600.0
     view_h = 2650.0
@@ -438,35 +512,61 @@ def main():
     except Exception as e:
         print("[!] Nota sobre Layout1:", e)
 
-    # -------------------------------------------------------------
     # 1. CREAR CAPAS ELECTROMECÁNICAS NORMALIZADAS DGE
-    # -------------------------------------------------------------
     capas_def = [
-        ("01_RED_MT_10KV_CONDUCTOR", colors.RED),      # Rojo brillante (AAAC 35 mm2)
+        ("01_RED_MT_10KV_CONDUCTOR", colors.RED),      # Rojo (AAAC 35 mm2)
         ("02_POSTES_MT_10KV", colors.RED),             # Rojo (C.A.C. 12m y 13m)
         ("03_SUBESTACIONES_SED", colors.YELLOW),       # Amarillo (SAB 10/0.38-0.22 kV)
         ("04_RETENIDAS_MT_BT", colors.MAGENTA),        # Magenta (Inclinada y Contraviento)
         ("05_RED_BT_TRONCAL_CAAI", colors.GREEN),      # Verde (CAAI 3x35+1x16+NA25)
         ("06_RED_BT_DERIVACION_CAAI", colors.CYAN),    # Cian (CAAI 2x16+1x16+NA25)
         ("07_POSTES_BT_CAC", colors.BLUE),             # Azul (C.A.C. 8m y 9m)
-        ("08_ALUMBRADO_PUBLICO_LED", 30),              # Naranja / Amarillo (LED 50 W)
+        ("08_ALUMBRADO_PUBLICO_LED", 30),              # Amarillo/Naranja (LED 50 W)
         ("09_CUADRO_LEYENDA_ROTULO", colors.WHITE),    # Blanco
-        ("10_DETALLES_ESTRUCTURAS_DGE", colors.WHITE)  # Blanco / Multicolor (Láminas de detalle)
+        ("10_DETALLES_ESTRUCTURAS_DGE", colors.WHITE), # Multicolor
+        ("11_ACOMETIDAS_DOMICILIARIAS", colors.CYAN),  # Cian (Cable SET 2x4 mm2)
+        ("12_CAJAS_PORTAMEDIDOR_LT", colors.YELLOW)    # Amarillo (Medidor monofásico)
     ]
     for c_name, c_color in capas_def:
         if c_name not in doc.layers:
             doc.layers.new(name=c_name, dxfattribs={'color': c_color})
 
     # -------------------------------------------------------------
-    # 2. EXTRAER VÍAS PARA EL TRAZADO
+    # 2. EXTRAER LOTES Y FILTRAR VÍAS URBANAS (ELIMINAR CARRETERAS INNECESARIAS)
     # -------------------------------------------------------------
-    vias_polys = []
+    lotes_polys = []
+    lote_centers = []
+    for e in msp:
+        if e.dxf.layer == '04_LOTES_PREDIALES' and e.dxftype() == 'LWPOLYLINE':
+            pts = e.get_points('xy')
+            lotes_polys.append(pts)
+            cx_l = sum(p[0] for p in pts) / len(pts)
+            cy_l = sum(p[1] for p in pts) / len(pts)
+            lote_centers.append((cx_l, cy_l))
+
+    print(f"[*] {len(lotes_polys)} lotes prediales catastrados leídos.")
+
+    def dist_to_nearest_lot(pt):
+        if not lote_centers: return 999999.0
+        return min(math.sqrt((lc[0]-pt[0])**2 + (lc[1]-pt[1])**2) for lc in lote_centers)
+
+    vias_urbanas_polys = []
     for e in msp:
         if e.dxf.layer == '02_CALLES_Y_VIAS' and e.dxftype() == 'LWPOLYLINE':
             pts = e.get_points('xy')
-            vias_polys.append(pts)
+            # Segmentar la vía conservando únicamente tramos con predios a <= 35.0 m
+            sub = []
+            for p in pts:
+                if dist_to_nearest_lot(p) <= 35.0:
+                    sub.append(p)
+                else:
+                    if len(sub) >= 2:
+                        vias_urbanas_polys.append(sub)
+                    sub = []
+            if len(sub) >= 2:
+                vias_urbanas_polys.append(sub)
 
-    print(f"[*] {len(vias_polys)} vías catastrales listas para electrificación.")
+    print(f"[*] {len(vias_urbanas_polys)} tramos viales urbanos consolidados con predios (carreteras no pobladas descartadas).")
 
     # -------------------------------------------------------------
     # 3. LÍNEA PRIMARIA MEDIA TENSIÓN 10 kV (24 APOYOS / 26 POSTES)
@@ -535,7 +635,7 @@ def main():
             t_s2.dxf.insert = (px + 11.0, py - 4.0)
             total_postes_mt_cac13_400 += 2
         else:
-            # SÍMBOLO NORMALIZADO DGE 09-91-20 (Poste de Concreto MT con cruz de material "C")
+            # SÍMBOLO NORMALIZADO DGE 09-91-20 (Poste de Concreto MT)
             msp.add_circle((px, py), radius=3.5, dxfattribs={'layer': '02_POSTES_MT_10KV', 'color': colors.RED})
             msp.add_line((px - 3.5, py), (px + 3.5, py), dxfattribs={'layer': '02_POSTES_MT_10KV', 'color': colors.RED})
             msp.add_line((px, py - 3.5), (px, py + 3.5), dxfattribs={'layer': '02_POSTES_MT_10KV', 'color': colors.RED})
@@ -551,11 +651,10 @@ def main():
             total_ret_mt += 1
             dx_ret, dy_ret = (8.0, 6.0) if px < 425500 else (-8.0, -6.0)
             p_ancla = (px + dx_ret, py + dy_ret)
-            msp.add_line((px, py), p_ancla, dxfattribs={'layer': '04_RETENIDAS_MT_BT', 'linetype': 'DASHED', 'color': colors.MAGENTA})
-            msp.add_circle(p_ancla, radius=1.5, dxfattribs={'layer': '04_RETENIDAS_MT_BT', 'color': colors.MAGENTA})
+            agregar_simbolo_retenida_cad(msp, (px, py), p_ancla, layer='04_RETENIDAS_MT_BT', label="RET-MT")
 
     # -------------------------------------------------------------
-    # 4. REDES DE BAJA TENSIÓN CON VANOS REGLAMENTARIOS (<= 32 METROS)
+    # 4. REDES DE BAJA TENSIÓN EN CASCO URBANO (VANOS <= 30 M)
     # -------------------------------------------------------------
     postes_bt_coords = []
     lineas_bt_segmentos = []
@@ -565,13 +664,13 @@ def main():
     total_cac_8_200 = 0
     total_cac_8_300 = 0
     total_cac_9_300 = 0
+    longitud_troncal_bt = 0.0
+    longitud_derivacion_bt = 0.0
 
-    # Vano máximo regulatorio estricto para redes autoportantes CAAI en zonas urbanas
-    vano_max_reglamentario = 32.0  # metros (Garantiza vanos <= 35m conforme al CNE)
+    vano_max_reglamentario = 30.0  # metros (CNE Suministro Regla 232 / Tabla 232-1)
 
-    for v_pts in vias_polys:
-        if len(v_pts) < 2:
-            continue
+    for v_pts in vias_urbanas_polys:
+        if len(v_pts) < 2: continue
         v_segs = []
         v_len = 0
         for k in range(len(v_pts) - 1):
@@ -579,8 +678,7 @@ def main():
             v_segs.append((v_pts[k], v_pts[k+1], d, v_len))
             v_len += d
 
-        if v_len < 20.0:
-            continue
+        if v_len < 10.0: continue
 
         num_tramos = max(1, math.ceil(v_len / vano_max_reglamentario))
         step = v_len / num_tramos
@@ -595,10 +693,13 @@ def main():
                     pts_via_red.append(pt)
                     break
 
-        is_troncal = (v_len > 700.0)
+        is_troncal = (v_len > 400.0)
         c_layer = '05_RED_BT_TRONCAL_CAAI' if is_troncal else '06_RED_BT_DERIVACION_CAAI'
         c_color = colors.GREEN if is_troncal else colors.CYAN
         c_width = 1.2 if is_troncal else 0.8
+
+        if is_troncal: longitud_troncal_bt += v_len
+        else: longitud_derivacion_bt += v_len
 
         for k in range(len(pts_via_red) - 1):
             pl_bt = msp.add_lwpolyline([pts_via_red[k], pts_via_red[k+1]],
@@ -621,7 +722,7 @@ def main():
             else:
                 p_tipo = "CAC 8/200"
                 total_cac_8_200 += 1
-                has_ap = (k % 2 == 0 and total_luminarias < 165)
+                has_ap = (k % 2 == 0)
 
             # SÍMBOLO NORMALIZADO DGE 09-91-20 (Poste BT)
             msp.add_circle(pt, radius=2.0, dxfattribs={'layer': '07_POSTES_BT_CAC', 'color': colors.BLUE})
@@ -629,11 +730,11 @@ def main():
             postes_bt_coords.append((f"P-{p_idx:03d}", pt[0], pt[1], p_tipo, has_ap))
 
             if p_idx % 2 == 1:
-                t_pbt = msp.add_text(f"P-{p_idx}", dxfattribs={'layer': '07_POSTES_BT_CAC', 'height': 2.5, 'color': colors.BLUE})
-                t_pbt.dxf.insert = (pt[0] + 2.5, pt[1] + 1.0)
+                t_pbt = msp.add_text(f"P-{p_idx}", dxfattribs={'layer': '07_POSTES_BT_CAC', 'height': 2.4, 'color': colors.BLUE})
+                t_pbt.dxf.insert = (pt[0] + 2.4, pt[1] + 1.0)
 
             # SÍMBOLO NORMALIZADO DGE 09-91-24 (Luminaria AP LED 50W)
-            if has_ap and total_luminarias < 165:
+            if has_ap:
                 total_luminarias += 1
                 p_lum = (pt[0] + 3.0, pt[1] + 2.5)
                 msp.add_line(pt, p_lum, dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': 30})
@@ -641,63 +742,93 @@ def main():
                 msp.add_line((p_lum[0]-0.8, p_lum[1]-0.8), (p_lum[0]+0.8, p_lum[1]+0.8), dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': 30})
                 msp.add_line((p_lum[0]-0.8, p_lum[1]+0.8), (p_lum[0]+0.8, p_lum[1]-0.8), dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': 30})
 
-            # Retenida BT en terminales
+            # Símbolo normalizado de Retenida BT en terminales
             if is_end:
                 total_ret_bt += 1
-                p_ret = (pt[0] - 5.0, pt[1] - 4.0)
-                msp.add_line(pt, p_ret, dxfattribs={'layer': '04_RETENIDAS_MT_BT', 'linetype': 'DASHED', 'color': colors.MAGENTA})
-                msp.add_circle(p_ret, radius=1.0, dxfattribs={'layer': '04_RETENIDAS_MT_BT', 'color': colors.MAGENTA})
+                p_ret = (pt[0] - 5.5, pt[1] - 4.5)
+                agregar_simbolo_retenida_cad(msp, pt, p_ret, layer='04_RETENIDAS_MT_BT', label="RET-BT")
 
             p_idx += 1
 
-    # Asegurar exactamente 165 luminarias de alumbrado LED
-    if total_luminarias < 165:
-        faltan = 165 - total_luminarias
-        for p_item in postes_bt_coords:
-            if faltan <= 0: break
-            if not p_item[4]:
-                pt = (p_item[1], p_item[2])
-                p_lum = (pt[0] + 3.0, pt[1] + 2.5)
-                msp.add_line(pt, p_lum, dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': 30})
-                msp.add_circle(p_lum, radius=1.2, dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': 30})
-                total_luminarias += 1
-                faltan -= 1
+    # -------------------------------------------------------------
+    # 5. GENERAR ACOMETIDAS DOMICILIARIAS PARA TODOS LOS LOTES
+    # -------------------------------------------------------------
+    print("[*] Generando acometidas domiciliarias y cajas portamedidor L-T para 587 lotes...")
+    total_acometidas_cortas = 0
+    total_acometidas_largas = 0
+    total_longitud_acometidas = 0.0
+
+    for l_pts in lotes_polys:
+        c_x = sum(p[0] for p in l_pts) / len(l_pts)
+        c_y = sum(p[1] for p in l_pts) / len(l_pts)
+
+        best_dist = 999999.0
+        best_pole = None
+        for pid, px, py, p_tipo, _ in postes_bt_coords:
+            d = math.sqrt((px - c_x)**2 + (py - c_y)**2)
+            if d < best_dist:
+                best_dist = d
+                best_pole = (px, py, pid)
+
+        if best_pole is not None:
+            # Vértice de fachada más cercano al poste
+            v_front = min(l_pts, key=lambda p: math.sqrt((p[0]-best_pole[0])**2 + (p[1]-best_pole[1])**2))
+            d_acom = math.sqrt((v_front[0]-best_pole[0])**2 + (v_front[1]-best_pole[1])**2)
+            total_longitud_acometidas += d_acom
+
+            if d_acom <= 15.0: total_acometidas_cortas += 1
+            else: total_acometidas_largas += 1
+
+            # Cable concéntrico SET 2x4 mm2
+            pl_ac = msp.add_lwpolyline([(best_pole[0], best_pole[1]), (v_front[0], v_front[1])],
+                                       dxfattribs={'layer': '11_ACOMETIDAS_DOMICILIARIAS', 'color': colors.CYAN})
+            pl_ac.dxf.const_width = 0.15
+
+            # Caja portamedidor L-T
+            msp.add_lwpolyline([
+                (v_front[0]-0.5, v_front[1]-0.4),
+                (v_front[0]+0.5, v_front[1]-0.4),
+                (v_front[0]+0.5, v_front[1]+0.4),
+                (v_front[0]-0.5, v_front[1]+0.4),
+                (v_front[0]-0.5, v_front[1]-0.4)
+            ], dxfattribs={'layer': '12_CAJAS_PORTAMEDIDOR_LT', 'color': colors.YELLOW})
 
     # -------------------------------------------------------------
-    # 5. DIBUJAR LOS 8 BLOQUES DE DETALLE CONSTRUCTIVO NORMALIZADO DGE
+    # 6. INCORPORAR LOS 8 BLOQUES DE PLANOS Y DETALLES DGE
     # -------------------------------------------------------------
-    print("[*] Incorporando los 8 bloques de planos y detalles constructivos en el espacio CAD...")
+    print("[*] Incorporando los 8 bloques de planos y detalles constructivos DGE en el espacio CAD...")
+    w_blk = 340.0
+    h_blk = 250.0
+
     # Columna 1 (X = 426800): Armados MT y SAB
     x_c1 = 426800.0
-    w_blk = 330.0
-    h_blk = 260.0
-    dibujar_detalle_ps3(msp, x_c1, 8436500.0, w_blk, h_blk)
-    dibujar_detalle_pa3(msp, x_c1, 8436180.0, w_blk, h_blk)
-    dibujar_detalle_pr3(msp, x_c1, 8435860.0, w_blk, h_blk)
-    dibujar_detalle_sab(msp, x_c1, 8435540.0, w_blk, h_blk)
+    dibujar_detalle_ps3(doc, msp, x_c1, 8436500.0, w_blk, h_blk, os.path.join(normas_dir, "rd024_pag_008.jpg"))
+    dibujar_detalle_pa3(doc, msp, x_c1, 8436180.0, w_blk, h_blk, os.path.join(normas_dir, "rd024_pag_012.jpg"))
+    dibujar_detalle_pr3(doc, msp, x_c1, 8435860.0, w_blk, h_blk, os.path.join(normas_dir, "rd024_pag_024.jpg"))
+    dibujar_detalle_sab(doc, msp, x_c1, 8435540.0, w_blk, h_blk, os.path.join(normas_dir, "rd024_pag_071.jpg"))
 
-    # Columna 2 (X = 427200): BT, Retenida, PAT y Acometida
+    # Columna 2 (X = 427200): BT, Retenida, PAT y Acometidas
     x_c2 = 427200.0
-    dibujar_detalle_bt_ap(msp, x_c2, 8436500.0, w_blk, h_blk)
-    dibujar_detalle_retenida(msp, x_c2, 8436180.0, w_blk, h_blk)
-    dibujar_detalle_pat(msp, x_c2, 8435860.0, w_blk, h_blk)
-    dibujar_detalle_acometida(msp, x_c2, 8435540.0, w_blk, h_blk)
+    dibujar_detalle_bt_ap(doc, msp, x_c2, 8436500.0, w_blk, h_blk, os.path.join(normas_dir, "rd023_pag_04.jpg"))
+    dibujar_detalle_retenida(doc, msp, x_c2, 8436180.0, w_blk, h_blk, os.path.join(normas_dir, "rd024_pag_090.jpg"))
+    dibujar_detalle_pat(doc, msp, x_c2, 8435860.0, w_blk, h_blk, os.path.join(normas_dir, "rd024_pag_094.jpg"))
+    dibujar_detalle_acometida(doc, msp, x_c2, 8435540.0, w_blk, h_blk, os.path.join(normas_dir, "rd023_pag_10.jpg"))
 
     # -------------------------------------------------------------
-    # 6. CUADRO DE LEYENDA Y MEMBRETE EN EL MODEL SPACE
+    # 7. CUADRO DE LEYENDA Y MEMBRETE EN EL MODEL SPACE
     # -------------------------------------------------------------
     lx = 425780.0
     ly = 8435800.0
 
     msp.add_lwpolyline([
-        (lx, ly), (lx + 180.0, ly),
-        (lx + 180.0, ly - 220.0), (lx, ly - 220.0),
+        (lx, ly), (lx + 185.0, ly),
+        (lx + 185.0, ly - 250.0), (lx, ly - 250.0),
         (lx, ly)
     ], dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'color': colors.WHITE})
 
-    t_ltit = msp.add_text("CUADRO DE SIMBOLOGÍA NORMALIZADA DGE", dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'height': 6.0, 'color': colors.WHITE})
+    t_ltit = msp.add_text("CUADRO DE SIMBOLOGÍA NORMALIZADA DGE", dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'height': 5.8, 'color': colors.WHITE})
     t_ltit.dxf.insert = (lx + 8.0, ly - 15.0)
-    msp.add_line((lx + 5.0, ly - 20.0), (lx + 175.0, ly - 20.0), dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'color': colors.WHITE})
+    msp.add_line((lx + 5.0, ly - 20.0), (lx + 180.0, ly - 20.0), dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'color': colors.WHITE})
 
     items_leyenda = [
         ("Línea Primaria 10 kV (AAAC 35 mm2)", colors.RED, "linea"),
@@ -707,7 +838,9 @@ def main():
         ("Red BT Derivación CAAI 2x16+1x16+NA25", colors.CYAN, "linea_bt_der"),
         ("Poste BT CAC (09-91-20 DGE: 8m y 9m)", colors.BLUE, "poste_bt"),
         ("Alumbrado Público LED 50W (09-91-24 DGE)", 30, "ap"),
-        ("Retenida / Anclaje a tierra (09-91-18 DGE)", colors.MAGENTA, "ret")
+        ("Retenida Normalizada (09-91-18 DGE / RD 024)", colors.MAGENTA, "ret"),
+        ("Acometida Domiciliaria (SET 2x4 mm2)", colors.CYAN, "acom"),
+        ("Caja Portamedidor Monofásica L-T", colors.YELLOW, "med")
     ]
 
     curr_y = ly - 35.0
@@ -732,33 +865,46 @@ def main():
             msp.add_circle((lx + 27.5, curr_y), radius=2.0, dxfattribs={'layer': '07_POSTES_BT_CAC', 'color': color_val})
             msp.add_circle((lx + 27.5, curr_y), radius=0.8, dxfattribs={'layer': '07_POSTES_BT_CAC', 'color': color_val})
         elif tipo == "ap":
-            msp.add_circle((lx + 27.5, curr_y), radius=1.8, dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': color_val})
+            msp.add_circle((lx + 27.5, curr_y), radius=2.2, dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': color_val})
+            msp.add_line((lx + 25.0, curr_y), (lx + 30.0, curr_y), dxfattribs={'layer': '08_ALUMBRADO_PUBLICO_LED', 'color': color_val})
         elif tipo == "ret":
-            msp.add_line((lx + 15.0, curr_y), (lx + 35.0, curr_y), dxfattribs={'layer': '04_RETENIDAS_MT_BT', 'linetype': 'DASHED', 'color': color_val})
-            msp.add_circle((lx + 35.0, curr_y), radius=1.5, dxfattribs={'layer': '04_RETENIDAS_MT_BT', 'color': color_val})
+            agregar_simbolo_retenida_cad(msp, (lx + 15.0, curr_y), (lx + 38.0, curr_y), layer='04_RETENIDAS_MT_BT', label="")
+        elif tipo == "acom":
+            pl_ac = msp.add_lwpolyline([(lx + 15.0, curr_y), (lx + 40.0, curr_y)], dxfattribs={'layer': '11_ACOMETIDAS_DOMICILIARIAS', 'color': color_val})
+            pl_ac.dxf.const_width = 0.2
+        elif tipo == "med":
+            msp.add_lwpolyline([(lx + 25.0, curr_y - 2.0), (lx + 30.0, curr_y - 2.0), (lx + 30.0, curr_y + 2.0), (lx + 25.0, curr_y + 2.0), (lx + 25.0, curr_y - 2.0)],
+                               dxfattribs={'layer': '12_CAJAS_PORTAMEDIDOR_LT', 'color': color_val})
 
-        t_desc = msp.add_text(texto, dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'height': 4.2, 'color': colors.WHITE})
-        t_desc.dxf.insert = (lx + 48.0, curr_y - 1.5)
-        curr_y -= 18.0
+        t_desc = msp.add_text(texto, dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'height': 3.2, 'color': colors.WHITE})
+        t_desc.dxf.insert = (lx + 48.0, curr_y - 1.2)
+        curr_y -= 15.0
 
-    curr_y -= 5.0
-    msp.add_line((lx + 5.0, curr_y), (lx + 175.0, curr_y), dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'color': colors.WHITE})
-    curr_y -= 12.0
-    
+    # Membrete
+    msp.add_lwpolyline([
+        (lx, curr_y), (lx + 185.0, curr_y),
+        (lx + 185.0, curr_y - 80.0), (lx, curr_y - 80.0),
+        (lx, curr_y)
+    ], dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'color': colors.WHITE})
+
     membrete_lines = [
-        "UNIVERSIDAD NACIONAL DEL ALTIPLANO - PUNO",
-        "FACULTAD DE INGENIERIA MECANICA ELECTRICA (FIME)",
-        "PROYECTO: REDES ELECTRICAS MCH LIMBANI (200 kW)",
-        "AUTOR: BR. AQUILES TAYLOR RAMOS YAPO (COD. 227368)",
-        "SEMESTRE: 2026-II  |  ESCALA: 1:2500  |  ZONA: 19S"
+        "EXPEDIENTE TÉCNICO DE INGENIERÍA ELÉCTRICA",
+        "PROYECTO: ELECTRIFICACIÓN RURAL Y REDES LIMBANI",
+        "UBICACIÓN: DISTRITO LIMBANI - SANDIA - PUNO",
+        "FUENTE: MCH LIMBANI 200 kW (MICHELL-BANKI)",
+        "PLANO: REDES MT 10 kV, BT 380/220 V, AP Y DETALLES DGE",
+        "AUTOR: Br. Aquiles Taylor Ramos Yapo (Cód. 227368)",
+        "UNIVERSIDAD NACIONAL DEL ALTIPLANO - PUNO (FIME)",
+        "ESCALA: 1:2500 / DETALLES S/E  |  FECHA: OCTUBRE 2026"
     ]
+    curr_y -= 10.0
     for m_line in membrete_lines:
-        t_m = msp.add_text(m_line, dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'height': 3.6, 'color': colors.YELLOW})
-        t_m.dxf.insert = (lx + 10.0, curr_y)
+        t_m = msp.add_text(m_line, dxfattribs={'layer': '09_CUADRO_LEYENDA_ROTULO', 'height': 3.4, 'color': colors.YELLOW})
+        t_m.dxf.insert = (lx + 8.0, curr_y)
         curr_y -= 8.0
 
     # -------------------------------------------------------------
-    # GUARDAR DXF
+    # 8. GUARDAR DXF Y SINCRONIZAR
     # -------------------------------------------------------------
     os.makedirs(os.path.dirname(out_dxf), exist_ok=True)
     doc.saveas(out_dxf)
@@ -769,10 +915,10 @@ def main():
         doc.saveas(catastro_sync_dxf)
         print(f"[OK] Copia sincronizada DXF en: {catastro_sync_dxf}")
     except Exception as e:
-        print(f"[!] Aviso: No se pudo sobrescribir catastro_sync_dxf: {e}")
+        print(f"[!] Aviso al sincronizar DXF: {e}")
 
     # -------------------------------------------------------------
-    # COMPILACIÓN A DWG NATIVO AUTOCAD MEDIANTE ACCORECONSOLE
+    # 9. COMPILACIÓN A DWG NATIVO AUTOCAD MEDIANTE ACCORECONSOLE
     # -------------------------------------------------------------
     accore = r"C:\Program Files\Autodesk\AutoCAD 2027\accoreconsole.exe"
     if os.path.exists(accore):
@@ -793,7 +939,7 @@ def main():
                     shutil.copy2(out_dwg, catastro_sync_dwg)
                     print(f"[OK] Copia sincronizada DWG en: {catastro_sync_dwg}")
                 except Exception as e:
-                    print(f"[!] Aviso: No se pudo sobrescribir catastro_sync_dwg: {e}")
+                    print(f"[!] Aviso al sincronizar DWG: {e}")
         except Exception as err:
             print("[!] Nota al compilar DWG con AutoCAD:", err)
         finally:
@@ -801,7 +947,7 @@ def main():
                 os.remove(scr_path)
 
     # -------------------------------------------------------------
-    # 7. GENERAR RENDERIZADOS GRÁFICOS DE ALTA DEFINICIÓN (PNG)
+    # 10. GENERAR RENDERIZADOS GRÁFICOS DE ALTA DEFINICIÓN (PNG)
     # -------------------------------------------------------------
     print("[*] Generando láminas de inspección gráfica (Planta General y Zooms Sectoriales)...")
     
@@ -819,156 +965,139 @@ def main():
         for pts in huellas_pts:
             ax.fill([p[0] for p in pts], [p[1] for p in pts], color='#F59E0B', alpha=0.35, zorder=3)
         for pts in equip_pts:
-            ax.fill([p[0] for p in pts], [p[1] for p in pts], color='#10B981', alpha=0.25, zorder=3)
-        for v_pts in vias_polys:
-            ax.plot([p[0] for p in v_pts], [p[1] for p in v_pts], color='#64748B', linewidth=1.0, alpha=0.6, zorder=4)
+            ax.fill([p[0] for p in pts], [p[1] for p in pts], color='#10B981', alpha=0.45, zorder=3)
 
+        # Red de baja tensión
         for p_a, p_b, is_tr in lineas_bt_segmentos:
-            c_line = '#10B981' if is_tr else '#38BDF8'
-            lw = 1.6 if is_tr else 1.0
-            ax.plot([p_a[0], p_b[0]], [p_a[1], p_b[1]], color=c_line, linewidth=lw, alpha=0.9, zorder=5)
+            col = '#22C55E' if is_tr else '#06B6D4'
+            lw = 1.3 if is_tr else 0.8
+            ax.plot([p_a[0], p_b[0]], [p_a[1], p_b[1]], color=col, linewidth=lw, alpha=0.85, zorder=4)
 
-        ax.scatter([p[1] for p in postes_bt_coords], [p[2] for p in postes_bt_coords],
-                   s=24, color='#60A5FA', edgecolors='#1E3A8A', linewidths=0.6, zorder=6, label='Postes BT (CAC 8m/9m)')
+        # Línea de Media Tensión 10 kV
+        ax.plot([p[0] for p in pts_mt], [p[1] for p in pts_mt], color='#EF4444', linewidth=2.4, zorder=6)
 
-        ap_pts = [p for p in postes_bt_coords if p[4]]
-        ax.scatter([p[1] for p in ap_pts], [p[2] for p in ap_pts],
-                   s=40, color='#FBBF24', edgecolors='#B45309', linewidths=0.8, zorder=7, label='Alumbrado Público LED (165 und)')
+        # Postes BT
+        xs_bt = [p[1] for p in postes_bt_coords]
+        ys_bt = [p[2] for p in postes_bt_coords]
+        ax.scatter(xs_bt, ys_bt, s=14, color='#3B82F6', edgecolors='#93C5FD', linewidths=0.5, zorder=7)
 
-        ax.plot([p[0] for p in pts_mt], [p[1] for p in pts_mt], color='#EF4444', linewidth=3.5, zorder=8, label='Línea Primaria 10 kV (AAAC 35 mm²)')
+        # Luminarias AP
+        xs_ap = [p[1] for p in postes_bt_coords if p[4]]
+        ys_ap = [p[2] for p in postes_bt_coords if p[4]]
+        ax.scatter(xs_ap, ys_ap, s=16, color='#FACC15', edgecolors='#FEF08A', linewidths=0.5, zorder=8)
 
-        mt_normal = [p for p in postes_mt_data if "SAB" not in p[5]]
-        ax.scatter([p[1] for p in mt_normal], [p[2] for p in mt_normal],
-                   s=85, color='#DC2626', edgecolors='#FFFFFF', linewidths=1.5, zorder=9, label='Postes MT (CAC 12m/13m)')
+        # Postes MT y SEDs
+        for pid, px, py, cota, poste, armado, ret, desc in postes_mt_data:
+            if "SAB" in armado:
+                ax.scatter([px], [py], s=140, marker='s', color='#EAB308', edgecolors='#FFFFFF', linewidths=1.8, zorder=10)
+                ax.text(px + 8.0, py, f"{pid}\n{armado} ({desc.split('(')[1].replace(')', '')})",
+                        color='#FEF08A', fontsize=7.5, fontweight='bold', zorder=11,
+                        bbox=dict(boxstyle="square,pad=0.2", facecolor='#1E293B', edgecolor='#EAB308', alpha=0.85))
+            else:
+                ax.scatter([px], [py], s=45, marker='o', color='#EF4444', edgecolors='#FFFFFF', linewidths=1.0, zorder=9)
+                if detalle_textos:
+                    ax.text(px + 4.0, py + 2.0, f"{pid}\n{poste}", color='#FCA5A5', fontsize=6.5, zorder=11)
 
-        seds_pts = [p for p in postes_mt_data if "SAB" in p[5]]
-        ax.scatter([p[1] for p in seds_pts], [p[2] for p in seds_pts],
-                   s=240, color='#FACC15', edgecolors='#78350F', linewidths=2.5, marker='s', zorder=10, label='Subestaciones Aéreas Biposte (3 SAB)')
-
-        if detalle_textos:
-            for p in mt_normal:
-                ax.annotate(f"{p[0]}\n{p[4].replace('C.A.C. ', '')}", (p[1], p[2]),
-                            xytext=(p[1] + 8, p[2] + 4), color='#FCA5A5', fontsize=8, fontweight='bold',
-                            bbox=dict(boxstyle="round,pad=0.2", fc="#450A0A", ec="#EF4444", lw=0.8, alpha=0.85),
-                            zorder=11)
-            for p in seds_pts:
-                ax.annotate(f"{p[0]}: {p[7].split('(')[0].strip()}\n({p[7].split('(')[1].replace(')', '')})",
-                            (p[1], p[2]), xytext=(p[1] + 15, p[2] + 12),
-                            color='#FEF08A', fontsize=9, fontweight='bold',
-                            bbox=dict(boxstyle="round,pad=0.3", fc="#1E293B", ec="#FACC15", lw=1.2),
-                            arrowprops=dict(arrowstyle="->", color='#FACC15', lw=1.2),
-                            zorder=12)
-
-    # (A) PLANO DE PLANTA GENERAL
-    fig, ax = plt.subplots(figsize=(16, 24), dpi=150)
+    # 1. PLANTA GENERAL COMPLETA
+    fig, ax = plt.subplots(figsize=(15, 11), dpi=250)
     dibujar_elementos_comunes(ax, detalle_textos=False)
-    seds_pts = [p for p in postes_mt_data if "SAB" in p[5]]
-    for p in seds_pts:
-        ax.annotate(f"{p[0]}: {p[7].split('(')[0].strip()}\n({p[7].split('(')[1].replace(')', '')})",
-                    (p[1], p[2]), xytext=(p[1] + 45, p[2] + 25),
-                    color='#FACC15', fontsize=10, fontweight='bold',
-                    bbox=dict(boxstyle="round,pad=0.3", fc="#1E293B", ec="#FACC15", lw=1.2),
-                    arrowprops=dict(arrowstyle="->", color='#FACC15', lw=1.2),
-                    zorder=12)
-    p_inicio = postes_mt_data[0]
-    ax.annotate("MCH LIMBANI (200 kW)\nPórtico Elevador 0.38/10 kV",
-                (p_inicio[1], p_inicio[2]), xytext=(p_inicio[1] - 220, p_inicio[2] + 40),
-                color='#38BDF8', fontsize=10, fontweight='bold',
-                bbox=dict(boxstyle="round,pad=0.3", fc="#0F172A", ec="#38BDF8", lw=1.2),
-                arrowprops=dict(arrowstyle="->", color='#38BDF8', lw=1.2),
-                zorder=12)
-    p_fin = postes_mt_data[-1]
-    ax.annotate("Terminal MT 10 kV\nSalida hacia Crucero/Ananea",
-                (p_fin[1], p_fin[2]), xytext=(p_fin[1] - 180, p_fin[2] - 50),
-                color='#EF4444', fontsize=9, fontweight='bold',
-                bbox=dict(boxstyle="round,pad=0.3", fc="#0F172A", ec="#EF4444", lw=1.0),
-                arrowprops=dict(arrowstyle="->", color='#EF4444', lw=1.0),
-                zorder=12)
-    ax.set_title("PLANO DE REDES ELÉCTRICAS Y POSTERÍA GEORREFERENCIADA - LIMBANI (PUNO)\n"
-                 "Simbología Norma DGE Sección 9 | Vanos Reglamentarios CNE | Catastro WGS 84 Z19S",
-                 color='#F8FAFC', fontsize=13, fontweight='bold', pad=15)
-    ax.legend(loc='lower right', facecolor='#1E293B', edgecolor='#475569', labelcolor='#F8FAFC', fontsize=9)
-    ax.set_xlabel("Este UTM (WGS 84 Zona 19 Sur) [m]", color='#94A3B8', fontsize=10)
-    ax.set_ylabel("Norte UTM (WGS 84 Zona 19 Sur) [m]", color='#94A3B8', fontsize=10)
-    ax.set_xlim(425100, 426150)
-    ax.set_ylim(8434350, 8436850)
+    ax.set_xlim(425200, 425850)
+    ax.set_ylim(8434600, 8436750)
+    ax.set_title("REDES ELÉCTRICAS DE DISTRIBUCIÓN INTEGRAL - LIMBANI (WGS 84 / UTM Z19S)\n"
+                 "Línea MT 10 kV (Rojo, 1.97 km) | 3 SEDs (Amarillo, 250 kVA) | Red BT CAAI (Verde/Cian, 6.21 km) | 587 Acometidas",
+                 fontsize=10, fontweight='bold', color='#F8FAFC', pad=12)
+    ax.set_xlabel("Este UTM (m)", fontsize=8, color='#94A3B8')
+    ax.set_ylabel("Norte UTM (m)", fontsize=8, color='#94A3B8')
     ax.tick_params(colors='#94A3B8', labelsize=8)
-    ax.grid(color='#1E293B', linestyle='--', linewidth=0.5, alpha=0.7)
+    ax.grid(True, linestyle='--', alpha=0.25, color='#475569')
     plt.tight_layout()
-    fig.savefig(out_img_gen, dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
-    plt.close(fig)
+    plt.savefig(out_img_gen, facecolor='#0B0F19', edgecolor='none')
+    plt.close()
     print(f"[OK] Lámina General guardada en: {out_img_gen}")
 
-    # (B) ZOOMS SECTORIALES
-    fig, ax = plt.subplots(figsize=(14, 10), dpi=180)
+    # 2. ZOOM NORTE
+    fig, ax = plt.subplots(figsize=(12, 9), dpi=250)
     dibujar_elementos_comunes(ax, detalle_textos=True)
-    ax.set_xlim(425350, 425850)
-    ax.set_ylim(8436100, 8436750)
-    ax.set_title("DETALLE SECTOR NORTE: MCH LIMBANI (200 kW) Y SUBESTACIÓN SED-01 (50 kVA)",
-                 color='#F8FAFC', fontsize=11, fontweight='bold', pad=12)
-    ax.set_xlabel("Este UTM [m]", color='#94A3B8', fontsize=9)
-    ax.set_ylabel("Norte UTM [m]", color='#94A3B8', fontsize=9)
+    ax.set_xlim(425350, 425780)
+    ax.set_ylim(8436150, 8436750)
+    ax.set_title("DETALLE SECTOR NORTE: MCH LIMBANI (200 kW) Y SUBESTACIÓN SED-01 (50 kVA)\n"
+                 "Pórtico Salida E-01 (CAC 13/400) | Jr. Villa Hermosa | Red BT Autoportante CAAI",
+                 fontsize=10, fontweight='bold', color='#F8FAFC', pad=10)
     ax.tick_params(colors='#94A3B8', labelsize=8)
-    ax.grid(color='#1E293B', linestyle='--', linewidth=0.5, alpha=0.7)
+    ax.grid(True, linestyle='--', alpha=0.25, color='#475569')
     plt.tight_layout()
-    fig.savefig(out_img_norte, dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
-    plt.close(fig)
+    plt.savefig(out_img_norte, facecolor='#0B0F19', edgecolor='none')
+    plt.close()
 
-    fig, ax = plt.subplots(figsize=(14, 10), dpi=180)
+    # 3. ZOOM CENTRO
+    fig, ax = plt.subplots(figsize=(12, 9), dpi=250)
     dibujar_elementos_comunes(ax, detalle_textos=True)
-    ax.set_xlim(425250, 425650)
-    ax.set_ylim(8435450, 8436150)
-    ax.set_title("DETALLE SECTOR CENTRO: PLAZA DE ARMAS DE LIMBANI Y SUBESTACIÓN SED-02 (100 kVA)",
-                 color='#F8FAFC', fontsize=11, fontweight='bold', pad=12)
-    ax.set_xlabel("Este UTM [m]", color='#94A3B8', fontsize=9)
-    ax.set_ylabel("Norte UTM [m]", color='#94A3B8', fontsize=9)
+    ax.set_xlim(425330, 425620)
+    ax.set_ylim(8435480, 8436050)
+    ax.set_title("DETALLE SECTOR CENTRO: PLAZA DE ARMAS, MUNICIPALIDAD Y SUBESTACIÓN SED-02 (100 kVA)\n"
+                 "Jr. Progreso | Calle Municipal | Centro Cívico | Alumbrado LED 50W",
+                 fontsize=10, fontweight='bold', color='#F8FAFC', pad=10)
     ax.tick_params(colors='#94A3B8', labelsize=8)
-    ax.grid(color='#1E293B', linestyle='--', linewidth=0.5, alpha=0.7)
+    ax.grid(True, linestyle='--', alpha=0.25, color='#475569')
     plt.tight_layout()
-    fig.savefig(out_img_centro, dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
-    plt.close(fig)
+    plt.savefig(out_img_centro, facecolor='#0B0F19', edgecolor='none')
+    plt.close()
 
-    fig, ax = plt.subplots(figsize=(14, 10), dpi=180)
+    # 4. ZOOM SUR
+    fig, ax = plt.subplots(figsize=(12, 9), dpi=250)
     dibujar_elementos_comunes(ax, detalle_textos=True)
-    ax.set_xlim(425200, 425650)
-    ax.set_ylim(8434650, 8435450)
-    ax.set_title("DETALLE SECTOR SUR: CRUCE FLUVIO-AÉREO RÍO CHINCHALAMANI, ESTADIO Y SED-03 (100 kVA)",
-                 color='#F8FAFC', fontsize=11, fontweight='bold', pad=12)
-    ax.set_xlabel("Este UTM [m]", color='#94A3B8', fontsize=9)
-    ax.set_ylabel("Norte UTM [m]", color='#94A3B8', fontsize=9)
+    ax.set_xlim(425300, 425580)
+    ax.set_ylim(8434700, 8435420)
+    ax.set_title("DETALLE SECTOR SUR: CRUCE RÍO CHINCHALAMANI, ESTADIO Y SUBESTACIÓN SED-03 (100 kVA)\n"
+                 "Vano 110m Postes CAC 13/600 | Armados PR-3 | Sector Piscina | Terminal MT E-24",
+                 fontsize=10, fontweight='bold', color='#F8FAFC', pad=10)
     ax.tick_params(colors='#94A3B8', labelsize=8)
-    ax.grid(color='#1E293B', linestyle='--', linewidth=0.5, alpha=0.7)
+    ax.grid(True, linestyle='--', alpha=0.25, color='#475569')
     plt.tight_layout()
-    fig.savefig(out_img_sur, dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
-    plt.close(fig)
+    plt.savefig(out_img_sur, facecolor='#0B0F19', edgecolor='none')
+    plt.close()
 
-    # Resumen metrados
-    long_mt_total = sum(distancia(pts_mt[i], pts_mt[i+1]) for i in range(len(pts_mt)-1))
-    long_bt_troncal = sum(distancia(p_a, p_b) for p_a, p_b, is_tr in lineas_bt_segmentos if is_tr)
-    long_bt_deriv = sum(distancia(p_a, p_b) for p_a, p_b, is_tr in lineas_bt_segmentos if not is_tr)
+    # Sincronizar figuras en Catastro_Limbani
+    try:
+        shutil.copy2(out_img_gen, os.path.join(catastro_sync_dir, "07_redes_electricas_detalladas_catastro.png"))
+    except Exception: pass
 
+    # -------------------------------------------------------------
+    # IMPRESIÓN DE METRADOS EXACTOS DEL MODELO
+    # -------------------------------------------------------------
     print("\n" + "="*70)
     print("METRADOS EXACTOS DEL MODELO CAD LIMBANI (CONFORME A NORMA DGE):")
     print("="*70)
-    print(f"Línea Primaria 10.0 kV (AAAC 35 mm2):        {long_mt_total:.2f} m  ({long_mt_total/1000:.3f} km)")
+    long_mt = sum(distancia(pts_mt[i], pts_mt[i+1]) for i in range(len(pts_mt)-1))
+    print(f"Línea Primaria 10.0 kV (AAAC 35 mm2):        {long_mt:.2f} m  ({long_mt/1000:.3f} km)")
     print(f"Postes MT CAC 12m/300 daN (Alineamiento):   {total_postes_mt_cac12_300} unidades")
     print(f"Postes MT CAC 12m/400 daN (Ángulos):        {total_postes_mt_cac12_400} unidades")
-    print(f"Postes MT CAC 13m/400 daN (SAB Biposte):    {total_postes_mt_cac13_400} unidades (en {total_seds} subestaciones)")
+    print(f"Postes MT CAC 13m/400 daN (SAB Biposte):    {total_postes_mt_cac13_400} unidades (en 3 subestaciones)")
     print(f"Postes MT CAC 13m/600 daN (Cruce río):      {total_postes_mt_cac13_600} unidades")
-    print(f"Total Postes en Media Tensión:              {total_postes_mt_cac12_300 + total_postes_mt_cac12_400 + total_postes_mt_cac13_400 + total_postes_mt_cac13_600} unidades")
+    total_postes_mt = total_postes_mt_cac12_300 + total_postes_mt_cac12_400 + total_postes_mt_cac13_400 + total_postes_mt_cac13_600
+    print(f"Total Postes en Media Tensión:              {total_postes_mt} unidades")
     print(f"Subestaciones Aéreas Biposte (SAB):         {total_seds} subestaciones (50, 100, 100 kVA)")
     print(f"Retenidas en Media Tensión:                 {total_ret_mt} unidades")
     print("-"*70)
-    print(f"Red BT Troncal CAAI 3x35+1x16+NA25:         {long_bt_troncal:.2f} m")
-    print(f"Red BT Ramales CAAI 2x16+1x16+NA25:         {long_bt_deriv:.2f} m")
-    print(f"Total Conductor BT Autoportante:            {long_bt_troncal + long_bt_deriv:.2f} m")
+    print(f"Red BT Troncal CAAI 3x35+1x16+NA25:         {longitud_troncal_bt:.2f} m")
+    print(f"Red BT Ramales CAAI 2x16+1x16+NA25:         {longitud_derivacion_bt:.2f} m")
+    total_bt_cond = longitud_troncal_bt + longitud_derivacion_bt
+    print(f"Total Conductor BT Autoportante:            {total_bt_cond:.2f} m ({total_bt_cond/1000:.2f} km)")
     print(f"Postes BT CAC 8m/200 daN (Pasajes):         {total_cac_8_200} unidades")
     print(f"Postes BT CAC 8m/300 daN (Retenciones):     {total_cac_8_300} unidades")
     print(f"Postes BT CAC 9m/300 daN (Troncales/AP):    {total_cac_9_300} unidades")
-    print(f"Total Postes en Baja Tensión:               {len(postes_bt_coords)} unidades")
+    total_postes_bt = total_cac_8_200 + total_cac_8_300 + total_cac_9_300
+    print(f"Total Postes en Baja Tensión:               {total_postes_bt} unidades (estrictamente en casco urbano)")
     print(f"Luminarias Alumbrado Público LED 50W:       {total_luminarias} unidades")
     print(f"Retenidas en Baja Tensión:                  {total_ret_bt} unidades")
+    print("-"*70)
+    total_acometidas = total_acometidas_cortas + total_acometidas_largas
+    print(f"Acometidas Domiciliarias Config. Corta:     {total_acometidas_cortas} unidades (<= 15 m)")
+    print(f"Acometidas Domiciliarias Config. Larga:     {total_acometidas_largas} unidades (15 - 30 m)")
+    print(f"Total Acometidas Monofásicas (Predios):     {total_acometidas} unidades")
+    print(f"Longitud Total Conductor SET 2x4 mm2:       {total_longitud_acometidas:.2f} m (prom. {total_longitud_acometidas/total_acometidas:.1f} m/lote)")
+    print(f"Cajas Portamedidor Monofásicas Tipo L-T:    {total_acometidas} unidades")
     print("="*70)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
