@@ -139,6 +139,7 @@ def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     fig_dir = os.path.join(base_dir, "expediente", "figuras")
     normas_dir = os.path.join(fig_dir, "normas_dge")
+    armados_vec_dir = os.path.join(fig_dir, "armados_vector")
     out_dir = os.path.join(base_dir, "entregables")
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "expediente_limbani.docx")
@@ -635,28 +636,30 @@ def main():
     add_bullet(doc, "Red de Distribución Secundaria CAAI, Alumbrado Público LED 50W y Cajas L-T (Escala 1:1,000)", bold_prefix="PL-04: ")
     add_bullet(doc, "Armados Normalizados DGE (PS-3, PA-3, PR-3, Retenidas, PAT y Acometidas, Escala Indicadas)", bold_prefix="PL-05: ")
 
-    add_heading_2(doc, "7.2 Láminas Oficiales Escaneadas del MINEM / DGE")
-    add_p(doc, "En cumplimiento de las resoluciones directorales R.D. N° 024-2003-EM/DGE y R.D. N° 023-2003-EM-DGE, a continuación se presentan los detalles técnicos normalizados que rigen el montaje físico de las redes:")
+    add_heading_2(doc, "7.2 Planos Vectoriales de Armados Normalizados DGE y Planillas de Materiales")
+    add_p(doc, "En cumplimiento estricto de las resoluciones directorales R.D. N° 024-2003-EM/DGE y R.D. N° 023-2003-EM-DGE del Ministerio de Energía y Minas, se presentan los dibujos de ingeniería electromecánica 100% vectoriales elaborados específicamente para el proyecto de electrificación rural de Limbani. Cada plano contiene vistas en elevación acotadas, detalles de aislamiento y herrajes, cotas milimétricas y la planilla oficial de materiales:")
 
     laminas_dge = [
-        ("rd024_pag_008.jpg", "Figura 7.1: Lámina 004 R.D. N° 024-2003-EM/DGE: Armado de Suspensión PS-3 para Red Primaria Trifásica 10 kV."),
-        ("rd024_pag_012.jpg", "Figura 7.2: Lámina 008 R.D. N° 024-2003-EM/DGE: Armado de Ángulo PA-3 para Red Primaria Trifásica 10 kV."),
-        ("rd024_pag_024.jpg", "Figura 7.3: Lámina 020 R.D. N° 024-2003-EM/DGE: Armado de Retención PR-3 para Red Primaria Trifásica 10 kV."),
-        ("rd024_pag_071.jpg", "Figura 7.4: Lámina 064(1/2) R.D. N° 024-2003-EM/DGE: Subestación Aérea Biposte (SAB) 10 / 0.38-0.22 kV."),
-        ("rd024_pag_090.jpg", "Figura 7.5: Lámina 074 R.D. N° 024-2003-EM/DGE: Retenida Simple Inclinada para Redes Eléctricas Rurales."),
-        ("rd024_pag_094.jpg", "Figura 7.6: Lámina 077 R.D. N° 024-2003-EM/DGE: Pozo de Puesta a Tierra PAT con Electrodo Vertical."),
-        ("rd023_pag_04.jpg", "Figura 7.7: Lámina 001 R.D. N° 023-2003-EM-DGE: Estructura E-1 para Conductor Autoportante CAAI en Red Secundaria."),
-        ("rd023_pag_10.jpg", "Figura 7.8: Lámina 007 R.D. N° 023-2003-EM-DGE: Acometida Domiciliaria Monofásica Aérea y Caja Tipo L-T.")
+        ("vector_ps3.png", "Figura 7.1: Detalle Vectorial Armado PS-3: Suspensión 10 kV (0°-5°) y Planilla de Materiales (R.D. N° 024-2003-EM/DGE, Lám. 004)."),
+        ("vector_pa3.png", "Figura 7.2: Detalle Vectorial Armado PA-3: Ángulo 10 kV (5°-30°), Retenida Biselar y Planilla (R.D. N° 024-2003-EM/DGE, Lám. 008)."),
+        ("vector_pr3.png", "Figura 7.3: Detalle Vectorial Armado PR-3: Retención / Anclaje 10 kV (>30°), Cadenas Poliméricas y Planilla (R.D. N° 024-2003-EM/DGE, Lám. 020)."),
+        ("vector_sab.png", "Figura 7.4: Detalle Vectorial Subestación Aérea Biposte SAB (50/100 kVA, 10/0.38-0.22 kV), Seccionadores y Planilla (R.D. N° 024-2003-EM/DGE, Lám. 064)."),
+        ("vector_retenida.png", "Figura 7.5: Detalle Vectorial Retenida Inclinada Normalizada CNE Regla 261, Aislador Nuez 54-1 y Planilla (R.D. N° 024-2003-EM/DGE, Lám. 074)."),
+        ("vector_pat.png", "Figura 7.6: Detalle Vectorial Pozo de Puesta a Tierra PAT con Electrodo Vertical Copperweld y Planilla (R.D. N° 024-2003-EM/DGE, Lám. 077)."),
+        ("vector_e1.png", "Figura 7.7: Detalle Vectorial Estructura E-1: Red Secundaria CAAI, Alumbrado LED 50W y Planilla (R.D. N° 023-2003-EM-DGE, Lám. 001)."),
+        ("vector_acometida.png", "Figura 7.8: Detalle Vectorial Acometida Domiciliaria Monofásica Aérea y Caja Tipo L-T (R.D. N° 023-2003-EM-DGE, Lám. 007).")
     ]
 
     for fname, caption in laminas_dge:
-        fpath = os.path.join(normas_dir, fname)
+        fpath = os.path.join(armados_vec_dir, fname)
+        if not os.path.exists(fpath):
+            fpath = os.path.join(normas_dir, fname)
         if os.path.exists(fpath):
             p_img_dge = doc.add_paragraph()
             p_img_dge.alignment = WD_ALIGN_PARAGRAPH.CENTER
             p_img_dge.paragraph_format.space_before = Pt(8)
             p_img_dge.paragraph_format.space_after = Pt(2)
-            p_img_dge.add_run().add_picture(fpath, width=Inches(4.5))
+            p_img_dge.add_run().add_picture(fpath, width=Inches(6.2))
             
             p_cap_dge = doc.add_paragraph()
             p_cap_dge.alignment = WD_ALIGN_PARAGRAPH.CENTER

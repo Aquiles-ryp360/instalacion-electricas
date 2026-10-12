@@ -646,116 +646,61 @@ def generar_lamina_pl04(out_pdf):
 # LÁMINA PL-05: ARMADOS NORMALIZADOS DGE Y PUESTA A TIERRA (PAT)
 # =========================================================================
 def generar_lamina_pl05(out_pdf):
-    print("[*] Generando Lámina PL-05: Armados Normalizados DGE y PAT...")
+    print("[*] Generando Lámina PL-05: Armados Normalizados DGE y PAT (Vectores Técnicos de Alta Resolución)...")
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    vec_dir = os.path.join(base_dir, "expediente", "figuras", "armados_vector")
+
+    # Si no existen los vectores, generarlos
+    if not os.path.exists(os.path.join(vec_dir, "vector_ps3.png")):
+        print("[*] Generando previamente diagramas vectoriales con exportar_armados_vectoriales_figuras.py...")
+        import scripts.exportar_armados_vectoriales_figuras as evf
+        evf.main()
+
     fig = plt.figure(figsize=(16.54, 11.69), dpi=300)
     ax_bg = fig.add_axes([0, 0, 1, 1])
     dibujar_marco_general(fig, ax_bg)
 
-    ax = fig.add_axes([0.05, 0.04, 0.63, 0.92])
-    ax.set_facecolor('#F8FAFC')
-    ax.set_xlim(0, 100)
-    ax.set_ylim(0, 100)
-    ax.axis('off')
+    # Disposición en cuadrícula 4 filas x 2 columnas en la zona izquierda (X: 0.035 a 0.685)
+    # Columna 0: Red Primaria MT y SEDs (PS-3, PA-3, PR-3, SAB)
+    # Columna 1: Red Secundaria BT, Retenida, PAT y Acometida (E-1, Retenida, PAT, Acometida)
+    col_x = [0.035, 0.355]
+    w_cell = 0.312
+    h_cell = 0.220
+    row_y = [0.736, 0.508, 0.280, 0.052]
 
-    rect_m = patches.Rectangle((0, 0), 100, 100, facecolor='#F8FAFC', edgecolor='#334155', linewidth=1.2)
-    ax.add_patch(rect_m)
+    cuadricula = [
+        # (fila, col, archivo_png, cod_armado, titulo)
+        (0, 0, "vector_ps3.png", "PS-3", "Suspensión MT 10 kV (0°-5°)"),
+        (1, 0, "vector_pa3.png", "PA-3", "Ángulo MT 10 kV (5°-30°)"),
+        (2, 0, "vector_pr3.png", "PR-3", "Retención / Anclaje MT 10 kV"),
+        (3, 0, "vector_sab.png", "SAB", "Subestación Biposte 50/100 kVA"),
+        (0, 1, "vector_e1.png", "E-1", "Distribución BT CAAI y AP LED"),
+        (1, 1, "vector_retenida.png", "RET-INC", "Retenida Normalizada CNE 261"),
+        (2, 1, "vector_pat.png", "PAT-VERT", "Pozo Puesta a Tierra Vertical"),
+        (3, 1, "vector_acometida.png", "ACOM-LT", "Acometida Monofásica Tipo L-T"),
+    ]
 
-    ax.text(50, 96, "ARMADOS NORMALIZADOS DGE (PS-3, PA-3, PR-3), RETENIDAS Y PUESTA A TIERRA\n"
-                   "CONFORME A R.D. N° 024-2003-EM/DGE Y R.D. N° 023-2003-EM-DGE",
-            ha='center', va='center', fontsize=9.2, fontweight='bold', color='#0F172A')
+    for f_idx, c_idx, img_name, cod, tit in cuadricula:
+        img_path = os.path.join(vec_dir, img_name)
+        px = col_x[c_idx]
+        py = row_y[f_idx]
 
-    # Cuadrante 1: Estructura PS-3 (Suspensión alineamiento) X=4 a 26, Y=50 a 91
-    rect_ps3 = patches.Rectangle((4, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
-    ax.add_patch(rect_ps3)
-    ax.text(15, 89, "ARMADO PS-3\nSuspensión (0° a 5°)\nCAC 12m / 300 daN", ha='center', fontsize=5.8, fontweight='bold', color='#1E3A8A')
-    ax.plot([15, 15], [53, 83], color='#334155', linewidth=2.0)
-    ax.plot([10, 20], [80, 80], color='#D97706', linewidth=2.5)
-    for ix in [11, 15, 19]:
-        ax.plot(ix, 80, marker='^', markersize=5, color='#DC2626')
-    ax.text(15, 53, "Lám. 004 RD 024\nVano <= 95 m", ha='center', fontsize=5.2, color='#475569')
+        ax_cell = fig.add_axes([px, py, w_cell, h_cell])
+        ax_cell.set_facecolor('#FFFFFF')
+        ax_cell.axis('off')
 
-    # Cuadrante 2: Estructura PA-3 (Ángulo) X=28 a 50, Y=50 a 91
-    rect_pa3 = patches.Rectangle((28, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
-    ax.add_patch(rect_pa3)
-    ax.text(39, 89, "ARMADO PA-3\nÁngulo (5° a 30°)\nCAC 12m / 400 daN", ha='center', fontsize=5.8, fontweight='bold', color='#1E3A8A')
-    ax.plot([39, 39], [53, 83], color='#334155', linewidth=2.0)
-    ax.plot([34, 44], [80, 80], color='#D97706', linewidth=2.5)
-    for ix in [35, 39, 43]:
-        ax.plot(ix, 80, marker='^', markersize=5, color='#DC2626')
-    ax.plot([39, 48], [79, 53], color='#EC4899', linewidth=1.4)
-    ax.plot(44, 66, marker='d', markersize=4, color='#F59E0B')
-    ax.text(39, 53, "Lám. 008 RD 024\nRetenida Biselar", ha='center', fontsize=5.2, color='#475569')
+        if os.path.exists(img_path):
+            img = plt.imread(img_path)
+            ax_cell.imshow(img, aspect='equal')
+        else:
+            ax_cell.text(0.5, 0.5, f"Diagrama Vectorial\n{cod} — {tit}", ha='center', va='center', fontsize=7, color='#DC2626')
 
-    # Cuadrante 3: Estructura PR-3 (Anclaje / Terminal) X=52 a 74, Y=50 a 91
-    rect_pr3 = patches.Rectangle((52, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
-    ax.add_patch(rect_pr3)
-    ax.text(63, 89, "ARMADO PR-3\nRetención (> 30°)\nCAC 13m / 600 daN", ha='center', fontsize=5.8, fontweight='bold', color='#1E3A8A')
-    ax.plot([63, 63], [53, 83], color='#334155', linewidth=2.2)
-    ax.plot([58, 68], [80, 80], color='#D97706', linewidth=3.0)
-    for ix in [59, 63, 67]:
-        ax.plot([ix, ix + 1.5], [80, 80], color='#DC2626', linewidth=2.5)
-    ax.plot([63, 72], [79, 53], color='#EC4899', linewidth=1.8)
-    ax.plot(68, 66, marker='d', markersize=4, color='#F59E0B')
-    ax.text(63, 53, "Lám. 020 RD 024\nRetenida Pesada", ha='center', fontsize=5.2, color='#475569')
+        # Borde sutil del recuadro de celda
+        rect_b = patches.Rectangle((0, 0), 1, 1, transform=ax_cell.transAxes, fill=False, edgecolor='#64748B', linewidth=0.8)
+        ax_cell.add_patch(rect_b)
 
-    # Cuadrante 4: DETALLE RETENIDA INCLINADA NORMALIZADA X=76 a 97, Y=50 a 91
-    rect_ret = patches.Rectangle((76, 50), 22, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
-    ax.add_patch(rect_ret)
-    ax.text(86.5, 89, "RETENIDA INCLINADA\nCNE Regla 261\nLám. 074 RD 024 / 014 RD 023", ha='center', fontsize=5.5, fontweight='bold', color='#9D174D')
-    # Poste
-    ax.plot([80, 80], [53, 85], color='#334155', linewidth=2.0)
-    ax.plot([78, 96], [53, 53], color='#78350F', linewidth=1.5)  # Terreno
-    # Abrazadera en poste (Y=82)
-    ax.plot([79, 81], [82, 82], color='#0F172A', linewidth=3.0)
-    # Cable Siemens Martin 5/16" a 45°
-    ax.plot([80, 93], [82, 53], color='#EC4899', linewidth=1.5)
-    # Aislador tracción nuez ANSI 54-1 (Y=68, H>=3.0m)
-    ax.plot(86.5, 67.5, marker='o', markersize=5, color='#F59E0B')
-    ax.text(88, 68, "Aislador 54-1\n(H >= 3m)", fontsize=4.8, color='#D97706')
-    # Protector PVC amarillo
-    ax.plot([90.5, 93], [58.5, 53], color='#EAB308', linewidth=3.0)
-    # Varilla de ancla y bloque concreto
-    ax.plot([93, 95.5], [53, 47.5], color='#334155', linewidth=1.5)
-    rect_blk = patches.Rectangle((93.5, 45.5), 4, 3, facecolor='#64748B', edgecolor='#0F172A', linewidth=0.8)
-    ax.add_patch(rect_blk)
-    ax.text(86.5, 51.5, "Bloque 0.5x0.5x0.2m\n(h = 1.80 m)", ha='center', fontsize=4.8, color='#0F172A')
-
-    # Parte inferior: Detalle Pozo de Puesta a Tierra (PAT) X=4 a 97, Y=5 a 46
-    rect_pat = patches.Rectangle((4, 5), 93, 42, fill=False, edgecolor='#CBD5E1', linewidth=1.0)
-    ax.add_patch(rect_pat)
-    ax.text(50, 43, "DETALLE CONSTRUCTIVO POZO DE PUESTA A TIERRA VERTICAL (PAT NORMALIZADO)\n"
-                   "CONFORME A R.D. N° 024-2003-EM/DGE LÁMINA 077 Y CNE SUMINISTRO REGLA 060",
-            ha='center', fontsize=6.8, fontweight='bold', color='#166534')
-
-    # Pozo excavado (X=15 a 30)
-    ax.fill_between([17, 27], [8, 8], [38, 38], color='#FDE68A', alpha=0.4)
-    ax.plot([17, 17], [8, 38], color='#78350F', linewidth=1.5)
-    ax.plot([27, 27], [8, 38], color='#78350F', linewidth=1.5)
-    ax.plot([17, 27], [8, 8], color='#78350F', linewidth=1.5)
-    # Caja de registro de concreto (Y=35 a 40)
-    rect_reg = patches.Rectangle((15, 35), 14, 5, facecolor='#E2E8F0', edgecolor='#334155', linewidth=1.2)
-    ax.add_patch(rect_reg)
-    ax.text(22, 37.5, "Caja Registro 0.40x0.40 m", ha='center', fontsize=5.0, color='#0F172A')
-
-    # Electrodo de Cobre Copperweld 5/8" x 2.40 m
-    ax.plot([22, 22], [10, 37], color='#B45309', linewidth=3.5)
-    ax.plot(22, 36, marker='o', markersize=6, color='#F59E0B')
-    ax.text(22, 6, "Electrodo Copperweld 5/8\" x 2.40 m", ha='center', fontsize=5.2, fontweight='bold', color='#B45309')
-
-    # Relleno de tierra tratada y bentonita
-    ax.text(48, 25, "ESPECIFICACIONES DE INSTALACIÓN PAT (R.D. N° 024-2003-EM / CNE SECCIÓN 060):\n"
-                   "1. Pozo excavado de 0.80 m de diámetro por 2.60 m de profundidad total.\n"
-                   "2. Electrodo Copperweld 5/8\" x 2.40 m con conector de bronce de alta presión tipo AB.\n"
-                   "3. Relleno con tierra vegetal cernida tratada con bentonita sódica (2 sacos de 25 kg).\n"
-                   "4. Tratamiento con dosis química de sales electrolíticas Thor-Gel / Lab-Gel.\n"
-                   "5. Conductor de bajada de cobre desnudo recocido 35 mm² en tubo PVC-P de 3/4\".\n"
-                   "6. Resistencia máxima de PAT:\n"
-                   "   • Subestaciones MT / Pararrayos: R <= 10 Ohmios (R.D. 024-2003-EM/DGE Lám. 077)\n"
-                   "   • Neutro de Servicio BT: R <= 5 Ohmios (CNE Suministro 2011 Regla 060)",
-            ha='left', va='center', fontsize=5.8, color='#0F172A')
-
-    # Panel lateral derecho y Rótulo
-    ax_side = fig.add_axes([0.70, 0.04, 0.28, 0.92])
+    # Panel lateral derecho y Rótulo oficial FIME - UNAP
+    ax_side = fig.add_axes([0.685, 0.04, 0.295, 0.92])
     ax_side.set_facecolor('#F8FAFC')
     ax_side.set_xlim(0, 1)
     ax_side.set_ylim(0, 1)
@@ -764,36 +709,42 @@ def generar_lamina_pl05(out_pdf):
     rect_side = patches.Rectangle((0, 0), 1, 1, facecolor='#F8FAFC', edgecolor='#334155', linewidth=1.2)
     ax_side.add_patch(rect_side)
 
-    ax_side.text(0.5, 0.97, "ESTÁNDARES DGE APLICADOS", ha='center', va='center', fontsize=8.5, fontweight='bold', color='#1E293B')
-    ax_side.plot([0.05, 0.95], [0.95, 0.95], color='#334155', linewidth=1.0)
+    ax_side.text(0.5, 0.975, "ESTÁNDARES DGE Y ESPECIFICACIONES TÉCNICAS", ha='center', va='center', fontsize=7.8, fontweight='bold', color='#1E293B')
+    ax_side.plot([0.05, 0.95], [0.96, 0.96], color='#334155', linewidth=1.0)
 
     normas = [
-        ("Base Legal Principal:", "Código Nacional de Electricidad (CNE-Suministro)"),
-        ("Soportes Normalizados MT:", "R.D. N° 024-2003-EM/DGE (Láminas 004, 008, 020)"),
-        ("Soportes Normalizados BT:", "R.D. N° 023-2003-EM-DGE (Láminas 001, 007, 014)"),
-        ("Alumbrado de Vías Rurales:", "R.D. N° 017-2003-EM/DGE / R.M. 013-2003-EM"),
-        ("Símbolos Gráficos DGE:", "R.M. N° 091-2002-EM/VME (Sección 9)"),
-        ("Aisladores MT:", "Poliméricos tipo Pin y Suspensión clase ANSI 55-5"),
-        ("Tensión de Aislamiento MT:", "15 kV / BIL 110 kV pico"),
-        ("Distancia de Fuga:", ">= 31 mm/kV (Zona de alta humedad y lluvia)"),
-        ("Retenidas Mecánicas:", "Cable Siemens Martin 5/16\" (7 hilos, rotura >=35 kN)"),
-        ("Aislador de Tracción:", "Porcelana ANSI 54-1 a altura >= 3.0 m de suelo"),
-        ("Varilla de Anclaje:", "F°G° 5/8\"x2.0m c/guardacabo y bloque CAV 0.5x0.5m"),
-        ("Protector de Retenida:", "Tubo PVC amarillo 1.80m con franjas reflectivas"),
-        ("Protección Catódica:", "Galvanizado en caliente s/norma ASTM A153")
+        ("Base Legal Principal:", "Código Nacional de Electricidad (CNE-Suministro 2011)"),
+        ("Soportes MT Normalizados:", "R.D. N° 024-2003-EM/DGE (Láminas 004, 008, 020, 064, 074, 077)"),
+        ("Soportes BT Normalizados:", "R.D. N° 023-2003-EM-DGE (Láminas 001, 007, 012, 014)"),
+        ("Alumbrado de Vías Rurales:", "R.D. N° 017-2003-EM/DGE y R.M. N° 013-2003-EM"),
+        ("Símbolos Gráficos DGE:", "R.M. N° 091-2002-EM/VME (Sección 9 Símbolos Eléctricos)"),
+        ("Aisladores MT:", "Poliméricos y Pin porcelana clase ANSI 55-5 (BIL 110 kV)"),
+        ("Tensión de Aislamiento:", "15 kV / Tensión de Servicio 10.0 kV Trifásico"),
+        ("Distancia de Fuga Mínima:", ">= 31 mm/kV (Zona de alta pluviosidad 3,050 msnm)"),
+        ("Retenidas Mecánicas:", "Cable de acero Siemens Martin 5/16\" (Carga rotura >= 35 kN)"),
+        ("Aislador de Tracción Nuez:", "Porcelana vitrificada ANSI 54-1 a altura H >= 3.00 m del suelo"),
+        ("Protector de Retenida:", "Tubo de PVC rígido amarillo 1 1/2\" x 1.80 m con franjas reflectivas"),
+        ("Varilla de Anclaje:", "F°G° 5/8\" x 2.0 m con ojal guardacabo y bloque CAV 0.5x0.5x0.2 m"),
+        ("Profundidad Anclaje Retenida:", "h = 1.80 m en fosa excavada y compactada en capas"),
+        ("Pozos de Puesta a Tierra MT:", "Resistencia R <= 10 Ohmios (Subestaciones y Pararrayos ZnO)"),
+        ("Pozos de Puesta a Tierra BT:", "Resistencia R <= 5 Ohmios (Neutro de servicio según CNE 060)"),
+        ("Electrodo de Tierra PAT:", "Varilla de Copperweld 5/8\" x 2.40 m y bentonita sódica activa"),
+        ("Red Secundaria Autoportante:", "Cable CAAI 3x35+1x16+NA25 mm² con neutro portador alfol"),
+        ("Acometidas Particulares:", "Cable concéntrico SET 2x4 mm², caja L-T a H=1.40 m y medidor kWh"),
+        ("Galvanizado en Caliente:", "Crucetas, pernos y herrajes según norma ASTM A153 / NTP 370.050")
     ]
-    sy = 0.92
+    sy = 0.94
     for k, v in normas:
-        ax_side.text(0.06, sy, k, va='center', fontsize=5.8, fontweight='bold', color='#334155')
-        ax_side.text(0.94, sy, v, ha='right', va='center', fontsize=5.6, color='#0F172A')
-        sy -= 0.024
+        ax_side.text(0.05, sy, k, va='center', fontsize=5.4, fontweight='bold', color='#334155')
+        ax_side.text(0.95, sy, v, ha='right', va='center', fontsize=5.1, color='#0F172A')
+        sy -= 0.023
 
     dibujar_rotulo_oficial(ax_side, 0.02, 0.015, 0.96, 0.22, "PL-05", "ARMADOS NORMALIZADOS DGE Y PAT", "Indicadas")
 
     os.makedirs(os.path.dirname(out_pdf), exist_ok=True)
     fig.savefig(out_pdf, format='pdf', dpi=300)
     plt.close(fig)
-    print(f"[OK] Lámina PL-05 generada en: {out_pdf}")
+    print(f"[OK] Lámina PL-05 generada con 8 diagramas vectoriales en: {out_pdf}")
 
 # =========================================================================
 # FUNCIÓN PRINCIPAL
