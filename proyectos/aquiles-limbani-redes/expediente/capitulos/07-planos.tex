@@ -3,98 +3,89 @@
 
 \section{CATÁLOGO OFICIAL DE PLANOS DE INGENIERÍA}
 
-El proyecto cuenta con un conjunto integral de láminas técnicas elaboradas en formato normalizado DWG/DXF georreferenciadas en el sistema WGS 84 / UTM Zona 19 Sur:
+El proyecto cuenta con un conjunto integral de láminas técnicas elaboradas en formato normalizado DWG/DXF georreferenciadas en el sistema WGS 84 / UTM Zona 19 Sur, así como exportadas a láminas vectoriales de alta resolución en formato PDF (A3 horizontal / A1) listas para impresión y presentación formal:
 
 \begin{table}[H]
 \centering
 \small
-\begin{tabular}{|c|l|c|c|}
+\begin{tabular}{|c|l|c|c|c|}
 \hline
-\textbf{Código} & \textbf{Título del Plano} & \textbf{Escala} & \textbf{Formato} \\
+\textbf{Código} & \textbf{Título Oficial de la Lámina} & \textbf{Escala} & \textbf{Formato} & \textbf{Archivo Digital} \\
 \hline
-\textbf{PL-01} & Plano Clave General: Redes MT, SEDs y Catastro Urbano & 1:2,500 & A1 \\
-\textbf{PL-02} & Trazo y Perfil Longitudinal de Línea Primaria 10 kV & H: 1:2000, V: 1:200 & A1 \\
-\textbf{PL-03} & Detalle Electromecánico de Subestaciones Aéreas Biposte (SAB) & 1:50 / 1:25 & A1 \\
-\textbf{PL-04} & Red de Distribución Secundaria 380/220 V y Alumbrado Público & 1:1,000 & A1 \\
-\textbf{PL-05} & Detalles Típicos de Armados BT, Puestas a Tierra y Acometidas & Indicadas & A1 \\
+\textbf{PL-01} & Plano Clave General: Redes MT, SEDs, BT y Catastro & 1:2,500 & A3 / A1 & \texttt{PL-01\_plano\_clave\_general.pdf} \\
+\textbf{PL-02} & Trazo y Perfil Longitudinal MT 10 kV con Catenarias & H: 1:2000, V: 1:200 & A3 / A1 & \texttt{PL-02\_perfil\_longitudinal\_mt.pdf} \\
+\textbf{PL-03} & Detalle Electromecánico Subestaciones SAB (50 y 100 kVA) & 1:50 / 1:25 & A3 / A1 & \texttt{PL-03\_subestacion\_sab\_detalles.pdf} \\
+\textbf{PL-04} & Red de Distribución Secundaria CAAI y Alumbrado Público & 1:1,000 / Indic. & A3 / A1 & \texttt{PL-04\_redes\_bt\_alumbrado\_publico.pdf} \\
+\textbf{PL-05} & Armados Normalizados DGE (PS-3, PA-3, PR-3) y Puesta a Tierra & Indicadas & A3 / A1 & \texttt{PL-05\_armados\_normalizados\_dge\_pat.pdf} \\
 \hline
 \end{tabular}
-\caption{Relación oficial de planos del expediente técnico.}
+\caption{Relación oficial de láminas de planos del expediente técnico.}
+\label{tab:relacion_planos}
 \end{table}
 
-\section{INTEGRACIÓN CATASTRAL Y VISTAS ESPACIALES DEL PROYECTO}
+\section{ENTREGABLES VECTORIALES CAD (DWG / DXF)}
 
-A continuación se presentan las visualizaciones cartográficas y modelos vectoriales del casco urbano de Limbani empleados como base física inalterable para el replanteo y ubicación de las redes:
+Con el propósito de garantizar máxima compatibilidad con el entorno de software de ingeniería y GIS, se han generado los siguientes archivos digitales en la carpeta \texttt{entregables/planos/} y sincronizados en el repositorio \texttt{Catastro\_Limbani/expediente\_electrico/}:
 
-\subsection{Vista Satelital General con Catastro Superpuesto}
-La Figura~\ref{fig:ortofoto} muestra la totalidad del casco urbano encajonado en el valle del Río Limbani, con la delimitación exacta de las 87 manzanas, 623 lotes y la traza de las vías principales y secundarias:
+\begin{enumerate}
+    \item \textbf{Archivo Nativo AutoCAD (\texttt{catastro\_limbani\_redes\_electricas.dwg}):} Compilado directamente con el motor \textit{AutoCAD Core Engine} bajo versión AC1032 (AutoCAD 2018--2027), configurado con el encuadre centrado (\textit{Zoom Extents}) y límites visuales en el casco urbano de Limbani. Al abrir este archivo en cualquier versión moderna de AutoCAD, el modelo se despliega centrado de manera inmediata y sin requerir comandos adicionales.
+    \item \textbf{Archivo de Intercambio Universal (\texttt{catastro\_limbani\_redes\_electricas.dxf}):} Formato ASCII estándar (AC1024) con definición completa de capas DGE (\texttt{01\_RED\_MT\_10KV\_CONDUCTOR}, \texttt{02\_POSTES\_MT\_10KV}, \texttt{03\_SUBESTACIONES\_SED}, etc.), polilíneas con anchos geométricos visibles (\textit{const\_width}), bloques de simbología y pestañas de espacio modelo (\textit{Model}) y espacio papel (\textit{Layout1}).
+\end{enumerate}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.85\textwidth,height=0.36\textheight,keepaspectratio]{figuras/01_superposicion_ortofoto_completa.png}
-\caption{Superposición ortofotogramétrica y delimitación de manzanas catastrales en Limbani.}
-\label{fig:ortofoto}
-\end{figure}
+\noindent\fbox{\parbox{0.98\textwidth}{
+\textbf{\large Instrucción de Visualización Rápida en AutoCAD:}\\[0.5em]
+Si se abre el archivo DXF y el visualizador se posiciona en el origen de coordenadas cartesianas $(0, 0)$ (debido a que Limbani se encuentra a más de $8,435\text{ km}$ del ecuador por georreferenciación UTM real), ejecute en la línea de comando de AutoCAD:
+\begin{center}
+\textbf{\texttt{ZOOM}} [Enter] $\rightarrow$ \textbf{\texttt{E}} [Enter] \quad \textit{(o realice doble clic rápido con la rueda central del mouse)}
+\end{center}
+Alternativamente, haga clic en la pestaña inferior \textbf{\texttt{Layout1}} para visualizar la lámina A3 encuadrada de forma automática, o abra directamente el archivo nativo \texttt{catastro\_limbani\_redes\_electricas.dwg}.
+}}
 
-\subsection{Modelo Digital Vectorial CAD del Sistema Urbano}
-En la Figura~\ref{fig:cad_modelo} se observa la estructura de redes vectoriales que integra las cotas altimétricas, paramentos de predios, alineamientos de vías y cauces fluviales:
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.85\textwidth,height=0.36\textheight,keepaspectratio]{figuras/02_modelo_autocad_completo.png}
-\caption{Modelo geométrico y base catastral vectorial en formato CAD/DXF.}
-\label{fig:cad_modelo}
-\end{figure}
 
 \newpage
-\subsection{Plano General de Redes Eléctricas, Postería y Subestaciones}
-La Figura~\ref{fig:redes_detalladas} presenta el diseño electromecánico integrado sobre el catastro oficial de Limbani, mostrando la traza de la línea de 10 kV (rojo), los 24 apoyos de media tensión, las 3 Subestaciones Biposte SED-01, SED-02 y SED-03 (bloques dorados), las retenidas de anclaje (magenta) y los 360 postes de baja tensión (azul) con las 165 luminarias de alumbrado público LED (amarillo):
+\section{VISTAS GRÁFICAS DE INSPECCIÓN ELECTROMECÁNICA}
+
+A continuación se presentan las visualizaciones de ingeniería que demuestran la completa integración de las redes proyectadas sobre la trama física del catastro urbano:
+
+\subsection{Plano Clave General de Redes Eléctricas y Catastro Urbano (Lámina PL-01)}
+La Figura~\ref{fig:redes_detalladas} exhibe la totalidad del sistema eléctrico distribuido: la línea primaria en 10 kV (roja, 1,967.87 m), los 26 apoyos de media tensión, las 3 subestaciones aéreas biposte (SED-01 50 kVA, SED-02 100 kVA, SED-03 100 kVA), los 360 postes de baja tensión (azul), las 165 luminarias LED de 50 W (amarillo) y los 11.76 km de cable autoportante CAAI sobre los 623 lotes urbanos:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth,height=0.60\textheight,keepaspectratio]{figuras/07_redes_electricas_detalladas_catastro.png}
+\includegraphics[width=0.88\textwidth,height=0.68\textheight,keepaspectratio]{figuras/07_redes_electricas_detalladas_catastro.png}
 \caption{Plano General de Redes Eléctricas, Postería CAC y Subestaciones Aéreas Biposte georreferenciadas en Limbani (WGS 84 Z19S).}
 \label{fig:redes_detalladas}
 \end{figure}
 
 \newpage
-\subsection{Detalle Sector Norte: Casa de Máquinas MCH Limbani y SED-01}
-La Figura~\ref{fig:sector_norte} muestra la zona de captación y casa de máquinas de la Minicentral Hidroeléctrica (200 kW con turbina Michell-Banki), el pórtico de salida en 10 kV y la alimentación a la Subestación SED-01 (Norte, 50 kVA) que abastece a 142 lotes:
+\subsection{Detalle Sector Norte: Casa de Máquinas MCH Limbani (200 kW) y SED-01 (50 kVA)}
+La Figura~\ref{fig:sector_norte} detalla el inicio de la transmisión eléctrica: la Casa de Máquinas de la Minicentral Hidroeléctrica (200 kW con turbina Michell-Banki), el pórtico de salida elevador 0.38/10 kV en el apoyo E-01 (CAC 13/400 con armado de anclaje PR-3, cortacircuitos cut-out y pararrayos), el descenso por la ladera norte (apoyos E-02 a E-05) y la llegada a la Subestación SED-01 en el Jr. Villa Hermosa (apoyo E-06, biposte 2xC.A.C. 13/400, SAB-1, 50 kVA), alimentando a 142 predios norteños:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth,height=0.36\textheight,keepaspectratio]{figuras/03_zoom_sector_norte_hidroelectrica.png}
-\caption{Sector Norte: Casa de máquinas MCH Limbani y cobertura de SED-01.}
+\includegraphics[width=0.92\textwidth,height=0.68\textheight,keepaspectratio]{figuras/08_zoom_norte_hidroelectrica_sed01.png}
+\caption{Detalle Sector Norte: MCH Limbani (200 kW), pórtico elevador 0.38/10 kV y Subestación SED-01 (50 kVA).}
 \label{fig:sector_norte}
 \end{figure}
 
-\subsection{Detalle Sector Centro: Plaza de Armas y SED-02}
-La Figura~\ref{fig:sector_centro} exhibe el núcleo cívico y comercial de Limbani, donde se emplaza la SED-02 (Centro, 100 kVA) que energiza la Plaza de Armas, Municipalidad, Centro de Salud y 348 lotes de alta densidad:
+\newpage
+\subsection{Detalle Sector Centro: Plaza de Armas, Municipalidad y SED-02 (100 kVA)}
+La Figura~\ref{fig:sector_centro} exhibe el núcleo administrativo, cívico y comercial de Limbani: el trazo de la línea de 10 kV por el Jr. Progreso y Calle Municipal (apoyos E-08 a E-15), la ubicación estratégica de la Subestación SED-02 en la Plaza de Armas (apoyo E-13, biposte 2xC.A.C. 13/400, SAB-2, 100 kVA) y la densa malla de baja tensión con postes CAC 9m/300 daN, luminarias LED de 50 W y acometidas para 348 usuarios del casco central:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth,height=0.36\textheight,keepaspectratio]{figuras/04_zoom_sector_centro_plaza_puno.png}
-\caption{Sector Centro: Plaza de Armas de Limbani y cobertura de SED-02.}
+\includegraphics[width=0.92\textwidth,height=0.68\textheight,keepaspectratio]{figuras/09_zoom_centro_plaza_sed02.png}
+\caption{Detalle Sector Centro: Plaza de Armas de Limbani, núcleo cívico y Subestación SED-02 (100 kVA).}
 \label{fig:sector_centro}
 \end{figure}
 
 \newpage
-\subsection{Detalle Sector Confluencia Fluvial y Estadio Municipal}
-La Figura~\ref{fig:sector_confluencia} ilustra la confluencia entre el Río Limbani y la Quebrada Chinchalamani, identificando el cruce aéreo reforzado de media tensión y la derivación hacia el Estadio Municipal:
+\subsection{Detalle Sector Sur: Cruce Aéreo Río Chinchalamani, Estadio Municipal y SED-03 (100 kVA)}
+La Figura~\ref{fig:sector_sur} ilustra el tramo de mayor exigencia topográfica y mecánica: el vano especial de cruce fluvial de $110\text{ m}$ sobre el Río Chinchalamani soportado por postes reforzados CAC 13m/600 daN con armados de retención PR-3 y retenidas pesadas en E-17 y E-18, la derivación hacia el Estadio Municipal (E-19 a E-21), la Subestación SED-03 (apoyo E-22, biposte 2xC.A.C. 13/400, SAB-3, 100 kVA para 274 predios del sector piscina) y el remate final en el pórtico terminal E-24 con seccionamiento para futura interconexión regional:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth,height=0.36\textheight,keepaspectratio]{figuras/05_zoom_sector_confluencia_estadio.png}
-\caption{Sector de confluencia fluvial y área de expansión recreacional/deportiva.}
-\label{fig:sector_confluencia}
-\end{figure}
-
-\subsection{Detalle Sector Sur: Complejo Recreacional, Piscina y SED-03}
-La Figura~\ref{fig:sector_sur} presenta la zona sur del casco urbano, correspondiente al sector de la Piscina Municipal y salida hacia Crucero, servido por la Subestación SED-03 (Sur, 100 kVA) para 274 lotes:
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.85\textwidth,height=0.36\textheight,keepaspectratio]{figuras/06_zoom_sector_sur_piscina_salida.png}
-\caption{Sector Sur: Complejo recreacional, piscina y cobertura de SED-03.}
+\includegraphics[width=0.92\textwidth,height=0.68\textheight,keepaspectratio]{figuras/10_zoom_sur_cruce_estadio_sed03.png}
+\caption{Detalle Sector Sur: Cruce fluvial reforzado, Estadio Municipal, Piscina y Subestación SED-03 (100 kVA).}
 \label{fig:sector_sur}
 \end{figure}
