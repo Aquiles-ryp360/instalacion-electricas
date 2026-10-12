@@ -1,38 +1,135 @@
 schema_version: 1
 id: renzo-linea-primaria-capachica-v2
-proyecto: "Variante de Diseño de Línea Primaria 22.9 kV — Sector Chifrón (Capachica) — Versión 2"
+proyecto: "Diseño Electromecánico de Línea Primaria en Media Tensión 22.9 kV — Sector Chifrón, Distrito de Capachica — Puno (Versión Solo Línea Primaria)"
 curso: "Instalaciones Eléctricas II (MEC330)"
+docentes:
+  - "Ing. Leonidas Vilca Callata"
+  - "Ing. Marcos José Villanueva Cornejo"
 autor_estudiante: "Renzo Gabriel Mamani Galindo"
 codigo_estudiante: "228447"
 semestre_academico: "2026-II"
-fecha_inicio: "2026-10-11"
-estado: "Variante en definición — pendiente de traza y criterios de no daño"
+ciclo: "IX"
+fecha_inicio: "2026-10-12"
+estado: "Diseño Definitivo - Solo Línea Primaria 22.9 kV"
 
-variante:
-  version_base: "renzo-linea-primaria-capachica"
-  criterio: "No dañar la infraestructura MT existente de Electro Puno S.A.A. (tramos TMT000012389 / TMT001847370, estructura E-01 de derivación)"
-  descripcion: null
-  tipo: "por definir"
-  nueva_traza: null
-  punto_derivacion: null
-  conductores_propuestos: null
-  sed_propuesta: null
-  restricciones_obra: null
-  coordenadas: null
-  cargas: null
-  fuente_geo: null
+naturaleza_proyecto:
+  tipo: linea_primaria_media_tension_rural
+  descripcion: "Diseño electromecánico integral de la Línea Primaria en Media Tensión (22.9 kV, trifásica, 3 hilos, 60 Hz) sobre conductor de aleación de aluminio AAAC 35 mm², con una longitud de 816.60 metros (9 estructuras C.A.C. E-01 a E-09), derivando de la red existente de Electro Puno S.A.A. en cresta del Cerro Chifrón."
+  flujo_digital:
+    - "Google Earth Pro (trazado georreferenciado KML de la traza de MT)"
+    - "Python / pyproj (proyección geodésica WGS-84 a UTM Zona 19S)"
+    - "RedCAD / DLT-CAD (spotting de postes, cálculo de catenarias y archivo .top)"
+    - "ezdxf / AutoCAD (láminas CAD ejecutivas A3: LP-01, PL-01 y U-01)"
+    - "MiKTeX / pdfLaTeX (expediente técnico completo de ingeniería)"
 
-entradas_canonicas_heredadas:
-  matriz_maestra: "../renzo-linea-primaria-capachica/datos/matriz_maestra_datos.yaml"
-  tension_mt_kv: 22.9
-  conductor_mt: "AAAC 35 mm² (parametros verificados en matriz v1)"
-  kva_trafo_v1: 100
+ubicacion:
+  departamento: "Puno"
+  provincia: "Puno"
+  distrito: "Capachica"
+  sector: "Chifrón"
+  altitud_msnm:
+    origen_e01: 3924.17
+    terminal_e09: 3824.61
+    promedio: 3850.00
+  zona_utm: "19 Sur"
+  datum: "WGS84"
 
-registro_cambios:
-  - fecha: "2026-10-11"
-    cambio: "Creación de carpeta v2 e implementación del pipeline OpenDSS en herramientas/red_mt/"
-  - fecha: "2026-10-11"
-    cambio: "Validación end-to-end (tests/smoke_pipeline.py) con datos canónicos v1: convergencia OK, pérdidas 0.27 kW / 4.08 kvar, voltaje MT 1.0000 pu (caída ~0.01%, consistente con memoria analítica v1 de 0.016%), BT 0.971 pu, cumplimiento límite 5%. Convenciones DSS verificadas: kvs y Load.kv en tensión de línea; Set voltagebases+calcv después de definir elementos; circuit.Losses en vatios."
+punto_diseno_mt:
+  concesionaria: "Electro Puno S.A.A."
+  sistema_electrico: "SEIN - Sistema Eléctrico Juliaca / Coata - Capachica"
+  subestacion_potencia: "SET Juliaca / Tap Coata 60/22.9 kV"
+  alimentador_mt: "Alimentador Rural 22.9 kV Coata - Capachica"
+  codigo_sed_cabecera: "SED-CAP01"
+  tramo_existente_gisem: "TMT000012389 / TMT001847370"
+  estructura_derivacion_e01:
+    codigo: "E-01"
+    descripcion: "Poste C.A.C. 12/400 existente en cresta Cerro Chifrón con seccionador Cut-Out 27 kV y pararrayos ZnO 21 kV"
+    este_m: 412606.01
+    norte_m: 8270712.24
+    cota_msnm: 3924.17
+    latitud_deg: -15.640067
+    longitud_deg: -69.815400
 
-entregables:
-  notas: "Generar primero en build/ y revisar antes de publicar en entregables/ (regla 5 del repo)"
+parametros_linea_primaria:
+  tension_nominal_kv: 22.9
+  sistema: "Trifásico, 3 hilos (sin neutro corrido)"
+  frecuencia_hz: 60
+  longitud_total_km: 0.8166
+  longitud_total_m: 816.60
+  numero_estructuras: 9
+  vano_promedio_m: 102.08
+  vano_critico_m: 115.59
+  vano_critico_tramos: "E-05 a E-06"
+  flecha_maxima_m: 1.244
+  galibo_minimo_m: 9.356
+  galibo_normativo_cne_m: 6.50
+  faja_servidumbre_ancho_m: 6.00
+
+conductor_mt:
+  tipo: "Aleación de Aluminio (AAAC)"
+  seccion_nominal_mm2: 35.0
+  seccion_real_mm2: 34.36
+  numero_hilos: 7
+  diametro_exterior_mm: 7.50
+  peso_unitario_kgf_m: 0.0945
+  carga_rotura_kgf: 1040.0
+  modulo_elasticidad_kgf_mm2: 6000.0
+  coef_dilatacion_termica_1_C: 0.000023
+  resistencia_electrica_20C_ohm_km: 0.986
+  reactancia_inductiva_dmg120_ohm_km: 0.385
+  capacidad_corriente_admisible_A: 145.0
+  criterio_tiro_max_pct_TR: 40.0
+  tiro_max_admisible_kgf: 416.0
+  criterio_tiro_eds_pct_TR: 18.0
+  tiro_eds_kgf: 187.20
+
+estructuras_soporte:
+  postes_12_400: 5
+  postes_12_300: 3
+  postes_13_400: 1
+  total_postes: 9
+  armados_pr1_anclaje: 2
+  armados_ps1_suspension: 3
+  armados_pa1_angulo: 3
+  armados_sab1_entrega: 1
+  total_armados: 9
+
+hipotesis_climaticas_cne:
+  zona: "Zona 2/3 (Altiplano > 3000 msnm)"
+  hipotesis_I:
+    nombre: "Viento Máximo"
+    temp_C: 10.0
+    viento_km_h: 75.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
+  hipotesis_II:
+    nombre: "Hielo Máximo"
+    temp_C: -5.0
+    viento_km_h: 37.5
+    hielo_mm: 6.0
+    limite_tiro_pct: 40.0
+  hipotesis_III:
+    nombre: "Temperatura Mínima"
+    temp_C: -15.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
+  hipotesis_IV:
+    nombre: "Temperatura Máxima"
+    temp_C: 35.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
+  hipotesis_V:
+    nombre: "Templado Diario (EDS)"
+    temp_C: 15.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 18.0
+
+entregables_oficiales:
+  expediente_completo_pdf: "entregables/expediente_tecnico_completo.pdf"
+  memoria_descriptiva_pdf: "entregables/memoria_descriptiva.pdf"
+  plano_lp01_planta_pdf: "entregables/planos/plano_LP01_linea_primaria_planta.pdf"
+  plano_pl01_perfil_pdf: "entregables/planos/plano_PL01_perfil_longitudinal.pdf"
+  plano_u01_unifilar_pdf: "entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf"

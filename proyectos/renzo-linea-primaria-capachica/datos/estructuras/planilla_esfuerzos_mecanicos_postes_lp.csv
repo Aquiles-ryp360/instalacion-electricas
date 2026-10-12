@@ -1,0 +1,10 @@
+id,poste,armado,tipo,prog,cota,vano_viento_m,angulo_deg,f_cima_bruta_kgf,carga_trabajo_poste_kgf,retenida_tipo,num_retenidas,tiro_cable_ret_kgf,fs_retenida,f_cima_neta_poste_kgf,fs_poste,cumple_cne
+E-01,C.A.C. 12/400,PR-1,Derivación MT / Anclaje,0.0,3924.17,52.5,0.0,762.4,407.88,Inclinada simple R-1,1,1078.19,2.92,20.47,39.85,True
+E-02,C.A.C. 12/300,PS-1,Suspensión alineamiento,105.0,3895.0,105.0,0.0,76.28,305.91,Ninguna,0,0.0,999.0,76.28,8.02,True
+E-03,C.A.C. 12/300,PS-1,Suspensión alineamiento,210.0,3865.0,100.1,0.0,73.68,305.91,Ninguna,0,0.0,999.0,73.68,8.3,True
+E-04,C.A.C. 13/400 (x2),SAB-1,SED Biposte 100 kVA,305.21,3839.56,96.22,-35.2,531.66,815.76,Contraviento doble en Y,2,375.94,8.38,22.79,71.6,True
+E-05,C.A.C. 12/400,PA-1,Ángulo con retenida,402.43,3817.04,106.41,-36.06,545.25,407.88,Biselar simple R-1,1,771.1,4.09,20.47,39.85,True
+E-06,C.A.C. 12/400,PA-1,Ángulo con retenida,518.02,3827.27,113.05,31.35,489.47,407.88,Biselar simple R-1,1,692.21,4.55,20.47,39.85,True
+E-07,C.A.C. 12/300,PS-1,Alineamiento / Suspensión,628.53,3824.61,95.16,-6.05,151.29,305.91,Ninguna,0,0.0,999.0,151.29,4.04,True
+E-08,C.A.C. 12/400,PA-1,Ángulo con retenida,708.34,3824.61,94.04,32.95,499.96,407.88,Biselar simple R-1,1,707.05,4.46,20.47,39.85,True
+E-09,C.A.C. 12/400,PR-1,Terminal con retenida,816.6,3824.61,54.13,0.0,762.45,407.88,Inclinada simple R-1,1,1078.27,2.92,20.47,39.85,True

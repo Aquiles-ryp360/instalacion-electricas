@@ -194,6 +194,22 @@ En cumplimiento estricto del Código Nacional de Electricidad (Regla 232), se ve
 * **Puestas a Tierra de Redes de Baja Tensión (PAT-1):** 4 pozos distribuidos en neutro con varilla de $5/8'' \times 2.40\text{ m}$ tratada con bentonita:
   $$R_{\text{BT}} \le \mathbf{18.20\ \Omega} \le \mathbf{25.0\ \Omega} \quad \textbf{(CONFORME)}$$
 
+### 8.5 Verificación Estructural de Postes y Retenidas de Línea Primaria (CNE Reglas 250 y 252)
+Conforme a la modelación realizada en [`scripts/calculo_mecanico_postes_lp.py`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/scripts/calculo_mecanico_postes_lp.py):
+* **Postes de Suspensión (E-02, E-03, E-07):** Solicitados a cargas transversales de viento y ángulo leve de hasta $151.29\text{ kgf}$, trabajando autosoportados con factor de seguridad $FS_{\text{poste}} \ge 4.04$ (exigido CNE $\ge 2.0$).
+* **Postes de Ángulo y Terminales (E-01, E-04, E-05, E-06, E-08, E-09):** Solicitados a cargas de tiro de hasta $762.45\text{ kgf}$. Cuentan con retenidas mecánicas R-1 con cable de acero Siemens-Martin $3/8''$ ($T_R = 3,150\text{ kgf}$), registrándose tiros máximos en cable de $1,078.27\text{ kgf}$ ($FS_{\text{ret}} \ge 2.92$, exigido $\ge 2.50$). Al absorber la retenida la carga horizontal, el fuste del poste trabaja a compresión simple con $FS_{\text{poste}} \ge 39.85$.
+
+### 8.6 Verificación Geotécnica de Cimentaciones por el Método de Sulzberger
+Conforme a [`scripts/calculo_cimentacion_sulzberger_lp.py`](file:///C:/Users/renzo/instalacion-electricas/proyectos/renzo-linea-primaria-capachica/scripts/calculo_cimentacion_sulzberger_lp.py):
+* **Cimentaciones de Postes:** Las excavaciones cilíndricas de $D = 0.80\text{ m}$ ($t=1.40\text{ m}$) y $D = 0.90\text{ m}$ ($t=1.50\text{ m}$) con concreto ciclópeo $f'_c = 140\text{ kg/cm}^2 + 30\%$ P.M. ofrecen un momento resistente admisible del suelo de $M_r = 6,583.10\text{ kgf}\cdot\text{m}$ ($9,501.12\text{ kgf}\cdot\text{m}$ en biposte), obteniéndose factores de seguridad al vuelco de $FS_{\text{Sulz}} = 3.77$ a $33.35$ (exigido $\ge 1.50$, **CONFORME**).
+* **Bloques de Anclaje de Retenidas:** Bloques de concreto de $0.40 \times 0.40 \times 0.20\text{ m}$ enterrados a $1.80\text{ m}$ resisten el arrancamiento vertical del prisma de tierra troncocónico con factor de seguridad $FS_{\text{arr}} \ge 2.84$ (exigido $\ge 2.00$, **CONFORME**).
+
+### 8.7 Coordinación de Aislamiento para Gran Altitud (3,850 msnm, IEC 60071-2 / CNE Regla 242)
+* **Factor de corrección de altitud:** $K_a = 1.248$ (CNE) / $1.419$ (IEC 60071-2) para compensar la densidad relativa del aire $\delta = 0.631$ a $3,850\text{ msnm}$.
+* **Nivel Básico de Aislamiento al Impulso (BIL):** $\text{BIL}_{\text{req}} = 125\text{ kV} \times 1.248 = 155.99\text{ kV}$, seleccionándose aisladores poliméricos y seccionadores normalizados con **$\text{BIL} = 150.0\text{ kV} / 170.0\text{ kV}$**.
+* **Línea de Fuga Específica Lacustre:** Se exige $31\text{ mm/kV} \times 24.2\text{ kV} = 750.2\text{ mm}$. El aislador polimérico 25 kV adoptado cuenta con $810.0\text{ mm}$ de línea de fuga ($+8.0\%$ de reserva).
+* **Pararrayos de Óxido de Zinc (ZnO):** Tensión nominal $U_r = 21.0\text{ kV}$, MCOV $= 17.5\text{ kV}$, corriente nominal de descarga $10\text{ kA}$ (Clase Distribución Pesada).
+
 ---
 
 ## 9. DOCUMENTACIÓN GRÁFICA Y PLANOS ASOCIADOS
@@ -202,6 +218,14 @@ En cumplimiento estricto del Código Nacional de Electricidad (Regla 232), se ve
 2. **Lámina U-01 (A3):** Diagrama Unifilar General y Esquema de Protecciones BT (2 Circuitos + AP).
 3. **Lámina PL-01 (A3):** Perfil Longitudinal y Distribución de Estructuras LP 22.9 kV.
 4. **Láminas D-01 a D-05:** Detalles constructivos normalizados DGE (SED SAB-1, soporte trafo, PAT-3, retenidas, cut-out).
+5. **Planos CAD Oficiales y Modelos 3D de Línea Primaria (SEACE CAD Intelligence):**
+   * [`PLANO_DGE_PS1_SUSPENSION_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PS1_SUSPENSION_22.9KV.dxf): Plano DXF normalizado de armado PS-1.
+   * [`PLANO_DGE_PA1_ANGULO_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PA1_ANGULO_22.9KV.dxf): Plano DXF normalizado de armado PA-1.
+   * [`PLANO_DGE_PR1_RETENCION_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PR1_RETENCION_22.9KV.dxf): Plano DXF normalizado de armado PR-1.
+   * [`PLANO_DGE_SAB1_BIPOSTE_100KVA.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_SAB1_BIPOSTE_100KVA.dxf): Plano DXF de subestación aérea biposte SAB-1.
+   * [`PLANO_RETENIDA_R1_TIERRA_45G.dxf`](../entregables/planos/cad_linea_primaria/PLANO_RETENIDA_R1_TIERRA_45G.dxf): Plano DXF de retenida mecánica R-1.
+   * [`PLANO_POSTE_CAC_12M_400DAN.dxf`](../entregables/planos/cad_linea_primaria/PLANO_POSTE_CAC_12M_400DAN.dxf): Plano DXF de poste de concreto centrifugado.
+   * Modelos paramétricos 3D en CadQuery disponibles en [`entregables/planos/cad_linea_primaria/scripts_cadquery_3d/`](../entregables/planos/cad_linea_primaria/scripts_cadquery_3d/).
 
 ---
 *Puno, Octubre de 2026*  
