@@ -1,0 +1,88 @@
+schema_version: 1
+id: aquiles-limbani-redes
+proyecto: "Electrificación y Redes de Distribución Primaria (10 kV) y Secundaria (380/220 V) desde la Minicentral Hidroeléctrica Limbani (200 kW, Turbina Michell-Banki) - Casco Urbano del Distrito de Limbani"
+autor: "Aquiles Taylor Ramos Yapo"
+curso: "Instalaciones Eléctricas II / Redes Eléctricas"
+universidad: "Universidad Nacional del Altiplano - Puno (UNA Puno)"
+facultad: "Facultad de Ingeniería Mecánica Eléctrica, Electrónica y Sistemas (FIME)"
+escuela: "Escuela Profesional de Ingeniería Mecánica Eléctrica"
+docente: "Mg. Gregorio Meza Marocho"
+estado: "Expediente Técnico Completo Formulado"
+
+ubicacion:
+  departamento: "Puno"
+  provincia: "Sandia"
+  distrito: "Limbani"
+  altitud_media_msnm: 3050
+  sistema_coordenadas: "WGS 84 / UTM Zona 19 Sur (EPSG:32719)"
+  easting_range: [425250, 425700]
+  northing_range: [8434750, 8436650]
+
+fuente_generacion:
+  tipo: "Minicentral Hidroeléctrica de Pasada (MCH Limbani)"
+  recurso_hidrico: "Río Limbani"
+  tipo_turbina: "Michell-Banki (Flujo Transversal / Cross-Flow)"
+  potencia_instalada_kw: 200
+  potencia_aparente_kva: 250
+  factor_potencia: 0.80
+  tension_generacion_kv: 0.38
+  frecuencia_hz: 60
+  numero_fases: 3
+
+sistema_electrico_propuesto:
+  subestacion_elevadora_mch:
+    potencia_kva: 250
+    relacion_transformacion_kv: "0.38 / 10.0 kV"
+    grupo_conexion: "Dyn5"
+    tipo: "Interior de Casa de Máquinas / Celda compacta"
+
+  linea_primaria_mt:
+    tension_nominal_kv: 10.0
+    tension_maxima_servicio_kv: 12.0
+    longitud_troncal_km: 2.15
+    configuracion: "Aérea trifásica 3 hilos"
+    conductor: "Aleación de Aluminio AAAC 35 mm2 (NTP 370.258)"
+    estructuras: "Postes de Concreto Armado Centrifugado (CAC) 12m y 13m"
+    aisladores: "Poliméricos tipo pin y suspensión (línea de fuga corregida por altitud 3050 msnm, ka=1.28)"
+
+  subestaciones_distribucion_sed:
+    cantidad_total: 3
+    tipo_montaje: "Subestación Aérea Biposte (SAB)"
+    seds:
+      - codigo: "SED-01 (Norte / Hidroeléctrica)"
+        potencia_kva: 50
+        relacion_kv: "10.0 / 0.38-0.22"
+        zona_atencion: "Barrio Norte, Sector Central Hidroeléctrica y acceso"
+        lotes_atendidos: 142
+      - codigo: "SED-02 (Centro / Plaza de Armas)"
+        potencia_kva: 100
+        relacion_kv: "10.0 / 0.38-0.22"
+        zona_atencion: "Plaza de Armas, Jr. Puno, Jr. Lima, Comercio, Municipalidad, Salud"
+        lotes_atendidos: 348
+      - codigo: "SED-03 (Sur / Estadio - Piscina)"
+        potencia_kva: 100
+        relacion_kv: "10.0 / 0.38-0.22"
+        zona_atencion: "Barrio Sur, Estadio Municipal, Piscina y complejo deportivo"
+        lotes_atendidos: 274
+    potencia_total_transformacion_kva: 250
+
+  redes_secundarias_bt:
+    tension_servicio_v: "380/220 V (Trifásico 4 hilos) y 220 V (Monofásico)"
+    conductor: "Autoportante de Aluminio CAAI (3x35+1x16+NA25 mm2 troncales, 2x16+1x16+NA25 mm2 ramales)"
+    estructuras_bt: "Postes de Concreto Armado Centrifugado (CAC) 8m/200daN y 9m/300daN"
+    total_lotes_suministrados: 764
+    sistema_alumbrado_publico: "Luminarias LED 50W / 220V sobre postes de BT cada 35-40m"
+
+normativa_aplicable:
+  - "CNE - Suministro 2011 (R.M. N.° 366-2011-MEM/DM)"
+  - "Bases para el Diseño de Líneas Primarias para Electrificación Rural (R.D. N.° 018-2003-EM/DGE)"
+  - "Bases para el Diseño de Redes Secundarias con Conductores Autoportantes (R.D. N.° 016-2003-EM/DGE)"
+  - "Especificaciones Técnicas para el Montaje de Líneas y Redes (R.D. N.° 026-2003-EM/DGE)"
+  - "Norma Técnica de Calidad de los Servicios Eléctricos - NTCSE (D.S. N.° 020-97-EM)"
+  - "Norma DGE Símbolos Gráficos en Electricidad (R.M. N.° 091-2002-EM/VME / UNE-EN 60617)"
+
+entregables:
+  directorio: "entregables"
+  expediente_pdf: "entregables/expediente_limbani.pdf"
+  expediente_docx: "entregables/expediente_limbani.docx"
+  planos_dwg_dxf: "catastro_limbani.dxf"

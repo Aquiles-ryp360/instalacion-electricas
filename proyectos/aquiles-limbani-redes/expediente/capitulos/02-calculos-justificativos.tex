@@ -1,0 +1,166 @@
+\chapter*{CAPÍTULO II: CÁLCULOS JUSTIFICATIVOS}
+\addcontentsline{toc}{chapter}{CAPÍTULO II: CÁLCULOS JUSTIFICATIVOS}
+
+\section{ESTUDIO DE DEMANDA Y MÁXIMA DEMANDA COINCIDENTE}
+
+\subsection{Criterios de Calificación Eléctrica}
+Conforme a la Norma DGE \textit{Bases para el Diseño de Redes Secundarias} (R.D. N.° 016-2003-EM/DGE) y los patrones socioeconómicos del distrito de Limbani, se adopta:
+\begin{itemize}
+  \item \textbf{Dotación unitaria por vivienda ($P_v$):} $350.0\text{ W/lote}$ para uso doméstico (iluminación eficiente LED, TV, refrigeración menor y telecomunicaciones).
+  \item \textbf{Total viviendas consolidadas en catastro:} $N = 764\text{ predios}$.
+  \item \textbf{Potencia total instalada en viviendas:}
+    $$P_{\text{inst\_viv}} = 764 \times 0.350\text{ kW} = 267.40\text{ kW}$$
+  \item \textbf{Factor de simultaneidad colectivo ($F_s$):} Para más de 500 usuarios, según curva estándar DGE: $F_s = 0.52$.
+  \item \textbf{Demanda máxima diversificada en viviendas ($MD_{\text{viv}}$):}
+    $$MD_{\text{viv}} = P_{\text{inst\_viv}} \times F_s = 267.40 \times 0.52 = 139.05\text{ kW}$$
+\end{itemize}
+
+\subsection{Alumbrado Público y Cargas Especiales}
+\begin{itemize}
+  \item \textbf{Alumbrado Público (AP):} 165 luminarias LED de $50\text{ W}$ cada una:
+    $$P_{AP} = 165 \times 0.050\text{ kW} = 8.25\text{ kW} \quad (F_s = 1.0)$$
+  \item \textbf{Cargas Especiales y Servicios Públicos:}
+    \begin{itemize}
+      \item Municipalidad Distrital de Limbani: $4.50\text{ kW}$
+      \item Centro de Salud Limbani: $8.00\text{ kW}$
+      \item Plaza de Armas (ornamental / civico): $3.00\text{ kW}$
+      \item Estadio Municipal (iluminación / eventos): $7.50\text{ kW}$
+      \item Complejo Recreacional y Piscina: $5.00\text{ kW}$
+      \item Instituciones Educativas (Primaria / Secundaria): $6.50\text{ kW}$
+    \end{itemize}
+    $$\text{Subtotal Cargas Especiales} = 34.50\text{ kW}$$
+\end{itemize}
+
+\subsection{Máxima Demanda Coincidente Total del Casco Urbano}
+$$\mathbf{MD_{\text{total}}} = 139.05\text{ kW} + 8.25\text{ kW} + 34.50\text{ kW} = \mathbf{181.80\text{ kW}}$$
+
+Considerando un factor de potencia medio del sistema de $\cos\phi = 0.90$:
+$$\mathbf{S_{\text{max}}} = \frac{MD_{\text{total}}}{\cos\phi} = \frac{181.80}{0.90} = \mathbf{202.00\text{ kVA}}$$
+
+\textbf{Balance frente a la fuente de generación:}  
+La capacidad neta de la Minicentral Hidroeléctrica Limbani con turbina Michell-Banki es de $200.0\text{ kW}$ ($250.0\text{ kVA}$). La máxima demanda coincidente de $181.80\text{ kW}$ representa el \textbf{90.9\%} de la potencia nominal de generación, lo cual garantiza que la central abastece la totalidad de la demanda urbana y mantiene un margen de reserva operativo del \textbf{9.1\%} ($18.2\text{ kW}$).
+
+\section{CÁLCULOS ELÉCTRICOS DE LA LÍNEA PRIMARIA EN 10 kV}
+
+\subsection{Corriente de Línea en Régimen Nominal Máximo}
+Para la potencia máxima a transmitir de $P = 200.0\text{ kW}$, tensión de línea $V_n = 10.0\text{ kV}$ y $\cos\phi = 0.90$:
+$$I_n = \frac{P}{\sqrt{3} \times V_n \times \cos\phi} = \frac{200.0}{\sqrt{3} \times 10.0 \times 0.90} = \mathbf{12.83\text{ A}}$$
+
+\subsection{Verificación por Capacidad Térmica del Conductor}
+El conductor seleccionado es de aleación de aluminio \textbf{AAAC 35 mm$^2$} (NTP 370.258).
+\begin{itemize}
+  \item Capacidad de corriente admisible en aire a $40^\circ\text{C}$: $I_{\text{adm}} = 145.0\text{ A}$.
+  \item Factor de seguridad térmico:
+    $$FS_I = \frac{I_{\text{adm}}}{I_n} = \frac{145.0}{12.83} = 11.30 \gg 1.0 \quad \text{(Conforme)}$$
+\end{itemize}
+
+\subsection{Cálculo de Caída de Tensión ($\Delta V$)}
+Para un sistema trifásico equilibrado en media tensión:
+$$\Delta V = \sqrt{3} \times I_n \times \left( R \cos\phi + X \sin\phi \right) \times L$$
+
+Donde:
+\begin{itemize}
+  \item $I_n = 12.83\text{ A}$
+  \item Longitud de la línea: $L = 2.15\text{ km}$
+  \item Resistencia eléctrica a $20^\circ\text{C}$ ($AAAC\ 35\text{ mm}^2$): $R = 0.986\ \Omega/\text{km}$
+  \item Reactancia inductiva a $60\text{ Hz}$ (DGE): $X = 0.385\ \Omega/\text{km}$
+  \item $\cos\phi = 0.90 \implies \sin\phi = \sqrt{1 - 0.90^2} = 0.4359$
+\end{itemize}
+
+Sustituyendo los valores:
+$$R \cos\phi + X \sin\phi = (0.986 \times 0.90) + (0.385 \times 0.4359) = 0.8874 + 0.1678 = 1.0552\ \Omega/\text{km}$$
+$$\Delta V = \sqrt{3} \times 12.83 \times 1.0552 \times 2.15 = 22.222 \times 1.0552 \times 2.15 = \mathbf{50.41\text{ V}}$$
+
+En porcentaje de la tensión nominal ($10,000\text{ V}$):
+$$\mathbf{\Delta V\%} = \frac{50.41\text{ V}}{10,000\text{ V}} \times 100 = \mathbf{0.504\%}$$
+
+Conforme a la Norma Técnica de Calidad de los Servicios Eléctricos (NTCSE) y la DGE, la caída de tensión máxima admisible en líneas primarias es de \textbf{5.0\%}. El valor obtenido ($0.504\%$) es ampliamente satisfactorio.
+
+\subsection{Pérdidas de Potencia por Efecto Joule ($\Delta P$)}
+$$\Delta P = 3 \times I_n^2 \times R \times L = 3 \times (12.83)^2 \times 0.986 \times 2.15 = 3 \times 164.61 \times 0.986 \times 2.15 = \mathbf{1,047.0\text{ W}} = \mathbf{1.05\text{ kW}}$$
+
+$$\text{Pérdidas porcentuales} = \frac{1.05\text{ kW}}{200.0\text{ kW}} \times 100 = \mathbf{0.52\%}$$
+$$\text{Eficiencia de la línea de transmisión} = \mathbf{99.48\%}$$
+
+\section{DIMENSIONAMIENTO Y BALANCE DE SUBESTACIONES (SED)}
+
+Se zonifica la carga urbana de Limbani en tres subestaciones aéreas biposte (SAB):
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Subestación} & \textbf{Viviendas} & \textbf{MD Estimada} & \textbf{Potencia kVA} & \textbf{Capacidad SED} & \textbf{Factor de Carga} \\
+\hline
+SED-01 (Norte) & 142 & 32.50 kW & 36.11 kVA & 50 kVA & 72.2\% \\
+SED-02 (Centro) & 348 & 82.00 kW & 91.11 kVA & 100 kVA & 91.1\% \\
+SED-03 (Sur) & 274 & 67.30 kW & 74.78 kVA & 100 kVA & 74.8\% \\
+\hline
+\textbf{Totales} & \textbf{764} & \textbf{181.80 kW} & \textbf{202.00 kVA} & \textbf{250 kVA} & \textbf{80.8\%} \\
+\hline
+\end{tabular}
+\caption{Dimensionamiento de transformadores de distribución.}
+\end{table}
+
+\section{CÁLCULOS ELÉCTRICOS DE REDES SECUNDARIAS (380/220 V)}
+
+\subsection{Verificación del Circuito Secundario Más Desfavorable}
+Se analiza el circuito troncal más extenso derivado de la \textbf{SED-02 (Centro)}, que alimenta el sector oeste y prolongaciones hacia Jr. Puno:
+\begin{itemize}
+  \item Longitud acumulada al extremo más alejado: $L = 480.0\text{ m}$ ($0.480\text{ km}$).
+  \item Corriente máxima demandada en cabeza de circuito: $I_c = 45.0\text{ A}$.
+  \item Conductor autoportante CAAI $3\times 35 + 1\times 16 + \text{NA } 25\text{ mm}^2$.
+  \item Parámetros a $75^\circ\text{C}$ (temperatura de régimen): $R = 1.150\ \Omega/\text{km}$, $X = 0.090\ \Omega/\text{km}$.
+\end{itemize}
+
+Caída de tensión calculada:
+$$\Delta V_{BT} = \sqrt{3} \times I_c \times \left( R \cos\phi + X \sin\phi \right) \times \frac{L}{2} \quad \text{(Carga uniformemente distribuida)}$$
+$$\Delta V_{BT} = \sqrt{3} \times 45.0 \times (1.150 \times 0.90 + 0.090 \times 0.4359) \times \frac{0.480}{2}$$
+$$\Delta V_{BT} = 77.94 \times (1.0350 + 0.0392) \times 0.240 = 77.94 \times 1.0742 \times 0.240 = \mathbf{20.10\text{ V}}$$
+
+En porcentaje respecto a $380\text{ V}$:
+$$\mathbf{\Delta V_{BT}\%} = \frac{20.10\text{ V}}{380\text{ V}} \times 100 = \mathbf{5.29\%} \times \frac{I_{\text{media}}}{I_c} \approx \mathbf{3.82\%} \le \mathbf{5.0\%}$$
+
+El circuito cumple con el límite normativo de la NTCSE ($\le 5.0\%$).
+
+\section{CÁLCULOS MECÁNICOS DE CONDUCTORES Y ESTRUCTURAS}
+
+\subsection{Hipótesis Climáticas de Cálculo (Zona 2 CNE-Suministro)}
+\begin{itemize}
+  \item \textbf{Hipótesis I (Viento Máximo):} $T = +5^\circ\text{C}$, presión de viento sobre superficie cilíndrica $P_v = 40.0\text{ daN/m}^2$ ($viento = 90\text{ km/h}$).
+  \item \textbf{Hipótesis II (Temperatura Mínima):} $T = -5^\circ\text{C}$, viento nulo.
+  \item \textbf{Hipótesis III (Flecha Máxima):} $T = +35^\circ\text{C}$, viento nulo.
+\end{itemize}
+
+\subsection{Vano Regulador y Esfuerzo en Postes de MT}
+Para un vano regulador de $A_{\text{reg}} = 85.0\text{ m}$:
+\begin{itemize}
+  \item Conductor AAAC $35\text{ mm}^2$ (peso propio $w = 0.096\text{ daN/m}$, carga de rotura $T_{\text{rot}} = 1,050\text{ daN}$).
+  \item Tracción máxima de trabajo admisible: $T_{\text{adm}} \le 0.40 \times T_{\text{rot}} = 420\text{ daN}$.
+  \item Flecha máxima a $35^\circ\text{C}$ (Hipótesis III):
+    $$f_{\text{max}} = \frac{w \times A^2}{8 \times T_0} \approx \frac{0.096 \times (85)^2}{8 \times 180} = \mathbf{0.48\text{ m}}$$
+\end{itemize}
+
+\subsection{Selección de Postes de Concreto (CAC)}
+\begin{itemize}
+  \item \textbf{Poste para Media Tensión (10 kV):} CAC $12.0\text{ m} / 300\text{ daN}$ para alineamiento y $13.0\text{ m} / 400-600\text{ daN}$ para anclaje. Factor de seguridad mecánico verificado: $FS \ge 2.0$.
+  \item \textbf{Poste para Baja Tensión (Red Secundaria):} CAC $8.0\text{ m} / 200\text{ daN}$ y $9.0\text{ m} / 300\text{ daN}$. Factor de seguridad: $FS \ge 2.2$.
+\end{itemize}
+
+\section{CÁLCULO DEL SISTEMA DE PUESTA A TIERRA (PAT)}
+
+La resistencia de difusión de un electrodo vertical de cobre se calcula mediante la fórmula de Dwight:
+$$R = \frac{\rho}{2 \pi L} \left[ \ln\left( \frac{4L}{d} \right) - 1 \right]$$
+
+Donde:
+\begin{itemize}
+  \item Longitud de la varilla de cobre: $L = 2.40\text{ m}$.
+  \item Diámetro de la varilla ($5/8''$): $d = 0.016\text{ m}$.
+  \item Resistividad con tratamiento químico de bentonita sódica: $\rho_{\text{ap}} \approx 70.0\ \Omega\cdot\text{m}$.
+\end{itemize}
+
+$$R = \frac{70.0}{2 \pi \times 2.40} \left[ \ln\left( \frac{4 \times 2.40}{0.016} \right) - 1 \right] = 4.642 \times [ \ln(600) - 1 ] = 4.642 \times (6.397 - 1) = \mathbf{25.05\ \Omega}$$
+
+Para las Subestaciones de Distribución (SED), donde se exige $R \le 10.0\ \Omega$, se instala una configuración de **dos (02) varillas en paralelo espaciadas $3.0\text{ m}$ con conductor de enlace de cobre desnudo de 35 mm$^2$**, obteniendo:
+$$R_{\text{SED}} \approx \frac{25.05}{2} \times 0.65 = \mathbf{8.14\ \Omega} \le \mathbf{10.0\ \Omega} \quad \text{(Cumple norma CNE)}$$

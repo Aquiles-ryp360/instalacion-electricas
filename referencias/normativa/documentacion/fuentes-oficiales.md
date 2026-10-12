@@ -48,6 +48,17 @@ publica, entre otras, las siguientes normas relevantes:
   tomacorrientes y equipos seleccionados.
 - Requisitos de la empresa distribuidora local para factibilidad, punto de
   entrega, medicion y posible sistema de utilizacion en media tension.
+
+## Redes de Distribucion, Lineas de Transmision y Electrificacion Rural
+
+| Codigo | Norma o documento | Entidad | Uso | Fuente oficial | Estado |
+|---|---|---|---|---|---|
+| CNE-S | Codigo Nacional de Electricidad - Suministro 2011, R.M. N.° 366-2011-MEM/DM | MINEM / DGE | Norma obligatoria para lineas de transmision, redes de media tension y distribucion secundaria, DMS y calculo mecanico | [Portal oficial MINEM](https://www.gob.pe/institucion/minem/normas-legales/174312-366-2011-mem-dm) | Ficha tecnica elaborada y verificada |
+| LCE | Ley de Concesiones Electricas (D.L. N.° 25844) y Reglamento (D.S. N.° 009-93-EM) | MINEM / OSINERGMIN | Marco regulatorio general de generacion, transmision y distribucion electrica en el Peru | [Portal del Estado Peruano](https://www.gob.pe/institucion/osinergmin/normas-legales) | Marco legal vigente |
+| DGE-LP-018 | Bases para el Diseno de Lineas Primarias para Electrificacion Rural, R.D. N.° 018-2003-EM/DGE | MINEM / DGE | Criterios de diseno de lineas en 10 kV, 13.2 kV y 22.9 kV, conductores AAAC y postes CAC | [MINEM DGE](https://www.gob.pe/institucion/minem/normas-legales) | Ficha elaborada |
+| DGE-RS-016 | Bases para el Diseno de Redes Secundarias con Conductores Autoportantes para Electrificacion Rural, R.D. N.° 016-2003-EM/DGE | MINEM / DGE | Diseno de redes de baja tension (380/220 V y 220 V) con conductores CAAI | [MINEM DGE](https://www.gob.pe/institucion/minem/normas-legales) | Ficha elaborada |
+| DGE-MONTAJE-026 | Especificaciones Tecnicas para el Montaje de Lineas y Redes Primarias para Electrificacion Rural, R.D. N.° 026-2003-EM/DGE | MINEM / DGE | Procedimientos de excavacion, izado de postes, tendido, flechado y PAT | [MINEM DGE](https://www.gob.pe/institucion/minem/normas-legales) | Ficha elaborada |
+| NTCSE | Norma Tecnica de Calidad de los Servicios Electricos, D.S. N.° 020-97-EM | MINEM / OSINERGMIN | Limites regulatorios de tolerancia de tension (+/-5% urbano, +/-7.5% rural) | [OSINERGMIN](https://www.osinergmin.gob.pe) | Verificada |
 - Reglamentos de seguridad y salud en el trabajo aplicables a la actividad.
 
 No se debe marcar una norma como `Aplicada` solo por incluirla en esta tabla.
