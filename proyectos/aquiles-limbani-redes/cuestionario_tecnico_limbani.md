@@ -7,22 +7,22 @@
 
 ## Bloque 1: Identificación Académica
 1. **Código de estudiante UNAP:**
-   - [ ] Confirmar código de matrícula universitario (ej. 20XXXX o dejar registrado en expediente).
+   - [ ] Confirmar código de matrícula universitario (ej. 20XXXX o dejar registrado en expediente). es 227368
 2. **Semestre académico:**
-   - [ ] 2026-I / 2026-II.
+   - [ ] 2026-I / 2026-II. estamos en 2026-II
 3. **Docente del curso:**
-   - [x] *(Adoptado)* Mg. Gregorio Meza Marocho (FIME - UNAP).
+   - [x] *(Adoptado)* Mg. Gregorio Meza Marocho (FIME - UNAP). es otro inginiero 
 
 ---
 
 ## Bloque 2: Fuente de Generación (MCH Limbani - 200 kW)
 4. **Entidad administradora / operadora de la MCH Limbani:**
-   - [x] **Opción A (Recomendada):** Municipalidad Distrital de Limbani en coordinación con la Junta Administradora Local de Servicios Eléctricos.
+   - [x] **Opción A (Recomendada):** Municipalidad Distrital de Limbani en coordinación con la Junta Administradora Local de Servicios Eléctricos. si esta bien 
    - [ ] **Opción B:** Entrega en comodato o concesión rural a Electro Puno S.A.A.
 5. **Regulación de tensión y frecuencia en casa de máquinas:**
    - [x] **Opción A (Adoptada):** Regulador electrónico de velocidad y carga balasto (Electronic Load Controller - ELC) en generador síncrono de 380 V, 60 Hz.
    - [ ] **Opción B:** Deflector hidráulico accionado por servomotor gobernado por PLC.
-
+como tal nosotros en este proyecto no vamos hacer lo que es el dise;o de la minicentral solo son datos pero pues de esta minicentral saldra a una subestacion de donde empezaremos a trazar todos los postes y tal 
 ---
 
 ## Bloque 3: Línea Primaria en Media Tensión (10.0 kV)

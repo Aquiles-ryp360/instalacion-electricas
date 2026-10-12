@@ -217,8 +217,9 @@ def main():
     
     meta_items = [
         ("CURSO: ", "Instalaciones Eléctricas II / Redes Eléctricas y Subestaciones"),
-        ("DOCENTE: ", "Mg. Gregorio Meza Marocho"),
-        ("AUTOR / RESPONSABLE: ", "Br. Aquiles Taylor Ramos Yapo"),
+        ("DOCENTE: ", "Docente del Curso (FIME - UNAP)"),
+        ("AUTOR / RESPONSABLE: ", "Br. Aquiles Taylor Ramos Yapo (Cód. 227368)"),
+        ("SEMESTRE ACADÉMICO: ", "2026-II"),
         ("SISTEMA GEODÉSICO: ", "WGS 84 / UTM Zona 19 Sur (EPSG:32719)"),
         ("POTENCIA GENERACIÓN: ", "200 kW (Turbina Michell-Banki / Alternador 380 V)"),
         ("POBLACIÓN BENEFICIARIA: ", "764 Viviendas Consolidadas / 623 Lotes Catastrados")
@@ -252,13 +253,59 @@ def main():
     add_p(doc, "Históricamente, los centros poblados y distritos situados en las vertientes orientales de la cordillera de Carabaya y Sandia han enfrentado limitaciones en el suministro continuo y de calidad de energía eléctrica, debido a la topografía accidentada y la lejanía de las grandes troncales del Sistema Eléctrico Interconectado Nacional (SEIN). En este contexto, el aprovechamiento del abundante potencial hídrico de la cuenca del Río Limbani mediante la operación de una minicentral hidroeléctrica de pasada con turbina Michell-Banki de 200 kW representa una solución técnica, económica y ambientalmente sostenible para garantizar la soberanía energética del casco urbano de Limbani.")
     add_p(doc, "Para la concepción del presente proyecto se ha tomado como base territorial y física el Catastro Urbano Oficial Consolidado de Limbani, levantado en el sistema geodésico WGS 84 / UTM Zona 19 Sur, el cual registra con precisión milimétrica un total de 623 lotes de propiedad oficial, 87 manzanas catastrales y 764 viviendas consolidadas, así como la delimitación inalterable del cauce del Río Limbani, Río Chinchalamani y los equipamientos urbanos (Plaza de Armas, Estadio Municipal, Piscina y centros educativos/salud).")
 
-    add_heading_2(doc, "1.2 Ubicación Política, Geográfica y Accesibilidad")
+    add_heading_2(doc, "1.2 Alcance y Objeto del Proyecto")
+    add_p(doc, "Se precisa que las características técnicas de la Minicentral Hidroeléctrica Limbani (turbina Michell-Banki de 200 kW y alternador síncrono trifásico a 380 V) constituyen parámetros y datos de entrada del suministro eléctrico. El objeto integral del presente expediente comprende:")
+    add_bullet(doc, "Subestación Elevadora 250 kVA (0.38 / 10.0 kV, Dyn5) en casa de máquinas.", bold_prefix="1. Transformación Inicial: ")
+    add_bullet(doc, "Línea Primaria 10 kV (2.15 km) en conductor desnudo AAAC 35 mm² y postes CAC 12m y 13m.", bold_prefix="2. Transmisión Primaria: ")
+    add_bullet(doc, "Tres Subestaciones Aéreas Biposte (SED-01 Norte 50 kVA, SED-02 Centro 100 kVA, SED-03 Sur 100 kVA).", bold_prefix="3. Subestaciones de Distribución: ")
+    add_bullet(doc, "Redes Secundarias 380/220 V con cables autoportantes CAAI y postes CAC 8m y 9m.", bold_prefix="4. Redes de Distribución: ")
+    add_bullet(doc, "Alumbrado Público LED (165 luminarias de 50 W con control fotocelular).", bold_prefix="5. Alumbrado Público: ")
+    add_bullet(doc, "764 Acometidas domiciliarias monofásicas con medición estática y cajas IP54.", bold_prefix="6. Acometidas y Medición: ")
+
+    add_heading_2(doc, "1.3 Ubicación Política, Geográfica y Cartografía Territorial")
     add_bullet(doc, "Puno", bold_prefix="Departamento: ")
     add_bullet(doc, "Sandia", bold_prefix="Provincia: ")
     add_bullet(doc, "Limbani", bold_prefix="Distrito: ")
     add_bullet(doc, "Casco urbano consolidado (Barrio Norte, Centro y Barrio Sur)", bold_prefix="Sector beneficiario: ")
     add_bullet(doc, "3,050 m.s.n.m. (rango 2,980 - 3,150 m.s.n.m.)", bold_prefix="Altitud media: ")
     add_bullet(doc, "Este: 425,250 a 425,700 m E | Norte: 8'434,750 a 8'436,650 m N", bold_prefix="Coordenadas UTM (WGS 84 Z19S): ")
+
+    # Insertar imágenes de ubicación territorial
+    img_ub_puno = os.path.join(fig_dir, "ubicacion_departamento_puno.jpg")
+    img_ub_sandia = os.path.join(fig_dir, "ubicacion_provincia_sandia.jpg")
+    img_ub_macro = os.path.join(fig_dir, "ubicacion_macrorregional.png")
+    
+    if os.path.exists(img_ub_puno) and os.path.exists(img_ub_sandia):
+        p_u1 = doc.add_paragraph()
+        p_u1.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_u1.paragraph_format.space_before = Pt(8)
+        p_u1.paragraph_format.space_after = Pt(2)
+        p_u1.add_run().add_picture(img_ub_puno, width=Inches(2.8))
+        p_u1.add_run("   ")
+        p_u1.add_run().add_picture(img_ub_sandia, width=Inches(2.8))
+        
+        p_pie_u1 = doc.add_paragraph()
+        p_pie_u1.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_pie_u1.paragraph_format.space_after = Pt(8)
+        r_pu1 = p_pie_u1.add_run("Figura 1.1: Localización del Departamento de Puno y de la Provincia de Sandia.")
+        r_pu1.font.italic = True
+        r_pu1.font.size = Pt(9)
+        r_pu1.font.color.rgb = RGBColor(80, 80, 80)
+
+    if os.path.exists(img_ub_macro):
+        p_u2 = doc.add_paragraph()
+        p_u2.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_u2.paragraph_format.space_before = Pt(6)
+        p_u2.paragraph_format.space_after = Pt(2)
+        p_u2.add_run().add_picture(img_ub_macro, width=Inches(5.8))
+        
+        p_pie_u2 = doc.add_paragraph()
+        p_pie_u2.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_pie_u2.paragraph_format.space_after = Pt(10)
+        r_pu2 = p_pie_u2.add_run("Figura 1.2: Relieve y localización orográfica del Distrito de Limbani en los Andes Orientales.")
+        r_pu2.font.italic = True
+        r_pu2.font.size = Pt(9)
+        r_pu2.font.color.rgb = RGBColor(80, 80, 80)
 
     add_heading_3(doc, "Ruta de Acceso Terrestre")
     t_acc = create_table_styled(doc, 5, 5, [1.5, 1.8, 1.0, 1.3, 0.9])
@@ -525,10 +572,11 @@ def main():
     figuras_map = [
         ("01_superposicion_ortofoto_completa.png", "Figura 7.1: Superposición ortofotogramétrica y delimitación de manzanas catastrales en Limbani."),
         ("02_modelo_autocad_completo.png", "Figura 7.2: Modelo geométrico y base catastral vectorial en formato CAD/DXF."),
-        ("03_zoom_sector_norte_hidroelectrica.png", "Figura 7.3: Sector Norte: Casa de máquinas MCH Limbani (200 kW) y cobertura de SED-01."),
-        ("04_zoom_sector_centro_plaza_puno.png", "Figura 7.4: Sector Centro: Plaza de Armas de Limbani y cobertura de SED-02."),
-        ("05_zoom_sector_confluencia_estadio.png", "Figura 7.5: Sector de confluencia fluvial y área de expansión recreacional/deportiva."),
-        ("06_zoom_sector_sur_piscina_salida.png", "Figura 7.6: Sector Sur: Complejo recreacional, piscina y cobertura de SED-03.")
+        ("07_redes_electricas_detalladas_catastro.png", "Figura 7.3: Plano General de Redes Eléctricas, Postería CAC y Subestaciones Aéreas Biposte georreferenciadas en Limbani (WGS 84 Z19S)."),
+        ("03_zoom_sector_norte_hidroelectrica.png", "Figura 7.4: Sector Norte: Casa de máquinas MCH Limbani (200 kW) y cobertura de SED-01."),
+        ("04_zoom_sector_centro_plaza_puno.png", "Figura 7.5: Sector Centro: Plaza de Armas de Limbani y cobertura de SED-02."),
+        ("05_zoom_sector_confluencia_estadio.png", "Figura 7.6: Sector de confluencia fluvial y área de expansión recreacional/deportiva."),
+        ("06_zoom_sector_sur_piscina_salida.png", "Figura 7.7: Sector Sur: Complejo recreacional, piscina y cobertura de SED-03.")
     ]
 
     for fname, pie in figuras_map:

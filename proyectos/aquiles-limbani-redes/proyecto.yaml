@@ -2,11 +2,13 @@ schema_version: 1
 id: aquiles-limbani-redes
 proyecto: "Electrificación y Redes de Distribución Primaria (10 kV) y Secundaria (380/220 V) desde la Minicentral Hidroeléctrica Limbani (200 kW, Turbina Michell-Banki) - Casco Urbano del Distrito de Limbani"
 autor: "Aquiles Taylor Ramos Yapo"
+codigo_estudiante: "227368"
+semestre_academico: "2026-II"
 curso: "Instalaciones Eléctricas II / Redes Eléctricas"
 universidad: "Universidad Nacional del Altiplano - Puno (UNA Puno)"
 facultad: "Facultad de Ingeniería Mecánica Eléctrica, Electrónica y Sistemas (FIME)"
 escuela: "Escuela Profesional de Ingeniería Mecánica Eléctrica"
-docente: "Mg. Gregorio Meza Marocho"
+docente: "Docente FIME - UNAP (Por confirmar asignación)"
 estado: "Expediente Técnico Completo Formulado"
 
 ubicacion:
