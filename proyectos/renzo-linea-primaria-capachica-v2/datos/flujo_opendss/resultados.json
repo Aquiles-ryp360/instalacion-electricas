@@ -1,0 +1,187 @@
+{
+  "modelo": {
+    "ruta": "C:\\Users\\renzo\\instalacion-electricas\\proyectos\\renzo-linea-primaria-capachica-v2\\build\\modelo_MT.dss",
+    "lineas_modelo": 15,
+    "conductor": "AAAC 35 mm2",
+    "kva_trafo": 100.0
+  },
+  "resultados": {
+    "convergencia": true,
+    "voltajes": {
+      "sourcebus": {
+        "fase_1_pu": 1.00007,
+        "fase_2_pu": 1.00007,
+        "fase_3_pu": 1.00007,
+        "min_pu": 1.00007
+      },
+      "e-01": {
+        "fase_1_pu": 1.00007,
+        "fase_2_pu": 1.00007,
+        "fase_3_pu": 1.00007,
+        "min_pu": 1.00007
+      },
+      "e-02": {
+        "fase_1_pu": 1.00006,
+        "fase_2_pu": 1.00006,
+        "fase_3_pu": 1.00006,
+        "min_pu": 1.00006
+      },
+      "e-03": {
+        "fase_1_pu": 1.00004,
+        "fase_2_pu": 1.00004,
+        "fase_3_pu": 1.00004,
+        "min_pu": 1.00004
+      },
+      "e-04": {
+        "fase_1_pu": 1.00002,
+        "fase_2_pu": 1.00002,
+        "fase_3_pu": 1.00002,
+        "min_pu": 1.00002
+      },
+      "e-05": {
+        "fase_1_pu": 1.00002,
+        "fase_2_pu": 1.00002,
+        "fase_3_pu": 1.00002,
+        "min_pu": 1.00002
+      },
+      "e-06": {
+        "fase_1_pu": 1.00002,
+        "fase_2_pu": 1.00002,
+        "fase_3_pu": 1.00002,
+        "min_pu": 1.00002
+      },
+      "e-07": {
+        "fase_1_pu": 1.00002,
+        "fase_2_pu": 1.00002,
+        "fase_3_pu": 1.00002,
+        "min_pu": 1.00002
+      },
+      "e-08": {
+        "fase_1_pu": 1.00002,
+        "fase_2_pu": 1.00002,
+        "fase_3_pu": 1.00002,
+        "min_pu": 1.00002
+      },
+      "e-09": {
+        "fase_1_pu": 1.00002,
+        "fase_2_pu": 1.00002,
+        "fase_3_pu": 1.00002,
+        "min_pu": 1.00002
+      },
+      "e-04_bt": {
+        "fase_1_pu": 0.97103,
+        "fase_2_pu": 0.97103,
+        "fase_3_pu": 0.97103,
+        "min_pu": 0.97103
+      }
+    },
+    "corrientes_tramos": {
+      "fuente_derivacion": {
+        "fase_1_a": 2.044,
+        "fase_2_a": 2.044,
+        "fase_3_a": 2.044
+      },
+      "t-e-01_e-02": {
+        "fase_1_a": 2.044,
+        "fase_2_a": 2.044,
+        "fase_3_a": 2.044
+      },
+      "t-e-02_e-03": {
+        "fase_1_a": 2.045,
+        "fase_2_a": 2.045,
+        "fase_3_a": 2.045
+      },
+      "t-e-03_e-04": {
+        "fase_1_a": 2.046,
+        "fase_2_a": 2.046,
+        "fase_3_a": 2.046
+      },
+      "t-e-04_e-05": {
+        "fase_1_a": 0.009,
+        "fase_2_a": 0.009,
+        "fase_3_a": 0.009
+      },
+      "t-e-05_e-06": {
+        "fase_1_a": 0.007,
+        "fase_2_a": 0.007,
+        "fase_3_a": 0.007
+      },
+      "t-e-06_e-07": {
+        "fase_1_a": 0.005,
+        "fase_2_a": 0.005,
+        "fase_3_a": 0.005
+      },
+      "t-e-07_e-08": {
+        "fase_1_a": 0.003,
+        "fase_2_a": 0.003,
+        "fase_3_a": 0.003
+      },
+      "t-e-08_e-09": {
+        "fase_1_a": 0.002,
+        "fase_2_a": 0.002,
+        "fase_3_a": 0.002
+      }
+    },
+    "perdidas": {
+      "kw": 0.2684,
+      "kvar": 4.0839
+    }
+  },
+  "diagnostico": {
+    "cumplimiento": true,
+    "limite_caida_tension_pct": 5.0,
+    "nodos_criticos": [],
+    "sobrecargas": [
+      {
+        "tramo": "fuente_derivacion",
+        "imax_a": 2.044,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-01_e-02",
+        "imax_a": 2.044,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-02_e-03",
+        "imax_a": 2.045,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-03_e-04",
+        "imax_a": 2.046,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-04_e-05",
+        "imax_a": 0.009,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-05_e-06",
+        "imax_a": 0.007,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-06_e-07",
+        "imax_a": 0.005,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-07_e-08",
+        "imax_a": 0.003,
+        "utilizacion_pct": null
+      },
+      {
+        "tramo": "t-e-08_e-09",
+        "imax_a": 0.002,
+        "utilizacion_pct": null
+      }
+    ],
+    "resumen": {
+      "n_nodos_evaluados": 11,
+      "n_nodos_criticos": 0,
+      "perdidas_kw": 0.2684
+    }
+  }
+}

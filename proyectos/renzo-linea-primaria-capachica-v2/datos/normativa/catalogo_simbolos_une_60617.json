@@ -1,0 +1,122 @@
+{
+  "norma_base": "UNE-EN 60617 / CEI 617",
+  "norma_nacional": "Norma DGE Símbolos Gráficos en Electricidad (R.M. Nº 091-2002-EM/VME Perú)",
+  "autor": "Br. Renzo Gabriel Mamani Galindo",
+  "clasificacion_componentes": "UNE 61.346-1 / IEC 61346-1",
+  "simbolos": {
+    "conductores_y_lineas": [
+      {
+        "codigo": "03-01-01",
+        "descripcion": "Conductor / cable / línea de distribución",
+        "tipo_grafico": "linea_continua",
+        "aplicacion": "Traza de circuitos MT y BT"
+      },
+      {
+        "codigo": "03-01-02",
+        "descripcion": "Trazos oblicuos de número de conductores",
+        "tipo_grafico": "trazos_oblicuos",
+        "aplicacion": "3 trazos para trifásico, 1 trazo con número 3N"
+      },
+      {
+        "codigo": "03-01-05",
+        "descripcion": "Designación complementaria de línea",
+        "ejemplo": "3N ~ 380/220 V 60 Hz 3(1x35)+1x25+1x16 mm2 CAAI"
+      }
+    ],
+    "puesta_a_tierra": [
+      {
+        "codigo": "02-15-01",
+        "descripcion": "Tierra, símbolo general",
+        "tipo_grafico": "linea_con_3_trazos_horizontales_decrecientes",
+        "aplicacion": "PAT de poste y subestación"
+      },
+      {
+        "codigo": "02-15-04",
+        "descripcion": "Masa / chasis",
+        "tipo_grafico": "linea_inclinada_rastrillo",
+        "aplicacion": "Carcasa del transformador y tableros metálicos"
+      }
+    ],
+    "iluminacion": [
+      {
+        "codigo": "11-15-01",
+        "descripcion": "Punto de salida para aparato de iluminación",
+        "tipo_grafico": "circulo_con_4_trazos_ortogonales"
+      },
+      {
+        "codigo": "11-15-03",
+        "descripcion": "Lámpara / luminaria, símbolo general",
+        "tipo_grafico": "circulo_con_aspa_x_inscrita",
+        "aplicacion": "Luminaria de Alumbrado Público (AP) montada en pastoral"
+      }
+    ],
+    "soportes_y_retenidas": [
+      {
+        "codigo": "DGE-09-91-20",
+        "codigo_une": "11-11-01",
+        "descripcion": "Soporte / poste de concreto armado centrifugado C.A.C.",
+        "tipo_grafico": "circulo_limpio_con_borde_definido",
+        "aplicacion": "Poste BT 8m/200daN o MT 13m/400daN"
+      },
+      {
+        "codigo": "DGE-09-91-18",
+        "descripcion": "Retenida inclinada (viento)",
+        "tipo_grafico": "trazo_tensor_con_bloque_ancla_perpendicular",
+        "aplicacion": "Fines de línea y cambios de ángulo"
+      },
+      {
+        "codigo": "DGE-09-91-19",
+        "descripcion": "Retenida vertical (contraviento)",
+        "tipo_grafico": "trazo_vertical_con_bloque_ancla",
+        "aplicacion": "Postes en calles estrechas"
+      }
+    ],
+    "transformadores": [
+      {
+        "codigo": "06-09-01",
+        "descripcion": "Transformador de 2 arrollamientos en esquema unifilar",
+        "tipo_grafico": "dos_circulos_entrelazados",
+        "aplicacion": "SED 100 kVA 22.9/0.38-0.22 kV"
+      },
+      {
+        "codigo": "06-10-07",
+        "descripcion": "Transformador trifásico conexión triángulo - estrella con neutro Dyn5",
+        "tipo_grafico": "dos_circulos_entrelazados_con_triangulo_y_estrella"
+      }
+    ],
+    "proteccion_y_maniobra": [
+      {
+        "codigo": "07-13-05",
+        "descripcion": "Interruptor automático termomagnético",
+        "tipo_grafico": "contacto_con_cruz_o_cuadrado",
+        "aplicacion": "Interruptor general y de circuito en tablero BT"
+      },
+      {
+        "codigo": "07-13-06",
+        "descripcion": "Seccionador",
+        "tipo_grafico": "contacto_con_barra_transversal_corte_visible",
+        "aplicacion": "Seccionamiento visible de seguridad"
+      },
+      {
+        "codigo": "07-21-01",
+        "descripcion": "Fusible, símbolo general",
+        "tipo_grafico": "rectangulo_atravesado_por_linea",
+        "aplicacion": "Fusibles NH y de expulsión"
+      },
+      {
+        "codigo": "07-21-07",
+        "descripcion": "Fusible interruptor / Seccionador Cut-Out",
+        "tipo_grafico": "portafusible_basculante",
+        "aplicacion": "Protección de cabecera SED 22.9 kV"
+      }
+    ],
+    "medicion": [
+      {
+        "codigo": "DGE-09-91-30",
+        "descripcion": "Caja portamedidor monofásico de energía activa",
+        "tipo_grafico": "rectangulo_con_circulo_interior_y_M",
+        "aplicacion": "Acometidas domiciliarias 220V"
+      }
+    ]
+  }
+}

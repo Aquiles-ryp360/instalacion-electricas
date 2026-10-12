@@ -1,0 +1,30 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,booktabs}
+\title{Memoria de Calculo -- Flujo de Carga en Media Tension}
+\begin{document}
+\maketitle
+\section{Resultados de la simulacion OpenDSS}
+\subsection{Pérdidas}
+Pérdidas totales: $0.2684$ kW, $4.0839$ kvar.
+\subsection{Voltajes de nodo (por unidad)}
+\begin{tabular}{lrrr}
+\toprule
+Nodo & Fase 1 & Fase 2 & Fase 3 \\
+\midrule
+sourcebus & 1.00007 & 1.00007 & 1.00007 \\
+e-01 & 1.00007 & 1.00007 & 1.00007 \\
+e-02 & 1.00006 & 1.00006 & 1.00006 \\
+e-03 & 1.00004 & 1.00004 & 1.00004 \\
+e-04 & 1.00002 & 1.00002 & 1.00002 \\
+e-05 & 1.00002 & 1.00002 & 1.00002 \\
+e-06 & 1.00002 & 1.00002 & 1.00002 \\
+e-07 & 1.00002 & 1.00002 & 1.00002 \\
+e-08 & 1.00002 & 1.00002 & 1.00002 \\
+e-09 & 1.00002 & 1.00002 & 1.00002 \\
+e-04_bt & 0.97103 & 0.97103 & 0.97103 \\
+\bottomrule
+\end{tabular}
+\section{Diagnostico de nodos criticos}
+Cumplimiento del limite de caída de tensión: SI. Nodos críticos: 0.
+\end{document}

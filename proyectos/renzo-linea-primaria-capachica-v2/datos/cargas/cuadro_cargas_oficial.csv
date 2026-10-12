@@ -1,0 +1,4 @@
+Circuito,Sector,NU_2026,NU_2046,Potencia_Particular_kW,N_Luminarias_AP,Potencia_Alumbrado_kW,Total_kW,Total_kVA,Corriente_3F_A
+C-1,Troncal Norte y Ramal Este C31,31,56,50.40,10,0.60,51.00,56.67,86.10
+C-2,Troncal Carretera al Fondo (Sur),12,22,19.80,5,0.30,20.10,22.33,33.93
+TOTALES,Red Completa Chifrón,43,78,70.20,15,0.90,71.10,79.00,120.03

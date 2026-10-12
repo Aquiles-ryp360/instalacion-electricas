@@ -11,9 +11,9 @@ from herramientas.red_mt import (analizar_nodos_criticos,
                                  extraer_red_canonical, generar_reportes)
 
 BASE = Path(r"C:\Users\renzo\instalacion-electricas\proyectos"
-              r"\renzo-linea-primaria-capachica")
+              r"\renzo-linea-primaria-capachica-v2")
 BUILD = Path(r"C:\Users\renzo\instalacion-electricas\proyectos"
-             r"\renzo-linea-primaria-capachica-v2\build")
+             r"\renzo-linea-primaria-capachica-v2-v2\build")
 
 red = extraer_red_canonical(BASE / "datos" / "matriz_maestra_datos.yaml")
 print("NODOS:", len(red["nodos"]), "| TRAMOS:", len(red["tramos"]),

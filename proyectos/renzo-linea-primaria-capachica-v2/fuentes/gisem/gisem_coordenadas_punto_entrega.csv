@@ -1,0 +1,3 @@
+Codigo_Nodo,Descripcion,Este_UTM_m,Norte_UTM_m,Cota_msnm,Latitud_deg,Longitud_deg,Tension_kV,Concesionaria,Alimentador,Fecha_GISEM
+E-01,Punto de Derivacion MT (TAP Existente),412606.01,8270712.24,3924.17,-15.640067,-69.815400,22.9,Electro Puno S.A.A.,Alimentador Rural Coata - Capachica,2026-10-10
+E-04,SED Proyectada Biposte SAB-1 100 kVA,412759.20,8270976.22,3839.56,-15.637680,-69.813970,22.9,Electro Puno S.A.A.,Derivacion Chifron,2026-10-10

@@ -1,0 +1,82 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "TMT000012389",
+        "empresa": "Electro Puno S.A.A.",
+        "sistema": "SEIN - Sistema Eléctrico Coata - Capachica",
+        "alimentador": "Alimentador Rural 22.9 kV Coata - Capachica",
+        "tension_kv": 22.9,
+        "frecuencia_hz": 60,
+        "fase": "Trifásico 3 hilos",
+        "estado": "En servicio (Operación Comercial)",
+        "fecha_consulta_gisem": "2026-10-10"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.8185,
+            -15.642
+          ],
+          [
+            -69.8168,
+            -15.6408
+          ],
+          [
+            -69.8154,
+            -15.640067
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "E-01_TAP",
+        "nombre": "Punto de Conexión y Derivación E-01",
+        "este_utm_m": 412606.01,
+        "norte_utm_m": 8270712.24,
+        "cota_msnm": 3924.17,
+        "tipo_estructura": "Poste C.A.C. 12/400 con armado PR-1",
+        "equipamiento": "Cut-Out 27 kV 100A, Pararrayos ZnO 21 kV, PAT-3",
+        "fecha_validacion": "2026-10-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.8154,
+          -15.640067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "E-04_SED",
+        "nombre": "Subestación de Distribución Proyectada E-04 (SAB-1)",
+        "este_utm_m": 412759.2,
+        "norte_utm_m": 8270976.22,
+        "cota_msnm": 3839.56,
+        "potencia_kva": 100.0,
+        "relacion_kv": "22.9 / 0.38 - 0.22 kV",
+        "conexion": "Dyn5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81397,
+          -15.63768
+        ]
+      }
+    }
+  ]
+}

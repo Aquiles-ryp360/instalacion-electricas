@@ -1,0 +1,306 @@
+# MATRIZ MAESTRA DE DATOS DE INGENIERÍA (CANÓNICA)
+# Proyecto: Línea Primaria 22.9 kV y Redes Secundarias - Sector Chifrón, Capachica
+# Fuente única de verdad técnica para scripts, memorias, planos y presupuesto
+# Autor: Br. Renzo Gabriel Mamani Galindo (Cód. 228447)
+# Fecha: Octubre 2026
+
+proyecto:
+  id: "renzo-linea-primaria-capachica"
+  nombre: "Creación del Servicio de Energía Eléctrica Mediante Línea Primaria 22.9 kV y Redes Secundarias en el Sector Chifrón, Distrito de Capachica - Puno"
+  estado: "Expediente Técnico Definitivo de Ingeniería de Detalle"
+  tension_nominal_mt_kv: 22.9
+  sistema_mt: "Trifásico 3 hilos (3Ø)"
+  tension_nominal_bt_v: "380 / 220"
+  sistema_bt: "Trifásico 4 hilos (3Ø + N)"
+  frecuencia_hz: 60
+  altitud_min_msnm: 3817.04
+  altitud_max_msnm: 3924.17
+  altitud_diseno_msnm: 3850.0
+  zona_climatica_cne: "Zona 2/3 (Altiplano > 3,000 msnm)"
+
+punto_diseno_interconexion:
+  concesionaria: "Electro Puno S.A.A."
+  sistema_electrico: "SEIN - Sistema Eléctrico Juliaca / Coata - Capachica"
+  subestacion_potencia: "SET Juliaca / Tap Coata 60/22.9 kV"
+  alimentador_mt: "Alimentador Rural 22.9 kV Coata - Capachica"
+  codigo_sed_cabecera: "SED-CAP01"
+  tramo_mt_gisem: "TMT000012389 / TMT001847370"
+  estructura_derivacion_e01:
+    codigo: "E-01"
+    descripcion: "Poste C.A.C. existente de derivación en cresta Cerro Chifrón"
+    este_m: 412606.01
+    norte_m: 8270712.24
+    cota_msnm: 3924.17
+    latitud_deg: -15.640067
+    longitud_deg: -69.815400
+  sed_proyectada_e04:
+    codigo: "E-04"
+    tipo: "Subestación Aérea Biposte (SAB-1)"
+    este_m: 412759.20
+    norte_m: 8270976.22
+    cota_msnm: 3839.56
+    progresiva_m: 305.21
+    latitud_deg: -15.637680
+    longitud_deg: -69.813970
+
+conductor_mt_canonico:
+  designacion: "AAAC 35 mm² (Aleación de Aluminio Al-Mg-Si)"
+  norma_fabricacion: "NTP 370.258 / ASTM B399 / IEC 61089"
+  designacion_comercial: "Truxa"
+  seccion_nominal_mm2: 35.0
+  seccion_real_mm2: 34.36
+  numero_hilos: 7
+  diametro_hilo_mm: 2.50
+  diametro_exterior_mm: 7.50
+  peso_propio_kg_m: 0.0945
+  tiro_rotura_nominal_kgf: 1040.0
+  tiro_rotura_nominal_kn: 10.20
+  modulo_elasticidad_kg_mm2: 6000.0
+  coef_dilatacion_termica_1_C: 0.000023
+  resistencia_electrica_20C_ohm_km: 0.986
+  reactancia_inductiva_dmg120_ohm_km: 0.385
+  capacidad_corriente_admisible_A: 145.0
+  criterio_tiro_admisible_max_pct_TR: 40.0
+  tiro_admisible_max_kgf: 416.0
+  criterio_tiro_eds_pct_TR: 18.0
+  tiro_eds_kgf: 187.20
+
+hipotesis_climaticas_cne:
+  hipotesis_I:
+    id: "I"
+    nombre: "Viento Máximo"
+    temp_C: 10.0
+    viento_km_h: 75.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
+  hipotesis_II:
+    id: "II"
+    nombre: "Hielo Máximo"
+    temp_C: -5.0
+    viento_km_h: 37.5
+    hielo_mm: 6.0
+    limite_tiro_pct: 40.0
+  hipotesis_III:
+    id: "III"
+    nombre: "Temperatura Mínima"
+    temp_C: -15.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
+  hipotesis_IV:
+    id: "IV"
+    nombre: "Temperatura Máxima"
+    temp_C: 35.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 40.0
+  hipotesis_V:
+    id: "V"
+    nombre: "Templado Diario (EDS)"
+    temp_C: 15.0
+    viento_km_h: 0.0
+    hielo_mm: 0.0
+    limite_tiro_pct: 18.0
+
+estructuras_mt_canonicas:
+  - id: "E-01"
+    progresiva_m: 0.00
+    cota_terreno_msnm: 3924.17
+    poste: "C.A.C. 12/400"
+    altura_m: 12.0
+    carga_daN: 400
+    armado_dge: "PR-1"
+    tipo: "Derivación MT (TAP)"
+    angulo_deg: 0.00
+    retenida: "Inclinada simple R-1"
+    vano_anterior_m: 0.00
+    vano_posterior_m: 105.00
+  - id: "E-02"
+    progresiva_m: 105.00
+    cota_terreno_msnm: 3895.00
+    poste: "C.A.C. 12/300"
+    altura_m: 12.0
+    carga_daN: 300
+    armado_dge: "PS-1"
+    tipo: "Suspensión alineamiento"
+    angulo_deg: 0.00
+    retenida: "Ninguna"
+    vano_anterior_m: 105.00
+    vano_posterior_m: 105.00
+  - id: "E-03"
+    progresiva_m: 210.00
+    cota_terreno_msnm: 3865.00
+    poste: "C.A.C. 12/300"
+    altura_m: 12.0
+    carga_daN: 300
+    armado_dge: "PS-1"
+    tipo: "Suspensión de paso"
+    angulo_deg: 0.00
+    retenida: "Ninguna"
+    vano_anterior_m: 105.00
+    vano_posterior_m: 95.21
+  - id: "E-04"
+    progresiva_m: 305.21
+    cota_terreno_msnm: 3839.56
+    poste: "C.A.C. 13/400 Biposte (x2)"
+    altura_m: 13.0
+    carga_daN: 400
+    armado_dge: "SAB-1"
+    tipo: "Subestación SED 100 kVA + Ángulo"
+    angulo_deg: -35.20
+    retenida: "Contraviento doble en Y"
+    vano_anterior_m: 95.21
+    vano_posterior_m: 97.22
+  - id: "E-05"
+    progresiva_m: 402.43
+    cota_terreno_msnm: 3817.04
+    poste: "C.A.C. 12/400"
+    altura_m: 12.0
+    carga_daN: 400
+    armado_dge: "PA-1"
+    tipo: "Ángulo con retenida"
+    angulo_deg: -36.06
+    retenida: "Biselar simple R-1"
+    vano_anterior_m: 97.22
+    vano_posterior_m: 115.59
+  - id: "E-06"
+    progresiva_m: 518.02
+    cota_terreno_msnm: 3827.27
+    poste: "C.A.C. 12/400"
+    altura_m: 12.0
+    carga_daN: 400
+    armado_dge: "PA-1"
+    tipo: "Ángulo con retenida (vano crítico)"
+    angulo_deg: 31.35
+    retenida: "Biselar simple R-1"
+    vano_anterior_m: 115.59
+    vano_posterior_m: 110.51
+  - id: "E-07"
+    progresiva_m: 628.53
+    cota_terreno_msnm: 3824.61
+    poste: "C.A.C. 12/300"
+    altura_m: 12.0
+    carga_daN: 300
+    armado_dge: "PS-1"
+    tipo: "Suspensión / Alineamiento"
+    angulo_deg: -6.05
+    retenida: "Ninguna"
+    vano_anterior_m: 110.51
+    vano_posterior_m: 79.81
+  - id: "E-08"
+    progresiva_m: 708.34
+    cota_terreno_msnm: 3824.61
+    poste: "C.A.C. 12/400"
+    altura_m: 12.0
+    carga_daN: 400
+    armado_dge: "PA-1"
+    tipo: "Ángulo con retenida"
+    angulo_deg: 32.95
+    retenida: "Biselar simple R-1"
+    vano_anterior_m: 79.81
+    vano_posterior_m: 108.26
+  - id: "E-09"
+    progresiva_m: 816.60
+    cota_terreno_msnm: 3824.61
+    poste: "C.A.C. 12/400"
+    altura_m: 12.0
+    carga_daN: 400
+    armado_dge: "PR-1"
+    tipo: "Terminal de línea primaria"
+    angulo_deg: 0.00
+    retenida: "Inclinada simple R-1"
+    vano_anterior_m: 108.26
+    vano_posterior_m: 0.00
+
+totales_postes_mt:
+  cac_12_300: 3  # E-02, E-03, E-07
+  cac_12_400: 5  # E-01, E-05, E-06, E-08, E-09
+  cac_13_400: 2  # E-04 (biposte gemelo)
+  total_unidades: 10
+
+totales_armados_mt:
+  pr_1: 2  # E-01, E-09
+  ps_1: 3  # E-02, E-03, E-07
+  pa_1: 3  # E-05, E-06, E-08
+  sab_1: 1 # E-04
+  total_conjuntos: 9
+
+cargas_y_demanda_canonicas:
+  abonados_censados: 43
+  tasa_crecimiento_anual_pct: 3.0
+  horizonte_anios: 20
+  abonados_proyectados_anio_20: 78
+  dotacion_domestica_basica_w: 600
+  factor_simultaneidad_domestico: 0.55
+  demanda_diversificada_domestica_w: 330
+  carga_productiva_turismo_vivencial_w: 570
+  demanda_unitaria_diseno_w: 900  # 0.90 kW/abonado
+  circuito_c1:
+    nombre: "Circuito C-1 (Troncal Norte + Lote C31 hacia Playa y Muelle)"
+    longitud_m: 820.0
+    conductor: "CAAI 3x35+1x25+1x16 mm²"
+    abonados_censados: 31
+    abonados_proyectados: 56
+    potencia_particular_kw: 50.40
+    luminarias_ap_led_60w: 10
+    potencia_ap_kw: 0.60
+    total_kw: 51.00
+    total_kva: 56.67
+    corriente_3f_a: 86.10
+    caida_tension_v: 8.13
+    caida_tension_pct: 2.14
+  circuito_c2:
+    nombre: "Circuito C-2 (Troncal Carretera al Fondo - Sur)"
+    longitud_m: 456.0
+    conductor: "CAAI 3x25+1x25+1x16 mm²"
+    abonados_censados: 12
+    abonados_proyectados: 22
+    potencia_particular_kw: 19.80
+    luminarias_ap_led_60w: 5
+    potencia_ap_kw: 0.30
+    total_kw: 20.10
+    total_kva: 22.33
+    corriente_3f_a: 33.93
+    caida_tension_v: 4.37
+    caida_tension_pct: 1.15
+  totales_sed:
+    potencia_activa_total_kw: 71.10
+    potencia_aparente_total_kva: 79.00
+    corriente_3f_total_a: 120.03
+    transformador_comercial_kva: 100.0
+    margen_reserva_pct: 21.0
+    luminarias_ap_totales: 15
+
+suelo_y_puesta_a_tierra:
+  estudio_geotecnico: "Formación geológica coluvial-lacustre Península de Capachica"
+  tipo_suelo: "Arcilla arenosa compacta con grava fina en ladera"
+  resistividad_aparente_wenner_ohm_m: 200.0
+  sondeos_wenner_ohm_m: [220.0, 205.0, 195.0, 180.0]
+  sed_pat3:
+    electrodos: 2
+    longitud_m: 2.40
+    diametro_pulgadas: "5/8"
+    separacion_m: 4.80
+    conductor_enlace: "Cobre desnudo 35 mm²"
+    tratamiento: "Bentonita sódica activada"
+    resistencia_calculada_ohm: 6.80
+    limite_normativo_cne_ohm: 10.0
+  red_secundaria_pat1:
+    electrodos: 1
+    longitud_m: 2.40
+    diametro_pulgadas: "5/8"
+    tratamiento: "Bentonita sódica"
+    resistencia_calculada_ohm: 18.20
+    limite_normativo_cne_ohm: 25.0
+
+presupuesto_consolidado:
+  costo_directo_soles: 141150.70
+  gastos_generales_pct: 10.0
+  gastos_generales_soles: 14115.07
+  utilidad_pct: 8.0
+  utilidad_soles: 11292.06
+  subtotal_soles: 166557.83
+  igv_pct: 18.0
+  igv_soles: 29980.41
+  supervision_y_liquidacion_soles: 1252.18
+  presupuesto_total_soles: 197790.42
