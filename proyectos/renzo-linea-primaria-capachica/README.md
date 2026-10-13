@@ -30,43 +30,52 @@ El punto de diseño y derivación está validado en la infraestructura oficial d
 
 ---
 
+---
+
 ## 2. Flujo de Ingeniería y Automatización
 
 ```mermaid
 flowchart LR
-    A["Google Earth Pro
-Ruta KML desde E0"] --> B["TopoMagic
-Perfil Topográfico DEM"]
-    B --> C["RedCAD
-Cálculo Mecánico & Spotting"]
-    C --> D["AutoCAD / QElectroTech
-Planos Ejecutivos & Unifilar"]
-    D --> E["Expediente Técnico
-Memoria Descriptiva & Cálculos"]
+    A["Google Earth Pro / GISEM
+Ruta KML & Coordenadas UTM"] --> B["TopoMagic & DEM SRTM
+Perfil Longitudinal Terreno"]
+    B --> C["Cálculo Analítico Truxa
+Mecánica de Postes & Catenarias"]
+    C --> D["Cimentaciones Sulzberger
+Aislamiento a 3,850 msnm"]
+    D --> E["SEACE CAD Intelligence
+DXF R2010 & CadQuery 3D"]
+    E --> F["Láminas Ejecutivas A3
+LP-01, PL-01, U-01, D-01..D-03"]
 ```
 
-1. **Google Earth Pro (`fuentes/kml/`):** Trazado de ruta siguiendo accesos rurales, minimizando ángulos y evitando zonas bajas/inundables del Lago Titicaca.
-2. **TopoMagic (`datos/topografia/`):** Extracción de perfil longitudinal del terreno con cotas y progresivas.
-3. **RedCAD (`diseno-electrico/` y `calculo-mecanico/`):**
-   - Distribución de postes de Concreto Armado Centrifugado (C.A.C. 12/300 y 12/400).
-   - Cálculo de vano peso, vano eólico y catenarias bajo 5 hipótesis climáticas del CNE Suministro para Puno (>3800 msnm).
-   - Cálculo de caída de tensión ($\Delta V\% < 5.0\%$) y pérdidas en MT.
-4. **Expediente Técnico (`expediente/`):**
-   - Memoria Descriptiva.
-   - Especificaciones Técnicas de Suministro y Montaje.
-   - Memoria de Cálculos Eléctricos y Mecánicos.
-   - Metrados y Presupuesto referencial.
-   - Planos ejecutivos en `entregables/planos/`.
+1. **Topografía y Traza Georreferenciada (`fuentes/`, `datos/`):** Traza de $816.60\text{ m}$ desde cresta Cerro Chifrón ($0+000\text{ m}$, $3,924.17\text{ msnm}$) hasta playa Chifrón ($0+816.60\text{ m}$, $3,824.61\text{ msnm}$) por accesos vecinales.
+2. **Cálculos Analíticos Rigurosos (`scripts/`, `calculo-mecanico/`, `diseno-electrico/`):**
+   - Ecuación de cambio de estado de Truxa para conductor AAAC $35\text{ mm}^2$ bajo 5 hipótesis CNE Suministro 2011.
+   - Esfuerzos mecánicos en postes C.A.C. 12/300, 12/400 y biposte 13/400 con $FS \ge 2.0$.
+   - Cimentaciones por Método de Sulzberger ($FS_{\text{Sulz}} \ge 1.50$) y bloques de retenida ($FS_{\text{arr}} \ge 2.0$).
+   - Coordinación de aislamiento a $3,850\text{ msnm}$ ($K_a = 1.25$ CNE / $1.42$ IEC, BIL $170\text{ kV}$, fuga $810\text{ mm}$).
+   - Caída de tensión en MT ($0.046\%$) y pérdidas ($46.2\text{ W}$).
+3. **Pliegos Técnicos SEACE (`expediente/`):** Especificaciones técnicas de suministro y montaje alineadas a Electro Puno LP-SM-15-2024-ELECTROPUNO y análisis de precios unitarios (APU).
+4. **Planos Ejecutivos Formales A3 (`entregables/planos/`):**
+   - **LP-01:** Plano de Traza, Planta General y Servidumbre de Línea Primaria 22.9 kV (Escala 1:2000).
+   - **PL-01:** Perfil Longitudinal Topográfico, Spotting y Catenarias (H: 1:2000, V: 1:500).
+   - **U-01:** Diagrama Unifilar General y Protecciones de Media Tensión 22.9 kV.
+   - **D-01:** Detalles de Armados Normalizados DGE PS-1 (Suspensión) y PA-1 (Ángulo) 22.9 kV.
+   - **D-02:** Detalles de Armado DGE PR-1 y Subestación Aérea Biposte SAB-1 100 kVA.
+   - **D-03:** Detalles de Cimentación Sulzberger, Retenidas Mecánicas R-1 y Puesta a Tierra PAT-3.
+   - **Modelos SEACE:** Planos DXF y modelos 3D CadQuery en `entregables/planos/cad_linea_primaria/`.
 
 ---
 
 ## 3. Estructura de Directorios
 
-- `fuentes/`: Archivo KML original de Google Earth, datos de GISEM y archivos `.top` de TopoMagic.
-- `datos/`: Parámetros canónicos del proyecto, tablas de conductores y catálogo de postes.
-- `documentacion/`: Supuestos normativos (CNE Suministro 2011, Norma DGE ER) y registro de decisiones.
-- `diseno-electrico/`: Memorias y scripts de caída de tensión y pérdidas.
-- `calculo-mecanico/`: Hojas y scripts de catenaria y ecuación de cambio de estado.
-- `expediente/`: Fuentes Markdown / LaTeX para el informe final.
-- `entregables/`: PDF final del expediente y planos DWG listos para entrega.
-- `scripts/`: Herramientas en Python para automatizar el cálculo de ingeniería.
+- `datos/`: Parámetros canónicos del proyecto, tablas de conductores y catálogo de postes C.A.C.
+- `fuentes/`: KML de Google Earth, datos y evidencias georreferenciadas de GISEM OSINERGMIN.
+- `diseno-electrico/`: Memoria de cálculo eléctrico en media tensión 22.9 kV y cuadros de carga.
+- `calculo-mecanico/`: Memoria completa de cálculo mecánico de conductores, postes, retenidas y cimentaciones.
+- `expediente/`: Memoria descriptiva, especificaciones técnicas SEACE, APUs, metrados y cronograma de obra.
+- `entregables/planos/`: Las 6 láminas oficiales ejecutivas en PDF A3, DXF R2010 y renders PNG.
+- `scripts/`: Suite de automatización en Python (cálculos, cimentaciones, aislamiento y generador de planos).
+- `tests/`: 16 pruebas unitarias con pytest (cálculos mecánicos, eléctricos, cimentaciones y auditoría de planos).
+

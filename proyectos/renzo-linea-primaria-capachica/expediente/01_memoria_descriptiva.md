@@ -214,18 +214,47 @@ Conforme a [`scripts/calculo_cimentacion_sulzberger_lp.py`](file:///C:/Users/ren
 
 ## 9. DOCUMENTACIÓN GRÁFICA Y PLANOS ASOCIADOS
 
-1. **Lámina P-01 (A3):** Plano de Redes de Distribución en Planta General, Acometidas y Retenidas (2 Circuitos BT).
-2. **Lámina U-01 (A3):** Diagrama Unifilar General y Esquema de Protecciones BT (2 Circuitos + AP).
-3. **Lámina PL-01 (A3):** Perfil Longitudinal y Distribución de Estructuras LP 22.9 kV.
-4. **Láminas D-01 a D-05:** Detalles constructivos normalizados DGE (SED SAB-1, soporte trafo, PAT-3, retenidas, cut-out).
-5. **Planos CAD Oficiales y Modelos 3D de Línea Primaria (SEACE CAD Intelligence):**
-   * [`PLANO_DGE_PS1_SUSPENSION_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PS1_SUSPENSION_22.9KV.dxf): Plano DXF normalizado de armado PS-1.
-   * [`PLANO_DGE_PA1_ANGULO_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PA1_ANGULO_22.9KV.dxf): Plano DXF normalizado de armado PA-1.
-   * [`PLANO_DGE_PR1_RETENCION_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PR1_RETENCION_22.9KV.dxf): Plano DXF normalizado de armado PR-1.
-   * [`PLANO_DGE_SAB1_BIPOSTE_100KVA.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_SAB1_BIPOSTE_100KVA.dxf): Plano DXF de subestación aérea biposte SAB-1.
-   * [`PLANO_RETENIDA_R1_TIERRA_45G.dxf`](../entregables/planos/cad_linea_primaria/PLANO_RETENIDA_R1_TIERRA_45G.dxf): Plano DXF de retenida mecánica R-1.
-   * [`PLANO_POSTE_CAC_12M_400DAN.dxf`](../entregables/planos/cad_linea_primaria/PLANO_POSTE_CAC_12M_400DAN.dxf): Plano DXF de poste de concreto centrifugado.
-   * Modelos paramétricos 3D en CadQuery disponibles en [`entregables/planos/cad_linea_primaria/scripts_cadquery_3d/`](../entregables/planos/cad_linea_primaria/scripts_cadquery_3d/).
+El expediente técnico cuenta con un juego completo de planos ejecutivos en formato A3 oficial (420 x 297 mm), generados con total trazabilidad en AutoCAD R2010 (DXF) y compilados en alta definición vectorial (PDF a 300 DPI):
+
+1. **Lámina LP-01 (Escala 1:2000):** *Plano de Traza, Planta General y Servidumbre de la Línea Primaria 22.9 kV.*
+   - Traza georreferenciada UTM WGS84 Zona 19S desde E-01 (TAP Cerro Chifrón, $0+000\text{ m}$) hasta E-09 ($0+816.60\text{ m}$).
+   - Eje de replanteo, faja de servidumbre reglamentaria de $6.00\text{ m}$ ($3.00\text{ m}$ a cada lado del eje según Regla 219 CNE Suministro).
+   - Estructuras C.A.C., armados DGE (PS-1, PA-1, PR-1, SAB-1), retenidas R-1, puestas a tierra PAT-3, cuadro de coordenadas y camino vecinal Capachica - Chifrón.
+   - Archivos: [`plano_LP01_planta_linea_primaria.pdf`](../entregables/planos/plano_LP01_planta_linea_primaria.pdf) | [`PLANO_LP01_PLANTA_LINEA_PRIMARIA_22.9KV.dxf`](../entregables/planos/PLANO_LP01_PLANTA_LINEA_PRIMARIA_22.9KV.dxf).
+
+2. **Lámina PL-01 (H: 1:2000, V: 1:500):** *Perfil Longitudinal Topográfico, Spotting y Catenarias.*
+   - Perfil de terreno vano a vano con cotas reales de $3,817.04$ a $3,924.17\text{ msnm}$.
+   - Curvas de catenaria bajo 3 condiciones climáticas CNE: Flecha Máxima ($+35^\circ\text{C}$), Hielo Máximo ($-5^\circ\text{C}$ con $6\text{ mm}$ de hielo) y Templado EDS ($+15^\circ\text{C}$).
+   - Envolvente de gálibo mínimo reglamentario ($6.50\text{ m}$ en terreno y $7.00\text{ m}$ en cruce de caminos vecinales).
+   - Guitarra técnica inferior: Progresivas, cotas de terreno, cotas cima de poste, vanos horizontales, flechas máximas, gálibos, armado DGE, retenidas y cimentaciones.
+   - Archivos: [`plano_PL01_perfil_longitudinal.pdf`](../entregables/planos/plano_PL01_perfil_longitudinal.pdf) | [`PLANO_PL01_PERFIL_LONGITUDINAL_LP_CAPACHICA.dxf`](../entregables/planos/PLANO_PL01_PERFIL_LONGITUDINAL_LP_CAPACHICA.dxf).
+
+3. **Lámina U-01 (Escala Indicada):** *Diagrama Unifilar General y Esquema de Protecciones de Media Tensión 22.9 kV.*
+   - Punto de derivación TAP en red troncal existente de Electro Puno en E-01 (22.9 kV, 3Ø, 60 Hz).
+   - Cortacircuitos fusibles Cut-Out $27\text{ kV} / 100\text{ A}$ (BIL $150\text{ kV}$, fusible K de 4 A) y pararrayos ZnO $21\text{ kV} / 10\text{ kA}$.
+   - Línea Primaria $22.9\text{ kV}$ ($816.60\text{ m}$, 3x AAAC $35\text{ mm}^2$, $\Delta V = 0.046\%$).
+   - Subestación Aérea Biposte SAB-1 $100\text{ kVA}$ ($22.9 / 0.38 - 0.22\text{ kV}$, Dyn5, ONAN, 60 Hz), tablero general BT IP65 y PAT-3 ($R \le 10\ \Omega$).
+   - Archivos: [`plano_U01_diagrama_unifilar_detalles.pdf`](../entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf) | [`PLANO_U01_DIAGRAMA_UNIFILAR_LP_SAB1.dxf`](../entregables/planos/PLANO_U01_DIAGRAMA_UNIFILAR_LP_SAB1.dxf).
+
+4. **Lámina D-01 (Escala 1:25):** *Detalles de Armados Normalizados DGE PS-1 (Suspensión) y PA-1 (Ángulo) 22.9 kV.*
+   - Armado DGE PS-1: Poste C.A.C. 12/300 daN, cruceta angular simétrica L 75x75x6.4 mm x 1.50 m, aisladores tipo pin ANSI 56-3 sobre espigas de F°G° 3/4" y lista de materiales.
+   - Armado DGE PA-1: Poste C.A.C. 12/400 daN, cruceta angular reforzada L 75x75x6.4 mm x 1.80 m, cadenas poliméricas de suspensión 25 kV (HTV 6 aletas), grapas de anclaje y retenida simple R-1.
+   - Archivos: [`plano_D01_armados_dge_ps1_pa1.pdf`](../entregables/planos/plano_D01_armados_dge_ps1_pa1.pdf) | [`PLANO_D01_ARMADOS_DGE_PS1_PA1.dxf`](../entregables/planos/PLANO_D01_ARMADOS_DGE_PS1_PA1.dxf).
+
+5. **Lámina D-02 (Escala 1:30):** *Detalles de Armado DGE PR-1 y Subestación Aérea Biposte SAB-1 100 kVA.*
+   - Armado DGE PR-1: Poste C.A.C. 12/400 daN, doble cruceta L 75x75x6.4 mm x 2.00 m, soporte de 3 cut-outs 27 kV y 3 pararrayos ZnO 21 kV.
+   - Subestación SAB-1: Biposte C.A.C. 13/400 x2 (intereje 2.00 m), plataforma de F°G° 2 vigas UPN-120 x 2.60 m a cota +6.00 m, trafo 100 kVA, bajada protegida a tablero BT.
+   - Archivos: [`plano_D02_armados_dge_pr1_sab1.pdf`](../entregables/planos/plano_D02_armados_dge_pr1_sab1.pdf) | [`PLANO_D02_ARMADOS_DGE_PR1_SAB1.dxf`](../entregables/planos/PLANO_D02_ARMADOS_DGE_PR1_SAB1.dxf).
+
+6. **Lámina D-03 (Escala 1:20):** *Detalles de Cimentaciones Sulzberger, Retenidas R-1 y Puesta a Tierra PAT-3.*
+   - Cimentación Sulzberger para postes C.A.C. 12m y 13m en bloque de concreto ciclópeo $f'c=140\text{ kg/cm}^2 + 30\%\text{ P.G.}$, excavación $D=0.80\text{ m}$ / $0.90\text{ m}$, solera de fondo y cuello cónico de protección pluvial ($FS \ge 1.50$).
+   - Retenida mecánica R-1 a 45°: Cable de acero Siemens-Martin 3/8", varilla 5/8" x 2.40 m, aislador de nuez ANSI 54-1 a +3.00 m, bloque de concreto de anclaje $0.40 \times 0.40 \times 0.20\text{ m}$ a profundidad 1.80 m ($FS_{\text{arr}} \ge 2.00$).
+   - Sistema de Puesta a Tierra PAT-3: Pozo vertical con electrodo Cu 5/8" x 2.40 m, caja de registro de concreto, bentonita sódica y cable de bajada Cu 35 mm² ($R \le 10\ \Omega$).
+   - Archivos: [`plano_D03_detalles_cimentacion_retenida_pat.pdf`](../entregables/planos/plano_D03_detalles_cimentacion_retenida_pat.pdf) | [`PLANO_D03_DETALLES_CIMENTACION_RETENIDA_PAT.dxf`](../entregables/planos/PLANO_D03_DETALLES_CIMENTACION_RETENIDA_PAT.dxf).
+
+7. **Modelos Paramétricos CAD 3D y Planos de Detalle Adicionales (SEACE CAD Intelligence):**
+   - Planos normalizados individuales en DXF: [`PLANO_DGE_PS1_SUSPENSION_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PS1_SUSPENSION_22.9KV.dxf), [`PLANO_DGE_PA1_ANGULO_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PA1_ANGULO_22.9KV.dxf), [`PLANO_DGE_PR1_RETENCION_22.9KV.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_PR1_RETENCION_22.9KV.dxf), [`PLANO_DGE_SAB1_BIPOSTE_100KVA.dxf`](../entregables/planos/cad_linea_primaria/PLANO_DGE_SAB1_BIPOSTE_100KVA.dxf), [`PLANO_RETENIDA_R1_TIERRA_45G.dxf`](../entregables/planos/cad_linea_primaria/PLANO_RETENIDA_R1_TIERRA_45G.dxf), [`PLANO_POSTE_CAC_12M_400DAN.dxf`](../entregables/planos/cad_linea_primaria/PLANO_POSTE_CAC_12M_400DAN.dxf).
+   - Modelos paramétricos 3D en CadQuery (Python CAD-as-Code): [`entregables/planos/cad_linea_primaria/scripts_cadquery_3d/`](../entregables/planos/cad_linea_primaria/scripts_cadquery_3d/).
 
 ---
 *Puno, Octubre de 2026*  
