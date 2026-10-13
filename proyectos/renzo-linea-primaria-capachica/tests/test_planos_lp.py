@@ -68,3 +68,31 @@ def test_existencia_previews_png():
         ruta = os.path.join(PREV_PNG, p)
         assert os.path.exists(ruta), f"Falta vista previa PNG: {p}"
         assert os.path.getsize(ruta) > 50000, f"Vista previa PNG incompleta: {p}"
+
+
+def test_paquete_autocad_lp_a3():
+    """Verifica el paquete DXF A3 para AutoCAD del alcance exclusivo de línea primaria."""
+    autocad_dir = os.path.join(BASE_PLANOS, "autocad_lp")
+    zip_path = os.path.join(BASE_PLANOS, "planos_autocad_linea_primaria_capachica.zip")
+    dxfs = [
+        "LP-01_PLANTA_LINEA_PRIMARIA_A3_AUTOCAD.dxf",
+        "PL-01_PERFIL_LONGITUDINAL_A3_AUTOCAD.dxf",
+        "U-01_DIAGRAMA_UNIFILAR_MT_A3_AUTOCAD.dxf",
+        "D-01_ARMADOS_PS1_PA1_A3_AUTOCAD.dxf",
+        "D-02_ARMADOS_PR1_SAB1_A3_AUTOCAD.dxf",
+        "D-03_CIMENTACION_RETENIDA_PAT3_A3_AUTOCAD.dxf",
+    ]
+
+    assert os.path.exists(zip_path), "Falta ZIP del paquete AutoCAD LP"
+    assert os.path.getsize(zip_path) > 50000, "ZIP AutoCAD LP vacío o incompleto"
+
+    for nombre in dxfs:
+        ruta = os.path.join(autocad_dir, nombre)
+        assert os.path.exists(ruta), f"Falta DXF AutoCAD: {nombre}"
+        assert os.path.getsize(ruta) > 50000, f"DXF AutoCAD incompleto: {nombre}"
+        doc = ezdxf.readfile(ruta)
+        auditor = doc.audit()
+        assert len(auditor.errors) == 0, f"DXF con errores de auditoría: {nombre}"
+        for capa in ["00_MARCO_ROTULO", "09_TEXTOS", "10_TABLAS_LEYENDAS"]:
+            assert capa in doc.layers, f"Capa {capa} no encontrada en {nombre}"
+        assert len(list(doc.modelspace())) > 25, f"ModelSpace insuficiente en {nombre}"
