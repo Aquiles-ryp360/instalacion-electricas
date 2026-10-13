@@ -15,14 +15,15 @@
 
 | Orden | Archivo | Uso recomendado |
 | ---: | --- | --- |
-| 1 | [`expediente/expediente_linea_primaria_22_9kv_compilado.pdf`](expediente/expediente_linea_primaria_22_9kv_compilado.pdf) | Expediente técnico compilado para revisión del ingeniero. |
-| 2 | [`entregables/planos/plano_LP01_planta_linea_primaria.pdf`](entregables/planos/plano_LP01_planta_linea_primaria.pdf) | Plano de planta, traza, servidumbre y estructuras. |
-| 3 | [`entregables/planos/plano_PL01_perfil_longitudinal.pdf`](entregables/planos/plano_PL01_perfil_longitudinal.pdf) | Perfil longitudinal, catenaria, spotting y gálibos. |
-| 4 | [`entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf`](entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf) | Diagrama unifilar de media tensión y límite de alcance. |
-| 5 | [`entregables/planos/plano_D01_armados_dge_ps1_pa1.pdf`](entregables/planos/plano_D01_armados_dge_ps1_pa1.pdf) | Armados DGE PS-1 y PA-1. |
-| 6 | [`entregables/planos/plano_D02_armados_dge_pr1_sab1.pdf`](entregables/planos/plano_D02_armados_dge_pr1_sab1.pdf) | Armados DGE PR-1 y SAB-1. |
-| 7 | [`entregables/planos/plano_D03_detalles_cimentacion_retenida_pat.pdf`](entregables/planos/plano_D03_detalles_cimentacion_retenida_pat.pdf) | Cimentación Sulzberger, retenida R-1 y PAT-3. |
-| 8 | [`entregables/planos/planos_autocad_linea_primaria_capachica.zip`](entregables/planos/planos_autocad_linea_primaria_capachica.zip) | Paquete DXF A3 para AutoCAD. |
+| 1 | [`REVISION_FINAL_SUPERVISOR.md`](REVISION_FINAL_SUPERVISOR.md) | Auto-revisión final y guía de defensa. |
+| 2 | [`expediente/expediente_linea_primaria_22_9kv_compilado.pdf`](expediente/expediente_linea_primaria_22_9kv_compilado.pdf) | Expediente técnico compilado para revisión del ingeniero. |
+| 3 | [`entregables/planos/plano_LP01_planta_linea_primaria.pdf`](entregables/planos/plano_LP01_planta_linea_primaria.pdf) | Plano de planta, traza, servidumbre y estructuras. |
+| 4 | [`entregables/planos/plano_PL01_perfil_longitudinal.pdf`](entregables/planos/plano_PL01_perfil_longitudinal.pdf) | Perfil longitudinal, catenaria, spotting y gálibos. |
+| 5 | [`entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf`](entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf) | Diagrama unifilar de media tensión y límite de alcance. |
+| 6 | [`entregables/planos/plano_D01_armados_dge_ps1_pa1.pdf`](entregables/planos/plano_D01_armados_dge_ps1_pa1.pdf) | Armados DGE PS-1 y PA-1. |
+| 7 | [`entregables/planos/plano_D02_armados_dge_pr1_sab1.pdf`](entregables/planos/plano_D02_armados_dge_pr1_sab1.pdf) | Armados DGE PR-1 y SAB-1. |
+| 8 | [`entregables/planos/plano_D03_detalles_cimentacion_retenida_pat.pdf`](entregables/planos/plano_D03_detalles_cimentacion_retenida_pat.pdf) | Cimentación Sulzberger, retenida R-1 y PAT-3. |
+| 9 | [`entregables/planos/planos_autocad_linea_primaria_capachica.zip`](entregables/planos/planos_autocad_linea_primaria_capachica.zip) | Paquete DXF A3 para AutoCAD. |
 
 > Para una presentación limpia, abrir primero el expediente compilado y luego sustentar los planos en el orden LP-01, PL-01, U-01, D-01, D-02 y D-03.
 
