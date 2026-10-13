@@ -1,8 +1,18 @@
-# Expediente Técnico
+# Expediente Técnico - Línea Primaria 22.9 kV
 
-Fuentes editables del expediente técnico y memoria descriptiva del proyecto:
-- Memoria Descriptiva
-- Especificaciones Técnicas de Suministro de Materiales
-- Especificaciones Técnicas de Montaje Electromecánico
-- Metrados y Presupuesto
-- Cronograma de Ejecución
+Esta carpeta contiene las fuentes editables y el PDF compilado del expediente final para el alcance exclusivo de línea primaria.
+
+## Entregable Principal
+
+- [`expediente_linea_primaria_22_9kv_compilado.pdf`](expediente_linea_primaria_22_9kv_compilado.pdf): expediente listo para revisión del ingeniero.
+
+## Fuentes Editables
+
+- `01_memoria_descriptiva.md`
+- `02_tdr_especificaciones_tecnicas_linea_primaria_seace.md`
+- `03_analisis_precios_unitarios_linea_primaria_seace.md`
+- `04_cronograma_obra.md`
+
+## Regla de Presentación
+
+Presentar este expediente junto con las seis láminas de línea primaria: LP-01, PL-01, U-01, D-01, D-02 y D-03. No usar archivos de redes secundarias ni acometidas como sustento principal.

@@ -1,81 +1,93 @@
-# Proyecto: Línea Primaria y Subestación de Distribución — Capachica
+# Expediente Técnico - Línea Primaria 22.9 kV Capachica - Chifrón
 
-**Curso:** Instalaciones Eléctricas II (MEC330)  
-**Semestre Académico:** 2026-II | IX Ciclo  
-**Facultad:** FIME — Escuela Profesional de Ingeniería Mecánica Eléctrica | UNA Puno  
+**Proyecto:** Instalación de línea primaria en media tensión 22.9 kV y subestación biposte SAB-1 100 kVA para el sector Chifrón, distrito de Capachica, Puno.  
+**Alcance final:** Línea primaria, subestación de distribución, protecciones MT, retenidas, cimentaciones y puesta a tierra.  
+**No incluido en esta entrega:** redes secundarias, acometidas domiciliarias ni alumbrado público.  
+
+**Estudiante:** Br. Renzo Gabriel Mamani Galindo (Cód. 228447)  
+**Curso:** MEC330 - Instalaciones Eléctricas II  
+**Institución:** Universidad Nacional del Altiplano - FIME  
 **Docentes:** Ing. Leonidas Vilca Callata / Ing. Marcos José Villanueva Cornejo  
-**Estudiante:** Renzo Gabriel Mamani Galindo (Cód. 228447)  
 
 ---
 
-## 1. Resumen Ejecutivo del Proyecto
+## 1. Entrega Principal Para Presentar
 
-Diseño definitivo de una **Línea Primaria de Distribución en Media Tensión (22.9 kV)** y una **Subestación de Distribución Proyectada (SED)** para la electrificación de una localidad rural adyacente al sector **Chifrón, Distrito de Capachica, Puno**.
+| Orden | Archivo | Uso recomendado |
+| ---: | --- | --- |
+| 1 | [`expediente/expediente_linea_primaria_22_9kv_compilado.pdf`](expediente/expediente_linea_primaria_22_9kv_compilado.pdf) | Expediente técnico compilado para revisión del ingeniero. |
+| 2 | [`entregables/planos/plano_LP01_planta_linea_primaria.pdf`](entregables/planos/plano_LP01_planta_linea_primaria.pdf) | Plano de planta, traza, servidumbre y estructuras. |
+| 3 | [`entregables/planos/plano_PL01_perfil_longitudinal.pdf`](entregables/planos/plano_PL01_perfil_longitudinal.pdf) | Perfil longitudinal, catenaria, spotting y gálibos. |
+| 4 | [`entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf`](entregables/planos/plano_U01_diagrama_unifilar_detalles.pdf) | Diagrama unifilar de media tensión y límite de alcance. |
+| 5 | [`entregables/planos/plano_D01_armados_dge_ps1_pa1.pdf`](entregables/planos/plano_D01_armados_dge_ps1_pa1.pdf) | Armados DGE PS-1 y PA-1. |
+| 6 | [`entregables/planos/plano_D02_armados_dge_pr1_sab1.pdf`](entregables/planos/plano_D02_armados_dge_pr1_sab1.pdf) | Armados DGE PR-1 y SAB-1. |
+| 7 | [`entregables/planos/plano_D03_detalles_cimentacion_retenida_pat.pdf`](entregables/planos/plano_D03_detalles_cimentacion_retenida_pat.pdf) | Cimentación Sulzberger, retenida R-1 y PAT-3. |
+| 8 | [`entregables/planos/planos_autocad_linea_primaria_capachica.zip`](entregables/planos/planos_autocad_linea_primaria_capachica.zip) | Paquete DXF A3 para AutoCAD. |
 
-El punto de diseño y derivación está validado en la infraestructura oficial de **Electro Puno S.A.A.** extraída del geovisor **GISEM de OSINERGMIN**:
-- **Tramo MT existente:** `TMT000012389` / `TMT001847370`
-- **Punto de Conexión / Derivación (E-01):** Estructura en cresta del Cerro Chifrón (red existente Electro Puno).
-  - Coordenadas UTM WGS-84 Zona 19S:
-    - Este (X): `412,606.01 m E`
-    - Norte (Y): `8,270,712.24 m N`
-    - Cota: `3,924.17 msnm` (Progresiva `0+000.00 m`)
-    - Latitud: `-15.640067° S`, Longitud: `-69.815400° W`
-- **Subestación de Distribución Biposte Proyectada (SED E-04):**
-  - Coordenadas UTM WGS-84 Zona 19S:
-    - Este (X): `412,759.20 m E`
-    - Norte (Y): `8,270,976.22 m N`
-    - Cota: `3,839.56 msnm` (Progresiva `0+305.21 m`)
-    - Potencia: `100 kVA`, $22.9 / 0.38 - 0.22\text{ kV}$, Grupo Dyn5
-  - Altitud de diseño del proyecto: `3,817.04` a `3,924.17 msnm` (Media: `3,850 msnm`)
+> Para una presentación limpia, abrir primero el expediente compilado y luego sustentar los planos en el orden LP-01, PL-01, U-01, D-01, D-02 y D-03.
 
 ---
 
+## 2. Datos Técnicos Clave
+
+| Parámetro | Valor |
+| --- | --- |
+| Nivel de tensión | 22.9 kV, trifásico, 3 hilos, 60 Hz |
+| Longitud de eje | 0.8166 km |
+| Número de estructuras | 9 estructuras MT, E-01 a E-09 |
+| Conductor | AAAC 35 mm² |
+| Vano crítico | E-05 a E-06, 115.59 m |
+| Punto de derivación | E-01, Cerro Chifrón, cota 3924.17 msnm |
+| Punto de llegada | E-04, SED SAB-1 100 kVA, cota 3839.56 msnm |
+| Estructura terminal | E-09, progresiva 0+816.60 m |
+| Puesta a tierra | PAT-3, resistencia objetivo R <= 10 ohm |
+
 ---
 
-## 2. Flujo de Ingeniería y Automatización
+## 3. Planos AutoCAD
 
-```mermaid
-flowchart LR
-    A["Google Earth Pro / GISEM
-Ruta KML & Coordenadas UTM"] --> B["TopoMagic & DEM SRTM
-Perfil Longitudinal Terreno"]
-    B --> C["Cálculo Analítico Truxa
-Mecánica de Postes & Catenarias"]
-    C --> D["Cimentaciones Sulzberger
-Aislamiento a 3,850 msnm"]
-    D --> E["SEACE CAD Intelligence
-DXF R2010 & CadQuery 3D"]
-    E --> F["Láminas Ejecutivas A3
-LP-01, PL-01, U-01, D-01..D-03"]
+El paquete AutoCAD está en:
+
+[`entregables/planos/autocad_lp/`](entregables/planos/autocad_lp/)
+
+Incluye 6 archivos DXF A3:
+
+- `LP-01_PLANTA_LINEA_PRIMARIA_A3_AUTOCAD.dxf`
+- `PL-01_PERFIL_LONGITUDINAL_A3_AUTOCAD.dxf`
+- `U-01_DIAGRAMA_UNIFILAR_MT_A3_AUTOCAD.dxf`
+- `D-01_ARMADOS_PS1_PA1_A3_AUTOCAD.dxf`
+- `D-02_ARMADOS_PR1_SAB1_A3_AUTOCAD.dxf`
+- `D-03_CIMENTACION_RETENIDA_PAT3_A3_AUTOCAD.dxf`
+
+Recomendación de ploteo: abrir cada DXF en AutoCAD, ejecutar `ZOOM EXTENTS`, configurar hoja A3 horizontal y plotear con CTB monocromo o por color según indique el docente.
+
+---
+
+## 4. Archivos Que No Deben Sustentar La Entrega Final
+
+No usar como entrega principal:
+
+- `plano_P01_redes_planta.pdf`
+- `PLANO_PLANTA_REDES_Y_ACOMETIDAS_CAPACHICA.dxf`
+- `TABLA_CUADRO_DE_CARGAS.dxf`
+- archivos antiguos con prefijo `#` o `##`
+
+Se conservan en el repositorio por trazabilidad, pero el paquete final defendible es el de línea primaria indicado arriba.
+
+---
+
+## 5. Automatización Reproducible
+
+Scripts principales:
+
+- [`scripts/generar_planos_ejecutivos_lp_capachica.py`](scripts/generar_planos_ejecutivos_lp_capachica.py): genera las láminas PDF, PNG y DXF base.
+- [`scripts/generar_planos_autocad_lp.py`](scripts/generar_planos_autocad_lp.py): genera el paquete AutoCAD A3 y el ZIP final.
+- [`scripts/compilar_expediente_lp.py`](scripts/compilar_expediente_lp.py): compila el expediente PDF final.
+
+Validación:
+
+```bash
+pytest proyectos/renzo-linea-primaria-capachica/tests -q
 ```
 
-1. **Topografía y Traza Georreferenciada (`fuentes/`, `datos/`):** Traza de $816.60\text{ m}$ desde cresta Cerro Chifrón ($0+000\text{ m}$, $3,924.17\text{ msnm}$) hasta playa Chifrón ($0+816.60\text{ m}$, $3,824.61\text{ msnm}$) por accesos vecinales.
-2. **Cálculos Analíticos Rigurosos (`scripts/`, `calculo-mecanico/`, `diseno-electrico/`):**
-   - Ecuación de cambio de estado de Truxa para conductor AAAC $35\text{ mm}^2$ bajo 5 hipótesis CNE Suministro 2011.
-   - Esfuerzos mecánicos en postes C.A.C. 12/300, 12/400 y biposte 13/400 con $FS \ge 2.0$.
-   - Cimentaciones por Método de Sulzberger ($FS_{\text{Sulz}} \ge 1.50$) y bloques de retenida ($FS_{\text{arr}} \ge 2.0$).
-   - Coordinación de aislamiento a $3,850\text{ msnm}$ ($K_a = 1.25$ CNE / $1.42$ IEC, BIL $170\text{ kV}$, fuga $810\text{ mm}$).
-   - Caída de tensión en MT ($0.046\%$) y pérdidas ($46.2\text{ W}$).
-3. **Pliegos Técnicos SEACE (`expediente/`):** Especificaciones técnicas de suministro y montaje alineadas a Electro Puno LP-SM-15-2024-ELECTROPUNO y análisis de precios unitarios (APU).
-4. **Planos Ejecutivos Formales A3 (`entregables/planos/`):**
-   - **LP-01:** Plano de Traza, Planta General y Servidumbre de Línea Primaria 22.9 kV (Escala 1:2000).
-   - **PL-01:** Perfil Longitudinal Topográfico, Spotting y Catenarias (H: 1:2000, V: 1:500).
-   - **U-01:** Diagrama Unifilar General y Protecciones de Media Tensión 22.9 kV.
-   - **D-01:** Detalles de Armados Normalizados DGE PS-1 (Suspensión) y PA-1 (Ángulo) 22.9 kV.
-   - **D-02:** Detalles de Armado DGE PR-1 y Subestación Aérea Biposte SAB-1 100 kVA.
-   - **D-03:** Detalles de Cimentación Sulzberger, Retenidas Mecánicas R-1 y Puesta a Tierra PAT-3.
-   - **Modelos SEACE:** Planos DXF y modelos 3D CadQuery en `entregables/planos/cad_linea_primaria/`.
-
----
-
-## 3. Estructura de Directorios
-
-- `datos/`: Parámetros canónicos del proyecto, tablas de conductores y catálogo de postes C.A.C.
-- `fuentes/`: KML de Google Earth, datos y evidencias georreferenciadas de GISEM OSINERGMIN.
-- `diseno-electrico/`: Memoria de cálculo eléctrico en media tensión 22.9 kV y cuadros de carga.
-- `calculo-mecanico/`: Memoria completa de cálculo mecánico de conductores, postes, retenidas y cimentaciones.
-- `expediente/`: Memoria descriptiva, especificaciones técnicas SEACE, APUs, metrados y cronograma de obra.
-- `entregables/planos/`: Las 6 láminas oficiales ejecutivas en PDF A3, DXF R2010 y renders PNG.
-- `scripts/`: Suite de automatización en Python (cálculos, cimentaciones, aislamiento y generador de planos).
-- `tests/`: 16 pruebas unitarias con pytest (cálculos mecánicos, eléctricos, cimentaciones y auditoría de planos).
-
+Estado actual de pruebas: **17 passed**.
