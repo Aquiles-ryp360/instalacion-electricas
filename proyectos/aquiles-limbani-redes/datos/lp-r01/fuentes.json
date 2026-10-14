@@ -1,0 +1,142 @@
+[
+  {
+    "id": "S01",
+    "titulo": "Catastro original Limbani y antecedente CAD",
+    "url": "Fuentes locales preservadas en fuentes/local/lp-r01/antecedente; original C:/Users/51949/Downloads/Catastro_Limbani/qgis/Catastro-Limbani.gpkg",
+    "lectura": "485 entidades Casas; 3 geometrías inválidas reparadas sólo para análisis, sin modificar originales. Datos no equivalen a usuarios censados.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S02",
+    "titulo": "OpenStreetMap API, consulta del corredor",
+    "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-69.735,-14.215,-69.665,-14.125",
+    "lectura": "XML archivado osm_bbox.xml; WGS84; © OpenStreetMap contributors, ODbL 1.0. Centro OSM nodo11301623876. No catastro legal ni levantamiento.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S03",
+    "titulo": "Terrain Tiles, Mapzen / datos globales USGS",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "lectura": "Tesela S15W070, HGT 3601x3601, muestreo 1 segundo (~30m), interpolación bilineal. Datum vertical/composición no comprobados. No nivel de agua ni perfil de campo.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S04",
+    "titulo": "INEI, Directorio Nacional de Centros Poblados 2017, tomo4",
+    "url": "https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1541/tomo4.pdf",
+    "lectura": "Páginas impresas1713-1714, PDF447-448, inspeccionadas en investigación hidroeléctrica. Centro/Bellavista/Lince: 205/205/139 habitantes y 95/140/86 viviendas ocupadas. Último dato local recuperado, no padrón 2026.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S05",
+    "titulo": "CNE Suministro 2011, RM214-2011-MEM/DM",
+    "url": "https://cdn.www.gob.pe/uploads/document/file/95751/RM_214_2011_DM.pdf",
+    "lectura": "Texto íntegro local; revisión dirigida de 036, 230, 232, 234, 250, tablas253-1 y261-1A. No se afirma revisión/certificación de todas las reglas.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S06",
+    "titulo": "CNE Utilización, RM037-2006 y modificatoria RM175-2008",
+    "url": "https://www.gob.pe/institucion/osinergmin/normas-legales/738607-037-2006-mem-dm",
+    "lectura": "Texto local y modificación conservados en referencias; aplica a BT, auxiliares y utilización según frontera, no sustituye Suministro para LP pública.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S07",
+    "titulo": "RD018-2003-EM/DGE, bases de líneas y redes primarias",
+    "url": "https://www.gob.pe/institucion/minem/normas-legales/4775002-018-2003-em-dge",
+    "lectura": "Existencia y denominación verificadas en ficha MINEM; descarga devolvió418. No se atribuyen numerales sin lectura íntegra. Completar cotejo de tensión10kV y aplicación rural antes de ejecución.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S08",
+    "titulo": "RD024-2003-EM/DGE, soportes normalizados primarios",
+    "url": "https://www.gob.pe/institucion/minem/normas-legales",
+    "lectura": "PDF local referencias/normativa/pdf/rd024-2003-EM-DGE.pdf, 108p, título/índice leídos. Láminas004,008,012,016,020 referencian funciones; dibujos del proyecto son adaptaciones de estudio, no planos de fabricación.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S09",
+    "titulo": "Norma DGE Símbolos Gráficos, RM091-2002",
+    "url": "https://www.gob.pe/institucion/minem/normas-legales/108773-0091-2002-mem",
+    "lectura": "Sección9 local de17p; páginas73-74 revisadas visualmente: centro del símbolo representa entidad; 09-90-09 SE en proyección. Postes/retenidas: símbolos propios declarados.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S10",
+    "titulo": "RD108-2023-MINEM/DGE, bases secundarias",
+    "url": "https://busquedas.elperuano.pe/dispositivo/NL/2179334-1",
+    "lectura": "Se emplean calificaciones600/400W y simultaneidad0.80 para demanda. Tipificación I/I/II propuesta, sin acreditación. No es norma de diseño de LP ni justifica metros de BT.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S11",
+    "titulo": "Nexans Perú, catálogo energía resumen2019",
+    "url": "https://www.nexans.pe/dam/jcr:057983be-67dd-497d-aa70-a0ff051d4f08/Catalogo%20energia%20resumen%202019.pdf",
+    "lectura": "PDF descargado; identifica familias de conductores. No garantiza los valores tipo AAAC50 utilizados ni aporta precios vigentes; obtener ficha y oferta específica.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S12",
+    "titulo": "RESESATE2013, RM111-2013-MEM/DM",
+    "url": "https://www.gob.pe/institucion/minem/normas-legales/108429-0111-2013-mem",
+    "lectura": "Existencia/ficha oficial comprobadas. Aplicar seguridad de trabajo, procedimientos, personal habilitado y maniobras antes de montaje/operación.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S13",
+    "titulo": "DS018-2020-EM, reglamento electrificación rural",
+    "url": "https://busquedas.elperuano.pe/dispositivo/NL/1871077-4",
+    "lectura": "Consultar junto a Ley28749 y modificaciones vigentes; no calificación SER obtenida.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S14",
+    "titulo": "DS003-2026-EM, modificación reglamento rural",
+    "url": "https://busquedas.elperuano.pe/dispositivo/NL/2509857-1",
+    "lectura": "Publicado25/04/2026, texto oficial consultado. Modifica trámites/financiamiento/transferencia; no exime automáticamente requisitos técnicos ni ambientales de esta LP.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S15",
+    "titulo": "Reglamento ambiental eléctrico DS014-2019-EM",
+    "url": "https://cdn.www.gob.pe/uploads/document/file/340037/DS_N__014-2019-EM.pdf",
+    "lectura": "Texto local de investigación previa y fe de erratas. Categoría ambiental y consolidación normativa deben determinarse por autoridad y titular real.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S16",
+    "titulo": "ANA Ley29338",
+    "url": "https://www.ana.gob.pe/sites/default/files/normatividad/files/ley_29338_0_2.pdf",
+    "lectura": "Faja marginal/cauces y eventuales obras sobre agua requieren evaluación específica. Buffer cartográfico8/30m es criterio de cautela, no ancho legal.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S17",
+    "titulo": "Reglamento Nacional de Edificaciones, MVCS",
+    "url": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2309793",
+    "lectura": "Seleccionar E.020,E.030,E.050,E.060 según obras de estaciones, cimentación y geotecnia; no cálculo estructural definitivo declarado.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S18",
+    "titulo": "IEC60076-1:2011, edición3.0, transformadores",
+    "url": "https://webstore.iec.ch/en/publication/588",
+    "lectura": "Ficha primaria consultada; complemento propuesto de especificación/ensayo de equipos, no obligación legal autónoma. Texto completo no adquirido; no numerales inventados.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S19",
+    "titulo": "IEC60076-3:2013+AMD1:2018, edición3.1",
+    "url": "https://webstore.iec.ch/en/publication/62880",
+    "lectura": "Ficha IEC consultada: aislamiento, ensayos dieléctricos y separaciones externas. Solicitar garantía a altitud y coordinación; no aplicar multiplicador universal1.28.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S20",
+    "titulo": "DL25844, Ley de Concesiones Eléctricas",
+    "url": "https://www.osinergmin.gob.pe/cartas/documentos/electricidad/normativa/LEY_CONCESIONES_ELECTRICAS.pdf",
+    "lectura": "Compilación histórica disponible; ruta real exige cotejo consolidado, titular y régimen. Potencia de central no exonera automáticamente línea/distribución.",
+    "fecha": "2026-10-14"
+  }
+]

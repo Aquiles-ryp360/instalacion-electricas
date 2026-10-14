@@ -1,0 +1,62 @@
+{
+  "version": "4.2.3-Belém do Pará",
+  "capas": [
+    {
+      "capa": "Calles",
+      "entidades": 19,
+      "crs": "EPSG:32719",
+      "origen": "ORIGINAL SIN ALTERAR"
+    },
+    {
+      "capa": "Casas",
+      "entidades": 485,
+      "crs": "EPSG:32719",
+      "origen": "ORIGINAL SIN ALTERAR"
+    },
+    {
+      "capa": "Rios-Cuencas",
+      "entidades": 5,
+      "crs": "EPSG:32719",
+      "origen": "ORIGINAL SIN ALTERAR"
+    },
+    {
+      "capa": "linea",
+      "entidades": 1,
+      "crs": "EPSG:32719",
+      "origen": "PROYECTADO"
+    },
+    {
+      "capa": "vanos",
+      "entidades": 110,
+      "crs": "EPSG:32719",
+      "origen": "PROYECTADO"
+    },
+    {
+      "capa": "postes",
+      "entidades": 111,
+      "crs": "EPSG:32719",
+      "origen": "PROYECTADO"
+    },
+    {
+      "capa": "retenidas",
+      "entidades": 128,
+      "crs": "EPSG:32719",
+      "origen": "PROYECTADO"
+    },
+    {
+      "capa": "subestaciones",
+      "entidades": 2,
+      "crs": "EPSG:32719",
+      "origen": "PROYECTADO"
+    },
+    {
+      "capa": "referencias-osm",
+      "entidades": 56,
+      "crs": "EPSG:32719",
+      "origen": "OSM, ODbL"
+    }
+  ],
+  "original_sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8",
+  "copia_sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8",
+  "longitud_utm_m": 6696.368693212355
+}

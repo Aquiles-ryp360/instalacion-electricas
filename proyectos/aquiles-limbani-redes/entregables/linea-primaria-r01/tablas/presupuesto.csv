@@ -1,0 +1,22 @@
+﻿partida,unidad,cantidad,precio_pen,parcial_pen,clase_precio
+"AAAC 50 mm2, tres fases + 3% reserva",m,20880,5.8,121104.0,ESTIMADO; NO COTIZACION
+"Poste CAC 13 m 600 daN tipo, suministro y montaje",ud,98,3800,372400,ESTIMADO; NO COTIZACION
+"Poste CAC 15 m 600 daN tipo, suministro y montaje",ud,10,5300,53000,ESTIMADO; NO COTIZACION
+"Poste CAC 17 m 600 daN tipo, suministro y montaje",ud,3,7100,21300,ESTIMADO; NO COTIZACION
+Armado suspensión,ud,46,1200,55200,ESTIMADO; NO COTIZACION
+Armado angular de retención,ud,41,1800,73800,ESTIMADO; NO COTIZACION
+Armado anclaje/terminal,ud,24,2800,67200,ESTIMADO; NO COTIZACION
+"Retenida completa; bloque 1.2m tipo, por verificar",ud,128,2600,332800,ESTIMADO; NO COTIZACION
+"PAT poste, 2 varillas y enlace",ud,111,1200,133200,ESTIMADO; NO COTIZACION
+Transformador 250 kVA garantizado a altitud,ud,2,105000,210000,ESTIMADO; NO COTIZACION
+Celda de protección por SE,ud,2,55000,110000,ESTIMADO; NO COTIZACION
+Zigzag y NGR MT 5A/10s,lote,1,60000,60000,ESTIMADO; NO COTIZACION
+Malla SE 10x10m + 4 varillas,ud,2,25000,50000,ESTIMADO; NO COTIZACION
+Tablero BT 400A,ud,2,22000,44000,ESTIMADO; NO COTIZACION
+"Cable BT 2x240mm2/fase + N240, 20m/SE",m,280,105,29400,ESTIMADO; NO COTIZACION
+"PE de SE Cu35, 20m/SE",m,40,20,800,ESTIMADO; NO COTIZACION
+Descargadores y terminales SE,lote,2,8000,16000,ESTIMADO; NO COTIZACION
+Protecciones y comunicaciones,lote,1,35000,35000,ESTIMADO; NO COTIZACION
+"Plataforma SE 6x4m, cerco 20m y drenaje",ud,2,55000,110000,ESTIMADO; NO COTIZACION
+Pruebas y capacitación,lote,1,30000,30000,ESTIMADO; NO COTIZACION
+"Campo, gestión ambiental y servidumbre",provisión,1,45000,45000,ESTIMADO; NO COTIZACION
