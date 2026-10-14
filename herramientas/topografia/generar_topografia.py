@@ -106,10 +106,25 @@ def read_dem(lat: float, lon: float, radius_km: float) -> tuple[np.ndarray, dict
     crs = utm_crs(lat, lon)
     east, north = Transformer.from_crs("EPSG:4326", crs, always_xy=True).transform(lon, lat)
     radius = radius_km * 1000
-    size = math.ceil(2 * radius / 30)
-    transform = from_origin(east - radius, north + radius, 30, 30)
-    bounds = (transform.c, transform.f - size * 30, transform.c + size * 30, transform.f)
-    result = np.full((size, size), NODATA, dtype="float32")
+    values, meta, sources = read_dem_bounds(
+        (east - radius, north - radius, east + radius, north + radius), crs
+    )
+    meta["centro_utm_m"] = [east, north]
+    return values, meta, sources
+
+
+def read_dem_bounds(bounds: tuple[float, float, float, float], crs: str
+                    ) -> tuple[np.ndarray, dict, list[dict]]:
+    """Recorta DEM para un corredor UTM; la fuente sigue siendo un DSM preliminar."""
+    xmin, ymin, xmax, ymax = bounds
+    if xmin >= xmax or ymin >= ymax or max(xmax - xmin, ymax - ymin) > 30000:
+        raise ValueError("El área DEM debe ser válida y tener hasta 30 km por lado")
+    width = math.ceil((xmax - xmin) / 30)
+    height = math.ceil((ymax - ymin) / 30)
+    transform = from_origin(xmin, ymax, 30, 30)
+    bounds = (transform.c, transform.f - height * 30,
+              transform.c + width * 30, transform.f)
+    result = np.full((height, width), NODATA, dtype="float32")
     sources = []
     for name in tile_names(bounds, crs):
         for resolution in (30, 90):
@@ -117,7 +132,7 @@ def read_dem(lat: float, lon: float, radius_km: float) -> tuple[np.ndarray, dict
             try:
                 with rasterio.open(url) as src:
                     with WarpedVRT(
-                        src, crs=crs, transform=transform, width=size, height=size,
+                        src, crs=crs, transform=transform, width=width, height=height,
                         resampling=Resampling.bilinear, nodata=NODATA,
                     ) as vrt:
                         values = vrt.read(1, masked=True)
@@ -144,7 +159,7 @@ def read_dem(lat: float, lon: float, radius_km: float) -> tuple[np.ndarray, dict
     if np.any(result == NODATA):
         raise RuntimeError("El DEM no cubre toda el área; reduzca el radio o revise las teselas")
     meta = {"crs": crs, "transform": transform, "bounds": bounds,
-            "centro_utm_m": [east, north], "resolucion_salida_m": 30}
+            "resolucion_salida_m": 30}
     return result, meta, sources
 
 
