@@ -1,0 +1,300 @@
+{
+  "comid": 9080887,
+  "indice_netcdf": 10204,
+  "tipo": "Estimación hidrológica exploratoria; no serie medida ni disponibilidad acreditada",
+  "fuente_serie": "SENAMHI / Llauca, HydroShare 2026, datos actualizados hasta 2025",
+  "factor_area": 0.40737481880952714,
+  "area_captacion_dem_km2": 135.30981024073805,
+  "area_salida_pisco_km2": 332.1506484768852,
+  "area_atributo_webmercator_km2": 355.41109491500004,
+  "correccion_area": "El atributo corresponde a WebMercator; se usa área geodésica WGS84 para comparar con celdas terrestres.",
+  "control_area_salida_pct": -23.328843245875454,
+  "factor_pluviometrico_adoptado": 1.0,
+  "factor_pluviometrico_estado": "Hipótesis de transferencia, no calibrada: gradiente altitudinal y climático pendiente",
+  "metodo": "Transposición exploratoria por área dentro del mismo tramo; PISCO ya regionaliza parámetros por similitud",
+  "validada_localmente": false,
+  "modelos": {
+    "ARNOVIC": {
+      "archivo": "PISCO_ARNOVIC_v1.1.nc",
+      "sha256": "3516f221dbc00272f19456e26e971b1dc201221eefe77b5cdf335818ba7423d9",
+      "inicio": "1981-01-01",
+      "fin": "2025-12-31",
+      "faltantes": 0,
+      "unidades": "m3/s",
+      "resolucion": "diaria",
+      "salida_pisco": {
+        "n": 16436,
+        "media_m3s": 8.127817380400028,
+        "min_m3s": 0.2029999941587448,
+        "max_m3s": 97.38099670410156,
+        "q5_m3s": 25.624512672424316,
+        "q10_m3s": 20.140000343322754,
+        "q50_m3s": 4.8445000648498535,
+        "q75_m3s": 1.9539999961853027,
+        "q90_m3s": 1.123499989509582,
+        "q95_m3s": 0.8560000061988831,
+        "q99_m3s": 0.543349999189377
+      },
+      "captacion_estimada": {
+        "n": 16436,
+        "media_m3s": 3.311068132657387,
+        "min_m3s": 0.08269708583875374,
+        "max_m3s": 39.67056588782453,
+        "q5_m3s": 10.438781207011289,
+        "q10_m3s": 8.20452899068492,
+        "q50_m3s": 1.9735273361409515,
+        "q75_m3s": 0.7960103943998045,
+        "q90_m3s": 0.4576856046589716,
+        "q95_m3s": 0.3487128474262241,
+        "q99_m3s": 0.22134710746992917
+      },
+      "mensual": [
+        {
+          "mes": 1,
+          "referencia_media_m3s": 18.717620273986597,
+          "captacion_media_m3s": 7.625087167660822,
+          "captacion_min_m3s": 1.2807864520933159,
+          "captacion_q95_m3s": 2.9268251311443882,
+          "n": 1395
+        },
+        {
+          "mes": 2,
+          "referencia_media_m3s": 18.726178726185786,
+          "captacion_media_m3s": 7.6285736655747565,
+          "captacion_min_m3s": 1.419701200815883,
+          "captacion_q95_m3s": 2.9722066795883215,
+          "n": 1271
+        },
+        {
+          "mes": 3,
+          "referencia_media_m3s": 13.431997081113973,
+          "captacion_media_m3s": 5.471857377168902,
+          "captacion_min_m3s": 0.9504054297494585,
+          "captacion_q95_m3s": 1.9060252677469578,
+          "n": 1395
+        },
+        {
+          "mes": 4,
+          "referencia_media_m3s": 6.736425113854585,
+          "captacion_media_m3s": 2.74424996018046,
+          "captacion_min_m3s": 0.30919748883619125,
+          "captacion_q95_m3s": 0.7209732976555848,
+          "n": 1350
+        },
+        {
+          "mes": 5,
+          "referencia_media_m3s": 3.2749657949666395,
+          "captacion_media_m3s": 1.334138597331934,
+          "captacion_min_m3s": 0.15398767791634943,
+          "captacion_q95_m3s": 0.4359317828853949,
+          "n": 1395
+        },
+        {
+          "mes": 6,
+          "referencia_media_m3s": 2.4691467447634095,
+          "captacion_media_m3s": 1.0058682077621277,
+          "captacion_min_m3s": 0.13810005813738907,
+          "captacion_q95_m3s": 0.3217489382853178,
+          "n": 1350
+        },
+        {
+          "mes": 7,
+          "referencia_media_m3s": 2.0849764817184018,
+          "captacion_media_m3s": 0.8493669164621593,
+          "captacion_min_m3s": 0.08310446148313193,
+          "captacion_q95_m3s": 0.259694823016597,
+          "n": 1395
+        },
+        {
+          "mes": 8,
+          "referencia_media_m3s": 2.456245497210906,
+          "captacion_media_m3s": 1.0006125643780097,
+          "captacion_min_m3s": 0.08269708583875374,
+          "captacion_q95_m3s": 0.23195922206324648,
+          "n": 1395
+        },
+        {
+          "mes": 9,
+          "referencia_media_m3s": 2.6963662597868177,
+          "captacion_media_m3s": 1.0984317165247772,
+          "captacion_min_m3s": 0.10388057685391491,
+          "captacion_q95_m3s": 0.24248985788547353,
+          "n": 1350
+        },
+        {
+          "mes": 10,
+          "referencia_media_m3s": 5.394068956289668,
+          "captacion_media_m3s": 2.1974078637145986,
+          "captacion_min_m3s": 0.19513253908389502,
+          "captacion_q95_m3s": 0.4887683038003422,
+          "n": 1395
+        },
+        {
+          "mes": 11,
+          "referencia_media_m3s": 8.11617542915874,
+          "captacion_media_m3s": 3.306325494879878,
+          "captacion_min_m3s": 0.2725337658271636,
+          "captacion_q95_m3s": 0.6198854350613234,
+          "n": 1350
+        },
+        {
+          "mes": 12,
+          "referencia_media_m3s": 13.968713738414122,
+          "captacion_media_m3s": 5.690502228188605,
+          "captacion_min_m3s": 0.4725547762214499,
+          "captacion_q95_m3s": 1.5298554002294407,
+          "n": 1395
+        }
+      ]
+    },
+    "GR2M": {
+      "archivo": "PISCO_GR2M_v2.0.nc",
+      "sha256": "150361a187d8c328124c45e78e56642a1cc980b3be737e6bded44b3d78ef8447",
+      "inicio": "1981-01-01",
+      "fin": "2025-12-01",
+      "faltantes": 0,
+      "unidades": "m3/s",
+      "resolucion": "mensual",
+      "salida_pisco": {
+        "n": 540,
+        "media_m3s": 4.9616851910396855,
+        "min_m3s": 1.2999999523162842,
+        "max_m3s": 19.459999084472656,
+        "q5_m3s": 11.74099955558776,
+        "q10_m3s": 10.23299961090088,
+        "q50_m3s": 3.6700000762939453,
+        "q75_m3s": 2.4375000596046448,
+        "q90_m3s": 1.9199999570846558,
+        "q95_m3s": 1.7090000391006475,
+        "q99_m3s": 1.4394999849796297
+      },
+      "captacion_estimada": {
+        "n": 540,
+        "media_m3s": 2.021265605689706,
+        "min_m3s": 0.5295872450272402,
+        "max_m3s": 7.927513601070612,
+        "q5_m3s": 4.782987566600301,
+        "q10_m3s": 4.1686663623687075,
+        "q50_m3s": 1.4950656161111968,
+        "q75_m3s": 0.9929761451296537,
+        "q90_m3s": 0.7821596346316615,
+        "q95_m3s": 0.696203581274101,
+        "q99_m3s": 0.5864160455573938
+      },
+      "mensual": [
+        {
+          "mes": 1,
+          "referencia_media_m3s": 8.141111108991835,
+          "captacion_media_m3s": 3.3164836629337775,
+          "captacion_min_m3s": 0.9165933423214361,
+          "captacion_q95_m3s": 1.9276975913242993,
+          "n": 45
+        },
+        {
+          "mes": 2,
+          "referencia_media_m3s": 10.904444487889608,
+          "captacion_media_m3s": 4.442196097472575,
+          "captacion_min_m3s": 1.4380330987425438,
+          "captacion_q95_m3s": 2.8695482066001814,
+          "n": 45
+        },
+        {
+          "mes": 3,
+          "referencia_media_m3s": 9.113777754041884,
+          "captacion_media_m3s": 3.7127235612231106,
+          "captacion_min_m3s": 1.5683930135663893,
+          "captacion_q95_m3s": 2.177011053474276,
+          "n": 45
+        },
+        {
+          "mes": 4,
+          "referencia_media_m3s": 6.398888905843099,
+          "captacion_media_m3s": 2.6067462086001263,
+          "captacion_min_m3s": 1.5724667578694556,
+          "captacion_q95_m3s": 1.6743104819969825,
+          "n": 45
+        },
+        {
+          "mes": 5,
+          "referencia_media_m3s": 4.128666681713528,
+          "captacion_media_m3s": 1.68191484138798,
+          "captacion_min_m3s": 1.112133263120067,
+          "captacion_q95_m3s": 1.1789427668160792,
+          "n": 45
+        },
+        {
+          "mes": 6,
+          "referencia_media_m3s": 3.1937777678171795,
+          "captacion_media_m3s": 1.3010646394824192,
+          "captacion_min_m3s": 0.8310446148313193,
+          "captacion_q95_m3s": 0.9866618414599011,
+          "n": 45
+        },
+        {
+          "mes": 7,
+          "referencia_media_m3s": 2.5059999836815727,
+          "captacion_media_m3s": 1.0208812892889585,
+          "captacion_min_m3s": 0.6436522312016835,
+          "captacion_q95_m3s": 0.7454958970537751,
+          "n": 45
+        },
+        {
+          "mes": 8,
+          "referencia_media_m3s": 2.2706666734483507,
+          "captacion_media_m3s": 0.9250124246728534,
+          "captacion_min_m3s": 0.5295872450272402,
+          "captacion_q95_m3s": 0.6273572151391283,
+          "n": 45
+        },
+        {
+          "mes": 9,
+          "referencia_media_m3s": 2.123999998304579,
+          "captacion_media_m3s": 0.8652641144607639,
+          "captacion_min_m3s": 0.5377347821962354,
+          "captacion_q95_m3s": 0.580101732660697,
+          "n": 45
+        },
+        {
+          "mes": 10,
+          "referencia_media_m3s": 2.5886666695276896,
+          "captacion_media_m3s": 1.0545576154571046,
+          "captacion_min_m3s": 0.5336609893303065,
+          "captacion_q95_m3s": 0.6428374823410702,
+          "n": 45
+        },
+        {
+          "mes": 11,
+          "referencia_media_m3s": 2.958666687541538,
+          "captacion_media_m3s": 1.2052863057550178,
+          "captacion_min_m3s": 0.578472225226898,
+          "captacion_q95_m3s": 0.67787168334744,
+          "n": 45
+        },
+        {
+          "mes": 12,
+          "referencia_media_m3s": 5.211555573675367,
+          "captacion_media_m3s": 2.123056507541784,
+          "captacion_min_m3s": 0.7617909131163303,
+          "captacion_q95_m3s": 1.0208813130308028,
+          "n": 45
+        }
+      ]
+    }
+  },
+  "limitaciones": [
+    "No se dispone de curva nivel-caudal de estación 260501.",
+    "El caudal PISCO corresponde a la salida del tramo, no a cada punto de su eje.",
+    "Área y modelo no calibrados en la captación propuesta; la discrepancia de área impide acreditación.",
+    "Los dos productos comparten forzantes; su contraste no es validación independiente.",
+    "Máximos diarios simulados no son crecidas de diseño ni máximos instantáneos.",
+    "Se separan series diarias ARNOVIC y mensuales GR2M; no se interpolan meses como aforos diarios."
+  ],
+  "contraste_mensual": {
+    "n_meses": 540,
+    "media_arnovic_m3s": 3.328839489175261,
+    "media_gr2m_m3s": 2.021265605689706,
+    "correlacion": 0.7609129525536114,
+    "sesgo_relativo_gr2m_vs_arnovic_pct": -39.28017219627233
+  },
+  "metodo_curva_duracion": "Orden descendente; excedencia Weibull m/(n+1). Cuantiles interpolados linealmente para tablas."
+}

@@ -1,30 +1,30 @@
-# Minicentral hidroeléctrica Limbani - Aquiles
+# Minicentral Limbani y Huancasayani — R03
 
-Anteproyecto de primera unidad de **Centrales Hidroeléctricas**.
+Proyecto académico de diseño para **Centrales Hidroeléctricas**, primera unidad. Estudiante: **Aquiles Taylor Ramos Yapo, 227368, Grupo A**. Docente: **Mg. Ing. Gregorio Meza Marocho**, grados contrastados con documentos de UNA Puno. Presentación: 14/10/2026, 07:00, Perú.
 
-- Alumno: Aquiles Taylor Ramos Yapo, **227368**.
-- Docente: **MEZA MAROCHO GREGORIO**.
-- Sección: **GRUPO A**.
-- Estado: **R02 académica, condicionada a datos de campo y fabricante**.
-- Punto de entrada: [proyecto.yaml](proyecto.yaml).
+La versión vigente parte de [proyecto.yaml](proyecto.yaml). La operación inicial es **aislada, sin SEIN**. Se comparan 150, 200, 400 y 600 kW; se dimensiona el caso conservador de tres grupos de 200 kW, con respaldo modular. No se presenta como una inversión óptima ni como expediente listo para construir.
 
-## Resultado
+## Resultados y alcance
 
-Se revisó el borrador de 28 páginas físicas recibido el 13/10/2026. Hay 24 observaciones con páginas de origen. Se corrigieron contradicciones de geometría, salto, potencia, altitud, grupo Dyn5, puesta a tierra y referencias del CNE. Se separa el dato del borrador, la hipótesis y el resultado calculado.
+- PISCO/SENAMHI 1981–2025: 16 436 días y 540 meses recuperados. COMID 9080887; transposición exploratoria por área geodésica, sin calibración local. Caudales simulados, **no aforos oficiales en captación**.
+- INEI 2017: 2046 habitantes y 946 viviendas ocupadas en cuatro registros. Escenario 2026 de 1037 conexiones potenciales; no se suma el total distrital ni se confunde vivienda con contrato.
+- Demanda máxima de estudio: **526.79 kW** usando las bases rurales de 2023. Oferta nominal de 600 kW en bornes: **544.28 kW en usuarios**.
+- Estiaje: potencia diaria P95 de estudio **37.43 kW** y mínimo **0 kW**. No se garantiza suministro hidroeléctrico continuo de 150–200 kW.
+- Energía hidro servida: **1316.57 MWh/año**; déficit hidro **384.53 MWh/año** para el perfil 2026 supuesto. Se examinan respaldo y reducción de cargas.
+- Salto bruto de gabinete 45.3 m; tubería de 350 m y Di 1000 mm. Cotas y trazado requieren nivelación. Se modela cierre lento y se detiene MOC donde aparece cavitación.
+- Presupuesto completo estimado **S/16.06 millones**, con sensibilidad ±35%. Los precios de partidas son estimaciones; los escenarios financieros examinados son desfavorables.
 
-R02 revisa además **nueve problemas de R01**: auxiliares sin modo definido, alternativa de 500 mm sin mecánica, margen sin sensibilidad, lectura de carga continua incompleta, distancias MT sin caso de consulta, ruta ANA parcial, servicios propios sin barra de arranque, cifras repetidas y área bruta de reja sin porosidad. Ver [validación R02](documentacion/validacion-r02.md).
+Las referencias de la central existente (200 kW, unos 50 m y Banki) siguen sin placa o medición independiente. Las dos posiciones de casa de máquinas difieren 152 m; toma, cámara y restitución no están levantadas. Estas limitaciones están descritas en la memoria y en cada plano pertinente.
 
-Con 420 l/s y tubería de 220 m:
+## Documentos para presentar
 
-| Di interior | Generador | PCC con carga operativa R02 |
-|---|---:|---:|
-| 450 mm | 155.462 kW | 147.822 kW |
-| 500 mm | 158.878 kW | 151.155 kW |
-| 550 mm | 160.762 kW | 152.991 kW |
+En `G:\Aquiles\instalacion-electricas\output\pdf\`:
 
-Los auxiliares de generación suman **5.10 kW** por inventario; sus pérdidas TSA son adicionales. El margen de 500 mm es **1.155 kW**, y caudal 5% menor reduce PCC a **143.845 kW**. Se desarrolla 500 mm como alternativa prioritaria de estudio, sin garantía de 150 kW ni selección comercial. La reconstrucción del borrador sigue dando 137.870 kW en bornes y geometría inválida.
+1. `Minicentral_Limbani_R03_proyecto_academico.pdf`: memoria de doce capítulos y anexos.
+2. `Minicentral_Limbani_R03_planos_academicos.pdf`: ocho láminas A3.
+3. `Minicentral_Limbani_R03_exposicion.pdf`: presentación 16:9.
 
-Se incluyen cribados mecánicos de las tres alternativas, viga entre apoyos, térmica, balance completo, arranque desde red, sensibilidad y comparación económica marginal con tarifa/precios pendientes. El estudio conserva como `null` energía anual, caudales y datos de conexión no acreditados.
+Los originales editables están en `expediente/r03/`, `expediente/main-r03.tex`, `planos-r03.tex` y `exposicion-r03.tex`. Las figuras vectoriales SVG/PDF y los cálculos/tablas se generan en `build/aquiles-minicentral-limbani/r03/`. El [guion](documentacion/GUION_EXPOSICION_R03.md) y los [pendientes](documentacion/PENDIENTES_PRESENTACION.md) facilitan la sustentación.
 
 ## Reproducir
 
@@ -33,36 +33,17 @@ Desde la raíz del repositorio:
 ```powershell
 python -m unittest discover -s herramientas/hidroelectricas/tests -v
 python proyectos/aquiles-minicentral-limbani/scripts/construir.py
+python proyectos/aquiles-minicentral-limbani/scripts/verificar_r03.py
 ```
 
-Requiere Python 3.10+, Matplotlib y LaTeX con `pdflatex` y paquetes declarados en `expediente/preambulo.tex`. En esta máquina ya estaban disponibles; no se alteró la instalación de Python ni MiKTeX. Para cálculos y figuras sin compilar PDF, añadir `--sin-pdf`.
+Se requieren Python, NumPy, Matplotlib, Shapely, PyProj y LaTeX. Para regenerar solo cálculos/figuras, añadir `--sin-pdf`. En esta máquina los paquetes adicionales netCDF4/cftime están aislados en `G:\Aquiles\dependencias-minicentral`; no se sustituyó Python del sistema. La extracción hidrológica usa ese directorio.
 
-Salidas en `build/aquiles-minicentral-limbani/`:
+La reconstrucción normal usa los CSV ya extraídos. Para repetir la investigación espacial se conservan los NetCDF, GeoPackage, tesela DEM y respuestas públicas originales en `fuentes/local/investigacion-r03/`, ignorados por Git. `analizar_dem_r03.py` y `analizar_hidrologia_r03.py` documentan el método. Las copias de fuentes grandes deben estar disponibles; no se sustituyen por cifras inventadas. Las dependencias de investigación espacial y su recuperación se detallan en el [registro R03](documentacion/decisiones-r03.md).
 
-- `expediente/main.pdf`: expediente de ocho capítulos y anexos normativos.
-- `expediente/observaciones.pdf`: 24 hallazgos del borrador y nueve correcciones a R01.
-- `calculos.json`, `comparacion.csv`: resultados reproducibles.
-- `observaciones.md`, `manifest-entradas.json`: revisión y huellas de entradas.
-- `metrados_calculados.csv`: cantidades derivadas del diámetro vigente; precios vacíos.
+## Trazabilidad y estado
 
-El constructor no escribe en `entregables/`. El pipeline residencial común está deshabilitado para este proyecto: se usa su constructor específico. Los gráficos son modelos, no mediciones ni curvas de duración del río.
+Entradas canónicas: `datos/parametros-r03.json`, `normativa-r03.json`, `fuentes-r03.json`, `topografia-r03.json` y `hidrologia-r03.json`. Series diarias/mensuales en `datos/hidrologia/`. Precios y criterios en `datos/precios-r03.csv`. Las entradas anteriores sin sufijo se conservan como historia R02 y no alimentan el constructor vigente.
 
-## Entradas
+Los originales aportados y el catastro permanecen sin modificación. R01/R02 se conservan en los archivos locales y en Git. La revisión y evidencia están en [validacion-r03.md](documentacion/validacion-r03.md). Las salidas revisadas se copian a `output/`; no se declaran aprobadas para ejecución en `entregables/`.
 
-- `datos/parametros.json`: valores, unidades, procedencia, confianza y datos faltantes.
-- `datos/normativa.json`: fuentes y matriz regla-evidencia-estado.
-- `datos/observaciones.json`: hallazgos del borrador.
-- `datos/metrados.csv`: cantidades preliminares y precios pendientes.
-- `datos/revision-r02.json`: auditoría de R01 y tratamiento R02.
-- `datos/plantillas/`: estructuras vacías para aforos, hidrología, demanda y conexión; nunca se usan como mediciones.
-- `expediente/capitulos/`: capítulos editables en LaTeX.
-- `fuentes/local/`: copia inalterada del PDF recibido, ignorada por Git.
-- `documentacion/`: decisiones, validaciones y registro de evidencia.
-
-El escudo se reutiliza desde la vivienda de Aquiles. Las normas públicas descargadas están en `referencias/local/minicentral-limbani/`, ignoradas por Git; el registro de URL permite recuperarlas. El constructor puede funcionar sin los PDF normativos, pues no extrae números automáticamente de ellos.
-
-R01 se conserva en `build/aquiles-minicentral-limbani/archivo-r01/` como antecedente local. Los PDF revisados de R02 se copian a `output/pdf/`, también ignorado; ninguna versión está publicada en `entregables/` como aprobada. Las salidas, motor y escudo forman parte de la trazabilidad. La recopilación legal no sustituye la consolidación administrativa antes de tramitar.
-
-## Datos que condicionan el diseño final
-
-Rúbrica y objetivo (bornes o PCC); aforos y series; caudal ecológico y derechos; topografía y sedimentos; demanda o contrato de exportación; punto de conexión y fallas; geotecnia y resistividad; curvas y garantías de fabricantes. Estos campos permanecen `null` donde falta evidencia. La presencia de una norma en el registro no equivale a cumplimiento.
+Prioridades posteriores: aforos y curva de gasto, topografía, padrón y demanda medida, placas, crecidas/sedimentos, geotecnia/resistividad, curvas de fabricante, cotizaciones y permisos. No se requiere inventar una rúbrica adicional del docente: su encargo fue diseñar una minicentral y se definió un alcance académico coherente.

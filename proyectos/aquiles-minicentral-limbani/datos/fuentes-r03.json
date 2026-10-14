@@ -1,0 +1,131 @@
+{
+  "consulta": "2026-10-14",
+  "fuentes": [
+    {
+      "id": "H01",
+      "titulo": "Llauca (2026), PISCO-ARNOVIC Daily Streamflow Product for Peru v1.1",
+      "url": "https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/",
+      "local": "PISCO_ARNOVIC_v1.1.nc",
+      "lectura": "NetCDF leído: 11913 tramos, 16436 días, 1981-01-01 a 2025-12-31; COMID9080887 índice10204; unidades m3/s, sin vacíos en la columna. Modelo regional, no aforos. Licencia CC BY4.0; autores y transformaciones identificados."
+    },
+    {
+      "id": "H02",
+      "titulo": "Llauca (2026), PISCO-GR2M Monthly Streamflow Product for Peru v2.0",
+      "url": "https://www.hydroshare.org/resource/f1b537f338f24533af5dab946b51d215/",
+      "local": "PISCO_GR2M_v2.0.nc",
+      "lectura": "540 meses 1981-2025, mismo COMID e índice comprobados; 11913 tramos; sin vacíos. Modelo mensual contrastado con medias mensuales ARNOVIC. CC BY4.0."
+    },
+    {
+      "id": "H03",
+      "titulo": "SENAMHI, mapa de estaciones y ficha Limbani",
+      "url": "https://www.senamhi.gob.pe/mapas/mapa-estaciones-2/",
+      "local": "senamhi_mapa.html",
+      "lectura": "Mapa público: HLG260501 lat-14.1481 lon-69.6902, diferido; CO114049 lat-14.1397 lon-69.687. Ficha permite meses desde julio2019 con huecos y CAPTCHA para descarga; no se obtuvo curva de gasto ni se eludió ese control. Coordenadas actuales difieren de inventarios históricos de la CO."
+    },
+    {
+      "id": "H04",
+      "titulo": "Terrain Tiles, Mapzen / fuentes globales USGS, tesela S15W070",
+      "url": "https://registry.opendata.aws/terrain-tiles/",
+      "local": "S15W070-mapzen.hgt.gz",
+      "lectura": "HGT3601x3601, muestreo1 segundo; D8 exploratorio a3 segundos con relleno de depresiones. Se conservan algoritmo, malla y controles. Créditos: Mapzen y datos globales SRTM/GMTED2010 cortesía de USGS; composición/datum vertical no verificados, sin topografía de campo."
+    },
+    {
+      "id": "H05",
+      "titulo": "Open Topo Data, SRTM90 y respuesta de perfil de estudio",
+      "url": "https://www.opentopodata.org/datasets/srtm/",
+      "local": "srtm90_rio_respuesta.json",
+      "lectura": "Respuesta original del API srtm90m: doce puntos sobre eje PISCO, de -2km a +1km respecto de la casa candidata. Niveles3285 y3239m en referencias -500 y0m; alturas de DEM, no niveles de agua. Se archivó URL parametrizada y coordenadas."
+    },
+    {
+      "id": "H06",
+      "titulo": "INEI, Directorio Nacional de Centros Poblados, Censos2017, tomo4, setiembre2018",
+      "url": "https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1541/tomo4.pdf",
+      "local": "inei_tomo4.pdf",
+      "lectura": "Portada y pp.1713-1714 (PDF447-448) leídas y revisadas como imagen: Limbani1497/626/625; Centro205/95/95; Bellavista205/140/140; Lince139/86/86 (habitantes/viviendas/ocupadas). Distrito2970 y2268 viviendas se excluyen de la suma beneficiaria. No se interpreta ocupadas como abonados activos."
+    },
+    {
+      "id": "H07",
+      "titulo": "ANA, R.D.370-2017-ANA/AAA-XIII MDD, licencia energética Phara",
+      "url": "https://www.ana.gob.pe/sites/default/files/normatividad/files/RD.%20N%C2%BA%20370-2017-ANA-AAA.XIII-MDD.pdf",
+      "local": "phara_ana.pdf",
+      "lectura": "Tres páginas: 90l/s,2838240m3/año y100kW; fuentes laguna y río Cullucachi; coordenadas de captación/restitución en WGS84/UTM19S. Es asignación de otro aprovechamiento, no serie natural transferible ni permiso de Limbani."
+    },
+    {
+      "id": "H08",
+      "titulo": "UNA Puno, Relación de docentes ordinarios2022",
+      "url": "https://transparencia.unap.edu.pe/documentos/RELACION%20DE%20DOCENTES%202022.pdf",
+      "local": "docentes.pdf",
+      "lectura": "PDFp45, fila977: Gregorio Meza Marocho, grado de maestro en Ciencias: Ingeniería Eléctrica Sistemas de Potencia, UNSA,26/09/2008. Se usa solo su nombre y grado; no se reproducen datos personales de contacto."
+    },
+    {
+      "id": "H09",
+      "titulo": "UNA FIMEES, acta de Consejo de25/10/2021",
+      "url": "https://transparencia.unap.edu.pe/web/wp-content/uploads/2022/04/acta20211025RR-1.pdf",
+      "local": "acta_docente_2021.pdf",
+      "lectura": "Se verifica mención expresa de ingeniero Gregorio Meza Marocho. Junto con H08 permite tratamiento académico Mg.Ing.; no se agrega otro nombre ni grado."
+    },
+    {
+      "id": "H10",
+      "titulo": "ANA, R.D.0109-2019, agua poblacional de Limbani",
+      "url": "https://www.ana.gob.pe/sites/default/files/normatividad/files/64-RD-0109-2019-05.pdf",
+      "local": "ana_limbani_poblacional2019.pdf",
+      "lectura": "Derecho poblacional116683.20m3/año y3.70l/s, cuatro manantiales y coordenadas, UH Inambari46648. Otros usos comprobados existen en la cuenca; no se resta automáticamente ese caudal a una captación en río diferente."
+    },
+    {
+      "id": "H11",
+      "titulo": "Goyzueta Arce (2017), tesis de minicentral Phara, UNA",
+      "url": "https://repositorio.unap.edu.pe/handle/20.500.14082/3602",
+      "local": "tesis_phara_api.pdf",
+      "lectura": "Documento195p, cuadro31 p.impresa149/PDF152: sesenta medias mensuales con columnas de años1-5 sin fechas calendario; procedencia comité de energía Phara. Valores mínimos0.25m3/s, diseño0.24m3/s, salto neto134.25m. Referencia técnica de otro sitio; no se hace regresión con años desconocidos ni se confunde con la licencia90l/s."
+    },
+    {
+      "id": "H12",
+      "titulo": "OSSBERGER, folleto de turbina de flujo cruzado",
+      "url": "https://www.ossberger.de/fileadmin/user_upload/ossberger/Prospekte_OHT/englisch/1-2-02_The_OSSBERGER_Crossflow_Turbine.pdf",
+      "local": "ossberger.pdf",
+      "lectura": "Aplicación de flujo cruzado y admisión dividida; rango comercial de saltos y caudales compatible como cribado. Las curvas y eficiencias numéricas del proyecto son hipótesis, no garantías de esta marca."
+    },
+    {
+      "id": "H13",
+      "titulo": "OpenStreetMap contributors, localización referencial Huancasayani",
+      "url": "https://www.openstreetmap.org/node/11301623876",
+      "local": "huancasayani_osm.json",
+      "lectura": "Centro(-14.1917532,-69.7048438) y Bellavista(-14.1983659,-69.7159784), nombres y distrito coinciden con ámbito del censo; coordenadas cartográficas no oficiales del INEI. ODbL1.0. Lince no se ubica con certeza. No identifica instalaciones hidráulicas."
+    },
+    {
+      "id": "H14",
+      "titulo": "Electro Puno, Memoria Anual2023",
+      "url": "https://electropuno.com.pe/~electrop/subirarchivo/archivos/MEMORIA%20ANUAL%202023.pdf",
+      "local": "elpu2023.pdf",
+      "lectura": "Cuadro05 incluye elevadores10/22.9kV; servicio eléctrico Sandia y sistemas de transformación regionales. Evidencia de niveles existentes en Perú, no acceso garantizado, capacidad disponible ni futuro punto de interconexión en Limbani."
+    },
+    {
+      "id": "H15",
+      "titulo": "IRENA (2025), Renewable Power Generation Costs in2024",
+      "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2025/Jul/IRENA_TEC_RPGC_in_2024_2025.pdf",
+      "local": "irena2024.pdf",
+      "lectura": "Capítulo6, Tabla6.3 p149: costos pequeños hidro por región en USD2024/kW; valores de otros países no son cotización peruana. Se utiliza para contrastar orden de magnitud y dispersión, sin trasladar un promedio como presupuesto local."
+    },
+    {
+      "id": "H16",
+      "titulo": "Sodimac Perú, referencia minorista de cemento42.5kg",
+      "url": "https://www.sodimac.com.pe/sodimac-pe/articulo/133158570/Cemento-Yura-Max-Hs/133158571",
+      "local": null,
+      "lectura": "Comparador de productos del vendedor muestra Cemento Sol TipoI42.5kg aS/30.90 (consulta14/10/2026); YuraHS en la página sin stock. Referencia de material minorista, no cemento seleccionado por durabilidad, precio puesto en Limbani ni precio de concreto instalado. Tratamiento de impuestos y stock por confirmar."
+    },
+    {
+      "id": "H17",
+      "titulo": "SENAMHI DZ13, boletín diciembre2025",
+      "url": "https://www.senamhi.gob.pe/load/file/04701SENA-157.pdf",
+      "local": "senamhi_boletin.pdf",
+      "lectura": "Dieciséis páginas: gráfico estación Limbani presenta nivel(m), no descarga(m3/s). Sirve como comprobación de la variable y contexto estacional; no se digitaliza como caudal."
+    },
+    {
+      "id": "H18",
+      "titulo": "ANA/TNRCH, Resolucion 1588-2018, rio Comunidad en Phara",
+      "url": "https://www.ana.gob.pe/sites/default/files/normatividad/files/82-RTNRCH-1588-2018-003.pdf",
+      "local": "ana_comunidad_2018.pdf",
+      "lectura": "Texto oficial recuperado y leido: 28/09/2018, vertimiento de la Municipalidad de Phara en rio Comunidad. Confirma nombre y contexto territorial; no aporta caudal natural ni se usa el caudal de vertimiento como caudal del rio."
+    }
+  ]
+}

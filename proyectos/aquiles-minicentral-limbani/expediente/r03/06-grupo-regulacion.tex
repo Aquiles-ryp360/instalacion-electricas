@@ -1,0 +1,33 @@
+\chapter{Turbina, generador y regulación aislada}
+\section{Comparación de tecnologías}
+La Michell--Banki es un antecedente referido por el usuario y por la memoria de línea, sin placa recuperada. Se compara como alternativa de diseño. La documentación del fabricante OSSBERGER indica un campo amplio de salto y caudal que incluye el caso estudiado, así como admisión dividida (H12). Ello confirma aplicabilidad general, no eficiencia garantizada de un equipo a medida.
+\begin{longtable}{L{2.3cm}L{4.2cm}L{7cm}}\toprule Tecnología & Adecuación al caso & Aspectos de selección \\ \midrule
+Michell--Banki & Salto medio y caudal variable & Construcción y mantenimiento accesibles; admisión dividida y modularidad. Rendimiento pico usualmente menor que una Francis optimizada; exige control de abrasión.\\
+Francis & Puede operar en el rango & Mayor rendimiento pico potencial; selección depende del número específico de revoluciones, cavitación, altura de instalación y carga parcial. Más exigente en mantenimiento y regulación.\\
+Pelton / Turgo & Evaluables técnicamente & Turbinas de impulso; a este salto y caudal pueden requerir varios chorros y equipos mayores. El antecedente Pelton de Phara tiene un salto muy distinto y no decide esta selección.\\ \bottomrule\end{longtable}
+Se propone estudiar tres Banki de 200 kW eléctricos, sin afirmar que la central existente tenga tres unidades. La modularidad permite apagar grupos en estiaje y mantener otros durante mantenimiento. La alternativa de dos grupos de 200 kW conserva interés como etapa si se confirma menor demanda. La elección final debe comparar cotizaciones y curvas con igual salto, caudal, garantía, repuestos y costo de ciclo de vida.
+
+\section{Punto nominal y generador}
+Cada grupo se propone con generador síncrono de 250 kVA, 200 kW a factor de potencia nominal 0.8, 380 V, 60 Hz y ocho polos:
+\begin{equation}n_s=\frac{120f}{p}=900\ \mathrm{rpm}.\end{equation}
+La velocidad de la turbina debe ser compatible con el generador o incluir transmisión dimensionada. Una estimación preliminar de velocidad periférica \(u\simeq0.48\sqrt{2gH_n}\) conduce a diámetro de rodete cercano a \dato{Rodete} mm; un chorro de ancho supuesto 0.75 m tendría espesor aproximado \dato{JetWidth} mm. Son relaciones de predimensionamiento, no un diseño de álabes. El torque por grupo al punto nominal es aproximadamente \dato{Torque} N m.
+
+Se adoptan eficiencias nominales \(\eta_t=0.84\), \(\eta_m=0.985\) y \(\eta_g=0.925\). El balance da \dato{Ph} kW hidráulicos, \dato{Pt} kW a la salida de turbinas, \dato{Pacople} kW de acople y \dato{PG} kW eléctricos. Las curvas parciales y el caudal mínimo por unidad son hipótesis del modelo y deben sustituirse por datos garantizados. Los 250 kVA deben ser \textbf{aptos para la altitud y temperatura del sitio}; no se aplica un porcentaje de desclasificación inventado. IEC 60034-1:2026 se consulta como referencia de especificación, con acceso al catálogo y no al texto completo (N11).
+
+\section{Frecuencia, tensión y reparto entre grupos}
+Una red aislada requiere que generación y carga se equilibren instantáneamente. Se propone un grupo líder de frecuencia y los restantes con estatismo coordinado, o un controlador de reparto equivalente. El regulador hidráulico ajusta el caudal a medio plazo; un controlador electrónico de carga (ELC) absorbe rechazos transitorios con cargas de disipación. El AVR mantiene tensión con reparto de reactivos; no deben competir tres controles isócronos independientes sobre la misma barra.
+
+Se prevén tres módulos de carga de disipación de 200 kW, con capacidad transitoria total de 600 kW. Un rechazo completo durante ocho segundos disiparía aproximadamente 1.33 kWh. El sistema de refrigeración, protección térmica y descarga debe soportar esa potencia instantánea; la pequeña energía no permite minimizar el equipo. No se atribuye generación útil a la energía disipada. El gobierno reduce admisión con cierre controlado de al menos ocho segundos, sujeto a validar el transitorio con geometría y proveedor.
+
+Con constante de inercia supuesta de 2 s, un rechazo total puede producir una variación inicial de frecuencia del orden de 15 Hz/s. Una respuesta electrónica del orden de un ciclo es un objetivo de diseño, no una prestación comprobada. Deben ensayarse arranque, incorporación y retiro de grupos, saltos de carga, falla del ELC, falla de AVR y pérdida de respaldo. La protección de sobrevelocidad debe disponer de actuación independiente del regulador, conforme a CNE Suministro 130.
+Las funciones de regulación y disparo se representan en la lámina PL-07, junto con los criterios de prueba y protección.
+
+\Needspace{24\baselineskip}
+\section{Servicios auxiliares y arranque autónomo}
+\begingroup\small\input{generado/auxiliares}\endgroup
+A plena carga se requieren \dato{Paux} kW y \dato{Qaux} kvar de auxiliares. La ventilación considera las pérdidas de turbinas y generadores dentro de la casa, auxiliares y cableado: aproximadamente \dato{Heat} kW térmicos. Con densidad de aire supuesta 0.9 \(\mathrm{kg/m^3}\), \(c_p=1005\ \mathrm{J/(kg\,K)}\) y aumento de 10 K, se necesitan \dato{AirFlow} \(\mathrm{m^3/s}\). A 100 Pa y rendimiento 0.6, la potencia de ventiladores es del orden de \dato{FanPower} kW. Se proponen dos ventiladores de 1.1 kW; el caudal real debe comprobarse con su curva y pérdidas de rejillas. El transformador principal se ubica en exterior.
+
+El transformador auxiliar es de 20 kVA, 380/380--220 V, con neutro secundario propio. No se confunde 220 V entre fases con 220 V fase--neutro. Se propone batería de 24 V y 100 Ah para control, disparo y señalización; a 0.5 kW, profundidad de descarga 0.8 y eficiencia 0.9 proporciona \dato{DCtime} h de autonomía teórica. No alimenta motores de gobernadores en corriente alterna. El arranque autónomo necesita un módulo diésel, mando hidráulico manual o acumulador dimensionado; debe definirse la secuencia de energización de auxiliares antes de aceptar carga.
+
+\section{Respaldo y límites operativos}
+Para cubrir el escenario conservador durante períodos sin caudal se estudian tres grupos diésel de 200 kW. Su capacidad en usuarios es aproximadamente \dato{PBackupUsers} kW bajo el mismo sistema de pérdidas. La potencia combinada hidro--diésel se limita a 600 kW en la barra actual, mediante control e interbloqueo: no se diseña una barra de 1200 kW de exportación. La operación diésel requiere combustible almacenado con contención, ventilación, protección contra incendios, escape, control de ruido y mantenimiento; ni la disponibilidad ni el suministro de combustible están garantizados. El costo de este respaldo cuestiona la viabilidad y se analiza en el capítulo económico.

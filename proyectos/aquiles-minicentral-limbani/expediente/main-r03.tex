@@ -1,0 +1,42 @@
+\documentclass[11pt,letterpaper]{report}
+\input{preambulo}
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{r03/00-portada}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+Se desarrolla un \textbf{proyecto académico de diseño de una minicentral hidroeléctrica, elaborado por un estudiante}, para el curso de Centrales Hidroeléctricas. Se replantea el aprovechamiento existente referido en Limbani, Sandia, Puno, y se considera suministro \textbf{aislado} a Limbani y Huancasayani. Las referencias de 200 kW, salto cercano a 50 m y turbina Michell-Banki constituyen antecedentes por verificar; no se atribuyen a una placa inspeccionada.
+
+La investigación recuperó series públicas PISCO de SENAMHI: \textbf{16\,436 días y 540 meses entre 1981 y 2025}. Se identificó el tramo COMID 9080887 y se calculó una cuenca exploratoria en la captación propuesta. El ajuste por área utiliza superficie geodésica, corrigiendo la distorsión de Web Mercator del atributo original. La serie transferida es una \textbf{estimación sin calibración local}; la estación hidrológica pública de Limbani reporta niveles y no se recuperó su curva nivel--caudal. El contraste entre productos y la delimitación digital muestran incertidumbres que se conservan en el diseño.
+
+El censo INEI 2017 distingue cuatro registros del ámbito adoptado: Limbani, Huancasayani Centro, Bellavista y Lince. Suman \dato{PopBase}\ habitantes y \dato{VivsBase}\ viviendas ocupadas censales. La proyección de estudio y las calificaciones de la norma rural de 2023 producen \dato{Users}\ conexiones potenciales y una envolvente de demanda de \dato{Demand}\ kW. Estos valores no son un padrón ni una demanda medida. Por esa cobertura conservadora, se comparan 150, 200, 400 y 600 kW, y se dimensiona una alternativa modular de \textbf{tres grupos de 200 kW}, con respaldo aislado. La ampliación no se impone como inversión óptima: depende del padrón, el recurso y los costos.
+
+La propuesta cartográfica usa salto bruto de estudio \dato{Hb}\ m, tubería de \dato{LongPipe}\ m y diámetro interior de \dato{Di}\ mm. Con caudal nominal calculado de \dato{Qnom}\ m$^3$/s entrega 600 kW en bornes y aproximadamente \dato{Pusers}\ kW en usuarios. Sin embargo, el escenario diario proporciona solo \dato{Pfirmstudy}\ kW con excedencia del 95\% y presenta generación nula en algunos periodos. La hidroeléctrica por sí sola \textbf{no demuestra servicio continuo de 150--200 kW durante el estiaje}.
+
+Para el perfil de demanda supuesto, la energía hidroeléctrica servida se estima en \dato{EHidro}\ MWh/año, frente a \dato{Eload}\ MWh/año demandados. Se estudia respaldo modular, regulación de frecuencia/tensión, protección de red débil, transitorios y costos. El presupuesto conservador de reposición y ampliación alcanza aproximadamente S/\dato{CapexM}\ millones, con incertidumbre elevada y rentabilidad financiera desfavorable en los ingresos examinados. Se recomienda validar usuarios, reutilización de activos y caudales antes de escoger una inversión.
+
+\estado{El alcance es académico. No se emite un expediente técnico definitivo ni una autorización para construir. Las comprobaciones posteriores se identifican por capítulo y en la matriz normativa. Se conservan las fuentes originales y los cálculos reproducibles.}
+\begingroup\small\setlength{\parskip}{0pt}\tableofcontents\endgroup
+\clearpage\pagenumbering{arabic}
+\input{r03/01-enfoque}
+\input{r03/02-emplazamiento}
+\input{r03/03-hidrologia}
+\input{r03/04-demanda}
+\input{r03/05-hidraulica}
+\input{r03/06-grupo-regulacion}
+\input{r03/07-tuberia-mecanica}
+\input{r03/08-electrico}
+\input{r03/09-normativa-permisos}
+\input{r03/10-costos-viabilidad}
+\input{r03/11-planos-operacion}
+\input{r03/12-conclusiones}
+\appendix
+\chapter{Matriz normativa y evidencia}
+Los estados abiertos se refieren a verificaciones de una ejecución real o a datos no recuperados. Una comprobación académica con hipótesis no se registra como cumplimiento de campo.
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.08}\input{generado/matriz}\endgroup
+\chapter{Fuentes, procedencia y alcance de lectura}
+Consulta del 13--14 de octubre de 2026. N01--N28 identifican normas y referencias técnicas; H01--H18 identifican hidrología, censo, cartografía y antecedentes. Las fichas de normas pagadas se distinguen de textos completos. Los enlaces son consultables en esta edición digital; las copias y huellas originales se conservan en el proyecto.
+\begingroup\small\input{generado/fuentes}\endgroup
+\end{document}

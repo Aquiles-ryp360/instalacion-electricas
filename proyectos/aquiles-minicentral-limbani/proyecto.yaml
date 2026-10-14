@@ -1,23 +1,30 @@
 schema_version: 1
 id: aquiles-minicentral-limbani
-proyecto: "Minicentral hidroeléctrica Limbani - objetivo académico de 150 kW"
-alumno: "Aquiles Taylor Ramos Yapo"
+proyecto: "Proyecto académico de diseño de minicentral hidroeléctrica Limbani y Huancasayani"
+estudiante: "Aquiles Taylor Ramos Yapo"
 codigo_estudiante: "227368"
 curso: "CENTRALES HIDROELÉCTRICAS"
-docente: "MEZA MAROCHO GREGORIO"
+docente: "Mg. Ing. Gregorio Meza Marocho"
 seccion: "GRUPO A"
 unidad: 1
-revision: R02
-fecha_revision: 2026-10-13
-estado: "anteproyecto académico; hipótesis sin validación de campo"
+revision: R03
+fecha_revision: 2026-10-14
+estado: "proyecto académico de diseño; datos simulados y supuestos explícitos, no expediente constructivo"
+operacion_inicial: "aislada, sin SEIN"
+alternativas_hidro_kw: [150, 200, 400, 600]
+caso_dimensionado_kw: 600
+condicion_seleccion: "envolvente conservadora de demanda; no óptimo de inversión demostrado"
 ubicacion:
   distrito: Limbani
   provincia: Sandia
   departamento: Puno
   emplazamiento_aprobado: false
 entradas:
-  parametros_json: datos/parametros.json
-  normativa_json: datos/normativa.json
+  parametros_json: datos/parametros-r03.json
+  normativa_json: datos/normativa-r03.json
+  fuentes_json: datos/fuentes-r03.json
+  topografia_json: datos/topografia-r03.json
+  hidrologia_json: datos/hidrologia-r03.json
   borrador: fuentes/local/borrador-gemini-recibido-2026-10-13.pdf
 automatizacion:
   pipeline_habilitado: false
@@ -25,10 +32,11 @@ automatizacion:
   comando: "python proyectos/aquiles-minicentral-limbani/scripts/construir.py"
   requiere_revision_humana: true
 salidas:
-  directorio: build/aquiles-minicentral-limbani
-  expediente: build/aquiles-minicentral-limbani/expediente/main.pdf
-  observaciones: build/aquiles-minicentral-limbani/expediente/observaciones.pdf
-  calculos: build/aquiles-minicentral-limbani/calculos.json
+  directorio: build/aquiles-minicentral-limbani/r03
+  memoria: build/aquiles-minicentral-limbani/r03/expediente/main.pdf
+  planos: build/aquiles-minicentral-limbani/r03/expediente/planos-r03.pdf
+  exposicion: build/aquiles-minicentral-limbani/r03/expediente/exposicion-r03.pdf
+  calculos: build/aquiles-minicentral-limbani/r03/calculos-r03.json
 entregables:
   directorio: entregables
   aprobados: []

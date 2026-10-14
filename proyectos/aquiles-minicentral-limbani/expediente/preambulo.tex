@@ -1,19 +1,21 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-tabla]{babel}
-\usepackage[letterpaper,left=27mm,right=23mm,top=32mm,bottom=25mm,headheight=38pt,headsep=12pt]{geometry}
+\usepackage[letterpaper,left=27mm,right=23mm,top=30mm,bottom=20mm,headheight=38pt,headsep=12pt]{geometry}
 \usepackage[scaled]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{amsmath,amssymb,graphicx,booktabs,longtable,tabularx,array,enumitem,xcolor,fancyhdr,titlesec}
 \usepackage{hyperref}
 \usepackage{needspace}
+\usepackage{etoolbox}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
 \definecolor{azul}{RGB}{35,91,133}
 \definecolor{rojo}{RGB}{162,39,50}
 \definecolor{gris}{RGB}{70,82,92}
-\hypersetup{colorlinks=true,linkcolor=azul,urlcolor=azul,pdfauthor={Aquiles Taylor Ramos Yapo},pdftitle={Minicentral hidroeléctrica Limbani - Anteproyecto R02}}
+\hypersetup{colorlinks=true,linkcolor=azul,urlcolor=azul,pdfauthor={Aquiles Taylor Ramos Yapo},pdftitle={Proyecto académico de diseño de minicentral hidroeléctrica Limbani - R03}}
 \urlstyle{same}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{3pt}
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.18}
 \setlist{nosep,leftmargin=1.5em}
@@ -25,15 +27,17 @@
 \titleformat{\subsection}{\normalsize\bfseries\color{azul}}{\thesubsection}{.7em}{}
 \fancyhf{}
 \fancyhead[L]{\small\bfseries MINICENTRAL HIDROELÉCTRICA LIMBANI\\\footnotesize Centrales Hidroeléctricas | Primera unidad}
-\fancyhead[R]{\footnotesize UNA PUNO\\R02 | 13.10.2026}
+\fancyhead[R]{\footnotesize UNA PUNO\\R03 | 14.10.2026}
 \fancyfoot[L]{\scriptsize Aquiles Taylor Ramos Yapo | 227368 | GRUPO A}
-\fancyfoot[R]{\scriptsize Anteproyecto académico | \thepage}
+\fancyfoot[R]{\scriptsize Proyecto académico | \thepage}
 \renewcommand{\headrulewidth}{.5pt}
 \renewcommand{\footrulewidth}{.3pt}
 \pagestyle{fancy}
-\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{\small\bfseries MINICENTRAL HIDROELÉCTRICA LIMBANI\\\footnotesize Centrales Hidroeléctricas | Primera unidad}\fancyhead[R]{\footnotesize UNA PUNO\\R02 | 13.10.2026}\fancyfoot[L]{\scriptsize Aquiles Taylor Ramos Yapo | 227368 | GRUPO A}\fancyfoot[R]{\scriptsize Anteproyecto académico | \thepage}}
-\newcommand{\estado}[1]{\par\noindent\colorbox{azul!8}{\parbox{\dimexpr\linewidth-2\fboxsep}{\small\textbf{Estado de ingeniería.} #1}}\par}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{\small\bfseries MINICENTRAL HIDROELÉCTRICA LIMBANI\\\footnotesize Centrales Hidroeléctricas | Primera unidad}\fancyhead[R]{\footnotesize UNA PUNO\\R03 | 14.10.2026}\fancyfoot[L]{\scriptsize Aquiles Taylor Ramos Yapo | 227368 | GRUPO A}\fancyfoot[R]{\scriptsize Proyecto académico | \thepage}}
+\newcommand{\estado}[1]{\par\noindent\colorbox{azul!8}{\parbox{\dimexpr\linewidth-2\fboxsep}{\small\textbf{Condiciones del modelo.} #1}}\par}
+\newcommand{\dato}[1]{\csname dato#1\endcsname}
 \newcommand{\fuente}[1]{{\small\color{gris}\textit{Fuente / trazabilidad: #1}}\par}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \emergencystretch=2em
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
 \input{generado/valores}

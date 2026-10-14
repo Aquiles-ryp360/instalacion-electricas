@@ -1,6 +1,6 @@
 # Automatizacion de instalaciones electricas
 
-Repositorio para transformar informacion de viviendas, proyectos industriales y un anteproyecto hidroeléctrico en datos canonicos, calculos, planos, metrados, cotizaciones y expedientes tecnicos revisables.
+Repositorio para transformar informacion de viviendas, proyectos industriales y un proyecto académico hidroeléctrico en datos canonicos, calculos, planos, metrados, cotizaciones y expedientes tecnicos revisables.
 
 El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar resultados preliminares como diseno definitivo. Toda salida tecnica requiere revision humana y contraste con el Codigo Nacional de Electricidad, el RNE y las condiciones reales de obra.
 
@@ -17,7 +17,7 @@ El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar
 │   ├── renzo-industrial/                 estacion de servicio (grifo) - unidad 2 de Renzo
 │   ├── renzo-linea-primaria-capachica/   linea primaria 22.9 kV y redes secundarias Chifron (Capachica)
 │   ├── unidad-2-industrial/              estacion de servicio (grifo) - unidad 2 de Aquiles
-│   └── aquiles-minicentral-limbani/      Centrales Hidroeléctricas - anteproyecto R02
+│   └── aquiles-minicentral-limbani/      Centrales Hidroeléctricas - proyecto académico R03 aislado
 ├── referencias/              normativa versionada y material local ignorado
 └── build/                    resultados regenerables, ignorados por Git
 ```

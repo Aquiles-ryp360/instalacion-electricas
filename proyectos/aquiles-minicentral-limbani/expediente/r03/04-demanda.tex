@@ -1,0 +1,29 @@
+\chapter{Población atendida y demanda del sistema aislado}
+\section{Ámbito censal y usuarios potenciales}
+El Directorio Nacional de Centros Poblados de INEI, Censos 2017, tomo 4, páginas impresas 1713--1714, distingue cuatro registros relevantes: Limbani, Huancasayani Centro, Huancasayani Bellavista y Huancasayani Lince (H06). Son centros poblados en el directorio; no se inventa una categoría jurídica adicional. Se interpreta Huancasayani como el conjunto de esos tres registros para un escenario conservador, hasta que el padrón confirme el ámbito efectivo del servicio.
+
+El distrito de Limbani registra 2\,970 habitantes y 2\,247 viviendas ocupadas; \textbf{ese total no se suma} a los centros poblados. Las cuatro localidades seleccionadas suman \dato{PopBase} habitantes y \dato{VivsBase} viviendas ocupadas en 2017. La nota censal incluye viviendas con personas ausentes o de uso ocasional. Por ello, ocupada no significa necesariamente residencia permanente, conexión activa o consumidor simultáneo. No se han contado 764 usuarios a partir del catastro generado ni se han duplicado viviendas.
+\input{generado/poblacion}
+Se verificó la existencia de resultados nacionales del Censo 2025, publicados en 2026, pero no se recuperó en esta revisión un directorio desagregado de estas localidades que sustituya la tabla anterior. El año base local utilizado sigue siendo 2017, no una población pretendidamente actual. La proyección geométrica adopta \(r=1\%\) anual y redondea cada localidad hacia arriba:
+\begin{equation}N_{2026}=\lceil N_{2017}(1.01)^9\rceil.\end{equation}
+Resultan \dato{PopProj} habitantes y \dato{Users} conexiones \emph{potenciales}, pendientes de padrón. Las tasas 0 y 2\% producirían límites aproximados de 946 y 1\,131 viviendas para el conjunto, antes del redondeo por localidad; esta sensibilidad no es una proyección oficial de INEI. La migración y ocupación estacional podrían reducir la demanda efectiva.
+
+\section{Calificación eléctrica y simultaneidad}
+La RD 108-2023-MINEM/DGE derogó la RD 031-2003 y aprobó nuevas bases para redes secundarias rurales con conductores autoportantes (N21). Sus numerales 3.2 y 4.7 utilizan 600 W/lote para localidad tipo I, 400 W/lote para tipo II y factor de simultaneidad doméstico 0.80. No se mantiene la antigua combinación de 350 W con simultaneidad 0.52.
+
+Limbani se estudia como tipo I por su condición de capital distrital. Centro y Bellavista se asignan provisionalmente a tipo I, y Lince a tipo II; las tres clasificaciones necesitan inspección del trazado urbano y revisión con la entidad competente. Es posible adoptar calificaciones diferentes cuando estén sustentadas, pero no rebajarlas para hacer coincidir la demanda con 200 kW. El resultado doméstico es:
+\begin{equation} P_{dom}=0.80\sum_i N_i p_i=\dato{Dom}\ \mathrm{kW}.\end{equation}
+El alumbrado incluye 226 puntos LED de 50 W y pérdidas de 4.10 W por punto como referencia del cuadro de N21; resulta \dato{AP} kW con simultaneidad 1. Las cantidades son una previsión de diseño y deben contrastarse con inventario, disposición vial y fotometría. La carga especial se reserva con el siguiente inventario propuesto:
+\input{generado/servicios}
+\begin{equation}P_{max}=P_{dom}+P_{AP}+P_{especial}=\dato{Demand}\ \mathrm{kW}.\end{equation}
+No se vuelve a aplicar simultaneidad a ese total. Se conserva el factor de potencia doméstico 1.0 de la base normativa y factores específicos de alumbrado y servicios. Los auxiliares de generación pertenecen a la central, por lo que se descuentan en el balance de oferta y no se duplican en la demanda de usuarios.
+
+\section{Perfil, prioridades y crecimiento}
+El perfil de 24 horas es sintético: representa carga nocturna baja, servicios diurnos y pico vespertino. No procede de mediciones de medidores. Su energía diaria es \dato{DailyE} kWh, la anual \dato{Eload} MWh y el factor de carga \dato{LoadFactor}\%. Se entrega el CSV horario para sustituirlo por lecturas reales. Los arranques de motores, desequilibrios y cargas no lineales requieren un estudio adicional; el perfil representa potencia activa estable.
+
+Se propone un circuito prioritario de 131.6 kW en la hora de máxima carga, para salud, comunicaciones, agua y un suministro doméstico básico. Su continuidad exige respaldo: incluso esa reserva supera ampliamente el indicador hídrico diario de estiaje. La secuencia de reducción de carga debe preservar primero seguridad y salud, luego servicios básicos, y finalmente restringir actividades diferibles mediante acuerdos de operación y protección selectiva.
+\input{generado/proyeccion}
+El crecimiento posterior supone 1\% anual de usuarios y 1.5\% anual de carga por usuario, sin presentar esos porcentajes como pronóstico oficial. La capacidad inicial de 600 kW no cubre automáticamente esos picos futuros. Deben revisarse demanda real, eficiencia energética, incorporación por etapas y oferta híbrida antes de ampliar instalaciones. La posible llegada del SEIN entre 2046 y 2076 es una consideración de adaptación, no un supuesto que cierre el déficit actual.
+
+\section{Resultado y selección académica}
+Con el ámbito y las calificaciones conservadoras adoptadas, 150--200 kW son insuficientes para el pico. El caso de 400 kW permite mayor aprovechamiento que 200 kW y puede ser una etapa si el padrón demuestra una demanda menor o se acepta limitar cargas. Para estudiar cobertura completa del escenario se desarrolla 600 kW hidroeléctricos en tres grupos y respaldo diésel de 600 kW en tres módulos. La selección queda condicionada a disponibilidad hídrica, demanda real y evaluación económica. No se propone adquirir equipos sobre la base de una proyección de viviendas sin verificar.

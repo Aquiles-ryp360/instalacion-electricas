@@ -1,0 +1,46 @@
+\chapter{Ubicación, antecedentes y emplazamiento}
+\section{Ubicación política y referencias territoriales}
+El ámbito pertenece al distrito de Limbani, provincia de Sandia, departamento de Puno. La unidad hidrográfica identificada en resoluciones ANA locales es Inambari, código 46648 [H07, H10]. La propuesta utiliza la vertiente amazónica; no se transfieren automáticamente caudales de ríos del Titicaca por encontrarse también en Puno.
+
+\begin{figure}[htbp]\centering
+\begin{minipage}{.48\linewidth}\centering\includegraphics[width=\linewidth,height=6cm,keepaspectratio]{figuras/ubicacion-puno.jpg}\end{minipage}\hfill
+\begin{minipage}{.48\linewidth}\centering\includegraphics[width=\linewidth,height=6cm,keepaspectratio]{figuras/ubicacion-sandia.jpg}\end{minipage}
+\caption{Ubicación político-geográfica de Puno y Sandia. Imágenes conservadas del antecedente de Aquiles; fecha y autor originales no acreditados. Referencia territorial, sin escala del proyecto.}
+\end{figure}
+
+\section{Central existente y alcance del replanteamiento}
+Se tomó como referencia una central de aproximadamente 200 kW, salto cercano a 50 m y turbina Michell-Banki, conforme a la indicación del estudiante y al proyecto de redes. No se recuperó una ficha oficial o fotografía legible de placa que confirme estos tres valores. Los 50 m no permiten distinguir salto bruto y neto; por ello se conserva esa incertidumbre y se construye una hipótesis independiente de geometría para los cálculos.
+
+El trabajo de línea primaria y redes usa 200 kW como \emph{entrada}, no como resultado del diseño hidroeléctrico. Su cuestionario confirma el interés por 10 kV y control aislado. Se aprovechan esos antecedentes, pero no se importan como hechos sus afirmaciones de precisión catastral, demanda o caudal. El JSON menciona 764 viviendas y 2.15 km; la memoria y los planos usan otros conteos, incluidos 587 acometidas y una longitud cercana a 1.97 km. Esos datos son antecedentes del casco urbano y no cubren automáticamente Huancasayani.
+
+La carpeta Catastro\_Limbani contiene 482 huellas en el avance original y una base complementada mediante algoritmos. Las huellas añadidas representan geometría propuesta; no son evidencia de ocupación o contratos eléctricos. La demanda R03 utiliza los registros censales, no la suma de polígonos de casas.
+
+\section{Ficha de coordenadas y procedencia}
+La base recibida declara WGS84 / UTM zona 19 Sur, \textbf{EPSG:32719}, en metros. Se transforma a EPSG:4326 solo para cruzar estaciones y productos públicos. Las alturas de mapas tienen referencia vertical por confirmar y no se presentan como nivelación de campo.
+
+\begin{longtable}{L{4.2cm}L{4.4cm}L{5.5cm}}
+\toprule Referencia & Coordenadas & Procedencia y certeza\\\midrule
+Casa candidata CM-A & E 425580; N 8436580 m & Memoria del trabajo de redes; punto asignado académicamente, sin inspección\\
+Casa candidata CM-B & E 425715; N 8436650 m & Script/plano del mismo antecedente; difiere de CM-A unos 152 m\\
+Casa en borrador Gemini & E 425260; N 8441710 m & Aproximadamente 5 km al norte de los antecedentes urbanos; retirada del emplazamiento activo\\
+Captación de estudio & E 425542; N 8436231 m, aproximadamente & Punto propuesto 500 m aguas arriba por recorrido del eje PISCO desde CM-B; no identifica la bocatoma existente\\
+Estación HLG Limbani & Lat. -14.1481; lon. -69.6902 & Mapa SENAMHI, código 260501; no es casa de máquinas ni captación\\
+Cámara y restitución & Sin coordenadas confirmadas & Se desarrollan por perfil y esquema académico; el trazo definitivo requiere levantamiento\\
+Huancasayani Centro & Lat. -14.1917532; lon. -69.7048438 & OSM referencial, contrastado por nombre/distrito; no coordenada oficial INEI\\
+Huancasayani Bellavista & Lat. -14.1983659; lon. -69.7159784 & OSM referencial; Lince no se ubicó con certeza en esta investigación\\
+\bottomrule\end{longtable}
+
+\begin{figure}[htbp]\centering\includegraphics[width=.76\linewidth,height=12cm,keepaspectratio]{figuras/emplazamiento-r03.png}
+\caption{Base recibida y puntos de distinta procedencia. La escala gráfica permite leer distancias cartográficas; no acredita precisión del levantamiento ni ubicación de instalaciones existentes.}
+\end{figure}
+
+\section{Aprovechamiento topográfico y corredor de distribución}
+El perfil SRTM90 consultado sobre el eje fluvial tiene elevaciones de 3285 m a 500 m aguas arriba y 3239 m en la referencia próxima a CM-B [H05]. Son elevaciones de celdas, no niveles de agua ni cotas del eje de turbina. Para el diseño académico se reserva 0.30 m para 150 m de canal a pendiente 0.002 y 0.40 m para transiciones y diferencias de nivel. Se plantea cámara a 3284.3 m y referencia de turbina a 3239 m, produciendo \dato{Hb}\ m de salto bruto de estudio. La cámara debe situarse en una ladera compatible con ese nivel; no se asegura tal ubicación a partir de un eje de río.
+
+El recorrido fluvial de 500 m motiva una propuesta de canal de 150 m y tubería de 350 m. Esta longitud de tubería es una aproximación de recorrido tridimensional, que se estudia además entre 300 y 450 m. No se conserva la tubería de 175 m del borrador ni se aumenta el salto para obtener la potencia objetivo. La cartografía de 90 m no resuelve por sí sola el corredor de conducción, movimientos de tierra o estabilidad de ladera.
+
+\begin{figure}[htbp]\centering\includegraphics[width=.9\linewidth,height=10cm,keepaspectratio]{figuras/corredor-r03.png}
+\caption{Relación territorial de las localidades. Las líneas punteadas son vínculos de ubicación, no trazos de postes. El recorrido de 8 km usado en electricidad es una hipótesis de corredor, superior al enlace urbano del antecedente.}
+\end{figure}
+
+\estado{La casa de máquinas existente, la captación y la cámara no están identificadas con certeza. Los puntos de pueblo, estación y edificios candidatos mantienen etiquetas diferentes. La definición ejecutiva exige visita, placas, GPS, nivelación, servidumbres y faja marginal.}

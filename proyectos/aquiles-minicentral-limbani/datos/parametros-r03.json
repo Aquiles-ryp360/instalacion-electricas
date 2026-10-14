@@ -1,0 +1,544 @@
+{
+  "revision": "R03",
+  "fecha": "2026-10-14",
+  "enfoque": "Proyecto académico de diseño elaborado por estudiantes; replanteamiento de una central existente referida por el estudiante",
+  "modo": "aislado",
+  "sein_inicial": false,
+  "entrega_peru": "2026-10-14T07:00:00-05:00",
+  "docente": {
+    "nombre": "Gregorio Meza Marocho",
+    "tratamiento": "Mg. Ing.",
+    "fuente_magister": "H08: Relación de docentes ordinarios UNA 2022, PDF p. 45: maestro en Ciencias, Ingeniería Eléctrica - Sistemas de Potencia, UNSA, 26/09/2008",
+    "fuente_ingeniero": "H09: Acta FIMEES de 25/10/2021, mención expresa de ingeniero Gregorio Meza Marocho"
+  },
+  "antecedente_central": {
+    "potencia_kw": 200,
+    "salto_aproximado_m": 50,
+    "condicion_salto": "bruto o neto sin confirmar",
+    "turbina": "Michell-Banki",
+    "fuente": "Indicación del estudiante y proyecto académico de redes; no placa ni ficha oficial de la central",
+    "estado": "antecedente sin verificación independiente de potencia, salto o máquina existente",
+    "confianza": "baja"
+  },
+  "hidrologia": {
+    "serie_diaria": "datos/hidrologia/serie_diaria_estimada.csv",
+    "serie_mensual": "datos/hidrologia/serie_mensual_estimada.csv",
+    "metadatos": "datos/hidrologia-r03.json",
+    "comid": 9080887,
+    "reserva_ecologica_fraccion_media_mensual": 0.15,
+    "reserva_otros_usos_m3s": 0.005,
+    "sesgos_sensibilidad": [
+      0.5,
+      0.7,
+      1.0,
+      1.3
+    ],
+    "fuente": "H01-H05; transposición exploratoria de PISCO. Reserva ecológica y usos son supuestos de sensibilidad, no derechos ni caudales aprobados",
+    "estado": "estimación no calibrada en captación; discrepancia DEM/PISCO explícita",
+    "confianza": "baja para disponibilidad local"
+  },
+  "poblacion": {
+    "anio_base": 2017,
+    "anio_diseno": 2026,
+    "crecimiento_anual": 0.01,
+    "tasas_sensibilidad": [
+      0.0,
+      0.01,
+      0.02
+    ],
+    "filas": [
+      {
+        "codigo": "2112030001",
+        "nombre": "Limbani",
+        "poblacion": 1497,
+        "viviendas_totales": 626,
+        "viviendas_ocupadas": 625,
+        "altitud_directorio_m": 3333,
+        "tipo_dger_estudio": "I"
+      },
+      {
+        "codigo": "2112030050",
+        "nombre": "Huancasayani Centro",
+        "poblacion": 205,
+        "viviendas_totales": 95,
+        "viviendas_ocupadas": 95,
+        "altitud_directorio_m": 3762,
+        "tipo_dger_estudio": "I"
+      },
+      {
+        "codigo": "2112030051",
+        "nombre": "Huancasayani Bellavista",
+        "poblacion": 205,
+        "viviendas_totales": 140,
+        "viviendas_ocupadas": 140,
+        "altitud_directorio_m": 3868,
+        "tipo_dger_estudio": "I"
+      },
+      {
+        "codigo": "2112030036",
+        "nombre": "Huancasayani Lince",
+        "poblacion": 139,
+        "viviendas_totales": 86,
+        "viviendas_ocupadas": 86,
+        "altitud_directorio_m": 3763,
+        "tipo_dger_estudio": "II"
+      }
+    ],
+    "fuente": "H06: INEI, Directorio Nacional de Centros Poblados, Censos 2017, tomo 4, pp. impresas 1713-1714 / PDF 447-448",
+    "estado": "base censada; proyección 1% anual y clasificación de diseño de Huancasayani son hipótesis a validar",
+    "confianza": "alta para transcripción de la base, baja para proyección y usuarios reales",
+    "nota": "No se suman 2970 habitantes ni 2268 viviendas del total distrital. Ocupadas no equivale a hogares con residentes presentes ni contratos activos. Tres registros de Huancasayani se incluyen como cobertura académica conservadora sin sumar otro Huancasayani fuera del distrito."
+  },
+  "demanda": {
+    "calificacion_tipo_i_kw": 0.6,
+    "calificacion_tipo_ii_kw": 0.4,
+    "simultaneidad_domestica": 0.8,
+    "fp_domestico": 1.0,
+    "luminarias_limbani": 166,
+    "luminarias_huancasayani": 60,
+    "potencia_luminaria_kw": 0.0541,
+    "fp_alumbrado": 0.9,
+    "servicios": [
+      {
+        "nombre": "Salud Limbani",
+        "kw_coincidente": 8.0,
+        "fp": 0.9
+      },
+      {
+        "nombre": "Salud Huancasayani",
+        "kw_coincidente": 3.0,
+        "fp": 0.9
+      },
+      {
+        "nombre": "Educación y comunicaciones",
+        "kw_coincidente": 6.0,
+        "fp": 0.95
+      },
+      {
+        "nombre": "Municipalidad y servicios comunales",
+        "kw_coincidente": 4.0,
+        "fp": 0.95
+      },
+      {
+        "nombre": "Comercio, refrigeración y talleres",
+        "kw_coincidente": 8.0,
+        "fp": 0.85
+      },
+      {
+        "nombre": "Bombeo y agua",
+        "kw_coincidente": 3.0,
+        "fp": 0.8
+      }
+    ],
+    "perfil_domestico": [
+      0.14,
+      0.1,
+      0.08,
+      0.08,
+      0.09,
+      0.15,
+      0.3,
+      0.38,
+      0.25,
+      0.22,
+      0.23,
+      0.32,
+      0.4,
+      0.3,
+      0.25,
+      0.25,
+      0.3,
+      0.55,
+      0.85,
+      1.0,
+      0.9,
+      0.7,
+      0.4,
+      0.22
+    ],
+    "perfil_servicios": [
+      0.18,
+      0.15,
+      0.15,
+      0.15,
+      0.15,
+      0.2,
+      0.35,
+      0.55,
+      0.8,
+      0.9,
+      0.95,
+      1.0,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.7,
+      1.0,
+      0.65,
+      0.4,
+      0.25,
+      0.2
+    ],
+    "horas_alumbrado": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "crecimiento_consumo_anual": 0.015,
+    "fraccion_domestica_critica": 0.2,
+    "fraccion_ap_critica": 0.25,
+    "fuente": "N21: R.D. 108-2023-MINEM/DGE, anexo §§3.2, 3.3, 3.4, 4.6, 4.7. Cantidad 166 AP es antecedente del proyecto de redes; 60 AP Huancasayani, cargas de servicios y perfiles son hipótesis académicas.",
+    "estado": "envolvente de diseño normativo, no curva medida de consumo",
+    "confianza": "alta en parámetros transcritos de la norma, baja en inventario/proyección"
+  },
+  "hidraulica": {
+    "q_diseno_m3s": 1.9,
+    "salto_bruto_m": 45.3,
+    "salto_sensibilidad_m": [
+      40.3,
+      45.3,
+      50.3
+    ],
+    "longitud_presion_m": 350.0,
+    "longitudes_sensibilidad_m": [
+      300.0,
+      350.0,
+      450.0
+    ],
+    "diametro_interior_m": 1.0,
+    "diametros_comparacion_m": [
+      0.8,
+      0.9,
+      1.0,
+      1.1
+    ],
+    "rugosidad_m": 4.5e-05,
+    "viscosidad_m2s": 1.24e-06,
+    "k_local": 1.2,
+    "accesorios": [
+      {
+        "nombre": "entrada redondeada de estudio",
+        "k": 0.5
+      },
+      {
+        "nombre": "dos codos de estudio",
+        "k": 0.4
+      },
+      {
+        "nombre": "válvula y transición",
+        "k": 0.3
+      }
+    ],
+    "eta_t_nominal": 0.84,
+    "eta_m": 0.985,
+    "eta_g_nominal": 0.925,
+    "fuente": "H04-H05: SRTM90 API en puntos de estudio sobre eje PISCO: 3285 y 3239 m. Se proponen 0.7 m de consumo antes de cámara. L350 se aproxima al tramo restante de un corredor fluvial de 500 m tras canal 150 m. No es levantamiento ni perfil constructivo.",
+    "estado": "hipótesis geométrica de diseño académico; debe confirmarse cámara en ladera y eje de descarga",
+    "confianza": "baja"
+  },
+  "grupo": {
+    "unidades": 3,
+    "potencia_unitaria_kw": 200.0,
+    "placa_unitaria_kva": 250.0,
+    "fp_nominal": 0.8,
+    "tension_bt_kv": 0.38,
+    "frecuencia_hz": 60.0,
+    "velocidad_rpm": 900.0,
+    "polos": 8,
+    "caudal_min_fraccion_unitaria": 0.1,
+    "ratios_curva": [
+      0.1,
+      0.2,
+      0.4,
+      0.7,
+      1.0
+    ],
+    "eta_t_curva": [
+      0.68,
+      0.75,
+      0.8,
+      0.84,
+      0.84
+    ],
+    "eta_g_curva": [
+      0.75,
+      0.85,
+      0.9,
+      0.92,
+      0.925
+    ],
+    "disponibilidad_equipo": 0.95,
+    "fuente": "Selección académica modular por demanda y disponibilidad estacional; H12 OSSBERGER sustenta rango de aplicación, sin garantizar estas curvas ni acreditar las máquinas existentes",
+    "estado": "potencias requeridas a altitud del sitio; curvas propuestas para sensibilidad, no catálogo ni compra",
+    "confianza": "baja para rendimiento y disponibilidad"
+  },
+  "obras": {
+    "canal_l_m": 150.0,
+    "canal_b_m": 1.6,
+    "canal_altura_m": 1.3,
+    "canal_y_max_m": 1.0,
+    "canal_s": 0.002,
+    "canal_n": 0.015,
+    "reja_v_ms": 0.6,
+    "reja_porosa": 0.6,
+    "reja_bloqueo": 0.4,
+    "desarenador_camaras": 2,
+    "desarenador_b_m": 4.0,
+    "desarenador_l_m": 29.0,
+    "desarenador_y_m": 1.8,
+    "sedimentacion_ws_ms": 0.025,
+    "sedimentacion_factor": 1.5,
+    "camara_l_m": 8.0,
+    "camara_b_m": 5.0,
+    "camara_y_m": 2.5,
+    "volumen_util_camara_m3": 60.0,
+    "aliviadero_c": 1.7,
+    "aliviadero_carga_m": 0.5,
+    "casa_l_m": 20.0,
+    "casa_b_m": 12.0,
+    "espesor_concreto_canal_m": 0.15,
+    "espesor_muro_desarenador_m": 0.25,
+    "espesor_losa_desarenador_m": 0.25,
+    "espesor_muro_camara_m": 0.25,
+    "espesor_losa_camara_m": 0.3,
+    "fuente": "Dimensiones propuestas y calculadas para Q1.9; sedimentación y estructuras son modelos académicos con geotecnia, sedimentos y detalle de armaduras pendientes",
+    "estado": "diseño académico, no comprobación estructural definitiva",
+    "confianza": "baja"
+  },
+  "mecanica": {
+    "espesor_nominal_m": 0.016,
+    "tolerancia": 0.125,
+    "corrosion_m": 0.001,
+    "cierre_s": 8.0,
+    "cierre_alternativas_s": [
+      0.0,
+      1.0,
+      4.0,
+      8.0
+    ],
+    "vano_m": 4.0,
+    "vanos_comparacion_m": [
+      4.0,
+      6.0,
+      8.0
+    ],
+    "delta_t_k": 40.0,
+    "angulo_codo_deg": 45.0,
+    "rho_acero": 7850.0,
+    "e_acero_pa": 200000000000.0,
+    "fy_especificado_mpa": 250.0,
+    "factor_estudio": 1.5,
+    "eficiencia_union_estudio": 0.85,
+    "pn_candidato_bar": 40.0,
+    "fuente": "Equilibrio, teoría elástica y MOC reservorio-tubería-válvula equivalente; N20 USBR como referencia histórica del mecanismo. Fy250 es una exigencia propuesta de material, no certificado existente.",
+    "estado": "comprobación académica simplificada; tolerancia, corrosión, admisibles y PN requieren código de producto y garantía",
+    "confianza": "baja"
+  },
+  "electrico": {
+    "tension_mt_kv": 10.0,
+    "trafo_principal_kva": 800.0,
+    "trafo_uk_pu": 0.06,
+    "trafo_p0_kw": 1.1,
+    "trafo_pcu_kw": 8.0,
+    "fp_balance_conservador": 0.9,
+    "linea_l_km": 8.0,
+    "linea_conductor_mm2": 95.0,
+    "linea_r20_ohm_km": 0.35,
+    "linea_alpha_k": 0.0036,
+    "linea_temperatura_c": 40.0,
+    "linea_x_ohm_km": 0.38,
+    "seds_kva": [
+      160.0,
+      160.0,
+      160.0,
+      100.0,
+      100.0,
+      50.0
+    ],
+    "seds_p0_total_kw": 1.8,
+    "seds_pcu_total_kw": 9.0,
+    "bt_perdidas_fraccion": 0.03,
+    "bt_l_total_m": 9000.0,
+    "bt_rama_l_m": 150.0,
+    "bt_rama_p_kw": 25.0,
+    "bt_r_ohm_km": 0.93,
+    "bt_x_ohm_km": 0.103,
+    "bt_i_admisible_a": 129.0,
+    "bt_formacion": "3x35+16/25 mm2",
+    "xd_subtransitorio_pu": 0.2,
+    "xd_transitorio_pu": 0.3,
+    "xd_sincrono_pu": 1.8,
+    "ra_generador_pu": 0.02,
+    "cable_generador_l_m": 25.0,
+    "cable_generador_paralelos": 2,
+    "cable_generador_mm2": 240.0,
+    "cable_generador_r_ohm_km": 0.095,
+    "cable_generador_x_ohm_km": 0.08,
+    "cable_respaldo_l_m": 25.0,
+    "cable_respaldo_paralelos": 4,
+    "cable_respaldo_mm2": 400.0,
+    "cable_respaldo_r_ohm_km": 0.06,
+    "servicios_trafo_kva": 20.0,
+    "tsa_p0_kw": 0.1,
+    "tsa_pcu_kw": 0.35,
+    "respaldo_kw": 600.0,
+    "respaldo_kva": 750.0,
+    "respaldo_unidades": 3,
+    "respaldo_unitaria_kw": 200.0,
+    "xd_subtransitorio_respaldo_pu": 0.15,
+    "limite_p_total_barra_kw": 600.0,
+    "pat_l_m": 20.0,
+    "pat_b_m": 12.0,
+    "pat_paso_m": 4.0,
+    "pat_rods": 8,
+    "pat_rod_l_m": 2.4,
+    "pat_conductor_mm2": 50.0,
+    "resistividades_sensibilidad_ohm_m": [
+      100.0,
+      300.0,
+      1000.0
+    ],
+    "corriente_tierra_estudio_a": 10.0,
+    "tiempo_tierra_estudio_s": 0.5,
+    "fuente": "10kV y 380/220V tomados como opción académica del trabajo de redes. 8km es corredor indicativo hasta Huancasayani, no 2.15km urbanos; valores de equipos/red son especificaciones y supuestos. BT R/X/I de N21 Cuadro4.1; restantes placas/impedancias pendientes.",
+    "estado": "sistema aislado con respaldo y desconexión selectiva; sin fuente SEIN en cortocircuito",
+    "confianza": "baja fuera de parámetros normativos transcritos",
+    "sed_uk_estudio_pu": 0.04
+  },
+  "auxiliares": {
+    "bateria_v": 24.0,
+    "bateria_ah": 100.0,
+    "carga_dc_kw": 0.5,
+    "filas": [
+      {
+        "id": "AL01",
+        "equipo": "Iluminación interior",
+        "cantidad": 8,
+        "p_unit_kw": 0.04,
+        "fp": 0.95
+      },
+      {
+        "id": "AL02",
+        "equipo": "Iluminación exterior",
+        "cantidad": 4,
+        "p_unit_kw": 0.06,
+        "fp": 0.95
+      },
+      {
+        "id": "CTRL",
+        "equipo": "Control de grupos y central",
+        "cantidad": 1,
+        "p_unit_kw": 0.5,
+        "fp": 0.95
+      },
+      {
+        "id": "CC",
+        "equipo": "Cargador CC",
+        "cantidad": 1,
+        "p_unit_kw": 0.5,
+        "fp": 0.95
+      },
+      {
+        "id": "VENT",
+        "equipo": "Ventilación axial",
+        "cantidad": 2,
+        "p_unit_kw": 1.1,
+        "fp": 0.85
+      },
+      {
+        "id": "DRN",
+        "equipo": "Drenaje trabajo/reserva",
+        "cantidad": 2,
+        "p_unit_kw": 1.5,
+        "fp": 0.8
+      },
+      {
+        "id": "GOB",
+        "equipo": "Unidad hidráulica de gobernador",
+        "cantidad": 3,
+        "p_unit_kw": 1.5,
+        "fp": 0.8
+      },
+      {
+        "id": "TOM",
+        "equipo": "Tomas de mantenimiento",
+        "cantidad": 1,
+        "p_unit_kw": 2.0,
+        "fp": 0.9
+      },
+      {
+        "id": "IZJ",
+        "equipo": "Izaje de mantenimiento",
+        "cantidad": 1,
+        "p_unit_kw": 2.2,
+        "fp": 0.8
+      }
+    ],
+    "activas_base": {
+      "AL01": 8,
+      "AL02": 4,
+      "CTRL": 1,
+      "CC": 1,
+      "VENT": 2,
+      "DRN": 1,
+      "GOB": 0,
+      "TOM": 0,
+      "IZJ": 0
+    },
+    "rho_aire_estudio_kg_m3": 0.9,
+    "cp_aire_j_kg_k": 1005.0,
+    "salto_termico_ventilacion_k": 10.0,
+    "presion_ventilador_pa": 100.0,
+    "eficiencia_ventilador": 0.6,
+    "profundidad_descarga": 0.8,
+    "eficiencia_dc": 0.9,
+    "fuente": "Inventario R02 revisado: control0.5kW, dos ventiladores1.1kW por balance térmico y un gobernador1.5kW por grupo; una bomba de drenaje activa. Cargas y factores de potencia hipotéticos; CC para controles.",
+    "estado": "propuesto, no medido; la batería no alimenta motores AC de gobernadores",
+    "confianza": "baja"
+  },
+  "economia": {
+    "moneda": "PEN",
+    "fecha_precios": "2026-10-14",
+    "horizonte_anios": 20,
+    "tasa_real": 0.1,
+    "precios_energia_sensibilidad_pen_kwh": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "opex_anual_fraccion_capex": 0.03,
+    "consumo_respaldo_l_kwh": 0.27,
+    "combustible_estimado_pen_l": 5.5,
+    "eficiencia_respaldo_hasta_usuarios": 0.9,
+    "margen_costos_fraccion": 0.35,
+    "cemento_precio_web_bolsa_pen": 30.9,
+    "gastos_estudios_supervision_fraccion": 0.1,
+    "transporte_montaje_fraccion": 0.12,
+    "contingencia_fraccion": 0.2,
+    "fuente": "H15-H16: contraste de costos globales IRENA y referencia minorista de cemento; partidas restantes son estimaciones académicas declaradas, sin afirmar calibración SEACE ni cotización de fabricantes",
+    "estado": "viabilidad financiera por escenarios, no tarifa regulada ni oferta contractual",
+    "confianza": "baja para inversión real"
+  },
+  "comprobaciones_posteriores": [
+    "Identificación de central/captación existente, placa, salto bruto/neto y derechos RADA",
+    "Aforos de estiaje, curva nivel-caudal y calibración de PISCO/transposición",
+    "Levantamiento de cotas hidráulicas, cámara en ladera, perfil, geotecnia y avenida instantánea",
+    "Padrón de abonados, clasificación DGER y demanda registrada",
+    "Curvas reales de turbina/generador, altitud, reactancias, inrush y controles",
+    "Modelo transitorio con perfil y máquinas reales, vacío y estabilidad local",
+    "Resistividad, corrientes de tierra y potenciales de paso/contacto",
+    "Cotizaciones y consolidación administrativa de permisos"
+  ]
+}

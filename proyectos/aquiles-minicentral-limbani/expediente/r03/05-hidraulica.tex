@@ -1,0 +1,35 @@
+\chapter{Disposición y dimensionamiento hidráulico}
+\section{Alternativa de gabinete y perfil}
+Se estudia una derivación de aproximadamente 500 m de corredor: captación y reja, canal de 150 m, desarenador, cámara de carga, tubería de presión de 350 m, casa de máquinas y restitución. La cota de cámara 3284.3 m se estima restando 0.3 m de caída del canal y 0.4 m de transiciones a una referencia de terreno de 3285 m. La referencia de casa de máquinas es 3239 m; resulta \(H_b=\dato{Hb}\) m. Estas cifras proceden de gabinete, no de nivelación de lámina de agua o eje de turbina.
+\begin{figure}[htbp]\centering\includegraphics[width=.94\linewidth]{figuras/perfil-hidraulico-r03.png}\caption{Perfil funcional académico. La existencia de una ladera compatible con la cámara y el canal debe comprobarse; los segmentos no constituyen una rasante replanteada.}\end{figure}
+Un trazado más largo de 450 m aumentaría la fricción frente a 350 m aproximadamente en proporción a su longitud para igual diámetro y caudal. Reducirla a 300 m puede disminuir pérdidas, pero exige un corredor físicamente disponible. Una variación de \(\pm5\) m en salto bruto implica aproximadamente \(\pm11\%\) de potencia hidráulica a igual caudal, antes de recalcular rendimiento y pérdidas. No se adopta el salto de 50 m como un valor medido ni se cambian cotas para obtener una potencia deseada.
+
+\section{Captación y control de sólidos}
+El caudal máximo hidráulico es \(Q_d=\dato{Qdesign}\ \mathrm{m^3/s}\). Se considera captación lateral con compuerta, reja inclinada, canal de limpieza y paso permanente de reserva ecológica. La toma lateral facilita separar la derivación del paso de crecidas. Una toma de fondo tipo tirolesa podría reducir algunas obras en un cauce rocoso, pero necesitaría evaluar sedimentos, obstrucción, pendiente y estabilidad del lecho. No se selecciona una geometría definitiva de azud sin sección del río ni estudio de avenidas.
+
+Para velocidad de aproximación 0.6 m/s, porosidad 0.60 y fracción libre de obstrucción 0.60, el área bruta ilustrativa es:
+\begin{equation}A_{reja}\geq\frac{1.90}{0.60\times0.60\times0.60}=\dato{RejaArea}\ \mathrm{m^2}.\end{equation}
+La distribución de esa área entre paneles y su profundidad se resolverá con niveles reales del río. No se afirma que exista una lámina suficiente para una reja de dimensiones arbitrarias. El espaciamiento de barras, su resistencia, el mecanismo de limpieza y la velocidad local se especificarán con el proveedor de turbina y el estudio sedimentológico.
+
+\section{Canal y desarenador}
+Se propone canal rectangular revestido, ancho 1.60 m, altura interior 1.30 m, longitud 150 m, pendiente 0.002 y Manning \(n=0.015\). Se resuelve iterativamente:
+\begin{equation}Q=\frac{1}{n}A R_h^{2/3}S^{1/2},\quad A=by,\quad R_h=\frac{by}{b+2y}.\end{equation}
+A 1.90 \(\mathrm{m^3/s}\), el tirante es \dato{CanalY} m, la velocidad \dato{CanalV} m/s y el número de Froude \dato{CanalFr}. El borde libre resultante es \dato{CanalFree} m. La capacidad a tirante 1 m es \dato{CanalCap} \(\mathrm{m^3/s}\). Deben verificarse transiciones, curvas, resalto, juntas, filtraciones y velocidades erosivas con el perfil real. La altura no se utiliza para transportar una avenida del río.
+
+Se estudian dos cámaras de desarenación de 29 por 4 m y tirante 1.80 m. Cada cámara puede tratar el caudal completo cuando la otra se limpia. Con velocidad de caída supuesta \(w_s=0.025\) m/s y factor 1.5:
+\begin{equation}A_s\geq1.5\frac{Q_d}{w_s}=114\ \mathrm{m^2};\qquad A_{adoptada}=116\ \mathrm{m^2}\text{ por cámara}.\end{equation}
+Este criterio de sedimentación ideal debe comprobarse con granulometría, temperatura, concentración, turbulencia y longitud de entrada. No garantiza eliminación de toda partícula abrasiva. La purga se devuelve de forma controlada sin provocar erosión ni afectar el tramo ecológico.
+
+\section{Cámara de carga, alivio y restitución}
+La cámara tiene planta 8 por 5 m y profundidad útil de operación 2.5 m, con volumen geométrico de 100 \(\mathrm{m^3}\). Se consideran 60 \(\mathrm{m^3}\) aprovechables entre niveles de regulación, equivalentes a \dato{CamSeconds} s al caudal máximo. No es un embalse de regulación diaria. La cota de operación, sumergencia de entrada, vórtices y volumen de maniobra necesitan una geometría definitiva.
+
+El alivio se verifica para el caudal derivado completo, con \(Q=C b h^{3/2}\), \(C=1.7\) y \(h=0.5\) m; requiere un ancho aproximado \dato{VertAncho} m. Este alivio protege la conducción ante rechazo de carga; \textbf{no sustituye el paso de avenida en el río}. Debe conducir a una descarga resistente a la erosión, independiente del acceso y de las fundaciones.
+
+La restitución debe ubicarse aguas abajo de la casa de máquinas, manteniendo descarga libre o la contrapresión admitida por la turbina. Se requiere perfil del río, niveles de avenida y verificación de socavación. No se asigna una coordenada definitiva donde no hay identificación de campo.
+\begin{figure}[htbp]\centering\includegraphics[width=.96\linewidth]{figuras/obras-r03.png}\caption{Secuencia de obras y dimensiones de estudio. Esquema sin escala; no contiene secciones constructivas certificadas.}\end{figure}
+
+\section{Pérdidas y punto nominal}
+Para acero de rugosidad supuesta 0.045 mm se calcula Darcy--Weisbach y el factor de fricción con una aproximación explícita de Colebrook, usando \(\nu=1.24\times10^{-6}\ \mathrm{m^2/s}\). Las pérdidas localizadas suman \(K=1.2\): entrada 0.5, dos cambios de dirección 0.4 y válvula/transición 0.3. No incluyen un inyector como si fuese una pérdida ajena a la eficiencia de turbina.
+\begin{equation}h_f=f\frac{L}{D}\frac{v^2}{2g},\quad h_l=\sum K\frac{v^2}{2g},\quad H_n=H_b-h_f-h_l.\end{equation}
+\input{generado/diametros}
+La alternativa principal usa diámetro interior nominal \dato{Di} mm. Para producir 600 kW en bornes, el caudal calculado es \dato{Qnom} \(\mathrm{m^3/s}\), inferior al límite de 1.90. Resultan \(v=\dato{Vel}\) m/s, \(Re=\dato{Re}\), \(f=\dato{Fdarcy}\), \(h_f=\dato{Hf}\) m y \(h_l=\dato{Hloc}\) m, con salto neto \dato{Hn} m. Si se entregara todo el caudal máximo, la potencia hidráulica excedente no autoriza sobrecargar los generadores: se regula la admisión y se descarga el sobrante.

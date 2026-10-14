@@ -1,0 +1,33 @@
+codigo,descripcion,unidad,regla_cantidad,precio_unitario_pen,tipo_precio,fuente,alcance
+CV01,Excavación de obras hidráulicas,m3,EXCAVACION,70,estimado,Estimación académica 2026,Sin clasificación geotécnica ni explosivos verificados
+CV02,Concreto de canal y estructuras hidráulicas,m3,CONCRETO_HIDRAULICO,650,estimado,H16 como contraste de cemento; restantes componentes estimados,Incluye mezcla y colocación; excluye armadura; no es diseño de mezcla
+CV03,Armadura provisional hidráulica,kg,ARMADURA_HIDRAULICA,7,estimado,Ratio de estimación 100 kg/m3,Incluye material y habilitación; cuantía estructural por calcular
+CV04,Captación y control de derivación,lote,UNO,240000,estimado,Asignación académica por complejidad,Sin diseño de azud para crecida ni volumetría de campo
+CV05,Compuertas y limpieza de desarenador,juego,DOS,75000,estimado,Estimación de fabricación local,Para dos cámaras independientes
+CV06,Anclajes y cimentaciones de tubería,conjunto,TRES,200000,estimado,Asignación para anclaje condicionado a roca,No bloque de gravedad aprobado; geometría y costo dependen de EMS
+CV07,Apoyos de tubería,unidad,APOYOS,2200,estimado,Soportes a vano propuesto de 4 m,Incluye silleta y apoyo simple; no duplica anclajes de cambio de dirección
+CV08,Casa de máquinas y control,m2,CASA_AREA,1800,estimado,Estimación de edificación especializada básica,Incluye estructura techo y acabados; instalaciones electromecánicas por separado
+CV09,Recinto de respaldo y combustible,lote,UNO,120000,estimado,Estimación de recinto exterior ventilado,Separado de sala hidráulica; ruido incendio y contención por diseñar
+CV10,Drenaje restitución y protección local,lote,UNO,150000,estimado,Asignación académica,Requiere crecida socavación y diseño sanitario de restitución
+TF01,Tubería de acero fabricada y recubierta,kg,MASA_TUBERIA,11,estimado,Masa nominal calculada; fabricación y recubrimiento estimados,No incluye reserva de masa de accesorios ni montaje en ladera
+TF02,Accesorios y colector de tres salidas,kg,MASA_ACCESORIOS,18,estimado,Reserva 5 por ciento de masa nominal,Geometría y refuerzo de bifurcaciones pendientes
+TF03,Válvulas de grupo y aislamiento,unidad,VALVULAS,70000,estimado,Cuatro válvulas de estudio PN40,Presión y clase comercial sujetas a garantía
+TF04,Control de soldaduras y pruebas,lote,UNO,90000,estimado,Asignación de ensayos y aceptación,Procedimientos y alcance de END pendientes de código de fabricación
+MQ01,Grupo Michell Banki y generador de 200 kW,unidad,GRUPOS,660000,estimado,Presupuesto académico por paquete a altitud de sitio,Sin cotización ni equipo existente acreditados; excluye ELC y montaje local
+MQ02,Gobernador AVR ELC y balasto por grupo,unidad,GRUPOS,95000,estimado,Asignación de control y rechazo de carga,Incluye tres balastos de 200 kW como capacidad de absorción transitoria
+MQ03,Respaldo diésel modular tres por 200 kW,lote,UNO,1200000,estimado,Estimación de paquete con regulación y maniobra,Sin garantía de fabricante ni consumos medidos
+EC01,Transformador elevador de 800 kVA,unidad,UNO,220000,estimado,Estimación de suministro adaptado a altitud,10/0.38 kV; operación aislada; grupo e impedancia por confirmar
+EC02,Tablero maniobra protección y medida,lote,UNO,180000,estimado,Asignación para barra 1600 A y protecciones,Incluye sincronización de unidades y respaldo; sin SEIN
+EC03,Servicios propios TSA CC y emergencia,lote,UNO,60000,estimado,Estimación de tablero TSA20kVA batería y UPS,Incluye iluminación control y bombas; cargas y catálogos por confirmar
+EC04,Cables Cu de generación 240 mm2,m,CABLE_CU240,180,estimado,Cantidad de seis conductores de fase por grupo,Precio estimado por metro de conductor; no por juego trifásico
+EC05,Cables Cu de respaldo 400 mm2,m,CABLE_CU400,280,estimado,Cuatro conductores paralelos por fase,Precio estimado por metro de conductor; PE y terminales en EC06
+EC06,PE terminales y bandejas,lote,UNO,45000,estimado,Asignación de montaje auxiliar,Secciones de PE y tramos finales por verificar
+EC07,Malla de cobre desnudo 50 mm2,m,MALLA_CU,55,estimado,Longitud geométrica de malla más conexiones,Conductor propuesto; adecuación térmica y contacto por verificar
+EC08,Electrodos conexiones y mediciones,lote,UNO,18000,estimado,Ocho varillas de 2.4 m y ensayos,No se promete resistencia ni tensiones admisibles
+RD01,Red primaria de 10 kV con AAAC95,km,RED_MT,160000,estimado,Corredor aproximado de 8 km,Incluye postes herrajes conductor y montaje ordinario; no diseño ejecutivo
+RD02,SED160kVA completa,unidad,SED160,80000,estimado,Propuesta de tres SED para Limbani,Incluye transformador estructura protección y montaje
+RD03,SED100kVA completa,unidad,SED100,60000,estimado,Propuesta para Centro y Bellavista,Incluye transformador estructura protección y montaje
+RD04,SED50kVA completa,unidad,SED50,45000,estimado,Propuesta para Lince con ubicación pendiente,Incluye transformador estructura protección y montaje
+RD05,Red secundaria autoportante,m,RED_BT,55,estimado,Extensión provisional de 9 km,Incluye cable soportes y montaje; reparto real por circuitos pendiente
+RD06,Acometida medición y protección,usuario,USUARIOS,450,estimado,Padrón potencial proyectado sin duplicar catastro,Longitudes y usuarios activos requieren levantamiento
+RD07,Alumbrado LED instalado,unidad,LUMINARIAS,900,estimado,226 puntos de estudio,Incluye luminaria brazo y conexión; estudio fotométrico pendiente

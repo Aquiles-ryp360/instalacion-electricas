@@ -1,0 +1,122 @@
+\documentclass[aspectratio=169,14pt]{beamer}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage[spanish]{babel}\usepackage{graphicx}
+\usetheme{default}\definecolor{azul}{RGB}{35,91,133}\definecolor{rojo}{RGB}{162,39,50}
+\setbeamercolor{structure}{fg=azul}\setbeamercolor{frametitle}{fg=azul}\setbeamercolor{alerted text}{fg=rojo}
+\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}{\hfill\scriptsize Aquiles Ramos Yapo | 227368 | R03\quad\insertframenumber/\inserttotalframenumber\quad\vspace{3mm}}
+\setbeamertemplate{itemize items}[circle]\setbeamersize{text margin left=9mm,text margin right=9mm}
+\newcommand{\dato}[1]{\csname dato#1\endcsname}\input{generado/valores}
+\title{Minicentral hidroeléctrica en Limbani}\subtitle{Proyecto académico de diseño\\Sistema aislado para Limbani y Huancasayani}
+\author{Estudiante: Aquiles Taylor Ramos Yapo\\Código: 227368 -- Grupo A}
+\institute{Universidad Nacional del Altiplano\\Centrales Hidroeléctricas\\Docente: Mg. Ing. Gregorio Meza Marocho}
+\date{14 de octubre de 2026}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\begin{frame}{Qué se diseña y qué se verificó}
+\begin{columns}[T]\begin{column}{.50\textwidth}
+\begin{itemize}\item Replanteamiento de una central referida como 200 kW, 50 m y Banki.
+\item Inicialmente \textbf{aislada}; sin conexión al SEIN.
+\item Se comparan 150, 200, 400 y 600 kW.
+\end{itemize}
+\end{column}\begin{column}{.46\textwidth}\includegraphics[width=\linewidth,height=4.1cm,keepaspectratio]{figuras/ubicacion-sandia.jpg}\par\scriptsize Sandia y Limbani. Imagen aportada en antecedentes; autor y fecha no identificados.\end{column}\end{columns}
+\vspace{2mm}\small\alert{Proyecto estudiantil: cálculos de gabinete y comprobaciones de campo pendientes.}
+\end{frame}
+\begin{frame}{Ubicación: la central todavía necesita levantamiento}
+\begin{columns}\begin{column}{.55\textwidth}\includegraphics[width=\linewidth,height=5.1cm,keepaspectratio]{figuras/emplazamiento-r03.png}\end{column}
+\begin{column}{.42\textwidth}\small
+Dos referencias de casa de máquinas difieren 152 m.\par\medskip
+WGS84 / UTM 19S. La captación es una propuesta cartográfica.\par\medskip
+\alert{No se sustituyen toma ni casa por las coordenadas del pueblo.}\par\medskip
+Salto bruto de estudio: \dato{Hb} m, pendiente de nivelación.
+\end{column}\end{columns}\end{frame}
+\begin{frame}{Caudales: modelos públicos, no aforos locales}
+\begin{columns}\begin{column}{.53\textwidth}\includegraphics[width=\linewidth,height=5.1cm,keepaspectratio]{figuras/caudales-r03.png}\end{column}
+\begin{column}{.44\textwidth}\small
+PISCO SENAMHI: 1981--2025.\par
+16\,436 días y 540 meses.\par\medskip
+Transposición por área geodésica:\par
+\(\alpha=A_c/A_r=\dato{Alpha}\).\par\medskip
+La estación Limbani publica niveles; no se recuperó curva de gasto.\par\medskip
+\alert{Falta calibración en captación.}
+\end{column}\end{columns}\end{frame}
+\begin{frame}{El estiaje limita más que la potencia de placa}
+\begin{columns}\begin{column}{.57\textwidth}\includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{figuras/duracion-r03.png}\end{column}
+\begin{column}{.40\textwidth}\small
+Q95 natural diario: \dato{Qlow} m\(^3\)/s.\par\medskip
+Reservas de agua: supuestos, no autorizaciones.\par\medskip
+Potencia diaria P95 en usuarios: \textbf{\dato{Pfirmstudy} kW}.\par
+Mínimo del modelo: \textbf{0 kW}.\par\medskip
+\alert{No se garantizan 150--200 kW continuos.}
+\end{column}\end{columns}\end{frame}
+\begin{frame}{Demanda: cuatro centros poblados, sin sumar el distrito}
+\begin{itemize}
+\item INEI 2017: Limbani y Huancasayani Centro, Bellavista y Lince.
+\item \dato{PopBase} habitantes; \dato{VivsBase} viviendas ocupadas censales.
+\item Proyección de estudio: \dato{Users} conexiones potenciales en 2026.
+\item RD 108-2023: 600/400 W por lote y simultaneidad doméstica 0.80.
+\end{itemize}
+\medskip\large Pico de diseño: \textbf{\dato{Demand} kW}.\par
+\small\alert{Vivienda ocupada no equivale a contrato activo. El padrón puede cambiar el dimensionamiento.}
+\end{frame}
+\begin{frame}{Alternativas y balance: cubrir pico exige respaldo}
+\begin{columns}\begin{column}{.58\textwidth}\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{figuras/oferta-demanda-r03.png}\end{column}
+\begin{column}{.39\textwidth}\small
+Caso conservador: 3 por 200 kW hidro.\par
+Nominal en usuarios: \dato{Pusers} kW.\par\medskip
+Energía hidro servida:\par\textbf{\dato{EHidro} MWh/año}.\par
+Déficit: \dato{Edef} MWh/año.\par\medskip
+Respaldo modular y gestión de carga.\par
+\alert{600 kW no demuestra inversión óptima.}
+\end{column}\end{columns}\end{frame}
+\begin{frame}{Hidráulica: dimensiones coherentes con el cálculo}
+\includegraphics[width=\textwidth,height=3.3cm,keepaspectratio]{figuras/obras-r03.png}\par
+\small Salto bruto \dato{Hb} m; neto nominal \dato{Hn} m.\par
+Canal 150 m; tubería 350 m, Di 1000 mm, espesor nominal 16 mm.\par
+Caudal nominal \dato{Qnom} m\(^3\)/s; máximo de diseño 1.90.\par
+\medskip\alert{Cotas de gabinete y trazado propuesto: falta comprobar la cámara en ladera.}
+\end{frame}
+\begin{frame}{Turbina, regulación y golpe de ariete}
+\begin{columns}\begin{column}{.51\textwidth}\includegraphics[width=\linewidth,height=4.9cm,keepaspectratio]{figuras/transitorio-r03.png}\end{column}
+\begin{column}{.46\textwidth}\small
+Banki modular comparada con Francis y Pelton/Turgo.\par\medskip
+Síncrono: 250 kVA, 380 V, 60 Hz, 900 rpm por grupo.\par\medskip
+ELC rápido + gobierno lento + AVR coordinado.\par\medskip
+Cierre de 8 s: \dato{PNslow} bar. Cierre brusco: cavitación posible.\par
+\alert{PN40 es candidato, sin certificación del transitorio real.}
+\end{column}\end{columns}\end{frame}
+\begin{frame}{Electricidad: proteger una red aislada débil}
+\includegraphics[width=\textwidth,height=3.9cm,keepaspectratio]{figuras/unifilar-r03.png}\par
+\small T1 800 kVA, 10/0.38 kV; seis SED de 730 kVA en total.\par
+Falla inicial máxima supuesta: \dato{IKmax} kA. La falla sostenida decrece.\par
+\alert{Se necesita protección sensible a tensión y diferencial; no basta 50/51.}
+\end{frame}
+\begin{frame}{Seguridad y permisos: verificación explícita}
+\begin{itemize}
+\item CNE Suministro y Utilización con ámbitos distintos.
+\item RD rural 2023, E.030 actualizada en 2026; matriz de 40 requisitos.
+\item Tierra: resistividad, corriente y contacto/paso por verificar.
+\item ANA: disponibilidad, caudal ecológico, obras y uso de agua.
+\item 600 kW hidráulicos supera umbral de 500 kW para ruta de concesión.
+\end{itemize}
+\medskip\small Eventual SEIN 2046--2076: nuevos estudios y aprobación.\par
+\alert{No hay permisos ni conexión obtenidos.}
+\end{frame}
+\begin{frame}{Costos y decisión recomendada}
+\begin{columns}\begin{column}{.54\textwidth}\includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{figuras/costos-r03.png}\end{column}
+\begin{column}{.43\textwidth}\small
+Inversión estimada: \textbf{S/\dato{CapexM} millones}.\par
+Precios de partidas estimados; sensibilidad \(\pm35\%\).\par\medskip
+Escenarios financieros desfavorables.\par\medskip
+Prioridades: aforos, topografía, padrón, placas y reutilización.\par
+\alert{Comparar desarrollo por etapas antes de invertir.}
+\end{column}\end{columns}\end{frame}
+\begin{frame}{Conclusión: diseño académico con decisiones sustentadas}
+\begin{itemize}
+\item La demanda y el recurso se verifican antes de escoger capacidad.
+\item La potencia nominal no está disponible permanentemente.
+\item El diseño integra pérdidas, regulación, respaldo y seguridad.
+\item Las fuentes, hipótesis y limitaciones quedan trazables.
+\end{itemize}
+\medskip\large Próximo paso: \textbf{medir y validar las bases del diseño}.\par
+\small Memoria completa, ocho láminas y cálculos reproducibles R03.
+\end{frame}
+\end{document}

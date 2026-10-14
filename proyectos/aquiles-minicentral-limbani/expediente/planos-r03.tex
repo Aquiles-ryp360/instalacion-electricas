@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage[spanish,es-tabla]{babel}
+\usepackage[a3paper,landscape,margin=16mm,headheight=15pt,headsep=6mm,footskip=9mm]{geometry}
+\usepackage[scaled]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx,xcolor,tabularx,array,fancyhdr,hyperref}
+\definecolor{azul}{RGB}{35,91,133}\hypersetup{colorlinks=true,urlcolor=azul,pdftitle={Limbani R03 - Planos académicos},pdfauthor={Aquiles Taylor Ramos Yapo}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\textbf{MINICENTRAL LIMBANI -- PROYECTO ACADÉMICO DE DISEÑO}}
+\fancyhead[R]{R03 | 14.10.2026}\fancyfoot[L]{Aquiles Taylor Ramos Yapo | Estudiante 227368 | Centrales Hidroeléctricas | Grupo A}
+\fancyfoot[R]{A3 horizontal | Lámina \thepage/8}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\newcommand{\dato}[1]{\csname dato#1\endcsname}\input{generado/valores}
+\newcommand{\titulo}[2]{{\LARGE\bfseries\color{azul}#1\quad #2}\par\medskip}
+\newcommand{\nota}[1]{\par\small\textbf{Condición de uso:} #1\par}
+\begin{document}
+\titulo{PL-01}{Ubicación, cuenca y ámbito de suministro}
+\begin{minipage}[t]{.57\linewidth}\centering\includegraphics[width=.94\linewidth,height=205mm,keepaspectratio]{figuras/cuenca-r03.png}\end{minipage}\hfill
+\begin{minipage}[t]{.40\linewidth}\centering\includegraphics[width=.96\linewidth,height=205mm,keepaspectratio]{figuras/corredor-r03.png}\end{minipage}
+\nota{Perú, Puno, Sandia, Limbani. WGS84 / UTM zona 19 sur, EPSG:32719; coordenadas en metros. Norte y escala gráfica en mapas. Fuentes: PISCO SENAMHI, Terrain Tiles/Mapzen y OpenStreetMap contributors (ODbL). Área de captación de gabinete \dato{Acapt} km\(^2\); referencia geodésica PISCO \dato{Aref} km\(^2\). Los enlaces entre localidades son relaciones funcionales, no un trazado replanteado de línea. Lince carece de ubicación puntual confirmada.}
+\newpage
+\titulo{PL-02}{Emplazamiento y perfil hidráulico propuesto}
+\begin{minipage}[t]{.50\linewidth}\centering\includegraphics[width=.96\linewidth,height=180mm,keepaspectratio]{figuras/emplazamiento-r03.png}\end{minipage}\hfill
+\begin{minipage}[t]{.47\linewidth}\centering\includegraphics[width=.98\linewidth,height=180mm,keepaspectratio]{figuras/perfil-hidraulico-r03.png}\par\raggedright
+\textbf{Referencias UTM 19S:} CM-A 425580 E / 8436580 N (memoria de línea); CM-B 425715 E / 8436650 N (CAD). Captación propuesta 425542 E / 8436231 N, ajuste cartográfico aproximado.\par
+\textbf{Geometría de estudio:} canal 150 m, tubería \dato{LongPipe} m, salto bruto \dato{Hb} m. Referencias SRTM90 de terreno: 3285 y 3239 m; consumo supuesto antes de cámara 0.7 m.\end{minipage}
+\nota{Mapa: norte, metros y escala gráfica. Perfil: esquema funcional con cotas de gabinete; no rasante de campo. La cámara de carga y restitución no tienen coordenadas confirmadas. Las dos CM difieren cerca de 152 m. No se reemplazan por el centro del pueblo. Catastro original leído sin modificar; contiene 482 entidades Casas, no un padrón de contratos.}
+\newpage
+\titulo{PL-03}{Obras hidráulicas y dimensiones de estudio}
+\centering\includegraphics[width=.96\linewidth,height=146mm,keepaspectratio]{figuras/obras-r03.png}\par\raggedright
+\begin{tabularx}{\linewidth}{>{\bfseries}l X}
+Captación & Lateral por evaluar; reja bruta de estudio \dato{RejaArea} m\(^2\). Nivel y sección del río pendientes; paso ecológico independiente.\\
+Canal & 150 m, sección rectangular b=1.60 m, altura=1.30 m, S=0.002, n=0.015. Tirante \dato{CanalY} m a 1.90 m\(^3\)/s.\\
+Desarenador & Dos cámaras de 29 por 4 m, tirante 1.80 m; cada cámara admite todo el caudal de diseño. Granulometría y purga por verificar.\\
+Cámara & 8 por 5 m, profundidad operativa 2.5 m; 60 m\(^3\) de regulación supuesta. Alivio para caudal derivado, no para avenida del río.\\
+Tubería / restitución & Di=1000 mm, L=350 m; descarga y niveles aguas abajo sin levantamiento. Caudal nominal \dato{Qnom} m\(^3\)/s; límite 1.90.\\
+\end{tabularx}
+\nota{Diagrama sin escala. Dimensiones en metros, salvo indicación. No se definen azud, sección de cauce ni cotas de obra listas para construir. Avenida, socavación, nivel de inundación y compatibilidad del canal con la ladera requieren estudio propio.}
+\newpage
+\titulo{PL-04}{Tubería, transitorios y criterios de soporte}
+\begin{minipage}[t]{.61\linewidth}\centering\includegraphics[width=.97\linewidth,height=190mm,keepaspectratio]{figuras/transitorio-r03.png}\end{minipage}\hfill
+\begin{minipage}[t]{.36\linewidth}\raggedright
+\large\textbf{Especificación académica}\par\normalsize
+Acero soldado; Di nominal 1000 mm, De 1032 mm, espesor nominal 16 mm. Pared mínima nueva 14 mm y final 13 mm; tolerancia y corrosión supuestas.\par
+Separación preliminar de silletas 4 m; 89 apoyos para metrado. Flexión local y fundaciones pendientes.\par
+Presión estática aproximada 4.44 bar. Cierre de 8 s: máxima \dato{PNslow} bar en perfil ideal. Primer pico brusco válido: \dato{PNfast} bar.\par
+Válvulas/accesorios PN40 candidatos. No se certifica separación de columna, vacío ni colapso de cavidades.\par
+ELC absorbe rechazo mientras el regulador reduce caudal. Cierre mecánico controlado independiente.\par
+Expansión libre de estudio \dato{Expansion} mm para 40 grados. Anclajes y juntas coordinados con movimiento.\end{minipage}
+\nota{Gráficos calculados, no detalle constructivo de soporte. MOC monofásico detenido al superar el límite de presión baja. Los anclajes a roca requieren EMS, ensayos y dimensionamiento. Caudal de comprobación 1.90 m\(^3\)/s; perfil real y curva de cierre pendientes.}
+\newpage
+\titulo{PL-05}{Casa de máquinas y patio de equipos}
+\centering\includegraphics[width=.92\linewidth,height=205mm,keepaspectratio]{figuras/casa-maquinas-r03.png}\par\raggedright
+\nota{Planta dimensional de estudio en metros; escala mediante ejes del dibujo. Casa 20 por 12 m, 240 m\(^2\). Tres grupos hidroeléctricos de 200 kW, generadores 250 kVA/380 V/900 rpm. Patio de T1 de 800 kVA y tres módulos de respaldo de 200 kW. Frente de tableros reservado 1.5 m; verificar condiciones CNE y equipos reales. Posición, orientación geográfica, cimentación, drenaje y nivel de inundación sin levantamiento. Ventilación requerida \dato{AirFlow} m\(^3\)/s, por verificar con curvas.}
+\newpage
+\titulo{PL-06}{Diagrama unifilar eléctrico}
+\centering\includegraphics[width=.96\linewidth,height=188mm,keepaspectratio]{figuras/unifilar-r03.png}\par\raggedright
+\nota{Esquema sin escala. Frecuencia 60 Hz, operación inicial aislada. Barra: potencia combinada hidro/diésel limitada a 600 kW. T1: 800 kVA, 10/0.38 kV, AT delta / BT estrella; desplazamiento horario por especificar. Red primaria 8 km AAAC 95 mm\(^2\); seis SED total 730 kVA. TSA 20 kVA, 380/380--220 V, neutro de utilización propio. Interruptores candidatos: 630 A por hidro y 1600 A de barra, Icu 25 kA. Cortocircuito inicial máximo supuesto \dato{IKmax} kA; selección final y ajustes requieren datos de fabricante. Sin punto de conexión SEIN aprobado.}
+\newpage
+\titulo{PL-07}{Regulación y funciones de protección}
+\centering\includegraphics[width=.94\linewidth,height=150mm,keepaspectratio]{figuras/regulacion-r03.png}\par\raggedright
+\begin{tabularx}{\linewidth}{>{\bfseries}l X}
+Velocidad / frecuencia & Un líder coordinado y reparto entre grupos; ELC de actuación rápida y gobierno hidráulico con cierre lento. Balastos 3 por 200 kW, capacidad térmica transitoria por verificar.\\
+Tensión / reactivos & AVR y reparto de reactivos. Sincronismo 25 para acoplar grupos a la barra interna, sin conexión inicial al SEIN.\\
+Generadores & 87G, 51V, 64G/59N, 32, 40, 46, 27/59, 81 y sobrevelocidad independiente. Ajustes y funciones definitivas según equipos.\\
+Transformación / red & 87T y coordinación de sobrecorriente/tierra según impedancia de neutro, decremento de fuentes y falla remota. No basta 50/51 simple.\\
+\end{tabularx}
+\nota{Diagrama sin escala; nombres ANSI describen funciones, no ajustes aprobados. El control no reemplaza protecciones independientes. Se requieren ensayos de rechazo, escalones de carga, falla de regulador, transferencia y operación con respaldo. Batería 24 V/100 Ah para control; no sostiene motores auxiliares.}
+\newpage
+\titulo{PL-08}{Puesta a tierra y funciones de neutro}
+\centering\includegraphics[width=.94\linewidth,height=197mm,keepaspectratio]{figuras/puesta-tierra-r03.png}\par\raggedright
+\nota{Planta conceptual con dimensiones en metros y ejes de escala. Malla 20 por 12 m, paso 4 m, 152 m horizontales, ocho electrodos de 2.4 m; cobre 50 mm\(^2\) propuesto sin verificación térmica definitiva. Neutro de generación por impedancia coordinada; 10 kV necesita dispositivo de neutro si se adopta esa puesta a tierra; utilización BT con neutro y PE definidos por separado. Se requieren resistividad estratificada, corriente a tierra y tiempo de despeje. GPR no es tensión de contacto; una resistencia global de 5 ohm no demuestra seguridad. CNE Suministro 036: verificar paso, contacto y transferencia.}
+\end{document}
