@@ -1,6 +1,6 @@
 {
   "revision": "LP-R01",
-  "controles_aprobados": 46,
+  "controles_aprobados": 53,
   "controles": [
     "111 IDs de poste únicos y110vanos",
     "Identificadores consecutivos",
@@ -36,23 +36,30 @@
     "Todas las funciones dibujan círculo CACnormativo",
     "128 retenidas en CAD",
     "DosSE identificadas en CAD",
-    "12láminasA3 CAD",
-    "DWGnativo reabierto ycoordenadas conservadas",
+    "19láminas del proyecto y23 referencias DGE en CAD",
+    "DWG nativo reabierto: coordenadas y 23 referencias DGE conservadas",
     "DWGencabezadoAC1032",
     "QGISlongitud idéntica a cálculo",
     "Catastro original no modificado",
-    "QGISportable reabierto11capas",
+    "QGISportable reabierto13capas",
     "GPKG IDs ycoordenadas/armados iguales a CAD",
     "CSVcoincide111IDs yalturas",
     "Copias originales conservan cinco hashes",
     "PDFexpedienteválido",
     "PDFcalculosválido",
-    "PDFplanosválido"
+    "PDFplanosválido",
+    "Expediente integra memoria completa, anexo27 y planos19",
+    "Anexo de armados sin imágenes raster",
+    "23 láminas A3 con geometría PDF vectorial",
+    "23referencias DGE identificadas en CAD",
+    "KMZ íntegro y recursos internos",
+    "111postes KMZ coinciden con CAD/cálculo enUTM",
+    "208curvas y68niveles DEM20/100m"
   ],
   "paginas": {
-    "expediente": 13,
-    "calculos": 16,
-    "planos": 12
+    "expediente": 69,
+    "calculos": 18,
+    "planos": 19
   },
   "advertencia": "Controles del modelo y coherencia documental; no sustituyen campo, certificados, permisos ni ajustes de relés"
 }

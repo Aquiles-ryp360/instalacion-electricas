@@ -1,0 +1,16 @@
+{
+  "geotransform": [
+    -69.71124999999999,
+    0.0002777777777777778,
+    0,
+    -14.13513888888889,
+    0,
+    -0.0002777777777777778
+  ],
+  "epsg": 4326,
+  "source": "Mapzen Terrain Tiles / datos globales USGS, HGT S15W070 ~30m",
+  "zmin": 3166.0,
+  "zmax": 4527.0,
+  "intervalo_curvas_m": 20,
+  "principal_m": 100
+}

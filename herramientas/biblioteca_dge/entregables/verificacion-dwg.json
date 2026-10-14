@@ -1,0 +1,46 @@
+[
+  {
+    "archivo": "cad/BIBLIOTECA_DGE_MT_COMPLETA.dwg",
+    "formato": "DWG nativo R2018/AC1032",
+    "herramienta": "C:\\Program Files\\Autodesk\\AutoCAD 2027\\accoreconsole.exe",
+    "layouts": 103,
+    "bloques_verificados": 102,
+    "entidades_geometricas": 179274,
+    "geometria_contornos_coincide": true,
+    "audit_errores": 0,
+    "bytes": 69568097
+  },
+  {
+    "archivo": "cad/BIBLIOTECA_DGE_BT_COMPLETA.dwg",
+    "formato": "DWG nativo R2018/AC1032",
+    "herramienta": "C:\\Program Files\\Autodesk\\AutoCAD 2027\\accoreconsole.exe",
+    "layouts": 22,
+    "bloques_verificados": 21,
+    "entidades_geometricas": 50837,
+    "geometria_contornos_coincide": true,
+    "audit_errores": 0,
+    "bytes": 4076616
+  },
+  {
+    "archivo": "cad/SIMBOLOGIA_DGE_SECCION_9.dwg",
+    "formato": "DWG nativo R2018/AC1032",
+    "herramienta": "C:\\Program Files\\Autodesk\\AutoCAD 2027\\accoreconsole.exe",
+    "layouts": 1,
+    "bloques_verificados": 182,
+    "entidades_geometricas": 24076,
+    "geometria_contornos_coincide": true,
+    "audit_errores": 0,
+    "bytes": 1121376
+  },
+  {
+    "archivo": "cad/BT/DGE_BT_022_RD002_2019.dwg",
+    "formato": "DWG nativo R2018/AC1032",
+    "herramienta": "C:\\Program Files\\Autodesk\\AutoCAD 2027\\accoreconsole.exe",
+    "layouts": 1,
+    "bloques_verificados": 1,
+    "entidades_geometricas": 2764,
+    "geometria_contornos_coincide": true,
+    "audit_errores": 0,
+    "bytes": 204785
+  }
+]

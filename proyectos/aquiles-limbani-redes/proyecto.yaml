@@ -15,5 +15,8 @@ fuente_unica: datos/lp-r01/parametros.json
 resultados: datos/lp-r01/resultados.json
 documentos: expediente/lp-r01
 entregables: entregables/linea-primaria-r01
+cad_dwg_activo: entregables/linea-primaria-r01/cad/LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg
+google_earth: entregables/linea-primaria-r01/google-earth/LP_Limbani_Huancasayani_R01.kmz
+biblioteca_normativa: ../../herramientas/biblioteca_dge/README.md
 antecedente_historico: fuentes/local/lp-r01/antecedente; archivos previos de entregables
   conservados

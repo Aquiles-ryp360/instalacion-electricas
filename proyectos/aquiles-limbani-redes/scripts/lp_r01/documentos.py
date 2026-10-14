@@ -2,21 +2,31 @@
 from pathlib import Path
 import sys,json,math,html,re
 sys.path.insert(0,'G:/Aquiles/dependencias-linea-primaria')
-from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,Table,TableStyle,Image,KeepTogether
+from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,Table,TableStyle,Image,KeepTogether,Flowable
 from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
+from reportlab.lib.enums import TA_CENTER,TA_JUSTIFY
+from reportlab.platypus.tableofcontents import TableOfContents
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 P=Path(__file__).resolve().parents[2];R=P.parents[1];D=P/'datos/lp-r01';O=R/'output/linea-primaria-limbani-huancasayani';F=R/'output/pdf';E=P/'expediente/lp-r01'
 C=json.loads((D/'parametros.json').read_text(encoding='utf-8'));A=json.loads((D/'resultados.json').read_text(encoding='utf-8'));el=A['electrico'];bu=A['presupuesto'];posts=A['postes'];spans=A['vanos'];sections=A['cantones'];flux=el['flujo_pq']
 pdfmetrics.registerFont(TTFont('Arial','C:/Windows/Fonts/arial.ttf'));pdfmetrics.registerFont(TTFont('Arial-Bold','C:/Windows/Fonts/arialbd.ttf'))
 styles=getSampleStyleSheet()
-styles.add(ParagraphStyle('BodyLP',fontName='Arial',fontSize=10,leading=14.3,spaceAfter=8,textColor=colors.HexColor('#243344')))
-styles.add(ParagraphStyle('TitleLP',fontName='Arial-Bold',fontSize=24,leading=31,spaceAfter=18,textColor=colors.HexColor('#006699')))
-styles.add(ParagraphStyle('ChapterLP',fontName='Arial-Bold',fontSize=16,leading=21,spaceBefore=14,spaceAfter=10,textColor=colors.HexColor('#006699'),keepWithNext=True))
-styles.add(ParagraphStyle('SubLP',fontName='Arial-Bold',fontSize=11.5,leading=16,spaceBefore=9,spaceAfter=7,keepWithNext=True))
-styles.add(ParagraphStyle('SmallLP',fontName='Arial',fontSize=7.4,leading=10,spaceAfter=4))
+styles.add(ParagraphStyle('BodyLP',fontName='Arial',fontSize=11,leading=16.5,spaceAfter=7,
+    alignment=TA_JUSTIFY,textColor=colors.HexColor('#243344'),allowWidows=0,allowOrphans=0))
+styles.add(ParagraphStyle('TitleLP',fontName='Arial-Bold',fontSize=23,leading=30,spaceAfter=17,
+    alignment=TA_CENTER,textColor=colors.HexColor('#18364a')))
+styles.add(ParagraphStyle('ChapterLP',fontName='Arial-Bold',fontSize=17,leading=23,
+    spaceBefore=7,spaceAfter=19,textColor=colors.HexColor('#18364a'),keepWithNext=True))
+styles.add(ParagraphStyle('SubLP',fontName='Arial-Bold',fontSize=11,leading=16,
+    spaceBefore=8,spaceAfter=5,textColor=colors.HexColor('#18364a'),keepWithNext=True))
+styles.add(ParagraphStyle('SmallLP',fontName='Arial',fontSize=8.3,leading=11.1,spaceAfter=5))
+styles.add(ParagraphStyle('CoverLP',fontName='Arial',fontSize=11,leading=16,alignment=TA_CENTER,spaceAfter=7))
+styles.add(ParagraphStyle('UniversityLP',fontName='Arial-Bold',fontSize=14,leading=19,alignment=TA_CENTER,spaceAfter=8))
+styles.add(ParagraphStyle('TOCLP',fontName='Arial',fontSize=10.7,leading=16,spaceBefore=8,leftIndent=0,rightIndent=18))
+FRAME_WIDTH=A4[0]-120
 def clean(s):
     s=str(s)
     s=re.sub(r'(?<=[a-záéíóú])(?=[A-ZÁÉÍÓÚ])',' ',s)
@@ -25,32 +35,85 @@ def clean(s):
     s=re.sub(r',(?=[A-Za-zÁÉÍÓÚa-z0-9])',', ',s)
     s=re.sub(r'(RD|RM|DS|DL|CNE|INEI|IEC|CAC|AAAC|Cu|PAT|SE|RTS)(?=\d)',r'\1 ',s)
     s=re.sub(r'([EN])(?=\d{5,})',r'\1 ',s)
+    s=re.sub(r'\b(a|y|o|de|del|en|con|para)(?=\d)',r'\1 ',s)
+    s=re.sub(r'UTM\s*19\s*S(?:ur)?','UTM zona 19 Sur',s)
     for a,b in [('provincia Sandia','provincia de Sandia'),('departamento Puno','departamento de Puno'),('BTinterno','BT interno'),('SEsalida','SE salida'),('SEllegada','SE llegada'),('geotecnia/resistividad','geotecnia y resistividad'),('Limbani y25','Limbani y 25'),('se adopta60','se adopta 60'),('Se adopta60','Se adopta 60'),('3761 m','3772 m'),('a3761','a 3772')]:s=s.replace(a,b)
     for a,b in [('k VA','kVA'),('k V','kV'),('k W','kW'),('k N','kN'),('m A','mA'),('G Pa','GPa')]:s=s.replace(a,b)
+    for a,b in [('unidadesmetros','unidades en metros'),('modelspace','espacio modelo'),('layouts','presentaciones'),
+        ('UTM19Sur','UTM zona 19 Sur'),('UTM19S','UTM zona 19 Sur'),('WGS84','WGS 84'),
+        ('trifásico3hilos','trifásico de tres hilos'),('pole completo','longitud total del poste'),
+        ('pickupprimario','corriente primaria de arranque'),('pickup primario','corriente primaria de arranque'),
+        ('Vanomáximo','Vano máximo'),('cantónmáximo','cantón máximo'),('ohm','Ω'),('admissible','admisible'),
+        ('fp0.90','factor de potencia 0.90'),('fp 0.90','factor de potencia 0.90'),('deapoyos','de apoyos'),
+        ('manifiestoshash','manifiestos de integridad'),('14/10/2026','14 de octubre de 2026')]:s=s.replace(a,b)
+    s=s.replace('No se inventa una sección mínima DGER.','La sección mínima aplicable requiere cotejo del texto normativo correspondiente.')
+    s=s.replace('no artículo de RD 018 inventado','sin atribuirlo a un artículo de RD 018 no consultado')
+    s=s.replace('No requiere inventar información para presentar académicamente el trabajo.','Estas comprobaciones delimitan el trabajo posterior a la presentación académica.')
+    s=re.sub(r'\bTX\b','transformador',s)
     return s
 def p(s,small=False):return Paragraph(html.escape(clean(s)),styles['SmallLP' if small else 'BodyLP'])
 def fmt(n,d=2):return f'{n:,.{d}f}'.replace(',',' ')
 def table(headers,rows,widths=None,small=True):
     data=[[p(v,True) for v in headers]]+[[p(v,small) for v in row] for row in rows]
+    if widths:widths=[v*FRAME_WIDTH/sum(widths) for v in widths]
     t=Table(data,colWidths=widths,repeatRows=1,hAlign='LEFT')
     t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e1edf3')),('VALIGN',(0,0),(-1,-1),'TOP'),
-       ('LINEBELOW',(0,0),(-1,0),.7,colors.HexColor('#006699')),('LINEBELOW',(0,1),(-1,-1),.2,colors.HexColor('#dddddd')),
-       ('LEFTPADDING',(0,0),(-1,-1),4),('RIGHTPADDING',(0,0),(-1,-1),4),('TOPPADDING',(0,0),(-1,-1),4),('BOTTOMPADDING',(0,0),(-1,-1),4)]))
+       ('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#f5f8fa')]),
+       ('LINEBELOW',(0,0),(-1,0),.7,colors.HexColor('#287d89')),('LINEBELOW',(0,1),(-1,-1),.2,colors.HexColor('#dde5e9')),
+       ('LEFTPADDING',(0,0),(-1,-1),4),('RIGHTPADDING',(0,0),(-1,-1),4),('TOPPADDING',(0,0),(-1,-1),3),('BOTTOMPADDING',(0,0),(-1,-1),3)]))
     return t
 def footer(canvas,doc):
+    if doc.page==1:return
     canvas.setFont('Arial',8);canvas.setFillColor(colors.HexColor('#667788'));w,h=A4
     canvas.drawString(44,24,'Instalaciones Eléctricas II | Línea primaria Limbani - Huancasayani | LP-R01')
     canvas.drawRightString(w-44,24,str(doc.page));canvas.setStrokeColor(colors.HexColor('#006699'));canvas.line(44,h-34,w-44,h-34)
+    canvas.setFont('Arial',7);canvas.drawString(44,h-28,'LP-R01   /   LIMBANI - HUANCASAYANI');canvas.drawRightString(w-44,h-28,'DISEÑO ACADÉMICO   ·   14 OCT 2026')
+
+class SistemaEnPortada(Flowable):
+    """Esquema funcional de alcance, no plano constructivo."""
+    def __init__(self):Flowable.__init__(self);self.width=507;self.height=69
+    def draw(self):
+        c=self.canv;c.setFont('Arial-Bold',8);c.setFillColor(colors.HexColor('#526b7b'));c.drawString(0,57,'ALCANCE DEL SISTEMA AISLADO')
+        labels=[('MCH','Limbani'),('T1','Salida'),('LP','6.696 km'),('T2','Llegada'),('CARGA','Huancasayani')]
+        for j,(label,sub) in enumerate(labels):
+            x=j*103;c.setFillColor(colors.HexColor('#edf4f7'));c.setStrokeColor(colors.HexColor('#cbdce5'));c.roundRect(x,12,92,35,3,stroke=1,fill=1)
+            c.setFillColor(colors.HexColor('#18364a'));c.setFont('Arial-Bold',10);c.drawCentredString(x+46,34,label);c.setFont('Arial',8);c.drawCentredString(x+46,21,sub)
+            if j<4:c.setStrokeColor(colors.HexColor('#287d89'));c.line(x+94,29,x+101,29);c.line(x+98,27,x+101,29);c.line(x+98,31,x+101,29)
+class LPDocTemplate(SimpleDocTemplate):
+    def afterFlowable(self,flowable):
+        if hasattr(flowable,'toc_label'):
+            title,key=flowable.toc_label,flowable.toc_key
+            self.canv.bookmarkPage(key)
+            self.canv.addOutlineEntry(title,key,0,closed=False)
+            self.notify('TOCEntry',(0,title,self.page,key))
+
+def heading(title):
+    paragraph=Paragraph(html.escape(title),styles['ChapterLP'])
+    paragraph.toc_label=title
+    paragraph.toc_key='chapter-'+re.sub(r'[^a-z0-9]+','-',title.lower())
+    return paragraph
+
 def build_pdf(path,story):
-    doc=SimpleDocTemplate(str(path),pagesize=A4,rightMargin=44,leftMargin=44,topMargin=47,bottomMargin=43,
+    doc=LPDocTemplate(str(path),pagesize=A4,rightMargin=60,leftMargin=60,topMargin=59,bottomMargin=52,
         title='Proyecto académico de línea primaria Limbani - Huancasayani',author=C['autor'])
-    doc.build(story,onFirstPage=footer,onLaterPages=footer)
+    doc.multiBuild(story,onFirstPage=footer,onLaterPages=footer)
 def cover(title,subtitle):
-    return [Spacer(1,35),p('UNIVERSIDAD NACIONAL DEL ALTIPLANO · PUNO'),p('Escuela Profesional de Ingeniería Mecánica Eléctrica'),Spacer(1,25),
-        Paragraph(title,styles['TitleLP']),p(subtitle),Spacer(1,28),p('Curso: Instalaciones Eléctricas II'),p('Estudiante: Aquiles Taylor Ramos Yapo'),
-        p('Código: 227368'),p('Docente: pendiente de identificación en este curso; no se atribuyen nombre ni grados.'),Spacer(1,30),
-        p('Limbani y Huancasayani · Sandia · Puno · Perú'),p('Revisión LP-R01 · 14 de octubre de 2026'),Spacer(1,25),
-        p('Diseño académico de gabinete. Coordenadas propuestas, cartografía pública y supuestos identificados. Esta entrega permite revisar el diseño y sus cálculos; requiere verificación de campo y equipos antes de una ejecución real.'),PageBreak()]
+    def centered(text,style='CoverLP'):return Paragraph(html.escape(text),styles[style])
+    logo=E/'identidad/escudo-unap.png'
+    return [Spacer(1,7),centered('UNIVERSIDAD NACIONAL DEL ALTIPLANO','UniversityLP'),
+        centered('Facultad de Ingeniería Mecánica Eléctrica, Electrónica y Sistemas'),
+        centered('Escuela Profesional de Ingeniería Mecánica Eléctrica'),Spacer(1,15),
+        Image(str(logo),width=83,height=97,hAlign='CENTER'),Spacer(1,19),
+        centered('INSTALACIONES ELÉCTRICAS II'),Spacer(1,12),
+        Paragraph(title,styles['TitleLP']),centered(subtitle),Spacer(1,22),
+        table(['Identificación académica','Datos'],[
+            ['Estudiante','Aquiles Taylor Ramos Yapo'],['Código','227368'],
+            ['Docente','Dato pendiente de confirmación'],
+            ['Emplazamiento','Limbani – Huancasayani, Sandia, Puno'],
+            ['Modalidad','Diseño académico de un sistema aislado'],
+            ['Revisión','LP-R01 · 14 de octubre de 2026']], [145,330]),Spacer(1,23),
+        centered('PUNO – PERÚ'),centered('2026'),Spacer(1,17),
+        p('Proyecto elaborado por un estudiante con antecedentes disponibles, cartografía pública y supuestos de diseño explícitos. La ejecución requiere comprobar las condiciones de campo y las características de los equipos.',True),PageBreak()]
 
 SOURCES=[
  ('S01','Catastro original Limbani y antecedente CAD','Fuentes locales preservadas en fuentes/local/lp-r01/antecedente; original C:/Users/51949/Downloads/Catastro_Limbani/qgis/Catastro-Limbani.gpkg','485 entidades Casas; 3 geometrías inválidas reparadas sólo para análisis, sin modificar originales. Datos no equivalen a usuarios censados.'),
@@ -85,7 +148,7 @@ CHAPTERS=[
  'La frontera inicial se sitúa en la generación BT de la minicentral y la final en el tablero BT de la SE-HUA. Se estudian T1 y T2 y la línea MT; las redes de usuarios posteriores y las obras hidráulicas pertenecen a proyectos distintos. El esquema no conecta el sistema al SEIN. La línea puede transportar 250kVA de estudio; esa capacidad no constituye potencia firme de la fuente.',
  'El docente de Instalaciones Eléctricas II no está identificado en los archivos revisados. Se mantiene pendiente, sin trasladar el nombre/grado del curso de Centrales Hidroeléctricas. Autor/estudiante: Aquiles Taylor Ramos Yapo,227368.',
  'Se conservan originales y la versión previa como antecedentes. Las decisiones están abiertas a verificación de campo. No se atribuyen aprobaciones, servidumbres, mediciones topográficas, cotizaciones o certificados inexistentes.']),
- ('02-antecedentes','2. Auditoría y relación con la minicentral',[
+ ('02-antecedentes','2. Antecedentes y bases del replanteamiento',[
  'El expediente previo presentaba tres SED de50/100/100kVA y redes secundarias para764 supuestos lotes de Limbani. No representaba la conexión solicitada a Huancasayani. Además, mezclaba longitudes2.15km y1.967km, citaba erróneamente RM366-2011 para el CNE y reutilizaba RD023 de soportes secundarios como referencia primaria.',
  'La carpeta activa encontrada es G:/Aquiles/instalacion-electricas/proyectos/aquiles-limbani-redes. En Descargas existe una copia del repositorio y Catastro_Limbani con QGIS/CAD/expediente. No se encontró una carpeta literal denominada Instalaciones Eléctricas Proyectos. El equivalente localizado se documenta sin suponer una ruta inexistente.',
  'La central existente se toma como antecedente aportado: aproximadamente200kW, generación380V,60Hz y turbina Michell-Banki; no se localizaron placas/acta de inspección que certifiquen esa configuración. La transformación previa0.38/10kV y250kVA también es referencia sin placa comprobada. SE-HUA es proyectada, no instalación existente confirmada.',
@@ -155,6 +218,8 @@ CHAPTERS=[
  f'Orden de magnitud: directo S/{fmt(bu["directo_pen"],0)}; inversión con logística/ingeniería/contingencia eIGV S/{fmt(bu["total_con_igv_pen"],0)}. Rango de sensibilidad-25/+40%: S/{fmt(bu["intervalo_con_igv_pen"][0],0)} a S/{fmt(bu["intervalo_con_igv_pen"][1],0)}. No incluye generación/reforzamiento hídrico ni distribución posterior en Huancasayani ni tasación definitiva de compensaciones.',
  'Viabilidad de transporte eléctrico: favorable bajo hipótesis de equipos, tensión y terreno, por corriente y caída reducidas. Viabilidad de abastecimiento continuo: no acreditada, por oferta real, estiaje y reservaLimbani. Viabilidad económica integral: indeterminada sin energía firme/padrón/tarifa/cotizaciones. No se calcula un VAN/TIR de apariencia precisa sobre datos faltantes.']),
  ('11-entregables','11. Planos, QGIS y control de coherencia',[
+ 'La revisión gráfica incorpora19láminasA3, con7perfiles ampliados: IDs, vanos, longitudes, alturas, flechas, separaciónDEM y detalle crítico. Se adjuntan23hojasDGE completas en anexo y espacio papelCAD; la madera y la sujeciónPIN de algunas variantes requieren adaptaciónCAC. La biblioteca general conserva102hojasMT,21BT+022aprobada2019 y182símbolos de la sección9. LosCAD son derivados de las fuentesPDF, no archivos emitidos porMINEM.',
+ 'ParaGoogleEarth se entregaKMZ con111postes,110vanos,208curvasDEM20/100m, fichas, relieve y recorrido3D. QGIS incorpora elDEM y las curvas. Las alturas relativas del visor no certifican una catenaria absoluta; la equidistancia20m no es exactitud vertical. Ambos modos3D están identificados y las cotas proceden del mismoDEM público~30m.',
  'El DXF R2018 utiliza unidadesmetros en modelspace y UTM19S. Sus bloques de poste representan siempre el círculo CAC de DGE09-91-20; función S/A/AN/T/ESP mediante atributos y rótulo. Se emplean09-91-18 para retenida inclinada,03-31-44 para tierra y09-90-09 para SE en proyección. Geometría de bloque corresponde al poste; el desplazamiento del rótulo es sólo anotación.',
  'El CAD incluye láminasA3: ubicación general, plantas/perfiles por~1km con cuadrículaUTM y tabla deapoyos, unifilar, estructuras y puesta a tierra/SE. En planta se dibuja UN solo eje con leyenda3×AAAC50mm², según09-91-03 y04-40-01/03; las tres fases físicas se muestran en detalles de estructuras. Escalas de planta y perfil son explícitas; esquemas eléctricos/constructivos sin escala. PDF renderizado de las propias láminas CAD.',
  'QGIS contiene copias del catastro original, eje,vanos,postes,retenidas,SE y referencias OSM; CRS32719 y rutas relativas. Ortofoto antecedente disponible como capa opcional sin exigir servicios Google/XYZ. Se verifica guardar/reabrir y se ensaya portabilidad del paquete. No se utiliza el catastro ampliado con viviendas sintéticas como dato censal.',
@@ -167,29 +232,112 @@ CHAPTERS=[
  'La implementación posterior deberá recalcular eje,postes,pérdidas/flujo,cortocircuito y presupuesto cuando cambien datos de campo. Si no se acredita fuente suficiente, se debe reducir etapa de usuarios o reforzar generación/respaldo; no declarar la línea como garantía de200kW permanentes.'])
 ]
 
+SUBSECTIONS={
+ '01-alcance':['Descripción general','Objetivos del diseño','Frontera del sistema y exclusiones','Organización del estudio','Condición de los antecedentes'],
+ '02-antecedentes':['Antecedente de electrificación','Documentación utilizada','Características referenciales de la fuente','Relación con el estudio hidroeléctrico','Criterio de transformación'],
+ '03-ubicacion':['Emplazamiento de salida y sistema de referencia','Emplazamiento de llegada','Procedimiento de trazado','Restricciones del corredor','Inventario de apoyos y vanos','Cotas y precisión topográfica'],
+ '04-demanda':['Localidades comprendidas','Proyección de usuarios','Calificación y simultaneidad','Composición de la demanda','Frontera del abastecimiento','Perfil horario de estudio'],
+ '05-electrico':['Nivel de tensión','Selección del conductor','Parámetros eléctricos de la línea','Flujo de carga','Corriente, caída de tensión y pérdidas','Comprobación térmica','Transformadores y estaciones','Conductores y tableros internos de baja tensión'],
+ '06-balance':['Balance entre demanda y generación','Alternativas ante déficit de potencia','Operación en estiaje','Adaptación futura al SEIN','Crecimiento de la demanda'],
+ '07-mecanica':['Modelo de catenaria','Estados climáticos','Factores de carga y resistencia','Resultados mecánicos','Funciones de las estructuras','Alturas y empotramiento de postes','Retenidas y anclajes','Distancias respecto al terreno','Cruces de cauces'],
+ '08-protecciones':['Modelo de cortocircuito','Falla mínima y criterio de detección','Protecciones y tiempos orientativos','Control y alimentación de disparo','Puesta a tierra del sistema de media tensión','Puesta a tierra de masas','Sensibilidad a la resistividad','Conductores de tierra y seguridad','Aislamiento y sobretensiones'],
+ '09-normativa':['Código Nacional de Electricidad','Disposiciones DGE','Electrificación rural','Ruta de autorizaciones','Obras civiles y seguridad laboral','Complementos internacionales','Estado de los permisos'],
+ '10-presupuesto':['Origen de las cantidades','Partidas consideradas','Precios y fecha de referencia','Inversión y sensibilidad','Alcance de la viabilidad'],
+ '11-entregables':['Planos y armados vectoriales','Visualización en Google Earth','Unidades y simbología del CAD','Contenido de los planos','Capas y portabilidad de QGIS','Control de coherencia'],
+ '12-conclusiones':['Resultado del diseño de la línea','Balance de abastecimiento','Protección y seguridad','Comprobaciones prioritarias','Actualización con datos de campo'],
+}
+
+def editorial():
+    """Revisa la exposición académica sin modificar la fuente de los cálculos."""
+    c1=CHAPTERS[0][2]
+    c1[0]='El proyecto desarrolla el diseño académico de una línea primaria entre la instalación de transformación de salida de la minicentral hidroeléctrica de Limbani y una subestación de llegada en Huancasayani, provincia de Sandia, departamento de Puno. Su propósito es transportar energía en un sistema aislado, sin interconexión inicial con el Sistema Eléctrico Interconectado Nacional (SEIN).'
+    c1[1]='El objetivo general es dimensionar una solución de transporte eléctrico compatible con la demanda prevista y con las características referenciales de la fuente. Los objetivos específicos son sustentar la demanda; definir el corredor y los apoyos; comprobar el comportamiento eléctrico y mecánico; seleccionar transformación y protección; y vincular los resultados con los planos, los metrados y el presupuesto.'
+    c1[3]='La memoria se organiza desde los antecedentes y la demanda hasta el diseño eléctrico, la mecánica de la línea, las protecciones, la normativa y la evaluación económica. La memoria de cálculo desarrolla el modelo y las tablas completas; los planos y anexos permiten localizar cada apoyo y reconocer sus componentes.'
+    c2=CHAPTERS[1][2]
+    c2[0]='Los documentos recibidos describían una propuesta de distribución interna en Limbani, con tres subestaciones de 50, 100 y 100 kVA. Ese antecedente aporta referencias de equipos y emplazamiento, pero no resuelve el transporte solicitado a Huancasayani. El presente diseño reemplaza ese alcance por una línea entre dos estaciones; los metrados urbanos anteriores no se incorporan al presupuesto de la línea.'
+    c2[1]='Se revisaron el expediente anterior, su CAD, el catastro aportado y el proyecto QGIS de Limbani. Estos archivos se conservan como antecedentes y se contrastan con el directorio de centros poblados del INEI, las vías y cauces de OpenStreetMap y un modelo digital de elevaciones público. El registro de fuentes identifica procedencia, fecha, sistema de referencia y limitaciones.'
+    c4=CHAPTERS[3][2]
+    c4[:]=[
+        'El INEI 2017 registra Huancasayani Centro (2112030050), Bellavista (2112030051) y Lince (2112030036). El escenario agrega estas tres localidades, sin sumar la población del distrito ni Limbani. La variante Huancasarani de OSM no reemplaza la identificación censal.',
+        'La base censal reúne 549 habitantes y 321 viviendas ocupadas. Con crecimiento geométrico supuesto de 1 % anual durante nueve años, la población alcanza aproximadamente 600 habitantes en 2026. Al redondear las viviendas por localidad se estiman 353 usuarios potenciales; son una proyección, no un padrón de abonados.',
+        'Para estimar la demanda se adopta provisionalmente RD 108-2023: categoría I, 600 W por usuario, en Centro y Bellavista; categoría II, 400 W, en Lince; simultaneidad 0.80. La categoría requiere comprobación. El alumbrado considera 60 luminarias de 54.1 W de entrada y 14 kW de servicios supuestos.',
+        f'El resultado es {fmt(el["domestica_kw"])} kW domésticos, 3.246 kW de alumbrado y 14.00 kW de servicios: {fmt(el["p_usuarios_kw"])} kW y {fmt(el["s_usuarios_kva"])} kVA con factor de potencia 0.90. Los servicios comprenden salud (3 kW), educación y comunicaciones (3 kW), bombeo (3 kW), comercio y talleres (4 kW) y usos comunales (1 kW).',
+        'La llegada en Centro no demuestra que Bellavista y Lince dispongan de redes posteriores. Esas obras corresponden a otro proyecto. Se evalúa crecimiento de usuarios de 1 % y 1.5 % anual como sensibilidad, sin garantizar consumo futuro.',
+        'El perfil supuesto utiliza fracciones de la demanda máxima: 0.30 en carga baja, 0.55 en la mañana, 0.60 al mediodía, 0.65 por la tarde y 1.00 en el pico nocturno. No es una curva medida. Las pérdidas se calculan al pico; se agregan 5 kW de auxiliares sin duplicarlos como servicios de usuarios.'
+    ]
+    c9=CHAPTERS[8][2]
+    c9[3]+=' Estos trámites no se consideran obtenidos.'
+    c9.pop()
+    SUBSECTIONS['09-normativa'].pop()
+    c11=CHAPTERS[10][2]
+    c11[0]='La entrega incorpora 19 planos A3, incluidos siete perfiles longitudinales ampliados con identificadores, longitudes, alturas de amarre, flechas y separación respecto al DEM. El anexo añade 23 hojas de armados y componentes exportadas del CAD como PDF vectorial, con sus vistas, cotas, tablas y rótulos completos. La conversión utiliza Potrace sobre las copias normativas y conserva los PDF originales para contraste; no es un redibujo por IA ni un CAD emitido por MINEM. La adaptación de las variantes de madera y de sujeción PIN a las estructuras CAC estudiadas requiere diseño específico.'
+    c11[1]='El archivo KMZ permite consultar 111 postes y 110 vanos, sus fichas y los perfiles de cada tramo. Incluye 208 curvas derivadas del DEM, con equidistancia de 20 m y curvas principales cada 100 m, relieve sombreado y recorrido en tres dimensiones. La resolución aproximada de 30 m del DEM limita esta representación: la equidistancia no equivale a exactitud vertical. Las alturas relativas al terreno de Google Earth y las cotas absolutas del DEM se muestran como modos distintos y no acreditan un levantamiento de campo.'
+    c11[4]='QGIS reúne copias del catastro original, el eje, los vanos, los postes, las retenidas, las subestaciones, las referencias OSM, el DEM y las curvas derivadas. Sus 13 capas se guardan con rutas relativas y se verifican al reabrir una copia del paquete. Los identificadores, las coordenadas y las longitudes proceden de una fuente de resultados común al CAD, las tablas y los metrados. Se conservan los archivos originales con sus hashes. Los 53 controles de coherencia de la entrega comprueban esa concordancia documental y la ausencia de imágenes raster en el anexo de armados; no certifican topografía ni calidad de montaje.'
+    c11.pop()
+    SUBSECTIONS['11-entregables'][-2:]=['QGIS y control de coherencia']
+    SOURCES.extend([
+        ('S24','MINEM, texto oficial RD 024-2003-EM/DGE','https://intranet2.minem.gob.pe/web/archivos/dge/legislacion/dispositivos/rd024-2003-EM.pdf','Descarga directa preservada y cotejo del índice de 102 hojas. Las 23 hojas seleccionadas se convierten desde copias de mayor resolución, con hashes e identificación de origen en la biblioteca.'),
+        ('S25','MINEM, RM 091-2002-EM/VME: símbolos gráficos','https://www.minem.gob.pe/minem/archivos/file/electricidad/legislacion/rm091-2002-em-vme-SIMBOLOGIA.pdf','PDF oficial íntegro. Sección 9, páginas PDF 73–89: 182 códigos únicos, extraídos como vectores CAD; se excluye la retícula auxiliar de puntos.'),
+        ('S26','El Peruano, RD 002-2019-MEM/DGE','https://busquedas.elperuano.pe/dispositivo/NL/1729284-1','Publicación de 9 de enero de 2019, lámina BT 022 aprobada de identificación y codificación. PDF oficial de dos páginas conservado; no se usa la propuesta anterior como norma aprobada.'),
+        ('S27','Esolutions, biblioteca REDLIN Perú DGE','https://www.esolutions.com.pe/recursos/base-de-datos/redlin/redlin-peru-dge/','Paquete 2025-12 de un tercero, con plantilla CAD y copias normativas. MT: escaneos de mayor resolución; BT: PDF vectorial. Se conservan autoría, Leeme.txt y condiciones. Los CAD derivados no son archivos emitidos por MINEM.'),
+    ])
+
+editorial()
+
 def source_story(story):
-    story.append(Paragraph('Fuentes y límites de consulta',styles['ChapterLP']))
+    story.append(heading('Fuentes y límites de consulta'))
     for ident,title,url,note in SOURCES:
-        story.append(Paragraph(html.escape(ident+' · '+title),styles['SubLP']))
-        if url.startswith('http'):story.append(Paragraph('<link href="'+html.escape(url,quote=True)+'" color="#006699">'+html.escape(url)+'</link>',styles['SmallLP']))
-        else:story.append(p(url,True))
-        story.append(p(note,True))
+        entry=[Paragraph(html.escape(ident+' · '+title),styles['SubLP'])]
+        if url.startswith('http'):entry.append(Paragraph('<link href="'+html.escape(url,quote=True)+'" color="#006699">'+html.escape(url)+'</link>',styles['SmallLP']))
+        else:entry.append(p(url,True))
+        entry.append(p(note,True));story.append(KeepTogether(entry))
 
 def main():
     E.mkdir(parents=True,exist_ok=True);F.mkdir(parents=True,exist_ok=True);O.mkdir(parents=True,exist_ok=True)
-    story=cover('LÍNEA PRIMARIA LIMBANI – HUANCASAYANI','Expediente académico de diseño · Generación aislada → transformación de salida → línea primaria → subestación de llegada')
-    story.append(Paragraph('Contenido',styles['ChapterLP']))
-    story.extend(p(title) for _,title,_ in CHAPTERS);story.append(p('Memoria de cálculo y tablas completas en documento independiente. Planos A3 y CAD/QGIS acompañan la entrega.'));story.append(PageBreak())
+    identity=E/'identidad';identity.mkdir(exist_ok=True)
+    import pymupdf
+    logo_source=R/'proyectos/unidad-2-industrial/fuentes/versionadas/identidad/unap_logo.pdf'
+    logo=pymupdf.open(logo_source)
+    logo[0].get_pixmap(matrix=pymupdf.Matrix(4,4),alpha=True).save(identity/'escudo-unap.png')
+    (identity/'procedencia.md').write_text('Escudo universitario: reproducción del recurso de identidad UNAP ya versionado en proyectos/unidad-2-industrial/fuentes/versionadas/identidad/unap_logo.pdf. Se usa exclusivamente como identidad de la universidad; no como referencia de diseño de otro proyecto.\n',encoding='utf-8')
+    story=cover('LÍNEA PRIMARIA\nLIMBANI – HUANCASAYANI'.replace('\n','<br/>'),'Proyecto académico de diseño · Memoria descriptiva')
+    story.append(heading('Resumen ejecutivo'))
+    story.append(p('Se propone una línea primaria para transportar energía desde la minicentral de Limbani hasta Huancasayani. El diseño inicial considera operación aislada y una tensión de 10 kV, condicionada a verificar la transformación existente y el régimen técnico aplicable. La demanda se estima para los registros de Huancasayani Centro, Bellavista y Lince; no se agrega la población distrital ni la demanda de Limbani.'))
+    story.append(table(['Parámetro','Resultado de estudio','Condición del dato'],[
+        ['Longitud del corredor',f'{A["linea_longitud_m"]/1000:.3f} km','Geometría de gabinete'],
+        ['Apoyos y vanos','111 postes · 110 vanos','Proyectados'],
+        ['Conductor','3 × AAAC 50 mm²','Propiedades tipo por confirmar'],
+        ['Transformación','T1 y T2: 250 kVA cada uno','Capacidad a altitud por garantizar'],
+        ['Usuarios potenciales','353','Proyección de viviendas INEI 2017'],
+        ['Demanda máxima',f'{fmt(el["p_usuarios_kw"])} kW','Escenario de carga estimado'],
+        ['Generación necesaria',f'{fmt(el["p_generador_necesaria_kw"])} kW','Incluye pérdidas y auxiliares'],
+        ['Caída en la línea',f'{fmt(el["caida_linea_pct"])} %','Cálculo del escenario principal'],
+        ['Presupuesto con IGV',f'S/ {fmt(bu["total_con_igv_pen"],0)}','Estimación, no cotización']], [120,140,215]))
+    story.append(Spacer(1,12))
+    story.append(p('El transporte presenta corriente y caída de tensión reducidas bajo las hipótesis adoptadas. El abastecimiento continuo sigue condicionado a comprobar el recurso hídrico y la reserva de potencia para Limbani: una referencia de 200 kW no demuestra potencia firme y no cubre simultáneamente la demanda calculada y una reserva adicional de 25 kW.'))
+    story.append(PageBreak())
+    story.append(Paragraph('Índice de la memoria',styles['ChapterLP']))
+    toc=TableOfContents();toc.levelStyles=[styles['TOCLP']];toc.dotsMinLevel=0
+    story.append(toc);story.append(Spacer(1,18))
+    story.append(p('La memoria de cálculo, el anexo de armados y los planos acompañan este documento. Los marcadores del PDF permiten acceder directamente a cada capítulo.',True));story.append(PageBreak())
     markdown=['# Proyecto académico de línea primaria Limbani–Huancasayani\n\nEstudiante: Aquiles Taylor Ramos Yapo ·227368\n\nCurso: Instalaciones Eléctricas II ·LP-R01\n']
-    for slug,title,paragraphs in CHAPTERS:
+    for chapter_index,(slug,title,paragraphs) in enumerate(CHAPTERS,1):
         paragraphs=[clean(v) for v in paragraphs]
-        story.append(Paragraph(title,styles['ChapterLP']));story.extend(p(v) for v in paragraphs)
-        md='## '+title+'\n\n'+'\n\n'.join(paragraphs)+'\n';(E/(slug+'.md')).write_text(md,encoding='utf-8');markdown.append(md)
+        if chapter_index>1:story.append(PageBreak())
+        story.append(heading(title));md='## '+title+'\n\n'
+        for j,(subtitle,text) in enumerate(zip(SUBSECTIONS[slug],paragraphs),1):
+            sub=f'{chapter_index}.{j} {subtitle}'
+            story.append(Paragraph(sub,styles['SubLP']));story.append(p(text))
+            md+='### '+sub+'\n\n'+text+'\n\n'
+        (E/(slug+'.md')).write_text(md,encoding='utf-8');markdown.append(md)
         if slug=='04-demanda':story.append(table(['Localidad','Base2017 pob./viv.','Usuarios2026','Pdom kW'],[[v['nombre'],str(v['poblacion'])+'/'+str(v['viviendas_ocupadas']),v['usuarios_2026'],fmt(v['demanda_domestica_kw'])] for v in el['localidades']],[190,112,86,119]))
         if slug=='06-balance':story.append(table(['Reserva Limbani kW','P total requerida kW','Margen ref.200kW'],[[v['reserva_limbani_kw'],fmt(v['potencia_necesaria_kw']),fmt(v['margen_kw'])] for v in el['reservas']],[170,165,172]))
-        if slug=='10-presupuesto':story.append(table(['Partida','Ud','Cantidad','P.U. S/','Parcial S/'],[[r['partida'],r['unidad'],fmt(r['cantidad'],0),fmt(r['precio_pen']),fmt(r['parcial_pen'],0)] for r in bu['partidas']],[225,38,64,80,100]))
+        if slug=='10-presupuesto':
+            story.append(PageBreak());story.append(Paragraph('Cuadro 10-1. Presupuesto resumido de la línea',styles['SubLP']))
+            story.append(table(['Partida','Ud','Cantidad','P.U. S/','Parcial S/'],[[r['partida'],r['unidad'],fmt(r['cantidad'],0),fmt(r['precio_pen']),fmt(r['parcial_pen'],0)] for r in bu['partidas']],[225,38,64,80,100]))
+            story.append(Spacer(1,12));story.append(p('Moneda: soles (PEN). Fecha de referencia: 14 de octubre de 2026. Los precios son estimaciones de estudio; la memoria de cálculo incluye logística, ingeniería, contingencia e IGV.',True))
     story.append(PageBreak())
-    story.append(Paragraph('Anexo gráfico · simbología cotejada antes de dibujar',styles['ChapterLP']))
+    story.append(heading('Anexo · Criterios de representación gráfica'))
     story.append(table(['Elemento','Referencia verificada','Representación en LP-R01'],[
        ['Línea aérea','DGE09-91-03 y04-40-01/03','Un eje; etiqueta3×AAAC50mm², trifásica'],
        ['Poste CAC','DGE09-91-20','Círculo en todas las funciones; S/A/AN/T/ESP en rótulo'],
@@ -200,11 +348,14 @@ def main():
        ['Interruptor','DGE07-71-01 +07-70-02','Contacto abierto calificado con función automática']],[115,175,217]))
     story.append(p('Referencia de instalación construida: central Ingenio y líneas asociadas, PAD2022 publicado enSINIA; planoGEN-03 y descripción de líneas existentes. Se utiliza la organización gráfica y un eje por terna como comparación; los parámetros,protecciones y coordenadas se calculan paraLimbani. No se usa el trabajo de otro estudiante como expediente terminado.'))
     story.append(p('Las páginasDGE se leyeron y renderizaron antes de modificar los bloques. La copia completa se obtuvo de un repositorio espejo y su aprobación se contrastó conMINEM. Se conserva procedencia y límites; no se afirma homologación de armados/fabricantes.'))
-    source_story(story)
+    story.append(PageBreak());source_story(story)
     build_pdf(F/'Linea_Primaria_Limbani_Huancasayani_R01_expediente.pdf',story)
     (E/'memoria-completa.md').write_text('\n\n'.join(markdown),encoding='utf-8')
     (D/'fuentes.json').write_text(json.dumps([dict(id=i,titulo=t,url=u,lectura=n,fecha='2026-10-14') for i,t,u,n in SOURCES],ensure_ascii=False,indent=2),encoding='utf-8')
     calculation()
+    from pypdf import PdfReader
+    pages={key:len(PdfReader(F/f'Linea_Primaria_Limbani_Huancasayani_R01_{key}.pdf').pages) for key in ['expediente','calculos']}
+    (D/'presentacion-academica.json').write_text(json.dumps(dict(estado='Memoria editada con capítulos, subtítulos, texto justificado e índice paginado',hojas_memoria=pages['expediente'],hojas_calculos=pages['calculos']),ensure_ascii=False,indent=2),encoding='utf-8')
     print('Expediente y cálculo creados; fuentes editables en',E)
 
 def calculation():
@@ -227,10 +378,11 @@ def calculation():
        'Longitud sin tensión aproximada S0=S−∫Tds/EA. Se conservaΣS0 por cantón multiplicada por[1+αΔT+creep]. Bisección buscaH común; residual de longitud registrado por estado. Supone elasticidad lineal y cargas uniformes; no incluye curva cableada/no lineal ni desplazamiento real de suspensión.',
        'Flexión: carga eólica tres fases por vano tributario y propio poste, factores2.5, más componente de ángulo para suspensión≤5° con1.65. Retenciones equilibran tirones por ramales independientes de retenida. Capacidadtipo=6000N×2(rotura supuesta)×.65×(altura libre−.2m). Factores de resistencia no equivalen a certificado.',
        'Retenida por ramal: tiro conservador≥3Tmax×1.65/cos45°, resistencia de rotura≥tiro/.90. Se adopta60kN mínimo. La carga vertical suma componentes por desnivel,peso y retenidas; verificar capacidad axial/flexión combinada y cimentación.'])]:
-        story.append(Paragraph(title,styles['ChapterLP']));story.extend(p(v) for v in paras)
+        if title.startswith(('2.','3.','4.')):story.append(PageBreak())
+        story.append(heading(title));story.extend(p(v) for v in paras)
     story.append(table(['Sección mm² tipo','Caída a250kVA %','Pérdida a250kVA kW'],[[v['seccion_mm2'],fmt(v['caida_pct'],3),fmt(v['perdida_kw'],3)] for v in el['alternativas']],[170,165,172]))
     story.append(table(['Punto','Estado','Ik3 A','|Z| ohm'],[[v['punto'],v['estado'],fmt(v['ik3_a'],3),fmt(v['z_ohm'],5)] for v in el['fallas']],[130,135,100,142]))
-    story.append(Paragraph('5. Puesta a tierra y metrados provisionales',styles['ChapterLP']))
+    story.append(PageBreak());story.append(heading('5. Puesta a tierra y metrados provisionales'))
     story.append(p('Sensibilidad de resistencia malla: L=80m de cuadrícula+9.6m de varillas=89.6m,A100m²,h.6m. R≈ρ[1/L +1/√(20A)(1+1/(1+h√(20/A)))]. Aproximación de suelo uniforme, no cumplimiento de tensiones de paso/contacto ni artículo atribuido a una norma sin leer.'))
     rows=[]
     for rho in [100,300,1000]:

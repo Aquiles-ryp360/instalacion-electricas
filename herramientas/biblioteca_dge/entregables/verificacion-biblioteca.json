@@ -1,0 +1,16 @@
+{
+  "inventario_mt": 102,
+  "inventario_bt_base": 21,
+  "complemento_bt_2019": 1,
+  "simbolos_seccion9": 182,
+  "controles": [
+    "102 láminas MT, códigos y páginas únicos",
+    "Todos los DXF MT: audit0, mm de hoja y sin imágenes/XREF",
+    "21 láminas BT, códigos y páginas únicos",
+    "Todos los DXF BT: audit0, mm de hoja y sin imágenes/XREF",
+    "Hojas 077/078: rotaciones de imagen/página aplicadas; contornos completos dentro de hoja",
+    "Fuentes oficiales copiadas sin alterar hashes",
+    "182 símbolos: bloques presentes y audit0"
+  ],
+  "estado": "Revisión geométrica y de inventario, no certificación de ingeniería ni homologación MINEM"
+}

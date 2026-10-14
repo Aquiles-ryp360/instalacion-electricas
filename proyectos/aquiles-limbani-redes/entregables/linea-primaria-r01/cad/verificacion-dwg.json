@@ -1,9 +1,12 @@
 {
+  "archivo": "LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg",
   "formato": "DWG nativo AutoCAD R2018 AC1032",
   "herramienta": "C:\\Program Files\\Autodesk\\AutoCAD 2027\\accoreconsole.exe",
   "postes": 111,
   "diferencia_maxima_xy_m": 1.862645149230957e-09,
-  "layouts": 12,
+  "layouts": 42,
   "audit_errores": 0,
-  "roundtrip": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\cad\\verificacion-vuelta.dxf"
+  "roundtrip": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\cad\\verificacion-vuelta.dxf",
+  "referencias_dge_verificadas": 23,
+  "contornos_referencias_y_modelo_coinciden": true
 }

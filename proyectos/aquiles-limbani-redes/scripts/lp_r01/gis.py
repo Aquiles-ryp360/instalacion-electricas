@@ -35,7 +35,7 @@ def build_project():
             raster.setCrs(QgsCoordinateReferenceSystem('EPSG:32719'));project.addMapLayer(raster,False);base.addLayer(raster)
             root.findLayer(raster.id()).setItemVisibilityChecked(False)
     gpkg=G/'LP-Limbani-Huancasayani.gpkg'
-    for i,name in enumerate(['linea','vanos','postes','retenidas','subestaciones','cruces','referencias-osm']):
+    for i,name in enumerate(['linea','vanos','postes','retenidas','subestaciones','cruces','referencias-osm','curvas-dem']):
         source=QgsVectorLayer(str(D/(name+'.geojson')),name,'ogr');assert source.isValid(),name
         options=QgsVectorFileWriter.SaveVectorOptions();options.driverName='GPKG';options.layerName=name
         options.actionOnExistingFile=QgsVectorFileWriter.CreateOrOverwriteFile if i==0 else QgsVectorFileWriter.CreateOrOverwriteLayer
@@ -52,9 +52,14 @@ def build_project():
         else:
             colors={'linea':'#b72528','vanos':'#b72528','retenidas':'#bc8620','referencias-osm':'#94aab5'}
             layer.renderer().setSymbol(QgsLineSymbol.createSimple({'line_color':colors.get(name,'#444444'),'line_width':'.6' if name=='linea' else '.25'}))
-        project.addMapLayer(layer,False);(refs if name=='referencias-osm' else lp).addLayer(layer);layers.insert(0,layer)
+            if name=='curvas-dem':
+                layer.renderer().setSymbol(QgsLineSymbol.createSimple({'line_color':'#826c47','line_width':'.13'}))
+                st=QgsPalLayerSettings();st.fieldName='CASE WHEN "principal" THEN format_number("elev_m",0) END';st.isExpression=True;tf=QgsTextFormat();tf.setFont(QFont('Arial',8));tf.setSize(8);tf.setColor(QColor('#6d5835'));st.setFormat(tf);layer.setLabeling(QgsVectorLayerSimpleLabeling(st));layer.setLabelsEnabled(True)
+        project.addMapLayer(layer,False);(refs if name in ['referencias-osm','curvas-dem'] else lp).addLayer(layer);layers.insert(0,layer)
         if name=='vanos':root.findLayer(layer.id()).setItemVisibilityChecked(False)
         summary.append(dict(capa=name,entidades=layer.featureCount(),crs=layer.crs().authid(),origen='PROYECTADO' if name!='referencias-osm' else 'OSM, ODbL'))
+    dem=QgsRasterLayer(str(G/'DEM-gabinete-30m.tif'),'DEM público ~30m; curvas derivadas, no campo')
+    assert dem.isValid();project.addMapLayer(dem,False);refs.addLayer(dem);root.findLayer(dem.id()).setItemVisibilityChecked(False)
     line=next(v for v in layers if v.name()=='linea');extent=line.extent();extent.scale(1.16)
     project.viewSettings().setDefaultViewExtent(QgsReferencedRectangle(extent,project.crs()))
     project.setFilePathStorage(Qgis.FilePathType.Relative)

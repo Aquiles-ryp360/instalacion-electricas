@@ -60,6 +60,12 @@
       "entidades": 56,
       "crs": "EPSG:32719",
       "origen": "OSM, ODbL"
+    },
+    {
+      "capa": "curvas-dem",
+      "entidades": 208,
+      "crs": "EPSG:32719",
+      "origen": "PROYECTADO"
     }
   ],
   "original_sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8",

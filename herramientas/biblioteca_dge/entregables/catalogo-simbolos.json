@@ -1,0 +1,2550 @@
+[
+  {
+    "codigo": "09-90-01",
+    "bloque": "DGE_09_90_01",
+    "pagina_pdf": 73,
+    "definicion": "Estación de generación     En proyección.",
+    "entidades": 12,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      367.15000000000003,
+      254.0,
+      422.13
+    ]
+  },
+  {
+    "codigo": "09-90-02",
+    "bloque": "DGE_09_90_02",
+    "pagina_pdf": 73,
+    "definicion": "Estación de generación    En servicio  -  Tipos específicos de Estaciones Generadoras y",
+    "entidades": 57,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      422.83000000000004,
+      254.0,
+      475.65
+    ]
+  },
+  {
+    "codigo": "09-90-03",
+    "bloque": "DGE_09_90_03",
+    "pagina_pdf": 73,
+    "definicion": "Central hidroeléctrica    En proyección.",
+    "entidades": 15,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      499.87,
+      254.0,
+      550.53
+    ]
+  },
+  {
+    "codigo": "09-90-04",
+    "bloque": "DGE_09_90_04",
+    "pagina_pdf": 73,
+    "definicion": "Central hidroeléctrica    En servicio.",
+    "entidades": 36,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      551.23,
+      254.0,
+      603.3299999999999
+    ]
+  },
+  {
+    "codigo": "09-90-05",
+    "bloque": "DGE_09_90_05",
+    "pagina_pdf": 73,
+    "definicion": "Central termoeléctrica  EJEMPLOS: Carbón, Lignito, Aceite, Gas.    En proyección.",
+    "entidades": 15,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      604.03,
+      254.0,
+      658.05
+    ]
+  },
+  {
+    "codigo": "09-90-06",
+    "bloque": "DGE_09_90_06",
+    "pagina_pdf": 73,
+    "definicion": "Central termoeléctrica    En servicio.",
+    "entidades": 48,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      658.75,
+      254.0,
+      709.89
+    ]
+  },
+  {
+    "codigo": "09-90-07",
+    "bloque": "DGE_09_90_07",
+    "pagina_pdf": 73,
+    "definicion": "Central nuclear    En proyección.",
+    "entidades": 96,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      710.59,
+      254.0,
+      762.93
+    ]
+  },
+  {
+    "codigo": "09-90-08",
+    "bloque": "DGE_09_90_08",
+    "pagina_pdf": 74,
+    "definicion": "Central nuclear    En servicio.",
+    "entidades": 104,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      109.46759185791015,
+      254.0,
+      150.21
+    ]
+  },
+  {
+    "codigo": "09-90-09",
+    "bloque": "DGE_09_90_09",
+    "pagina_pdf": 74,
+    "definicion": "Subestación (de caseta, a la intemperie, al interior de  edificios)    En proyección.",
+    "entidades": 18,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      150.91,
+      254.0,
+      196.53
+    ]
+  },
+  {
+    "codigo": "09-90-10",
+    "bloque": "DGE_09_90_10",
+    "pagina_pdf": 74,
+    "definicion": "Subestación de  (de caseta, a la intemperie, al interior  de edificios)    En servicio.",
+    "entidades": 48,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      197.23,
+      254.0,
+      245.01000000000002
+    ]
+  },
+  {
+    "codigo": "09-90-11",
+    "bloque": "DGE_09_90_11",
+    "pagina_pdf": 74,
+    "definicion": "Subestación aérea monoposte    En proyección.",
+    "entidades": 69,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      245.71,
+      254.0,
+      298.53
+    ]
+  },
+  {
+    "codigo": "09-90-12",
+    "bloque": "DGE_09_90_12",
+    "pagina_pdf": 74,
+    "definicion": "Subestación aérea monoposte    En servicio.",
+    "entidades": 99,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      299.23,
+      254.0,
+      352.04999999999995
+    ]
+  },
+  {
+    "codigo": "09-90-13",
+    "bloque": "DGE_09_90_13",
+    "pagina_pdf": 74,
+    "definicion": "Subestación aérea biposte    En proyección.",
+    "entidades": 129,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      352.75,
+      254.0,
+      401.96999999999997
+    ]
+  },
+  {
+    "codigo": "09-90-14",
+    "bloque": "DGE_09_90_14",
+    "pagina_pdf": 74,
+    "definicion": "Subestación aérea biposte    En servicio.",
+    "entidades": 159,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      402.67,
+      254.0,
+      451.65
+    ]
+  },
+  {
+    "codigo": "09-90-15",
+    "bloque": "DGE_09_90_15",
+    "pagina_pdf": 74,
+    "definicion": "Subestación compacta bóveda    En proyección.",
+    "entidades": 15,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      452.35,
+      254.0,
+      493.65
+    ]
+  },
+  {
+    "codigo": "09-90-16",
+    "bloque": "DGE_09_90_16",
+    "pagina_pdf": 74,
+    "definicion": "Subestación compacta bóveda    En servicio.",
+    "entidades": 39,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      494.35,
+      254.0,
+      535.65
+    ]
+  },
+  {
+    "codigo": "09-90-17",
+    "bloque": "DGE_09_90_17",
+    "pagina_pdf": 74,
+    "definicion": "Subestación compacta pedestal    En proyección.",
+    "entidades": 21,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      536.35,
+      254.0,
+      579.5699999999999
+    ]
+  },
+  {
+    "codigo": "09-90-18",
+    "bloque": "DGE_09_90_18",
+    "pagina_pdf": 74,
+    "definicion": "Subestación compacta pedestal    En servicio.",
+    "entidades": 39,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      580.27,
+      254.0,
+      623.73
+    ]
+  },
+  {
+    "codigo": "09-90-19",
+    "bloque": "DGE_09_90_19",
+    "pagina_pdf": 74,
+    "definicion": "Central geotérmica    En proyección.",
+    "entidades": 24,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      624.4300000000001,
+      254.0,
+      677.25
+    ]
+  },
+  {
+    "codigo": "09-90-20",
+    "bloque": "DGE_09_90_20",
+    "pagina_pdf": 74,
+    "definicion": "Central geotérmica    En servicio.",
+    "entidades": 57,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      677.95,
+      254.0,
+      730.53
+    ]
+  },
+  {
+    "codigo": "09-90-21",
+    "bloque": "DGE_09_90_21",
+    "pagina_pdf": 75,
+    "definicion": "Central solar    En proyección.",
+    "entidades": 23,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      151.17000000000002
+    ]
+  },
+  {
+    "codigo": "09-90-22",
+    "bloque": "DGE_09_90_22",
+    "pagina_pdf": 75,
+    "definicion": "Central solar    En servicio.",
+    "entidades": 56,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      151.87,
+      254.0,
+      204.21
+    ]
+  },
+  {
+    "codigo": "09-90-23",
+    "bloque": "DGE_09_90_23",
+    "pagina_pdf": 75,
+    "definicion": "Central eólica    En proyección.",
+    "entidades": 21,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      204.91,
+      254.0,
+      262.28999999999996
+    ]
+  },
+  {
+    "codigo": "09-90-24",
+    "bloque": "DGE_09_90_24",
+    "pagina_pdf": 75,
+    "definicion": "Central eólica    En servicio.",
+    "entidades": 33,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      262.99,
+      254.0,
+      318.69
+    ]
+  },
+  {
+    "codigo": "09-90-25",
+    "bloque": "DGE_09_90_25",
+    "pagina_pdf": 75,
+    "definicion": "Subestación convertidora  Símbolo para corriente continua convertida en corriente  alterna.    En proyección.",
+    "entidades": 198,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      319.39000000000004,
+      254.0,
+      383.72999999999996
+    ]
+  },
+  {
+    "codigo": "09-90-26",
+    "bloque": "DGE_09_90_26",
+    "pagina_pdf": 75,
+    "definicion": "Subestación convertidora  Símbolo para corriente continua convertida en corriente  alterna.    En servicio.",
+    "entidades": 231,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      384.43,
+      254.0,
+      448.77
+    ]
+  },
+  {
+    "codigo": "09-91-01",
+    "bloque": "DGE_09_91_01",
+    "pagina_pdf": 75,
+    "definicion": "Línea dentro de un conducto  Línea dentro de una tubería",
+    "entidades": 75,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      520.03,
+      254.0,
+      574.29
+    ]
+  },
+  {
+    "codigo": "09-91-02",
+    "bloque": "DGE_09_91_02",
+    "pagina_pdf": 75,
+    "definicion": "Se puede adjuntar información adicional por encima de  la línea para indicar la ruta de la canaleta  guardacables, por ejemplo el número de vías.    EJEMPLO:  Línea en un conducto de seis vías.",
+    "entidades": 81,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      574.99,
+      254.0,
+      643.89
+    ]
+  },
+  {
+    "codigo": "09-91-03",
+    "bloque": "DGE_09_91_03",
+    "pagina_pdf": 75,
+    "definicion": "Línea (Símbolo general) (Aérea o subterránea)",
+    "entidades": 3,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      644.59,
+      254.0,
+      669.3299999999999
+    ]
+  },
+  {
+    "codigo": "09-91-04",
+    "bloque": "DGE_09_91_04",
+    "pagina_pdf": 75,
+    "definicion": "Línea subterránea. Sólo exigible donde esté en  conflicto con el símbolo anterior",
+    "entidades": 9,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      670.03,
+      254.0,
+      698.37
+    ]
+  },
+  {
+    "codigo": "09-91-05",
+    "bloque": "DGE_09_91_05",
+    "pagina_pdf": 75,
+    "definicion": "Línea pasante a través de una cámara de acceso.",
+    "entidades": 15,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      699.07,
+      254.0,
+      749.01
+    ]
+  },
+  {
+    "codigo": "09-91-06",
+    "bloque": "DGE_09_91_06",
+    "pagina_pdf": 76,
+    "definicion": "Línea con un bloque de gas o aceite.",
+    "entidades": 6,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      136.77
+    ]
+  },
+  {
+    "codigo": "09-91-07",
+    "bloque": "DGE_09_91_07",
+    "pagina_pdf": 76,
+    "definicion": "Línea con válvula de detención de gas o aceite.",
+    "entidades": 15,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      137.47,
+      254.0,
+      173.49
+    ]
+  },
+  {
+    "codigo": "09-91-08",
+    "bloque": "DGE_09_91_08",
+    "pagina_pdf": 76,
+    "definicion": "Línea con derivación del bloque de gas o aceite.",
+    "entidades": 54,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      174.19,
+      254.0,
+      211.17000000000002
+    ]
+  },
+  {
+    "codigo": "09-91-09",
+    "bloque": "DGE_09_91_09",
+    "pagina_pdf": 76,
+    "definicion": "Alimentación en corriente alterna para líneas de  telecomunicación.",
+    "entidades": 48,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      211.87,
+      254.0,
+      259.65
+    ]
+  },
+  {
+    "codigo": "09-91-10",
+    "bloque": "DGE_09_91_10",
+    "pagina_pdf": 76,
+    "definicion": "Alimentación en corriente continua para líneas de  telecomunicación.",
+    "entidades": 17,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      260.35,
+      254.0,
+      311.25
+    ]
+  },
+  {
+    "codigo": "09-91-11",
+    "bloque": "DGE_09_91_11",
+    "pagina_pdf": 76,
+    "definicion": "Cabina para instalación exterior, símbolo general    Se podrían utilizar símbolos o designaciones para  indicar qué aparatos se encuentran en la cabina.",
+    "entidades": 51,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      311.95000000000005,
+      254.0,
+      365.96999999999997
+    ]
+  },
+  {
+    "codigo": "09-91-12",
+    "bloque": "DGE_09_91_12",
+    "pagina_pdf": 76,
+    "definicion": "EJEMPLO:  Cabina de amplificación",
+    "entidades": 60,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      366.67,
+      254.0,
+      416.37
+    ]
+  },
+  {
+    "codigo": "09-91-13",
+    "bloque": "DGE_09_91_13",
+    "pagina_pdf": 76,
+    "definicion": "Dispositivo que evita el deslizamiento del cable    El símbolo debe graficarse en el lado de la cámara de  acceso en que se debe evitar el deslizamiento del  cable.",
+    "entidades": 18,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      417.07000000000005,
+      254.0,
+      474.45
+    ]
+  },
+  {
+    "codigo": "09-91-14",
+    "bloque": "DGE_09_91_14",
+    "pagina_pdf": 76,
+    "definicion": "EJEMPLO:    Cámara de acceso con dispositivo que evita el  deslizamiento del cable.  El símbolo muestra que se ha evitado el deslizamiento  hacia la izquierda.",
+    "entidades": 38,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      475.15000000000003,
+      254.0,
+      544.77
+    ]
+  },
+  {
+    "codigo": "09-91-15",
+    "bloque": "DGE_09_91_15",
+    "pagina_pdf": 76,
+    "definicion": "Anodo de protección    Se puede precisar el tipo de ánodo añadiendo el  símbolo químico literal del material.  - Elementos varios",
+    "entidades": 21,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      545.47,
+      254.0,
+      593.97
+    ]
+  },
+  {
+    "codigo": "09-91-16",
+    "bloque": "DGE_09_91_16",
+    "pagina_pdf": 76,
+    "definicion": "Panel de distribución o centro de control",
+    "entidades": 75,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      606.6700000000001,
+      254.0,
+      653.25
+    ]
+  },
+  {
+    "codigo": "09-91-17",
+    "bloque": "DGE_09_91_17",
+    "pagina_pdf": 76,
+    "definicion": "Tablero empotrado",
+    "entidades": 21,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      653.95,
+      254.0,
+      695.73
+    ]
+  },
+  {
+    "codigo": "09-91-18",
+    "bloque": "DGE_09_91_18",
+    "pagina_pdf": 76,
+    "definicion": "Retenida inclinada (viento)",
+    "entidades": 18,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      696.4300000000001,
+      254.0,
+      725.01
+    ]
+  },
+  {
+    "codigo": "09-91-19",
+    "bloque": "DGE_09_91_19",
+    "pagina_pdf": 76,
+    "definicion": "Retenida vertical",
+    "entidades": 6,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      725.71,
+      254.0,
+      755.25
+    ]
+  },
+  {
+    "codigo": "09-91-20",
+    "bloque": "DGE_09_91_20",
+    "pagina_pdf": 77,
+    "definicion": "Soporte para línea aérea (símbolo general)  (Donde existen diferentes tipos de materiales, indicará  soporte de concreto)",
+    "entidades": 84,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      136.77
+    ]
+  },
+  {
+    "codigo": "09-91-21",
+    "bloque": "DGE_09_91_21",
+    "pagina_pdf": 77,
+    "definicion": "Soporte de madera",
+    "entidades": 90,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      137.47,
+      254.0,
+      175.89000000000001
+    ]
+  },
+  {
+    "codigo": "09-91-22",
+    "bloque": "DGE_09_91_22",
+    "pagina_pdf": 77,
+    "definicion": "Soporte metálico",
+    "entidades": 100,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      176.59,
+      254.0,
+      213.57
+    ]
+  },
+  {
+    "codigo": "09-91-23",
+    "bloque": "DGE_09_91_23",
+    "pagina_pdf": 77,
+    "definicion": "Torre",
+    "entidades": 16,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      214.26999999999998,
+      254.0,
+      254.37
+    ]
+  },
+  {
+    "codigo": "09-91-24",
+    "bloque": "DGE_09_91_24",
+    "pagina_pdf": 77,
+    "definicion": "Luminaria",
+    "entidades": 9,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      255.07,
+      254.0,
+      295.16999999999996
+    ]
+  },
+  {
+    "codigo": "09-91-25",
+    "bloque": "DGE_09_91_25",
+    "pagina_pdf": 77,
+    "definicion": "Ejemplo: Línea aérea con soporte de fierro",
+    "entidades": 114,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      295.87,
+      254.0,
+      340.53
+    ]
+  },
+  {
+    "codigo": "09-91-26",
+    "bloque": "DGE_09_91_26",
+    "pagina_pdf": 77,
+    "definicion": "Ejemplo: Línea aérea con soporte de concreto y  retenida vertical",
+    "entidades": 96,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      341.23,
+      254.0,
+      392.37
+    ]
+  },
+  {
+    "codigo": "09-91-27",
+    "bloque": "DGE_09_91_27",
+    "pagina_pdf": 77,
+    "definicion": "Ejemplo: Línea aérea con soporte de madera y retenida  inclinada",
+    "entidades": 108,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      393.07000000000005,
+      254.0,
+      449.72999999999996
+    ]
+  },
+  {
+    "codigo": "09-91-28",
+    "bloque": "DGE_09_91_28",
+    "pagina_pdf": 77,
+    "definicion": "Ejemplo: Red subterránea con soporte de concreto y  luminaria",
+    "entidades": 114,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      450.43,
+      254.0,
+      508.77
+    ]
+  },
+  {
+    "codigo": "09-91-29",
+    "bloque": "DGE_09_91_29",
+    "pagina_pdf": 77,
+    "definicion": "Ejemplo: Red aérea con soporte de madera y luminaria",
+    "entidades": 129,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      509.47,
+      254.0,
+      567.3299999999999
+    ]
+  },
+  {
+    "codigo": "09-92-01",
+    "bloque": "DGE_09_92_01",
+    "pagina_pdf": 77,
+    "definicion": "Atenuador (Símbolo utilizable en mapas)  - Dispositivos de Alimentación",
+    "entidades": 36,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      638.35,
+      254.0,
+      687.09
+    ]
+  },
+  {
+    "codigo": "09-92-02",
+    "bloque": "DGE_09_92_02",
+    "pagina_pdf": 77,
+    "definicion": "Dispositivo de alimentación de línea  Símbolo para corriente alterna.",
+    "entidades": 58,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      699.7900000000001,
+      254.0,
+      766.53
+    ]
+  },
+  {
+    "codigo": "09-93-01",
+    "bloque": "DGE_09_93_01",
+    "pagina_pdf": 78,
+    "definicion": "Conductor neutro",
+    "entidades": 22,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      169.87,
+      254.0,
+      207.57
+    ]
+  },
+  {
+    "codigo": "09-93-02",
+    "bloque": "DGE_09_93_02",
+    "pagina_pdf": 78,
+    "definicion": "Conductor de protección",
+    "entidades": 9,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      208.26999999999998,
+      254.0,
+      248.37
+    ]
+  },
+  {
+    "codigo": "09-93-03",
+    "bloque": "DGE_09_93_03",
+    "pagina_pdf": 78,
+    "definicion": "Conductor de proteccióny neutro combinado",
+    "entidades": 24,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      249.07,
+      254.0,
+      294.45
+    ]
+  },
+  {
+    "codigo": "09-93-04",
+    "bloque": "DGE_09_93_04",
+    "pagina_pdf": 78,
+    "definicion": "EJEMPLO:  Alambre trifásico con conductor neutro y conductor de  protección.  - Canalizaciones",
+    "entidades": 45,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      295.15000000000003,
+      254.0,
+      334.04999999999995
+    ]
+  },
+  {
+    "codigo": "09-93-05",
+    "bloque": "DGE_09_93_05",
+    "pagina_pdf": 78,
+    "definicion": "Canalización hacia arriba  Si la flecha apunta hacia el borde superior de la hoja de  diseño, la canalización va hacia arriba.",
+    "entidades": 23,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      346.75,
+      254.0,
+      381.57
+    ]
+  },
+  {
+    "codigo": "09-93-06",
+    "bloque": "DGE_09_93_06",
+    "pagina_pdf": 78,
+    "definicion": "Canalización hacia abajo  Si la flecha está apuntado hacia el borde inferior de la  hoja de diseño, la canalización va hacia bajo.",
+    "entidades": 26,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      382.27000000000004,
+      254.0,
+      423.09
+    ]
+  },
+  {
+    "codigo": "09-93-07",
+    "bloque": "DGE_09_93_07",
+    "pagina_pdf": 78,
+    "definicion": "Canalización atravesando verticalmente.",
+    "entidades": 26,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      423.79,
+      254.0,
+      478.04999999999995
+    ]
+  },
+  {
+    "codigo": "09-93-08",
+    "bloque": "DGE_09_93_08",
+    "pagina_pdf": 78,
+    "definicion": "Caja, símbolo general.",
+    "entidades": 72,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      478.75,
+      254.0,
+      522.6899999999999
+    ]
+  },
+  {
+    "codigo": "09-93-09",
+    "bloque": "DGE_09_93_09",
+    "pagina_pdf": 78,
+    "definicion": "Caja de conexión  Caja de derivación",
+    "entidades": 85,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      523.39,
+      254.0,
+      562.29
+    ]
+  },
+  {
+    "codigo": "09-93-10",
+    "bloque": "DGE_09_93_10",
+    "pagina_pdf": 78,
+    "definicion": "Terminal de consumidores  El símbolo está representado con canalización.",
+    "entidades": 29,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      562.99,
+      254.0,
+      629.73
+    ]
+  },
+  {
+    "codigo": "09-93-11",
+    "bloque": "DGE_09_93_11",
+    "pagina_pdf": 78,
+    "definicion": "Centro de distribución  El símbolo muestra cinco canalizaciones.  - Tomacorrientes",
+    "entidades": 28,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      630.4300000000001,
+      254.0,
+      697.17
+    ]
+  },
+  {
+    "codigo": "09-93-12",
+    "bloque": "DGE_09_93_12",
+    "pagina_pdf": 78,
+    "definicion": "Tomacorriente (potencia), símbolo general  Receptáculo (potencia), símbolo general",
+    "entidades": 39,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      709.87,
+      254.0,
+      758.85
+    ]
+  },
+  {
+    "codigo": "09-93-13",
+    "bloque": "DGE_09_93_13",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente monofásico    Nota:  Para indicar el tipo de tomacorriente o los diferentes  usos de éste, deberá colocarse una letra o número en  la parte inferior derecha del símbolo, el cual debe ser  detallado en la leyenda del plano.",
+    "entidades": 92,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      180.21
+    ]
+  },
+  {
+    "codigo": "09-93-14",
+    "bloque": "DGE_09_93_14",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente monofásico en el piso    Nota:  Para indicar el tipo de tomacorriente o los diferentes  usos de éste, deberá colocarse una letra o número en  la parte inferior derecha del símbolo, el cual debe ser  detallado en la leyenda del plano.",
+    "entidades": 104,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      180.91,
+      254.0,
+      261.09
+    ]
+  },
+  {
+    "codigo": "09-93-15",
+    "bloque": "DGE_09_93_15",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente trifásico    Nota:  Para indicar el tipo de tomacorriente o los diferentes  usos de éste, deberá colocarse una letra o número en  la parte inferior derecha del símbolo, el cual debe ser  detallado en la leyenda del plano.",
+    "entidades": 93,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      261.79,
+      254.0,
+      342.21
+    ]
+  },
+  {
+    "codigo": "09-93-16",
+    "bloque": "DGE_09_93_16",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente trifásico en el piso    Nota:  Para indicar el tipo de tomacorriente o los diferentes  usos de éste, deberá colocarse una letra o número en  la parte inferior derecha del símbolo, el cual debe ser  detallado en la leyenda del plano.",
+    "entidades": 117,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      342.91,
+      254.0,
+      423.09
+    ]
+  },
+  {
+    "codigo": "09-93-17",
+    "bloque": "DGE_09_93_17",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente monofásico puesto a tierra",
+    "entidades": 108,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      423.79,
+      254.0,
+      477.57
+    ]
+  },
+  {
+    "codigo": "09-93-18",
+    "bloque": "DGE_09_93_18",
+    "pagina_pdf": 79,
+    "definicion": "Salida trifásica para cocina",
+    "entidades": 284,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      478.27000000000004,
+      254.0,
+      528.6899999999999
+    ]
+  },
+  {
+    "codigo": "09-93-19",
+    "bloque": "DGE_09_93_19",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente monofásico a prueba de agua",
+    "entidades": 364,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      529.39,
+      254.0,
+      581.49
+    ]
+  },
+  {
+    "codigo": "09-93-20",
+    "bloque": "DGE_09_93_20",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente múltiple (potencia).",
+    "entidades": 295,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      582.19,
+      254.0,
+      641.01
+    ]
+  },
+  {
+    "codigo": "09-93-21",
+    "bloque": "DGE_09_93_21",
+    "pagina_pdf": 79,
+    "definicion": "El símbolo es mostrado con tres tomas.",
+    "entidades": 133,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      641.71,
+      254.0,
+      708.4499999999999
+    ]
+  },
+  {
+    "codigo": "09-93-22",
+    "bloque": "DGE_09_93_22",
+    "pagina_pdf": 79,
+    "definicion": "Tomacorriente  (potencia)  con  contacto  para  el  conductor de protección.",
+    "entidades": 45,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      709.15,
+      254.0,
+      768.6899999999999
+    ]
+  },
+  {
+    "codigo": "09-93-23",
+    "bloque": "DGE_09_93_23",
+    "pagina_pdf": 80,
+    "definicion": "Tomacorriente (potencia) con obturador",
+    "entidades": 48,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      155.73000000000002
+    ]
+  },
+  {
+    "codigo": "09-93-24",
+    "bloque": "DGE_09_93_24",
+    "pagina_pdf": 80,
+    "definicion": "Tomacorriente (potencia) con interruptor unipolar.",
+    "entidades": 48,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      156.43,
+      254.0,
+      211.17000000000002
+    ]
+  },
+  {
+    "codigo": "09-93-25",
+    "bloque": "DGE_09_93_25",
+    "pagina_pdf": 80,
+    "definicion": "Tomacorriente  (potencia)  con  interruptor  de  encerrojamiento.",
+    "entidades": 57,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      211.87,
+      254.0,
+      267.33
+    ]
+  },
+  {
+    "codigo": "09-93-26",
+    "bloque": "DGE_09_93_26",
+    "pagina_pdf": 80,
+    "definicion": "Tomacorriente (potencia) con transformador aislante,  por ejemplo, toma para máquina de afeitar.",
+    "entidades": 114,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      268.03000000000003,
+      254.0,
+      332.13
+    ]
+  },
+  {
+    "codigo": "09-93-27",
+    "bloque": "DGE_09_93_27",
+    "pagina_pdf": 80,
+    "definicion": "Tomacorriente (telecomunicaciones), símbolo general  Las designaciones son conformes a las normas IEC o  ISO correspondientes, y podría ser utilizadas para  distinguir diferentes tipos de tomas.    TP    =  teléfono  FX    =  telefax  M      =  micrófono  FM    =  modulación de frecuencia  TV     =  televisión  TX     =  telex     =  altoparlante  - Interruptores",
+    "entidades": 17,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      332.83000000000004,
+      254.0,
+      474.92999999999995
+    ]
+  },
+  {
+    "codigo": "09-93-28",
+    "bloque": "DGE_09_93_28",
+    "pagina_pdf": 80,
+    "definicion": "Interruptor, símbolo general",
+    "entidades": 87,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      487.63,
+      254.0,
+      544.53
+    ]
+  },
+  {
+    "codigo": "09-93-29",
+    "bloque": "DGE_09_93_29",
+    "pagina_pdf": 80,
+    "definicion": "Interruptor con luz piloto          Interruptor con lámpara piloto",
+    "entidades": 368,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      545.23,
+      254.0,
+      651.81
+    ]
+  },
+  {
+    "codigo": "09-93-30",
+    "bloque": "DGE_09_93_30",
+    "pagina_pdf": 80,
+    "definicion": "Interruptor con tiempo de cierre limitado, unipolar          Interruptor unipolar",
+    "entidades": 356,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      652.51,
+      254.0,
+      761.49
+    ]
+  },
+  {
+    "codigo": "09-93-31",
+    "bloque": "DGE_09_93_31",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor, bipolar          Interruptor bipolar",
+    "entidades": 597,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      199.17000000000002
+    ]
+  },
+  {
+    "codigo": "09-93-32",
+    "bloque": "DGE_09_93_32",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor de tres vías",
+    "entidades": 443,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      199.87,
+      254.0,
+      240.69
+    ]
+  },
+  {
+    "codigo": "09-93-33",
+    "bloque": "DGE_09_93_33",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor de cuatro vías",
+    "entidades": 280,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      241.39,
+      254.0,
+      279.81
+    ]
+  },
+  {
+    "codigo": "09-93-34",
+    "bloque": "DGE_09_93_34",
+    "pagina_pdf": 81,
+    "definicion": "Conmutador unipolar,  Para los diferentes niveles de iluminación, por ejemplo.",
+    "entidades": 96,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      280.51000000000005,
+      254.0,
+      335.01
+    ]
+  },
+  {
+    "codigo": "09-93-35",
+    "bloque": "DGE_09_93_35",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor unipolar de dos vías.",
+    "entidades": 97,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      335.71000000000004,
+      254.0,
+      402.45
+    ]
+  },
+  {
+    "codigo": "09-93-36",
+    "bloque": "DGE_09_93_36",
+    "pagina_pdf": 81,
+    "definicion": "Conmutador intermedio  Diagrama equivalente de circuitos",
+    "entidades": 109,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      403.15000000000003,
+      254.0,
+      469.89
+    ]
+  },
+  {
+    "codigo": "09-93-37",
+    "bloque": "DGE_09_93_37",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor graduador",
+    "entidades": 96,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      470.59000000000003,
+      254.0,
+      527.97
+    ]
+  },
+  {
+    "codigo": "09-93-38",
+    "bloque": "DGE_09_93_38",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor unipolar con jalador          Interruptor unipolar con tirador",
+    "entidades": 370,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      528.6700000000001,
+      254.0,
+      635.49
+    ]
+  },
+  {
+    "codigo": "09-93-39",
+    "bloque": "DGE_09_93_39",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor de puerta",
+    "entidades": 445,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      636.19,
+      254.0,
+      674.37
+    ]
+  },
+  {
+    "codigo": "09-93-40",
+    "bloque": "DGE_09_93_40",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor bipolar a prueba de explosión",
+    "entidades": 633,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      675.07,
+      254.0,
+      715.41
+    ]
+  },
+  {
+    "codigo": "09-93-41",
+    "bloque": "DGE_09_93_41",
+    "pagina_pdf": 81,
+    "definicion": "Interruptor de tres vías a prueba de agua",
+    "entidades": 687,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      716.11,
+      254.0,
+      757.17
+    ]
+  },
+  {
+    "codigo": "09-93-42",
+    "bloque": "DGE_09_93_42",
+    "pagina_pdf": 82,
+    "definicion": "Pulsador o contactor para propósitos diferentes al de  señalización",
+    "entidades": 447,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      141.09
+    ]
+  },
+  {
+    "codigo": "09-93-43",
+    "bloque": "DGE_09_93_43",
+    "pagina_pdf": 82,
+    "definicion": "Botón de presión",
+    "entidades": 144,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      141.79,
+      254.0,
+      185.25
+    ]
+  },
+  {
+    "codigo": "09-93-44",
+    "bloque": "DGE_09_93_44",
+    "pagina_pdf": 82,
+    "definicion": "Botón de presión con lámpara indicadora.",
+    "entidades": 150,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      185.95,
+      254.0,
+      225.81
+    ]
+  },
+  {
+    "codigo": "09-93-45",
+    "bloque": "DGE_09_93_45",
+    "pagina_pdf": 82,
+    "definicion": "Botón de presión protegido contra un funcionamiento  involuntario, por medio de una cubierta protectora de  vidrio que se rompe, por ejemplo.",
+    "entidades": 159,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      226.51,
+      254.0,
+      285.09
+    ]
+  },
+  {
+    "codigo": "09-93-46",
+    "bloque": "DGE_09_93_46",
+    "pagina_pdf": 82,
+    "definicion": "Cronómetro  Aparato limitador de duración",
+    "entidades": 89,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      285.79,
+      254.0,
+      332.84999999999997
+    ]
+  },
+  {
+    "codigo": "09-93-47",
+    "bloque": "DGE_09_93_47",
+    "pagina_pdf": 82,
+    "definicion": "Interruptor horario.          Interruptor de tiempo",
+    "entidades": 432,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      333.55,
+      254.0,
+      440.37
+    ]
+  },
+  {
+    "codigo": "09-93-48",
+    "bloque": "DGE_09_93_48",
+    "pagina_pdf": 82,
+    "definicion": "Dispositivo de maniobra accionado por una tecla.  Dispositivo de control por vigilancia.  - Tomacorrientes para lámparas y Accesorios",
+    "entidades": 93,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      441.07000000000005,
+      254.0,
+      502.04999999999995
+    ]
+  },
+  {
+    "codigo": "09-93-49",
+    "bloque": "DGE_09_93_49",
+    "pagina_pdf": 82,
+    "definicion": "Posición de la toma de iluminación.  El símbolo es representado con canalización.",
+    "entidades": 9,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      514.75,
+      254.0,
+      557.01
+    ]
+  },
+  {
+    "codigo": "09-93-50",
+    "bloque": "DGE_09_93_50",
+    "pagina_pdf": 82,
+    "definicion": "Toma de iluminación en la pared.  El símbolo es representado con canalización de  viniendo de la izquierda.",
+    "entidades": 12,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      557.71,
+      254.0,
+      602.13
+    ]
+  },
+  {
+    "codigo": "09-93-51",
+    "bloque": "DGE_09_93_51",
+    "pagina_pdf": 82,
+    "definicion": "Salida para lámpara incandescente, vapor de mercurio  o similar, adosado o colgado en techo.",
+    "entidades": 96,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      602.83,
+      254.0,
+      656.37
+    ]
+  },
+  {
+    "codigo": "09-93-52",
+    "bloque": "DGE_09_93_52",
+    "pagina_pdf": 82,
+    "definicion": "Salida para lámpara incandescente, vapor de mercurio  o similar, adosado o colgado en pared.",
+    "entidades": 99,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      657.07,
+      254.0,
+      710.37
+    ]
+  },
+  {
+    "codigo": "09-93-53",
+    "bloque": "DGE_09_93_53",
+    "pagina_pdf": 82,
+    "definicion": "Salida para lámpara incandescente, vapor de mercurio  o similar, empotrado en techo.",
+    "entidades": 40,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      711.07,
+      254.0,
+      766.05
+    ]
+  },
+  {
+    "codigo": "09-93-54",
+    "bloque": "DGE_09_93_54",
+    "pagina_pdf": 83,
+    "definicion": "Salida para lámpara incandescente, vapor de mercurio  o similar, empotrado en pared.",
+    "entidades": 43,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      156.45000000000002
+    ]
+  },
+  {
+    "codigo": "09-93-55",
+    "bloque": "DGE_09_93_55",
+    "pagina_pdf": 83,
+    "definicion": "Salida para artefacto fluorescente en el techo.",
+    "entidades": 84,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      157.15,
+      254.0,
+      215.01000000000002
+    ]
+  },
+  {
+    "codigo": "09-93-56",
+    "bloque": "DGE_09_93_56",
+    "pagina_pdf": 83,
+    "definicion": "Salida para artefacto fluorescente empotrado.",
+    "entidades": 40,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      215.71,
+      254.0,
+      274.53
+    ]
+  },
+  {
+    "codigo": "09-93-57",
+    "bloque": "DGE_09_93_57",
+    "pagina_pdf": 83,
+    "definicion": "Salida para artefactos fluorescentes en hilera.",
+    "entidades": 96,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      275.23,
+      254.0,
+      317.01
+    ]
+  },
+  {
+    "codigo": "09-93-58",
+    "bloque": "DGE_09_93_58",
+    "pagina_pdf": 83,
+    "definicion": "Salida  para  artefactos  fluorescentes  en  hilera,  empotrados.",
+    "entidades": 171,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      317.71000000000004,
+      254.0,
+      359.96999999999997
+    ]
+  },
+  {
+    "codigo": "09-93-59",
+    "bloque": "DGE_09_93_59",
+    "pagina_pdf": 83,
+    "definicion": "Lámpara, símbolo general  El símbolo puede completarse tal como se muestra en  la Sección 8 (Instrumentos de medición, lámparas y  dispositivos de señalización), en la sub-sección  Lámparas y dispositivos de señalización.",
+    "entidades": 102,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      360.67,
+      254.0,
+      418.04999999999995
+    ]
+  },
+  {
+    "codigo": "09-93-60",
+    "bloque": "DGE_09_93_60",
+    "pagina_pdf": 83,
+    "definicion": "Luminaria, símbolo general.",
+    "entidades": 9,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      418.75,
+      254.0,
+      450.92999999999995
+    ]
+  },
+  {
+    "codigo": "09-93-61",
+    "bloque": "DGE_09_93_61",
+    "pagina_pdf": 83,
+    "definicion": "EJEMPLOS:  Luminaria con tres tubos fluorescentes",
+    "entidades": 15,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      451.63,
+      254.0,
+      497.25
+    ]
+  },
+  {
+    "codigo": "09-93-62",
+    "bloque": "DGE_09_93_62",
+    "pagina_pdf": 83,
+    "definicion": "Luminaria con cinco tubos fluorescentes",
+    "entidades": 142,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      497.95000000000005,
+      254.0,
+      533.97
+    ]
+  },
+  {
+    "codigo": "09-93-63",
+    "bloque": "DGE_09_93_63",
+    "pagina_pdf": 83,
+    "definicion": "Proyector, símbolo general",
+    "entidades": 132,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      534.6700000000001,
+      254.0,
+      583.89
+    ]
+  },
+  {
+    "codigo": "09-93-64",
+    "bloque": "DGE_09_93_64",
+    "pagina_pdf": 83,
+    "definicion": "Iluminación proyectada",
+    "entidades": 140,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      584.59,
+      254.0,
+      632.37
+    ]
+  },
+  {
+    "codigo": "09-93-65",
+    "bloque": "DGE_09_93_65",
+    "pagina_pdf": 83,
+    "definicion": "Proyector de iluminación",
+    "entidades": 140,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      633.07,
+      254.0,
+      699.5699999999999
+    ]
+  },
+  {
+    "codigo": "09-93-66",
+    "bloque": "DGE_09_93_66",
+    "pagina_pdf": 83,
+    "definicion": "Aparato auxiliar para la lámpara de descarga  Este símbolo únicamente debe ser utilizado cuando el  aparato no sea parte de la luminaria.",
+    "entidades": 36,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      700.27,
+      254.0,
+      749.49
+    ]
+  },
+  {
+    "codigo": "09-93-67",
+    "bloque": "DGE_09_93_67",
+    "pagina_pdf": 84,
+    "definicion": "Luminaria de alumbrado de emergencia.",
+    "entidades": 31,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      143.97
+    ]
+  },
+  {
+    "codigo": "09-93-68",
+    "bloque": "DGE_09_93_68",
+    "pagina_pdf": 84,
+    "definicion": "Bloque autónomo de luminaria de alumbrado de  emergencia.  - Varios",
+    "entidades": 43,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      144.67,
+      254.0,
+      197.01000000000002
+    ]
+  },
+  {
+    "codigo": "09-93-69",
+    "bloque": "DGE_09_93_69",
+    "pagina_pdf": 84,
+    "definicion": "Calentador de agua  El símbolo muestra la canalización",
+    "entidades": 144,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      209.71,
+      254.0,
+      262.04999999999995
+    ]
+  },
+  {
+    "codigo": "09-93-70",
+    "bloque": "DGE_09_93_70",
+    "pagina_pdf": 84,
+    "definicion": "Ventilador  El símbolo muestra la canalización .",
+    "entidades": 120,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      262.75,
+      254.0,
+      314.37
+    ]
+  },
+  {
+    "codigo": "09-93-71",
+    "bloque": "DGE_09_93_71",
+    "pagina_pdf": 84,
+    "definicion": "Reloj  Registrador horario",
+    "entidades": 129,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      315.07000000000005,
+      254.0,
+      375.33
+    ]
+  },
+  {
+    "codigo": "09-93-72",
+    "bloque": "DGE_09_93_72",
+    "pagina_pdf": 84,
+    "definicion": "Cerradura eléctrica",
+    "entidades": 78,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      376.03000000000003,
+      254.0,
+      415.16999999999996
+    ]
+  },
+  {
+    "codigo": "09-93-73",
+    "bloque": "DGE_09_93_73",
+    "pagina_pdf": 84,
+    "definicion": "Interfono, por ejemplo: intercomunicador.",
+    "entidades": 35,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      415.87,
+      254.0,
+      459.33
+    ]
+  },
+  {
+    "codigo": "09-94-01",
+    "bloque": "DGE_09_94_01",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, en altura, símbolo general.    Los colores pueden indicarse de acuerdo con la sub-cláusula  2. Ver también la sub-sección 094 de ésta sección (en  Indicación de colores).  En caso de confusión, se puede añadir una flecha para  mostrar el sentido del haz.",
+    "entidades": 13,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      180.21
+    ]
+  },
+  {
+    "codigo": "09-94-02",
+    "bloque": "DGE_09_94_02",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, a ras de la superficie,  símbolo general.  Se aplican las reglas del símbolo 09-94-01",
+    "entidades": 132,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      180.91,
+      254.0,
+      233.73000000000002
+    ]
+  },
+  {
+    "codigo": "09-94-03",
+    "bloque": "DGE_09_94_03",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, haz blanco y unidireccional,  elevado.",
+    "entidades": 18,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      234.43,
+      254.0,
+      286.28999999999996
+    ]
+  },
+  {
+    "codigo": "09-94-04",
+    "bloque": "DGE_09_94_04",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, haz blanco y unidireccional,  en la superficie.",
+    "entidades": 138,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      286.99,
+      254.0,
+      338.13
+    ]
+  },
+  {
+    "codigo": "09-94-05",
+    "bloque": "DGE_09_94_05",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, haz color blanco/blanco y  bidireccional, elevado.",
+    "entidades": 15,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      338.83000000000004,
+      254.0,
+      391.40999999999997
+    ]
+  },
+  {
+    "codigo": "09-94-06",
+    "bloque": "DGE_09_94_06",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, haz color blanco/blanco y  bidireccional, en la superficie.",
+    "entidades": 135,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      392.11,
+      254.0,
+      443.25
+    ]
+  },
+  {
+    "codigo": "09-94-07",
+    "bloque": "DGE_09_94_07",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, haz blanco y rayo  omnidireccional, elevado.",
+    "entidades": 132,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      443.95000000000005,
+      254.0,
+      495.09
+    ]
+  },
+  {
+    "codigo": "09-94-08",
+    "bloque": "DGE_09_94_08",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, haz blanco y rayo  omnidireccional, en la superficie.",
+    "entidades": 240,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      495.79,
+      254.0,
+      546.4499999999999
+    ]
+  },
+  {
+    "codigo": "09-94-09",
+    "bloque": "DGE_09_94_09",
+    "pagina_pdf": 85,
+    "definicion": "Luz curva, haz verde/verde, bidireccional.  Para los colores, ver en la sub-sección 094 de ésta  sección (en Indicación de colores), en la superficie.",
+    "entidades": 233,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      547.15,
+      254.0,
+      598.77
+    ]
+  },
+  {
+    "codigo": "09-94-10",
+    "bloque": "DGE_09_94_10",
+    "pagina_pdf": 85,
+    "definicion": "Luz curva, haz color blanco y unidireccional, en la  superficie.",
+    "entidades": 210,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      599.47,
+      254.0,
+      653.01
+    ]
+  },
+  {
+    "codigo": "09-94-11",
+    "bloque": "DGE_09_94_11",
+    "pagina_pdf": 85,
+    "definicion": "Luz aeronáutica de suelo, haz omnidireccional blanco  en alto y unidireccional blanco abajo, elevado.",
+    "entidades": 118,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      653.71,
+      254.0,
+      720.4499999999999
+    ]
+  },
+  {
+    "codigo": "09-94-12",
+    "bloque": "DGE_09_94_12",
+    "pagina_pdf": 86,
+    "definicion": "Luz aeronáutica de suelo, haz blanco onmidireccional  en alto y bidireccional blanco/blanco abajo, elevado.",
+    "entidades": 114,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      166.53
+    ]
+  },
+  {
+    "codigo": "09-94-13",
+    "bloque": "DGE_09_94_13",
+    "pagina_pdf": 86,
+    "definicion": "Luz aeronáutica de suelo, haz blanco parpadeante  unidireccional, elevado.",
+    "entidades": 33,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      167.23,
+      254.0,
+      221.01000000000002
+    ]
+  },
+  {
+    "codigo": "09-94-14",
+    "bloque": "DGE_09_94_14",
+    "pagina_pdf": 86,
+    "definicion": "Luz aeronáutica de suelo, haz blanco parpadeante  unidireccional, en la superficie.",
+    "entidades": 153,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      221.71,
+      254.0,
+      273.57
+    ]
+  },
+  {
+    "codigo": "09-94-15",
+    "bloque": "DGE_09_94_15",
+    "pagina_pdf": 86,
+    "definicion": "Indicador de trayectoria de aproximación de precisión,  haz unidireccional blanco/rojo.",
+    "entidades": 24,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      274.27000000000004,
+      254.0,
+      327.09
+    ]
+  },
+  {
+    "codigo": "09-94-16",
+    "bloque": "DGE_09_94_16",
+    "pagina_pdf": 86,
+    "definicion": "Indicador de la dirección del viento",
+    "entidades": 21,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      327.79,
+      254.0,
+      380.37
+    ]
+  },
+  {
+    "codigo": "09-94-17",
+    "bloque": "DGE_09_94_17",
+    "pagina_pdf": 86,
+    "definicion": "Indicador de la dirección de aterrizaje.",
+    "entidades": 18,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      381.07000000000005,
+      254.0,
+      431.96999999999997
+    ]
+  },
+  {
+    "codigo": "09-94-18",
+    "bloque": "DGE_09_94_18",
+    "pagina_pdf": 86,
+    "definicion": "Luz de obstáculo,  Luz de peligro,  Emisión omnidireccional de encendido rojo",
+    "entidades": 189,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      432.67,
+      254.0,
+      485.25
+    ]
+  },
+  {
+    "codigo": "09-94-19",
+    "bloque": "DGE_09_94_19",
+    "pagina_pdf": 86,
+    "definicion": "Luz de tierra Aeronautica,  Mientras emita encendido omnidireccional",
+    "entidades": 147,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      485.95000000000005,
+      254.0,
+      537.3299999999999
+    ]
+  },
+  {
+    "codigo": "09-94-20",
+    "bloque": "DGE_09_94_20",
+    "pagina_pdf": 86,
+    "definicion": "Señal de advertencia  Señal de guía  Símbolo general",
+    "entidades": 42,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      538.03,
+      254.0,
+      590.61
+    ]
+  },
+  {
+    "codigo": "09-94-21",
+    "bloque": "DGE_09_94_21",
+    "pagina_pdf": 86,
+    "definicion": "EJEMPLOS:  Panel de precaución de distancia : “4000/9000 pies”",
+    "entidades": 180,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      591.3100000000001,
+      254.0,
+      641.73
+    ]
+  },
+  {
+    "codigo": "09-94-22",
+    "bloque": "DGE_09_94_22",
+    "pagina_pdf": 86,
+    "definicion": "Panel de guiado de rodamiento por la pista : “RAMP”.  - Indicación de colores",
+    "entidades": 209,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      642.4300000000001,
+      254.0,
+      700.77
+    ]
+  },
+  {
+    "codigo": "09-94-23",
+    "bloque": "DGE_09_94_23",
+    "pagina_pdf": 86,
+    "definicion": "Verde unidireccional elevado",
+    "entidades": 39,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      713.47,
+      254.0,
+      764.61
+    ]
+  },
+  {
+    "codigo": "09-94-24",
+    "bloque": "DGE_09_94_24",
+    "pagina_pdf": 87,
+    "definicion": "Verde unidireccional en la superficie",
+    "entidades": 159,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      151.41
+    ]
+  },
+  {
+    "codigo": "09-94-25",
+    "bloque": "DGE_09_94_25",
+    "pagina_pdf": 87,
+    "definicion": "Verde omnidireccional elevado",
+    "entidades": 145,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      152.10999999999999,
+      254.0,
+      205.41
+    ]
+  },
+  {
+    "codigo": "09-94-26",
+    "bloque": "DGE_09_94_26",
+    "pagina_pdf": 87,
+    "definicion": "Verde omnidireccional en la superficie",
+    "entidades": 241,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      206.10999999999999,
+      254.0,
+      258.92999999999995
+    ]
+  },
+  {
+    "codigo": "09-94-27",
+    "bloque": "DGE_09_94_27",
+    "pagina_pdf": 87,
+    "definicion": "Amarillo unidireccional elevado",
+    "entidades": 39,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      271.63,
+      254.0,
+      323.25
+    ]
+  },
+  {
+    "codigo": "09-94-28",
+    "bloque": "DGE_09_94_28",
+    "pagina_pdf": 87,
+    "definicion": "Amarillo unidireccional en la superficie",
+    "entidades": 147,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      323.95000000000005,
+      254.0,
+      375.33
+    ]
+  },
+  {
+    "codigo": "09-94-29",
+    "bloque": "DGE_09_94_29",
+    "pagina_pdf": 87,
+    "definicion": "Amarillo omnidireccional elevado",
+    "entidades": 144,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      376.03000000000003,
+      254.0,
+      428.84999999999997
+    ]
+  },
+  {
+    "codigo": "09-94-30",
+    "bloque": "DGE_09_94_30",
+    "pagina_pdf": 87,
+    "definicion": "Amarillo omnidireccional en la superficie",
+    "entidades": 240,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      429.55,
+      254.0,
+      480.69
+    ]
+  },
+  {
+    "codigo": "09-94-31",
+    "bloque": "DGE_09_94_31",
+    "pagina_pdf": 87,
+    "definicion": "Rojo unidireccional elevado",
+    "entidades": 21,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      493.39000000000004,
+      254.0,
+      545.49
+    ]
+  },
+  {
+    "codigo": "09-94-32",
+    "bloque": "DGE_09_94_32",
+    "pagina_pdf": 87,
+    "definicion": "Rojo unidireccional en la superficie",
+    "entidades": 138,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      546.19,
+      254.0,
+      597.3299999999999
+    ]
+  },
+  {
+    "codigo": "09-94-33",
+    "bloque": "DGE_09_94_33",
+    "pagina_pdf": 87,
+    "definicion": "Rojo omnidireccional elevado",
+    "entidades": 159,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      598.03,
+      254.0,
+      650.37
+    ]
+  },
+  {
+    "codigo": "09-94-34",
+    "bloque": "DGE_09_94_34",
+    "pagina_pdf": 87,
+    "definicion": "Rojo omnidireccional en la superficie",
+    "entidades": 252,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      651.07,
+      254.0,
+      701.25
+    ]
+  },
+  {
+    "codigo": "09-94-35",
+    "bloque": "DGE_09_94_35",
+    "pagina_pdf": 87,
+    "definicion": "Blanco unidireccional elevado",
+    "entidades": 18,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      713.95,
+      254.0,
+      765.09
+    ]
+  },
+  {
+    "codigo": "09-94-36",
+    "bloque": "DGE_09_94_36",
+    "pagina_pdf": 88,
+    "definicion": "Blanco unidireccional en la superficie",
+    "entidades": 126,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      166.53
+    ]
+  },
+  {
+    "codigo": "09-94-37",
+    "bloque": "DGE_09_94_37",
+    "pagina_pdf": 88,
+    "definicion": "Blanco omnidireccional elevado",
+    "entidades": 120,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      167.23,
+      254.0,
+      221.01000000000002
+    ]
+  },
+  {
+    "codigo": "09-94-38",
+    "bloque": "DGE_09_94_38",
+    "pagina_pdf": 88,
+    "definicion": "Blanco omnidireccional en la superficie",
+    "entidades": 216,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      221.71,
+      254.0,
+      273.57
+    ]
+  },
+  {
+    "codigo": "09-94-39",
+    "bloque": "DGE_09_94_39",
+    "pagina_pdf": 88,
+    "definicion": "Azul unidireccional elevado",
+    "entidades": 24,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      286.27000000000004,
+      254.0,
+      336.69
+    ]
+  },
+  {
+    "codigo": "09-94-40",
+    "bloque": "DGE_09_94_40",
+    "pagina_pdf": 88,
+    "definicion": "Azul unidireccional en la superficie",
+    "entidades": 132,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      337.39000000000004,
+      254.0,
+      388.04999999999995
+    ]
+  },
+  {
+    "codigo": "09-94-41",
+    "bloque": "DGE_09_94_41",
+    "pagina_pdf": 88,
+    "definicion": "Azul omnidireccional elevado",
+    "entidades": 126,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      388.75,
+      254.0,
+      440.60999999999996
+    ]
+  },
+  {
+    "codigo": "09-94-42",
+    "bloque": "DGE_09_94_42",
+    "pagina_pdf": 88,
+    "definicion": "Azul omnidireccional en la superficie",
+    "entidades": 222,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      441.31,
+      254.0,
+      495.57
+    ]
+  },
+  {
+    "codigo": "09-94-43",
+    "bloque": "DGE_09_94_43",
+    "pagina_pdf": 88,
+    "definicion": "Blanco/Amarillo bidireccional elevado",
+    "entidades": 24,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      508.27000000000004,
+      254.0,
+      560.61
+    ]
+  },
+  {
+    "codigo": "09-94-44",
+    "bloque": "DGE_09_94_44",
+    "pagina_pdf": 88,
+    "definicion": "Blanco/Amarillo bidireccional en la superficie",
+    "entidades": 132,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      561.3100000000001,
+      254.0,
+      611.97
+    ]
+  },
+  {
+    "codigo": "09-94-45",
+    "bloque": "DGE_09_94_45",
+    "pagina_pdf": 88,
+    "definicion": "Blanco/Rojo bidireccional elevado",
+    "entidades": 22,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      624.6700000000001,
+      254.0,
+      676.77
+    ]
+  },
+  {
+    "codigo": "09-94-46",
+    "bloque": "DGE_09_94_46",
+    "pagina_pdf": 88,
+    "definicion": "Blanco/Rojo bidireccional en la superficie",
+    "entidades": 143,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      677.47,
+      254.0,
+      727.65
+    ]
+  },
+  {
+    "codigo": "09-94-47",
+    "bloque": "DGE_09_94_47",
+    "pagina_pdf": 89,
+    "definicion": "Verde/Rojo bidireccional elevado",
+    "entidades": 39,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      100.03,
+      254.0,
+      151.41
+    ]
+  },
+  {
+    "codigo": "09-94-48",
+    "bloque": "DGE_09_94_48",
+    "pagina_pdf": 89,
+    "definicion": "Verde/Rojo bidireccional en la superficie",
+    "entidades": 165,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      152.10999999999999,
+      254.0,
+      205.89000000000001
+    ]
+  },
+  {
+    "codigo": "09-94-49",
+    "bloque": "DGE_09_94_49",
+    "pagina_pdf": 89,
+    "definicion": "Verde/Verde bidireccional elevado",
+    "entidades": 49,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      218.59,
+      254.0,
+      273.09
+    ]
+  },
+  {
+    "codigo": "09-94-50",
+    "bloque": "DGE_09_94_50",
+    "pagina_pdf": 89,
+    "definicion": "Verde/Verde bidireccional en la superficie",
+    "entidades": 169,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      273.79,
+      254.0,
+      325.65
+    ]
+  },
+  {
+    "codigo": "09-94-51",
+    "bloque": "DGE_09_94_51",
+    "pagina_pdf": 89,
+    "definicion": "Verde/Amarillo bidireccional elevado",
+    "entidades": 47,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      338.35,
+      254.0,
+      390.45
+    ]
+  },
+  {
+    "codigo": "09-94-52",
+    "bloque": "DGE_09_94_52",
+    "pagina_pdf": 89,
+    "definicion": "Verde/Amarillo bidireccional en la superficie",
+    "entidades": 155,
+    "origen": "Extracción de vectores de PDF oficial MINEM, sección 9; sin retícula auxiliar",
+    "limites_pdf": [
+      144.0,
+      391.15000000000003,
+      254.0,
+      445.16999999999996
+    ]
+  }
+]

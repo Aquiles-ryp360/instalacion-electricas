@@ -1,13 +1,26 @@
 ## 4. Población y demanda de Huancasayani
 
-INEI 2017 distingue Huancasayani Centro 2112030050, Bellavista 2112030051 y Lince 2112030036 como registros de centros poblados del distrito. Se agregan exclusivamente estas tres denominaciones para el escenario de servicio; no se usa la población de todo el distrito ni se suma nuevamente Limbani. OSM también rotula Huancasarani cerca de Centro; esa etiqueta no sustituye el código INEI.
+### 4.1 Localidades comprendidas
 
-Base 2017:549 habitantes y321 viviendas ocupadas. Crecimiento geométrico supuesto 1% anual durante 9 años; población 2026 proyectada por registro: 600 habitantes. Los usuarios potenciales se redondean hacia arriba por localidad: 353. Vivienda ocupada no es abonado activo; el padrón comercial sigue pendiente. No se obtuvo tabla de centros poblados 2025 para este ámbito.
+El INEI 2017 registra Huancasayani Centro (2112030050), Bellavista (2112030051) y Lince (2112030036). El escenario agrega estas tres localidades, sin sumar la población del distrito ni Limbani. La variante Huancasarani de OSM no reemplaza la identificación censal.
 
-La RD 108-2023 es secundaria y se emplea únicamente para estimar demanda a transportar. Centro/Bellavista se asignan provisionalmente tipo I600 W y Lince tipo II400 W, con simultaneidad 0.80. La categoría requiere justificación de campo; no se afirma clasificación oficial. AP:60 luminarias 54.1 W y servicios 14 kW son supuestos de inventario.
+### 4.2 Proyección de usuarios
 
-Demanda doméstica 154.24 kW; alumbrado 3.246 kW; servicios 14.00 kW. Total usuarios 171.49 kW, fp0.90 y190.54 kVA. Los 14 kW representan salud 3, educación/comunicaciones 3, bombeo 3, comercio/talleres 4 y comunales 1; son demandas coincidentes de estudio, sin otro factor para ocultar el pico.
+La base censal reúne 549 habitantes y 321 viviendas ocupadas. Con crecimiento geométrico supuesto de 1 % anual durante nueve años, la población alcanza aproximadamente 600 habitantes en 2026. Al redondear las viviendas por localidad se estiman 353 usuarios potenciales; son una proyección, no un padrón de abonados.
 
-Una sola llegada en Centro no demuestra que Bellavista y Lince puedan recibir energía sin obras posteriores. La demanda agregada justifica infraestructura troncal; las redes aguas abajo requieren proyecto e inversión separados. Se incluyen escenarios de crecimiento 1% y1.5%, no garantía de consumo futuro.
+### 4.3 Calificación y simultaneidad
 
-Perfil horario para exposición: demanda baja 0.30 Pmax, mañana 0.55, mediodía 0.60, tarde 0.65 y pico nocturno 1.00. Es un escenario, no curva medida; no se calcula facturación ni energía garantizada con él. Pérdidas se calculan al pico; auxiliares centrales 5 kW son hipótesis y no se suman nuevamente a los servicios de Huancasayani.
+Para estimar la demanda se adopta provisionalmente RD 108-2023: categoría I, 600 W por usuario, en Centro y Bellavista; categoría II, 400 W, en Lince; simultaneidad 0.80. La categoría requiere comprobación. El alumbrado considera 60 luminarias de 54.1 W de entrada y 14 kW de servicios supuestos.
+
+### 4.4 Composición de la demanda
+
+El resultado es 154.24 kW domésticos, 3.246 kW de alumbrado y 14.00 kW de servicios: 171.49 kW y 190.54 kVA con factor de potencia 0.90. Los servicios comprenden salud (3 kW), educación y comunicaciones (3 kW), bombeo (3 kW), comercio y talleres (4 kW) y usos comunales (1 kW).
+
+### 4.5 Frontera del abastecimiento
+
+La llegada en Centro no demuestra que Bellavista y Lince dispongan de redes posteriores. Esas obras corresponden a otro proyecto. Se evalúa crecimiento de usuarios de 1 % y 1.5 % anual como sensibilidad, sin garantizar consumo futuro.
+
+### 4.6 Perfil horario de estudio
+
+El perfil supuesto utiliza fracciones de la demanda máxima: 0.30 en carga baja, 0.55 en la mañana, 0.60 al mediodía, 0.65 por la tarde y 1.00 en el pico nocturno. No es una curva medida. Las pérdidas se calculan al pico; se agregan 5 kW de auxiliares sin duplicarlos como servicios de usuarios.
+

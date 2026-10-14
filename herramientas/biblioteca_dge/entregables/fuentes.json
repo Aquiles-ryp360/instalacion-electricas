@@ -1,0 +1,55 @@
+[
+  {
+    "id": "DGE-MT",
+    "norma": "RD 024-2003-EM/DGE",
+    "archivo": "rd024-directo.pdf",
+    "url": "https://intranet2.minem.gob.pe/web/archivos/dge/legislacion/dispositivos/rd024-2003-EM.pdf",
+    "origen": "MINEM, descarga directa; láminas escaneadas",
+    "fecha_descarga": "2026-10-14",
+    "bytes": 23748563,
+    "sha256": "c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8"
+  },
+  {
+    "id": "DGE-BT",
+    "norma": "RD 023-2003-EM/DGE",
+    "archivo": "rd023-gobpe.pdf",
+    "url": "https://cdn.www.gob.pe/uploads/document/file/5327171/4775060-r-d-nro-023-2003-em-dge.pdf",
+    "origen": "MINEM/gob.pe, descarga directa; láminas escaneadas",
+    "fecha_descarga": "2026-10-14",
+    "bytes": 3902713,
+    "sha256": "8d1ce3304c365fb98e3e1a44779e581f18d66423ab71a4af0b08f3f30e1a7c65"
+  },
+  {
+    "id": "DGE-SIM",
+    "norma": "RM 091-2002-EM/VME",
+    "archivo": "simbologia-directo.pdf",
+    "url": "https://www.minem.gob.pe/minem/archivos/file/electricidad/legislacion/rm091-2002-em-vme-SIMBOLOGIA.pdf",
+    "origen": "MINEM, descarga directa; documento completo de 138 páginas",
+    "fecha_descarga": "2026-10-14",
+    "bytes": 5549535,
+    "sha256": "896c8665f5f9d1046290cfd8b0b03196be19182e6d3ae9c284d119537473e1e5"
+  },
+  {
+    "id": "REDLIN",
+    "norma": "Adaptación y copias de DGE; no norma propia del MINEM",
+    "archivo": "REDLIN-Peru-DGE-2025-12.zip",
+    "url": "https://www.esolutions.com.pe/download/12062/",
+    "pagina": "https://www.esolutions.com.pe/recursos/base-de-datos/redlin/redlin-peru-dge/",
+    "origen": "Esolutions S.A.C., edición 2025-12; copia de láminas de mayor resolución y plantilla CAD de terceros",
+    "fecha_descarga": "2026-10-14",
+    "bytes": 10843909,
+    "sha256": "b2d858aeae7ee7cbc940283cc50c65b09c8e7e0900dfb8a3c4b8fb7c5c630dc9"
+  },
+  {
+    "id": "DGE-BT-2019",
+    "norma": "RD002-2019-MEM/DGE",
+    "archivo": "rd002-2019-elperuano.pdf",
+    "url": "https://busquedas.elperuano.pe/dispositivo/NL/1729284-1",
+    "descarga": "https://busquedas.elperuano.pe/api/archivo/file/8hHgogfW4yn9xOMJ6kAHt0/*/1729284-1.pdf",
+    "sha256": "4a9fcbe7023f5bd8172f063c23e7da261c2d1ce67a0f779910bac7f8c0ff8221",
+    "bytes": 268699,
+    "fecha_descarga": "2026-10-14",
+    "origen": "PDF oficial El Peruano,9 enero2019,p?ginas39-40; l?mina022 aprobada",
+    "estado": "aprobada"
+  }
+]

@@ -17,6 +17,9 @@ def main():
                 alcance='MCH y transformación de salida - línea primaria - SE llegada Huancasayani; excluye redes de usuarios',
                 fuente_unica='datos/lp-r01/parametros.json',resultados='datos/lp-r01/resultados.json',
                 documentos='expediente/lp-r01',entregables='entregables/linea-primaria-r01',
+                cad_dwg_activo='entregables/linea-primaria-r01/cad/LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg',
+                google_earth='entregables/linea-primaria-r01/google-earth/LP_Limbani_Huancasayani_R01.kmz',
+                biblioteca_normativa='../../herramientas/biblioteca_dge/README.md',
                 antecedente_historico='fuentes/local/lp-r01/antecedente; archivos previos de entregables conservados')
     (P/'proyecto.yaml').write_text(yaml.safe_dump(config,allow_unicode=True,sort_keys=False),encoding='utf-8')
     (P/'datos/parametros_diseno.json').write_text(json.dumps(dict(revision='LP-R01',archivo_activo='lp-r01/parametros.json',

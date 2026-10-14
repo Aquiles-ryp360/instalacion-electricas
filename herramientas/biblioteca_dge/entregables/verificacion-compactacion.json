@@ -1,0 +1,618 @@
+{
+  "hojas": 102,
+  "precision_ascii_mm": 0.0001,
+  "archivos": [
+    {
+      "archivo": "cad/MT/DGE_MT_001.dxf",
+      "bytes_antes": 1206101,
+      "bytes_despues": 1206101,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_002.dxf",
+      "bytes_antes": 1466853,
+      "bytes_despues": 1466853,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_003.dxf",
+      "bytes_antes": 2303043,
+      "bytes_despues": 2303043,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_004.dxf",
+      "bytes_antes": 2368957,
+      "bytes_despues": 2368957,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_005.dxf",
+      "bytes_antes": 1902541,
+      "bytes_despues": 1902541,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_006.dxf",
+      "bytes_antes": 2233633,
+      "bytes_despues": 2233633,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_007.dxf",
+      "bytes_antes": 2588345,
+      "bytes_despues": 2588345,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_008.dxf",
+      "bytes_antes": 2815336,
+      "bytes_despues": 2815336,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_009.dxf",
+      "bytes_antes": 1185507,
+      "bytes_despues": 1185507,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_010.dxf",
+      "bytes_antes": 1616183,
+      "bytes_despues": 1616183,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_011.dxf",
+      "bytes_antes": 1787469,
+      "bytes_despues": 1787469,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_012.dxf",
+      "bytes_antes": 1929467,
+      "bytes_despues": 1929467,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_013.dxf",
+      "bytes_antes": 1228649,
+      "bytes_despues": 1228649,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_014.dxf",
+      "bytes_antes": 1869457,
+      "bytes_despues": 1869457,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_015.dxf",
+      "bytes_antes": 2086731,
+      "bytes_despues": 2086731,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_016.dxf",
+      "bytes_antes": 2177641,
+      "bytes_despues": 2177641,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_017.dxf",
+      "bytes_antes": 1601745,
+      "bytes_despues": 1601745,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_018.dxf",
+      "bytes_antes": 2096771,
+      "bytes_despues": 2096771,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_019.dxf",
+      "bytes_antes": 2720703,
+      "bytes_despues": 2720703,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_020.dxf",
+      "bytes_antes": 3208695,
+      "bytes_despues": 3208695,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_021.dxf",
+      "bytes_antes": 1031750,
+      "bytes_despues": 1031750,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_022.dxf",
+      "bytes_antes": 1621961,
+      "bytes_despues": 1621961,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_023.dxf",
+      "bytes_antes": 1760127,
+      "bytes_despues": 1760127,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_024.dxf",
+      "bytes_antes": 1824389,
+      "bytes_despues": 1824389,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_025.dxf",
+      "bytes_antes": 2551925,
+      "bytes_despues": 2551925,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_026.dxf",
+      "bytes_antes": 2467087,
+      "bytes_despues": 2467087,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_027.dxf",
+      "bytes_antes": 1603967,
+      "bytes_despues": 1603967,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_028.dxf",
+      "bytes_antes": 1655987,
+      "bytes_despues": 1655987,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_029.dxf",
+      "bytes_antes": 1635481,
+      "bytes_despues": 1635481,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_030.dxf",
+      "bytes_antes": 1885425,
+      "bytes_despues": 1885425,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_031.dxf",
+      "bytes_antes": 1567027,
+      "bytes_despues": 1567027,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_032.dxf",
+      "bytes_antes": 2176297,
+      "bytes_despues": 2176297,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_033.dxf",
+      "bytes_antes": 1501425,
+      "bytes_despues": 1501425,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_034.dxf",
+      "bytes_antes": 1949445,
+      "bytes_despues": 1949445,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_035.dxf",
+      "bytes_antes": 2411307,
+      "bytes_despues": 2411307,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_036.dxf",
+      "bytes_antes": 2647781,
+      "bytes_despues": 2647781,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_037.dxf",
+      "bytes_antes": 2737235,
+      "bytes_despues": 2737235,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_038.dxf",
+      "bytes_antes": 1407285,
+      "bytes_despues": 1407285,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_039.dxf",
+      "bytes_antes": 2100487,
+      "bytes_despues": 2100487,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_040.dxf",
+      "bytes_antes": 2297417,
+      "bytes_despues": 2297417,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_040_A.dxf",
+      "bytes_antes": 1935773,
+      "bytes_despues": 1935773,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_040_B.dxf",
+      "bytes_antes": 1955117,
+      "bytes_despues": 1955117,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_041.dxf",
+      "bytes_antes": 2260181,
+      "bytes_despues": 2260181,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_042.dxf",
+      "bytes_antes": 2806511,
+      "bytes_despues": 2806511,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_043.dxf",
+      "bytes_antes": 3245443,
+      "bytes_despues": 3245443,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_044.dxf",
+      "bytes_antes": 2669905,
+      "bytes_despues": 2669905,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_045.dxf",
+      "bytes_antes": 3238321,
+      "bytes_despues": 3238321,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_046.dxf",
+      "bytes_antes": 2714307,
+      "bytes_despues": 2714307,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_047.dxf",
+      "bytes_antes": 2624641,
+      "bytes_despues": 2624641,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_048.dxf",
+      "bytes_antes": 3148467,
+      "bytes_despues": 3148467,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_049.dxf",
+      "bytes_antes": 2958051,
+      "bytes_despues": 2958051,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_050.dxf",
+      "bytes_antes": 2414547,
+      "bytes_despues": 2414547,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_051.dxf",
+      "bytes_antes": 2983269,
+      "bytes_despues": 2983269,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_052.dxf",
+      "bytes_antes": 2454547,
+      "bytes_despues": 2454547,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_053.dxf",
+      "bytes_antes": 2569623,
+      "bytes_despues": 2569623,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_053_A.dxf",
+      "bytes_antes": 2479777,
+      "bytes_despues": 2479777,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_054.dxf",
+      "bytes_antes": 1552209,
+      "bytes_despues": 1552209,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_055.dxf",
+      "bytes_antes": 1496341,
+      "bytes_despues": 1496341,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_056.dxf",
+      "bytes_antes": 1940403,
+      "bytes_despues": 1940403,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_057.dxf",
+      "bytes_antes": 2292551,
+      "bytes_despues": 2292551,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_058.dxf",
+      "bytes_antes": 2716145,
+      "bytes_despues": 2716145,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_059.dxf",
+      "bytes_antes": 2387121,
+      "bytes_despues": 2387121,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_060.dxf",
+      "bytes_antes": 2434373,
+      "bytes_despues": 2434373,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_061.dxf",
+      "bytes_antes": 2355045,
+      "bytes_despues": 2355045,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_062.dxf",
+      "bytes_antes": 2499079,
+      "bytes_despues": 2499079,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_063.dxf",
+      "bytes_antes": 2463599,
+      "bytes_despues": 2463599,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_064_1_2.dxf",
+      "bytes_antes": 1335924,
+      "bytes_despues": 1335924,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_064_2_2.dxf",
+      "bytes_antes": 2759286,
+      "bytes_despues": 2759286,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_064_A.dxf",
+      "bytes_antes": 1816719,
+      "bytes_despues": 1816719,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_064_B.dxf",
+      "bytes_antes": 2118023,
+      "bytes_despues": 2118023,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_065.dxf",
+      "bytes_antes": 1000022,
+      "bytes_despues": 1000022,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_065_A.dxf",
+      "bytes_antes": 1049870,
+      "bytes_despues": 1049870,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_065_B.dxf",
+      "bytes_antes": 731428,
+      "bytes_despues": 731428,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_066.dxf",
+      "bytes_antes": 901398,
+      "bytes_despues": 901398,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_066_A.dxf",
+      "bytes_antes": 737282,
+      "bytes_despues": 737282,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_067.dxf",
+      "bytes_antes": 1101758,
+      "bytes_despues": 1101758,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_068.dxf",
+      "bytes_antes": 603802,
+      "bytes_despues": 603802,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_069.dxf",
+      "bytes_antes": 742202,
+      "bytes_despues": 742202,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_070.dxf",
+      "bytes_antes": 746075,
+      "bytes_despues": 746075,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_071.dxf",
+      "bytes_antes": 1042476,
+      "bytes_despues": 1042476,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_071_A.dxf",
+      "bytes_antes": 964780,
+      "bytes_despues": 964780,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_071_B.dxf",
+      "bytes_antes": 772738,
+      "bytes_despues": 772738,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_072.dxf",
+      "bytes_antes": 1422521,
+      "bytes_despues": 1422521,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_073.dxf",
+      "bytes_antes": 897844,
+      "bytes_despues": 897844,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_073_A.dxf",
+      "bytes_antes": 1024683,
+      "bytes_despues": 1024683,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_074.dxf",
+      "bytes_antes": 1830165,
+      "bytes_despues": 1830165,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_075.dxf",
+      "bytes_antes": 1625219,
+      "bytes_despues": 1625219,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_076.dxf",
+      "bytes_antes": 915930,
+      "bytes_despues": 915930,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_076_A.dxf",
+      "bytes_antes": 626076,
+      "bytes_despues": 626076,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_077.dxf",
+      "bytes_antes": 3112908,
+      "bytes_despues": 2926652,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_078.dxf",
+      "bytes_antes": 2423605,
+      "bytes_despues": 2278838,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_078_A.dxf",
+      "bytes_antes": 520970,
+      "bytes_despues": 520970,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_079.dxf",
+      "bytes_antes": 2068377,
+      "bytes_despues": 2068377,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_080.dxf",
+      "bytes_antes": 2035581,
+      "bytes_despues": 2035581,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_081.dxf",
+      "bytes_antes": 1949339,
+      "bytes_despues": 1949339,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_082.dxf",
+      "bytes_antes": 2091953,
+      "bytes_despues": 2091953,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_083.dxf",
+      "bytes_antes": 2467837,
+      "bytes_despues": 2467837,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_084.dxf",
+      "bytes_antes": 2718409,
+      "bytes_despues": 2718409,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_085.dxf",
+      "bytes_antes": 1807285,
+      "bytes_despues": 1807285,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_086.dxf",
+      "bytes_antes": 1949153,
+      "bytes_despues": 1949153,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_087.dxf",
+      "bytes_antes": 1836825,
+      "bytes_despues": 1836825,
+      "contornos_coinciden_a_mm": 0.0001
+    },
+    {
+      "archivo": "cad/MT/DGE_MT_088.dxf",
+      "bytes_antes": 2002175,
+      "bytes_despues": 2002175,
+      "contornos_coinciden_a_mm": 0.0001
+    }
+  ]
+}

@@ -3,9 +3,11 @@
   "capas_validas_en_copia": [
     "Calles",
     "Casas",
+    "DEM público ~30m; curvas derivadas, no campo",
     "Ortofoto antecedente, fecha por verificar",
     "Rios-Cuencas",
     "cruces",
+    "curvas-dem",
     "linea",
     "postes",
     "referencias-osm",

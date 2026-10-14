@@ -1,62 +1,97 @@
 [
   {
     "layout": "LP-01_GENERAL",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/01-LP-01_GENERAL.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/01-LP-01_GENERAL.png",
     "pagina": 1
   },
   {
     "layout": "LP-02_PLANTA",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/02-LP-02_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/02-LP-02_PLANTA.png",
     "pagina": 2
   },
   {
     "layout": "LP-03_PLANTA",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/03-LP-03_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/03-LP-03_PLANTA.png",
     "pagina": 3
   },
   {
     "layout": "LP-04_PLANTA",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/04-LP-04_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/04-LP-04_PLANTA.png",
     "pagina": 4
   },
   {
     "layout": "LP-05_PLANTA",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/05-LP-05_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/05-LP-05_PLANTA.png",
     "pagina": 5
   },
   {
     "layout": "LP-06_PLANTA",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/06-LP-06_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/06-LP-06_PLANTA.png",
     "pagina": 6
   },
   {
     "layout": "LP-07_PLANTA",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/07-LP-07_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/07-LP-07_PLANTA.png",
     "pagina": 7
   },
   {
     "layout": "LP-08_PLANTA",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/08-LP-08_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/08-LP-08_PLANTA.png",
     "pagina": 8
   },
   {
     "layout": "LP-UNIFILAR",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/09-LP-UNIFILAR.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/09-LP-UNIFILAR.png",
     "pagina": 9
   },
   {
     "layout": "LP-ESTRUCTURAS",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/10-LP-ESTRUCTURAS.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/10-LP-ESTRUCTURAS.png",
     "pagina": 10
   },
   {
     "layout": "LP-TIERRAS",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/11-LP-TIERRAS.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/11-LP-TIERRAS.png",
     "pagina": 11
   },
   {
     "layout": "LP-PROTECCIONES",
-    "png": "build/aquiles-limbani-redes/lp-r01/planos/12-LP-PROTECCIONES.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/12-LP-PROTECCIONES.png",
     "pagina": 12
+  },
+  {
+    "layout": "LP-PF-01",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/13-LP-PF-01.png",
+    "pagina": 13
+  },
+  {
+    "layout": "LP-PF-02",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/14-LP-PF-02.png",
+    "pagina": 14
+  },
+  {
+    "layout": "LP-PF-03",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/15-LP-PF-03.png",
+    "pagina": 15
+  },
+  {
+    "layout": "LP-PF-04",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/16-LP-PF-04.png",
+    "pagina": 16
+  },
+  {
+    "layout": "LP-PF-05",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/17-LP-PF-05.png",
+    "pagina": 17
+  },
+  {
+    "layout": "LP-PF-06",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/18-LP-PF-06.png",
+    "pagina": 18
+  },
+  {
+    "layout": "LP-PF-07",
+    "png": "build/aquiles-limbani-redes/lp-r01/perfiles-explicitos/19-LP-PF-07.png",
+    "pagina": 19
   }
 ]

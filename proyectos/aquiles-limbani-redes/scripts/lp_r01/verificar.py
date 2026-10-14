@@ -1,6 +1,8 @@
 """Controles independientes entre resultados, CAD, DWG, GIS, CSV y PDFs."""
 from pathlib import Path
-import json,math,csv,hashlib,sqlite3
+import json,math,csv,hashlib,sqlite3,sys
+sys.path.insert(0,'G:/Aquiles/dependencias-linea-primaria')
+import pymupdf
 import ezdxf
 from pypdf import PdfReader
 from shapely.geometry import shape
@@ -47,14 +49,14 @@ def main():
     check('Todas las funciones dibujan círculo CACnormativo',all(len(list(cad.blocks['LP_'+kind].query('CIRCLE')))==1 for kind in ['SUSPENSION','ANGULO','ANCLAJE','TERMINAL']))
     check('128 retenidas en CAD',len(list(cad.modelspace().query('INSERT[layer=="LP_RETENIDAS"]')))==len(a['retenidas']))
     se=list(cad.modelspace().query('INSERT[layer=="LP_SE"]'));check('DosSE identificadas en CAD',set(v.get_attrib_text('ID') for v in se)=={'SE-LIM','SE-HUA'})
-    check('12láminasA3 CAD',len(list(cad.layouts))-1==12)
+    check('19láminas del proyecto y23 referencias DGE en CAD',len(list(cad.layouts))-1==42)
     dwg=json.loads((O/'cad/verificacion-dwg.json').read_text(encoding='utf-8'))
-    check('DWGnativo reabierto ycoordenadas conservadas',dwg['postes']==111 and dwg['diferencia_maxima_xy_m']<1e-6 and dwg['audit_errores']==0)
-    check('DWGencabezadoAC1032',(O/'cad/LP_Limbani_Huancasayani_R01.dwg').read_bytes()[:6]==b'AC1032')
+    check('DWG nativo reabierto: coordenadas y 23 referencias DGE conservadas',dwg['postes']==111 and dwg['diferencia_maxima_xy_m']<1e-6 and dwg['audit_errores']==0 and dwg['referencias_dge_verificadas']==23 and dwg['contornos_referencias_y_modelo_coinciden'])
+    check('DWGencabezadoAC1032',(O/'cad'/dwg['archivo']).read_bytes()[:6]==b'AC1032' and dwg['layouts']==42)
     gis=json.loads((O/'qgis/verificacion-qgis.json').read_text(encoding='utf-8'));portable=json.loads((O/'qgis/portabilidad-verificada.json').read_text(encoding='utf-8'))
     check('QGISlongitud idéntica a cálculo',abs(gis['longitud_utm_m']-a['linea_longitud_m'])<1e-6)
     check('Catastro original no modificado',gis['original_sha256']==gis['copia_sha256'])
-    check('QGISportable reabierto11capas',len(portable['capas_validas_en_copia'])==11 and portable['rutas_fuera_paquete']==0)
+    check('QGISportable reabierto13capas',len(portable['capas_validas_en_copia'])==13 and portable['rutas_fuera_paquete']==0)
     con=sqlite3.connect(O/'qgis/LP-Limbani-Huancasayani.gpkg')
     rows=con.execute('SELECT id,e,n,poste_m,armado FROM postes').fetchall();con.close()
     gr={r[0]:r[1:] for r in rows};check('GPKG IDs ycoordenadas/armados iguales a CAD',set(gr)==set(byid) and all(math.isclose(gr[p['id']][0],p['e'],abs_tol=1e-7) and math.isclose(gr[p['id']][1],p['n'],abs_tol=1e-7) and gr[p['id']][2]==p['poste_m'] and gr[p['id']][3]==p['armado'] for p in ps))
@@ -67,6 +69,25 @@ def main():
     for suffix in ['expediente','calculos','planos']:
         f=R/f'output/pdf/Linea_Primaria_Limbani_Huancasayani_R01_{suffix}.pdf';reader=PdfReader(f);pages[suffix]=len(reader.pages)
         check('PDF'+suffix+'válido',len(reader.pages)>0)
+    anexo=PdfReader(R/'output/pdf/Linea_Primaria_Limbani_Huancasayani_R01_anexo_armados.pdf')
+    presentation=json.loads((D/'presentacion-academica.json').read_text(encoding='utf-8'))
+    check('Expediente integra memoria completa, anexo27 y planos19',pages['expediente']==presentation['hojas_memoria']+len(anexo.pages)+pages['planos'] and pages['calculos']==presentation['hojas_calculos'] and len(anexo.pages)==27 and pages['planos']==19)
+    vector=pymupdf.open(R/'output/pdf/Linea_Primaria_Limbani_Huancasayani_R01_anexo_armados.pdf')
+    check('Anexo de armados sin imágenes raster',all(not p.get_images(full=True) for p in vector))
+    check('23 láminas A3 con geometría PDF vectorial',all(len(p.get_drawings())>5 and abs(min(p.rect.width,p.rect.height)-297*72/25.4)<.1 and abs(max(p.rect.width,p.rect.height)-420*72/25.4)<.1 for p in list(vector)[4:]))
+    check('23referencias DGE identificadas en CAD',len([v for v in cad.layouts if v.name.startswith('AN-')])==23)
+    import zipfile,xml.etree.ElementTree as ET
+    from pyproj import Transformer
+    ns={'k':'http://www.opengis.net/kml/2.2'}
+    with zipfile.ZipFile(O/'google-earth/LP_Limbani_Huancasayani_R01.kmz') as z:
+        check('KMZ íntegro y recursos internos',z.testzip() is None and all(f'files/PF-{i:02}.png' in z.namelist() for i in range(1,8)))
+        root=ET.fromstring(z.read('doc.kml'));folder=next(n for n in root.findall('.//k:Folder',ns) if n.find('k:name',ns).text.startswith('02 |'))
+        transformer=Transformer.from_crs(4326,32719,always_xy=True);kmzp={}
+        for node in folder.findall('k:Placemark',ns):
+            key=node.find('k:name',ns).text.split(' /')[0];lo,la,_=map(float,node.find('k:Point/k:coordinates',ns).text.split(','));kmzp[key]=transformer.transform(lo,la)
+        check('111postes KMZ coinciden con CAD/cálculo enUTM',set(kmzp)==set(byid) and all(math.dist(kmzp[p['id']],(p['e'],p['n']))<.001 for p in ps))
+    curves=json.loads((D/'curvas-dem.geojson').read_text(encoding='utf-8'))['features']
+    check('208curvas y68niveles DEM20/100m',len(curves)==208 and len({v['properties']['elev_m'] for v in curves})==68 and all(v['properties']['elev_m']%20==0 for v in curves))
     result=dict(revision='LP-R01',controles_aprobados=len(checks),controles=checks,paginas=pages,
         advertencia='Controles del modelo y coherencia documental; no sustituyen campo, certificados, permisos ni ajustes de relés')
     (O/'verificacion-final.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')

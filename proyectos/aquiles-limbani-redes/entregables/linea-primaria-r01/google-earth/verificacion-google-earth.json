@@ -1,0 +1,15 @@
+{
+  "postes": 111,
+  "vanos": 110,
+  "curvas": 208,
+  "niveles_distintos": 68,
+  "intervalo_curvas_m": 20,
+  "principales_m": 100,
+  "relieve_resolution_aprox_m": 30,
+  "kmz_bytes": 3441962,
+  "coordenadas_origen": "EPSG32719",
+  "coordenadas_kml": "EPSG4326",
+  "modo3d": "relativo para presentación; cotaDEM absoluta opcional sin datum confirmado",
+  "zip_integro": true,
+  "recursos_internos_verificados": true
+}

@@ -9,7 +9,7 @@ def run(input_file,script,log):
     return process.returncode
 def main():
     if not EXE.exists():raise FileNotFoundError(EXE)
-    B.mkdir(parents=True,exist_ok=True);dxf=O/'LP_Limbani_Huancasayani_R01.dxf';dwg=O/'LP_Limbani_Huancasayani_R01.dwg'
+    B.mkdir(parents=True,exist_ok=True);dxf=O/'LP_Limbani_Huancasayani_R01.dxf';dwg=O/'LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg'
     script=B/'guardar.scr'
     # LISP evita prompts dependientes del idioma y mantiene formato nativo R2018.
     script.write_text('(setvar "FILEDIA" 0)\n(setvar "CMDECHO" 0)\n(command "_.AUDIT" "_Y")\n(command "_.SAVEAS" "_2018" "'+dwg.as_posix()+'")\n(command "_.QUIT" "_Y")\n',encoding='ascii')
@@ -33,7 +33,14 @@ def main():
     maxdiff=max(abs(x-y) for k in a for x,y in zip(a[k],b[k]));assert maxdiff<1e-6,maxdiff
     assert len(list(original.layouts))==len(list(roundtrip.layouts))
     audit=roundtrip.audit();assert not audit.errors
-    result=dict(formato='DWG nativo AutoCAD R2018 AC1032',herramienta=str(EXE),postes=len(b),diferencia_maxima_xy_m=maxdiff,
-                layouts=len(list(roundtrip.layouts))-1,audit_errores=len(audit.errors),roundtrip=str(back))
+    import sys
+    sys.path.insert(0,str(R))
+    from herramientas.biblioteca_dge.nativo import stream_signature
+    before,_=stream_signature(dxf,prefixes=('LP_REF_DGE_',))
+    after,_=stream_signature(back,prefixes=('LP_REF_DGE_',))
+    assert before==after,'Diferencia en contornos de referencias DGE o geometría del modelo'
+    references=len([k for k in after if k.startswith('LP_REF_DGE_')]);assert references==23
+    result=dict(archivo=dwg.name,formato='DWG nativo AutoCAD R2018 AC1032',herramienta=str(EXE),postes=len(b),diferencia_maxima_xy_m=maxdiff,
+                layouts=len(list(roundtrip.layouts))-1,audit_errores=len(audit.errors),roundtrip=str(back),referencias_dge_verificadas=references,contornos_referencias_y_modelo_coinciden=True)
     (O/'verificacion-dwg.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(result,ensure_ascii=False))
 if __name__=='__main__':main()

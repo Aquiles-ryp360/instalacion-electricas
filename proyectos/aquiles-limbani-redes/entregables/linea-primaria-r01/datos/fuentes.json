@@ -159,5 +159,33 @@
     "url": "https://library.iec.ch/grasymb/grasymb.nsf/22FB7068C475C7A0C1258CFB00239022/%24FILE/IEC60617_Snapshot_2025-06-03.pdf",
     "lectura": "Fuente IEC pública de símbolo tierra, equivalente02-15-01 edición2.0. Referencia internacional complementaria de comprobación, sin sustituir DGE03-31-44 que sí cubre el símbolo. No se redistribuye la instantánea completa. IEC60417 se descartó para planos por ser símbolos para equipos.",
     "fecha": "2026-10-14"
+  },
+  {
+    "id": "S24",
+    "titulo": "MINEM, texto oficial RD 024-2003-EM/DGE",
+    "url": "https://intranet2.minem.gob.pe/web/archivos/dge/legislacion/dispositivos/rd024-2003-EM.pdf",
+    "lectura": "Descarga directa preservada y cotejo del índice de 102 hojas. Las 23 hojas seleccionadas se convierten desde copias de mayor resolución, con hashes e identificación de origen en la biblioteca.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S25",
+    "titulo": "MINEM, RM 091-2002-EM/VME: símbolos gráficos",
+    "url": "https://www.minem.gob.pe/minem/archivos/file/electricidad/legislacion/rm091-2002-em-vme-SIMBOLOGIA.pdf",
+    "lectura": "PDF oficial íntegro. Sección 9, páginas PDF 73–89: 182 códigos únicos, extraídos como vectores CAD; se excluye la retícula auxiliar de puntos.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S26",
+    "titulo": "El Peruano, RD 002-2019-MEM/DGE",
+    "url": "https://busquedas.elperuano.pe/dispositivo/NL/1729284-1",
+    "lectura": "Publicación de 9 de enero de 2019, lámina BT 022 aprobada de identificación y codificación. PDF oficial de dos páginas conservado; no se usa la propuesta anterior como norma aprobada.",
+    "fecha": "2026-10-14"
+  },
+  {
+    "id": "S27",
+    "titulo": "Esolutions, biblioteca REDLIN Perú DGE",
+    "url": "https://www.esolutions.com.pe/recursos/base-de-datos/redlin/redlin-peru-dge/",
+    "lectura": "Paquete 2025-12 de un tercero, con plantilla CAD y copias normativas. MT: escaneos de mayor resolución; BT: PDF vectorial. Se conservan autoría, Leeme.txt y condiciones. Los CAD derivados no son archivos emitidos por MINEM.",
+    "fecha": "2026-10-14"
   }
 ]

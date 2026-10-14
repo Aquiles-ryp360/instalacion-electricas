@@ -1,0 +1,754 @@
+{
+  "estado": "Biblioteca CAD derivada, no emitida por MINEM",
+  "mt": 102,
+  "bt_base": 21,
+  "bt_complemento2019": 1,
+  "simbolos": 182,
+  "archivos": [
+    {
+      "ruta": "cad/BIBLIOTECA_DGE_BT_COMPLETA.dwg",
+      "bytes": 4076616,
+      "sha256": "92a1a9e56f86f9161f6fa1984ba288856d1267068febb4a2dac7a296ea50c82b"
+    },
+    {
+      "ruta": "cad/BIBLIOTECA_DGE_BT_COMPLETA.dxf",
+      "bytes": 17486844,
+      "sha256": "b9ad2d49edce6c28ef50223c1cc5c30d38714f78968d1496ccfab34265ec09f3"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_001.dxf",
+      "bytes": 1143008,
+      "sha256": "eabf70aa50e61f0428e56e42a3f74301d8be5d70834f1a376471ccc26ea0d933"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_002.dxf",
+      "bytes": 1080623,
+      "sha256": "a4adfc9d3ef62d47376241543c0f9e75562277ff85090d505e82c7488619699a"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_003.dxf",
+      "bytes": 1449254,
+      "sha256": "2245f3365415f41e63692f3e9956411e05fc16898322bd628d3dd092cf50dba9"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_004.dxf",
+      "bytes": 1051363,
+      "sha256": "65821b5dddb0d057472c5b0eb95fcb47173292fcd2e6025dcec8c50a2fc1535b"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_005.dxf",
+      "bytes": 1215388,
+      "sha256": "6cf3ccf93291438d02decd65e06823eb5e275831143ee04098eff4dc9e319d76"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_006.dxf",
+      "bytes": 1090398,
+      "sha256": "5f9aa060880b6ad45dd7ce955a3f9a53c9a3adc70932403d2a29d880c234e71b"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_007.dxf",
+      "bytes": 846129,
+      "sha256": "f1c5f69fe2dda2d2864134f2259fd6396be29c5554b1605c02333d0a6d865338"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_008.dxf",
+      "bytes": 839407,
+      "sha256": "89999fa1435c07e7f15ed46a98e5fe61ca1eceef8bedeceae18bfb7ea5b3c0b5"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_009.dxf",
+      "bytes": 438046,
+      "sha256": "f074a941d3b07e4a64aeaa0339ede873b6d485aa761e5c4307b80fd00b309fe6"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_010.dxf",
+      "bytes": 555887,
+      "sha256": "31b628a4eee99ade641589e96b7520819acec8282eb7dc6b50179d07f1188c91"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_011.dxf",
+      "bytes": 678032,
+      "sha256": "5ffd977e1c54a6090d83c5605ee16146e1a05cecaa0a1c5e3255182b1a644810"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_012.dxf",
+      "bytes": 542388,
+      "sha256": "b89358bd46d4714876ba082653b00e1702b35ce46ff05f94fe16ce9d5937b201"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_013.dxf",
+      "bytes": 829561,
+      "sha256": "4e10393c1e3cacec955ef0a6fddf7a9b6c765f60a41e859b56c65d9cafb72044"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_014.dxf",
+      "bytes": 834304,
+      "sha256": "3618c1608ae83310778cd9da09d837bbf2ce6ed46606186b5a38fa08a939beb9"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_015.dxf",
+      "bytes": 1181863,
+      "sha256": "c1fba13a10e16256fad5df12dc1ca60ea7e1cd03155a961d3215fe3b3f351566"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_016.dxf",
+      "bytes": 322182,
+      "sha256": "57115fcc30a4e1f3039430b53d91eabc6f4890695884ed5bbd409491a72081be"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_017.dxf",
+      "bytes": 397116,
+      "sha256": "4f0780696c0b865201d6f0d3a16161b4176715dda8c0de6e3d9b26df1a7956bf"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_018.dxf",
+      "bytes": 521708,
+      "sha256": "ce7d9593e386c76d9c2de4fe38fee51ddced63b5d0abad3a7ffa69af565eb77d"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_019.dxf",
+      "bytes": 543196,
+      "sha256": "c953932fa6bb33f469d1c124777ee276f268362955c1f356c3f66aa74d5992e1"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_020.dxf",
+      "bytes": 1003475,
+      "sha256": "3cc0cbc660b6a272262ee26a04a80e6d738a6540bb68e770a715cb3b4a4c611b"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_021.dxf",
+      "bytes": 1090397,
+      "sha256": "318a46025c1521108fa947cab242ecc20b8c5334a31646ae244ccabf27216fb1"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_022_RD002_2019.dwg",
+      "bytes": 204785,
+      "sha256": "b5ca2748794b8a8f7611d818f16ea807946edc40df451a392311770699258910"
+    },
+    {
+      "ruta": "cad/BT/DGE_BT_022_RD002_2019.dxf",
+      "bytes": 790016,
+      "sha256": "e325e519a9d69c06755f852a481041e6289a429a775ea6c32bad80240e94b812"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_001.dxf",
+      "bytes": 1206101,
+      "sha256": "9528977baa1ecc1f94f84f3b451f51d624a9d0b00a907e4568ec8b54b01d52d0"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_002.dxf",
+      "bytes": 1466853,
+      "sha256": "fc106abf261137e3df08284752fd78f361eb36108cc61758a53c772011420f3a"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_003.dxf",
+      "bytes": 2303043,
+      "sha256": "0798de4f95a35b482f4f97eae8f545da853a3aefadcc74b254f35c5a88b82136"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_004.dxf",
+      "bytes": 2368957,
+      "sha256": "1371669af76152244fa201d24d18442147c9710b5f8108ac817c0d4e9b4bf8a5"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_005.dxf",
+      "bytes": 1902541,
+      "sha256": "090b5162f0ab82ac9138227cf5782edbb574656d57dcd06a6048f9aa9ef92666"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_006.dxf",
+      "bytes": 2233633,
+      "sha256": "a4d82dd8b1798296208c0a0b0db9d97cffbbfb3dd6713a6848c9e9562d5b7943"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_007.dxf",
+      "bytes": 2588345,
+      "sha256": "15d8295788eac6f8d5ef451de7043b4d1488683aaee75cdb9340e604708d8519"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_008.dxf",
+      "bytes": 2815336,
+      "sha256": "2de32b6595404b47453f685a736d753bc6bd6aa8feac25348c92f0ac4b620680"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_009.dxf",
+      "bytes": 1185507,
+      "sha256": "927a5b84d588add120bbaa9e39509a8c3425ecebe0a765414da268ab1f73dcf3"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_010.dxf",
+      "bytes": 1616183,
+      "sha256": "b8a0fbc08e46a9a1fc140b3147d6ff3c06470ec36cab8f4e332a782167c041ea"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_011.dxf",
+      "bytes": 1787469,
+      "sha256": "569dedc1cb0c82587451749699b5df41a5a83625da320c38b56b397cec212185"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_012.dxf",
+      "bytes": 1929467,
+      "sha256": "bb07e81b3ed9f8bdedd3a1f5797f3ad52aa2fdc34b2771abde01150817bf1e59"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_013.dxf",
+      "bytes": 1228649,
+      "sha256": "26d507960c4ea4231b1f98a536dcd11f436b44b1c0317c6181c3044b48c67da8"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_014.dxf",
+      "bytes": 1869457,
+      "sha256": "519439b8f6f085e87d9d542c77ad34e28dc3d3a53b3a4ff96f3547b6a0ca4ec8"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_015.dxf",
+      "bytes": 2086731,
+      "sha256": "4a573ead31b3b65013291a3fcb96a1d73dd533c6b0d592dedaffb3df37339805"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_016.dxf",
+      "bytes": 2177641,
+      "sha256": "bc838d82b7559bdb4ba3acca77ffd0f8d838c59b1208881196b41c21ff3e6f9d"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_017.dxf",
+      "bytes": 1601745,
+      "sha256": "1ac531ce2675597590eb09c38b920bc643507ec1b506948f5f63d2c1435dbe71"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_018.dxf",
+      "bytes": 2096771,
+      "sha256": "0368be3f13a489ec8765539e896ee6468e49d91dc3a92be2c8e6b3eaa1164fc3"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_019.dxf",
+      "bytes": 2720703,
+      "sha256": "16f7bda9c93fb66b4d0329171dbbd251b376e1955e9bc6e06998aceb6e21d494"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_020.dxf",
+      "bytes": 3208695,
+      "sha256": "117e80662a1bc966a8a68d4933f509a5edfb5c76d680bc492b68ab5d413ef56d"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_021.dxf",
+      "bytes": 1031750,
+      "sha256": "5621b831df7407e6a9ea697499b4d90d45d75a82aef9a901ac8e08355af0d402"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_022.dxf",
+      "bytes": 1621961,
+      "sha256": "a7782af1c7ea990b29eb17fffb1b065a531220ca7ec5b02a24845f30b77bd4d9"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_023.dxf",
+      "bytes": 1760127,
+      "sha256": "7ff5fadfc5e0dc03e74def4286970be8ed4708a0b38e2e90ac180e609d603c76"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_024.dxf",
+      "bytes": 1824389,
+      "sha256": "b2d8e5e354a36828ade5847830e1f86b4aa4996bd3504379261d156aa1475ac9"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_025.dxf",
+      "bytes": 2551925,
+      "sha256": "6fec44ec8f2047de2d347872493cee2bf964468272345f03a32be247aca29ec1"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_026.dxf",
+      "bytes": 2467087,
+      "sha256": "929ded3923e69be5698835fe8e0a4a1828da82988c81c54f2bf052fa005dd98f"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_027.dxf",
+      "bytes": 1603967,
+      "sha256": "7b959d51d2dfcf13735f9c0ba6ed73d06b5485d48fd48bc29e22ccd620494298"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_028.dxf",
+      "bytes": 1655987,
+      "sha256": "9af6fcb276876c23b6005baf7e0154c6db0b7fe5777d4a5874eb12639065669e"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_029.dxf",
+      "bytes": 1635481,
+      "sha256": "82dc19bbedcffe81471270d5ae49bd85968aa7b82a612eb25eac661e85fa4757"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_030.dxf",
+      "bytes": 1885425,
+      "sha256": "fb7d0cec3f7727fe62eaa982bc374736aef62adc163eaec54f55c48e1c0bb996"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_031.dxf",
+      "bytes": 1567027,
+      "sha256": "cc00bbfcd7ecca67a861ad2cdc4fcb9b10894240210d03863b4046dd286a0edd"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_032.dxf",
+      "bytes": 2176297,
+      "sha256": "6d9e25066c470d773840e01f0f4ebfc768494f6e8058e82071f0d4821ad29f6e"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_033.dxf",
+      "bytes": 1501425,
+      "sha256": "a219c6e0c049d339899cef6efe53b50c8915cb304a69217de676e84988ed087e"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_034.dxf",
+      "bytes": 1949445,
+      "sha256": "845d41f5ac1b2eac4e4ff61a0416eec6500b14a48bfd0cc82c246ae353366dcd"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_035.dxf",
+      "bytes": 2411307,
+      "sha256": "5d3cc4bc4000c932530d4ef08e7dc54ba2411893ef0a37d19bdd6bc2b66f7726"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_036.dxf",
+      "bytes": 2647781,
+      "sha256": "81f897866e3f5fddf7fed2e7377b2ab4ad8b855cb2b6637b0f25808c10232e9f"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_037.dxf",
+      "bytes": 2737235,
+      "sha256": "90cdb8b19337274d81feefcead988c959dd162db30629b4a91812fc46db62e4b"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_038.dxf",
+      "bytes": 1407285,
+      "sha256": "d8ecdcda0e66ce015d67a0c355cef069eef95a188327343af87a942241c36009"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_039.dxf",
+      "bytes": 2100487,
+      "sha256": "d50c89e92f95f87ac51c4899c6724b9f11b604db07b67a3c596b0f507bf6d0cd"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_040.dxf",
+      "bytes": 2297417,
+      "sha256": "3862a4314d6d3ddbdb234bc06e4c2c9d13d70376ad35ac0c00e134d0ef714217"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_040_A.dxf",
+      "bytes": 1935773,
+      "sha256": "06cab0d98537c3fc848353a202e8acd95cd90cc17ff21c8bae148fbd763c2592"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_040_B.dxf",
+      "bytes": 1955117,
+      "sha256": "86bb89546ce6a95210f2953c2ff50e4e4ded45e4cf133d5f2f401efcb06f8da1"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_041.dxf",
+      "bytes": 2260181,
+      "sha256": "99184de946e840cfcd7dfa53c2cf16676cdaeb285b936f9b07130c20c3956f2b"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_042.dxf",
+      "bytes": 2806511,
+      "sha256": "b0b2cff7e1669f70572c31b2f6c18e46baf07f79139ae839a86fcbf30a523bae"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_043.dxf",
+      "bytes": 3245443,
+      "sha256": "4ebe04924c777bfc86a5ebb01d0c382f50aab018bb18adfb22670e9016db4eda"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_044.dxf",
+      "bytes": 2669905,
+      "sha256": "9e4656956b4522ac94adee12512757f2b4a1dc53fddb9d77a1165a3887b10cde"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_045.dxf",
+      "bytes": 3238321,
+      "sha256": "00128dffe1b54ee17f306398b6feae4d9bd7274f129e6e6dbbc6b2ade92e77c0"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_046.dxf",
+      "bytes": 2714307,
+      "sha256": "bff95ea2e956b6ce84458fd4fd84903642fe6e8fe970bd0693fcfbfa105bafba"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_047.dxf",
+      "bytes": 2624641,
+      "sha256": "dc43d20fd8b6b8a793dd6c3a422bdb8412b43c2afa7783d0cdbcfb62765a6d44"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_048.dxf",
+      "bytes": 3148467,
+      "sha256": "abcdc31009fb4705d787cba042be3d429e87fba10576b4dfa41614e4515840bd"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_049.dxf",
+      "bytes": 2958051,
+      "sha256": "c2f592b244eeb33524d4c3e58c86c3ed2c590c66805ee389f6bffd4089146506"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_050.dxf",
+      "bytes": 2414547,
+      "sha256": "b240fd628a62348c250f81fabab4d0b52dab058f71dd6ecb7051b0247bfaf116"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_051.dxf",
+      "bytes": 2983269,
+      "sha256": "c27d1cc914a575780f6b06d7c0d3aeccbffb072e494d677abe3b858a32ae508c"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_052.dxf",
+      "bytes": 2454547,
+      "sha256": "71478fba882ea7b4c406fe68f386e5f5ff66c10fd2fc94e7b7d23f9cbc4e125e"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_053.dxf",
+      "bytes": 2569623,
+      "sha256": "f6d0d219d4b29869f5d6dd36edd3a785b5e3490fc0faea3089c51f770f2a1f4e"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_053_A.dxf",
+      "bytes": 2479777,
+      "sha256": "be5cba783da870faa2bd7ab09d9d249558964fdd0234436b354d798dbdef5e1e"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_054.dxf",
+      "bytes": 1552209,
+      "sha256": "2a1c40e312153ab271aedf2221c7ce45064eeab6ef737ecf6ef68f8edfcf5f98"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_055.dxf",
+      "bytes": 1496341,
+      "sha256": "4118f80ab2f1c2567c8254809937def7082b52141586a6b2dac86198759121a4"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_056.dxf",
+      "bytes": 1940403,
+      "sha256": "30bafb11f9ce1681237e7d94468995b6db154998665de1b18541d8f67f963efc"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_057.dxf",
+      "bytes": 2292551,
+      "sha256": "f0edf867cb0ac9c2e1e73baeabe6d7b32e48f518c7d8223b3fa9e7ec4f1b21ce"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_058.dxf",
+      "bytes": 2716145,
+      "sha256": "36fb82238c4a6bd7cbf67b81801a7a9b75b4232aeb82d36d27ca24e39a645913"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_059.dxf",
+      "bytes": 2387121,
+      "sha256": "325d99138acaa522ee80ce8d786e977a79ac58e442e518cdf2825d5d47042636"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_060.dxf",
+      "bytes": 2434373,
+      "sha256": "41155c7e77ec2f84b71610bc481f8e5d99399f23c469f7f15bf52484d10888ad"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_061.dxf",
+      "bytes": 2355045,
+      "sha256": "51db9610611658c0cdfb0ce1639fd057c93700706ec89a362377639cd3960c85"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_062.dxf",
+      "bytes": 2499079,
+      "sha256": "bec2bd24baf207bdaa7a3dc593ebb7ca3f02c79fcf278b0d374e7d0c78e00a44"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_063.dxf",
+      "bytes": 2463599,
+      "sha256": "e306a5a835ed20c679e1c0d3200eb3610f51d988199631434b2812dde72011bd"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_064_1_2.dxf",
+      "bytes": 1335924,
+      "sha256": "c527d52f5da5ba859de0e1563dbe9065278e44829060cdfb1179ec03e2a990f1"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_064_2_2.dxf",
+      "bytes": 2759286,
+      "sha256": "f77f5a4f87a940d3ecbf6a8682641269a48f694b01ac5bdf00cf3d3843d23223"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_064_A.dxf",
+      "bytes": 1816719,
+      "sha256": "f26b9b3b139de74afb99cbd2d09d26df83eff4b0c17222104b32f4a16b364b9c"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_064_B.dxf",
+      "bytes": 2118023,
+      "sha256": "2aecf9a3c4857dc761c58bf55916aed3d3c4145fe944cd6076e38a23dabc7d61"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_065.dxf",
+      "bytes": 1000022,
+      "sha256": "4ca0e8a59aeacaa003664b0f0fdfaa3db5cdaa587bfe641b449798478e20029b"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_065_A.dxf",
+      "bytes": 1049870,
+      "sha256": "f88e1b8be57f7f195e54032653a4e41a7340263f190845ec634d61f1ca6927a2"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_065_B.dxf",
+      "bytes": 731428,
+      "sha256": "576c7f2aafa812c07194e79ac1c7b3e16af3a2da7c9a565fba26fdfb90ed737a"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_066.dxf",
+      "bytes": 901398,
+      "sha256": "32d9acbe363a6f70a761820138ce263e02eee5071dfc81c4402deb62fbc61cb6"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_066_A.dxf",
+      "bytes": 737282,
+      "sha256": "72e660c78e26d682cc43d02e4ce01278ede67ef1dbb349d5f8beb81aff5f1c02"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_067.dxf",
+      "bytes": 1101758,
+      "sha256": "d21caf372826b8d177074c06d0c5b060721961abbe952a0cdb0dd6d5bfb6930d"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_068.dxf",
+      "bytes": 603802,
+      "sha256": "b242549fb79942bbf61eddcf805767396e9ab827cf615037596e1a0f9e1d0e96"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_069.dxf",
+      "bytes": 742202,
+      "sha256": "d98e37728f65d7ae260d1246cc7ae50a2662550ec572838c25c8cda78ff082df"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_070.dxf",
+      "bytes": 746075,
+      "sha256": "20c24fdbd28d018a04b9708cf7332af7fb0c3a9b3c4417a729dd5746a12fbcf0"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_071.dxf",
+      "bytes": 1042476,
+      "sha256": "42dbe55a8133f9d10293291bbfefb5e7d8401b8b36180ca10c507b6b4b5bcdcd"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_071_A.dxf",
+      "bytes": 964780,
+      "sha256": "31450537bc369bc178cda8c9a8f7c267456fe1a229da9b73b7f7f21847b7e0be"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_071_B.dxf",
+      "bytes": 772738,
+      "sha256": "d959da2bc785481be641ba3e2ccefe44c2d3c000cf5e16628ecaa184d67d70e4"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_072.dxf",
+      "bytes": 1422521,
+      "sha256": "2a2c78e1c62222b8adfd12a1ee678ec4c2d4ac2ac73f84a7901e63ae0607a999"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_073.dxf",
+      "bytes": 897844,
+      "sha256": "9317bec942fd2eee6bb00b112e49c3bbd55f151b0b8e4363aefacfd3636228c1"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_073_A.dxf",
+      "bytes": 1024683,
+      "sha256": "cf21d28fd4e506d6b72b25407c1e25e66e912617713d2d8cd9c03aeb6dce1ea3"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_074.dxf",
+      "bytes": 1830165,
+      "sha256": "862fe1fd5a68d4f48ffa97858e41a51f4404a06b4058931ea5d8baa98b6a3d03"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_075.dxf",
+      "bytes": 1625219,
+      "sha256": "391427373bf0224e5de97b12e97b4332e371fd9115902a6d83ebc9a8830c24a4"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_076.dxf",
+      "bytes": 915930,
+      "sha256": "1e3989b664cdb06c3f3cf5940ca0385d4e7543a676113587b7f3e8ef35d8791f"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_076_A.dxf",
+      "bytes": 626076,
+      "sha256": "0c85e5fd425a7e7dbbc7883776e4d81cccd0ac32005c1bfc3d8d794c2c7408de"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_077.dxf",
+      "bytes": 2926652,
+      "sha256": "977bdef3108899b5b857071cd8dc14e531c35fbba79d4f842d121e8ab81d1cf6"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_078.dxf",
+      "bytes": 2278838,
+      "sha256": "e69e7d4296c94ccfa1d54e418d692d0a817c3af65347f2c2c1ed283ee0364794"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_078_A.dxf",
+      "bytes": 520970,
+      "sha256": "94f86180a19cde44b60f50c80ad473aa95ff5da7b0463518b71f5d7a3fb4a5bb"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_079.dxf",
+      "bytes": 2068377,
+      "sha256": "8a491bd51275675e02a1a5ac9013bb0c8f7eb128a9a16a0a5a0c0ed67b265790"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_080.dxf",
+      "bytes": 2035581,
+      "sha256": "b386219701c5769dba75d9f99582c19029c1be2eb5a33f434a1f4635f8d98f7b"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_081.dxf",
+      "bytes": 1949339,
+      "sha256": "5f3f57bca0a71765969dbec5f336fe762b2f8becd1e75636c4efc204cdf8447e"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_082.dxf",
+      "bytes": 2091953,
+      "sha256": "6b39dc144a941cf954354130daff90553b98c494fbd361e9ba892101869060c1"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_083.dxf",
+      "bytes": 2467837,
+      "sha256": "bfdbf957122f1b4f4f94038b91331fc84ca84fc51ceac373a3eb9cfe14275d66"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_084.dxf",
+      "bytes": 2718409,
+      "sha256": "8d7d763526fce2b816e01112e2b4410118e844bdcede033143db82ede1cf72d1"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_085.dxf",
+      "bytes": 1807285,
+      "sha256": "1bc1409b4152395d2379432b5029547d4317ded02265c7e507b5eee1db652061"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_086.dxf",
+      "bytes": 1949153,
+      "sha256": "1d4d0813385dc2de50002ece6efa9c67f3c4a3b264a046be2952b930d987b8aa"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_087.dxf",
+      "bytes": 1836825,
+      "sha256": "37b3bee5337cd0daac1bfa5a04d1def010eb77951685c100f6f898f8cb79d5c8"
+    },
+    {
+      "ruta": "cad/MT/DGE_MT_088.dxf",
+      "bytes": 2002175,
+      "sha256": "04986c4a7bc5bde4c04c91771f01f87a88f61867c9fbede5c76c9356a0b6fd45"
+    },
+    {
+      "ruta": "cad/SIMBOLOGIA_DGE_SECCION_9.dwg",
+      "bytes": 1121376,
+      "sha256": "238e4481c20de9f2a18c13fbe847b43f9b9bd7d88f24bd22b0b462765fe4ecaa"
+    },
+    {
+      "ruta": "cad/SIMBOLOGIA_DGE_SECCION_9.dxf",
+      "bytes": 10228948,
+      "sha256": "011034d57c4fcf6392b51fd2ff2d2befc0102a797b0626df145f27c4739795d6"
+    },
+    {
+      "ruta": "catalogo-armados-BT.csv",
+      "bytes": 7307,
+      "sha256": "dcce7babef36e87ecc7406e41de0717d7eabb6e02a8716439280866311d7a3b1"
+    },
+    {
+      "ruta": "catalogo-armados-BT.json",
+      "bytes": 13481,
+      "sha256": "0e7a6b8f784ab36474e21b97b28126ff0854e29317b56efc9752c423d578e8df"
+    },
+    {
+      "ruta": "catalogo-armados-MT.csv",
+      "bytes": 34399,
+      "sha256": "d33129ccc04e642b47013a73fc14c2d5b520007f2019b1fa0d3cb10e4b9a66d4"
+    },
+    {
+      "ruta": "catalogo-armados-MT.json",
+      "bytes": 64020,
+      "sha256": "78b33597a085ce5b7b343a9c3e62fd642c8a07c3f59459a0ceccf614273612ef"
+    },
+    {
+      "ruta": "catalogo-complementos.json",
+      "bytes": 318,
+      "sha256": "8e5daa63ae82aa43072a049c28282bf711aa0ec2bb9ab1316a71d8911b2dea2f"
+    },
+    {
+      "ruta": "catalogo-simbolos.json",
+      "bytes": 71767,
+      "sha256": "6ff82fcd6ab7ad7cc77ae2a4674ccf5a84d27911dc68b7bb6499ba4a4f248e85"
+    },
+    {
+      "ruta": "fuentes/rd002-2019-elperuano.pdf",
+      "bytes": 268699,
+      "sha256": "4a9fcbe7023f5bd8172f063c23e7da261c2d1ce67a0f779910bac7f8c0ff8221"
+    },
+    {
+      "ruta": "fuentes/rd023-gobpe.pdf",
+      "bytes": 3902713,
+      "sha256": "8d1ce3304c365fb98e3e1a44779e581f18d66423ab71a4af0b08f3f30e1a7c65"
+    },
+    {
+      "ruta": "fuentes/rd024-directo.pdf",
+      "bytes": 23748563,
+      "sha256": "c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8"
+    },
+    {
+      "ruta": "fuentes/simbologia-directo.pdf",
+      "bytes": 5549535,
+      "sha256": "896c8665f5f9d1046290cfd8b0b03196be19182e6d3ae9c284d119537473e1e5"
+    },
+    {
+      "ruta": "fuentes.json",
+      "bytes": 2409,
+      "sha256": "08489dfa47a6f46503dd20bc59e4f9808a635091cc3c1a9fbd0ac556097dbad3"
+    },
+    {
+      "ruta": "LEER_PRIMERO.md",
+      "bytes": 1014,
+      "sha256": "84e765f5555d6c8e344f58618a39690fbf3b7137482478130a90ae619e8d875a"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 7130,
+      "sha256": "15cbb07d232baf71a5626ce07687b99a028ac137c2ac140c3bf9aa7603f77cd9"
+    },
+    {
+      "ruta": "terceros/esolutions/Copias-normativas/Armados BT-Peru-DGE-RD023-2003.pdf",
+      "bytes": 1526117,
+      "sha256": "d6ce76120a5d503ba21d99c31d182bf23cd913179b5bf5f05410520ad9f6f405"
+    },
+    {
+      "ruta": "terceros/esolutions/Copias-normativas/Armados MT-Peru-DGE-RD024-2003.pdf",
+      "bytes": 5298463,
+      "sha256": "346a5e2614b3d444139dff7a6e14e7f8dc9287ceec85a2aac3ae2bfb6b737be7"
+    },
+    {
+      "ruta": "terceros/esolutions/Leeme.txt",
+      "bytes": 6144,
+      "sha256": "043db64215b4094733ec030b27c22dff513f8d8a5025f2860aac446c66babc9f"
+    },
+    {
+      "ruta": "terceros/esolutions/REDLIN-Plantilla-Peru.dxf",
+      "bytes": 1624398,
+      "sha256": "1caa157e3bb7af7aa1dbc0909bc935a6975866307cba963c17e35b02f6c878df"
+    },
+    {
+      "ruta": "verificacion-biblioteca.json",
+      "bytes": 688,
+      "sha256": "b57a93caa52aa318909d787b31a7691c57fd6a42101aecd0c1713c9a93190c85"
+    },
+    {
+      "ruta": "verificacion-compactacion.json",
+      "bytes": 16813,
+      "sha256": "32742af7acd86063d8425da282899c718980af5e85bc3e9497975761eb3d6b4c"
+    },
+    {
+      "ruta": "verificacion-dwg.json",
+      "bytes": 1483,
+      "sha256": "cc77ec13b330c1d0ebc92251484fbe68d944d9ececee293d8beefe7b5b913058"
+    }
+  ]
+}

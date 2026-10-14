@@ -1,0 +1,1 @@
+Escudo universitario: reproducción del recurso de identidad UNAP ya versionado en proyectos/unidad-2-industrial/fuentes/versionadas/identidad/unap_logo.pdf. Se usa exclusivamente como identidad de la universidad; no como referencia de diseño de otro proyecto.
