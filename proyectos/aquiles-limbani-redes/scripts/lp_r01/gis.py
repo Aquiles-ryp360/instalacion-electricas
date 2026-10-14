@@ -5,8 +5,10 @@ os.environ['QT_QPA_PLATFORM']='offscreen'
 from qgis.core import *
 from qgis.PyQt.QtGui import QColor,QFont
 P=Path(__file__).resolve().parents[2];R=P.parents[1];D=P/'datos/lp-r01';O=R/'output/linea-primaria-limbani-huancasayani';G=O/'qgis'
-def main():
-    G.mkdir(parents=True,exist_ok=True);app=QgsApplication([],False);app.initQgis();project=QgsProject.instance()
+def build_project():
+    G.mkdir(parents=True,exist_ok=True);project=QgsProject.instance()
+    icons=G/'simbolos';icons.mkdir(exist_ok=True)
+    (icons/'SE-DGE-09-90-09.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20"><rect x="1" y="1" width="28" height="18" fill="white" stroke="#a32628" stroke-width="1.5"/><path d="M29 1 L1 10 L29 19" fill="none" stroke="#a32628" stroke-width="1.5"/></svg>',encoding='utf-8')
     project.setCrs(QgsCoordinateReferenceSystem('EPSG:32719'));project.setEllipsoid('NONE')
     original=Path('C:/Users/51949/Downloads/Catastro_Limbani/qgis/Catastro-Limbani.gpkg')
     shutil.copy2(original,G/'Catastro-Limbani-original.gpkg')
@@ -33,7 +35,7 @@ def main():
             raster.setCrs(QgsCoordinateReferenceSystem('EPSG:32719'));project.addMapLayer(raster,False);base.addLayer(raster)
             root.findLayer(raster.id()).setItemVisibilityChecked(False)
     gpkg=G/'LP-Limbani-Huancasayani.gpkg'
-    for i,name in enumerate(['linea','vanos','postes','retenidas','subestaciones','referencias-osm']):
+    for i,name in enumerate(['linea','vanos','postes','retenidas','subestaciones','cruces','referencias-osm']):
         source=QgsVectorLayer(str(D/(name+'.geojson')),name,'ogr');assert source.isValid(),name
         options=QgsVectorFileWriter.SaveVectorOptions();options.driverName='GPKG';options.layerName=name
         options.actionOnExistingFile=QgsVectorFileWriter.CreateOrOverwriteFile if i==0 else QgsVectorFileWriter.CreateOrOverwriteLayer
@@ -41,7 +43,8 @@ def main():
         assert err[0]==QgsVectorFileWriter.NoError,err
         layer=QgsVectorLayer(str(gpkg)+'|layername='+name,name,'ogr');assert layer.isValid()
         if layer.geometryType()==Qgis.GeometryType.Point:
-            symbol=QgsMarkerSymbol.createSimple({'name':'square' if name=='subestaciones' else 'circle','color':'#ffffff','outline_color':'#a32625','outline_width':'.35','size':'4' if name=='subestaciones' else '2.4'})
+            symbol=QgsMarkerSymbol.createSimple({'name':'triangle' if name=='cruces' else 'circle','color':'#ffffff','outline_color':'#a32625','outline_width':'.35','size':'2.4'})
+            if name=='subestaciones':symbol.changeSymbolLayer(0,QgsSvgMarkerSymbolLayer.create({'name':str(icons/'SE-DGE-09-90-09.svg'),'size':'5'}))
             layer.renderer().setSymbol(symbol)
             settings=QgsPalLayerSettings();settings.fieldName='id';text=QgsTextFormat();text.setFont(QFont('Arial',9));text.setSize(9);text.setColor(QColor('#642020'))
             buffer=QgsTextBufferSettings();buffer.setEnabled(True);buffer.setSize(.7);buffer.setColor(QColor('white'));text.setBuffer(buffer);settings.setFormat(text)
@@ -64,9 +67,26 @@ def main():
     project.layoutManager().addLayout(layout);assert project.write(str(G/'LP-Limbani-Huancasayani.qgz'))
     (G/'verificacion-qgis.json').write_text(json.dumps(dict(version=Qgis.QGIS_VERSION,capas=summary,original_sha256=hashlib.sha256(original.read_bytes()).hexdigest(),copia_sha256=hashlib.sha256((G/'Catastro-Limbani-original.gpkg').read_bytes()).hexdigest(),longitud_utm_m=sum(f.geometry().length() for f in line.getFeatures())),ensure_ascii=False,indent=2),encoding='utf-8')
     settings=QgsLayoutExporter.ImageExportSettings();settings.dpi=150
-    print('Render QGIS',QgsLayoutExporter(layout).exportToImage(str(G/'vista-general.png'),settings))
+    imagefile=G/'vista-general.png'
+    if imagefile.exists():imagefile.unlink()
+    print('Proyecto guardado; renderizando QGIS',flush=True)
+    print('Render QGIS',QgsLayoutExporter(layout).exportToImage(str(imagefile),settings),flush=True)
     project.clear();assert project.read(str(G/'LP-Limbani-Huancasayani.qgz'))
     assert all(l.isValid() for l in project.mapLayers().values())
     print('QGIS guardado y reabierto:',len(project.mapLayers()),'capas válidas')
-    project.clear();app.exitQgis()
+    project.clear();test=R/'build'/P.name/'lp-r01/prueba-portable'
+    shutil.copytree(G,test,dirs_exist_ok=True);assert project.read(str(test/'LP-Limbani-Huancasayani.qgz'))
+    checks=[]
+    for layer in project.mapLayers().values():
+        assert layer.isValid(),layer.name()
+        path=layer.source().split('|')[0];assert Path(path).resolve().is_relative_to(test.resolve()),path
+        if layer.name()=='subestaciones':assert Path(layer.renderer().symbol().symbolLayer(0).path()).is_file()
+        checks.append(layer.name())
+    (G/'portabilidad-verificada.json').write_text(json.dumps({'version':Qgis.QGIS_VERSION,'capas_validas_en_copia':checks,'rutas_fuera_paquete':0},ensure_ascii=False,indent=2),encoding='utf-8')
+    print('Portabilidad comprobada:',len(checks),'capas')
+    project.clear()
+def main():
+    import gc
+    app=QgsApplication([],False);app.initQgis()
+    build_project();gc.collect();app.exitQgis()
 if __name__=='__main__':main()

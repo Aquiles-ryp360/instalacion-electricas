@@ -1,0 +1,3785 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425715.0,
+          8436650.0
+        ]
+      },
+      "properties": {
+        "id": "P001",
+        "e": 425715.0,
+        "n": 8436650.0,
+        "z_dem_m": 3235.3252128347076,
+        "progresiva_m": 0,
+        "angulo_deg": 0,
+        "estructura": "TERMINAL",
+        "armado": "LP-T-026",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 19.392555257407892,
+        "distancia_casa_m": 829.9131376908392,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 21.776874974572003,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.25613826128642675,
+        "vertical_estudio_kn": 23.416694079208142,
+        "retencion_ramal_kn": 25.704201348026547,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425745.15828882635,
+          8436613.76080598
+        ]
+      },
+      "properties": {
+        "id": "P002",
+        "e": 425745.15828882635,
+        "n": 8436613.76080598,
+        "z_dem_m": 3249.6405993728868,
+        "progresiva_m": 47.1465965706794,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 66.5283004863532,
+        "distancia_casa_m": 807.5282743337677,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.231000120192913,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3320512834649837,
+        "vertical_estudio_kn": 10.283522716353861,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425775.31657765264,
+          8436577.52161196
+        ]
+      },
+      "properties": {
+        "id": "P003",
+        "e": 425775.31657765264,
+        "n": 8436577.52161196,
+        "z_dem_m": 3261.105846597628,
+        "progresiva_m": 94.29319313988984,
+        "angulo_deg": 92.5941336908405,
+        "estructura": "ANCLAJE",
+        "armado": "ESP-RET",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 113.6640457138545,
+        "distancia_casa_m": 787.3332297852511,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 40.3463420118806,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.40729196458591355,
+        "vertical_estudio_kn": 43.253820838203595,
+        "retencion_ramal_kn": 26.371404183360944,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425715.1056496458,
+          8436531.863531454
+        ]
+      },
+      "properties": {
+        "id": "P004",
+        "e": 425715.1056496458,
+        "n": 8436531.863531454,
+        "z_dem_m": 3261.119754538422,
+        "progresiva_m": 169.85784206408368,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 104.61846200304367,
+        "distancia_casa_m": 720.4434025565891,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 44.89724067317373,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4532327950047822,
+        "vertical_estudio_kn": 1.83553184268572,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425654.894721639,
+          8436486.205450946
+        ]
+      },
+      "properties": {
+        "id": "P005",
+        "e": 425654.894721639,
+        "n": 8436486.205450946,
+        "z_dem_m": 3260.1333276230534,
+        "progresiva_m": 245.42249098823115,
+        "angulo_deg": 14.059955960026103,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 67.7837281442972,
+        "distancia_casa_m": 655.441690911294,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 44.1701839174684,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4458932355892226,
+        "vertical_estudio_kn": 40.86590750213274,
+        "retencion_ramal_kn": 26.386773318937344,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425610.42243317585,
+          8436430.82763907
+        ]
+      },
+      "properties": {
+        "id": "P006",
+        "e": 425610.42243317585,
+        "n": 8436430.82763907,
+        "z_dem_m": 3265.72736190079,
+        "progresiva_m": 316.44703948690295,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 64.58995045025311,
+        "distancia_casa_m": 588.4077322931787,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 53.65982277655438,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.4679907794920144,
+        "vertical_estudio_kn": 3.8968533074356824,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425565.95014471275,
+          8436375.44982719
+        ]
+      },
+      "properties": {
+        "id": "P007",
+        "e": 425565.95014471275,
+        "n": 8436375.44982719,
+        "z_dem_m": 3270.1190235185372,
+        "progresiva_m": 387.4715879869906,
+        "angulo_deg": 7.821725084348994,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 56.016076590210446,
+        "distancia_casa_m": 522.4294034959826,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 41.2784745655844,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.41670174203093474,
+        "vertical_estudio_kn": 39.354382550648324,
+        "retencion_ramal_kn": 26.08465887389158,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425536.3788117619,
+          8436326.128063569
+        ]
+      },
+      "properties": {
+        "id": "P008",
+        "e": 425536.3788117619,
+        "n": 8436326.128063569,
+        "z_dem_m": 3270.4140056020965,
+        "progresiva_m": 444.97897967917993,
+        "angulo_deg": 13.486931802868162,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 42.55980770408423,
+        "distancia_casa_m": 467.2083458317906,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.79350184670322,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.38571514757355,
+        "vertical_estudio_kn": 39.07998079819154,
+        "retencion_ramal_kn": 26.016778500296343,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425515.3437442838,
+          8436259.243507992
+        ]
+      },
+      "properties": {
+        "id": "P009",
+        "e": 425515.3437442838,
+        "n": 8436259.243507992,
+        "z_dem_m": 3272.2680197592717,
+        "progresiva_m": 515.0932994609348,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 19.86904393467378,
+        "distancia_casa_m": 397.2641293900022,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 34.519325077313766,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.40601417404509255,
+        "vertical_estudio_kn": 3.4650864394547587,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425494.30867680564,
+          8436192.358952414
+        ]
+      },
+      "properties": {
+        "id": "P010",
+        "e": 425494.30867680564,
+        "n": 8436192.358952414,
+        "z_dem_m": 3278.560849111658,
+        "progresiva_m": 585.2076192444664,
+        "angulo_deg": 21.802611230060748,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 10.03313247398498,
+        "distancia_casa_m": 327.39269121475365,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.79510119053006,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.37397202058962664,
+        "vertical_estudio_kn": 43.29803421172554,
+        "retencion_ramal_kn": 26.171993150417585,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425462.53050669475,
+          8436153.479478933
+        ]
+      },
+      "properties": {
+        "id": "P011",
+        "e": 425462.53050669475,
+        "n": 8436153.479478933,
+        "z_dem_m": 3289.041801012044,
+        "progresiva_m": 635.4218159798712,
+        "angulo_deg": 57.41179830857814,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 24.87711030346189,
+        "distancia_casa_m": 283.59629130223897,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 30.543146765800717,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.35924660980711265,
+        "vertical_estudio_kn": 41.655084998716674,
+        "retencion_ramal_kn": 25.48452534839415,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425481.52361971437,
+          8436095.544394812
+        ]
+      },
+      "properties": {
+        "id": "P012",
+        "e": 425481.52361971437,
+        "n": 8436095.544394812,
+        "z_dem_m": 3292.781031450616,
+        "progresiva_m": 696.3907614711487,
+        "angulo_deg": 23.89406584235085,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 26.72932532817855,
+        "distancia_casa_m": 230.20101920308957,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.1035931483507,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3658385456169219,
+        "vertical_estudio_kn": 39.41187014532798,
+        "retencion_ramal_kn": 25.48452534839415,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425476.0890544737,
+          8436041.50880551
+        ]
+      },
+      "properties": {
+        "id": "P013",
+        "e": 425476.0890544737,
+        "n": 8436041.50880551,
+        "z_dem_m": 3296.330712767325,
+        "progresiva_m": 750.6989506378416,
+        "angulo_deg": 68.61190048695444,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 26.98184790256355,
+        "distancia_casa_m": 176.6613399503073,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.186632498499502,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.33152943423311576,
+        "vertical_estudio_kn": 42.7517674955693,
+        "retencion_ramal_kn": 25.742237338745632,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425437.89753690327,
+          8436030.813232373
+        ]
+      },
+      "properties": {
+        "id": "P014",
+        "e": 425437.89753690327,
+        "n": 8436030.813232373,
+        "z_dem_m": 3308.04547261687,
+        "progresiva_m": 790.3598545489049,
+        "angulo_deg": 53.19193824525628,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 64.52675237217979,
+        "distancia_casa_m": 158.96554309243683,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 30.584622861930217,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.35973444909350993,
+        "vertical_estudio_kn": 46.59008432237983,
+        "retencion_ramal_kn": 26.557710148813733,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425411.9669002858,
+          8435963.83216223
+        ]
+      },
+      "properties": {
+        "id": "P015",
+        "e": 425411.9669002858,
+        "n": 8435963.83216223,
+        "z_dem_m": 3318.7523526544264,
+        "progresiva_m": 862.1850706852763,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 75.50905102185433,
+        "distancia_casa_m": 91.32600213341239,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 43.69956678199028,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4411424064404429,
+        "vertical_estudio_kn": 7.13501848215544,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425386.03626366827,
+          8435896.851092087
+        ]
+      },
+      "properties": {
+        "id": "P016",
+        "e": 425386.03626366827,
+        "n": 8435896.851092087,
+        "z_dem_m": 3330.0829109035535,
+        "progresiva_m": 934.0102868199316,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 91.43173454346211,
+        "distancia_casa_m": 40.072271997395,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 43.69956678199028,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4411424064404429,
+        "vertical_estudio_kn": 5.493944487268625,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425360.1056270508,
+          8435829.870021943
+        ]
+      },
+      "properties": {
+        "id": "P017",
+        "e": 425360.1056270508,
+        "n": 8435829.870021943,
+        "z_dem_m": 3337.3696559706905,
+        "progresiva_m": 1005.835502956303,
+        "angulo_deg": 25.92674675106424,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 133.5365647572652,
+        "distancia_casa_m": 6.601933281829504,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.748978302654105,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3734295260251012,
+        "vertical_estudio_kn": 40.41369086454868,
+        "retencion_ramal_kn": 26.14766655075287,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425364.1056270508,
+          8435781.870021943
+        ]
+      },
+      "properties": {
+        "id": "P018",
+        "e": 425364.1056270508,
+        "n": 8435781.870021943,
+        "z_dem_m": 3339.7054376628826,
+        "progresiva_m": 1054.0018812714723,
+        "angulo_deg": 0.5581950726510924,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 138.6566893064789,
+        "distancia_casa_m": 13.016515196418007,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 30.13064157627839,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.35439474919170066,
+        "vertical_estudio_kn": 3.2488408492155476,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425367.629014461,
+          8435733.952977955
+        ]
+      },
+      "properties": {
+        "id": "P019",
+        "e": 425367.629014461,
+        "n": 8435733.952977955,
+        "z_dem_m": 3343.7867613753324,
+        "progresiva_m": 1102.0482897049644,
+        "angulo_deg": 26.82531156611587,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 146.09504188355558,
+        "distancia_casa_m": 7.00347750940959,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 25.45932004568943,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.299450953254404,
+        "vertical_estudio_kn": 40.88627067443005,
+        "retencion_ramal_kn": 25.46370266687538,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425357.629014461,
+          8435709.952977955
+        ]
+      },
+      "properties": {
+        "id": "P020",
+        "e": 425357.629014461,
+        "n": 8435709.952977955,
+        "z_dem_m": 3348.582485203467,
+        "progresiva_m": 1128.0482897049644,
+        "angulo_deg": 13.873702685485192,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 165.56202111428277,
+        "distancia_casa_m": 6.113213544955332,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 22.483155945851795,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.2644454945407174,
+        "vertical_estudio_kn": 41.231490770545314,
+        "retencion_ramal_kn": 25.46370266687538,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425353.629014461,
+          8435683.952977955
+        ]
+      },
+      "properties": {
+        "id": "P021",
+        "e": 425353.629014461,
+        "n": 8435683.952977955,
+        "z_dem_m": 3351.485421658639,
+        "progresiva_m": 1154.3541825808961,
+        "angulo_deg": 7.5007979958176385,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 156.14057888275877,
+        "distancia_casa_m": 11.42532862818987,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 27.32209022207869,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3213607412618053,
+        "vertical_estudio_kn": 43.23368296758897,
+        "retencion_ramal_kn": 26.392949522854206,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425352.2956811277,
+          8435622.619644621
+        ]
+      },
+      "properties": {
+        "id": "P022",
+        "e": 425352.2956811277,
+        "n": 8435622.619644621,
+        "z_dem_m": 3362.457894473462,
+        "progresiva_m": 1215.7020069565956,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 128.0578077534284,
+        "distancia_casa_m": 19.56985043479056,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.11914934594903,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3777834550217482,
+        "vertical_estudio_kn": 6.818380082465204,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425350.9623477943,
+          8435561.28631129
+        ]
+      },
+      "properties": {
+        "id": "P023",
+        "e": 425350.9623477943,
+        "n": 8435561.28631129,
+        "z_dem_m": 3369.6739830204724,
+        "progresiva_m": 1277.049831330434,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 113.80651513753958,
+        "distancia_casa_m": 17.482540616548793,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 40.3438443318885,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.407266750776181,
+        "vertical_estudio_kn": 6.730213361442027,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425349.629014461,
+          8435499.952977955
+        ]
+      },
+      "properties": {
+        "id": "P024",
+        "e": 425349.629014461,
+        "n": 8435499.952977955,
+        "z_dem_m": 3378.5335471964704,
+        "progresiva_m": 1338.3976557061335,
+        "angulo_deg": 4.381722635070307,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 111.69208611090824,
+        "distancia_casa_m": 24.461347513816946,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 70.63559482530933,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.6160439109132158,
+        "vertical_estudio_kn": 4.85846310899606,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425353.629014461,
+          8435426.952977955
+        ]
+      },
+      "properties": {
+        "id": "P025",
+        "e": 425353.629014461,
+        "n": 8435426.952977955,
+        "z_dem_m": 3376.4162788713033,
+        "progresiva_m": 1411.5071626118704,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 113.90767701528713,
+        "distancia_casa_m": 37.40715766413027,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 54.42453299430086,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.47466015170330417,
+        "vertical_estudio_kn": 2.3893436543282536,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425357.629014461,
+          8435353.952977955
+        ]
+      },
+      "properties": {
+        "id": "P026",
+        "e": 425357.629014461,
+        "n": 8435353.952977955,
+        "z_dem_m": 3379.7078657461243,
+        "progresiva_m": 1484.6166695176073,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 97.14802040957134,
+        "distancia_casa_m": 18.14295480472689,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 44.11090672120286,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.44529483869576875,
+        "vertical_estudio_kn": 3.4682900681254245,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425361.629014461,
+          8435280.952977955
+        ]
+      },
+      "properties": {
+        "id": "P027",
+        "e": 425361.629014461,
+        "n": 8435280.952977955,
+        "z_dem_m": 3386.5423934100013,
+        "progresiva_m": 1557.7261764233442,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 90.86709151380376,
+        "distancia_casa_m": 17.134895227095836,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 44.11090672120286,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.44529483869576875,
+        "vertical_estudio_kn": 4.997924325917905,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425365.629014461,
+          8435207.952977955
+        ]
+      },
+      "properties": {
+        "id": "P028",
+        "e": 425365.629014461,
+        "n": 8435207.952977955,
+        "z_dem_m": 3394.725495298274,
+        "progresiva_m": 1630.8356833290811,
+        "angulo_deg": 15.142466251579568,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 88.56951355839993,
+        "distancia_casa_m": 19.77623948074724,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 41.85340716543487,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4225056245248825,
+        "vertical_estudio_kn": 41.747631994987216,
+        "retencion_ramal_kn": 26.112335603601665,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425353.3534525774,
+          8435150.231257467
+        ]
+      },
+      "properties": {
+        "id": "P029",
+        "e": 425353.3534525774,
+        "n": 8435150.231257467,
+        "z_dem_m": 3401.841313244879,
+        "progresiva_m": 1689.84827889765,
+        "angulo_deg": 3.8760055290910387,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 123.6728534976997,
+        "distancia_casa_m": 6.368890314147479,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 36.91533190353934,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.43419585866313026,
+        "vertical_estudio_kn": 6.1944077531133255,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425351.3534525774,
+          8435136.231257467
+        ]
+      },
+      "properties": {
+        "id": "P030",
+        "e": 425351.3534525774,
+        "n": 8435136.231257467,
+        "z_dem_m": 3403.390634092734,
+        "progresiva_m": 1703.990414521381,
+        "angulo_deg": 6.030942394733593,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 133.22627903200114,
+        "distancia_casa_m": 8.876765913024173,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 36.07587169815283,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.3641820280451527,
+        "vertical_estudio_kn": 45.01726109424406,
+        "retencion_ramal_kn": 26.992378965255522,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425348.3534525774,
+          8435054.384029279
+        ]
+      },
+      "properties": {
+        "id": "P031",
+        "e": 425348.3534525774,
+        "n": 8435054.384029279,
+        "z_dem_m": 3409.712993675834,
+        "progresiva_m": 1785.8926047367202,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 112.1433033618609,
+        "distancia_casa_m": 55.77833379262665,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 57.649462747831365,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.5027861743226177,
+        "vertical_estudio_kn": 4.352866146503645,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425345.3534525774,
+          8434972.53680109
+        ]
+      },
+      "properties": {
+        "id": "P032",
+        "e": 425345.3534525774,
+        "n": 8434972.53680109,
+        "z_dem_m": 3415.859573449454,
+        "progresiva_m": 1867.7947949520594,
+        "angulo_deg": 5.461930846195255,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 62.13487988505842,
+        "distancia_casa_m": 8.438177355235194,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 45.57507194956711,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4600754285237947,
+        "vertical_estudio_kn": 41.62640085782514,
+        "retencion_ramal_kn": 26.847896189510994,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425349.66243916936,
+          8434899.203467757
+        ]
+      },
+      "properties": {
+        "id": "P033",
+        "e": 425349.66243916936,
+        "n": 8434899.203467757,
+        "z_dem_m": 3420.5314746830377,
+        "progresiva_m": 1941.2546148764152,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 10.030769393097973,
+        "distancia_casa_m": 23.487094332051576,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 44.22310580622717,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.44642747633986635,
+        "vertical_estudio_kn": 4.420834413245301,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425353.97142576135,
+          8434825.870134424
+        ]
+      },
+      "properties": {
+        "id": "P034",
+        "e": 425353.97142576135,
+        "n": 8434825.870134424,
+        "z_dem_m": 3428.209715361426,
+        "progresiva_m": 2014.7144347989115,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 80.95395791132022,
+        "distancia_casa_m": 38.0238731117353,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 44.22310580622717,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.44642747633986635,
+        "vertical_estudio_kn": 3.380222761765709,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425358.28041235334,
+          8434752.53680109
+        ]
+      },
+      "properties": {
+        "id": "P035",
+        "e": 425358.28041235334,
+        "n": 8434752.53680109,
+        "z_dem_m": 3430.1756948726515,
+        "progresiva_m": 2088.1742547232675,
+        "angulo_deg": 152.53486967090092,
+        "estructura": "ANCLAJE",
+        "armado": "ESP-RET",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 84.45749824920449,
+        "distancia_casa_m": 30.559748175839033,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.793781383878787,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3386706820028086,
+        "vertical_estudio_kn": 43.07022234412366,
+        "retencion_ramal_kn": 26.202721433538517,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425345.49736683076,
+          8434773.95683656
+        ]
+      },
+      "properties": {
+        "id": "P036",
+        "e": 425345.49736683076,
+        "n": 8434773.95683656,
+        "z_dem_m": 3437.629166057194,
+        "progresiva_m": 2113.1186763918536,
+        "angulo_deg": 51.79955642697668,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 104.65666550694822,
+        "distancia_casa_m": 46.85330118599957,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 21.47613899234401,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.2526010231985887,
+        "vertical_estudio_kn": 55.00702882835308,
+        "retencion_ramal_kn": 28.119772945460497,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425325.6574202719,
+          8434776.52392812
+        ]
+      },
+      "properties": {
+        "id": "P037",
+        "e": 425325.6574202719,
+        "n": 8434776.52392812,
+        "z_dem_m": 3450.2241974787744,
+        "progresiva_m": 2133.1240116436393,
+        "angulo_deg": 48.713486867208616,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 115.04383061821592,
+        "distancia_casa_m": 66.76297557593563,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 22.225315954212807,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.2614127964503976,
+        "vertical_estudio_kn": 60.827534100175036,
+        "retencion_ramal_kn": 28.510350092728327,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425302.82052006,
+          8434756.432287784
+        ]
+      },
+      "properties": {
+        "id": "P038",
+        "e": 425302.82052006,
+        "n": 8434756.432287784,
+        "z_dem_m": 3470.871552735329,
+        "progresiva_m": 2163.541079593982,
+        "angulo_deg": 41.939492361641264,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 119.61551607023047,
+        "distancia_casa_m": 86.1128175844156,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 29.852985535778593,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3511289759559938,
+        "vertical_estudio_kn": 51.58643541044348,
+        "retencion_ramal_kn": 28.510350092728327,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425293.96000487707,
+          8434681.227927389
+        ]
+      },
+      "properties": {
+        "id": "P039",
+        "e": 425293.96000487707,
+        "n": 8434681.227927389,
+        "z_dem_m": 3468.748393673034,
+        "progresiva_m": 2239.265610307808,
+        "angulo_deg": 10.23144828424002,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 76.6431885522045,
+        "distancia_casa_m": 95.05435491466758,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 56.60302815400608,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.49365976063148503,
+        "vertical_estudio_kn": 41.552510582907296,
+        "retencion_ramal_kn": 26.78340755776671,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425269.943625362,
+          8434602.43299583
+        ]
+      },
+      "properties": {
+        "id": "P040",
+        "e": 425269.943625362,
+        "n": 8434602.43299583,
+        "z_dem_m": 3476.765950941808,
+        "progresiva_m": 2321.639318032918,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 83.75192469245253,
+        "distancia_casa_m": 152.2730444647192,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 57.82240349610185,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.5042944662140402,
+        "vertical_estudio_kn": 8.225972018319803,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425245.9272458469,
+          8434523.638064273
+        ]
+      },
+      "properties": {
+        "id": "P041",
+        "e": 425245.9272458469,
+        "n": 8434523.638064273,
+        "z_dem_m": 3499.5001081418577,
+        "progresiva_m": 2404.013025756263,
+        "angulo_deg": 21.728144298761485,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 92.26965537553976,
+        "distancia_casa_m": 225.6317468819268,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 54.27467994586848,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.47335321773825634,
+        "vertical_estudio_kn": 47.1557587886577,
+        "retencion_ramal_kn": 27.848631754533496,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425251.1762420724,
+          8434460.82881866
+        ]
+      },
+      "properties": {
+        "id": "P042",
+        "e": 425251.1762420724,
+        "n": 8434460.82881866,
+        "z_dem_m": 3494.385606446874,
+        "progresiva_m": 2467.0412202075045,
+        "angulo_deg": 29.070450134740565,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 77.99930484396674,
+        "distancia_casa_m": 274.76466621788853,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 48.315490611708384,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.421380521644064,
+        "vertical_estudio_kn": 40.89032339095649,
+        "retencion_ramal_kn": 25.656668575779662,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425230.65577476646,
+          8434415.366884239
+        ]
+      },
+      "properties": {
+        "id": "P043",
+        "e": 425230.65577476646,
+        "n": 8434415.366884239,
+        "z_dem_m": 3502.257307126132,
+        "progresiva_m": 2516.9198434821465,
+        "angulo_deg": 23.13643582003675,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 88.44780897750636,
+        "distancia_casa_m": 324.4567076960655,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 41.49700208295783,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.41890775371449446,
+        "vertical_estudio_kn": 42.027762677414415,
+        "retencion_ramal_kn": 26.700720166018165,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425229.04021171306,
+          8434335.365284674
+        ]
+      },
+      "properties": {
+        "id": "P044",
+        "e": 425229.04021171306,
+        "n": 8434335.365284674,
+        "z_dem_m": 3505.8337622892736,
+        "progresiva_m": 2596.9377538332787,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 79.39370691694087,
+        "distancia_casa_m": 397.05151395640564,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 46.32354119574231,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.46763114471777,
+        "vertical_estudio_kn": 4.257489359587193,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425227.4246486596,
+          8434255.36368511
+        ]
+      },
+      "properties": {
+        "id": "P045",
+        "e": 425227.4246486596,
+        "n": 8434255.36368511,
+        "z_dem_m": 3516.002337682263,
+        "progresiva_m": 2676.95566418255,
+        "angulo_deg": 30.952298989334814,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 71.30415263418175,
+        "distancia_casa_m": 472.0523130474684,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 34.68599950503433,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.4079745883913707,
+        "vertical_estudio_kn": 41.6886420565004,
+        "retencion_ramal_kn": 26.883959296405543,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425257.9486337331,
+          8434202.05591695
+        ]
+      },
+      "properties": {
+        "id": "P046",
+        "e": 425257.9486337331,
+        "n": 8434202.05591695,
+        "z_dem_m": 3514.7779191706973,
+        "progresiva_m": 2738.3839297531986,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 49.77244412718965,
+        "distancia_casa_m": 514.0108491587766,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.14117331323283,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3780424995675468,
+        "vertical_estudio_kn": 2.0626282053865586,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425288.4726188065,
+          8434148.748148788
+        ]
+      },
+      "properties": {
+        "id": "P047",
+        "e": 425288.4726188065,
+        "n": 8434148.748148788,
+        "z_dem_m": 3516.1706348904886,
+        "progresiva_m": 2799.8121953254345,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 35.50698227282068,
+        "distancia_casa_m": 559.5782192656249,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.14117331323283,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3780424995675468,
+        "vertical_estudio_kn": 2.938018756228972,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425318.99660388,
+          8434095.440380627
+        ]
+      },
+      "properties": {
+        "id": "P048",
+        "e": 425318.99660388,
+        "n": 8434095.440380627,
+        "z_dem_m": 3520.6696943308866,
+        "progresiva_m": 2861.240460896083,
+        "angulo_deg": 76.90429591155747,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 26.91303334309162,
+        "distancia_casa_m": 607.9434821759476,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.993898227864424,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.34102444398805487,
+        "vertical_estudio_kn": 42.60954679283555,
+        "retencion_ramal_kn": 25.59065098192737,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425290.83520851267,
+          8434069.279327983
+        ]
+      },
+      "properties": {
+        "id": "P049",
+        "e": 425290.83520851267,
+        "n": 8434069.279327983,
+        "z_dem_m": 3530.5858022218454,
+        "progresiva_m": 2899.6782660427302,
+        "angulo_deg": 65.38242312597399,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 61.59746998910715,
+        "distancia_casa_m": 637.5922726599674,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.490859188681508,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3703935449150966,
+        "vertical_estudio_kn": 45.38748123768923,
+        "retencion_ramal_kn": 26.833009520746746,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425315.8155137897,
+          8433993.628709298
+        ]
+      },
+      "properties": {
+        "id": "P050",
+        "e": 425315.8155137897,
+        "n": 8433993.628709298,
+        "z_dem_m": 3538.97602148562,
+        "progresiva_m": 2979.346526719235,
+        "angulo_deg": 18.008239297147313,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 67.89957950338092,
+        "distancia_casa_m": 709.5170062402816,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 34.14894691401943,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.40165780891577785,
+        "vertical_estudio_kn": 41.301485806130174,
+        "retencion_ramal_kn": 26.833009520746746,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425350.05149901495,
+          8433946.990993429
+        ]
+      },
+      "properties": {
+        "id": "P051",
+        "e": 425350.05149901495,
+        "n": 8433946.990993429,
+        "z_dem_m": 3538.7937698852916,
+        "progresiva_m": 3037.201338323699,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 50.53022201593338,
+        "distancia_casa_m": 753.4691951602323,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.162798593599454,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3665349164149548,
+        "vertical_estudio_kn": 2.2334616131445175,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425384.28748424025,
+          8433900.353277558
+        ]
+      },
+      "properties": {
+        "id": "P052",
+        "e": 425384.28748424025,
+        "n": 8433900.353277558,
+        "z_dem_m": 3541.9263420480247,
+        "progresiva_m": 3095.056149929699,
+        "angulo_deg": 41.60646398343654,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 38.991668072857905,
+        "distancia_casa_m": 799.1943646080078,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 34.56606350544888,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.4065639085562089,
+        "vertical_estudio_kn": 45.96111282675871,
+        "retencion_ramal_kn": 27.588623506437106,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425376.6115521289,
+          8433817.994962463
+        ]
+      },
+      "properties": {
+        "id": "P053",
+        "e": 425376.6115521289,
+        "n": 8433817.994962463,
+        "z_dem_m": 3563.4529950787796,
+        "progresiva_m": 3177.771396402858,
+        "angulo_deg": 28.180611880565685,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 49.80879434513319,
+        "distancia_casa_m": 881.6112393183166,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 33.21706633273347,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3906970869528754,
+        "vertical_estudio_kn": 45.61584728826247,
+        "retencion_ramal_kn": 27.588623506437106,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425395.2557019304,
+          8433773.763201712
+        ]
+      },
+      "properties": {
+        "id": "P054",
+        "e": 425395.2557019304,
+        "n": 8433773.763201712,
+        "z_dem_m": 3565.3465473866936,
+        "progresiva_m": 3225.771948285033,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 59.94279934686999,
+        "distancia_casa_m": 925.8137693654992,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.464807783749478,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.33480131479357184,
+        "vertical_estudio_kn": 2.1830054548042437,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425413.8998517319,
+          8433729.53144096
+        ]
+      },
+      "properties": {
+        "id": "P055",
+        "e": 425413.8998517319,
+        "n": 8433729.53144096,
+        "z_dem_m": 3564.053961932655,
+        "progresiva_m": 3273.7725001672306,
+        "angulo_deg": 20.39206506062864,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 78.50107328515385,
+        "distancia_casa_m": 970.3772461074708,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.0872621788829,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3774084001280041,
+        "vertical_estudio_kn": 41.803455965866505,
+        "retencion_ramal_kn": 26.5764851402692,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425417.10093087645,
+          8433655.138113912
+        ]
+      },
+      "properties": {
+        "id": "P056",
+        "e": 425417.10093087645,
+        "n": 8433655.138113912,
+        "z_dem_m": 3574.603267054699,
+        "progresiva_m": 3348.234665170456,
+        "angulo_deg": 59.29728103224683,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 96.5122497197367,
+        "distancia_casa_m": 1044.8310840113384,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 36.72950030599415,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.4320101188660804,
+        "vertical_estudio_kn": 44.304688144483464,
+        "retencion_ramal_kn": 27.014186981317003,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425489.26358542667,
+          8433616.381813306
+        ]
+      },
+      "properties": {
+        "id": "P057",
+        "e": 425489.26358542667,
+        "n": 8433616.381813306,
+        "z_dem_m": 3565.0653996850497,
+        "progresiva_m": 3430.1462000625847,
+        "angulo_deg": 102.70650938822992,
+        "estructura": "ANCLAJE",
+        "armado": "ESP-RET",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 27.22115924361092,
+        "distancia_casa_m": 1087.9552470581884,
+        "cautela": "Verificar cauce/faja",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 33.01347901408523,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.38830250545854184,
+        "vertical_estudio_kn": 44.523083395819086,
+        "retencion_ramal_kn": 27.014186981317003,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425458.2548545343,
+          8433580.641570626
+        ]
+      },
+      "properties": {
+        "id": "P058",
+        "e": 425458.2548545343,
+        "n": 8433580.641570626,
+        "z_dem_m": 3573.0507383727577,
+        "progresiva_m": 3477.4632830075398,
+        "angulo_deg": 1.2074182697257333e-06,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 40.30493697320085,
+        "distancia_casa_m": 1121.1523986229008,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.277681131947585,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.332600342648172,
+        "vertical_estudio_kn": 9.11606197116505,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425427.24612364196,
+          8433544.901327945
+        ]
+      },
+      "properties": {
+        "id": "P059",
+        "e": 425427.24612364196,
+        "n": 8433544.901327945,
+        "z_dem_m": 3588.8654658184046,
+        "progresiva_m": 3524.7803659524566,
+        "angulo_deg": 18.954708174298542,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 59.92796738975352,
+        "distancia_casa_m": 1155.3339755028276,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 27.05699961625768,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.31824276189435047,
+        "vertical_estudio_kn": 46.93629228400234,
+        "retencion_ramal_kn": 25.996601399853155,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425412.86697142443,
+          8433509.294955079
+        ]
+      },
+      "properties": {
+        "id": "P060",
+        "e": 425412.86697142443,
+        "n": 8433509.294955079,
+        "z_dem_m": 3597.3100339854786,
+        "progresiva_m": 3563.180545733586,
+        "angulo_deg": 20.139219612708757,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 70.19659767302043,
+        "distancia_casa_m": 1190.5232534680902,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 37.75872118989022,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.38117021189067446,
+        "vertical_estudio_kn": 42.703648542867185,
+        "retencion_ramal_kn": 25.836752109804213,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425410.6650950881,
+          8433441.177846452
+        ]
+      },
+      "properties": {
+        "id": "P061",
+        "e": 425410.6650950881,
+        "n": 8433441.177846452,
+        "z_dem_m": 3600.0183964855387,
+        "progresiva_m": 3631.3332327459593,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 63.39492786846696,
+        "distancia_casa_m": 1258.5825063042755,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 42.52332094632822,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4292683317820332,
+        "vertical_estudio_kn": 4.8274529739490495,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425408.4632187518,
+          8433373.060737826
+        ]
+      },
+      "properties": {
+        "id": "P062",
+        "e": 425408.4632187518,
+        "n": 8433373.060737826,
+        "z_dem_m": 3590.8799060407428,
+        "progresiva_m": 3699.485919758331,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 73.42142718936847,
+        "distancia_casa_m": 1326.651352389192,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 33.98225032280853,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.39969713388389244,
+        "vertical_estudio_kn": 7.304661478646052,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425406.26134241547,
+          8433304.9436292
+        ]
+      },
+      "properties": {
+        "id": "P063",
+        "e": 425406.26134241547,
+        "n": 8433304.9436292,
+        "z_dem_m": 3603.6786173424407,
+        "progresiva_m": 3767.6386067707026,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 63.49136039595888,
+        "distancia_casa_m": 1394.7283871460443,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 33.982250322808795,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3996971338838955,
+        "vertical_estudio_kn": 5.635149563649294,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425404.0594660791,
+          8433236.826520573
+        ]
+      },
+      "properties": {
+        "id": "P064",
+        "e": 425404.0594660791,
+        "n": 8433236.826520573,
+        "z_dem_m": 3599.574812129176,
+        "progresiva_m": 3835.791293783076,
+        "angulo_deg": 44.619066625605534,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 64.97848361819425,
+        "distancia_casa_m": 1462.8124673108134,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.31990466691193,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.38014472673385,
+        "vertical_estudio_kn": 42.316951069087004,
+        "retencion_ramal_kn": 25.881918198425357,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425363.4514987495,
+          8433198.25124322
+        ]
+      },
+      "properties": {
+        "id": "P065",
+        "e": 425363.4514987495,
+        "n": 8433198.25124322,
+        "z_dem_m": 3609.242770042262,
+        "progresiva_m": 3891.800748640998,
+        "angulo_deg": 26.274980700070262,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 97.91144214168706,
+        "distancia_casa_m": 1501.4793212128718,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 40.84168624261291,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.41229241109037856,
+        "vertical_estudio_kn": 45.12188979939603,
+        "retencion_ramal_kn": 26.44394898440678,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425339.35654560255,
+          8433132.747272156
+        ]
+      },
+      "properties": {
+        "id": "P066",
+        "e": 425339.35654560255,
+        "n": 8433132.747272156,
+        "z_dem_m": 3621.427441988093,
+        "progresiva_m": 3961.5957125880277,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 59.83888780509155,
+        "distancia_casa_m": 1567.5262596788107,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 43.04931307344907,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.43457816549009753,
+        "vertical_estudio_kn": 5.272934773269799,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425315.2615924556,
+          8433067.243301092
+        ]
+      },
+      "properties": {
+        "id": "P067",
+        "e": 425315.2615924556,
+        "n": 8433067.243301092,
+        "z_dem_m": 3624.874927182626,
+        "progresiva_m": 4031.3906765350575,
+        "angulo_deg": 19.9367515837838,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 44.496601233089606,
+        "distancia_casa_m": 1633.8848403483498,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 40.98193384836244,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.41370819552152666,
+        "vertical_estudio_kn": 42.33827889091729,
+        "retencion_ramal_kn": 25.966220592013965,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425278.5959694274,
+          8433023.751215868
+        ]
+      },
+      "properties": {
+        "id": "P068",
+        "e": 425278.5959694274,
+        "n": 8433023.751215868,
+        "z_dem_m": 3636.688831048637,
+        "progresiva_m": 4088.2759065089454,
+        "angulo_deg": 8.537736462515939e-07,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 61.65142181671414,
+        "distancia_casa_m": 1679.3086513504377,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 38.91455766149632,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.3928382562234637,
+        "vertical_estudio_kn": 7.414015879361957,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425241.9303463992,
+          8432980.259130644
+        ]
+      },
+      "properties": {
+        "id": "P069",
+        "e": 425241.9303463992,
+        "n": 8432980.259130644,
+        "z_dem_m": 3648.2096364300414,
+        "progresiva_m": 4145.161136482796,
+        "angulo_deg": 12.22932749507969,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 76.88498691754727,
+        "distancia_casa_m": 1725.4122058972014,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.43928431332407,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3815488627772768,
+        "vertical_estudio_kn": 41.58739011714948,
+        "retencion_ramal_kn": 25.93532161269365,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425210.03831929574,
+          8432920.033055512
+        ]
+      },
+      "properties": {
+        "id": "P070",
+        "e": 425210.03831929574,
+        "n": 8432920.033055512,
+        "z_dem_m": 3645.2784641089593,
+        "progresiva_m": 4213.3101021279645,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 107.17263887516685,
+        "distancia_casa_m": 1788.3095148052448,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 33.98123145097506,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.39968514997618276,
+        "vertical_estudio_kn": 2.628234507402023,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425178.1462921923,
+          8432859.80698038
+        ]
+      },
+      "properties": {
+        "id": "P071",
+        "e": 425178.1462921923,
+        "n": 8432859.80698038,
+        "z_dem_m": 3647.0345877113396,
+        "progresiva_m": 4281.459067773133,
+        "angulo_deg": 12.674316344049593,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 123.7002709872472,
+        "distancia_casa_m": 1851.578549309725,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.6847206765409,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3844356701545624,
+        "vertical_estudio_kn": 38.656342763979794,
+        "retencion_ramal_kn": 25.90413964511003,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425139.9777747394,
+          8432815.239220954
+        ]
+      },
+      "properties": {
+        "id": "P072",
+        "e": 425139.9777747394,
+        "n": 8432815.239220954,
+        "z_dem_m": 3646.35369941772,
+        "progresiva_m": 4340.137180428821,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 113.13186324790126,
+        "distancia_casa_m": 1900.4560205041219,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.388209901913072,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.36918619033066424,
+        "vertical_estudio_kn": 4.682631460518358,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425101.8092572865,
+          8432770.67146153
+        ]
+      },
+      "properties": {
+        "id": "P073",
+        "e": 425101.8092572865,
+        "n": 8432770.67146153,
+        "z_dem_m": 3655.9977188257717,
+        "progresiva_m": 4398.815293083095,
+        "angulo_deg": 8.094953797752247,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 98.69420321241519,
+        "distancia_casa_m": 1949.8741726786634,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 41.579575893956466,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.41974132741728715,
+        "vertical_estudio_kn": 44.61489358308734,
+        "retencion_ramal_kn": 26.46353829190984,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425063.2852640566,
+          8432710.15967561
+        ]
+      },
+      "properties": {
+        "id": "P074",
+        "e": 425063.2852640566,
+        "n": 8432710.15967561,
+        "z_dem_m": 3664.8647279390325,
+        "progresiva_m": 4470.549345594376,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 17,
+        "amarre_m": 14.200000000000001,
+        "distancia_cauce_m": 96.76249854571076,
+        "distancia_casa_m": 2015.5855832288821,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 53.9200458971105,
+        "capacidad_momento_tipo_knm": 114.66000000000001,
+        "utilizacion_poste": 0.4702602991200985,
+        "vertical_estudio_kn": 5.240566272843605,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425024.7612708267,
+          8432649.647889689
+        ]
+      },
+      "properties": {
+        "id": "P075",
+        "e": 425024.7612708267,
+        "n": 8432649.647889689,
+        "z_dem_m": 3661.6178215818327,
+        "progresiva_m": 4542.283398105657,
+        "angulo_deg": 16.101387960519965,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 119.00347774685724,
+        "distancia_casa_m": 2081.694681248983,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 39.946009362101,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4032506497284575,
+        "vertical_estudio_kn": 40.73300271765429,
+        "retencion_ramal_kn": 26.165894323557747,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424988.40702243324,
+          8432617.578916226
+        ]
+      },
+      "properties": {
+        "id": "P076",
+        "e": 424988.40702243324,
+        "n": 8432617.578916226,
+        "z_dem_m": 3666.901362111976,
+        "progresiva_m": 4590.760716876652,
+        "angulo_deg": 20.846987802912547,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 144.7252008433205,
+        "distancia_casa_m": 2119.8192398994947,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 29.225130128984645,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3437441793576176,
+        "vertical_estudio_kn": 37.798985188083535,
+        "retencion_ramal_kn": 24.906288542829333,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424963.7040934457,
+          8432570.59992223
+        ]
+      },
+      "properties": {
+        "id": "P077",
+        "e": 424963.7040934457,
+        "n": 8432570.59992223,
+        "z_dem_m": 3665.9673770760146,
+        "progresiva_m": 4643.838589642595,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 118.7094457056276,
+        "distancia_casa_m": 2170.6617216541467,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 29.854922168773264,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3511517545139175,
+        "vertical_estudio_kn": 3.336151995541091,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424939.00116445817,
+          8432523.620928235
+        ]
+      },
+      "properties": {
+        "id": "P078",
+        "e": 424939.00116445817,
+        "n": 8432523.620928235,
+        "z_dem_m": 3672.02837489407,
+        "progresiva_m": 4696.916462408512,
+        "angulo_deg": 12.700378809416629,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 86.91846938894317,
+        "distancia_casa_m": 2221.608770917076,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.413721492448396,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.38124819445363906,
+        "vertical_estudio_kn": 40.44844705784255,
+        "retencion_ramal_kn": 26.132191788719958,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424920.3818775996,
+          8432454.308619492
+        ]
+      },
+      "properties": {
+        "id": "P079",
+        "e": 424920.3818775996,
+        "n": 8432454.308619492,
+        "z_dem_m": 3671.1606131332983,
+        "progresiva_m": 4768.686051974638,
+        "angulo_deg": 17.083011653847873,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 50.5223917383288,
+        "distancia_casa_m": 2293.256241271795,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 34.45506023152983,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.40525829488978865,
+        "vertical_estudio_kn": 39.55104574564865,
+        "retencion_ramal_kn": 26.132191788719958,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424884.2328607407,
+          8432396.725334454
+        ]
+      },
+      "properties": {
+        "id": "P080",
+        "e": 424884.2328607407,
+        "n": 8432396.725334454,
+        "z_dem_m": 3674.723468068173,
+        "progresiva_m": 4836.675655117811,
+        "angulo_deg": 21.81071819332302,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 39.66888809182265,
+        "distancia_casa_m": 2357.1115947041526,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 35.58302870781247,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.41852539058824356,
+        "vertical_estudio_kn": 42.78551287018301,
+        "retencion_ramal_kn": 26.942460879473014,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424819.5614653192,
+          8432349.618089134
+        ]
+      },
+      "properties": {
+        "id": "P081",
+        "e": 424819.5614653192,
+        "n": 8432349.618089134,
+        "z_dem_m": 3684.936286952364,
+        "progresiva_m": 4916.684916753229,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 35.28397199350993,
+        "distancia_casa_m": 2417.5183057103363,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 37.228457768842624,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.43787882579207976,
+        "vertical_estudio_kn": 4.8041333777275925,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424754.8900698977,
+          8432302.510843812
+        ]
+      },
+      "properties": {
+        "id": "P082",
+        "e": 424754.8900698977,
+        "n": 8432302.510843812,
+        "z_dem_m": 3689.206697186624,
+        "progresiva_m": 4996.694178389743,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 46.8641293774003,
+        "distancia_casa_m": 2479.035580806418,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 37.228457768842624,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.43787882579207976,
+        "vertical_estudio_kn": 4.861048564548955,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424690.2186744762,
+          8432255.403598491
+        ]
+      },
+      "properties": {
+        "id": "P083",
+        "e": 424690.2186744762,
+        "n": 8432255.403598491,
+        "z_dem_m": 3699.6808937411392,
+        "progresiva_m": 5076.7034400251605,
+        "angulo_deg": 12.487864933509675,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 62.80765241999702,
+        "distancia_casa_m": 2541.582779932613,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 36.4418247380617,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.42862649656623963,
+        "vertical_estudio_kn": 43.960289764344495,
+        "retencion_ramal_kn": 26.957118762900212,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424641.0666611238,
+          8432199.734277956
+        ]
+      },
+      "properties": {
+        "id": "P084",
+        "e": 424641.0666611238,
+        "n": 8432199.734277956,
+        "z_dem_m": 3708.0891795472976,
+        "progresiva_m": 5150.966443367411,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 71.12059300653272,
+        "distancia_casa_m": 2608.793675690847,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 35.6551917076273,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.41937416734447547,
+        "vertical_estudio_kn": 5.171563823748625,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424591.9146477714,
+          8432144.06495742
+        ]
+      },
+      "properties": {
+        "id": "P085",
+        "e": 424591.9146477714,
+        "n": 8432144.06495742,
+        "z_dem_m": 3715.412705548668,
+        "progresiva_m": 5225.229446711095,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 83.73861453709159,
+        "distancia_casa_m": 2676.377373379839,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 35.6551917076273,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.41937416734447547,
+        "vertical_estudio_kn": 6.067280617650076,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424542.762634419,
+          8432088.395636884
+        ]
+      },
+      "properties": {
+        "id": "P086",
+        "e": 424542.762634419,
+        "n": 8432088.395636884,
+        "z_dem_m": 3727.6668650821666,
+        "progresiva_m": 5299.492450053345,
+        "angulo_deg": 27.82896593520905,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 100.69360052666998,
+        "distancia_casa_m": 2744.306330291135,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 30.556563271692703,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3594044139225206,
+        "vertical_estudio_kn": 43.583816098817685,
+        "retencion_ramal_kn": 26.700533544190876,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424534.04980394035,
+          8432052.417454174
+        ]
+      },
+      "properties": {
+        "id": "P087",
+        "e": 424534.04980394035,
+        "n": 8432052.417454174,
+        "z_dem_m": 3723.842479250584,
+        "progresiva_m": 5336.510594876056,
+        "angulo_deg": 22.765532883567303,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 93.64040357766919,
+        "distancia_casa_m": 2781.2212524588267,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 30.06814033907889,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3536596134918712,
+        "vertical_estudio_kn": 40.31020107973525,
+        "retencion_ramal_kn": 26.080280514048443,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424545.2945314823,
+          8431982.622339787
+        ]
+      },
+      "properties": {
+        "id": "P088",
+        "e": 424545.2945314823,
+        "n": 8431982.622339787,
+        "z_dem_m": 3721.8602734583455,
+        "progresiva_m": 5407.2057282995265,
+        "angulo_deg": 37.564224795703055,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 68.97916410448556,
+        "distancia_casa_m": 2844.382986622022,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.585657254735686,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.38327049229282156,
+        "vertical_estudio_kn": 41.19769634202488,
+        "retencion_ramal_kn": 26.080280514048443,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424518.9308651374,
+          8431933.887991957
+        ]
+      },
+      "properties": {
+        "id": "P089",
+        "e": 424518.9308651374,
+        "n": 8431933.887991957,
+        "z_dem_m": 3730.0481419375806,
+        "progresiva_m": 5462.6140269696825,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 56.42422929215358,
+        "distancia_casa_m": 2898.757057549425,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 30.49296866726432,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3586564181047321,
+        "vertical_estudio_kn": 6.187736932245848,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424492.56719879253,
+          8431885.153644128
+        ]
+      },
+      "properties": {
+        "id": "P090",
+        "e": 424492.56719879253,
+        "n": 8431885.153644128,
+        "z_dem_m": 3737.006878534055,
+        "progresiva_m": 5518.02232563981,
+        "angulo_deg": 27.203368811068597,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 62.78761138232595,
+        "distancia_casa_m": 2953.169575544778,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 39.69203495641076,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.40068680553614733,
+        "vertical_estudio_kn": 41.0920629126409,
+        "retencion_ramal_kn": 25.626946933528203,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424491.23384793533,
+          8431821.950575596
+        ]
+      },
+      "properties": {
+        "id": "P091",
+        "e": 424491.23384793533,
+        "n": 8431821.950575596,
+        "z_dem_m": 3740.6542898967427,
+        "progresiva_m": 5581.239456991805,
+        "angulo_deg": 33.615485704043536,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 46.32604180629911,
+        "distancia_casa_m": 3013.859443065285,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 38.03951966453916,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.3840048421617116,
+        "vertical_estudio_kn": 39.98210121627511,
+        "retencion_ramal_kn": 25.626946933528203,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424515.3984468885,
+          8431783.883447306
+        ]
+      },
+      "properties": {
+        "id": "P092",
+        "e": 424515.3984468885,
+        "n": 8431783.883447306,
+        "z_dem_m": 3738.1882255937103,
+        "progresiva_m": 5626.328636389698,
+        "angulo_deg": 41.85697570858973,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 33.34381616695215,
+        "distancia_casa_m": 3043.215756288523,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.667348056249924,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3371835809956472,
+        "vertical_estudio_kn": 38.27905743782629,
+        "retencion_ramal_kn": 25.00181822947282,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424506.79641887575,
+          8431732.202962425
+        ]
+      },
+      "properties": {
+        "id": "P093",
+        "e": 424506.79641887575,
+        "n": 8431732.202962425,
+        "z_dem_m": 3739.612389580553,
+        "progresiva_m": 5678.720118555521,
+        "angulo_deg": 71.00855049408871,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 32.59986280584142,
+        "distancia_casa_m": 3095.2013538360225,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 29.10072261399297,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.34228090583383874,
+        "vertical_estudio_kn": 39.411556853752444,
+        "retencion_ramal_kn": 25.108926472724303,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424459.2090471028,
+          8431724.204206845
+        ]
+      },
+      "properties": {
+        "id": "P094",
+        "e": 424459.2090471028,
+        "n": 8431724.204206845,
+        "z_dem_m": 3747.5249699813644,
+        "progresiva_m": 5726.975046211508,
+        "angulo_deg": 36.94884495940045,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 53.659684106442576,
+        "distancia_casa_m": 3116.7074551439587,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.685743648388,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.33739994881660784,
+        "vertical_estudio_kn": 41.23806546996976,
+        "retencion_ramal_kn": 25.108926472724303,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424425.2256991698,
+          8431688.405426601
+        ]
+      },
+      "properties": {
+        "id": "P095",
+        "e": 424425.2256991698,
+        "n": 8431688.405426601,
+        "z_dem_m": 3754.594817137566,
+        "progresiva_m": 5776.335157674927,
+        "angulo_deg": 21.122760513792688,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 57.38954007185496,
+        "distancia_casa_m": 3161.0763151363376,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.903823965534382,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3752508111683649,
+        "vertical_estudio_kn": 42.13267503570458,
+        "retencion_ramal_kn": 26.216851501093426,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424397.8941660341,
+          8431622.05137828
+        ]
+      },
+      "properties": {
+        "id": "P096",
+        "e": 424397.8941660341,
+        "n": 8431622.05137828,
+        "z_dem_m": 3758.417038900241,
+        "progresiva_m": 5848.097769334029,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 72.010508075235,
+        "distancia_casa_m": 3232.606048109627,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 43.67951568008837,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4409399927325698,
+        "vertical_estudio_kn": 3.35067782606759,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424370.56263289845,
+          8431555.69732996
+        ]
+      },
+      "properties": {
+        "id": "P097",
+        "e": 424370.56263289845,
+        "n": 8431555.69732996,
+        "z_dem_m": 3756.3324575783313,
+        "progresiva_m": 5919.860380991408,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 47.13562732651862,
+        "distancia_casa_m": 3304.1458804487597,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 43.67951568008482,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.440939992732534,
+        "vertical_estudio_kn": 3.882535969854421,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424343.23109976284,
+          8431489.34328164
+        ]
+      },
+      "properties": {
+        "id": "P098",
+        "e": 424343.23109976284,
+        "n": 8431489.34328164,
+        "z_dem_m": 3750.256108507946,
+        "progresiva_m": 5991.622992650488,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 30.375255440260453,
+        "distancia_casa_m": 3375.6951700610784,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 34.97061033714912,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.4113221634574114,
+        "vertical_estudio_kn": 6.181799717131695,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424315.89956662717,
+          8431422.98923332
+        ]
+      },
+      "properties": {
+        "id": "P099",
+        "e": 424315.89956662717,
+        "n": 8431422.98923332,
+        "z_dem_m": 3760.2646548450334,
+        "progresiva_m": 6063.385604307868,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 41.97738875119032,
+        "distancia_casa_m": 3447.253328073389,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 43.67951568008837,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.4409399927325698,
+        "vertical_estudio_kn": 4.717739539611517,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424288.5680334915,
+          8431356.635185
+        ]
+      },
+      "properties": {
+        "id": "P100",
+        "e": 424288.5680334915,
+        "n": 8431356.635185,
+        "z_dem_m": 3758.5860630359057,
+        "progresiva_m": 6135.1482159669695,
+        "angulo_deg": 27.579404977836727,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 15,
+        "amarre_m": 12.4,
+        "distancia_cauce_m": 51.35087851231444,
+        "distancia_casa_m": 3518.8198134500512,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 39.479606966456316,
+        "capacidad_momento_tipo_knm": 99.06000000000002,
+        "utilizacion_poste": 0.3985423679230397,
+        "vertical_estudio_kn": 40.09490957205551,
+        "retencion_ramal_kn": 26.090937366656696,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424253.7023698798,
+          8431327.34454934
+        ]
+      },
+      "properties": {
+        "id": "P101",
+        "e": 424253.7023698798,
+        "n": 8431327.34454934,
+        "z_dem_m": 3764.4393251157717,
+        "progresiva_m": 6180.684529349442,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 72.77939736783749,
+        "distancia_casa_m": 3557.612903312617,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 27.790121245868036,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.32686569331766685,
+        "vertical_estudio_kn": 3.3021270083214778,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424218.83670626814,
+          8431298.053913679
+        ]
+      },
+      "properties": {
+        "id": "P102",
+        "e": 424218.83670626814,
+        "n": 8431298.053913679,
+        "z_dem_m": 3762.0947769405875,
+        "progresiva_m": 6226.220842731914,
+        "angulo_deg": 15.81754449056005,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 40.579982614954396,
+        "distancia_casa_m": 3596.564106446198,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.124528745052316,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3307989737126831,
+        "vertical_estudio_kn": 40.0419028015443,
+        "retencion_ramal_kn": 25.2062923924802,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424175.0795029453,
+          8431278.373897128
+        ]
+      },
+      "properties": {
+        "id": "P103",
+        "e": 424175.0795029453,
+        "n": 8431278.373897128,
+        "z_dem_m": 3770.4665273626215,
+        "progresiva_m": 6274.199962087006,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 41.816609302663785,
+        "distancia_casa_m": 3629.56052421315,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 28.458936244132012,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.33473225410646923,
+        "vertical_estudio_kn": 4.2097869632587335,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424131.32229962246,
+          8431258.693880579
+        ]
+      },
+      "properties": {
+        "id": "P104",
+        "e": 424131.32229962246,
+        "n": 8431258.693880579,
+        "z_dem_m": 3771.4102875829267,
+        "progresiva_m": 6322.179081441333,
+        "angulo_deg": 19.82155453450102,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 65.23806725583714,
+        "distancia_casa_m": 3662.888179818092,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 32.515925661594316,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3824503135920292,
+        "vertical_estudio_kn": 41.2008852531164,
+        "retencion_ramal_kn": 26.699816461373217,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424075.5262031303,
+          8431204.741371095
+        ]
+      },
+      "properties": {
+        "id": "P105",
+        "e": 424075.5262031303,
+        "n": 8431204.741371095,
+        "z_dem_m": 3763.617592327586,
+        "progresiva_m": 6399.794013402326,
+        "angulo_deg": 8.537736462515939e-07,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 58.46314212449864,
+        "distancia_casa_m": 3732.8552836439535,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 36.57291781597716,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.4301684052690798,
+        "vertical_estudio_kn": 4.496146459661986,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          424019.73010663816,
+          8431150.78886161
+        ]
+      },
+      "properties": {
+        "id": "P106",
+        "e": 424019.73010663816,
+        "n": 8431150.78886161,
+        "z_dem_m": 3758.473869079483,
+        "progresiva_m": 6477.408945364613,
+        "angulo_deg": 18.408623916005617,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 104.16367749226846,
+        "distancia_casa_m": 3803.1191770369105,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 33.9698947549539,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.39955180845629146,
+        "vertical_estudio_kn": 40.29128398747847,
+        "retencion_ramal_kn": 26.58911503397666,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          423992.6227964469,
+          8431098.835271256
+        ]
+      },
+      "properties": {
+        "id": "P107",
+        "e": 423992.6227964469,
+        "n": 8431098.835271256,
+        "z_dem_m": 3758.7368793586434,
+        "progresiva_m": 6536.009131511684,
+        "angulo_deg": 0.0,
+        "estructura": "SUSPENSION",
+        "armado": "LP-S-004",
+        "retencion": false,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 115.84302669963829,
+        "distancia_casa_m": 3861.3506809989913,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 31.36687443039209,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3689352438295941,
+        "vertical_estudio_kn": 2.721499532746844,
+        "retencion_ramal_kn": 0,
+        "retenida_rotura_min_kn": 0,
+        "retenidas_num": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          423965.51548625564,
+          8431046.881680902
+        ]
+      },
+      "properties": {
+        "id": "P108",
+        "e": 423965.51548625564,
+        "n": 8431046.881680902,
+        "z_dem_m": 3763.5347842252786,
+        "progresiva_m": 6594.609317658756,
+        "angulo_deg": 35.104305646520835,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 92.97361185269384,
+        "distancia_casa_m": 3919.5931743217666,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 29.362758462078485,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3453629553290812,
+        "vertical_estudio_kn": 39.90151619038571,
+        "retencion_ramal_kn": 25.384783268043225,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          423971.29191568104,
+          8431003.302483708
+        ]
+      },
+      "properties": {
+        "id": "P109",
+        "e": 423971.29191568104,
+        "n": 8431003.302483708,
+        "z_dem_m": 3759.529147576158,
+        "progresiva_m": 6638.569681226604,
+        "angulo_deg": 37.283869715807135,
+        "estructura": "ANCLAJE",
+        "armado": "LP-AN-020",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 52.922736666112606,
+        "distancia_casa_m": 3958.1660257162657,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 26.55598730274079,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.3123498859414348,
+        "vertical_estudio_kn": 37.56367563116526,
+        "retencion_ramal_kn": 25.02508109948501,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          423952.3971531158,
+          8430970.221154597
+        ]
+      },
+      "properties": {
+        "id": "P110",
+        "e": 423952.3971531158,
+        "n": 8430970.221154597,
+        "z_dem_m": 3759.9286245307594,
+        "progresiva_m": 6676.666746574852,
+        "angulo_deg": 8.332159727981848,
+        "estructura": "ANGULO",
+        "armado": "LP-A-008",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 43.90815036501758,
+        "distancia_casa_m": 3995.8216268910214,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 23.235135531960957,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.27329023208610864,
+        "vertical_estudio_kn": 37.1579189344708,
+        "retencion_ramal_kn": 25.256632267169152,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          423945.20799878985,
+          8430951.877688147
+        ]
+      },
+      "properties": {
+        "id": "P111",
+        "e": 423945.20799878985,
+        "n": 8430951.877688147,
+        "z_dem_m": 3760.897252147387,
+        "progresiva_m": 6696.368693212355,
+        "angulo_deg": 0,
+        "estructura": "TERMINAL",
+        "armado": "LP-T-026",
+        "retencion": true,
+        "poste_m": 13,
+        "amarre_m": 10.6,
+        "distancia_cauce_m": 40.40264902775651,
+        "distancia_casa_m": 4015.5231925355342,
+        "cautela": "",
+        "estado": "PROYECTADO EN GABINETE; NO REPLANTEADO",
+        "momento_estudio_knm": 18.019844390477612,
+        "capacidad_momento_tipo_knm": 85.02,
+        "utilizacion_poste": 0.21194829911171031,
+        "vertical_estudio_kn": 19.015067462770094,
+        "retencion_ramal_kn": 25.256632267169152,
+        "retenida_rotura_min_kn": 60,
+        "retenidas_num": 1
+      }
+    }
+  ]
+}

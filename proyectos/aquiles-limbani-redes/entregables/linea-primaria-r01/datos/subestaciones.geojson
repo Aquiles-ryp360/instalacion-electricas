@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425715.0,
+          8436650.0
+        ]
+      },
+      "properties": {
+        "id": "SE-LIM",
+        "kva": 250,
+        "mt_kv": 10,
+        "bt_v": 380,
+        "estado": "PROPUESTA, NO PREDIO CONFIRMADO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          423945.20799878985,
+          8430951.877688147
+        ]
+      },
+      "properties": {
+        "id": "SE-HUA",
+        "kva": 250,
+        "mt_kv": 10,
+        "bt_v": 380,
+        "estado": "PROPUESTA, NO PREDIO CONFIRMADO"
+      }
+    }
+  ]
+}

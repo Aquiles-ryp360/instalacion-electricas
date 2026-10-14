@@ -28,8 +28,10 @@
         "e": 425708.21949228976,
         "n": 8436658.147681585,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 25.743537525113005,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 25.704201348026547,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 8.794994971063181,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -42,19 +44,21 @@
             8436577.52161196
           ],
           [
-            425782.0970853631,
-            8436569.373930376
+            425783.24849233276,
+            8436567.990361806
           ]
         ]
       },
       "properties": {
         "id": "R-P003-1",
         "poste": "P003",
-        "e": 425782.0970853631,
-        "n": 8436569.373930376,
+        "e": 425783.24849233276,
+        "n": 8436567.990361806,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.371404183360283,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.371404183360944,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 126.06119170862402,
+        "cautela": ""
       }
     },
     {
@@ -67,19 +71,21 @@
             8436577.52161196
           ],
           [
-            425783.7628001384,
-            8436583.92640124
+            425785.1970643341,
+            8436585.014006967
           ]
         ]
       },
       "properties": {
         "id": "R-P003-2",
         "poste": "P003",
-        "e": 425783.7628001384,
-        "n": 8436583.92640124,
+        "e": 425785.1970643341,
+        "n": 8436585.014006967,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.371404183360283,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.371404183360944,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 114.49090522621056,
+        "cautela": ""
       }
     },
     {
@@ -92,19 +98,21 @@
             8436486.205450946
           ],
           [
-            425646.44849915325,
-            8436479.800661666
+            425645.0142349575,
+            8436478.71305594
           ]
         ]
       },
       "properties": {
         "id": "R-P005-1",
         "poste": "P005",
-        "e": 425646.44849915325,
-        "n": 8436479.800661666,
+        "e": 425645.0142349575,
+        "n": 8436478.71305594,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.386773318936683,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.386773318937344,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 66.7623593378176,
+        "cautela": ""
       }
     },
     {
@@ -117,19 +125,21 @@
             8436486.205450946
           ],
           [
-            425661.53195155,
-            8436494.47026668
+            425662.6590283273,
+            8436495.873725956
           ]
         ]
       },
       "properties": {
         "id": "R-P005-2",
         "poste": "P005",
-        "e": 425661.53195155,
-        "n": 8436494.47026668,
+        "e": 425662.6590283273,
+        "n": 8436495.873725956,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.386773318936683,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.386773318937344,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 67.93663486422666,
+        "cautela": ""
       }
     },
     {
@@ -153,8 +163,10 @@
         "e": 425558.1858380246,
         "n": 8436365.78155218,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.133637949988803,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.08465887389158,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 51.85781148207308,
+        "cautela": ""
       }
     },
     {
@@ -178,8 +190,10 @@
         "e": 425572.32644726796,
         "n": 8436386.084805598,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.133637949988803,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.08465887389158,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 52.47579110313474,
+        "cautela": ""
       }
     },
     {
@@ -204,7 +218,9 @@
         "n": 8436317.03687235,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.016778500296343,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 40.53833374947056,
+        "cautela": ""
       }
     },
     {
@@ -229,7 +245,9 @@
         "n": 8436336.23978242,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.016778500296343,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 42.0987366493278,
+        "cautela": ""
       }
     },
     {
@@ -254,7 +272,9 @@
         "n": 8436182.247233562,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.171993150417585,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 9.170073159687819,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -279,7 +299,9 @@
         "n": 8436200.566241303,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.171993150417585,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 14.758332442590781,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -304,7 +326,9 @@
         "n": 8436145.272190044,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.48452534839415,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 35.08544280956735,
+        "cautela": ""
       }
     },
     {
@@ -329,7 +353,9 @@
         "n": 8436163.552014824,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.48452534839415,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 24.36005514107996,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -354,7 +380,9 @@
         "n": 8436085.47185892,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.48452534839415,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 23.41689672425645,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -379,7 +407,9 @@
         "n": 8436106.091188129,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.48452534839415,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 23.246769230564553,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -404,7 +434,9 @@
         "n": 8436030.962012192,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.742237338745632,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 27.46044575200568,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -429,7 +461,9 @@
         "n": 8436044.367365554,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.742237338745632,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 17.077208300657208,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -453,8 +487,10 @@
         "e": 425427.69025350007,
         "n": 8436027.95467233,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.436978911250502,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.557710148813733,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 74.56121826008572,
+        "cautela": ""
       }
     },
     {
@@ -478,8 +514,10 @@
         "e": 425441.7243927476,
         "n": 8436040.698330974,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.436978911250502,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.557710148813733,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 61.24980180847878,
+        "cautela": ""
       }
     },
     {
@@ -503,8 +541,10 @@
         "e": 425356.27877120645,
         "n": 8435819.984923342,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.237031050046188,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.14766655075287,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 141.59666427439967,
+        "cautela": ""
       }
     },
     {
@@ -528,8 +568,10 @@
         "e": 425359.22534496436,
         "n": 8435840.43340698,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.237031050046188,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.14766655075287,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 129.91749171532396,
+        "cautela": ""
       }
     },
     {
@@ -554,7 +596,9 @@
         "n": 8435723.381518343,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.46370266687538,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 149.77551500451003,
+        "cautela": ""
       }
     },
     {
@@ -579,7 +623,9 @@
         "n": 8435743.73759334,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.46370266687538,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 138.7740726406274,
+        "cautela": ""
       }
     },
     {
@@ -604,7 +650,9 @@
         "n": 8435700.16836257,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.46370266687538,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 166.74764858200467,
+        "cautela": ""
       }
     },
     {
@@ -629,7 +677,9 @@
         "n": 8435720.42971795,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.46370266687538,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 159.3032395630207,
+        "cautela": ""
       }
     },
     {
@@ -653,8 +703,10 @@
         "e": 425352.0172083079,
         "n": 8435673.47623796,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.404348612313008,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.392949522854206,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 151.18237846801972,
+        "cautela": ""
       }
     },
     {
@@ -678,8 +730,10 @@
         "e": 425353.8593948123,
         "n": 8435694.550474117,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.404348612313008,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.392949522854206,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 162.75750717724944,
+        "cautela": ""
       }
     },
     {
@@ -692,19 +746,21 @@
             8435207.952977955
           ],
           [
-            425366.20896639605,
-            8435197.368855141
+            425366.30744880013,
+            8435195.571551267
           ]
         ]
       },
       "properties": {
         "id": "R-P028-1",
         "poste": "P028",
-        "e": 425366.20896639605,
-        "n": 8435197.368855141,
+        "e": 425366.30744880013,
+        "n": 8435195.571551267,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.12362423173683,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.112335603601665,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 91.68213462774048,
+        "cautela": ""
       }
     },
     {
@@ -717,19 +773,21 @@
             8435207.952977955
           ],
           [
-            425367.83398366655,
-            8435218.321107527
+            425368.2084123995,
+            8435220.081733303
           ]
         ]
       },
       "properties": {
         "id": "R-P028-2",
         "poste": "P028",
-        "e": 425367.83398366655,
-        "n": 8435218.321107527,
+        "e": 425368.2084123995,
+        "n": 8435220.081733303,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.12362423173683,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.112335603601665,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 83.91269039961165,
+        "cautela": ""
       }
     },
     {
@@ -742,19 +800,21 @@
             8435136.231257467
           ],
           [
-            425349.85438620124,
-            8435125.737792835
+            425349.59982776,
+            8435123.955883745
           ]
         ]
       },
       "properties": {
         "id": "R-P030-1",
         "poste": "P030",
-        "e": 425349.85438620124,
-        "n": 8435125.737792835,
+        "e": 425349.59982776,
+        "n": 8435123.955883745,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.91995141461791,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.992378965255522,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 135.65990083618624,
+        "cautela": ""
       }
     },
     {
@@ -767,19 +827,21 @@
             8435136.231257467
           ],
           [
-            425351.74172058236,
-            8435146.824144134
+            425351.8076528851,
+            8435148.62293621
           ]
         ]
       },
       "properties": {
         "id": "R-P030-2",
         "poste": "P030",
-        "e": 425351.74172058236,
-        "n": 8435146.824144134,
+        "e": 425351.8076528851,
+        "n": 8435148.62293621,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.91995141461791,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.992378965255522,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 125.85182402247477,
+        "cautela": ""
       }
     },
     {
@@ -792,19 +854,21 @@
             8434972.53680109
           ],
           [
-            425344.9651845724,
-            8434961.943914423
+            425344.89925226965,
+            8434960.145122347
           ]
         ]
       },
       "properties": {
         "id": "R-P032-1",
         "poste": "P032",
-        "e": 425344.9651845724,
-        "n": 8434961.943914423,
+        "e": 425344.89925226965,
+        "n": 8434960.145122347,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.91322337594831,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.847896189510994,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 50.2292166610202,
+        "cautela": ""
       }
     },
     {
@@ -817,19 +881,21 @@
             8434972.53680109
           ],
           [
-            425344.7316805948,
-            8434983.118549509
+            425344.6260966732,
+            8434984.915450184
           ]
         ]
       },
       "properties": {
         "id": "R-P032-2",
         "poste": "P032",
-        "e": 425344.7316805948,
-        "n": 8434983.118549509,
+        "e": 425344.6260966732,
+        "n": 8434984.915450184,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.91322337594831,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.847896189510994,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 74.31642418948681,
+        "cautela": ""
       }
     },
     {
@@ -853,8 +919,10 @@
         "e": 425358.9021843359,
         "n": 8434741.955052672,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.234836340762207,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.202721433538517,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 75.7730885821675,
+        "cautela": ""
       }
     },
     {
@@ -878,8 +946,10 @@
         "e": 425363.7124999094,
         "n": 8434743.434470357,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.234836340762207,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.202721433538517,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 75.1416530446454,
+        "cautela": ""
       }
     },
     {
@@ -904,7 +974,9 @@
         "n": 8434783.059167294,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 28.119772945460497,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 113.81149089705862,
+        "cautela": ""
       }
     },
     {
@@ -929,7 +1001,9 @@
         "n": 8434772.596640883,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 28.119772945460497,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 94.77215030180756,
+        "cautela": ""
       }
     },
     {
@@ -954,7 +1028,9 @@
         "n": 8434777.884123798,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 28.510350092728327,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 108.30628555761932,
+        "cautela": ""
       }
     },
     {
@@ -979,7 +1055,9 @@
         "n": 8434783.525634792,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 28.510350092728327,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 112.0178375556652,
+        "cautela": ""
       }
     },
     {
@@ -1004,7 +1082,9 @@
         "n": 8434749.430581113,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 28.510350092728327,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 119.03748409830429,
+        "cautela": ""
       }
     },
     {
@@ -1029,7 +1109,9 @@
         "n": 8434766.959473792,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 28.510350092728327,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 111.67244208535953,
+        "cautela": ""
       }
     },
     {
@@ -1042,19 +1124,21 @@
             8434681.227927389
           ],
           [
-            425292.5090828676,
-            8434668.91310602
+            425292.2984651566,
+            8434667.12547066
           ]
         ]
       },
       "properties": {
         "id": "R-P039-1",
         "poste": "P039",
-        "e": 425292.5090828676,
-        "n": 8434668.91310602,
+        "e": 425292.2984651566,
+        "n": 8434667.12547066,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.744440343311492,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.78340755776671,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 73.51712200898886,
+        "cautela": ""
       }
     },
     {
@@ -1067,19 +1151,21 @@
             8434681.227927389
           ],
           [
-            425297.57527380466,
-            8434693.089201797
+            425298.10007090704,
+            8434694.810999695
           ]
         ]
       },
       "properties": {
         "id": "R-P039-2",
         "poste": "P039",
-        "e": 425297.57527380466,
-        "n": 8434693.089201797,
+        "e": 425298.10007090704,
+        "n": 8434694.810999695,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.744440343311492,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.78340755776671,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 79.80225926189017,
+        "cautela": ""
       }
     },
     {
@@ -1103,8 +1189,10 @@
         "e": 425241.78717981686,
         "n": 8434510.054991966,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 27.99235526902937,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 27.848631754533496,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 94.02707605227567,
+        "cautela": ""
       }
     },
     {
@@ -1128,8 +1216,10 @@
         "e": 425244.74466800137,
         "n": 8434537.788735975,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 27.99235526902937,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 27.848631754533496,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 97.80831741063399,
+        "cautela": ""
       }
     },
     {
@@ -1154,7 +1244,9 @@
         "n": 8434446.678146958,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.656668575779662,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 74.18719638829641,
+        "cautela": ""
       }
     },
     {
@@ -1179,7 +1271,9 @@
         "n": 8434473.771426663,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.656668575779662,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 74.25475801345723,
+        "cautela": ""
       }
     },
     {
@@ -1192,19 +1286,21 @@
             8434415.366884239
           ],
           [
-            425226.2948494008,
-            8434405.7055008
+            425225.55431490473,
+            8434404.064888518
           ]
         ]
       },
       "properties": {
         "id": "R-P043-1",
         "poste": "P043",
-        "e": 425226.2948494008,
-        "n": 8434405.7055008,
+        "e": 425225.55431490473,
+        "n": 8434404.064888518,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.68386369837042,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.700720166018165,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 90.5180943485246,
+        "cautela": ""
       }
     },
     {
@@ -1217,19 +1313,21 @@
             8434415.366884239
           ],
           [
-            425230.8697889577,
-            8434425.964723544
+            425230.90613099013,
+            8434427.764356634
           ]
         ]
       },
       "properties": {
         "id": "R-P043-2",
         "poste": "P043",
-        "e": 425230.8697889577,
-        "n": 8434425.964723544,
+        "e": 425230.90613099013,
+        "n": 8434427.764356634,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.68386369837042,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.700720166018165,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 89.95954389080914,
+        "cautela": ""
       }
     },
     {
@@ -1253,8 +1351,10 @@
         "e": 425227.21063446836,
         "n": 8434244.765845805,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.96014895940424,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.883959296405543,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 69.6540220453036,
+        "cautela": ""
       }
     },
     {
@@ -1278,8 +1378,10 @@
         "e": 425222.15746035834,
         "n": 8434264.562420208,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.96014895940424,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.883959296405543,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 79.05340425673108,
+        "cautela": ""
       }
     },
     {
@@ -1304,7 +1406,9 @@
         "n": 8434086.24164553,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.59065098192737,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 24.610848942261832,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -1329,7 +1433,9 @@
         "n": 8434102.654818522,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.59065098192737,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 17.35677493061185,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -1354,7 +1460,9 @@
         "n": 8434062.064890089,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.833009520746746,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 71.42359588505191,
+        "cautela": ""
       }
     },
     {
@@ -1379,7 +1487,9 @@
         "n": 8434079.344773762,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.833009520746746,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 61.75508024822869,
+        "cautela": ""
       }
     },
     {
@@ -1404,7 +1514,9 @@
         "n": 8433983.563263519,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.833009520746746,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 70.80462032383343,
+        "cautela": ""
       }
     },
     {
@@ -1429,7 +1541,9 @@
         "n": 8434002.173543764,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.833009520746746,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 69.78926427442532,
+        "cautela": ""
       }
     },
     {
@@ -1454,7 +1568,9 @@
         "n": 8433891.808443092,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.588623506437106,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 37.701689305441164,
+        "cautela": ""
       }
     },
     {
@@ -1479,7 +1595,9 @@
         "n": 8433910.907536624,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.588623506437106,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 33.24214889378795,
+        "cautela": ""
       }
     },
     {
@@ -1504,7 +1622,9 @@
         "n": 8433807.440703398,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.588623506437106,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 55.08197801258112,
+        "cautela": ""
       }
     },
     {
@@ -1529,7 +1649,9 @@
         "n": 8433827.762697324,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.588623506437106,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 51.501348244007865,
+        "cautela": ""
       }
     },
     {
@@ -1554,7 +1676,9 @@
         "n": 8433719.7637061,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.5764851402692,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 84.03332145300345,
+        "cautela": ""
       }
     },
     {
@@ -1579,7 +1703,9 @@
         "n": 8433740.12164159,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.5764851402692,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 70.18890321925609,
+        "cautela": ""
       }
     },
     {
@@ -1604,7 +1730,9 @@
         "n": 8433644.547913283,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.014186981317003,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 98.50243511999577,
+        "cautela": ""
       }
     },
     {
@@ -1629,7 +1757,9 @@
         "n": 8433660.15348552,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.014186981317003,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 105.02088758558604,
+        "cautela": ""
       }
     },
     {
@@ -1654,7 +1784,9 @@
         "n": 8433611.366441699,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.014186981317003,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 17.023296474114588,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -1679,7 +1811,9 @@
         "n": 8433624.388362925,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 27.014186981317003,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 24.567983369216144,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -1704,7 +1838,9 @@
         "n": 8433536.894778326,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.996601399853155,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 66.42557101475906,
+        "cautela": ""
       }
     },
     {
@@ -1729,7 +1865,9 @@
         "n": 8433554.730124438,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.996601399853155,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 57.640295086356176,
+        "cautela": ""
       }
     },
     {
@@ -1754,7 +1892,9 @@
         "n": 8433497.797117671,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.836752109804213,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 71.73209074353791,
+        "cautela": ""
       }
     },
     {
@@ -1779,7 +1919,9 @@
         "n": 8433521.688481791,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.836752109804213,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 72.99147736704825,
+        "cautela": ""
       }
     },
     {
@@ -1804,7 +1946,9 @@
         "n": 8433226.23205419,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.881918198425357,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 65.30623820756065,
+        "cautela": ""
       }
     },
     {
@@ -1829,7 +1973,9 @@
         "n": 8433244.127036905,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.881918198425357,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 58.446436830932136,
+        "cautela": ""
       }
     },
     {
@@ -1842,19 +1988,21 @@
             8433198.25124322
           ],
           [
-            425355.76628819376,
-            8433190.95072689
+            425354.461252439,
+            8433189.711016567
           ]
         ]
       },
       "properties": {
         "id": "R-P065-1",
         "poste": "P065",
-        "e": 425355.76628819376,
-        "n": 8433190.95072689,
+        "e": 425354.461252439,
+        "n": 8433189.711016567,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.443948984406322,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.44394898440678,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 99.76588517282767,
+        "cautela": ""
       }
     },
     {
@@ -1867,19 +2015,21 @@
             8433198.25124322
           ],
           [
-            425367.11088173237,
-            8433208.19955545
+            425367.7322863898,
+            8433209.888891486
           ]
         ]
       },
       "properties": {
         "id": "R-P065-2",
         "poste": "P065",
-        "e": 425367.11088173237,
-        "n": 8433208.19955545,
+        "e": 425367.7322863898,
+        "n": 8433209.888891486,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.443948984406322,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.44394898440678,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 99.92568280946368,
+        "cautela": ""
       }
     },
     {
@@ -1892,19 +2042,21 @@
             8433067.243301092
           ],
           [
-            425311.60220947274,
-            8433057.294988863
+            425310.9808048153,
+            8433055.605652826
           ]
         ]
       },
       "properties": {
         "id": "R-P067-1",
         "poste": "P067",
-        "e": 425311.60220947274,
-        "n": 8433057.294988863,
+        "e": 425310.9808048153,
+        "n": 8433055.605652826,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 25.96622059201353,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 25.966220592013965,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 43.98061089310542,
+        "cautela": ""
       }
     },
     {
@@ -1917,19 +2069,21 @@
             8433067.243301092
           ],
           [
-            425322.09386867704,
-            8433075.347621027
+            425323.25406652596,
+            8433076.7238263
           ]
         ]
       },
       "properties": {
         "id": "R-P067-2",
         "poste": "P067",
-        "e": 425322.09386867704,
-        "n": 8433075.347621027,
+        "e": 425323.25406652596,
+        "n": 8433076.7238263,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 25.96622059201353,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 25.966220592013965,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 40.757145923857195,
+        "cautela": ""
       }
     },
     {
@@ -1954,7 +2108,9 @@
         "n": 8432972.154810708,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.93532161269365,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 81.79219543100889,
+        "cautela": ""
       }
     },
     {
@@ -1979,7 +2135,9 @@
         "n": 8432989.626791479,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.93532161269365,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 75.07132586643337,
+        "cautela": ""
       }
     },
     {
@@ -2004,7 +2162,9 @@
         "n": 8432850.439319545,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.90413964511003,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 118.5461319552777,
+        "cautela": ""
       }
     },
     {
@@ -2029,7 +2189,9 @@
         "n": 8432867.857993416,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.90413964511003,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 126.85944916844407,
+        "cautela": ""
       }
     },
     {
@@ -2054,7 +2216,9 @@
         "n": 8432761.253295338,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.46353829190984,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 97.30572843713131,
+        "cautela": ""
       }
     },
     {
@@ -2079,7 +2243,9 @@
         "n": 8432781.131572442,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.46353829190984,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 102.48478956414337,
+        "cautela": ""
       }
     },
     {
@@ -2104,7 +2270,9 @@
         "n": 8432639.187778777,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.165894323557747,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 122.63837568931598,
+        "cautela": ""
       }
     },
     {
@@ -2129,7 +2297,9 @@
         "n": 8432657.850803567,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.165894323557747,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 113.06986834329682,
+        "cautela": ""
       }
     },
     {
@@ -2154,7 +2324,9 @@
         "n": 8432610.56674791,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 24.906288542829333,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 141.88943644200015,
+        "cautela": ""
       }
     },
     {
@@ -2179,7 +2351,9 @@
         "n": 8432626.960930055,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 24.906288542829333,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 145.16346730079522,
+        "cautela": ""
       }
     },
     {
@@ -2204,7 +2378,9 @@
         "n": 8432514.238914406,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.132191788719958,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 82.0971517781721,
+        "cautela": ""
       }
     },
     {
@@ -2229,7 +2405,9 @@
         "n": 8432533.85800047,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.132191788719958,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 94.45538748472211,
+        "cautela": ""
       }
     },
     {
@@ -2254,7 +2432,9 @@
         "n": 8432444.071547257,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.132191788719958,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 45.68938730482849,
+        "cautela": ""
       }
     },
     {
@@ -2279,7 +2459,9 @@
         "n": 8432463.286210082,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.132191788719958,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 52.706720177485266,
+        "cautela": ""
       }
     },
     {
@@ -2304,7 +2486,9 @@
         "n": 8432387.747743864,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.942460879473014,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 36.739726773341545,
+        "cautela": ""
       }
     },
     {
@@ -2329,7 +2513,9 @@
         "n": 8432402.966321938,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.942460879473014,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 38.290276291520904,
+        "cautela": ""
       }
     },
     {
@@ -2354,7 +2540,9 @@
         "n": 8432249.162611008,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.957118762900212,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 66.88905872565662,
+        "cautela": ""
       }
     },
     {
@@ -2379,7 +2567,9 @@
         "n": 8432263.349611595,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.957118762900212,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 60.93815564793188,
+        "cautela": ""
       }
     },
     {
@@ -2404,7 +2594,9 @@
         "n": 8432080.44962378,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.700533544190876,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 102.52508962458909,
+        "cautela": ""
       }
     },
     {
@@ -2429,7 +2621,9 @@
         "n": 8432098.697847828,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.700533544190876,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 104.60022603320378,
+        "cautela": ""
       }
     },
     {
@@ -2454,7 +2648,9 @@
         "n": 8432042.11524323,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.080280514048443,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 93.8137664335372,
+        "cautela": ""
       }
     },
     {
@@ -2479,7 +2675,9 @@
         "n": 8432062.88250568,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.080280514048443,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 98.27902333238849,
+        "cautela": ""
       }
     },
     {
@@ -2504,7 +2702,9 @@
         "n": 8431972.157288281,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.080280514048443,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 61.73204963046357,
+        "cautela": ""
       }
     },
     {
@@ -2529,7 +2729,9 @@
         "n": 8431991.94556572,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.080280514048443,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 69.2409691367803,
+        "cautela": ""
       }
     },
     {
@@ -2554,7 +2756,9 @@
         "n": 8431874.247228887,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.626946933528203,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 66.2244461522685,
+        "cautela": ""
       }
     },
     {
@@ -2579,7 +2783,9 @@
         "n": 8431897.550885715,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.626946933528203,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 66.46960146220526,
+        "cautela": ""
       }
     },
     {
@@ -2604,7 +2810,9 @@
         "n": 8431809.553334009,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.626946933528203,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 48.26870917106316,
+        "cautela": ""
       }
     },
     {
@@ -2629,7 +2837,9 @@
         "n": 8431832.419437462,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.626946933528203,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 53.274456465197254,
+        "cautela": ""
       }
     },
     {
@@ -2654,7 +2864,9 @@
         "n": 8431774.934258936,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.00181822947282,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 26.899764963682493,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -2679,7 +2891,9 @@
         "n": 8431794.339596229,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.00181822947282,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 31.895654094836242,
+        "cautela": ""
       }
     },
     {
@@ -2704,7 +2918,9 @@
         "n": 8431721.746813502,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.108926472724303,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 26.64113210179733,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -2729,7 +2945,9 @@
         "n": 8431733.960022548,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.108926472724303,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 22.68778055349062,
+        "cautela": "Verificar anclaje próximo a cauce"
       }
     },
     {
@@ -2754,7 +2972,9 @@
         "n": 8431722.447146721,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.108926472724303,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 59.87185078107443,
+        "cautela": ""
       }
     },
     {
@@ -2779,7 +2999,9 @@
         "n": 8431731.891934026,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.108926472724303,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 53.785342948465825,
+        "cautela": ""
       }
     },
     {
@@ -2803,8 +3025,10 @@
         "e": 424417.9278329898,
         "n": 8431680.71769942,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.169201543528672,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.216851501093426,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 61.6674788024708,
+        "cautela": ""
       }
     },
     {
@@ -2828,8 +3052,10 @@
         "e": 424429.26281884173,
         "n": 8431698.206531884,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.169201543528672,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.216851501093426,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 58.696014484424055,
+        "cautela": ""
       }
     },
     {
@@ -2842,19 +3068,21 @@
             8431356.635185
           ],
           [
-            424284.53091381956,
-            8431346.834079716
+            424283.845365196,
+            8431345.169741085
           ]
         ]
       },
       "properties": {
         "id": "R-P100-1",
         "poste": "P100",
-        "e": 424284.53091381956,
-        "n": 8431346.834079716,
+        "e": 424283.845365196,
+        "n": 8431345.169741085,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.11045426302813,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.090937366656696,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 54.127121152436054,
+        "cautela": ""
       }
     },
     {
@@ -2867,19 +3095,21 @@
             8431356.635185
           ],
           [
-            424296.6841062877,
-            8431363.453495814
+            424298.06230732857,
+            8431364.61132218
           ]
         ]
       },
       "properties": {
         "id": "R-P100-2",
         "poste": "P100",
-        "e": 424296.6841062877,
-        "n": 8431363.453495814,
+        "e": 424298.06230732857,
+        "n": 8431364.61132218,
         "resistencia_rotura_kn": 60,
-        "tiro_estudio_kn": 26.11045426302813,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "tiro_estudio_kn": 26.090937366656696,
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 43.294916989759926,
+        "cautela": ""
       }
     },
     {
@@ -2904,7 +3134,9 @@
         "n": 8431291.235602865,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.2062923924802,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 34.7357210911991,
+        "cautela": ""
       }
     },
     {
@@ -2929,7 +3161,9 @@
         "n": 8431302.401808728,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.2062923924802,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 44.68761236445195,
+        "cautela": ""
       }
     },
     {
@@ -2954,7 +3188,9 @@
         "n": 8431254.345985532,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.699816461373217,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 66.3576421167603,
+        "cautela": ""
       }
     },
     {
@@ -2979,7 +3215,9 @@
         "n": 8431266.062264292,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.699816461373217,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 67.24416253700427,
+        "cautela": ""
       }
     },
     {
@@ -3004,7 +3242,9 @@
         "n": 8431143.420477897,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.58911503397666,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 112.87458554104334,
+        "cautela": ""
       }
     },
     {
@@ -3029,7 +3269,9 @@
         "n": 8431160.186580183,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 26.58911503397666,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 98.41036298087825,
+        "cautela": ""
       }
     },
     {
@@ -3054,7 +3296,9 @@
         "n": 8431037.48396233,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.384783268043225,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 87.48257970613282,
+        "cautela": ""
       }
     },
     {
@@ -3079,7 +3323,9 @@
         "n": 8431057.389771663,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.384783268043225,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 102.67993004925064,
+        "cautela": ""
       }
     },
     {
@@ -3104,7 +3350,9 @@
         "n": 8430992.794392947,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.02508109948501,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 43.86979270106167,
+        "cautela": ""
       }
     },
     {
@@ -3129,7 +3377,9 @@
         "n": 8431012.506922038,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.02508109948501,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 57.86176213458428,
+        "cautela": ""
       }
     },
     {
@@ -3154,7 +3404,9 @@
         "n": 8430961.016716266,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.256632267169152,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 43.84117422491768,
+        "cautela": ""
       }
     },
     {
@@ -3179,7 +3431,9 @@
         "n": 8430980.090267936,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.256632267169152,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 46.583337114821646,
+        "cautela": ""
       }
     },
     {
@@ -3204,7 +3458,9 @@
         "n": 8430942.008574808,
         "resistencia_rotura_kn": 60,
         "tiro_estudio_kn": 25.256632267169152,
-        "estado": "VERIFICAR PREDIO/GEOTECNIA"
+        "estado": "VERIFICAR PREDIO/GEOTECNIA",
+        "distancia_cauce_m": 37.89404817749812,
+        "cautela": ""
       }
     }
   ]

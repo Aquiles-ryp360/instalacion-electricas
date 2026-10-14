@@ -1,0 +1,2871 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425715.0,
+            8436650.0
+          ],
+          [
+            425745.15828882635,
+            8436613.76080598
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V001",
+        "desde": "P001",
+        "hasta": "P002",
+        "longitud_m": 47.1465965706794,
+        "desnivel_m": 14.315386538179064,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425745.15828882635,
+            8436613.76080598
+          ],
+          [
+            425775.31657765264,
+            8436577.52161196
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V002",
+        "desde": "P002",
+        "hasta": "P003",
+        "longitud_m": 47.146596569210445,
+        "desnivel_m": 13.265247224741325,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425775.31657765264,
+            8436577.52161196
+          ],
+          [
+            425715.1056496458,
+            8436531.863531454
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V003",
+        "desde": "P003",
+        "hasta": "P004",
+        "longitud_m": 75.56464892419385,
+        "desnivel_m": 0.013907940794160467,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425715.1056496458,
+            8436531.863531454
+          ],
+          [
+            425654.894721639,
+            8436486.205450946
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V004",
+        "desde": "P004",
+        "hasta": "P005",
+        "longitud_m": 75.56464892414746,
+        "desnivel_m": -0.9864269153685203,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425654.894721639,
+            8436486.205450946
+          ],
+          [
+            425610.42243317585,
+            8436430.82763907
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V005",
+        "desde": "P005",
+        "hasta": "P006",
+        "longitud_m": 71.0245484986718,
+        "desnivel_m": 7.3940342777365,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C003"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425610.42243317585,
+            8436430.82763907
+          ],
+          [
+            425565.95014471275,
+            8436375.44982719
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V006",
+        "desde": "P006",
+        "hasta": "P007",
+        "longitud_m": 71.02454850008766,
+        "desnivel_m": 2.591661617747194,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C003"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425565.95014471275,
+            8436375.44982719
+          ],
+          [
+            425536.3788117619,
+            8436326.128063569
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V007",
+        "desde": "P007",
+        "hasta": "P008",
+        "longitud_m": 57.50739169218934,
+        "desnivel_m": -1.5050179164408295,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C004"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425536.3788117619,
+            8436326.128063569
+          ],
+          [
+            425515.3437442838,
+            8436259.243507992
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V008",
+        "desde": "P008",
+        "hasta": "P009",
+        "longitud_m": 70.11431978175483,
+        "desnivel_m": 1.8540141571751523,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C005"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425515.3437442838,
+            8436259.243507992
+          ],
+          [
+            425494.30867680564,
+            8436192.358952414
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V009",
+        "desde": "P009",
+        "hasta": "P010",
+        "longitud_m": 70.11431978353167,
+        "desnivel_m": 6.2928293523863434,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C005"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425494.30867680564,
+            8436192.358952414
+          ],
+          [
+            425462.53050669475,
+            8436153.479478933
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V010",
+        "desde": "P010",
+        "hasta": "P011",
+        "longitud_m": 50.21419673540478,
+        "desnivel_m": 10.480951900385572,
+        "cruza_cauce": true,
+        "cruza_via": true,
+        "canton": "C006"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425462.53050669475,
+            8436153.479478933
+          ],
+          [
+            425481.52361971437,
+            8436095.544394812
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V011",
+        "desde": "P011",
+        "hasta": "P012",
+        "longitud_m": 60.96894549127756,
+        "desnivel_m": 3.739230438572031,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C007"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425481.52361971437,
+            8436095.544394812
+          ],
+          [
+            425476.0890544737,
+            8436041.50880551
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V012",
+        "desde": "P012",
+        "hasta": "P013",
+        "longitud_m": 54.308189166692785,
+        "desnivel_m": 3.549681316709121,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C008"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425476.0890544737,
+            8436041.50880551
+          ],
+          [
+            425437.89753690327,
+            8436030.813232373
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V013",
+        "desde": "P013",
+        "hasta": "P014",
+        "longitud_m": 39.66090391106336,
+        "desnivel_m": 11.714759849544771,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C009"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425437.89753690327,
+            8436030.813232373
+          ],
+          [
+            425411.9669002858,
+            8435963.83216223
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V014",
+        "desde": "P014",
+        "hasta": "P015",
+        "longitud_m": 71.82521613637137,
+        "desnivel_m": 12.506880037556494,
+        "cruza_cauce": false,
+        "cruza_via": true,
+        "canton": "C010"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425411.9669002858,
+            8435963.83216223
+          ],
+          [
+            425386.03626366827,
+            8435896.851092087
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V015",
+        "desde": "P015",
+        "hasta": "P016",
+        "longitud_m": 71.82521613465535,
+        "desnivel_m": 11.33055824912717,
+        "cruza_cauce": false,
+        "cruza_via": true,
+        "canton": "C010"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425386.03626366827,
+            8435896.851092087
+          ],
+          [
+            425360.1056270508,
+            8435829.870021943
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V016",
+        "desde": "P016",
+        "hasta": "P017",
+        "longitud_m": 71.82521613637137,
+        "desnivel_m": 5.486745067136871,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C010"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425360.1056270508,
+            8435829.870021943
+          ],
+          [
+            425364.1056270508,
+            8435781.870021943
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V017",
+        "desde": "P017",
+        "hasta": "P018",
+        "longitud_m": 48.16637831516918,
+        "desnivel_m": 2.335781692191995,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C011"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425364.1056270508,
+            8435781.870021943
+          ],
+          [
+            425367.629014461,
+            8435733.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V018",
+        "desde": "P018",
+        "hasta": "P019",
+        "longitud_m": 48.04640843349208,
+        "desnivel_m": 4.0813237124497395,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C011"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425367.629014461,
+            8435733.952977955
+          ],
+          [
+            425357.629014461,
+            8435709.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V019",
+        "desde": "P019",
+        "hasta": "P020",
+        "longitud_m": 26.0,
+        "desnivel_m": 4.795723828134578,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C012"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425357.629014461,
+            8435709.952977955
+          ],
+          [
+            425353.629014461,
+            8435683.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V020",
+        "desde": "P020",
+        "hasta": "P021",
+        "longitud_m": 26.30589287593181,
+        "desnivel_m": 2.9029364551719485,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C013"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425353.629014461,
+            8435683.952977955
+          ],
+          [
+            425352.2956811277,
+            8435622.619644621
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V021",
+        "desde": "P021",
+        "hasta": "P022",
+        "longitud_m": 61.34782437569947,
+        "desnivel_m": 10.972472814822959,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425352.2956811277,
+            8435622.619644621
+          ],
+          [
+            425350.9623477943,
+            8435561.28631129
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V022",
+        "desde": "P022",
+        "hasta": "P023",
+        "longitud_m": 61.34782437383852,
+        "desnivel_m": 9.01608854701035,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425350.9623477943,
+            8435561.28631129
+          ],
+          [
+            425349.629014461,
+            8435499.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V023",
+        "desde": "P023",
+        "hasta": "P024",
+        "longitud_m": 61.34782437569947,
+        "desnivel_m": 10.65956417599782,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425349.629014461,
+            8435499.952977955
+          ],
+          [
+            425353.629014461,
+            8435426.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V024",
+        "desde": "P024",
+        "hasta": "P025",
+        "longitud_m": 73.10950690573696,
+        "desnivel_m": -2.1172683251672435,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425353.629014461,
+            8435426.952977955
+          ],
+          [
+            425357.629014461,
+            8435353.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V025",
+        "desde": "P025",
+        "hasta": "P026",
+        "longitud_m": 73.10950690573696,
+        "desnivel_m": 1.4915868748210404,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425357.629014461,
+            8435353.952977955
+          ],
+          [
+            425361.629014461,
+            8435280.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V026",
+        "desde": "P026",
+        "hasta": "P027",
+        "longitud_m": 73.10950690573696,
+        "desnivel_m": 6.834527663877088,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425361.629014461,
+            8435280.952977955
+          ],
+          [
+            425365.629014461,
+            8435207.952977955
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V027",
+        "desde": "P027",
+        "hasta": "P028",
+        "longitud_m": 73.10950690573696,
+        "desnivel_m": 8.183101888272722,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425365.629014461,
+            8435207.952977955
+          ],
+          [
+            425353.3534525774,
+            8435150.231257467
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V028",
+        "desde": "P028",
+        "hasta": "P029",
+        "longitud_m": 59.012595568568976,
+        "desnivel_m": 5.315817946605057,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C015"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425353.3534525774,
+            8435150.231257467
+          ],
+          [
+            425351.3534525774,
+            8435136.231257467
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V029",
+        "desde": "P029",
+        "hasta": "P030",
+        "longitud_m": 14.142135623730951,
+        "desnivel_m": 3.3493208478552337,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C015"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425351.3534525774,
+            8435136.231257467
+          ],
+          [
+            425348.3534525774,
+            8435054.384029279
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V030",
+        "desde": "P030",
+        "hasta": "P031",
+        "longitud_m": 81.90219021533929,
+        "desnivel_m": 8.122359583099387,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C016"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425348.3534525774,
+            8435054.384029279
+          ],
+          [
+            425345.3534525774,
+            8434972.53680109
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V031",
+        "desde": "P031",
+        "hasta": "P032",
+        "longitud_m": 81.90219021533929,
+        "desnivel_m": 4.346579773620123,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C016"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425345.3534525774,
+            8434972.53680109
+          ],
+          [
+            425349.66243916936,
+            8434899.203467757
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V032",
+        "desde": "P032",
+        "hasta": "P033",
+        "longitud_m": 73.45981992435587,
+        "desnivel_m": 4.671901233583958,
+        "cruza_cauce": true,
+        "cruza_via": false,
+        "canton": "C017"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425349.66243916936,
+            8434899.203467757
+          ],
+          [
+            425353.97142576135,
+            8434825.870134424
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V033",
+        "desde": "P033",
+        "hasta": "P034",
+        "longitud_m": 73.45981992249642,
+        "desnivel_m": 7.678240678388283,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C017"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425353.97142576135,
+            8434825.870134424
+          ],
+          [
+            425358.28041235334,
+            8434752.53680109
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V034",
+        "desde": "P034",
+        "hasta": "P035",
+        "longitud_m": 73.45981992435587,
+        "desnivel_m": 0.16597951122557753,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C017"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425358.28041235334,
+            8434752.53680109
+          ],
+          [
+            425345.49736683076,
+            8434773.95683656
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V035",
+        "desde": "P035",
+        "hasta": "P036",
+        "longitud_m": 24.944421668585925,
+        "desnivel_m": 7.453471184542559,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C018"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425345.49736683076,
+            8434773.95683656
+          ],
+          [
+            425325.6574202719,
+            8434776.52392812
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V036",
+        "desde": "P036",
+        "hasta": "P037",
+        "longitud_m": 20.00533525178571,
+        "desnivel_m": 12.595031421580098,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C019"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425325.6574202719,
+            8434776.52392812
+          ],
+          [
+            425302.82052006,
+            8434756.432287784
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V037",
+        "desde": "P037",
+        "hasta": "P038",
+        "longitud_m": 30.41706795034265,
+        "desnivel_m": 20.647355256554327,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C020"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425302.82052006,
+            8434756.432287784
+          ],
+          [
+            425293.96000487707,
+            8434681.227927389
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V038",
+        "desde": "P038",
+        "hasta": "P039",
+        "longitud_m": 75.72453071382597,
+        "desnivel_m": 1.4768409377051288,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C021"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425293.96000487707,
+            8434681.227927389
+          ],
+          [
+            425269.943625362,
+            8434602.43299583
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V039",
+        "desde": "P039",
+        "hasta": "P040",
+        "longitud_m": 82.37370772510978,
+        "desnivel_m": 8.017557268773816,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C022"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425269.943625362,
+            8434602.43299583
+          ],
+          [
+            425245.9272458469,
+            8434523.638064273
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V040",
+        "desde": "P040",
+        "hasta": "P041",
+        "longitud_m": 82.37370772334502,
+        "desnivel_m": 22.73415720004941,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C022"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425245.9272458469,
+            8434523.638064273
+          ],
+          [
+            425251.1762420724,
+            8434460.82881866
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V041",
+        "desde": "P041",
+        "hasta": "P042",
+        "longitud_m": 63.02819445124182,
+        "desnivel_m": -5.1145016949837565,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C023"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425251.1762420724,
+            8434460.82881866
+          ],
+          [
+            425230.65577476646,
+            8434415.366884239
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V042",
+        "desde": "P042",
+        "hasta": "P043",
+        "longitud_m": 49.878623274641875,
+        "desnivel_m": 6.071700679258173,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425230.65577476646,
+            8434415.366884239
+          ],
+          [
+            425229.04021171306,
+            8434335.365284674
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V043",
+        "desde": "P043",
+        "hasta": "P044",
+        "longitud_m": 80.01791035113247,
+        "desnivel_m": 3.5764551631415085,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C025"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425229.04021171306,
+            8434335.365284674
+          ],
+          [
+            425227.4246486596,
+            8434255.36368511
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V044",
+        "desde": "P044",
+        "hasta": "P045",
+        "longitud_m": 80.01791034927138,
+        "desnivel_m": 8.368575392989078,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C025"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425227.4246486596,
+            8434255.36368511
+          ],
+          [
+            425257.9486337331,
+            8434202.05591695
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V045",
+        "desde": "P045",
+        "hasta": "P046",
+        "longitud_m": 61.4282655706483,
+        "desnivel_m": -1.224418511565636,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425257.9486337331,
+            8434202.05591695
+          ],
+          [
+            425288.4726188065,
+            8434148.748148788
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V046",
+        "desde": "P046",
+        "hasta": "P047",
+        "longitud_m": 61.428265572235794,
+        "desnivel_m": 1.3927157197912496,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425288.4726188065,
+            8434148.748148788
+          ],
+          [
+            425318.99660388,
+            8434095.440380627
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V047",
+        "desde": "P047",
+        "hasta": "P048",
+        "longitud_m": 61.4282655706483,
+        "desnivel_m": 4.499059440397923,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425318.99660388,
+            8434095.440380627
+          ],
+          [
+            425290.83520851267,
+            8434069.279327983
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V048",
+        "desde": "P048",
+        "hasta": "P049",
+        "longitud_m": 38.437805146647534,
+        "desnivel_m": 9.916107890958665,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C027"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425290.83520851267,
+            8434069.279327983
+          ],
+          [
+            425315.8155137897,
+            8433993.628709298
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V049",
+        "desde": "P049",
+        "hasta": "P050",
+        "longitud_m": 79.66826067650484,
+        "desnivel_m": 8.390219263774634,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C028"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425315.8155137897,
+            8433993.628709298
+          ],
+          [
+            425350.05149901495,
+            8433946.990993429
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V050",
+        "desde": "P050",
+        "hasta": "P051",
+        "longitud_m": 57.854811604464096,
+        "desnivel_m": -0.18225160032861787,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C029"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425350.05149901495,
+            8433946.990993429
+          ],
+          [
+            425384.28748424025,
+            8433900.353277558
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V051",
+        "desde": "P051",
+        "hasta": "P052",
+        "longitud_m": 57.85481160600005,
+        "desnivel_m": 3.13257216273305,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C029"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425384.28748424025,
+            8433900.353277558
+          ],
+          [
+            425376.6115521289,
+            8433817.994962463
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V052",
+        "desde": "P052",
+        "hasta": "P053",
+        "longitud_m": 82.71524647315898,
+        "desnivel_m": 21.526653030754822,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C030"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425376.6115521289,
+            8433817.994962463
+          ],
+          [
+            425395.2557019304,
+            8433773.763201712
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V053",
+        "desde": "P053",
+        "hasta": "P054",
+        "longitud_m": 48.0005518821749,
+        "desnivel_m": 1.8935523079138878,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C031"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425395.2557019304,
+            8433773.763201712
+          ],
+          [
+            425413.8998517319,
+            8433729.53144096
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V054",
+        "desde": "P054",
+        "hasta": "P055",
+        "longitud_m": 48.00055188219751,
+        "desnivel_m": -1.292585454038635,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C031"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425413.8998517319,
+            8433729.53144096
+          ],
+          [
+            425417.10093087645,
+            8433655.138113912
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V055",
+        "desde": "P055",
+        "hasta": "P056",
+        "longitud_m": 74.46216500322537,
+        "desnivel_m": 10.549305122043643,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C032"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425417.10093087645,
+            8433655.138113912
+          ],
+          [
+            425489.26358542667,
+            8433616.381813306
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V056",
+        "desde": "P056",
+        "hasta": "P057",
+        "longitud_m": 81.91153489212883,
+        "desnivel_m": -9.537867369649211,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C033"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425489.26358542667,
+            8433616.381813306
+          ],
+          [
+            425458.2548545343,
+            8433580.641570626
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V057",
+        "desde": "P057",
+        "hasta": "P058",
+        "longitud_m": 47.31708294495493,
+        "desnivel_m": 7.985338687707918,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C034"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425458.2548545343,
+            8433580.641570626
+          ],
+          [
+            425427.24612364196,
+            8433544.901327945
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V058",
+        "desde": "P058",
+        "hasta": "P059",
+        "longitud_m": 47.31708294491679,
+        "desnivel_m": 15.814727445646804,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C034"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425427.24612364196,
+            8433544.901327945
+          ],
+          [
+            425412.86697142443,
+            8433509.294955079
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V059",
+        "desde": "P059",
+        "hasta": "P060",
+        "longitud_m": 38.40017978112932,
+        "desnivel_m": 10.244568167074158,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C035"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425412.86697142443,
+            8433509.294955079
+          ],
+          [
+            425410.6650950881,
+            8433441.177846452
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V060",
+        "desde": "P060",
+        "hasta": "P061",
+        "longitud_m": 68.15268701237369,
+        "desnivel_m": 2.7083625000601383,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C036"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425410.6650950881,
+            8433441.177846452
+          ],
+          [
+            425408.4632187518,
+            8433373.060737826
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V061",
+        "desde": "P061",
+        "hasta": "P062",
+        "longitud_m": 68.1526870123718,
+        "desnivel_m": -10.938490444796026,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C036"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425408.4632187518,
+            8433373.060737826
+          ],
+          [
+            425406.26134241547,
+            8433304.9436292
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V062",
+        "desde": "P062",
+        "hasta": "P063",
+        "longitud_m": 68.1526870123718,
+        "desnivel_m": 12.798711301697859,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C036"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425406.26134241547,
+            8433304.9436292
+          ],
+          [
+            425404.0594660791,
+            8433236.826520573
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V063",
+        "desde": "P063",
+        "hasta": "P064",
+        "longitud_m": 68.15268701237369,
+        "desnivel_m": -4.103805213264968,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C036"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425404.0594660791,
+            8433236.826520573
+          ],
+          [
+            425363.4514987495,
+            8433198.25124322
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V064",
+        "desde": "P064",
+        "hasta": "P065",
+        "longitud_m": 56.00945485792166,
+        "desnivel_m": 11.467957913086048,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C037"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425363.4514987495,
+            8433198.25124322
+          ],
+          [
+            425339.35654560255,
+            8433132.747272156
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V065",
+        "desde": "P065",
+        "hasta": "P066",
+        "longitud_m": 69.79496394702963,
+        "desnivel_m": 12.18467194583136,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C038"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425339.35654560255,
+            8433132.747272156
+          ],
+          [
+            425315.2615924556,
+            8433067.243301092
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V066",
+        "desde": "P066",
+        "hasta": "P067",
+        "longitud_m": 69.79496394702963,
+        "desnivel_m": 3.4474851945329643,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C038"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425315.2615924556,
+            8433067.243301092
+          ],
+          [
+            425278.5959694274,
+            8433023.751215868
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V067",
+        "desde": "P067",
+        "hasta": "P068",
+        "longitud_m": 56.8852299738879,
+        "desnivel_m": 11.81390386601115,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C039"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425278.5959694274,
+            8433023.751215868
+          ],
+          [
+            425241.9303463992,
+            8432980.259130644
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V068",
+        "desde": "P068",
+        "hasta": "P069",
+        "longitud_m": 56.885229973850386,
+        "desnivel_m": 9.720805381404352,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C039"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425241.9303463992,
+            8432980.259130644
+          ],
+          [
+            425210.03831929574,
+            8432920.033055512
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V069",
+        "desde": "P069",
+        "hasta": "P070",
+        "longitud_m": 68.14896564516827,
+        "desnivel_m": -2.931172321082249,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C040"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425210.03831929574,
+            8432920.033055512
+          ],
+          [
+            425178.1462921923,
+            8432859.80698038
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V070",
+        "desde": "P070",
+        "hasta": "P071",
+        "longitud_m": 68.14896564516827,
+        "desnivel_m": 1.7561236023801943,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C040"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425178.1462921923,
+            8432859.80698038
+          ],
+          [
+            425139.9777747394,
+            8432815.239220954
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V071",
+        "desde": "P071",
+        "hasta": "P072",
+        "longitud_m": 58.67811265568827,
+        "desnivel_m": -0.6808882936198639,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C041"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425139.9777747394,
+            8432815.239220954
+          ],
+          [
+            425101.8092572865,
+            8432770.67146153
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V072",
+        "desde": "P072",
+        "hasta": "P073",
+        "longitud_m": 58.678112654273534,
+        "desnivel_m": 11.444019408052009,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C041"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425101.8092572865,
+            8432770.67146153
+          ],
+          [
+            425063.2852640566,
+            8432710.15967561
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V073",
+        "desde": "P073",
+        "hasta": "P074",
+        "longitud_m": 71.73405251128096,
+        "desnivel_m": 10.66700911326061,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C042"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425063.2852640566,
+            8432710.15967561
+          ],
+          [
+            425024.7612708267,
+            8432649.647889689
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V074",
+        "desde": "P074",
+        "hasta": "P075",
+        "longitud_m": 71.73405251128096,
+        "desnivel_m": -5.046906357199715,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C042"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            425024.7612708267,
+            8432649.647889689
+          ],
+          [
+            424988.40702243324,
+            8432617.578916226
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V075",
+        "desde": "P075",
+        "hasta": "P076",
+        "longitud_m": 48.47731877099454,
+        "desnivel_m": 3.4835405301433635,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C043"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424988.40702243324,
+            8432617.578916226
+          ],
+          [
+            424963.7040934457,
+            8432570.59992223
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V076",
+        "desde": "P076",
+        "hasta": "P077",
+        "longitud_m": 53.07787276594383,
+        "desnivel_m": -0.9339850359616317,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C044"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424963.7040934457,
+            8432570.59992223
+          ],
+          [
+            424939.00116445817,
+            8432523.620928235
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V077",
+        "desde": "P077",
+        "hasta": "P078",
+        "longitud_m": 53.07787276591674,
+        "desnivel_m": 6.060997818055421,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C044"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424939.00116445817,
+            8432523.620928235
+          ],
+          [
+            424920.3818775996,
+            8432454.308619492
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V078",
+        "desde": "P078",
+        "hasta": "P079",
+        "longitud_m": 71.76958956612587,
+        "desnivel_m": -0.8677617607719181,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C045"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424920.3818775996,
+            8432454.308619492
+          ],
+          [
+            424884.2328607407,
+            8432396.725334454
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V079",
+        "desde": "P079",
+        "hasta": "P080",
+        "longitud_m": 67.98960314317372,
+        "desnivel_m": 3.5628549348747587,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C046"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424884.2328607407,
+            8432396.725334454
+          ],
+          [
+            424819.5614653192,
+            8432349.618089134
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V080",
+        "desde": "P080",
+        "hasta": "P081",
+        "longitud_m": 80.00926163541735,
+        "desnivel_m": 10.21281888419062,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C047"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424819.5614653192,
+            8432349.618089134
+          ],
+          [
+            424754.8900698977,
+            8432302.510843812
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V081",
+        "desde": "P081",
+        "hasta": "P082",
+        "longitud_m": 80.00926163651403,
+        "desnivel_m": 4.2704102342599075,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C047"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424754.8900698977,
+            8432302.510843812
+          ],
+          [
+            424690.2186744762,
+            8432255.403598491
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V082",
+        "desde": "P082",
+        "hasta": "P083",
+        "longitud_m": 80.00926163541735,
+        "desnivel_m": 10.474196554515311,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C047"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424690.2186744762,
+            8432255.403598491
+          ],
+          [
+            424641.0666611238,
+            8432199.734277956
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V083",
+        "desde": "P083",
+        "hasta": "P084",
+        "longitud_m": 74.26300334224972,
+        "desnivel_m": 8.408285806158256,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C048"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424641.0666611238,
+            8432199.734277956
+          ],
+          [
+            424591.9146477714,
+            8432144.06495742
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V084",
+        "desde": "P084",
+        "hasta": "P085",
+        "longitud_m": 74.26300334368453,
+        "desnivel_m": 7.323526001370192,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C048"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424591.9146477714,
+            8432144.06495742
+          ],
+          [
+            424542.762634419,
+            8432088.395636884
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V085",
+        "desde": "P085",
+        "hasta": "P086",
+        "longitud_m": 74.26300334224972,
+        "desnivel_m": 12.25415953349866,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C048"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424542.762634419,
+            8432088.395636884
+          ],
+          [
+            424534.04980394035,
+            8432052.417454174
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V086",
+        "desde": "P086",
+        "hasta": "P087",
+        "longitud_m": 37.0181448227103,
+        "desnivel_m": -3.8243858315828216,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C049"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424534.04980394035,
+            8432052.417454174
+          ],
+          [
+            424545.2945314823,
+            8431982.622339787
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V087",
+        "desde": "P087",
+        "hasta": "P088",
+        "longitud_m": 70.69513342347099,
+        "desnivel_m": -1.982205792238437,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C050"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424545.2945314823,
+            8431982.622339787
+          ],
+          [
+            424518.9308651374,
+            8431933.887991957
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V088",
+        "desde": "P088",
+        "hasta": "P089",
+        "longitud_m": 55.4082986701556,
+        "desnivel_m": 8.18786847923493,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C051"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424518.9308651374,
+            8431933.887991957
+          ],
+          [
+            424492.56719879253,
+            8431885.153644128
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V089",
+        "desde": "P089",
+        "hasta": "P090",
+        "longitud_m": 55.40829867012791,
+        "desnivel_m": 8.7587365964745,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C051"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424492.56719879253,
+            8431885.153644128
+          ],
+          [
+            424491.23384793533,
+            8431821.950575596
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V090",
+        "desde": "P090",
+        "hasta": "P091",
+        "longitud_m": 63.217131351994695,
+        "desnivel_m": 3.647411362687853,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C052"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424491.23384793533,
+            8431821.950575596
+          ],
+          [
+            424515.3984468885,
+            8431783.883447306
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V091",
+        "desde": "P091",
+        "hasta": "P092",
+        "longitud_m": 45.08917939789221,
+        "desnivel_m": -4.266064303032545,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C053"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424515.3984468885,
+            8431783.883447306
+          ],
+          [
+            424506.79641887575,
+            8431732.202962425
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V092",
+        "desde": "P092",
+        "hasta": "P093",
+        "longitud_m": 52.39148216582361,
+        "desnivel_m": 1.4241639868427232,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C054"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424506.79641887575,
+            8431732.202962425
+          ],
+          [
+            424459.2090471028,
+            8431724.204206845
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V093",
+        "desde": "P093",
+        "hasta": "P094",
+        "longitud_m": 48.254927655986386,
+        "desnivel_m": 7.912580400811203,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C055"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424459.2090471028,
+            8431724.204206845
+          ],
+          [
+            424425.2256991698,
+            8431688.405426601
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V094",
+        "desde": "P094",
+        "hasta": "P095",
+        "longitud_m": 49.360111463419344,
+        "desnivel_m": 7.069847156201741,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C056"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424425.2256991698,
+            8431688.405426601
+          ],
+          [
+            424397.8941660341,
+            8431622.05137828
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V095",
+        "desde": "P095",
+        "hasta": "P096",
+        "longitud_m": 71.76261165910176,
+        "desnivel_m": 5.622221762674963,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C057"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424397.8941660341,
+            8431622.05137828
+          ],
+          [
+            424370.56263289845,
+            8431555.69732996
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V096",
+        "desde": "P096",
+        "hasta": "P097",
+        "longitud_m": 71.76261165737951,
+        "desnivel_m": -2.0845813219097185,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C057"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424370.56263289845,
+            8431555.69732996
+          ],
+          [
+            424343.23109976284,
+            8431489.34328164
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V097",
+        "desde": "P097",
+        "hasta": "P098",
+        "longitud_m": 71.7626116590796,
+        "desnivel_m": -7.876349070385368,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C057"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424343.23109976284,
+            8431489.34328164
+          ],
+          [
+            424315.89956662717,
+            8431422.98923332
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V098",
+        "desde": "P098",
+        "hasta": "P099",
+        "longitud_m": 71.76261165737951,
+        "desnivel_m": 11.8085463370875,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C057"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424315.89956662717,
+            8431422.98923332
+          ],
+          [
+            424288.5680334915,
+            8431356.635185
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V099",
+        "desde": "P099",
+        "hasta": "P100",
+        "longitud_m": 71.76261165910176,
+        "desnivel_m": -1.6785918091276475,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C057"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424288.5680334915,
+            8431356.635185
+          ],
+          [
+            424253.7023698798,
+            8431327.34454934
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V100",
+        "desde": "P100",
+        "hasta": "P101",
+        "longitud_m": 45.53631338247174,
+        "desnivel_m": 4.053262079865908,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C058"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424253.7023698798,
+            8431327.34454934
+          ],
+          [
+            424218.83670626814,
+            8431298.053913679
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V101",
+        "desde": "P101",
+        "hasta": "P102",
+        "longitud_m": 45.53631338247174,
+        "desnivel_m": -2.344548175184263,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C058"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424218.83670626814,
+            8431298.053913679
+          ],
+          [
+            424175.0795029453,
+            8431278.373897128
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V102",
+        "desde": "P102",
+        "hasta": "P103",
+        "longitud_m": 47.97911935509179,
+        "desnivel_m": 8.371750422033893,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C059"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424175.0795029453,
+            8431278.373897128
+          ],
+          [
+            424131.32229962246,
+            8431258.693880579
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V103",
+        "desde": "P103",
+        "hasta": "P104",
+        "longitud_m": 47.97911935432777,
+        "desnivel_m": 0.9437602203051032,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C059"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424131.32229962246,
+            8431258.693880579
+          ],
+          [
+            424075.5262031303,
+            8431204.741371095
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V104",
+        "desde": "P104",
+        "hasta": "P105",
+        "longitud_m": 77.61493196099227,
+        "desnivel_m": -7.792695255340822,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C060"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424075.5262031303,
+            8431204.741371095
+          ],
+          [
+            424019.73010663816,
+            8431150.78886161
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V105",
+        "desde": "P105",
+        "hasta": "P106",
+        "longitud_m": 77.61493196228705,
+        "desnivel_m": -5.143723248103106,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C060"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            424019.73010663816,
+            8431150.78886161
+          ],
+          [
+            423992.6227964469,
+            8431098.835271256
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V106",
+        "desde": "P106",
+        "hasta": "P107",
+        "longitud_m": 58.60018614707175,
+        "desnivel_m": 0.26301027916033526,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C061"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            423992.6227964469,
+            8431098.835271256
+          ],
+          [
+            423965.51548625564,
+            8431046.881680902
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V107",
+        "desde": "P107",
+        "hasta": "P108",
+        "longitud_m": 58.60018614707175,
+        "desnivel_m": 4.797904866635145,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C061"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            423965.51548625564,
+            8431046.881680902
+          ],
+          [
+            423971.29191568104,
+            8431003.302483708
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V108",
+        "desde": "P108",
+        "hasta": "P109",
+        "longitud_m": 43.96036356784844,
+        "desnivel_m": -4.005636649120879,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C062"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            423971.29191568104,
+            8431003.302483708
+          ],
+          [
+            423952.3971531158,
+            8430970.221154597
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V109",
+        "desde": "P109",
+        "hasta": "P110",
+        "longitud_m": 38.09706534824831,
+        "desnivel_m": 0.39947695460150534,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C063"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            423952.3971531158,
+            8430970.221154597
+          ],
+          [
+            423945.20799878985,
+            8430951.877688147
+          ]
+        ]
+      },
+      "properties": {
+        "id": "V110",
+        "desde": "P110",
+        "hasta": "P111",
+        "longitud_m": 19.70194663750202,
+        "desnivel_m": 0.9686276166275096,
+        "cruza_cauce": false,
+        "cruza_via": false,
+        "canton": "C064"
+      }
+    }
+  ]
+}

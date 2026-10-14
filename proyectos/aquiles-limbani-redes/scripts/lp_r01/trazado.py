@@ -9,7 +9,7 @@ P=Path(__file__).resolve().parents[2];ROOT=P.parents[1]
 S=P/'fuentes/local/lp-r01';D=P/'datos/lp-r01';B=ROOT/'build'/P.name/'lp-r01'
 
 def osm():
-    tree=ET.parse(S/'osm_bbox.xml');xy=Transformer.from_crs(4326,32719,always_xy=True)
+    tree=ET.parse(D/'osm_bbox.xml' if (D/'osm_bbox.xml').exists() else S/'osm_bbox.xml');xy=Transformer.from_crs(4326,32719,always_xy=True)
     nodes={n.get('id'):xy.transform(float(n.get('lon')),float(n.get('lat'))) for n in tree.findall('node')}
     ways=[]
     for w in tree.findall('way'):

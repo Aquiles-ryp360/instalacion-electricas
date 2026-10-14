@@ -1,57 +1,62 @@
 [
   {
     "layout": "LP-01_GENERAL",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\01-LP-01_GENERAL.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/01-LP-01_GENERAL.png",
     "pagina": 1
   },
   {
     "layout": "LP-02_PLANTA",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\02-LP-02_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/02-LP-02_PLANTA.png",
     "pagina": 2
   },
   {
     "layout": "LP-03_PLANTA",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\03-LP-03_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/03-LP-03_PLANTA.png",
     "pagina": 3
   },
   {
     "layout": "LP-04_PLANTA",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\04-LP-04_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/04-LP-04_PLANTA.png",
     "pagina": 4
   },
   {
     "layout": "LP-05_PLANTA",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\05-LP-05_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/05-LP-05_PLANTA.png",
     "pagina": 5
   },
   {
     "layout": "LP-06_PLANTA",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\06-LP-06_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/06-LP-06_PLANTA.png",
     "pagina": 6
   },
   {
     "layout": "LP-07_PLANTA",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\07-LP-07_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/07-LP-07_PLANTA.png",
     "pagina": 7
   },
   {
     "layout": "LP-08_PLANTA",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\08-LP-08_PLANTA.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/08-LP-08_PLANTA.png",
     "pagina": 8
   },
   {
     "layout": "LP-UNIFILAR",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\09-LP-UNIFILAR.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/09-LP-UNIFILAR.png",
     "pagina": 9
   },
   {
     "layout": "LP-ESTRUCTURAS",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\10-LP-ESTRUCTURAS.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/10-LP-ESTRUCTURAS.png",
     "pagina": 10
   },
   {
     "layout": "LP-TIERRAS",
-    "png": "G:\\Aquiles\\instalacion-electricas\\build\\aquiles-limbani-redes\\lp-r01\\planos\\11-LP-TIERRAS.png",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/11-LP-TIERRAS.png",
     "pagina": 11
+  },
+  {
+    "layout": "LP-PROTECCIONES",
+    "png": "build/aquiles-limbani-redes/lp-r01/planos/12-LP-PROTECCIONES.png",
+    "pagina": 12
   }
 ]

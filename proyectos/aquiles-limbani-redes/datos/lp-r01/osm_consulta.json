@@ -1,0 +1,11 @@
+{
+  "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-69.735,-14.215,-69.665,-14.125",
+  "fecha_snapshot": "2026-10-14",
+  "sha256": "58abd3312f3968036e63989dd7792aad71f25121a6919c793ed4402add5b062f",
+  "datum": "WGS84 EPSG:4326, convertido a EPSG:32719",
+  "nodos": 5308,
+  "vias": 88,
+  "licencia": "© OpenStreetMap contributors, ODbL 1.0",
+  "licencia_url": "https://www.openstreetmap.org/copyright",
+  "estado": "Cartografía colaborativa, no levantamiento; incluye coordenada de localidad, no predio SE"
+}

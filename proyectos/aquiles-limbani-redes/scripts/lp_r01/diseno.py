@@ -77,7 +77,10 @@ def route_and_poles():
     start=Point(C['inicio']['e'],C['inicio']['n']);end=Point(*t.transform(C['fin']['lon'],C['fin']['lat']))
     road,ids=shortest(nodes,ways,start,end)
     waters=unary_union([LineString(w['xy']) for w in ways if 'waterway' in w['tags']])
-    raw=json.loads((B/'investigacion/casas-originales.geojson').read_text(encoding='utf-8'))
+    roads=unary_union([LineString(w['xy']) for w in ways if 'highway' in w['tags']])
+    file=D/'casas-originales.geojson'
+    if not file.exists():file=B/'investigacion/casas-originales.geojson'
+    raw=json.loads(file.read_text(encoding='utf-8'))
     house_geometries=[shape(f['geometry']) for f in raw['features'] if f['geometry']]
     repaired=sum(not g.is_valid for g in house_geometries)
     houses=unary_union([make_valid(g) for g in house_geometries]);candidates=[]
@@ -127,21 +130,23 @@ def route_and_poles():
         if kind!='SUSPENSION':last_anchor=ch
         p=Point(x,y);dw=p.distance(waters);dh=p.distance(houses)
         posts.append(dict(id=f'P{i+1:03}',e=x,n=y,z_dem_m=elevation(x,y),progresiva_m=ch,angulo_deg=a,
-                    estructura=kind,retencion=kind!='SUSPENSION',poste_m=13,amarre_m=10.6,distancia_cauce_m=dw,distancia_casa_m=dh,
+                    estructura=kind,armado='ESP-RET' if a>90 else {'TERMINAL':'LP-T-026','ANCLAJE':'LP-AN-020','ANGULO':'LP-A-008','SUSPENSION':'LP-S-004'}[kind],
+                    retencion=kind!='SUSPENSION',poste_m=13,amarre_m=10.6,distancia_cauce_m=dw,distancia_casa_m=dh,
                     cautela='; '.join(s for cond,s in [(dw<30,'Verificar cauce/faja'),(dw<8,'Conflicto cartográfico cauce'),(dh<4,'Conflicto inmueble')] if cond),
                     estado='PROYECTADO EN GABINETE; NO REPLANTEADO'))
     write_json(D/'referencias-osm.geojson',gj([feature(LineString(w['xy']),{'osm_id':w['id'],'clase':w['tags'].get('highway',w['tags'].get('waterway','otro'))}) for w in ways if 'highway' in w['tags'] or 'waterway' in w['tags']]))
     return route,posts,dict(longitud_vial_m=road.length,offset_m=side,criterio_score=score,postes_desplazados=moved,
            cruces_inmuebles_m=route.intersection(houses.buffer(4)).length,zona_cauce_estudio_m=route.intersection(waters.buffer(8)).length,
-           casas_originales=len(raw['features']),casas_reparadas_solo_analisis=repaired,nodos_osm=ids),waters
+           casas_originales=len(raw['features']),casas_reparadas_solo_analisis=repaired,nodos_osm=ids),waters,roads
 
-def mechanical(posts,waters):
+def mechanical(posts,waters,roads):
     c=C['conductor'];m=C['mecanica'];ea=c['e_pa']*c['seccion_real_mm2']*1e-6
     qr=c['masa_kg_km']/1000*9.80665;hr=c['rts_n']*c['tension_eds_fraccion_rts'];d=c['diametro_mm']/1000;spans=[]
     for i,(a,b) in enumerate(zip(posts,posts[1:])):
         l=math.hypot(b['e']-a['e'],b['n']-a['n']);dz=b['z_dem_m']+b['amarre_m']-a['z_dem_m']-a['amarre_m']
         spans.append(dict(id=f'V{i+1:03}',desde=a['id'],hasta=b['id'],longitud_m=l,desnivel_m=dz,
-                    cruza_cauce=LineString([(a['e'],a['n']),(b['e'],b['n'])]).intersects(waters),estados={}))
+                    cruza_cauce=LineString([(a['e'],a['n']),(b['e'],b['n'])]).intersects(waters),
+                    cruza_via=LineString([(a['e'],a['n']),(b['e'],b['n'])]).intersects(roads),estados={}))
     anchors=[i for i,p in enumerate(posts) if p['retencion']];sections=[]
     for k,(a,b) in enumerate(zip(anchors,anchors[1:])):
         subset=spans[a:b];vanos=[(v['longitud_m'],v['desnivel_m']) for v in subset]
@@ -154,7 +159,13 @@ def mechanical(posts,waters):
             for j,(v,g) in enumerate(zip(subset,gs)):
                 pts=puntos(g,v['longitud_m'],v['desnivel_m'],qv,qw,61);frac=pts[:,0]/v['longitud_m'];z=pts[:,2]
                 pa=posts[a+j];pb=posts[a+j+1]
-                ground=[elevation(pa['e']+(pb['e']-pa['e'])*s,pa['n']+(pb['n']-pa['n'])*s) for s in frac]
+                normal=np.array([-(pb['n']-pa['n']),pb['e']-pa['e']])/v['longitud_m']
+                # Terreno bajo las fases extremas y envolvente de viento a ambos lados.
+                ground=[]
+                for zf,wind in zip(frac,pts[:,1]):
+                    base=np.array([pa['e'],pa['n']])+zf*np.array([pb['e']-pa['e'],pb['n']-pa['n']])
+                    shifts=[-1.2-abs(wind),0,1.2+abs(wind)]
+                    ground.append(max(elevation(*(base+normal*shift)) for shift in shifts))
                 clearance=z+pa['z_dem_m']+pa['amarre_m']-ground
                 v['estados'][cl['id']]=dict(h_n=h,flecha_vertical_m=float(max(frac*v['desnivel_m']-z)),
                      tension_max_n=max(g['t_inicial_n'],g['t_final_n']),longitud_conductor_m=g['longitud_m'],
@@ -257,7 +268,7 @@ def budget(posts,spans,guys):
        ('Armado suspensión','ud',sum(p['estructura']=='SUSPENSION' for p in posts),c['armado_suspension_pen']),
        ('Armado angular de retención','ud',sum(p['estructura']=='ANGULO' for p in posts),c['armado_angulo_pen']),
        ('Armado anclaje/terminal','ud',sum(p['estructura'] in ['ANCLAJE','TERMINAL'] for p in posts),c['armado_anclaje_pen']),
-       ('Retenida completa; bloque 1.2m tipo, por verificar','ud',len(guys),2600),('PAT poste, 2 varillas y enlace','ud',len(posts),c['tierra_poste_pen']),
+       ('Retenida completa; bloque 1.2m tipo, por verificar','ud',len(guys),c['retenida_pen']),('PAT poste, 2 varillas y enlace','ud',len(posts),c['tierra_poste_pen']),
        ('Transformador 250 kVA garantizado a altitud','ud',2,c['trafo250_altitud_pen']),('Celda de protección por SE','ud',2,c['celda_proteccion_pen']),
        ('Zigzag y NGR MT 5A/10s','lote',1,c['ngr_zigzag_pen']),('Malla SE 10x10m + 4 varillas','ud',2,c['malla_se_pen']),
        ('Tablero BT 400A','ud',2,22000),('Cable BT 2x240mm2/fase + N240, 20m/SE','m',280,105),('PE de SE Cu35, 20m/SE','m',40,20),('Descargadores y terminales SE','lote',2,8000),('Protecciones y comunicaciones','lote',1,35000),
@@ -273,7 +284,7 @@ def csvout(name,rows):
     with f.open('w',encoding='utf-8-sig',newline='') as out:
         w=csv.DictWriter(out,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 def main():
-    O.mkdir(parents=True,exist_ok=True);route,posts,meta,waters=route_and_poles();spans,sections,guys=mechanical(posts,waters)
+    O.mkdir(parents=True,exist_ok=True);route,posts,meta,waters,roads=route_and_poles();spans,sections,guys=mechanical(posts,waters,roads)
     # Alturas aumentadas para superar 7,5 m frente al DEM. No acredita distancia real en campo.
     for _ in range(3):
         changed=False
@@ -284,16 +295,30 @@ def main():
                     if p['poste_m']<17:
                         p['poste_m']+=2;p['amarre_m']+=1.8;changed=True
         if not changed:break
-        spans,sections,guys=mechanical(posts,waters)
+        spans,sections,guys=mechanical(posts,waters,roads)
     el=electrical(route.length);bu=budget(posts,spans,guys)
+    crossings=[]
+    for v,a,b in zip(spans,posts,posts[1:]):
+        seg=LineString([(a['e'],a['n']),(b['e'],b['n'])])
+        for kind,other in [('VIA',roads),('CAUCE',waters)]:
+            cross=seg.intersection(other);parts=list(cross.geoms) if hasattr(cross,'geoms') else [cross]
+            for g in parts:
+                if g.geom_type!='Point':continue
+                if any(k['tipo']==kind and math.hypot(k['e']-g.x,k['n']-g.y)<1 for k in crossings):continue
+                crossings.append(dict(id=f'CR{len(crossings)+1:03}',tipo=kind,vano=v['id'],e=g.x,n=g.y,
+                    progresiva_m=a['progresiva_m']+seg.project(g),estado='INTERSECCION CARTOGRAFICA; DISTANCIAS/COTAS POR VERIFICAR'))
+    for g in guys:
+        g['distancia_cauce_m']=Point(g['e'],g['n']).distance(waters)
+        g['cautela']='Verificar anclaje próximo a cauce' if g['distancia_cauce_m']<30 else ''
     data=dict(revision='LP-R01',crs='EPSG:32719',linea_longitud_m=route.length,geometria=mapping(route),trazado=meta,
-              postes=posts,vanos=spans,cantones=sections,retenidas=guys,electrico=el,presupuesto=bu)
+              postes=posts,vanos=spans,cantones=sections,retenidas=guys,cruces=crossings,electrico=el,presupuesto=bu)
     write_json(D/'resultados.json',data)
     write_json(D/'postes.geojson',gj([feature(Point(p['e'],p['n']),p) for p in posts]))
     write_json(D/'linea.geojson',gj([feature(route,dict(id='LP-LIM-HUA',longitud_m=route.length,tension_kv=10,estado='ACADEMICO'))]))
     write_json(D/'vanos.geojson',gj([feature(LineString([(a['e'],a['n']),(b['e'],b['n'])]),{k:v for k,v in s.items() if k not in ['estados','perfil']}) for a,b,s in zip(posts,posts[1:],spans)]))
     write_json(D/'retenidas.geojson',gj([feature(LineString([(next(p for p in posts if p['id']==r['poste'])['e'],next(p for p in posts if p['id']==r['poste'])['n']),(r['e'],r['n'])]),r) for r in guys]))
     write_json(D/'subestaciones.geojson',gj([feature(Point(p['e'],p['n']),dict(id=name,kva=250,mt_kv=10,bt_v=380,estado='PROPUESTA, NO PREDIO CONFIRMADO')) for p,name in [(posts[0],'SE-LIM'),(posts[-1],'SE-HUA')]]))
+    write_json(D/'cruces.geojson',gj([feature(Point(v['e'],v['n']),v) for v in crossings]));csvout('cruces.csv',crossings)
     csvout('postes.csv',posts);csvout('vanos.csv',[dict(**{k:v for k,v in s.items() if k not in ['estados','perfil']},flecha_final_m=s['estados']['CALOR_FINAL']['flecha_vertical_m'],distancia_dem_min_m=min(st['distancia_dem_min_m'] for st in s['estados'].values()),tension_max_n=max(st['tension_max_n'] for st in s['estados'].values())) for s in spans])
     csvout('estados_mecanicos.csv',[dict(vano=s['id'],canton=s['canton'],estado=state,**v) for s in spans for state,v in s['estados'].items()])
     csvout('cantones.csv',[{k:v for k,v in s.items() if k!='estados'} for s in sections]);csvout('retenidas.csv',guys)

@@ -1,0 +1,311 @@
+{
+  "revision": "LP-R01",
+  "estado": "Entrega académica revisada, con pendientes de campo",
+  "archivos": [
+    {
+      "ruta": ".gitattributes",
+      "bytes": 10,
+      "sha256": "4ce4b6e6b8435f8c3a8387387732964a2ebf0183e8d77b8247ae8061b033e462"
+    },
+    {
+      "ruta": "cad/LP_Limbani_Huancasayani_R01.dwg",
+      "bytes": 428209,
+      "sha256": "65842da2315bf2d192053d73e5728dd3d20e47565dd4f15671f48a764b870e01"
+    },
+    {
+      "ruta": "cad/LP_Limbani_Huancasayani_R01.dxf",
+      "bytes": 1731065,
+      "sha256": "51d1065fa0260969b8a1a6f3484fc22c4a4d610767822b9ad51705bff1a4bbbe"
+    },
+    {
+      "ruta": "cad/verificacion-dwg.json",
+      "bytes": 368,
+      "sha256": "37107539e6808ba5fd762f9e14e78c9f77efd2cefd9f5a93a0e7c86f7492d9f3"
+    },
+    {
+      "ruta": "datos/.gitattributes",
+      "bytes": 50,
+      "sha256": "1d3d97d9e4bdd2be2fa49ff8a65e85d18d6f74858ae8840cb279559fb7b4718a"
+    },
+    {
+      "ruta": "datos/casas-originales.geojson",
+      "bytes": 196630,
+      "sha256": "e4a020f662842a8a5c7dae1df45c83e856653a813bcb5160516ad36846cdebbf"
+    },
+    {
+      "ruta": "datos/corredor-vial.json",
+      "bytes": 15127,
+      "sha256": "c5b9a5542496936cfff48aaedba04b8e712495dc9015934601c62db1dbcba191"
+    },
+    {
+      "ruta": "datos/cruces.geojson",
+      "bytes": 2616,
+      "sha256": "8d6c2cb945b66fa774481dcfd0cfddabb8ceb641f90040f639e8c8e89a58e8c0"
+    },
+    {
+      "ruta": "datos/fuentes.json",
+      "bytes": 9452,
+      "sha256": "87a16b17956150fe164b5ca7eec01ebaaaff14a2d5bd66208d78b6da1be45bf3"
+    },
+    {
+      "ruta": "datos/indice-planos.json",
+      "bytes": 1644,
+      "sha256": "095d201c461ac2c167c4737f4a491c074b09fc1907d3272cdb1808d687ed8e81"
+    },
+    {
+      "ruta": "datos/linea.geojson",
+      "bytes": 10437,
+      "sha256": "a5dc299f385b2d501f88f2b05dfb59c7a1c95c655370d42808c2a25804f801f3"
+    },
+    {
+      "ruta": "datos/osm_bbox.xml",
+      "bytes": 1069816,
+      "sha256": "58abd3312f3968036e63989dd7792aad71f25121a6919c793ed4402add5b062f"
+    },
+    {
+      "ruta": "datos/osm_consulta.json",
+      "bytes": 529,
+      "sha256": "857c3ab75a4680f51ec940b3959a98d914c12f1778e09d104b3343bd1d8984c9"
+    },
+    {
+      "ruta": "datos/parametros.json",
+      "bytes": 5004,
+      "sha256": "2134deca3676569bdd239d32ecc8d2803ee508dcb3ecd0565ed874cb6e4abbf4"
+    },
+    {
+      "ruta": "datos/postes.geojson",
+      "bytes": 120129,
+      "sha256": "f2cb225d25cfdf1fb8a0e19cdf4b0a1b4853f9c354858b5fd9b47bf5d9fe19c0"
+    },
+    {
+      "ruta": "datos/referencias-osm.geojson",
+      "bytes": 403655,
+      "sha256": "4c53bb4f365818d26984477acedb4a2966e36067dbbb01214a5a6dcd5c9ccba6"
+    },
+    {
+      "ruta": "datos/resultados.json",
+      "bytes": 1102454,
+      "sha256": "cee68fb272d67c6d975c873f2506dad2290cf6fabd8faec4c4555ea972d15c95"
+    },
+    {
+      "ruta": "datos/retenidas.geojson",
+      "bytes": 87348,
+      "sha256": "e88b5cf545ebebc6a514fe2081ab2208bf0757dc008b37cadfa27dd4972cd59f"
+    },
+    {
+      "ruta": "datos/subestaciones.geojson",
+      "bytes": 893,
+      "sha256": "bdaa4f5efceb3083fb0b6dd7dc708f080a8045c6f2d46bcb184132dbf4ad7b5d"
+    },
+    {
+      "ruta": "datos/vanos.geojson",
+      "bytes": 65758,
+      "sha256": "27d11f25b3995572f788ee1c3c709e999a3f144fbcabb768e8ab83d8a48b172f"
+    },
+    {
+      "ruta": "LEER_PRIMERO.md",
+      "bytes": 628,
+      "sha256": "8a551fc3a826fbe2608106d6bd785935a4e42abb9866fc23460e9ebbebd220f5"
+    },
+    {
+      "ruta": "Linea_Primaria_Limbani_Huancasayani_R01_calculos.pdf",
+      "bytes": 131500,
+      "sha256": "48736f67e4347122b55de3f82d9dc27feca32dc93e63aa247d80c6da44d7e9b5"
+    },
+    {
+      "ruta": "Linea_Primaria_Limbani_Huancasayani_R01_expediente.pdf",
+      "bytes": 123107,
+      "sha256": "2143e4ff47b3926cd30bca9b8b6968e941badc8d0d8c445b6e7d8f869cacc932"
+    },
+    {
+      "ruta": "Linea_Primaria_Limbani_Huancasayani_R01_planos.pdf",
+      "bytes": 1711475,
+      "sha256": "917c4604af5c4a695d2377d55bcf9598c17d3b89781531c10f42e7262cfed465"
+    },
+    {
+      "ruta": "memoria-editable/01-alcance.md",
+      "bytes": 1680,
+      "sha256": "099e21dc11133da4693ba097e185687275736fd2f0067dfa393f1cb8427193ec"
+    },
+    {
+      "ruta": "memoria-editable/02-antecedentes.md",
+      "bytes": 1763,
+      "sha256": "1d743c5518b8c204f74599dce3a1760e009217716db203986cfbad305c0ba49c"
+    },
+    {
+      "ruta": "memoria-editable/03-ubicacion.md",
+      "bytes": 2191,
+      "sha256": "2ebce0189fa46908b32905f610b165b4ee262223e075347be47887074b2efcbd"
+    },
+    {
+      "ruta": "memoria-editable/04-demanda.md",
+      "bytes": 2132,
+      "sha256": "33d5fbe5871129dba36ff8c272730b328570b0f9420560c5795074029d7abff2"
+    },
+    {
+      "ruta": "memoria-editable/05-electrico.md",
+      "bytes": 2960,
+      "sha256": "e3b5864e347ee4172d4404db957d7ed5901094a09d855cf3bd3709c2a497874e"
+    },
+    {
+      "ruta": "memoria-editable/06-balance.md",
+      "bytes": 1768,
+      "sha256": "793cb676b8320f02dcece62af9fc8a146ba73b78ac9409d3d62f51a0f5fcc314"
+    },
+    {
+      "ruta": "memoria-editable/07-mecanica.md",
+      "bytes": 3173,
+      "sha256": "d569cdbbbe14189827b2cb706483bdc168f3d07d7841d42241831039c0841434"
+    },
+    {
+      "ruta": "memoria-editable/08-protecciones.md",
+      "bytes": 3204,
+      "sha256": "ce8cc31a9d66233917c872275708041351cb70c4a3e14dbeea0c932536b9ce8d"
+    },
+    {
+      "ruta": "memoria-editable/09-normativa.md",
+      "bytes": 2663,
+      "sha256": "644115a881ff0dfc88fb15cd5e9e2745988503f2b52937595400f3b469da0387"
+    },
+    {
+      "ruta": "memoria-editable/10-presupuesto.md",
+      "bytes": 1790,
+      "sha256": "26ee59bf0c3257bf39622fb97cd58a2cdf69d718760caea5a9655e5a57bdfb8c"
+    },
+    {
+      "ruta": "memoria-editable/11-entregables.md",
+      "bytes": 1565,
+      "sha256": "ff1672284e3b874a418fb6a750e24cd56d550bb60b02e087a72f086d7f2a9392"
+    },
+    {
+      "ruta": "memoria-editable/12-conclusiones.md",
+      "bytes": 1619,
+      "sha256": "a7b34e58baa9d4104bd3b230b839ba80d6b91cf48b4be91f794bb099655df505"
+    },
+    {
+      "ruta": "memoria-editable/memoria-completa.md",
+      "bytes": 26719,
+      "sha256": "816b9c61771af66f5370eeba7ce56399da60b5eea5a19026612518ce74ccf66b"
+    },
+    {
+      "ruta": "PENDIENTES_LP_R01.md",
+      "bytes": 3295,
+      "sha256": "162635dd2531bdd2c2a8d0c14d145a0cea343ecb17c36d8354c9fc8d554ef1da"
+    },
+    {
+      "ruta": "qgis/Catastro-Limbani-original.gpkg",
+      "bytes": 278528,
+      "sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8"
+    },
+    {
+      "ruta": "qgis/LP-Limbani-Huancasayani.gpkg",
+      "bytes": 409600,
+      "sha256": "74b5f0a061880258f7e264fe8f4ba3dc8d02200c6b7273f6002647d17e9f0cd1"
+    },
+    {
+      "ruta": "qgis/LP-Limbani-Huancasayani.qgz",
+      "bytes": 32433,
+      "sha256": "ab04c3e48e92e31b3aea3f1b0ecace152006818f27618538689a622ae223fda4"
+    },
+    {
+      "ruta": "qgis/ortofoto_limbani.jgw",
+      "bytes": 72,
+      "sha256": "4e800370d11b81c376efd1d94eda312972ff4dffda930532e17de8e6f6e07265"
+    },
+    {
+      "ruta": "qgis/ortofoto_limbani.jpg",
+      "bytes": 1483278,
+      "sha256": "fcf5e36865ca18e73c367a54a0c5a69bd5bf02f5b751706eca5324d3fdbaaa2f"
+    },
+    {
+      "ruta": "qgis/ortofoto_limbani.jpg.aux.xml",
+      "bytes": 1633,
+      "sha256": "efe72d4096f68995b02acb05693e23df0025d2f8e780c337c079b4d6eec38ca3"
+    },
+    {
+      "ruta": "qgis/portabilidad-verificada.json",
+      "bytes": 325,
+      "sha256": "b9b126c60e0a79fa18111ace398936aee1d4ebaf410931182bd8b17e14640975"
+    },
+    {
+      "ruta": "qgis/simbolos/SE-DGE-09-90-09.svg",
+      "bytes": 258,
+      "sha256": "31def39f3ab36af2d5b7b348581611f5d5a298f13962efbf947f8a379d8a48f5"
+    },
+    {
+      "ruta": "qgis/verificacion-qgis.json",
+      "bytes": 1545,
+      "sha256": "8baf95075300903aee75b53bd1702dba8a6e331aa2aca8efd2dca30b83a9e13f"
+    },
+    {
+      "ruta": "qgis/vista-general.png",
+      "bytes": 175845,
+      "sha256": "4a9a677754bde114c8ff59cdde14362616cdbb3f8186eb9f4bf9e92c59711c32"
+    },
+    {
+      "ruta": "README-LINEA-PRIMARIA.md",
+      "bytes": 894,
+      "sha256": "80d8912ebea4af2685669e2a1ad41b26dc0dba02396ea0f95047ef1abbbd803c"
+    },
+    {
+      "ruta": "RESUMEN_CORRECCIONES_LP_R01.md",
+      "bytes": 2788,
+      "sha256": "7a376fd1ce56a176df498bf603d1be3cae58c8ba0ba5c094b63c214d1178d419"
+    },
+    {
+      "ruta": "tablas/cantones.csv",
+      "bytes": 3374,
+      "sha256": "852c8e35d4b584413a9bcb851ea07482ce82cf86d85762e186636b4621051459"
+    },
+    {
+      "ruta": "tablas/cortocircuito.csv",
+      "bytes": 569,
+      "sha256": "b578dc6b17e290de24aac9853764aed2c437c808edd037be9f91f1c76b688109"
+    },
+    {
+      "ruta": "tablas/cruces.csv",
+      "bytes": 686,
+      "sha256": "6a725229bde38fd16e4faa19edf33b9dbf5df339e827eac4c78df4be02b58361"
+    },
+    {
+      "ruta": "tablas/demanda.csv",
+      "bytes": 295,
+      "sha256": "e09600caf55af07450bcdb8cd32cfa1d403c61c0299dcad6ca1d14c391d4a292"
+    },
+    {
+      "ruta": "tablas/estados_mecanicos.csv",
+      "bytes": 79367,
+      "sha256": "ad38893ef8fbf9ba65e3ef49fa0d44ae92e7b7bd5e1936eb8eeebedf27e69ee7"
+    },
+    {
+      "ruta": "tablas/metrados_civiles_y_tierra.csv",
+      "bytes": 527,
+      "sha256": "5ce8390f200a086f8a0b24cd1a1a056160eb32277d1ea5c2dbf4d639d5a6b62b"
+    },
+    {
+      "ruta": "tablas/postes.csv",
+      "bytes": 32016,
+      "sha256": "083d8a3a5a3fb4b2055755fec481b7e60b0594d5d684da3bd795cb0a42fe2aa4"
+    },
+    {
+      "ruta": "tablas/presupuesto.csv",
+      "bytes": 1693,
+      "sha256": "3d721a0bfb1e1c52e103b1491b543ab455c9cc23e9d69393b8b33af64c5e5f3c"
+    },
+    {
+      "ruta": "tablas/retenidas.csv",
+      "bytes": 15841,
+      "sha256": "fa8ede8c77c3f618e5afa2f458933f0a9742889eaca13bbb517db0d37fd41022"
+    },
+    {
+      "ruta": "tablas/vanos.csv",
+      "bytes": 13848,
+      "sha256": "8b44055e68447a3fa14e528db0a907e5b5c8b8d2a5f2e20b4386c369ef9dabcc"
+    },
+    {
+      "ruta": "verificacion-final.json",
+      "bytes": 2265,
+      "sha256": "1b620f07ff5351e0dfd4d3f91610c6266e231c31b4a5f28f26fd46a656db1503"
+    }
+  ]
+}

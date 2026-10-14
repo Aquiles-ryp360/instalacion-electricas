@@ -1,0 +1,106 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425470.8157222742,
+          8436163.6161488
+        ]
+      },
+      "properties": {
+        "id": "CR001",
+        "tipo": "VIA",
+        "vano": "V010",
+        "e": 425470.8157222742,
+        "n": 8436163.6161488,
+        "progresiva_m": 622.3299531183427,
+        "estado": "INTERSECCION CARTOGRAFICA; DISTANCIAS/COTAS POR VERIFICAR"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425481.0709535901,
+          8436176.163063636
+        ]
+      },
+      "properties": {
+        "id": "CR002",
+        "tipo": "CAUCE",
+        "vano": "V010",
+        "e": 425481.0709535901,
+        "n": 8436176.163063636,
+        "progresiva_m": 606.1251747719878,
+        "estado": "INTERSECCION CARTOGRAFICA; DISTANCIAS/COTAS POR VERIFICAR"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425422.38400619524,
+          8435990.740444966
+        ]
+      },
+      "properties": {
+        "id": "CR003",
+        "tipo": "VIA",
+        "vano": "V014",
+        "e": 425422.38400619524,
+        "n": 8435990.740444966,
+        "progresiva_m": 833.3307508120586,
+        "estado": "INTERSECCION CARTOGRAFICA; DISTANCIAS/COTAS POR VERIFICAR"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425387.7601403179,
+          8435901.304014107
+        ]
+      },
+      "properties": {
+        "id": "CR004",
+        "tipo": "VIA",
+        "vano": "V015",
+        "e": 425387.7601403179,
+        "n": 8435901.304014107,
+        "progresiva_m": 929.2353244933474,
+        "estado": "INTERSECCION CARTOGRAFICA; DISTANCIAS/COTAS POR VERIFICAR"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425349.06350531016,
+          8434909.396541093
+        ]
+      },
+      "properties": {
+        "id": "CR005",
+        "tipo": "CAUCE",
+        "vano": "V032",
+        "e": 425349.06350531016,
+        "n": 8434909.396541093,
+        "progresiva_m": 1931.0439603527577,
+        "estado": "INTERSECCION CARTOGRAFICA; DISTANCIAS/COTAS POR VERIFICAR"
+      }
+    }
+  ]
+}

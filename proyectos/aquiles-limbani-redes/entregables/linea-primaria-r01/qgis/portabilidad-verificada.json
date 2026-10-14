@@ -1,0 +1,17 @@
+{
+  "version": "3.44.15-Solothurn",
+  "capas_validas_en_copia": [
+    "Calles",
+    "Casas",
+    "Ortofoto antecedente, fecha por verificar",
+    "Rios-Cuencas",
+    "cruces",
+    "linea",
+    "postes",
+    "referencias-osm",
+    "retenidas",
+    "subestaciones",
+    "vanos"
+  ],
+  "rutas_fuera_paquete": 0
+}

@@ -28,7 +28,7 @@
     "poste_longitud_m":13,"empotramiento_m":1.9,"altura_amarre_m":10.6,"poste_trabajo_dan":600,
     "poste_rotura_factor_propuesto":2,"factor_sobrecarga_viento_estudio":2.5,"factor_sobrecarga_longitudinal_estudio":1.65,
     "factor_resistencia_poste_estudio":0.65,"diametro_poste_medio_m":0.26,
-    "retenida_angulo_vertical_deg":45,"retenida_rotura_min_n":60000,"retenida_factor_estudio":0.5,
+    "retenida_angulo_vertical_deg":45,"retenida_rotura_min_n":60000,"retenida_factor_estudio":0.9,
     "carga_aisladores_poste_n":300,"separacion_fases_m":1.2,
     "estado":"Valores de estructuras y factores de estudio por confirmar con grado CNE, ensayos CAC y geotecnia; no capacidad medida"},
   "clima":[
@@ -39,7 +39,7 @@
     {"id":"FRIO","temperatura_c":-5,"viento_ms":0,"hielo_mm":0,"creep":0,"fuente":"Sensibilidad académica, no registro climático"},
     {"id":"CALOR_FINAL","temperatura_c":75,"viento_ms":0,"hielo_mm":0,"creep":0.000345,"fuente":"Máxima temperatura adoptada coherente con resistencia eléctrica; fluencia de sensibilidad, sin curva de proveedor"}],
   "costos":{"fecha":"2026-10-14","moneda":"PEN","conductor_pen_m":5.8,"poste_cac_instalado_pen":3800,
-    "armado_suspension_pen":1200,"armado_angulo_pen":1800,"armado_anclaje_pen":2800,"retenida_pen":1400,"tierra_poste_pen":1200,
+    "armado_suspension_pen":1200,"armado_angulo_pen":1800,"armado_anclaje_pen":2800,"retenida_pen":2600,"tierra_poste_pen":1200,
     "trafo250_altitud_pen":105000,"celda_proteccion_pen":55000,"ngr_zigzag_pen":60000,"malla_se_pen":25000,
     "ingenieria_factor":0.08,"logistica_factor":0.12,"contingencia_factor":0.20,
     "estado":"Todos precios estimados, sin ofertas en Limbani; cantidades derivadas del diseño, sin tarifas ni rentabilidad supuesta"}

@@ -1,5 +1,5 @@
 {
-  "version": "4.2.3-Belém do Pará",
+  "version": "3.44.15-Solothurn",
   "capas": [
     {
       "capa": "Calles",
@@ -46,6 +46,12 @@
     {
       "capa": "subestaciones",
       "entidades": 2,
+      "crs": "EPSG:32719",
+      "origen": "PROYECTADO"
+    },
+    {
+      "capa": "cruces",
+      "entidades": 5,
       "crs": "EPSG:32719",
       "origen": "PROYECTADO"
     },
