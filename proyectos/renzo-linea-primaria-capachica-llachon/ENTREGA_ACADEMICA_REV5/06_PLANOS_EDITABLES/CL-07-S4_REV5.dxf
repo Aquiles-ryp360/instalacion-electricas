@@ -5817,7 +5817,7 @@ AcDbText
  40
 1.566
   1
-PN | 12 sitios candidatos; PK local KML; NO instalar
+PN | 12 sitios candidatos; PK acumulado KML; NO instalar
  11
 280.0
  21
@@ -7545,7 +7545,7 @@ AcDbText
  40
 1.35
   1
-PC: PK GIS acumulado. PN: PK KML local; brechas no unidas.
+PC: PK GIS. PN: PK acumulado KML sin sumar brechas.
  11
 280.0
  21

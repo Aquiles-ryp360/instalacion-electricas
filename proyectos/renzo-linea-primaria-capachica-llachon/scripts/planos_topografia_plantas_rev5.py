@@ -184,7 +184,7 @@ def make_plant(output: Path, segment: int, line: list[tuple[float,float]],
         yy-=4.6
     if not pc:
         _label(layout,c,tx,yy,"Sin referencias PC en este segmento",INK,4.7); yy-=5
-    heading(f"PN | {len(pn)} sitios candidatos; PK local KML; NO instalar")
+    heading(f"PN | {len(pn)} sitios candidatos; PK acumulado KML; NO instalar")
     for row in pn:
         desc=f"{row['id']} {row['funcion_preliminar'][:18]}"
         _label(layout,c,tx,yy,desc,CYAN,4.6)
@@ -193,7 +193,7 @@ def make_plant(output: Path, segment: int, line: list[tuple[float,float]],
         _label(layout,c,tx+91,yy,f"{float(row['norte_utm19s_m']):.0f}",INK,4.6)
         yy-=4.6
     _label(layout,c,tx,55,"UTM EPSG:32719 (m); lat/lon y fuente en CSV PC/PN.",INK,5.0)
-    _label(layout,c,tx,49,"PC: PK GIS acumulado. PN: PK KML local; brechas no unidas.",INK,5.0)
+    _label(layout,c,tx,49,"PC: PK GIS. PN: PK acumulado KML sin sumar brechas.",INK,5.0)
     _label(layout,c,map_x+3,map_y-7,"Marcas PC/PN son cartograficas; PN no representa poste aprobado.",RED,6)
     # Same paper layout entities for editable CAD deliverable.
     layout.add_lwpolyline([(8,8),(412,8),(412,289),(8,289),(8,8)],dxfattribs={"layer":"MARCO"})

@@ -1,7 +1,7 @@
 ﻿ruta,bytes,clase
 00_INDICE_Y_RESUMEN/generar_entrega_rev5.py,39383,documento o dato Rev5
 00_INDICE_Y_RESUMEN/INDICE.md,716,documento o dato Rev5
-00_INDICE_Y_RESUMEN/planos_topografia_plantas_rev5.py,26798,documento o dato Rev5
+00_INDICE_Y_RESUMEN/planos_topografia_plantas_rev5.py,26795,documento o dato Rev5
 00_INDICE_Y_RESUMEN/REGISTRO_CAMBIOS.md,751,documento o dato Rev5
 00_INDICE_Y_RESUMEN/requirements.txt,169,documento o dato Rev5
 00_INDICE_Y_RESUMEN/RESUMEN.md,1090,documento o dato Rev5
@@ -34,10 +34,10 @@
 05_PLANOS_PDF/CL-04_REV4.pdf,3812,plano Rev4 conservado
 05_PLANOS_PDF/CL-05_REV4.pdf,2551,plano Rev4 conservado
 05_PLANOS_PDF/CL-06_REV5.pdf,4507,plano nuevo Rev5
-05_PLANOS_PDF/CL-07-S1_REV5.pdf,5619,plano nuevo Rev5
-05_PLANOS_PDF/CL-07-S2_REV5.pdf,9104,plano nuevo Rev5
-05_PLANOS_PDF/CL-07-S3_REV5.pdf,5115,plano nuevo Rev5
-05_PLANOS_PDF/CL-07-S4_REV5.pdf,7591,plano nuevo Rev5
+05_PLANOS_PDF/CL-07-S1_REV5.pdf,5606,plano nuevo Rev5
+05_PLANOS_PDF/CL-07-S2_REV5.pdf,9091,plano nuevo Rev5
+05_PLANOS_PDF/CL-07-S3_REV5.pdf,5103,plano nuevo Rev5
+05_PLANOS_PDF/CL-07-S4_REV5.pdf,7580,plano nuevo Rev5
 05_PLANOS_PDF/CL-08_REV5.pdf,34416,plano nuevo Rev5
 06_PLANOS_EDITABLES/CL-01_REV4.dxf,76576,plano Rev4 conservado
 06_PLANOS_EDITABLES/CL-02_REV4.dxf,86922,plano Rev4 conservado
@@ -45,10 +45,10 @@
 06_PLANOS_EDITABLES/CL-04_REV4.dxf,38522,plano Rev4 conservado
 06_PLANOS_EDITABLES/CL-05_REV4.dxf,26234,plano Rev4 conservado
 06_PLANOS_EDITABLES/CL-06_REV5.dxf,51810,plano nuevo Rev5
-06_PLANOS_EDITABLES/CL-07-S1_REV5.dxf,47996,plano nuevo Rev5
-06_PLANOS_EDITABLES/CL-07-S2_REV5.dxf,75302,plano nuevo Rev5
-06_PLANOS_EDITABLES/CL-07-S3_REV5.dxf,43705,plano nuevo Rev5
-06_PLANOS_EDITABLES/CL-07-S4_REV5.dxf,64982,plano nuevo Rev5
+06_PLANOS_EDITABLES/CL-07-S1_REV5.dxf,47993,plano nuevo Rev5
+06_PLANOS_EDITABLES/CL-07-S2_REV5.dxf,75299,plano nuevo Rev5
+06_PLANOS_EDITABLES/CL-07-S3_REV5.dxf,43702,plano nuevo Rev5
+06_PLANOS_EDITABLES/CL-07-S4_REV5.dxf,64979,plano nuevo Rev5
 06_PLANOS_EDITABLES/CL-08_REV5.dxf,43925,plano nuevo Rev5
 07_METRADOS_Y_PRESUPUESTO/CANTIDADES_CLASIFICADAS.csv,482,documento o dato Rev5
 07_METRADOS_Y_PRESUPUESTO/CRITERIO.md,442,documento o dato Rev5
@@ -56,10 +56,10 @@
 08_NORMATIVA_Y_TRAZABILIDAD/FUENTES.md,888,documento o dato Rev5
 08_NORMATIVA_Y_TRAZABILIDAD/MATRIZ_REQUISITOS.csv,2596,documento o dato Rev5
 09_CONTROL_DE_CALIDAD/CL-06_REV5.png,118225,plano nuevo Rev5
-09_CONTROL_DE_CALIDAD/CL-07-S1_REV5.png,96369,plano nuevo Rev5
-09_CONTROL_DE_CALIDAD/CL-07-S2_REV5.png,173664,plano nuevo Rev5
-09_CONTROL_DE_CALIDAD/CL-07-S3_REV5.png,112104,plano nuevo Rev5
-09_CONTROL_DE_CALIDAD/CL-07-S4_REV5.png,147818,plano nuevo Rev5
+09_CONTROL_DE_CALIDAD/CL-07-S1_REV5.png,96387,plano nuevo Rev5
+09_CONTROL_DE_CALIDAD/CL-07-S2_REV5.png,173641,plano nuevo Rev5
+09_CONTROL_DE_CALIDAD/CL-07-S3_REV5.png,112054,plano nuevo Rev5
+09_CONTROL_DE_CALIDAD/CL-07-S4_REV5.png,147538,plano nuevo Rev5
 09_CONTROL_DE_CALIDAD/CL-08_REV5.png,210442,plano nuevo Rev5
 09_CONTROL_DE_CALIDAD/CONTROL.md,598,documento o dato Rev5
 09_CONTROL_DE_CALIDAD/DEPENDENCIAS_EJECUCION.json,201,documento o dato Rev5
