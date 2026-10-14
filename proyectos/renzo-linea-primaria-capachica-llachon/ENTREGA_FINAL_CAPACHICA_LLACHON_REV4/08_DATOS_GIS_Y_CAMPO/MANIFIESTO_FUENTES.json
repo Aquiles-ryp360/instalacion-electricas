@@ -1,0 +1,32 @@
+{
+  "purpose": "Estudio cartográfico preliminar; no valida propiedad ni tensión de cada tramo",
+  "bbox_wgs84": "-69.86,-15.74,-69.77,-15.62",
+  "sources": [
+    {
+      "file": "gisem_mt_tramos.geojson",
+      "url": "https://gisem.osinergmin.gob.pe/serverosih/rest/services/OGC/PeruOsinergmin019RedesMediaTension/MapServer/22/query?f=geojson&where=1%3D1&geometry=-69.86%2C-15.74%2C-69.77%2C-15.62&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true",
+      "retrieved_at_utc": "2026-10-14T04:40:36.503664+00:00",
+      "sha256": "3f38785a74ca7ce18bdbe493f71ffa5d707f6344ea583391eb9cab064ad1c0b7",
+      "bytes": 162491,
+      "record_count": 208
+    },
+    {
+      "file": "gisem_mt_estructuras.geojson",
+      "url": "https://gisem.osinergmin.gob.pe/serverosih/rest/services/OGC/PeruOsinergmin019RedesMediaTension/MapServer/24/query?f=geojson&where=1%3D1&geometry=-69.86%2C-15.74%2C-69.77%2C-15.62&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true",
+      "retrieved_at_utc": "2026-10-14T04:40:37.410108+00:00",
+      "sha256": "6794f57ffe7762ce8dba3338027531cb598ac6f09bccf10d8011ad73f471fd4a",
+      "bytes": 169594,
+      "record_count": 440
+    },
+    {
+      "file": "osm_roads.json",
+      "url": "https://overpass-api.de/api/interpreter",
+      "retrieved_at_utc": "2026-10-14T04:40:47.620464+00:00",
+      "sha256": "f71194136b4640ce71a49d6b30466042472ed6b1216972b9e5e3e959b9ecadae",
+      "bytes": 414403,
+      "record_count": 152
+    }
+  ],
+  "osm_attribution": "© OpenStreetMap contributors, ODbL 1.0",
+  "gisem_attribution": "OSINERGMIN GISEM, capa pública Redes Media Tensión"
+}

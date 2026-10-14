@@ -1,0 +1,5 @@
+# Pruebas de entrega
+
+Desde la raíz del repositorio, el 14-10-2026 se ejecutó `python -m pytest proyectos/renzo-linea-primaria-capachica-llachon/tests -q`: **42 passed, 5 xfailed**. Los cinco xfail apuntan intencionalmente a defectos de archivos históricos Rev. 2/3, que se conservan. Las pruebas normales cubren el módulo Rev. 4 y una generación aislada de la entrega, con reapertura de los planos y verificación de datos. `python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_entrega_rev4.py --verify proyectos/renzo-linea-primaria-capachica-llachon/ENTREGA_FINAL_CAPACHICA_LLACHON_REV4` confirmó 62 archivos y cinco planos; ingeniería aprobada = false. Se generaron paquetes aislados para comparar. Los PDF, PNG y documentos fueron idénticos en SHA-256; algunos DXF cambiaron solo en el orden de clases internas de ezdxf, sin diferencia de entidades. Por ello la reproducción se valida por contenido y geometría, no por identidad binaria de los DXF.
+
+Repetir los dos comandos después de cualquier cambio y registrar el nuevo resultado. Estos controles son de datos y software, no certifican seguridad eléctrica, mecánica ni normativa. No se abrió AutoCAD.

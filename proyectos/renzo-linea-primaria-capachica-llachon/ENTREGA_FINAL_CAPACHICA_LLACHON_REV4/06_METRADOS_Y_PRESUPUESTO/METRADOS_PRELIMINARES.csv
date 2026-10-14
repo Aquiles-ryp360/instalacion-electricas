@@ -1,0 +1,10 @@
+﻿id,concepto,cantidad,unidad,clase,fuente,observacion
+C-01,"Longitud KML observada, cuatro trazos",13939.512,m,"cartográfica, no obra",KML original,excluye empalmes
+C-02,Longitud eje GIS alternativo,13834.029,m,"cartográfica, no obra",derived/route.json,eje distinto
+C-03,Referencias PC cercanas,40,puntos,"inventario GIS, no postes nuevos",PC_REFERENCIAS_GIS.csv,inspeccionar
+C-04,Sitios PN para replanteo,27,sitios,estimación de gabinete,PN_SITIOS_REPLANTEO.csv,no instalar
+C-05,Alertas viales CV,44,intersecciones,estimación OSM,CV_ALERTAS_OSM.csv,clasificar en campo
+O-01,Conductor a instalar,dato requerido,m por fase,metrado de obra pendiente,trazado/fases/conductor aprobados,sin cantidad
+O-02,Postes nuevos,dato requerido,unidades,metrado de obra pendiente,spotting/cálculo mecánico,no equivale a PN
+O-03,"Retenidas, armados y cimientos",dato requerido,por definir,metrado de obra pendiente,cálculo/fichas/suelo,sin cantidad
+O-04,Protección y PAT,dato requerido,por definir,metrado de obra pendiente,unifilar/estudio PAT,sin cantidad

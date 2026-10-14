@@ -1,0 +1,11 @@
+﻿id,requisito,fuente,salida,prueba_evidencia,estado
+R-01,geometría KML,KML_ORIGINAL.kml,CL-01/02; memoria,test_longitudes_y_empalmes_desde_kml_original,calculado
+R-02,GIS alternativo,EJE_GIS_ALTERNATIVO.json,CL-01; memoria,diferencia eje verificada,calculado
+R-03,PN distintos de PC,PN/PC CSV,CL-02/04; registro campo,IDs paritarios DXF/PDF,estimado
+R-04,cruces,CV_ALERTAS_OSM.csv,CL-02; plan campo,44 IDs y pendientes,estimado
+R-05,conexión,TMT GISEM; solicitud,CL-01/05; memoria,respuesta operador ausente,pendiente
+R-06,demanda/tensión,PARAMETROS_PENDIENTES.json,memoria eléctrica,nulos preservados,pendiente
+R-07,conductor/protección/PAT,ficha/unifilar requeridos,memoria eléctrica; CL-05,sin resultados ficticios,pendiente
+R-08,vano/despeje/cimiento,topografía/geotecnia requeridas,memoria mecánica; CL-03,sin perfil falso,pendiente
+R-09,metrados/presupuesto,trazado/cotización requeridos,06_METRADOS_Y_PRESUPUESTO,sin precio ni cantidades ficticias,pendiente
+R-10,normativa,fuentes oficiales,matriz normativa,estado no verificable,pendiente
