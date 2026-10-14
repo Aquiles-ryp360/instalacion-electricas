@@ -2,8 +2,10 @@ import json
 
 import numpy as np
 import pytest
+import ezdxf
 from rasterio.transform import from_origin
 
+from herramientas.linea_primaria_preliminar.dxf_laminas import add_plant_sheet, make_profile_dxf
 from herramientas.linea_primaria_preliminar.generar import (
     elevation, read_project, route_from_file, stations,
 )
@@ -41,3 +43,35 @@ def test_preliminary_spacing_is_explicit(tmp_path):
     path.write_text(json.dumps(data), encoding="utf-8")
     with pytest.raises(ValueError, match="separacion_exploratoria_m"):
         read_project(path)
+
+
+def test_cad_sheets_keep_utm_model_and_profile_units(tmp_path):
+    doc = ezdxf.new("R2010")
+    doc.header["$INSUNITS"] = 6
+    doc.layers.new("EJE_CANDIDATO")
+    doc.layers.new("SITIOS_CANDIDATOS")
+    points = [(410000.0, 8270000.0), (410500.0, 8270200.0)]
+    doc.modelspace().add_lwpolyline(points, dxfattribs={"layer": "EJE_CANDIDATO"})
+    posts = [
+        {"id": "SC-001", "este_m": 410000.0, "norte_m": 8270000.0,
+         "progresiva_m": 0.0, "cota_dem_m": 3800.0},
+        {"id": "SC-002", "este_m": 410500.0, "norte_m": 8270200.0,
+         "progresiva_m": 540.0, "cota_dem_m": 3810.0},
+    ]
+    add_plant_sheet(doc, points, posts, "prueba", "EPSG:32719")
+    plant = tmp_path / "planta.dxf"
+    doc.saveas(plant)
+    reopened = ezdxf.readfile(plant)
+    assert not reopened.audit().has_errors
+    assert reopened.header["$INSUNITS"] == 6
+    assert "LP-P01_A3" in reopened.layouts
+    assert list(reopened.modelspace().query("LWPOLYLINE"))[0].get_points("xy") == points
+    profile = tmp_path / "perfil.dxf"
+    make_profile_dxf(profile, [
+        {"progresiva_m": 0.0, "cota_dem_m": 3800.0},
+        {"progresiva_m": 540.0, "cota_dem_m": 3810.0},
+    ], posts, "prueba", "EPSG:32719")
+    reopened = ezdxf.readfile(profile)
+    assert not reopened.audit().has_errors
+    assert reopened.header["$INSUNITS"] == 6
+    assert "LP-P02_A3" in reopened.layouts

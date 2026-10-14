@@ -30,7 +30,7 @@ También puede sustituir `ruta` por `origen` y `destino`; cada extremo lleva `{ 
 python -m herramientas.linea_primaria_preliminar.generar proyectos/mi-proyecto/datos/anteproyecto.json
 ```
 
-La ruta se interpreta relativa al JSON. Cada ejecución crea una carpeta nueva con topografía, `sitios_candidatos.csv`, `perfil_dem.csv`, planta DXF/PDF/PNG, perfil PDF/PNG y `manifiesto.json` con origen, estado y huellas SHA-256. El DXF está en metros UTM; las cotas vienen de un **modelo digital de superficie** y se interpolan, no de levantamiento de campo. El perfil no verifica flechas ni gálibos.
+La ruta se interpreta relativa al JSON. Cada ejecución crea una carpeta nueva con topografía, `sitios_candidatos.csv`, `perfil_dem.csv`, planta DXF/PDF/PNG, perfil DXF/PDF/PNG y `manifiesto.json` con origen, estado y huellas SHA-256. Los DXF incluyen una presentación A3 editable con escala y aviso de anteproyecto. El modelo de planta está en metros UTM; el modelo de perfil utiliza progresiva y cota en metros. Las cotas vienen de un **modelo digital de superficie** y se interpolan, no de levantamiento de campo. El perfil no verifica flechas ni gálibos.
 
 Para procesar varios anteproyectos, coloque sus JSON en una carpeta y ejecútela como entrada:
 

@@ -23,6 +23,7 @@ from pyproj import Transformer
 from herramientas.topografia.generar_topografia import (
     geocode, read_dem, read_dem_bounds, sha256, slug, utm_crs, write_products,
 )
+from herramientas.linea_primaria_preliminar.dxf_laminas import add_plant_sheet, make_profile_dxf
 
 REPO = Path(__file__).resolve().parents[2]
 PENDIENTES = [
@@ -166,10 +167,13 @@ def draw_plans(output: Path, points: list[tuple[float, float]], posts: list[dict
         model.add_circle(xy, 5, dxfattribs={"layer": "SITIOS_CANDIDATOS"})
         model.add_text(post["id"], dxfattribs={"layer": "TEXTOS", "height": 3}
                        ).set_placement((xy[0] + 7, xy[1] + 7))
+    add_plant_sheet(doc, points, posts, title, meta["crs"])
     dxf = output / "planta_sitios_candidatos.dxf"
     doc.saveas(dxf)
     if ezdxf.readfile(dxf).audit().has_errors:
         raise RuntimeError("Auditoría DXF fallida")
+    make_profile_dxf(output / "perfil_dem_preliminar.dxf", profile, posts,
+                     title, meta["crs"])
     xmin, ymin, xmax, ymax = meta["bounds"]
     fig, ax = plt.subplots(figsize=(16.54, 11.69))
     fig.subplots_adjust(left=.10, right=.87, bottom=.14, top=.88)
