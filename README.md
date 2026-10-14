@@ -2,6 +2,14 @@
 
 Repositorio para transformar informacion de viviendas y una nave industrial, idealmente desde croquis o modelos estructurados, en datos canonicos, calculos electricos, planos CAD, metrados, cotizaciones y expedientes tecnicos revisables.
 
+## Proyectos de Capachica
+
+| Recorrido | Estado | Planos |
+| **Capachica–Llachón** | Expediente técnico compilado Rev. 5 y 11 planos de ingeniería (13.94 km) | [Abrir expediente y 11 planos](proyectos/renzo-linea-primaria-capachica-llachon/README.md) |
+| **Capachica–Chifrón** | Carpeta académica auditada; conexión E-01 pendiente de confirmar | [Abrir dictamen y planos de revisión](proyectos/renzo-linea-primaria-capachica/README.md) |
+
+El expediente de Llachón compila la memoria, criterios DGE/CNE, cálculos, cuadro de 40 postes PC GIS y 27 candidatos PN, y 11 láminas A3 de planos. Requiere comprobación de campo y datos del operador antes de diseñar una obra.
+
 El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar resultados preliminares como diseno definitivo. Toda salida tecnica requiere revision humana y contraste con el Codigo Nacional de Electricidad, el RNE y las condiciones reales de obra.
 
 ## Estructura
@@ -15,7 +23,8 @@ El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar
 │   ├── aquiles/                          vivienda de dos pisos
 │   ├── renzo/                            vivienda de tres pisos
 │   ├── renzo-industrial/                 estacion de servicio (grifo) - unidad 2 de Renzo
-│   ├── renzo-linea-primaria-capachica/   linea primaria 22.9 kV y redes secundarias Chifron (Capachica)
+│   ├── renzo-linea-primaria-capachica/   presentación académica auditada Capachica–Chifrón
+│   ├── renzo-linea-primaria-capachica-llachon/  estudio preliminar Capachica–Llachón
 │   └── unidad-2-industrial/              estacion de servicio (grifo) - unidad 2 de Aquiles
 ├── referencias/              normativa versionada y material local ignorado
 └── build/                    resultados regenerables, ignorados por Git

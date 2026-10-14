@@ -1,5 +1,31 @@
 # Capachica–Llachón: anteproyecto y planos AutoCAD
 
+> **Expediente Técnico Compilado Rev. 5:** [Abrir Expediente Compilado PDF (19 páginas)](EXPEDIENTE_TECNICO_CAPACHICA_LLACHON_REV5_COMPILADO.pdf) · [Copia en expediente/](expediente/expediente_linea_primaria_capachica_llachon_compilado.pdf).  
+> Integra memoria descriptiva, criterios normativos DGE/CNE, memorias de cálculo eléctrico y mecánico, cuadro de estructuras (40 postes PC GIS, 27 candidatos PN, 44 cruces CV), metrados y las **11 láminas de planos A3** completas.
+>
+> **Paquete de entrega Rev. 5:** [Ver entrega académica Rev. 5](ENTREGA_ACADEMICA_REV5/README.md).
+
+## Planos de Ingeniería del Corredor (11 Láminas A3)
+
+| Lámina | Título / Contenido del Plano | Vista PDF (A3) | AutoCAD Editable (DXF) | Estructuras / Postes Mostrados |
+|---|---|---|---|---|
+| **CL-01** | Ubicación general y comparación de ejes | [CL-01 PDF](plans/CL-01_REV4.pdf) | [CL-01 DXF](plans/CL-01_REV4.dxf) | Eje KML (13.94 km) vs Eje GIS (13.83 km) |
+| **CL-02** | Planta por segmentos del corredor con alertas | [CL-02 PDF](plans/CL-02_REV4.pdf) | [CL-02 DXF](plans/CL-02_REV4.dxf) | 4 paneles con los 40 postes PC y 27 sitios PN |
+| **CL-03** | Perfil longitudinal referencial | [CL-03 PDF](plans/CL-03_REV4.pdf) | [CL-03 DXF](plans/CL-03_REV4.dxf) | Criterios topográficos y restricciones |
+| **CL-04** | Cuadro maestro de estructuras y vértices | [CL-04 PDF](plans/CL-04_REV4.pdf) | [CL-04 DXF](plans/CL-04_REV4.dxf) | Tabla de 40 postes PC (coordenadas UTM y PK) |
+| **CL-05** | Armados normalizados DGE, retenidas y PAT | [CL-05 PDF](plans/CL-05_REV4.pdf) | [CL-05 DXF](plans/CL-05_REV4.dxf) | Armados PS-1, PR-1, PA-1, SAB-1, R-1 y PAT-3 |
+| **CL-06** | Conciliación cartográfica KML vs GIS | [CL-06 PDF](plans/CL-06_REV5.pdf) | [CL-06 DXF](plans/CL-06_REV5.dxf) | Análisis de continuidad y 3 brechas |
+| **CL-07-S1** | **Planta georreferenciada Segmento 1** | [CL-07-S1 PDF](plans/CL-07-S1_REV5.pdf) | [CL-07-S1 DXF](plans/CL-07-S1_REV5.dxf) | **Postes GIS PC-01 a PC-04, sitios PN y cruces** |
+| **CL-07-S2** | **Planta georreferenciada Segmento 2** | [CL-07-S2 PDF](plans/CL-07-S2_REV5.pdf) | [CL-07-S2 DXF](plans/CL-07-S2_REV5.dxf) | **Postes GIS PC-05 a PC-20, sitios PN y cruces** |
+| **CL-07-S3** | **Planta georreferenciada Segmento 3** | [CL-07-S3 PDF](plans/CL-07-S3_REV5.pdf) | [CL-07-S3 DXF](plans/CL-07-S3_REV5.dxf) | **Postes GIS PC-21 a PC-28, sitios PN y cruces** |
+| **CL-07-S4** | **Planta georreferenciada Segmento 4** | [CL-07-S4 PDF](plans/CL-07-S4_REV5.pdf) | [CL-07-S4 DXF](plans/CL-07-S4_REV5.dxf) | **Postes GIS PC-29 a PC-40, sitios PN y cruces** |
+| **CL-08** | Perfil topográfico referencial SRTM 30m | [CL-08 PDF](plans/CL-08_REV5.pdf) | [CL-08 DXF](plans/CL-08_REV5.dxf) | 57 puntos SRTM cada 250 m sobre eje GIS |
+
+Para recompilar el expediente técnico completo con todos sus planos:
+```powershell
+python proyectos/renzo-linea-primaria-capachica-llachon/scripts/compilar_expediente_completo.py
+```
+
 ## Revisión activa 3: conciliación y preparación del diseño
 
 La [conciliación de ejes](documentacion/CONCILIACION_CORREDORES_REV3.md) distingue la diferencia publicada de **105,482 m** del KML frente al GIS, las tres brechas que suman **65,077 m** y los **40,405 m** que resultan solo de restar cifras redondeadas. Esa resta no identifica un tramo faltante. Las fuentes originales siguen inalteradas.
@@ -16,6 +42,14 @@ python -m pytest proyectos/renzo-linea-primaria-capachica-llachon/tests -q
 ~~~
 
 La opción --archive-existing respalda las salidas Rev. 3 ya incluidas en el repositorio bajo build/ antes de regenerarlas. Si no existen salidas, puede omitirse. Las pruebas verifican datos y software, **no** la ingeniería de construcción.
+
+## Colocación automática de postes (espera CSV aprobado)
+
+[`scripts/colocar_postes_automatico.py`](scripts/colocar_postes_automatico.py) coloca bloques reutilizables de poste, PAT, retenida y SED sobre el corredor: modelo DXF georreferenciado en metros UTM 19S más lámina A3, y reporte JSON con SHA-256 del CSV fuente. Lee `datos/estructuras_aprobadas.csv`; el esquema está en [`datos/estructuras_aprobadas_plantilla.csv`](datos/estructuras_aprobadas_plantilla.csv). Las PC/PN de gabinete **no** son insumo: solo acepta la lista aprobada en campo y por Electro Puno. Salidas en `build/renzo-linea-primaria-capachica-llachon/colocacion_postes/`, sin sobrescritura. Pruebas: `tests/test_colocar_postes_automatico.py`.
+
+```powershell
+python proyectos/renzo-linea-primaria-capachica-llachon/scripts/colocar_postes_automatico.py
+```
 
 ## Revisión activa 2: corredor manual KML
 

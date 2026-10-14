@@ -10,7 +10,10 @@ codigo_estudiante: "228447"
 semestre_academico: "2026-II"
 ciclo: "IX"
 fecha_inicio: "2026-10-10"
-estado: "Diseño Definitivo - Expediente Técnico de Ingeniería de Detalle"
+estado: "Presentación académica auditada; conexión y diseño de obra pendientes de validar"
+presentacion_auditada_local: "build/renzo-linea-primaria-capachica/presentacion_auditada_rev3/DOSSIER_PRESENTACION_ACADEMICA_REV3.pdf"
+plano_ubicacion_gisem_local: "build/renzo-linea-primaria-capachica/presentacion_auditada_rev3/LP-00_UBICACION_GISEM_A3.dxf"
+dictamen_vigente: "documentacion/DICTAMEN_PRESENTACION_AUDITADA_REV1.md"
 
 naturaleza_proyecto:
   tipo: ingenieria_detalle_linea_primaria_rural

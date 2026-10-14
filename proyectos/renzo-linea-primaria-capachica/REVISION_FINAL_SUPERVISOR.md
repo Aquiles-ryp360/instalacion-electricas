@@ -1,5 +1,7 @@
 # Revisión Final de Supervisor - Línea Primaria 22.9 kV
 
+> **Documento histórico superado por la [auditoría Rev. 1](documentacion/DICTAMEN_PRESENTACION_AUDITADA_REV1.md).** La consulta directa a GISEM separa el E-01 local 131,76 m de los tramos citados. Las declaraciones de aptitud definitiva y factibilidad que siguen abajo ya no representan el estado vigente.
+
 **Proyecto:** Línea primaria 22.9 kV y SED SAB-1 100 kVA - sector Chifrón, Capachica, Puno.  
 **Fecha de revisión:** 13 de octubre de 2026.  
 **Criterio aplicado:** revisión estricta de alcance, coherencia técnica, presentación, planos y trazabilidad de entregables.
