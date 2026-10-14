@@ -40,11 +40,12 @@ def read_project(path: Path) -> dict:
     for key in ("id", "lugar"):
         if not isinstance(data.get(key), str) or not data[key].strip():
             raise ValueError(f"Falta {key} en el proyecto")
-    if "ruta" in data and ("origen" in data or "destino" in data):
-        raise ValueError("Use una ruta o dos extremos, no ambos")
+    route_inputs = sum(bool(key in data) for key in ("ruta", "origen", "levantamiento_campo"))
+    if route_inputs > 1 or ("levantamiento_campo" in data and "destino" in data):
+        raise ValueError("Use ruta, levantamiento_campo o dos extremos; solo una opción")
     if ("origen" in data) != ("destino" in data):
         raise ValueError("Se requieren origen y destino juntos")
-    if any(k in data for k in ("ruta", "origen")):
+    if any(k in data for k in ("ruta", "origen", "levantamiento_campo")):
         spacing = data.get("separacion_exploratoria_m")
         if not isinstance(spacing, (int, float)) or not math.isfinite(spacing) or not 20 <= spacing <= 500:
             raise ValueError("separacion_exploratoria_m debe ser 20 a 500 m")
@@ -98,6 +99,16 @@ def endpoint(value: dict) -> tuple[float, float, dict]:
 
 
 def route_for_project(data: dict, base: Path) -> tuple[list[tuple[float, float]] | None, dict]:
+    if "levantamiento_campo" in data:
+        from herramientas.levantamiento_campo.gpkg import validate
+
+        path = (base / data["levantamiento_campo"]).resolve()
+        report, points = validate(path, data["id"])
+        if report["errores"]:
+            raise ValueError("Levantamiento inválido: " + "; ".join(report["errores"]))
+        return points, {"modo": "eje_de_campo_importado", "archivo": str(path),
+                        "sha256": report["sha256"], "validacion_campo": report,
+                        "advertencia": "Validación formal; requiere revisión humana del eje y perfil topográfico."}
     if "ruta" in data:
         path = (base / data["ruta"]).resolve()
         if not path.is_file():

@@ -2,6 +2,8 @@
 
 Esta herramienta crea una carpeta independiente por proyecto en `build/linea_primaria_preliminar/`. Sirve para explorar el lugar, un eje propuesto y sitios **geométricos candidatos**. No aprueba estructuras ni genera planos aptos para obra.
 
+> **Regla estricta de mantenimiento:** modificar este README o el código de `herramientas/` únicamente para una mejora reutilizable por múltiples proyectos. Los nombres, coordenadas, criterios particulares, fuentes y decisiones de un proyecto pertenecen a `proyectos/<id>/`. Antes de cambiar el flujo común, comprobar que el caso se resuelve mediante datos/configuración del proyecto; documentar la capacidad general que agrega cualquier cambio compartido.
+
 ## Entrada mínima: solo el lugar
 
 ```powershell
@@ -25,6 +27,23 @@ Prepare un JSON propio por proyecto. Use una ruta GeoJSON `LineString` (EPSG:432
 ```
 
 También puede sustituir `ruta` por `origen` y `destino`; cada extremo lleva `{ "lon": ..., "lat": ... }` o `{ "lugar": "..." }`. Entre extremos se traza una **recta hipotética**. La separación de 100 m del ejemplo es solo un parámetro que debe fijar el usuario; la herramienta distribuye los sitios uniformemente y registra la separación resultante. Acepta de 20 a 500 m para exploración, sin convertir ese intervalo en criterio de diseño.
+
+Puede usar un eje registrado en QGIS/QField con la [plantilla genérica de campo](../levantamiento_campo/README.md):
+
+```powershell
+python -m pip install -r herramientas/levantamiento_campo/requirements.txt
+```
+
+```json
+{
+  "id": "mi-proyecto",
+  "lugar": "Nombre del lugar",
+  "levantamiento_campo": "../fuentes/campo.gpkg",
+  "separacion_exploratoria_m": 100
+}
+```
+
+La ruta al GeoPackage es relativa al JSON. `id` debe coincidir con `id_proyecto` del eje. El importador comprueba geometría y metadatos, registra el SHA-256 del archivo de campo en el manifiesto y **no modifica** el original. La planta y el perfil siguen siendo preliminares: las cotas del perfil todavía provienen del DEM, y los sitios siguen siendo candidatos geométricos.
 
 ```powershell
 python -m herramientas.linea_primaria_preliminar.generar proyectos/mi-proyecto/datos/anteproyecto.json
