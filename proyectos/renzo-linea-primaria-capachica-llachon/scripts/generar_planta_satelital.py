@@ -298,6 +298,9 @@ def construir_dxf(salida_dxf: Path, nombre_png: str, img_bbox, img_px,
     transform, escala, limites = mapa_transform(puntos, MAP_X, MAP_Y, MAP_W, MAP_H)
     layout = doc.layouts.new("CL-01_PLANTA_A3")
     layout.page_setup(size=(420, 297), margins=(8, 8, 8, 8), units="mm")
+    ix0, iy0 = transform((x0, y0))
+    ix1, iy1 = transform((x1, y1))
+    layout.add_image(image_def, (ix0, iy0), (ix1 - ix0, iy1 - iy0))
     _papel_malla(layout, transform, limites, escala, lineas, pc, pn, cv)
     doc.saveas(salida_dxf)
     return {"inserts_pc": len(pc), "imagenes": 1}
