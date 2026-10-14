@@ -1,0 +1,13 @@
+﻿variable,valor,unidad,fuente_necesaria,estado
+S_demanda_kva,,kVA,promotor,pendiente
+U_ll_kv,,kV,Electro Puno,pendiente
+numero_fases,,-,Electro Puno,pendiente
+factor_potencia,,-,estudio de carga,pendiente
+L_electrica_km,,km,eje aprobado,pendiente
+R_ohm_km,,Ω/km,ficha conductor a temperatura de caso,pendiente
+X_ohm_km,,Ω/km,configuración y ficha,pendiente
+I_catalogo_a,,A,ficha conductor,pendiente
+factores_ampacidad,,-,ficha/norma,pendiente
+Zth_r_ohm,,Ω,Electro Puno,pendiente
+Zth_x_ohm,,Ω,Electro Puno,pendiente
+curvas_proteccion,,-,Electro Puno,pendiente

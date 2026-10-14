@@ -1,0 +1,7 @@
+﻿id,concepto,cantidad,unidad,estado
+C-01,Longitud KML de cuatro segmentos,13939.512,m,calculado cartográfico; no obra
+C-02,Eje GIS alternativo,13834.029,m,calculado cartográfico; no obra
+C-03,Referencias PC,40,registros,estimado GIS; no postes nuevos
+C-04,Sitios PN,27,sitios,estimado geométrico; no postes nuevos
+C-05,Alertas CV,44,alertas,estimado OSM; no cruces aprobados
+O-01,Postes/conductor/armados/protección,dato requerido,por definir,metrado de obra pendiente

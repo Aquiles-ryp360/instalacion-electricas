@@ -1,0 +1,4 @@
+﻿id,E_fin_origen_m,N_fin_origen_m,E_inicio_siguiente_m,N_inicio_siguiente_m,distancia_recta_m,eje_levantado_m,interseccion_S3_S4,estado
+GAP-1,410778.973,8270299.962,410791.122,8270307.183,14.132854,,False,pendiente de campo
+GAP-2,408985.050,8267012.213,408958.488,8266977.179,43.965184,,False,pendiente de campo
+GAP-3,411992.083,8263820.315,411986.727,8263824.790,6.979239,,True,pendiente de campo

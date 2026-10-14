@@ -1,0 +1,9 @@
+﻿id,partida,unidad,cantidad,precio_unitario_pen,parcial_pen,fecha_base,fuente_precio,estado
+P-01,poste y cimentación,unidad,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente
+P-02,conductor y tendido,m,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente
+P-03,armados y aisladores,conjunto,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente
+P-04,retenidas/anclajes,conjunto,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente
+P-05,puesta a tierra,conjunto,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente
+P-06,maniobra y protección,conjunto,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente
+P-07,transporte y montaje,partida,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente
+P-08,cruces/permisos/servidumbres,partida,dato requerido,dato requerido,no calculable,dato requerido,cotización/APU requerida,pendiente

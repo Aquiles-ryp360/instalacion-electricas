@@ -1,0 +1,42 @@
+﻿variable,simbolo,valor,unidad,fuente_archivo,metodo,estado,efecto_diseno
+CRS de KML,CRS_KML,EPSG:4326,-,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml,"convención KML y orden lon,lat",confirmado documental,transformación métrica
+CRS proyectado,CRS_UTM,EPSG:32719,-,scripts/generar_entrega_rev5.py,transformación pyproj WGS84/UTM 19S,calculado,longitudes y coordenadas
+segmentos KML,n_seg,4,segmentos,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml,conteo LineString,calculado,continuidad no demostrada
+vértices KML,n_v,187,vértices,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml,"conteo pares lon,lat",calculado,"muestras geométricas, no apoyos"
+longitud KML sin empalmes,L_KML,13939.511910,m,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml,suma LineString UTM,calculado,no es longitud eléctrica de obra
+longitud KML geodésica,L_geo,13943.735685,m,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml,Geod WGS84 por segmento,calculado,contraste métrico
+longitud eje GIS alternativo,L_GIS,13834.028618,m,02_DATOS_Y_CRITERIOS/fuentes/EJE_GIS_ALTERNATIVO.json,LineString UTM,calculado,"eje diferente, no aprobado"
+diferencia de ejes,Delta_L,105.483292,m,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml; 02_DATOS_Y_CRITERIOS/fuentes/EJE_GIS_ALTERNATIVO.json,L_KML-L_GIS,calculado,no es tramo localizado
+brechas de segmentos,n_gap,3,brechas,02_DATOS_Y_CRITERIOS/fuentes/GAP_EMPALMES.csv,distancias de extremos UTM,calculado,levantar continuidad
+cuerda GAP-1,g_1,14.132854,m,02_DATOS_Y_CRITERIOS/fuentes/GAP_EMPALMES.csv,distancia recta UTM entre extremos,calculado,no sumar como eje aprobado
+cuerda GAP-2,g_2,43.965184,m,02_DATOS_Y_CRITERIOS/fuentes/GAP_EMPALMES.csv,distancia recta UTM entre extremos,calculado,no sumar como eje aprobado
+cuerda GAP-3,g_3,6.979239,m,02_DATOS_Y_CRITERIOS/fuentes/GAP_EMPALMES.csv,distancia recta UTM entre extremos,calculado,no sumar como eje aprobado
+cruce S3/S4 E,E_X,411991.038,m,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml,intersección Shapely UTM,calculado,orden/continuidad por verificar
+cruce S3/S4 N,N_X,8263821.758,m,02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml,intersección Shapely UTM,calculado,orden/continuidad por verificar
+PC referencias GIS,PC,40,registros,02_DATOS_Y_CRITERIOS/fuentes/PC_REFERENCIAS_GIS.csv,conteo CSV,estimado cartográfico,no inventario de postes aptos
+PN sitios geométricos,PN,27,registros,02_DATOS_Y_CRITERIOS/fuentes/PN_SITIOS_REPLANTEO.csv,conteo CSV,estimado cartográfico,no ubicación aprobada
+CV alertas OSM,CV,44,registros,02_DATOS_Y_CRITERIOS/fuentes/CV_ALERTAS_OSM.csv,conteo CSV,estimado cartográfico,verificar cruces en campo
+punto TMT candidato,TMT,TMT001868169,código,sources/gisem_mt_tramos.geojson,atributo GIS,confirmado documental,conexión no autorizada
+latitud candidata,lat_c,-15.6421333,°,dato facilitado por usuario,conversión DMS,confirmado como dato informado,identificar en campo
+longitud candidata,lon_c,-69.8316111,°,dato facilitado por usuario,conversión DMS,confirmado como dato informado,identificar en campo
+network_operator_approved_connection,network_operator_approved_connection,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+nominal_voltage_kv,nominal_voltage_kv,dato requerido,kV,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+system_phases,system_phases,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+frequency_hz,frequency_hz,dato requerido,Hz,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+existing_feeder_id,existing_feeder_id,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+existing_line_as_built,existing_line_as_built,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+existing_conductor_type_and_section,existing_conductor_type_and_section,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+existing_structures_inventory,existing_structures_inventory,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+existing_transformers_and_protection,existing_transformers_and_protection,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+present_peak_demand_kva,present_peak_demand_kva,dato requerido,kVA,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+forecast_peak_demand_kva,forecast_peak_demand_kva,dato requerido,kVA,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+power_factor,power_factor,dato requerido,-,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+source_short_circuit_levels,source_short_circuit_levels,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+topographic_survey,topographic_survey,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+crossings_and_clearances,crossings_and_clearances,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+weather_design_cases,weather_design_cases,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+soil_and_geotechnical_data,soil_and_geotechnical_data,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+soil_resistivity_ohm_m,soil_resistivity_ohm_m,dato requerido,Ω·m,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+servitudes_and_land_rights,servitudes_and_land_rights,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+environmental_and_cultural_constraints,environmental_and_cultural_constraints,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
+scope_of_work_approved,scope_of_work_approved,dato requerido,según documento,datos/parametros_diseno_pendientes.json,revisión de nulo,pendiente,bloquea dimensionamiento o aprobación; solicitar a operador/promotor/campo
