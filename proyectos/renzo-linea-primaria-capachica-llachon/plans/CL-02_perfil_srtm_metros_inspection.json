@@ -1,0 +1,1061 @@
+{
+  "source": "C:\\Users\\renzo\\workspace\\seace-cad-intelligence\\studies\\capachica_llachon\\plans\\CL-02_perfil_srtm_metros.dxf",
+  "source_sha256": "80d4c91dad2512ad71fda991e0cec3c3c0c00327a2163c1cb21a19b3fdd6ebfc",
+  "extracted_at_utc": "2026-10-14T04:45:36.685724+00:00",
+  "method": "ezdxf 1.4.4",
+  "dxf_version": "AC1024",
+  "insunits_code": 6,
+  "insunits_name": "Meters",
+  "units_declared": true,
+  "layers": [
+    {
+      "name": "0",
+      "color_aci": 7,
+      "linetype": "Continuous"
+    },
+    {
+      "name": "Defpoints",
+      "color_aci": 7,
+      "linetype": "Continuous"
+    },
+    {
+      "name": "CORREDOR_GISEM",
+      "color_aci": 5,
+      "linetype": "Continuous"
+    },
+    {
+      "name": "CONTEXTO_MT",
+      "color_aci": 8,
+      "linetype": "Continuous"
+    },
+    {
+      "name": "ESTRUCTURAS_REFERENCIA",
+      "color_aci": 1,
+      "linetype": "Continuous"
+    },
+    {
+      "name": "TERRENO_SRTM",
+      "color_aci": 3,
+      "linetype": "Continuous"
+    },
+    {
+      "name": "EJES",
+      "color_aci": 7,
+      "linetype": "Continuous"
+    },
+    {
+      "name": "NOTAS",
+      "color_aci": 2,
+      "linetype": "Continuous"
+    }
+  ],
+  "text_styles": [
+    {
+      "name": "Standard",
+      "font": "txt",
+      "bigfont": ""
+    }
+  ],
+  "dimension_styles": [
+    "Standard"
+  ],
+  "linetypes": [
+    "ByBlock",
+    "ByLayer",
+    "Continuous"
+  ],
+  "blocks": [],
+  "external_references": [],
+  "entity_counts": {
+    "LWPOLYLINE": 1,
+    "LINE": 14,
+    "TEXT": 15
+  },
+  "modelspace_bounds": {
+    "min": [
+      0.0,
+      3794.942799461642,
+      0.0
+    ],
+    "max": [
+      13834.03,
+      3927.733512786003,
+      0.0
+    ]
+  },
+  "entities": [
+    {
+      "handle": "35",
+      "type": "LWPOLYLINE",
+      "layer": "TERRENO_SRTM",
+      "bounds": {
+        "min": [
+          0.0,
+          3823.0,
+          0.0
+        ],
+        "max": [
+          13834.03,
+          3887.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "vertices_xy": [
+        [
+          0.0,
+          3867.0
+        ],
+        [
+          250.0,
+          3860.0
+        ],
+        [
+          500.0,
+          3863.0
+        ],
+        [
+          750.0,
+          3870.0
+        ],
+        [
+          1000.0,
+          3861.0
+        ],
+        [
+          1250.0,
+          3850.0
+        ],
+        [
+          1500.0,
+          3830.0
+        ],
+        [
+          1750.0,
+          3826.0
+        ],
+        [
+          2000.0,
+          3828.0
+        ],
+        [
+          2250.0,
+          3826.0
+        ],
+        [
+          2500.0,
+          3827.0
+        ],
+        [
+          2750.0,
+          3824.0
+        ],
+        [
+          3000.0,
+          3825.0
+        ],
+        [
+          3250.0,
+          3840.0
+        ],
+        [
+          3500.0,
+          3834.0
+        ],
+        [
+          3750.0,
+          3825.0
+        ],
+        [
+          4000.0,
+          3826.0
+        ],
+        [
+          4250.0,
+          3823.0
+        ],
+        [
+          4500.0,
+          3838.0
+        ],
+        [
+          4750.0,
+          3832.0
+        ],
+        [
+          5000.0,
+          3828.0
+        ],
+        [
+          5250.0,
+          3835.0
+        ],
+        [
+          5500.0,
+          3828.0
+        ],
+        [
+          5750.0,
+          3828.0
+        ],
+        [
+          6000.0,
+          3847.0
+        ],
+        [
+          6250.0,
+          3832.0
+        ],
+        [
+          6500.0,
+          3829.0
+        ],
+        [
+          6750.0,
+          3829.0
+        ],
+        [
+          7000.0,
+          3826.0
+        ],
+        [
+          7250.0,
+          3830.0
+        ],
+        [
+          7500.0,
+          3830.0
+        ],
+        [
+          7750.0,
+          3830.0
+        ],
+        [
+          8000.0,
+          3829.0
+        ],
+        [
+          8250.0,
+          3829.0
+        ],
+        [
+          8500.0,
+          3849.0
+        ],
+        [
+          8750.0,
+          3852.0
+        ],
+        [
+          9000.0,
+          3847.0
+        ],
+        [
+          9250.0,
+          3844.0
+        ],
+        [
+          9500.0,
+          3837.0
+        ],
+        [
+          9750.0,
+          3835.0
+        ],
+        [
+          10000.0,
+          3832.0
+        ],
+        [
+          10250.0,
+          3827.0
+        ],
+        [
+          10500.0,
+          3829.0
+        ],
+        [
+          10750.0,
+          3833.0
+        ],
+        [
+          11000.0,
+          3835.0
+        ],
+        [
+          11250.0,
+          3828.0
+        ],
+        [
+          11500.0,
+          3826.0
+        ],
+        [
+          11750.0,
+          3825.0
+        ],
+        [
+          12000.0,
+          3828.0
+        ],
+        [
+          12250.0,
+          3835.0
+        ],
+        [
+          12500.0,
+          3856.0
+        ],
+        [
+          12750.0,
+          3859.0
+        ],
+        [
+          13000.0,
+          3872.0
+        ],
+        [
+          13250.0,
+          3887.0
+        ],
+        [
+          13500.0,
+          3853.0
+        ],
+        [
+          13750.0,
+          3876.0
+        ],
+        [
+          13834.03,
+          3872.0
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "handle": "36",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          0.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          0.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        0.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        0.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "37",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          0.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          64.55248990578734,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "0+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "38",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          1000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          1000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        1000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        1000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "39",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          1000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          1062.0693135935396,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "1+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "3A",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          2000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          2000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        2000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        2000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "3B",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          2000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          2067.0255720053838,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "2+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "3C",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          3000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          3000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        3000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        3000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "3D",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          3000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          3067.0255720053838,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "3+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "3E",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          4000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          4000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        4000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        4000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "3F",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          4000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          4067.0255720053838,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "4+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "40",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          5000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          5000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        5000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        5000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "41",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          5000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          5067.025572005384,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "5+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "42",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          6000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          6000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        6000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        6000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "43",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          6000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          6067.025572005384,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "6+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "44",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          7000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          7000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        7000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        7000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "45",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          7000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          7067.025572005384,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "7+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "46",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          8000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          8000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        8000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        8000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "47",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          8000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          8067.025572005384,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "8+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "48",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          9000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          9000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        9000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        9000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "49",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          9000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          9067.025572005383,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "9+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "4A",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          10000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          10000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        10000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        10000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "4B",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          10000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          10074.485195154777,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "10+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "4C",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          11000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          11000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        11000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        11000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "4D",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          11000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          11072.00201884253,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "11+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "4E",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          12000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          12000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        12000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        12000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "4F",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          12000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          12076.958277254374,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "12+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "50",
+      "type": "LINE",
+      "layer": "EJES",
+      "bounds": {
+        "min": [
+          13000.0,
+          3810.0,
+          0.0
+        ],
+        "max": [
+          13000.0,
+          3900.0,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "start": [
+        13000.0,
+        3810.0,
+        0.0
+      ],
+      "end": [
+        13000.0,
+        3900.0,
+        0.0
+      ]
+    },
+    {
+      "handle": "51",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          13000.0,
+          3794.942799461642,
+          0.0
+        ],
+        "max": [
+          13076.958277254374,
+          3814.777927321669,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "13+000",
+      "text_style": "Standard"
+    },
+    {
+      "handle": "52",
+      "type": "TEXT",
+      "layer": "NOTAS",
+      "bounds": {
+        "min": [
+          0.0,
+          3903.9313593539705,
+          0.0
+        ],
+        "max": [
+          1057.1668909825034,
+          3927.733512786003,
+          0.0
+        ]
+      },
+      "linetype": "BYLAYER",
+      "color_aci": 256,
+      "text": "PERFIL SRTM30M REFERENCIAL - NO USAR PARA GALIBOS NI SPOTTING",
+      "text_style": "Standard"
+    }
+  ],
+  "warnings": [],
+  "validation_status": "EXTRACTED"
+}

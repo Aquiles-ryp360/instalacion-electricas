@@ -1,0 +1,7217 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1436745,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.849091735,
+            -15.67388156200002
+          ],
+          [
+            -69.84904927899998,
+            -15.675032588000022
+          ],
+          [
+            -69.84900359099998,
+            -15.676056524999979
+          ],
+          [
+            -69.84895041499999,
+            -15.677142414999992
+          ],
+          [
+            -69.84778285300001,
+            -15.678205504999994
+          ],
+          [
+            -69.846833317,
+            -15.679081525000015
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436745,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016086",
+        "CODTIPORED": "A",
+        "LONGITUD": "693.48",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463400,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.849091735,
+            -15.67388156200002
+          ],
+          [
+            -69.848917938,
+            -15.674160391999976
+          ],
+          [
+            -69.84890926399999,
+            -15.674161239
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463400,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045806",
+        "CODTIPORED": "A",
+        "LONGITUD": "38.07",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433804,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84889792400003,
+            -15.665995149000025
+          ],
+          [
+            -69.84890548200002,
+            -15.66599530100001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433804,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011066",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.83",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1436748,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84593720599997,
+            -15.656373023000015
+          ],
+          [
+            -69.84621760800002,
+            -15.657153616000016
+          ],
+          [
+            -69.84651281700002,
+            -15.657972298999994
+          ],
+          [
+            -69.84679025399998,
+            -15.658734281000022
+          ],
+          [
+            -69.84707050600002,
+            -15.659544703999984
+          ],
+          [
+            -69.84735318700001,
+            -15.660355389000017
+          ],
+          [
+            -69.84763769400001,
+            -15.66113316100001
+          ],
+          [
+            -69.847924455,
+            -15.661936507000007
+          ],
+          [
+            -69.84819934699999,
+            -15.662734564999994
+          ],
+          [
+            -69.84847836099999,
+            -15.66351344100002
+          ],
+          [
+            -69.84876143299999,
+            -15.66430305900002
+          ],
+          [
+            -69.84903708500002,
+            -15.665057450000006
+          ],
+          [
+            -69.84889792400003,
+            -15.665995149000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436748,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016090",
+        "CODTIPORED": "A",
+        "LONGITUD": "1154.97",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1447196,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84093703500002,
+            -15.652171468999995
+          ],
+          [
+            -69.84052737299999,
+            -15.652903642000012
+          ],
+          [
+            -69.84003201000002,
+            -15.653760261000002
+          ],
+          [
+            -69.83962252200001,
+            -15.654467753000006
+          ],
+          [
+            -69.83929804399997,
+            -15.655019614000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1447196,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000519559",
+        "CODTIPORED": "A",
+        "LONGITUD": "371.56",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463277,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83929804399997,
+            -15.655019614000025
+          ],
+          [
+            -69.839293226,
+            -15.655027858999972
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463277,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002034206",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.08",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433607,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83282003800002,
+            -15.630244032000007
+          ],
+          [
+            -69.83272067000001,
+            -15.631324856999981
+          ],
+          [
+            -69.83262308299999,
+            -15.632407754999974
+          ],
+          [
+            -69.83253694799998,
+            -15.633485275999988
+          ],
+          [
+            -69.83245221800001,
+            -15.634541366999997
+          ],
+          [
+            -69.832439368,
+            -15.635424522999983
+          ],
+          [
+            -69.83242445799999,
+            -15.636513616000002
+          ],
+          [
+            -69.83240725000002,
+            -15.637403115999973
+          ],
+          [
+            -69.83238684600002,
+            -15.638125300000013
+          ],
+          [
+            -69.83238636200002,
+            -15.638998012999991
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433607,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010749",
+        "CODTIPORED": "A",
+        "LONGITUD": "999.18",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "13/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "13/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435275,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83235520699998,
+            -15.640937821000023
+          ],
+          [
+            -69.83247549200001,
+            -15.641891795999982
+          ],
+          [
+            -69.83262924799999,
+            -15.642932244999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435275,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013573",
+        "CODTIPORED": "A",
+        "LONGITUD": "229.26",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460373,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83161726100002,
+            -15.642137591999983
+          ],
+          [
+            -69.83161084900001,
+            -15.642143673000021
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460373,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001868169",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460455,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83036700899999,
+            -15.643354036999995
+          ],
+          [
+            -69.83037614099999,
+            -15.64335156200002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460455,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001876970",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.05",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460456,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83035908699998,
+            -15.64335614700002
+          ],
+          [
+            -69.83016787399998,
+            -15.643180502000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460456,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001876971",
+        "CODTIPORED": "A",
+        "LONGITUD": "29.09",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460203,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.832826501,
+            -15.63025051599999
+          ],
+          [
+            -69.83283305700002,
+            -15.630256909000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460203,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851785",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.03",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433402,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83371637099998,
+            -15.620057361000022
+          ],
+          [
+            -69.83368008299999,
+            -15.620495483000013
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433402,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010455",
+        "CODTIPORED": "A",
+        "LONGITUD": "50.08",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433821,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82623098099998,
+            -15.629920452000022
+          ],
+          [
+            -69.825163637,
+            -15.631120357999976
+          ],
+          [
+            -69.82411215600001,
+            -15.632277982999994
+          ],
+          [
+            -69.82359303300001,
+            -15.632844565000028
+          ],
+          [
+            -69.82299509299997,
+            -15.63350835
+          ],
+          [
+            -69.82214924700003,
+            -15.634420937000016
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433821,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011090",
+        "CODTIPORED": "A",
+        "LONGITUD": "682.69",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460198,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81882127300003,
+            -15.623440833000018
+          ],
+          [
+            -69.81881490500001,
+            -15.623434619000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460198,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851770",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433392,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81715793400002,
+            -15.70246454300002
+          ],
+          [
+            -69.81643323999998,
+            -15.701769102000014
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433392,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010440",
+        "CODTIPORED": "A",
+        "LONGITUD": "112.59",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1446952,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.815224844,
+            -15.656376447000014
+          ],
+          [
+            -69.814827686,
+            -15.657676145999972
+          ],
+          [
+            -69.81482434700001,
+            -15.65812878700001
+          ],
+          [
+            -69.81483933200002,
+            -15.658920175999981
+          ],
+          [
+            -69.81409244899999,
+            -15.659365094000009
+          ],
+          [
+            -69.81372448399998,
+            -15.659863475999998
+          ],
+          [
+            -69.81330919700002,
+            -15.659909674999994
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1446952,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000471100",
+        "CODTIPORED": "A",
+        "LONGITUD": "508.96",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432868,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.815803566,
+            -15.654749730999981
+          ],
+          [
+            -69.81475932199999,
+            -15.653536663000011
+          ],
+          [
+            -69.81394343199997,
+            -15.652593849000027
+          ],
+          [
+            -69.81329517500001,
+            -15.65183238200001
+          ],
+          [
+            -69.81251214600002,
+            -15.650938526000004
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432868,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009528",
+        "CODTIPORED": "A",
+        "LONGITUD": "566.23",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460673,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80842535599999,
+            -15.657228341999996
+          ],
+          [
+            -69.80841819699998,
+            -15.657234786000004
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460673,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001900974",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.08",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460827,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.805516533,
+            -15.673108187000025
+          ],
+          [
+            -69.80550757700001,
+            -15.673108490999994
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460827,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001916976",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460680,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80027574600001,
+            -15.664122103000011
+          ],
+          [
+            -69.80026770299997,
+            -15.664117341000008
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460680,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001902972",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.04",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432919,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77693394599999,
+            -15.669728400999986
+          ],
+          [
+            -69.77693472800001,
+            -15.669737800000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432919,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009616",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.07",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437382,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77998947399999,
+            -15.668482676999986
+          ],
+          [
+            -69.77897319499999,
+            -15.668902765999974
+          ],
+          [
+            -69.77788999199998,
+            -15.669342072999996
+          ],
+          [
+            -69.77693394599999,
+            -15.669728400999986
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437382,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016891",
+        "CODTIPORED": "A",
+        "LONGITUD": "365.95",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445691,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.774981937,
+            -15.663727891999997
+          ],
+          [
+            -69.77489179499997,
+            -15.663576610000007
+          ],
+          [
+            -69.77400364699997,
+            -15.66283503699998
+          ],
+          [
+            -69.77360200499999,
+            -15.662073571999997
+          ],
+          [
+            -69.77292271300001,
+            -15.660794913000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445691,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000256772",
+        "CODTIPORED": "A",
+        "LONGITUD": "410.62",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437232,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77395282600003,
+            -15.671144223999988
+          ],
+          [
+            -69.77284338999999,
+            -15.671660619000022
+          ],
+          [
+            -69.77167514899998,
+            -15.67219782799998
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437232,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016711",
+        "CODTIPORED": "A",
+        "LONGITUD": "278.61",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437233,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77167514899998,
+            -15.67219782799998
+          ],
+          [
+            -69.770693042,
+            -15.672658168999988
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437233,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016712",
+        "CODTIPORED": "A",
+        "LONGITUD": "120.43",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433817,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84063190799998,
+            -15.684758953000028
+          ],
+          [
+            -69.839767026,
+            -15.685563566999974
+          ],
+          [
+            -69.83882891399998,
+            -15.686420436999981
+          ],
+          [
+            -69.83735687699999,
+            -15.686572703000024
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433817,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011086",
+        "CODTIPORED": "A",
+        "LONGITUD": "438.09",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463401,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.844744419,
+            -15.672867388999975
+          ],
+          [
+            -69.84473759500003,
+            -15.672864161000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463401,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045807",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.84",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463398,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84347462300002,
+            -15.658452823999994
+          ],
+          [
+            -69.84346904400002,
+            -15.658457456000008
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463398,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045802",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.81",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "29/01/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "29/01/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433805,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84426010700003,
+            -15.653291115000002
+          ],
+          [
+            -69.84426530799999,
+            -15.653285218999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433805,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011067",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.88",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433606,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.835711532,
+            -15.648005813999987
+          ],
+          [
+            -69.83675712799999,
+            -15.648886828999991
+          ],
+          [
+            -69.83743258099997,
+            -15.649572997000007
+          ],
+          [
+            -69.837744187,
+            -15.649939276999987
+          ],
+          [
+            -69.83825927599997,
+            -15.649962528999993
+          ],
+          [
+            -69.83894328999997,
+            -15.650343744999986
+          ],
+          [
+            -69.83978962999998,
+            -15.650813288999984
+          ],
+          [
+            -69.84044044500001,
+            -15.651173835999998
+          ],
+          [
+            -69.84125750700002,
+            -15.65162314600002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433606,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010748",
+        "CODTIPORED": "A",
+        "LONGITUD": "753.3",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463404,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83735646500003,
+            -15.686563394000018
+          ],
+          [
+            -69.83735615,
+            -15.686554806999993
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463404,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045814",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.98",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1456437,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83165546499998,
+            -15.64452795599999
+          ],
+          [
+            -69.83183992900001,
+            -15.644602738999993
+          ],
+          [
+            -69.83227737300001,
+            -15.645084983999993
+          ],
+          [
+            -69.832504514,
+            -15.645492724999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1456437,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001577766",
+        "CODTIPORED": "A",
+        "LONGITUD": "148.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1464167,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83262924799999,
+            -15.642932244999997
+          ],
+          [
+            -69.83284576599999,
+            -15.642559613000003
+          ],
+          [
+            -69.83285549300001,
+            -15.642542671000001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1464167,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002091423",
+        "CODTIPORED": "A",
+        "LONGITUD": "50.93",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "06/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "06/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463515,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82175413499999,
+            -15.698852697000007
+          ],
+          [
+            -69.82174860800001,
+            -15.698847203000014
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463515,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002052602",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.87",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433394,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.814703673,
+            -15.70661378699998
+          ],
+          [
+            -69.81373872400002,
+            -15.706144417000019
+          ],
+          [
+            -69.812579427,
+            -15.705566474000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433394,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010442",
+        "CODTIPORED": "A",
+        "LONGITUD": "263.08",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460672,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81330919700002,
+            -15.659909674999994
+          ],
+          [
+            -69.81330208700001,
+            -15.659904729999994
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460672,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001900973",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.97",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460160,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81491069100002,
+            -15.638936268000009
+          ],
+          [
+            -69.81490446499998,
+            -15.638942529000019
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460160,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001847370",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460201,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81791647400001,
+            -15.62712327700001
+          ],
+          [
+            -69.81782342499997,
+            -15.627370956999982
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460201,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851783",
+        "CODTIPORED": "A",
+        "LONGITUD": "30.03",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460196,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81679562699998,
+            -15.627072397999996
+          ],
+          [
+            -69.81679717700001,
+            -15.627063442999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460196,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851768",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.03",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1436750,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81679407799999,
+            -15.627081805999978
+          ],
+          [
+            -69.81659207000001,
+            -15.627000022999994
+          ],
+          [
+            -69.81534144300002,
+            -15.626496266000004
+          ],
+          [
+            -69.814551214,
+            -15.626188317000015
+          ],
+          [
+            -69.81386582200003,
+            -15.625922915999979
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436750,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016093",
+        "CODTIPORED": "A",
+        "LONGITUD": "349.25",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460197,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81386582200003,
+            -15.625922915999979
+          ],
+          [
+            -69.81385750700002,
+            -15.62591960200001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460197,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851769",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433811,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80989001199998,
+            -15.711572520000004
+          ],
+          [
+            -69.808916173,
+            -15.712353559000007
+          ],
+          [
+            -69.80783332599998,
+            -15.712875189999977
+          ],
+          [
+            -69.80664705100003,
+            -15.713510557999996
+          ],
+          [
+            -69.80556519599998,
+            -15.714073939999992
+          ],
+          [
+            -69.80407914099999,
+            -15.714851694000004
+          ],
+          [
+            -69.80333501000001,
+            -15.715245858999992
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433811,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011080",
+        "CODTIPORED": "A",
+        "LONGITUD": "838.21",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433399,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80842535599999,
+            -15.657228341999996
+          ],
+          [
+            -69.807355142,
+            -15.656736809999984
+          ],
+          [
+            -69.80683775900002,
+            -15.657631227000024
+          ],
+          [
+            -69.80638183299999,
+            -15.658424803000003
+          ],
+          [
+            -69.805868584,
+            -15.659304829999996
+          ],
+          [
+            -69.80532224699999,
+            -15.660218697000005
+          ],
+          [
+            -69.80441048900002,
+            -15.66088214299998
+          ],
+          [
+            -69.80354669100001,
+            -15.661500118999982
+          ],
+          [
+            -69.802737132,
+            -15.662079382000002
+          ],
+          [
+            -69.80183885600002,
+            -15.662710947999983
+          ],
+          [
+            -69.80101973199999,
+            -15.663448077999988
+          ],
+          [
+            -69.80027574600001,
+            -15.664122103000011
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433399,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010449",
+        "CODTIPORED": "A",
+        "LONGITUD": "1300.46",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463593,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80265387899999,
+            -15.713116577999983
+          ],
+          [
+            -69.802653195,
+            -15.713108535000003
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463593,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002055423",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.92",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433390,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.797806482,
+            -15.718442566000022
+          ],
+          [
+            -69.79702127500002,
+            -15.717617108000013
+          ],
+          [
+            -69.79706231300003,
+            -15.717658271000005
+          ],
+          [
+            -69.79629632299998,
+            -15.716852989000017
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433390,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010435",
+        "CODTIPORED": "A",
+        "LONGITUD": "259.17",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460914,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.7881309,
+            -15.692155259999993
+          ],
+          [
+            -69.78812204600001,
+            -15.692158093999979
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460914,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001922175",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.03",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "22/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "22/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437234,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78007163299998,
+            -15.668471264999994
+          ],
+          [
+            -69.77998947399999,
+            -15.668482676999986
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437234,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016714",
+        "CODTIPORED": "A",
+        "LONGITUD": "9.16",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460748,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77520148899998,
+            -15.66387871500001
+          ],
+          [
+            -69.77538745300001,
+            -15.664104055999985
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460748,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910185",
+        "CODTIPORED": "A",
+        "LONGITUD": "32.87",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460744,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77164693700001,
+            -15.671443540999974
+          ],
+          [
+            -69.771644944,
+            -15.671434780000027
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460744,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910181",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433601,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.846833317,
+            -15.679081525000015
+          ],
+          [
+            -69.84608227799998,
+            -15.679762327999981
+          ],
+          [
+            -69.84526275500002,
+            -15.680513812000015
+          ],
+          [
+            -69.844436341,
+            -15.681269930999974
+          ],
+          [
+            -69.84373512899998,
+            -15.681909130999998
+          ],
+          [
+            -69.84285650100003,
+            -15.682723391000025
+          ],
+          [
+            -69.84193309699998,
+            -15.683565210999973
+          ],
+          [
+            -69.84063190799998,
+            -15.684758953000028
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433601,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010743",
+        "CODTIPORED": "A",
+        "LONGITUD": "941.84",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463402,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.846833317,
+            -15.679081525000015
+          ],
+          [
+            -69.84684107700002,
+            -15.679085292000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463402,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045808",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.96",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1436746,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84890926399999,
+            -15.674161239
+          ],
+          [
+            -69.84765766999999,
+            -15.674279991999981
+          ],
+          [
+            -69.846423201,
+            -15.673686603000021
+          ],
+          [
+            -69.84508845200003,
+            -15.673029229999997
+          ],
+          [
+            -69.844744419,
+            -15.672867388999975
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436746,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016087",
+        "CODTIPORED": "A",
+        "LONGITUD": "498.45",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463399,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84890548200002,
+            -15.66599530100001
+          ],
+          [
+            -69.84891285399999,
+            -15.665995452999994
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463399,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045803",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.81",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1436749,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84572068300002,
+            -15.656560350999996
+          ],
+          [
+            -69.84461347000001,
+            -15.657505942
+          ],
+          [
+            -69.84347462300002,
+            -15.658452823999994
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436749,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016091",
+        "CODTIPORED": "A",
+        "LONGITUD": "328.61",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "29/01/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "29/01/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432871,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83306840699998,
+            -15.63018433000002
+          ],
+          [
+            -69.83373785200001,
+            -15.630050256999994
+          ],
+          [
+            -69.83499803799998,
+            -15.629766674999985
+          ],
+          [
+            -69.83632729800001,
+            -15.629494664999982
+          ],
+          [
+            -69.83741421799999,
+            -15.629250963000004
+          ],
+          [
+            -69.83850392400001,
+            -15.62902776499999
+          ],
+          [
+            -69.83975674999999,
+            -15.628773111999976
+          ],
+          [
+            -69.84099202099998,
+            -15.628515084000014
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432871,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009533",
+        "CODTIPORED": "A",
+        "LONGITUD": "895.34",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463403,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83828209799998,
+            -15.678053625000018
+          ],
+          [
+            -69.83827936,
+            -15.678045860999987
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463403,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045811",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.93",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433604,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.835711532,
+            -15.648005813999987
+          ],
+          [
+            -69.83561060900001,
+            -15.64801135099998
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433604,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010746",
+        "CODTIPORED": "A",
+        "LONGITUD": "11.16",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435929,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83285549300001,
+            -15.642542671000001
+          ],
+          [
+            -69.83331117,
+            -15.642021236999994
+          ],
+          [
+            -69.834412783,
+            -15.640321436000022
+          ],
+          [
+            -69.83746004099999,
+            -15.641187683999988
+          ],
+          [
+            -69.838755418,
+            -15.640390388000014
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435929,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000014651",
+        "CODTIPORED": "A",
+        "LONGITUD": "826.6",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "06/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "06/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433403,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83871576799999,
+            -15.615542237999989
+          ],
+          [
+            -69.83727193599998,
+            -15.616383214999985
+          ],
+          [
+            -69.83650086099999,
+            -15.616816453000013
+          ],
+          [
+            -69.83561568099998,
+            -15.617843411000024
+          ],
+          [
+            -69.83482936000001,
+            -15.61877552300001
+          ],
+          [
+            -69.83371637099998,
+            -15.620057361000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433403,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010456",
+        "CODTIPORED": "A",
+        "LONGITUD": "764.94",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "13/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "13/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435277,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83165546499998,
+            -15.64452795599999
+          ],
+          [
+            -69.83132011200001,
+            -15.644237057999987
+          ],
+          [
+            -69.83103906299999,
+            -15.643970723999985
+          ],
+          [
+            -69.83076364700003,
+            -15.643713135999974
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435277,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013579",
+        "CODTIPORED": "A",
+        "LONGITUD": "135.35",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "06/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "06/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432866,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83282003800002,
+            -15.630244032000007
+          ],
+          [
+            -69.832826501,
+            -15.63025051599999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432866,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009524",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.03",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1456435,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83288052099999,
+            -15.629698243999997
+          ],
+          [
+            -69.832397518,
+            -15.629846070999974
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1456435,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001577764",
+        "CODTIPORED": "A",
+        "LONGITUD": "55.92",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "13/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "13/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1446592,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.824625293,
+            -15.627745160000018
+          ],
+          [
+            -69.82505182900002,
+            -15.627613020000013
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1446592,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000414197",
+        "CODTIPORED": "A",
+        "LONGITUD": "49.44",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1434673,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82452678499999,
+            -15.627419189000022
+          ],
+          [
+            -69.82278459000003,
+            -15.627329723000003
+          ],
+          [
+            -69.82118394399998,
+            -15.62727216799999
+          ],
+          [
+            -69.81941465699998,
+            -15.627195975000006
+          ],
+          [
+            -69.81791647400001,
+            -15.62712327700001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1434673,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000012391",
+        "CODTIPORED": "A",
+        "LONGITUD": "730.66",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460593,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.822112097,
+            -15.654950252999981
+          ],
+          [
+            -69.822112226,
+            -15.654959021000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460593,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001889772",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1436751,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81882764099998,
+            -15.623447047000013
+          ],
+          [
+            -69.81904938500003,
+            -15.623613006000028
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436751,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016095",
+        "CODTIPORED": "A",
+        "LONGITUD": "30.94",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "15/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "15/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463516,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81643323999998,
+            -15.701769102000014
+          ],
+          [
+            -69.81642668199999,
+            -15.701762798999994
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463516,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002052605",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1446953,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81330484199998,
+            -15.659917194000002
+          ],
+          [
+            -69.81308178299997,
+            -15.660300772000028
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1446953,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000471101",
+        "CODTIPORED": "A",
+        "LONGITUD": "50.16",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1446950,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81308178299997,
+            -15.660300772000028
+          ],
+          [
+            -69.812612806,
+            -15.660997591000012
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1446950,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000471097",
+        "CODTIPORED": "A",
+        "LONGITUD": "94.78",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1446951,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.815803566,
+            -15.654749730999981
+          ],
+          [
+            -69.815224844,
+            -15.656376447000014
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1446951,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000471099",
+        "CODTIPORED": "A",
+        "LONGITUD": "196.05",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1434674,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81791647400001,
+            -15.62712327700001
+          ],
+          [
+            -69.81679407799999,
+            -15.627081805999978
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1434674,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000012392",
+        "CODTIPORED": "A",
+        "LONGITUD": "124.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460824,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.812612806,
+            -15.660997591000012
+          ],
+          [
+            -69.81260394399999,
+            -15.660998257000017
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460824,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001916973",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.98",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432921,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81260394399999,
+            -15.660998257000017
+          ],
+          [
+            -69.81259480400001,
+            -15.660998924000012
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432921,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009621",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445688,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.811510102,
+            -15.658663686000011
+          ],
+          [
+            -69.81047037600001,
+            -15.658170249000023
+          ],
+          [
+            -69.80935211399998,
+            -15.657657660999973
+          ],
+          [
+            -69.80842535599999,
+            -15.657228341999996
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445688,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000256768",
+        "CODTIPORED": "A",
+        "LONGITUD": "377.78",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445678,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80333501000001,
+            -15.715245858999992
+          ],
+          [
+            -69.80274715899998,
+            -15.714153109999984
+          ],
+          [
+            -69.80265387899999,
+            -15.713116577999983
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445678,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000255150",
+        "CODTIPORED": "A",
+        "LONGITUD": "258.94",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433387,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80333501000001,
+            -15.715245858999992
+          ],
+          [
+            -69.80276360599998,
+            -15.71556390500001
+          ],
+          [
+            -69.80206499299999,
+            -15.715929061999987
+          ],
+          [
+            -69.80084815200001,
+            -15.716561800000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433387,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010432",
+        "CODTIPORED": "A",
+        "LONGITUD": "312.77",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433388,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.797806482,
+            -15.718442566000022
+          ],
+          [
+            -69.79686497900002,
+            -15.719087656
+          ],
+          [
+            -69.796191883,
+            -15.719540478999988
+          ],
+          [
+            -69.79535104799999,
+            -15.720131589999994
+          ],
+          [
+            -69.79369376900001,
+            -15.721277281000027
+          ],
+          [
+            -69.79258645599998,
+            -15.721986777999973
+          ],
+          [
+            -69.79155526199997,
+            -15.722640128000023
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433388,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010433",
+        "CODTIPORED": "A",
+        "LONGITUD": "839.6",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460681,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80026770299997,
+            -15.664117341000008
+          ],
+          [
+            -69.80026022200002,
+            -15.664112939000006
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460681,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001902973",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.97",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463675,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.789948235,
+            -15.704295829999978
+          ],
+          [
+            -69.78994031000002,
+            -15.704297757000006
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463675,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002061003",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.9",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445698,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78679812399997,
+            -15.666546817999972
+          ],
+          [
+            -69.78621498199999,
+            -15.666061930000012
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445698,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000257954",
+        "CODTIPORED": "A",
+        "LONGITUD": "84.83",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432841,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78421480200001,
+            -15.724137869000003
+          ],
+          [
+            -69.78434941799998,
+            -15.723683581999978
+          ],
+          [
+            -69.784532974,
+            -15.723116661999995
+          ],
+          [
+            -69.78436454400003,
+            -15.72210136199999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432841,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009481",
+        "CODTIPORED": "A",
+        "LONGITUD": "238.71",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432840,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78421480200001,
+            -15.724137869000003
+          ],
+          [
+            -69.78342571000002,
+            -15.72424059399998
+          ],
+          [
+            -69.78253454100002,
+            -15.724350823999998
+          ],
+          [
+            -69.78146424800002,
+            -15.724773477999975
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432840,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009480",
+        "CODTIPORED": "A",
+        "LONGITUD": "314.57",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460740,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.779989161,
+            -15.668473909
+          ],
+          [
+            -69.77998884700003,
+            -15.668465142000002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460740,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910177",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460749,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77619030199997,
+            -15.664392841999984
+          ],
+          [
+            -69.776198711,
+            -15.664395886000023
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460749,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910186",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460750,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77520148899998,
+            -15.66387871500001
+          ],
+          [
+            -69.774981937,
+            -15.663727891999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460750,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910187",
+        "CODTIPORED": "A",
+        "LONGITUD": "29.71",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460742,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.770693042,
+            -15.672658168999988
+          ],
+          [
+            -69.77068531100002,
+            -15.672661812000001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460742,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910179",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.95",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437385,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77293542400002,
+            -15.668717329000003
+          ],
+          [
+            -69.77352963599998,
+            -15.667686843000013
+          ],
+          [
+            -69.774019511,
+            -15.666726331000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437385,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016896",
+        "CODTIPORED": "A",
+        "LONGITUD": "256.56",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1436747,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84426010700003,
+            -15.653291115000002
+          ],
+          [
+            -69.844991171,
+            -15.653673756999979
+          ],
+          [
+            -69.845332171,
+            -15.654649468999992
+          ],
+          [
+            -69.84566113900001,
+            -15.655579847000013
+          ],
+          [
+            -69.84593720599997,
+            -15.656373023000015
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436747,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016089",
+        "CODTIPORED": "A",
+        "LONGITUD": "416.53",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433603,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84125750700002,
+            -15.65162314600002
+          ],
+          [
+            -69.84206919100001,
+            -15.65207979600001
+          ],
+          [
+            -69.842798964,
+            -15.652490836000027
+          ],
+          [
+            -69.84352237299998,
+            -15.652873784000008
+          ],
+          [
+            -69.84426010700003,
+            -15.653291115000002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433603,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010745",
+        "CODTIPORED": "A",
+        "LONGITUD": "382.13",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433803,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83735687699999,
+            -15.686572703000024
+          ],
+          [
+            -69.83735646500003,
+            -15.686563394000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433803,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011064",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.06",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435276,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83262924799999,
+            -15.642932244999997
+          ],
+          [
+            -69.83252623499999,
+            -15.643158633999974
+          ],
+          [
+            -69.832307276,
+            -15.643689473999984
+          ],
+          [
+            -69.83204523699999,
+            -15.644064087000004
+          ],
+          [
+            -69.83176964900002,
+            -15.644457011999975
+          ],
+          [
+            -69.83176387999998,
+            -15.644460648999996
+          ],
+          [
+            -69.83165546499998,
+            -15.64452795599999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435276,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013574",
+        "CODTIPORED": "A",
+        "LONGITUD": "213.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "06/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "06/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433400,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83238636200002,
+            -15.638998012999991
+          ],
+          [
+            -69.83236264599998,
+            -15.640147163999984
+          ],
+          [
+            -69.83235520699998,
+            -15.640937821000023
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433400,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010452",
+        "CODTIPORED": "A",
+        "LONGITUD": "221.05",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460454,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83035908699998,
+            -15.64335614700002
+          ],
+          [
+            -69.83036700899999,
+            -15.643354036999995
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460454,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001876969",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.91",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445803,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82931296100003,
+            -15.642422397000018
+          ],
+          [
+            -69.82922942800002,
+            -15.642343885000003
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445803,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000278786",
+        "CODTIPORED": "A",
+        "LONGITUD": "12.85",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435236,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81882764099998,
+            -15.623447047000013
+          ],
+          [
+            -69.81919679700002,
+            -15.62199891900002
+          ],
+          [
+            -69.81951392399998,
+            -15.620745523999972
+          ],
+          [
+            -69.82091333599999,
+            -15.61996702099998
+          ],
+          [
+            -69.82234397100001,
+            -15.61916081999999
+          ],
+          [
+            -69.82376736499998,
+            -15.618389803000014
+          ],
+          [
+            -69.825162374,
+            -15.617614907000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435236,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013507",
+        "CODTIPORED": "A",
+        "LONGITUD": "1035.5",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "15/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "15/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433784,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.820680063,
+            -15.651185981000026
+          ],
+          [
+            -69.82076205499999,
+            -15.651345771000024
+          ],
+          [
+            -69.82108801200002,
+            -15.651948054000002
+          ],
+          [
+            -69.82145970200003,
+            -15.652647435000006
+          ],
+          [
+            -69.82210430200001,
+            -15.653840001999981
+          ],
+          [
+            -69.822112097,
+            -15.654950252999981
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433784,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011032",
+        "CODTIPORED": "A",
+        "LONGITUD": "467.34",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1434672,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82214924700003,
+            -15.634420937000016
+          ],
+          [
+            -69.821886968,
+            -15.634550648000015
+          ],
+          [
+            -69.82113012899998,
+            -15.634976279
+          ],
+          [
+            -69.81950155800001,
+            -15.635816752999972
+          ],
+          [
+            -69.81789060900002,
+            -15.636681649000025
+          ],
+          [
+            -69.81626955000002,
+            -15.637541327000008
+          ],
+          [
+            -69.815591471,
+            -15.638237573000026
+          ],
+          [
+            -69.81491069100002,
+            -15.638936268000009
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1434672,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000012389",
+        "CODTIPORED": "A",
+        "LONGITUD": "958.78",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460158,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82214204299999,
+            -15.634415810999997
+          ],
+          [
+            -69.82213465199999,
+            -15.63441059600001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460158,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001847368",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435237,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81882764099998,
+            -15.623447047000013
+          ],
+          [
+            -69.81882127300003,
+            -15.623440833000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435237,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013508",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463591,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80989001199998,
+            -15.711572520000004
+          ],
+          [
+            -69.80988485,
+            -15.711565216999986
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463591,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002055420",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463592,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80988485,
+            -15.711565216999986
+          ],
+          [
+            -69.80988025099998,
+            -15.711558726000021
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463592,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002055422",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.9",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460825,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80937177800001,
+            -15.665426946000025
+          ],
+          [
+            -69.80936466499998,
+            -15.665421277000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460825,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001916974",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432920,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.805525676,
+            -15.673107791999996
+          ],
+          [
+            -69.805516533,
+            -15.673108187000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432920,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009619",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463677,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.79156042800003,
+            -15.722648787000026
+          ],
+          [
+            -69.79156418500003,
+            -15.722655010999972
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463677,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002061007",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.82",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437230,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.79102062300001,
+            -15.664971491000017
+          ],
+          [
+            -69.79000362099998,
+            -15.665386751000028
+          ],
+          [
+            -69.788970329,
+            -15.665788685999985
+          ],
+          [
+            -69.78790055500002,
+            -15.666240377000008
+          ],
+          [
+            -69.78689555199998,
+            -15.666649161999999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437230,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016708",
+        "CODTIPORED": "A",
+        "LONGITUD": "493.89",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460717,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78621498199999,
+            -15.666061930000012
+          ],
+          [
+            -69.78620814800001,
+            -15.666056169
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460717,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001907375",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432839,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78146424800002,
+            -15.724773477999975
+          ],
+          [
+            -69.780433416,
+            -15.72519255100002
+          ],
+          [
+            -69.77906935200002,
+            -15.725676179000004
+          ],
+          [
+            -69.77813536600001,
+            -15.726113969999972
+          ],
+          [
+            -69.77762672,
+            -15.726166406000004
+          ],
+          [
+            -69.775323845,
+            -15.726436395999997
+          ],
+          [
+            -69.774172394,
+            -15.726556195
+          ],
+          [
+            -69.773011542,
+            -15.726683163000018
+          ],
+          [
+            -69.77071147200002,
+            -15.726933477999978
+          ],
+          [
+            -69.76997850200001,
+            -15.727024475999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432839,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009479",
+        "CODTIPORED": "A",
+        "LONGITUD": "1304.35",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460718,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78255832000002,
+            -15.667613900999982
+          ],
+          [
+            -69.782557355,
+            -15.667605588000015
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460718,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001907376",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.95",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432910,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.782559477,
+            -15.667623660000004
+          ],
+          [
+            -69.782044423,
+            -15.667841825999972
+          ],
+          [
+            -69.78158976999998,
+            -15.668044408000014
+          ],
+          [
+            -69.78115959799999,
+            -15.668035185999997
+          ],
+          [
+            -69.78007163299998,
+            -15.668471264999994
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432910,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009594",
+        "CODTIPORED": "A",
+        "LONGITUD": "294.76",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445690,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77538745300001,
+            -15.664104055999985
+          ],
+          [
+            -69.77619030199997,
+            -15.664392841999984
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445690,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000256771",
+        "CODTIPORED": "A",
+        "LONGITUD": "94.54",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460747,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77520148899998,
+            -15.66387871500001
+          ],
+          [
+            -69.77520357600002,
+            -15.66388774799998
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460747,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910184",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.05",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433396,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77395282600003,
+            -15.671144223999988
+          ],
+          [
+            -69.77345014399998,
+            -15.66994413499998
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433396,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010444",
+        "CODTIPORED": "A",
+        "LONGITUD": "147.56",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433395,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77345014399998,
+            -15.66994413499998
+          ],
+          [
+            -69.77293542400002,
+            -15.668717329000003
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433395,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010443",
+        "CODTIPORED": "A",
+        "LONGITUD": "150.88",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432912,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84684107700002,
+            -15.679085292000025
+          ],
+          [
+            -69.846849679,
+            -15.679089598000019
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432912,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009598",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.07",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463273,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84125750700002,
+            -15.65162314600002
+          ],
+          [
+            -69.84127949499998,
+            -15.65120514900002
+          ],
+          [
+            -69.84129916500001,
+            -15.651087194000013
+          ],
+          [
+            -69.84129969600002,
+            -15.651080139999976
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463273,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002034202",
+        "CODTIPORED": "A",
+        "LONGITUD": "62.1",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463275,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.843750978,
+            -15.638632497000003
+          ],
+          [
+            -69.84375476999998,
+            -15.63862452699999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463275,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002034204",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460494,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83076364700003,
+            -15.643713135999974
+          ],
+          [
+            -69.83072366900001,
+            -15.643677851000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460494,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001882176",
+        "CODTIPORED": "A",
+        "LONGITUD": "5.97",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435279,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83072366900001,
+            -15.643677851000007
+          ],
+          [
+            -69.83035908699998,
+            -15.64335614700002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435279,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013585",
+        "CODTIPORED": "A",
+        "LONGITUD": "54.44",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445801,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83016787399998,
+            -15.643180502000007
+          ],
+          [
+            -69.82974018099998,
+            -15.642777586000022
+          ],
+          [
+            -69.82946180300002,
+            -15.64254803099999
+          ],
+          [
+            -69.82931296100003,
+            -15.642422397000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445801,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000278784",
+        "CODTIPORED": "A",
+        "LONGITUD": "128",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437383,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83368008299999,
+            -15.620495483000013
+          ],
+          [
+            -69.833630846,
+            -15.621053070000016
+          ],
+          [
+            -69.83354253499999,
+            -15.62212137900002
+          ],
+          [
+            -69.83345406000001,
+            -15.623218527000006
+          ],
+          [
+            -69.83336639999999,
+            -15.624286833999975
+          ],
+          [
+            -69.83327306199999,
+            -15.62538110600002
+          ],
+          [
+            -69.83317785700001,
+            -15.626452334000021
+          ],
+          [
+            -69.83307316100002,
+            -15.627529745000004
+          ],
+          [
+            -69.83297997599999,
+            -15.628616333000025
+          ],
+          [
+            -69.83288052099999,
+            -15.629698243999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437383,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016894",
+        "CODTIPORED": "A",
+        "LONGITUD": "1052.28",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "13/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "13/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460204,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83282003800002,
+            -15.630244032000007
+          ],
+          [
+            -69.83306840699998,
+            -15.63018433000002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460204,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851786",
+        "CODTIPORED": "A",
+        "LONGITUD": "28.25",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433823,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.832397518,
+            -15.629846070999974
+          ],
+          [
+            -69.83122595999998,
+            -15.630224493000014
+          ],
+          [
+            -69.82966958899999,
+            -15.630116660999988
+          ],
+          [
+            -69.82839123399998,
+            -15.630037147999985
+          ],
+          [
+            -69.82715226300002,
+            -15.629961367000021
+          ],
+          [
+            -69.82623098099998,
+            -15.629920452000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433823,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011092",
+        "CODTIPORED": "A",
+        "LONGITUD": "688.96",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445802,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82931296100003,
+            -15.642422397000018
+          ],
+          [
+            -69.82928485299999,
+            -15.64246191799998
+          ],
+          [
+            -69.82910802700002,
+            -15.64259212799999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445802,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000278785",
+        "CODTIPORED": "A",
+        "LONGITUD": "29.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460161,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.824625293,
+            -15.627745160000018
+          ],
+          [
+            -69.82452678499999,
+            -15.627419189000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460161,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001847371",
+        "CODTIPORED": "A",
+        "LONGITUD": "38.7",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433813,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.821760788,
+            -15.698859361000018
+          ],
+          [
+            -69.820911373,
+            -15.699528338999983
+          ],
+          [
+            -69.81990650799997,
+            -15.700320116
+          ],
+          [
+            -69.81893694799999,
+            -15.70107469300001
+          ],
+          [
+            -69.81801939500002,
+            -15.701791464999985
+          ],
+          [
+            -69.81715793400002,
+            -15.70246454300002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433813,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011082",
+        "CODTIPORED": "A",
+        "LONGITUD": "653.33",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435235,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81791647400001,
+            -15.62712327700001
+          ],
+          [
+            -69.81820249999998,
+            -15.625997915000028
+          ],
+          [
+            -69.81853097300001,
+            -15.624662578000027
+          ],
+          [
+            -69.81882764099998,
+            -15.623447047000013
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435235,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013506",
+        "CODTIPORED": "A",
+        "LONGITUD": "430.78",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460199,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81904938500003,
+            -15.623613006000028
+          ],
+          [
+            -69.81905658900001,
+            -15.623618404000013
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460199,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851781",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "15/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "15/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433393,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.814703673,
+            -15.70661378699998
+          ],
+          [
+            -69.81564023499999,
+            -15.707031099000005
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433393,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010441",
+        "CODTIPORED": "A",
+        "LONGITUD": "113.78",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433812,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81715793400002,
+            -15.70246454300002
+          ],
+          [
+            -69.81621163300002,
+            -15.703206455999975
+          ],
+          [
+            -69.815716635,
+            -15.704302400000017
+          ],
+          [
+            -69.81517579899997,
+            -15.705536553000002
+          ],
+          [
+            -69.814703673,
+            -15.70661378699998
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433812,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011081",
+        "CODTIPORED": "A",
+        "LONGITUD": "556.77",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460176,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81679407799999,
+            -15.627081805999978
+          ],
+          [
+            -69.81679562699998,
+            -15.627072397999996
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460176,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001848970",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.09",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460202,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81630826399999,
+            -15.631490670000005
+          ],
+          [
+            -69.81630531100001,
+            -15.631498636000003
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460202,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001851784",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.96",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432869,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80937177800001,
+            -15.665426946000025
+          ],
+          [
+            -69.80878141699998,
+            -15.66648670699999
+          ],
+          [
+            -69.80824609000001,
+            -15.667449083999998
+          ],
+          [
+            -69.807727973,
+            -15.668375869999977
+          ],
+          [
+            -69.80730267500002,
+            -15.669488715
+          ],
+          [
+            -69.80724484900003,
+            -15.66963718300002
+          ],
+          [
+            -69.80688856199998,
+            -15.670552341000018
+          ],
+          [
+            -69.80639627900001,
+            -15.671407975000022
+          ],
+          [
+            -69.80597655999998,
+            -15.67211490599999
+          ],
+          [
+            -69.805525676,
+            -15.673107791999996
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432869,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009529",
+        "CODTIPORED": "A",
+        "LONGITUD": "974.73",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460826,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80936466499998,
+            -15.665421277000007
+          ],
+          [
+            -69.80935764399999,
+            -15.66541560799999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460826,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001916975",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435911,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.805525676,
+            -15.673107791999996
+          ],
+          [
+            -69.80527116799999,
+            -15.673616410000022
+          ],
+          [
+            -69.80457894300002,
+            -15.674575378999975
+          ],
+          [
+            -69.80388671499998,
+            -15.675487337999982
+          ],
+          [
+            -69.80320094899997,
+            -15.676406955000004
+          ],
+          [
+            -69.802463456,
+            -15.677391306000004
+          ],
+          [
+            -69.801409594,
+            -15.678818954999997
+          ],
+          [
+            -69.800127046,
+            -15.67968018099998
+          ],
+          [
+            -69.79975894500001,
+            -15.680113634999998
+          ],
+          [
+            -69.79910351299998,
+            -15.681115754000018
+          ],
+          [
+            -69.798503074,
+            -15.681983881000008
+          ],
+          [
+            -69.79692893700002,
+            -15.683457160999978
+          ],
+          [
+            -69.796679375,
+            -15.683685786000012
+          ],
+          [
+            -69.795246211,
+            -15.684678159999976
+          ],
+          [
+            -69.79365899099997,
+            -15.685771698999986
+          ],
+          [
+            -69.79236859100001,
+            -15.686673410000026
+          ],
+          [
+            -69.790349687,
+            -15.68806228699998
+          ],
+          [
+            -69.78983463600002,
+            -15.688752720000025
+          ],
+          [
+            -69.78958645199998,
+            -15.689076612999997
+          ],
+          [
+            -69.78878397699998,
+            -15.690978617999974
+          ],
+          [
+            -69.7881309,
+            -15.692155259999993
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435911,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000014610",
+        "CODTIPORED": "A",
+        "LONGITUD": "2952.25",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445235,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78833850699999,
+            -15.692271127000026
+          ],
+          [
+            -69.789537171,
+            -15.693803318999983
+          ],
+          [
+            -69.78974524900002,
+            -15.695277522000026
+          ],
+          [
+            -69.78982491,
+            -15.695923499000003
+          ],
+          [
+            -69.78974353400002,
+            -15.69764391000001
+          ],
+          [
+            -69.78960558300003,
+            -15.69977032700001
+          ],
+          [
+            -69.78943599799999,
+            -15.702479482000001
+          ],
+          [
+            -69.78931449599997,
+            -15.704395208999983
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445235,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000173889",
+        "CODTIPORED": "A",
+        "LONGITUD": "1429.63",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "22/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "22/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432837,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78146424800002,
+            -15.724773477999975
+          ],
+          [
+            -69.78146123200003,
+            -15.724765714
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432837,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009477",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.95",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "12/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "12/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463679,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77928232400001,
+            -15.717309509000017
+          ],
+          [
+            -69.77927494699998,
+            -15.717308451000008
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463679,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002061011",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.82",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433397,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77693394599999,
+            -15.669728400999986
+          ],
+          [
+            -69.77601870900003,
+            -15.670100026
+          ],
+          [
+            -69.77496243399997,
+            -15.670631791999995
+          ],
+          [
+            -69.77395282600003,
+            -15.671144223999988
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433397,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010445",
+        "CODTIPORED": "A",
+        "LONGITUD": "366.76",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460741,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77693472800001,
+            -15.669737800000007
+          ],
+          [
+            -69.77693550599997,
+            -15.669746203999978
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460741,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910178",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.96",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460745,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.772942537,
+            -15.668723090000015
+          ],
+          [
+            -69.77294946199999,
+            -15.668728579999993
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460745,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910182",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432918,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77293542400002,
+            -15.668717329000003
+          ],
+          [
+            -69.772942537,
+            -15.668723090000015
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432918,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009614",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433600,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84063190799998,
+            -15.684758953000028
+          ],
+          [
+            -69.84047873499998,
+            -15.684291459000008
+          ],
+          [
+            -69.83965235900001,
+            -15.681938940000009
+          ],
+          [
+            -69.83917538399999,
+            -15.68057593399999
+          ],
+          [
+            -69.83867347900002,
+            -15.679161405000002
+          ],
+          [
+            -69.83828209799998,
+            -15.678053625000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433600,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010742",
+        "CODTIPORED": "A",
+        "LONGITUD": "806.85",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433605,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84129969600002,
+            -15.651080139999976
+          ],
+          [
+            -69.84137277999997,
+            -15.65010689899998
+          ],
+          [
+            -69.84143879499999,
+            -15.649230593000027
+          ],
+          [
+            -69.841520586,
+            -15.648128229000008
+          ],
+          [
+            -69.84158475100003,
+            -15.647324337999976
+          ],
+          [
+            -69.84161321900001,
+            -15.646802718999993
+          ],
+          [
+            -69.84152503899998,
+            -15.64563465499998
+          ],
+          [
+            -69.84143962299999,
+            -15.644549385000005
+          ],
+          [
+            -69.84135187599998,
+            -15.643509503000018
+          ],
+          [
+            -69.841832479,
+            -15.642540844999985
+          ],
+          [
+            -69.84231752800002,
+            -15.641565388000004
+          ],
+          [
+            -69.84280383700002,
+            -15.640556930000002
+          ],
+          [
+            -69.84327736099999,
+            -15.639617042999987
+          ],
+          [
+            -69.843750978,
+            -15.638632497000003
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433605,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010747",
+        "CODTIPORED": "A",
+        "LONGITUD": "1480.55",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460367,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84099202099998,
+            -15.628515084000014
+          ],
+          [
+            -69.84100078300003,
+            -15.628513242999986
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460367,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001866968",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433816,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83639301900001,
+            -15.686977307999996
+          ],
+          [
+            -69.83531818199998,
+            -15.687421294999979
+          ],
+          [
+            -69.834334791,
+            -15.687820450999993
+          ],
+          [
+            -69.83343845600001,
+            -15.68819603899999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433816,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011085",
+        "CODTIPORED": "A",
+        "LONGITUD": "354.46",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "12/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "12/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463272,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83561060900001,
+            -15.64801135099998
+          ],
+          [
+            -69.83560324000001,
+            -15.648011741000005
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463272,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002034201",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.81",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "02/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "02/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433815,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83343845600001,
+            -15.68819603899999
+          ],
+          [
+            -69.83257682099998,
+            -15.688960566999981
+          ],
+          [
+            -69.83176514799999,
+            -15.689713149
+          ],
+          [
+            -69.83094953400001,
+            -15.690461857000003
+          ],
+          [
+            -69.83014023800001,
+            -15.691205294999975
+          ],
+          [
+            -69.829312233,
+            -15.691961908999986
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433815,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011084",
+        "CODTIPORED": "A",
+        "LONGITUD": "625.76",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "12/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "12/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435278,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83072366900001,
+            -15.643677851000007
+          ],
+          [
+            -69.83069008000001,
+            -15.643723267999974
+          ],
+          [
+            -69.83035479300003,
+            -15.644049522999978
+          ],
+          [
+            -69.830018516,
+            -15.644361677999996
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435278,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000013582",
+        "CODTIPORED": "A",
+        "LONGITUD": "110.24",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437384,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83288052099999,
+            -15.629698243999997
+          ],
+          [
+            -69.83282003800002,
+            -15.630244032000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437384,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016895",
+        "CODTIPORED": "A",
+        "LONGITUD": "62.54",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "13/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "13/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433822,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82623098099998,
+            -15.629920452000022
+          ],
+          [
+            -69.826017127,
+            -15.62991040899999
+          ],
+          [
+            -69.825346965,
+            -15.62886574700002
+          ],
+          [
+            -69.824629705,
+            -15.627752104000024
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433822,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011091",
+        "CODTIPORED": "A",
+        "LONGITUD": "313.36",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433783,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.820680063,
+            -15.651185981000026
+          ],
+          [
+            -69.81991776299998,
+            -15.651755364999985
+          ],
+          [
+            -69.81903503500001,
+            -15.652400770999975
+          ],
+          [
+            -69.81802494099998,
+            -15.653137679999986
+          ],
+          [
+            -69.81678661699999,
+            -15.654035351000005
+          ],
+          [
+            -69.815803566,
+            -15.654749730999981
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433783,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011031",
+        "CODTIPORED": "A",
+        "LONGITUD": "674.33",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460159,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82214924700003,
+            -15.634420937000016
+          ],
+          [
+            -69.82214204299999,
+            -15.634415810999997
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460159,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001847369",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460671,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81330919700002,
+            -15.659909674999994
+          ],
+          [
+            -69.81330484199998,
+            -15.659917194000002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460671,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001900972",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.98",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463518,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.812579427,
+            -15.705566474000022
+          ],
+          [
+            -69.81257278800001,
+            -15.705563153000014
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463518,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002052607",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.82",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460594,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81251214600002,
+            -15.650938526000004
+          ],
+          [
+            -69.81250614800001,
+            -15.650931678000006
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460594,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001889773",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433389,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80084815200001,
+            -15.716561800000022
+          ],
+          [
+            -69.799500051,
+            -15.717257297999993
+          ],
+          [
+            -69.79868717800002,
+            -15.717833853999991
+          ],
+          [
+            -69.797806482,
+            -15.718442566000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433389,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010434",
+        "CODTIPORED": "A",
+        "LONGITUD": "399.17",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460915,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.7881309,
+            -15.692155259999993
+          ],
+          [
+            -69.78833850699999,
+            -15.692271127000026
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460915,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001922178",
+        "CODTIPORED": "A",
+        "LONGITUD": "26.45",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "22/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "22/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437231,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78689555199998,
+            -15.666649161999999
+          ],
+          [
+            -69.78587057700003,
+            -15.667057833000001
+          ],
+          [
+            -69.784747192,
+            -15.667083558000002
+          ],
+          [
+            -69.78372447599997,
+            -15.66710765099998
+          ],
+          [
+            -69.782559477,
+            -15.667623660000004
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437231,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016709",
+        "CODTIPORED": "A",
+        "LONGITUD": "500.74",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463680,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78146123200003,
+            -15.724765714
+          ],
+          [
+            -69.78145840399998,
+            -15.724758493000024
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463680,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002061012",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.88",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "12/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "12/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433818,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.782559477,
+            -15.667623660000004
+          ],
+          [
+            -69.78255832000002,
+            -15.667613900999982
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433818,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011087",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.12",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460746,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77520357600002,
+            -15.66388774799998
+          ],
+          [
+            -69.775205567,
+            -15.66389632900001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460746,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910183",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460743,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77167514899998,
+            -15.67219782799998
+          ],
+          [
+            -69.771791124,
+            -15.672096894999981
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460743,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910180",
+        "CODTIPORED": "A",
+        "LONGITUD": "17.21",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460807,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77292271300001,
+            -15.660794913000018
+          ],
+          [
+            -69.77291867299999,
+            -15.660787423999977
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460807,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001915373",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.96",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463276,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84125750700002,
+            -15.65162314600002
+          ],
+          [
+            -69.84094036900001,
+            -15.652165579999973
+          ],
+          [
+            -69.84093703500002,
+            -15.652171468999995
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463276,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002034205",
+        "CODTIPORED": "A",
+        "LONGITUD": "71.79",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433602,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.832504514,
+            -15.645492724999997
+          ],
+          [
+            -69.83302578799999,
+            -15.64591760799999
+          ],
+          [
+            -69.83355223400002,
+            -15.646352052999987
+          ],
+          [
+            -69.83409363599998,
+            -15.646769985999981
+          ],
+          [
+            -69.83465432899999,
+            -15.647159008000017
+          ],
+          [
+            -69.83522064599998,
+            -15.647324360000027
+          ],
+          [
+            -69.835711532,
+            -15.648005813999987
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433602,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010744",
+        "CODTIPORED": "A",
+        "LONGITUD": "464.09",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1464194,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.838755418,
+            -15.640390388000014
+          ],
+          [
+            -69.83876183899997,
+            -15.640386385999989
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1464194,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002095014",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.84",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "06/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "06/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460372,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83263754299998,
+            -15.639054373000022
+          ],
+          [
+            -69.83264659999998,
+            -15.639056417000006
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460372,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001868168",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.03",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432909,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83238636200002,
+            -15.638998012999991
+          ],
+          [
+            -69.83263754299998,
+            -15.639054373000022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432909,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009593",
+        "CODTIPORED": "A",
+        "LONGITUD": "28.47",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433820,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83235520699998,
+            -15.640937821000023
+          ],
+          [
+            -69.832066929,
+            -15.641698356000006
+          ],
+          [
+            -69.831875706,
+            -15.64188955200001
+          ],
+          [
+            -69.83161726100002,
+            -15.642137591999983
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433820,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011089",
+        "CODTIPORED": "A",
+        "LONGITUD": "162.81",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "16/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "16/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460492,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83035908699998,
+            -15.64335614700002
+          ],
+          [
+            -69.83023684300002,
+            -15.643140465999977
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460492,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001882173",
+        "CODTIPORED": "A",
+        "LONGITUD": "28.04",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432867,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83368008299999,
+            -15.620495483000013
+          ],
+          [
+            -69.83367075500001,
+            -15.620495517999984
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432867,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009525",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.03",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460077,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83367075500001,
+            -15.620495517999984
+          ],
+          [
+            -69.83366152000002,
+            -15.620495553000012
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460077,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001842168",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463406,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.829307723,
+            -15.691954423000027
+          ],
+          [
+            -69.82930293300001,
+            -15.691946665999978
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463406,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045816",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.03",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433819,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82939248000002,
+            -15.644237035999993
+          ],
+          [
+            -69.829066023,
+            -15.64450937700002
+          ],
+          [
+            -69.82799428200002,
+            -15.645394997999972
+          ],
+          [
+            -69.82690412800002,
+            -15.646297948999973
+          ],
+          [
+            -69.825602677,
+            -15.647369833000027
+          ],
+          [
+            -69.82448073299997,
+            -15.648307154000008
+          ],
+          [
+            -69.82346038200001,
+            -15.649152243000003
+          ],
+          [
+            -69.82256687900002,
+            -15.64980393899998
+          ],
+          [
+            -69.82167388200003,
+            -15.650466839999979
+          ],
+          [
+            -69.820680063,
+            -15.651185981000026
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433819,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011088",
+        "CODTIPORED": "A",
+        "LONGITUD": "1246.33",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460491,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82910802700002,
+            -15.64259212799999
+          ],
+          [
+            -69.829100772,
+            -15.64259739900001
+          ],
+          [
+            -69.82910067900002,
+            -15.642597489000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460491,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001882172",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1446954,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81330208700001,
+            -15.659904729999994
+          ],
+          [
+            -69.812385431,
+            -15.659273799999994
+          ],
+          [
+            -69.811510102,
+            -15.658663686000011
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1446954,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000471102",
+        "CODTIPORED": "A",
+        "LONGITUD": "243.17",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433398,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.812612806,
+            -15.660997591000012
+          ],
+          [
+            -69.81210830499998,
+            -15.661937625000007
+          ],
+          [
+            -69.81139311800001,
+            -15.662805575999982
+          ],
+          [
+            -69.81072141800001,
+            -15.663818995999975
+          ],
+          [
+            -69.81031658900002,
+            -15.664035193000018
+          ],
+          [
+            -69.80977807199997,
+            -15.664823927999976
+          ],
+          [
+            -69.80937177800001,
+            -15.665426946000025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433398,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010448",
+        "CODTIPORED": "A",
+        "LONGITUD": "625.32",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432870,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80027574600001,
+            -15.664122103000011
+          ],
+          [
+            -69.79959698900001,
+            -15.664727817000028
+          ],
+          [
+            -69.79881168600002,
+            -15.665432634000013
+          ],
+          [
+            -69.79810365499998,
+            -15.664941364000015
+          ],
+          [
+            -69.79722669099999,
+            -15.664411201000007
+          ],
+          [
+            -69.79649921499998,
+            -15.664148796999996
+          ],
+          [
+            -69.79542474700003,
+            -15.663790381000013
+          ],
+          [
+            -69.79423859399998,
+            -15.664107107000007
+          ],
+          [
+            -69.79312836700001,
+            -15.664394532000017
+          ],
+          [
+            -69.792059429,
+            -15.664695363000021
+          ],
+          [
+            -69.79102062300001,
+            -15.664971491000017
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432870,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009531",
+        "CODTIPORED": "A",
+        "LONGITUD": "1145.91",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433391,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.79155526199997,
+            -15.722640128000023
+          ],
+          [
+            -69.79156042800003,
+            -15.722648787000026
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433391,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010436",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.14",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433386,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.79155526199997,
+            -15.722640128000023
+          ],
+          [
+            -69.79022287800001,
+            -15.723485485000026
+          ],
+          [
+            -69.788606373,
+            -15.723673667000014
+          ],
+          [
+            -69.78784386699999,
+            -15.723747473999993
+          ],
+          [
+            -69.78675598299998,
+            -15.723862859999997
+          ],
+          [
+            -69.78421480200001,
+            -15.724137869000003
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433386,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000010431",
+        "CODTIPORED": "A",
+        "LONGITUD": "843",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463676,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.79629632299998,
+            -15.716852989000017
+          ],
+          [
+            -69.79629126200001,
+            -15.716847674000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463676,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002061004",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.82",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460916,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78931449599997,
+            -15.704395208999983
+          ],
+          [
+            -69.789313967,
+            -15.70440316600002
+          ],
+          [
+            -69.78931396899998,
+            -15.704403528
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460916,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001922180",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.95",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "22/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "22/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460716,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78689555199998,
+            -15.666649161999999
+          ],
+          [
+            -69.78679812399997,
+            -15.666546817999972
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460716,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001907374",
+        "CODTIPORED": "A",
+        "LONGITUD": "15.86",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1445689,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.774019511,
+            -15.666726331000007
+          ],
+          [
+            -69.77450741400003,
+            -15.66566475899998
+          ],
+          [
+            -69.77486852099997,
+            -15.664728927999988
+          ],
+          [
+            -69.77520148899998,
+            -15.66387871500001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1445689,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000256770",
+        "CODTIPORED": "A",
+        "LONGITUD": "349.85",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "31/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "31/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1437235,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.771791124,
+            -15.672096894999981
+          ],
+          [
+            -69.77164693700001,
+            -15.671443540999974
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1437235,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016715",
+        "CODTIPORED": "A",
+        "LONGITUD": "76.13",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1436744,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84889792400003,
+            -15.665995149000025
+          ],
+          [
+            -69.84890612999999,
+            -15.667801277000024
+          ],
+          [
+            -69.848908,
+            -15.668660687
+          ],
+          [
+            -69.84891740900002,
+            -15.66960594599999
+          ],
+          [
+            -69.848921986,
+            -15.670555743000023
+          ],
+          [
+            -69.84905203,
+            -15.671430837000003
+          ],
+          [
+            -69.849175533,
+            -15.672325844
+          ],
+          [
+            -69.849091735,
+            -15.67388156200002
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1436744,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000016085",
+        "CODTIPORED": "A",
+        "LONGITUD": "900.77",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463397,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84593720599997,
+            -15.656373023000015
+          ],
+          [
+            -69.84572588999998,
+            -15.65655590099999
+          ],
+          [
+            -69.84572068300002,
+            -15.656560350999996
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463397,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045801",
+        "CODTIPORED": "A",
+        "LONGITUD": "32.05",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "29/01/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "29/01/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463278,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.84426530799999,
+            -15.653285218999997
+          ],
+          [
+            -69.844270322,
+            -15.653279505
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463278,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002034207",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.85",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463405,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83735687699999,
+            -15.686572703000024
+          ],
+          [
+            -69.83640075099999,
+            -15.686974114999998
+          ],
+          [
+            -69.83639301900001,
+            -15.686977307999996
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463405,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002045815",
+        "CODTIPORED": "A",
+        "LONGITUD": "115.95",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "12/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "12/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1456436,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.830018516,
+            -15.644361677999996
+          ],
+          [
+            -69.82939248000002,
+            -15.644237035999993
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1456436,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001577765",
+        "CODTIPORED": "A",
+        "LONGITUD": "70.56",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "18/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "18/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1444587,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.83023684300002,
+            -15.643140465999977
+          ],
+          [
+            -69.82963112300001,
+            -15.642615912999986
+          ],
+          [
+            -69.82918762899999,
+            -15.642227158000026
+          ],
+          [
+            -69.82871504500002,
+            -15.641795843000011
+          ],
+          [
+            -69.82867882099998,
+            -15.641696722000006
+          ],
+          [
+            -69.82930439,
+            -15.640942870000003
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1444587,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000068142",
+        "CODTIPORED": "A",
+        "LONGITUD": "349.59",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433814,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.829312233,
+            -15.691961908999986
+          ],
+          [
+            -69.82850920999999,
+            -15.692690310999978
+          ],
+          [
+            -69.82763416099999,
+            -15.69349311000002
+          ],
+          [
+            -69.8267945,
+            -15.694256447999976
+          ],
+          [
+            -69.82594888099999,
+            -15.695024778000004
+          ],
+          [
+            -69.82511856500003,
+            -15.695794674000012
+          ],
+          [
+            -69.82428972299999,
+            -15.69656103699998
+          ],
+          [
+            -69.823458517,
+            -15.697321438000017
+          ],
+          [
+            -69.82254608800002,
+            -15.698144065999998
+          ],
+          [
+            -69.821760788,
+            -15.698859361000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433814,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011083",
+        "CODTIPORED": "A",
+        "LONGITUD": "1145.6",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433802,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.829312233,
+            -15.691961908999986
+          ],
+          [
+            -69.829307723,
+            -15.691954423000027
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433802,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011063",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.99",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "30/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "30/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460493,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82930439,
+            -15.640942870000003
+          ],
+          [
+            -69.82930977400002,
+            -15.640936340999986
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460493,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001882174",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.95",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "19/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "19/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460175,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.82505182900002,
+            -15.627613020000013
+          ],
+          [
+            -69.82506067999998,
+            -15.627610365999999
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460175,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001848969",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460174,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.824629705,
+            -15.627752104000024
+          ],
+          [
+            -69.824625293,
+            -15.627745160000018
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460174,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001848968",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.93",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433801,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.821760788,
+            -15.698859361000018
+          ],
+          [
+            -69.82175413499999,
+            -15.698852697000007
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433801,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011062",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.06",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1433810,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.814703673,
+            -15.70661378699998
+          ],
+          [
+            -69.81405642099998,
+            -15.708125768000002
+          ],
+          [
+            -69.81381310500001,
+            -15.70887219299999
+          ],
+          [
+            -69.81318120600002,
+            -15.709246627000027
+          ],
+          [
+            -69.81239959099997,
+            -15.709827544999996
+          ],
+          [
+            -69.811304635,
+            -15.710679012000014
+          ],
+          [
+            -69.80989001199998,
+            -15.711572520000004
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1433810,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000011079",
+        "CODTIPORED": "A",
+        "LONGITUD": "807.54",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463517,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81564023499999,
+            -15.707031099000005
+          ],
+          [
+            -69.81564855599999,
+            -15.70703486399998
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463517,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002052606",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.01",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "03/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "03/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435806,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.81782342499997,
+            -15.627370956999982
+          ],
+          [
+            -69.81745186299997,
+            -15.62833464099998
+          ],
+          [
+            -69.81721029300002,
+            -15.629051050999976
+          ],
+          [
+            -69.816875584,
+            -15.629946527000016
+          ],
+          [
+            -69.81630826399999,
+            -15.631490670000005
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435806,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000014393",
+        "CODTIPORED": "A",
+        "LONGITUD": "498.36",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "14/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "14/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460674,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80841819699998,
+            -15.657234786000004
+          ],
+          [
+            -69.80841178200001,
+            -15.657240596000008
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460674,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001900975",
+        "CODTIPORED": "A",
+        "LONGITUD": "0.97",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "20/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "20/11/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463674,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80084815200001,
+            -15.716561800000022
+          ],
+          [
+            -69.80083463099999,
+            -15.71627799700002
+          ],
+          [
+            -69.80083392099999,
+            -15.716263535999985
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463674,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002061002",
+        "CODTIPORED": "A",
+        "LONGITUD": "34.02",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1435913,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.80083392099999,
+            -15.716263535999985
+          ],
+          [
+            -69.80034389100001,
+            -15.715554344999987
+          ],
+          [
+            -69.799441291,
+            -15.714252923999993
+          ],
+          [
+            -69.79830598199999,
+            -15.712624651999988
+          ],
+          [
+            -69.79754907199998,
+            -15.711558721000017
+          ],
+          [
+            -69.79679992199999,
+            -15.710422337000011
+          ],
+          [
+            -69.79575318600001,
+            -15.709410158000026
+          ],
+          [
+            -69.79495859899998,
+            -15.707839021999973
+          ],
+          [
+            -69.794014634,
+            -15.705959441999994
+          ],
+          [
+            -69.79351989399999,
+            -15.704984928999977
+          ],
+          [
+            -69.79335946600003,
+            -15.704693522000014
+          ],
+          [
+            -69.79304248099999,
+            -15.704194493999978
+          ],
+          [
+            -69.79269462100001,
+            -15.703601923999997
+          ],
+          [
+            -69.79057000199998,
+            -15.704141710999977
+          ],
+          [
+            -69.789948235,
+            -15.704295829999978
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1435913,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000014615",
+        "CODTIPORED": "A",
+        "LONGITUD": "2020.59",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1463678,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78436454400003,
+            -15.72210136199999
+          ],
+          [
+            -69.78435418999999,
+            -15.72210275499998
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1463678,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT002061008",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.15",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432836,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78435418999999,
+            -15.72210275499998
+          ],
+          [
+            -69.78434374199998,
+            -15.722104148000028
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432836,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009476",
+        "CODTIPORED": "A",
+        "LONGITUD": "1.16",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1432835,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.78436454400003,
+            -15.72210136199999
+          ],
+          [
+            -69.784246252,
+            -15.721163986000022
+          ],
+          [
+            -69.78411138899997,
+            -15.720261563000008
+          ],
+          [
+            -69.78394301999998,
+            -15.719090052000013
+          ],
+          [
+            -69.78382991299998,
+            -15.718287170999986
+          ],
+          [
+            -69.78258902699997,
+            -15.717922069999986
+          ],
+          [
+            -69.781246533,
+            -15.71748934499999
+          ],
+          [
+            -69.78034284400002,
+            -15.717465999000012
+          ],
+          [
+            -69.77928232400001,
+            -15.717309509000017
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1432835,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT000009475",
+        "CODTIPORED": "A",
+        "LONGITUD": "956.03",
+        "PROPIEDAD": "D",
+        "FECPUESTASERVICIO": "04/12/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "04/12/2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1460739,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.77998947399999,
+            -15.668482676999986
+          ],
+          [
+            -69.779989161,
+            -15.668473909
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1460739,
+        "CODEMP": "ELPU",
+        "CODTRAMOMT": "TMT001910176",
+        "CODTIPORED": "A",
+        "LONGITUD": "1",
+        "PROPIEDAD": "T",
+        "FECPUESTASERVICIO": "21/11/2024",
+        "TIPO_CENT": "CT",
+        "FECHA_PS": "21/11/2024"
+      }
+    }
+  ]
+}

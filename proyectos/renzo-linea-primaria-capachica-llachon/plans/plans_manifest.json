@@ -1,0 +1,21 @@
+{
+  "generated_at_utc": "2026-10-14T04:44:38.769054+00:00",
+  "status": "PRELIMINARY",
+  "sheets": [
+    "CL-01_ubicacion_corredor",
+    "CL-02_perfil_referencial"
+  ],
+  "route_length_m": 13834.03,
+  "sources": [
+    "GISEM MT (Osinergmin)",
+    "© OpenStreetMap contributors",
+    "SRTM30m via Open Topo Data"
+  ],
+  "limitations": [
+    "La conectividad se infirió por extremos a <=1 m; requiere verificación de campo.",
+    "La capa GISEM no acredita tensión, capacidad, servidumbre ni estado operativo por este cálculo.",
+    "El enlace exacto a cada estructura requiere replanteo; se informan separaciones GIS.",
+    "Cotas SRTM referenciales; no válidas para gálibos ni spotting.",
+    "No hay aprobación del punto de conexión ni estudio de capacidad de Electro Puno."
+  ]
+}

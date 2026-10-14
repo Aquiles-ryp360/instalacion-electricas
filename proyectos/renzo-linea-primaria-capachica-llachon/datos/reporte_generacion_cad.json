@@ -1,0 +1,31 @@
+{
+  "generated_at_utc": "2026-10-14T05:26:29.673813+00:00",
+  "status": "PRELIMINARY_NOT_FOR_CONSTRUCTION",
+  "inputs": {
+    "derived/route.json": "5942212c0e283e14ccd1359212c16b76a6c680b5ec51b85798d497946ffa8d54",
+    "sources/gisem_mt_tramos.geojson": "3f38785a74ca7ce18bdbe493f71ffa5d707f6344ea583391eb9cab064ad1c0b7",
+    "sources/srtm30m_route_samples.json": "3221067755e85f29860e8a4e7afd0dca35134a1ab1f84bf8e31b76726bcaced1"
+  },
+  "outputs": {
+    "datos/cuadro_tramos_gisem.csv": "26dec6cfe7a6a42fbd7b8d267d9190ed1988d73634ab28e3bb920beeec15f203",
+    "plans/CL-01_A3_AUTOCAD_PRELIMINAR.dxf": "3f35f5851749a2321494059681c2994301c35710ac6faa536024add2f9af52d7",
+    "plans/CL-02_A3_AUTOCAD_PRELIMINAR.dxf": "b55d661bea700486add083b4bcd9dfff722697e074061a08a7fd45a4e3a36bad"
+  },
+  "map_paper_layout": "CL-01_A3",
+  "profile_paper_layout": "CL-02_A3",
+  "paper_size_mm": [
+    420,
+    297
+  ],
+  "model_units": "metres",
+  "map_approximate_scale_at_A3": "1:50627",
+  "segment_count": 27,
+  "geometry_length_m": 13834.03,
+  "gis_attribute_length_sum_unverified_units": 14248.94,
+  "warnings": [
+    "La red es GIS y no acredita continuidad física ni estado operativo.",
+    "La unidad del atributo LONGITUD no figura en el esquema consultado.",
+    "El perfil SRTM no permite diseñar vanos ni verificar gálibos.",
+    "Tensión, cargas, equipos y conexión pendientes de confirmar con operador y campo."
+  ]
+}
