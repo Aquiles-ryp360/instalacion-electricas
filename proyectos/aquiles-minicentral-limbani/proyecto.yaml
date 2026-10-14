@@ -1,0 +1,34 @@
+schema_version: 1
+id: aquiles-minicentral-limbani
+proyecto: "Minicentral hidroeléctrica Limbani - objetivo académico de 150 kW"
+alumno: "Aquiles Taylor Ramos Yapo"
+codigo_estudiante: "227368"
+curso: "CENTRALES HIDROELÉCTRICAS"
+docente: "MEZA MAROCHO GREGORIO"
+seccion: "GRUPO A"
+unidad: 1
+revision: R02
+fecha_revision: 2026-10-13
+estado: "anteproyecto académico; hipótesis sin validación de campo"
+ubicacion:
+  distrito: Limbani
+  provincia: Sandia
+  departamento: Puno
+  emplazamiento_aprobado: false
+entradas:
+  parametros_json: datos/parametros.json
+  normativa_json: datos/normativa.json
+  borrador: fuentes/local/borrador-gemini-recibido-2026-10-13.pdf
+automatizacion:
+  pipeline_habilitado: false
+  motivo: "El pipeline residencial no corresponde a una central; usar el constructor específico."
+  comando: "python proyectos/aquiles-minicentral-limbani/scripts/construir.py"
+  requiere_revision_humana: true
+salidas:
+  directorio: build/aquiles-minicentral-limbani
+  expediente: build/aquiles-minicentral-limbani/expediente/main.pdf
+  observaciones: build/aquiles-minicentral-limbani/expediente/observaciones.pdf
+  calculos: build/aquiles-minicentral-limbani/calculos.json
+entregables:
+  directorio: entregables
+  aprobados: []

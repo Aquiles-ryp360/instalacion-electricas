@@ -1,0 +1,47 @@
+\chapter{Memoria descriptiva y bases del proyecto}
+\section{Objeto y alcance}
+Desarrollar un anteproyecto académico de minicentral hidroeléctrica de pasada, evaluar la coherencia del borrador y establecer el camino verificable hacia un diseño sustentado. La potencia de 150 kW se conserva como objetivo de estudio procedente del borrador, pendiente de confirmar como requisito del docente. La ubicación en Limbani y el enlace propuesto con Electro Puno tienen el mismo carácter preliminar.
+
+El alcance comprende captación, desarenado, conducción, cámara de carga, tubería forzada, grupo turbina-generador, servicios propios, transformación y enlace. Las obras se analizan como sistema: el agua disponible limita la energía; la carga y el punto de conexión condicionan potencia, regulación y protecciones; la topografía condiciona trazado, pérdidas y estabilidad.
+
+\section{Documentos de partida y trazabilidad}
+El archivo recibido es \texttt{main.pdf}, elaborado previamente con Gemini. Se conserva una copia inalterada en fuentes locales y se registra su huella digital. El expediente de vivienda de Aquiles aporta la organización por capítulos, tipografía sin serifas, escudo, encabezado institucional y tablas. Los cálculos residenciales no se transfieren a generación.
+
+Los datos se clasifican en: \textbf{declarado en el borrador}, \textbf{hipótesis de esta revisión}, \textbf{calculado} y \textbf{pendiente}. Un valor declarado no equivale a medición. Las salidas numéricas muestran más decimales para auditoría; la precisión física sigue limitada por las entradas.
+
+\begin{longtable}{L{4cm}L{5cm}L{5.4cm}}
+\toprule Entrada & Información disponible & Tratamiento R02\\\midrule
+Identidad académica & Alumno, código, docente y sección informados por el usuario & Confirmados para portada\\
+Caudal y niveles & 0.380 m$^3$/s; cámara 3202 m y eje 3150 m & Hipótesis sin aforo ni topografía\\
+Tubería & 175 m; interior 390 mm; DN 400 & Reconstrucción para auditoría, geometría inconsistente\\
+Conexión & 22.9 kV; línea 1.2 km & Propuesta sin punto aprobado\\
+Demanda de usuarios & No adjunta & No se inventan viviendas ni industrias beneficiarias\\
+Normativa & CNE Utilización local y fichas parciales & Descarga CNE Suministro y fuentes legales; matriz por requisito\\
+\bottomrule
+\end{longtable}
+
+\section{Ubicación y control geométrico}
+La denominación política Limbani-Sandia-Puno se toma del borrador. El sector exacto, margen, predios, cuenca delimitada, sistema geodésico y servidumbres deben validarse. Las imágenes del borrador no tienen procedencia suficiente para demostrar el emplazamiento; se conservan en el original, sin usarlas como levantamiento.
+
+Las coordenadas declaradas (Este, Norte, cota) están expresadas en metros, con UTM 19S declarado:
+\[
+\text{Cámara: }(425120,8441860,3202),\qquad
+\text{Casa: }(425260,8441710,3150).
+\]
+Su distancia mínima es:
+\begin{equation}
+L_{\min}=\sqrt{140^2+150^2+52^2}=\MinLong\ \mathrm{m}>175\ \mathrm{m}.
+\end{equation}
+Una tubería real, con curvas y apoyos, no puede tener menos longitud que esa recta. La distancia horizontal es 205.18 m y la pendiente media geométrica aproximada es $\arctan(52/205.18)=14.22^\circ$. No corresponde afirmar simultáneamente 175 m y 18 grados para esos puntos.
+
+Entre desarenador y cámara las coordenadas dan $\sqrt{210^2+200^2}=290.00$ m horizontales, por lo que tampoco respaldan un canal de 220 m. La longitud definitiva del canal queda pendiente. Los 220 m del escenario nuevo se refieren exclusivamente a la \textbf{tubería forzada}.
+
+\section{Esquema funcional y modos de operación}
+Se estudia captación con paso de caudal ecológico, desarenador con purga, canal a superficie libre, cámara con aliviadero, tubería, válvula de guarda, turbina de flujo cruzado candidata y restitución al cauce. La alternativa de bocatoma tirolesa debe compararse con una captación lateral considerando sedimentos, avenidas, mantenimiento y comportamiento ambiental.
+
+\textbf{Modo principal propuesto:} paralelo a red, con potencia activa controlada por agua admitida y potencia reactiva por excitación según acuerdo de conexión. \textbf{Modo aislado:} alternativa futura, que exigiría demanda medida, control de frecuencia y tensión, reservas, rechazo de carga y eventualmente carga de lastre. No se presupone capacidad automática de operar en ambos modos.
+
+La protección anti-isla debe desconectar el enlace ante pérdida de red conforme al estudio aprobado. Reiniciar y sincronizar exige comprobar condiciones de red, estado hidráulico y ausencia de fallas. La energía de maniobra y disparo debe permanecer disponible ante pérdida de servicios alternos.
+
+\section{Criterios de aceptación de esta revisión}
+Se acepta la coherencia algebraica y documental cuando las ecuaciones cierran, las unidades son consistentes, cada entrada tiene origen y las limitaciones están indicadas. Se difiere la aceptación física hasta disponer de mediciones y documentos. La aprobación académica corresponde al docente; un expediente para obra requeriría ingeniería, firmas, permisos y revisiones adicionales [N01, 011.F].

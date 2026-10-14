@@ -1,0 +1,54 @@
+\chapter{Metrados, evaluación económica y programa}
+\section{Criterio de metrado}
+El metrado debe proceder de geometría y especificaciones vigentes, no de porcentajes globales. Las cantidades siguientes son una base académica del escenario, no una orden de compra. Cada partida debe registrar código, unidad, cálculo, plano de origen, estado y revisión.
+
+\small\input{generado/metrados}\normalsize
+La masa de tubería se obtiene con $m=\rho_s\pi(D_o^2-D_i^2)L/4$, usando $D_o=D_i+2e=0.5127$ m. Debe recalcularse con despiece, tolerancia, espesores por tramo y accesorios; no reemplaza peso de catálogo.
+
+\section{Análisis de precios y presupuesto}
+El presupuesto de S/ 1,150,000 del borrador se conserva exclusivamente como antecedente no verificado. Sus proporciones no constituyen ACU. El ratio S/ 7,666.67 por kW reproduce la división entre 150 kW, pero no demuestra viabilidad ni equivalencia en dólares sin fecha y tipo de cambio.
+
+Para cada partida $j$:
+\[
+CU_j=\sum_i q_{ij}p_{ij}+MO_j+EQ_j+TRAN_j,\qquad CD=\sum_j M_jCU_j.
+\]
+Se documentará si transporte está en precio de suministro o en partida separada para evitar doble conteo. Mano de obra depende de cuadrilla y rendimiento; equipo de horas y tarifa. Los precios deben registrar proveedor, fecha, moneda, impuestos incluidos/excluidos, lugar de entrega, vigencia, garantía y alcance. La oferta de turbina puede incluir o no gobernador, bancada, válvula, generador y pruebas.
+
+Sobre costo directo se tratarán por separado ingeniería, supervisión, gestión ambiental/social, predios, conexión, gastos generales, contingencias justificadas e impuestos según el caso. No se completa artificialmente un total cuando faltan cantidades o cotizaciones. En esta revisión las columnas de precio y costo definitivo quedan pendientes en el archivo de metrado.
+
+\section{Evaluación energética y económica}
+Para evaluar inversión se requieren energía neta, venta o ahorro real, indisponibilidad, curtailment/restricciones, costos de operación, reposiciones, seguros, obligaciones hídricas, conexión y horizonte. Un costo por kW bajo no garantiza rentabilidad:
+\[
+VAN=-I_0+\sum_{t=1}^{N}\frac{Ingresos_t-OPEX_t-Reposiciones_t}{(1+r)^t}
++\frac{Valor_{residual}}{(1+r)^N}.
+\]
+No se asignan tarifa, tasa de descuento ni ingresos sin fuente. Se recomienda comparar al menos caudal bajo/base/alto, inversión, precio de energía y períodos fuera de servicio. El diámetro económico se evalúa con ese mismo horizonte y curva real de caudales.
+
+\subsection{Decisión económica entre 450 y 500 mm}
+El incremento puntual de exportación es \GananciaDiametro\ kW y el acero de envolvente aumenta \DeltaMasa\ kg con las mismas longitud y pared nominal. El sobrecosto real también incluye diámetro comercial, válvula, curvas, juntas, silletas, transporte e instalación; no se estima con kg adicionales solamente.
+
+Para mostrar cómo comparar sin inventar tarifa se adoptan solo como sensibilidad 20 años, tasa real 10\% y 4000/6000/8000 horas equivalentes al punto estudiado. El factor de anualidad es $F=(1-(1+r)^{-N})/r=\FactorAnualidad$. Ninguna de esas horas es pronóstico de Limbani.
+\small\input{generado/economia_diametro}\normalsize
+Si ambas alternativas sostuvieran el punto el mismo número de horas, $\Delta E=\Delta P\,h$. Con límite de exportación de 150 kW se usa $\Delta P=\min(150,P_{500})-\min(150,P_{450})$, por lo que la energía marginal disminuye. Para una curva real, se integra por intervalo y carga, no se multiplica todo el año por el caudal de diseño.
+
+Con tarifa neta verificable $\pi_e$ en S/kWh, el máximo sobrecosto justificable, antes de impuestos y con operación anual uniforme, sería:
+\[
+\Delta C_{max}=F(\Delta E\,\pi_e-\Delta OPEX)+\frac{\Delta V_{res}}{(1+r)^N}.
+\]
+La tabla permite evaluar ese umbral cuando existan tarifa y oferta comparables. No se produce VAN ni rentabilidad del proyecto mientras falten inversión y energía neta sustentadas; aumentar capacidad sin poder venderla puede empeorar la economía.
+
+\section{Programa académico y ruta de proyecto}
+El siguiente programa expresa dependencias propuestas, sin inventar una fecha de entrega del curso:
+\begin{longtable}{L{1cm}L{4.1cm}L{4.4cm}L{4.9cm}}
+\toprule Hito & Producto & Dependencia & Condición de cierre\\\midrule
+H1 & Bases y requisitos docentes & Rúbrica y modo de operación & Potencia/alcance confirmados\\
+H2 & Recurso, topografía y demanda & Acceso a datos y campo & Datos con incertidumbre y trazabilidad\\
+H3 & Alternativas y viabilidad técnica & H2; consulta de conexión & Balance de agua/energía y opción seleccionada\\
+H4 & Normativa y ambiente & Ubicación y tipo de obras & Ruta administrativa y clasificación confirmadas\\
+H5 & Diseño detallado y ofertas & H3-H4; fabricantes & Transitorios, estructuras, cables, PAT y protecciones\\
+H6 & Metrado, presupuesto y planos & H5 & Consistencia entre modelo y documentación\\
+H7 & Revisión académica/técnica & Expediente integrado & Resolver observaciones críticas\\
+H8 & Obra y puesta en servicio & Permisos y aprobación ejecutiva & Protocolos, ensayos y recepción\\
+\bottomrule
+\end{longtable}
+Los ocho meses del borrador no se ratifican: permisos, campaña hidrológica, fabricación y restricciones de estiaje pueden controlar el plazo. Un cronograma de ejecución se formulará con rendimientos, suministros, ruta crítica y riesgos del sitio; no se confunde con las semanas disponibles para elaborar el trabajo académico.

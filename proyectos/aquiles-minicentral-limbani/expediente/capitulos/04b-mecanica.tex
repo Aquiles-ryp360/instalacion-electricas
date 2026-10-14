@@ -1,0 +1,28 @@
+\subsection{Espesor efectivo y contraste de maniobras}
+Se toman tolerancia negativa 12.5\% y reserva de corrosión 1.00 mm como hipótesis de sensibilidad R02:
+\[
+e_{ef}=6.35(1-0.125)-1.00=\EspesorEfectivo\ \mathrm{mm}.
+\]
+No son descuentos atribuidos a una norma de producto. Se conserva diámetro exterior para obtener $D_{i,ef}=D_o-2e_{ef}$ y $D_m=D_o-e_{ef}$. La hidráulica principal usa el interior nuevo; vida final también requiere rugosidad y diámetro correspondientes.
+
+Para pared delgada, con presión manométrica, $\sigma_\theta\simeq pD_m/(2e_{ef})$. En extremos cerrados la componente longitudinal ideal es $\sigma_z\simeq\sigma_\theta/2$. En 500 mm resulta \SigmaLenta\ MPa para cierre lento y \SigmaRapida\ MPa para Joukowsky abrupto. La aprobación exige material, temperatura, combinación, código y eficiencia de soldadura verificadas; no se aprueba 6.35 mm a partir de esta tabla.
+
+\small\input{generado/mecanica}\normalsize
+Las tres opciones usan cierre de 4 s, pared nominal 6.35 mm, módulos constantes y restricción axial simplificada. Para celeridad se usa pared nominal nueva; para membrana se aplica el descuento anterior. Una evaluación de vida final requiere actualizar celeridad y sección efectiva simultáneamente. El modelo no determina ocurrencia de un cierre instantáneo.
+
+La presión rápida supera 16 bar en las tres opciones. Una especificación ``PN16'' no garantiza resistencia a ese evento. Válvulas, conexiones y protección contra sobrepresión deben justificarse con la maniobra posible y la presión de diseño del conjunto. Se requieren máximos/mínimos por MOC y clasificación de estados normal, rechazo y falla. La cámara de carga abierta no elimina la onda en la tubería; un bypass o válvula de alivio requiere dimensionamiento y prueba propios.
+
+\subsection{Viga entre apoyos y deformación térmica}
+Se estudia un tramo horizontal simplemente apoyado bajo peso propio efectivo y agua, sin refuerzos, pendientes, vibración, accesorios ni esfuerzos locales de silleta. Para sección anular y carga lineal $w$:
+\[
+I=\frac{\pi(D_o^4-D_{i,ef}^4)}{64},\quad
+M_{max}=\frac{w\ell^2}{8},\quad
+\sigma_b=\frac{M_{max}D_o}{2I},\quad
+\delta_{max}=\frac{5w\ell^4}{384EI}.
+\]
+\small\input{generado/apoyos}\normalsize
+Se reconoce la variación con vano; no se eligen 6 m para construcción. En inclinación se descompone el peso, se resuelven apoyos deslizantes y anclajes y se combinan esfuerzos. Se revisan ovalización, flexión local, vacío, estabilidad y sismo. USBR EM03 es referencia técnica histórica para los mecanismos de carga [N20]; no es reglamento peruano ni sustenta una tensión admisible moderna.
+
+Para diferencia térmica de estudio 40 K, $\Delta L=\alpha L\Delta T=\Expansion$ mm a lo largo de 220 m. Un bloqueo axial completo produciría idealmente $E\alpha\Delta T=\TermicaBloqueada$ MPa. Estas acciones requieren juntas y apoyos coherentes. No se suman máximas de distintas condiciones sin definir la combinación física.
+
+El cálculo conserva empuje de codo a 45 grados en resultados estructurados. En planta se requiere sumar vectores por presión y cantidad de movimiento, pesos, fricción de silletas y acciones sísmicas. Las cimentaciones necesitan capacidad portante, deslizamiento, vuelco y estabilidad global de ladera; la masa de un bloque no demuestra anclaje seguro.

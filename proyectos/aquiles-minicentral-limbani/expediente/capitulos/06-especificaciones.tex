@@ -1,0 +1,71 @@
+\chapter{Especificaciones, montaje y pruebas}
+\section{Especificación por desempeño}
+Cada compra debe indicar condiciones de sitio, punto de operación, tolerancias, pruebas, documentación y garantías. La altitud declarada de 3150 m, clima y accesos necesitan confirmación. Se solicitará desempeño a condiciones reales, no solo placa a condiciones de referencia. Las capacidades siguientes son candidatas del escenario académico.
+
+\begin{longtable}{L{3.2cm}L{6cm}L{5.2cm}}
+\toprule Componente & Requisición preliminar & Evidencia de aceptación\\\midrule
+Turbina & Flujo cruzado candidato, Q=0.420 m$^3$/s, Hn=\HnAlt\ m, potencia eje \PtAlt\ kW & Curvas garantizadas, planos, material, inercia, embalamiento y ensayos\\
+Generador & Cotizar 200 y 250 kVA; verificar \SGen\ kVA y \PeAlt\ kW en sitio, 400 V, 60 Hz & Curva P-Q, pérdidas, térmica, reactancias, dinámica y certificados\\
+Transformador & Candidato 250 kVA, 0.4/22.9 kV; grupo y aislamiento por conexión & Garantía en altura, pérdidas, impedancia, ensayo dieléctrico y rutina\\
+Tubería & Interior modelo 500 mm; longitud modelo 220 m; espesor por diseño & Certificados de material, código aplicable, cálculo estructural y transitorio\\
+Válvula de guarda & Presión y maniobra resultantes del estudio; bypass y posición segura & Curva Cv/apertura, ley de cierre, estanqueidad y energía de maniobra\\
+Tableros BT/MT & Corriente, corte, arco y ambiente según estudio; acceso seguro & Verificación de diseño, ensayos, coordinación y planos de cableado\\
+Servicios propios & TSA aislado candidato 15 kVA; CC para disparo/control & Inventario, arranques, selectividad, autonomía y neutros\\
+Línea MT & Tensión 22.9 kV candidata; sección/estructuras por cálculo & Levantamiento, flechas, cruces, cimentaciones y aprobación de conexión\\
+\bottomrule
+\end{longtable}
+
+\subsection{Balance térmico preliminar de casa de máquinas}
+La pérdida activa del generador en el punto R02 es \PerdidaCalorGenerador\ kW. Si transmisión mecánica, auxiliares y TSA descargaran también calor dentro del recinto, la carga de estudio alcanzaría \CalorSala\ kW, sin transformador principal ni radiación solar. Se trata de una envolvente de cálculo, pendiente de ubicación y método de enfriamiento; no toda potencia auxiliar necesariamente se disipa en la sala.
+
+El caudal de aire necesario por balance sensible sería $\dot V=\dot Q/(\rho_a c_p\Delta T)$. Como hipótesis explícita, $\rho_a=0.90$ kg/m$^3$, $c_p=1005$ J/(kg K) y salto térmico 10 K permiten evaluar el orden de magnitud. No se atribuye esa densidad a una medición ni se transforma 0.37 kW de ventilador en caudal de aire. Se pedirán curvas caudal-presión en altitud, pérdidas de rejillas/filtros, renovación, anticondensación y ventilación ante falla. El resultado térmico puede obligar a revisar la carga auxiliar, y esa revisión cambia la exportación.
+
+\section{Materiales y detalles que no pueden omitirse}
+\subsection{Agua y estructuras}
+La captación debe permitir limpieza, purga y paso del caudal ecológico con medición verificable. Se dimensionan rejas y compuertas por carga diferencial máxima, obstrucción y corrosión. El desarenador necesita acceso y maniobra que eviten enviar una descarga concentrada de sólidos sin control ambiental.
+
+Concreto, acero de refuerzo, recubrimiento, juntas, estanqueidad y cimentación se especificarán con diseño estructural y exposición. Resistencia de concreto de 210 kg/cm$^2$ del borrador no sustituye verificación de flexión, cortante, fisuración, sismo y durabilidad. En cámara y canal se incluirán drenajes, barandas, rescate y tapas cuando corresponda.
+
+\subsection{Tubería y soldadura}
+Se fijará código de diseño apropiado para la tubería forzada y límites de responsabilidad entre taller, montaje y fabricante. ASME B31.3 es un código de tuberías de proceso y no se declara automáticamente aplicable a todo el conducto hidroeléctrico; AWWA de producto y ASME IX de calificación tampoco reemplazan el cálculo estructural del sistema.
+
+El expediente de fabricación debe incluir geometría por tramo, trazabilidad de coladas, tolerancias, procedimientos WPS/PQR, calificación de soldadores, mapa de soldaduras, recubrimiento interior/exterior, reparación y plan de inspección. El alcance END será el exigido por código, junta y criticidad, con aceptación definida antes de fabricar. Se retira el ``25\% de radiografía'' sin fundamento.
+
+La prueba hidráulica debe considerar presión local a cada elevación, límites de todos los componentes, apoyos provisionales, purga de aire, temperatura, instrumentos calibrados y exclusión de personal. La presión y duración se fijarán mediante código y fabricante después del diseño; el producto $1.5\,p$ y 4 horas del borrador no constituyen protocolo aprobado. No se presuriza con aire como sustitución informal.
+
+\subsection{Equipamiento eléctrico}
+La envolvente se seleccionará por humedad, polvo, agua y ventilación. IP23 no se describirá como hermética ni cerrada estanca; equipos en un ambiente húmedo requieren verificar el grado adecuado y calefacción anticondensación si procede. Terminales, aislamiento y distancias se revisan en altura.
+
+En utilización, aplicar N03: conductores no propagadores de llama y condiciones adicionales de fuego según uso; protección diferencial conforme a 020-132, incluyendo umbral no mayor de 30 mA donde corresponda a equipos accesibles a personas no calificadas. Seleccionar tipo y coordinación de diferencial según cargas; nunca reemplaza la puesta a tierra ni se instala indiscriminadamente en el circuito de generación de estación como si fuese un circuito doméstico.
+
+La ubicación del transformador en aceite requiere evaluar separación de incendio, contención y drenaje que evite contaminación, acceso y señalización [N01, 152 y N08]. Se requieren TC/TV con clase, relación, saturación, carga secundaria, protección y puesta a tierra de circuitos secundarios definidas por el estudio.
+
+\section{Montaje y control de calidad}
+La liberación de montaje requiere planos aprobados, recepción de materiales y topografía de control. Se comprueban replanteo, dimensiones de cimentación y pernos, nivelación, grout, alineación y expansión térmica. Las tolerancias de alineación y vibración se tomarán del fabricante y norma aplicable al conjunto; se eliminan límites de 0.03 mm o 1.8 mm/s presentados como universales.
+
+El plan de izaje define masas, centro de gravedad, radios, suelo, puntos certificados, accesorios y zona de exclusión. La tubería se monta con secuencia compatible con anclajes, no forzando piezas a alinearse. Se registra torque, soldadura, pruebas, recubrimiento y condición final de juntas de expansión.
+
+El bloqueo debe aislar fuentes de red, generador, baterías, agua a presión y energía mecánica residual. Antes de intervención se comprueba ausencia de tensión, puesta a tierra temporal cuando proceda, imposibilidad de giro y despresurización. La puesta en servicio exige responsables identificados y control de accesos.
+
+\section{Plan de ensayos y puntos de detención}
+\begin{longtable}{L{3.2cm}L{6.2cm}L{5cm}}
+\toprule Etapa & Verificación & Criterio / punto de detención\\\midrule
+Recepción civil & Niveles, geotecnia, resistencia, pernos, drenaje & No instalar grupo sin liberación de cimentación\\
+Recepción de tubería & Material, dimensiones, END, juntas y recubrimiento & No llenar sin soportes, purga y plan aprobados\\
+Prueba hidráulica & Estanqueidad y estabilidad con instrumentos calibrados & Presión/duración definidas por diseño; acta por tramo\\
+Eléctrica sin tensión & Continuidad, aislamiento, polaridad, fases y torque & Desconectar electrónica sensible según fabricante; límites de ensayo específicos\\
+Protecciones & Inyección secundaria/primaria según alcance, lógica, disparos e interbloqueos & Valores aprobados; probar cadena completa hasta interruptor/actuador\\
+Tierra & Resistividad, continuidad, medición y modelo paso/toque & No energizar si el estudio o ensayo no satisface criterios\\
+Rotación y agua & Fugas, vibración, velocidad, temperatura y control & Límites del fabricante; confirmar presión mínima y máxima\\
+Sincronización & Secuencia, desfase, tensión, frecuencia y permisos & Presencia/aceptación de distribuidora según procedimiento\\
+Carga progresiva & Potencia, pérdidas, calentamiento y reactivos & Puntos contractuales y estabilización térmica definida\\
+Rechazo de carga & Coordinación agua/eléctrica, sobrevelocidad y presión & Solo después de simulación y protocolo autorizado; registrar transitorios\\
+Recepción & Manuales, planos conforme a obra, pruebas y capacitación & Sin observaciones críticas abiertas\\
+\bottomrule
+\end{longtable}
+IEC 60041/60193 y normas de vibración se seleccionarán según ensayo de campo/modelo, tamaño y alcance contractual. No se obliga un ensayo de modelo universal para esta minicentral ni se confunde norma de prueba con garantía de rendimiento.
+
+\section{Operación, mantenimiento y ambiente}
+Se propone registrar niveles y caudales, energía bruta/neta, consumo propio, vertimiento, temperaturas, vibración, disparos y sedimentación. El mantenimiento se basa en horas, condiciones y fabricante: limpieza de rejas/desarenador, inspección de corrosión, apriete, aislamiento, aceite, batería y calibración de protección.
+
+La operación debe preservar caudal ecológico y derechos, manejar purgas, aceites, residuos y ruido, y mantener respuesta a avenida, derrame, incendio y pérdida de red. Los intervalos de mantenimiento y stock crítico se definen con fabricante y accesibilidad; no se aseguran 100\% de disponibilidad ni costos mínimos por tipo de turbina.

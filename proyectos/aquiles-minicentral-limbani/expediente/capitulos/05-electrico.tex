@@ -1,0 +1,140 @@
+\chapter{Diseño eléctrico, cargas y protecciones}
+\section{Balance hasta el punto de conexión}
+Se adopta 400 V entre fases, 60 Hz y $fp=0.85$ para el generador como hipótesis del borrador. Para el escenario alternativo:
+\begin{align}
+S_G&=P_G/fp=\SGen\ \mathrm{kVA},\\
+Q_G&=P_G\tan(\arccos fp)=\QGen\ \mathrm{kvar},\\
+I_G&=\frac{S_G}{\sqrt3\,0.4}=\IGen\ \mathrm{A}.
+\end{align}
+Para exactamente 150 kW y fp=0.85 se requieren 176.47 kVA y 254.71 A. La capacidad de placa de 200 kVA a 400 V representa 288.68 A; no significa 200 kW ni disponibilidad del recurso.
+
+La exportación se evalúa desde una barra BT con auxiliares conectados a través de TSA. El modo de generación suma \PAuxNormal\ kW y \QAuxNormal\ kvar, más \PerdTsa\ kW de pérdidas TSA. El transformador principal candidato de 250 kVA tiene pérdidas hipotéticas $P_0=0.6$ kW y $P_{cu,n}=3.5$ kW, y el enlace mide 1.2 km como hipótesis. Se calcula $S_{carga}$ con $P_G-P_{aux}-P_{TSA}$ y $Q_G-Q_{aux}$; no se usa un fp auxiliar global elegido por separado. La reactiva de magnetización y dispersión de ambos transformadores está omitida y debe incorporarse al flujo de carga definitivo.
+\begin{align}
+P_T&=P_0+P_{cu,n}(S_{carga}/S_n)^2=\PerdTrafo\ \mathrm{kW},\\
+P_{PCC}&=P_G-P_{aux}-P_{TSA}-P_T-P_L=\PExport\ \mathrm{kW}.
+\end{align}
+PCC denota punto de conexión común. El valor depende de fichas y del sentido de flujo de reactivos. No es una garantía comercial. Para asegurar 150 kW en PCC debe recalcularse recurso y potencia nominal con margen justificado; limitar $P_G$ a 150 kW produciría menos de 150 kW exportados.
+
+Con 450 mm se requieren \QObjetivoRef\ l/s para exportar 150 kW, por encima del saldo no verificado de 420 l/s. Con 500 mm se requieren \QObjetivo\ l/s y el punto de estudio de 420 l/s exporta \PExport\ kW. El margen disponible es solo \MargenExport\ kW. Esta opción se lleva a estudio prioritario, pendiente de recurso, costo, trazado, garantía y condiciones de conexión.
+
+\Needspace{19\baselineskip}
+\subsection{Balance sin doble conteo}
+\small\input{generado/balance_energia}\normalsize
+La primera fila es la potencia bruta de agua. Las filas intermedias son pérdidas o consumo; la última es exportación. Su suma cierra la primera fila con residuo numérico menor que $10^{-9}$ kW. Un cierre aritmético verifica el modelo, no las entradas físicas.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.96\linewidth]{figuras/balance-energia.pdf}
+\caption{De la potencia hidráulica bruta a la energía eléctrica exportable, en el punto R02.}
+\end{figure}
+
+\Needspace{12\baselineskip}
+\subsection{Sensibilidad y criterio de reserva}
+\small\input{generado/sensibilidad}\normalsize
+Cada fila cambia una hipótesis aislada, manteniendo las demás. No son probabilidades ni una hidrología sintética. La rugosidad se contrasta con 0.15 mm; el rendimiento de turbina con 80\%. La eficiencia real también depende de carga y salto, por lo que las curvas constantes no sirven para estimar producción anual definitiva.
+
+Como sensibilidad académica se estudia un margen adicional de 5\% sobre 150 kW. Con 500 mm exigiría \QMargen\ l/s, superior a 420 l/s. El 5\% no es mandato del CNE ni requisito confirmado del docente. La reserva debe justificarse por incertidumbre, envejecimiento y garantía. Si el contrato limita exportación a 150 kW, el controlador debe limitar caudal/potencia y la energía excedente no se cuenta como venta.
+
+\section{Altitud y capacidad nominal}
+El borrador escribe $k_h=1-(3150-1000)/10000$ y obtiene 0.892. Esa expresión vale \textbf{0.785}. La discrepancia aritmética es independiente de su validez física: no se ha encontrado sustento para tratarla como ley universal de IEC 60034-1. La edición 2026 está publicada según ficha IEC [N11]; la revisión requiere texto autorizado y garantía particular de la máquina.
+
+Se propone cotizar un generador de \textbf{250 kVA} y un transformador de \textbf{250 kVA}, ambos con capacidad continua garantizada en la altitud y ambiente del sitio. Para el generador, la capacidad garantizada debe ser al menos \SGen\ kVA y \PeAlt\ kW en el punto estudiado. El factor mínimo se obtiene de $\SGen/250$ para placa 250 kVA, y de $\SGen/200$ para 200 kVA. No se convierten estos cocientes en factores de altitud de IEC. Se comprueban junto con temperatura, excitación, kW mecánicos, curva P-Q y pruebas en sitio.
+
+Para comparar comercialmente se solicitarán garantías tanto de 200 como de 250 kVA en sitio, eficiencia, ventilación, elevación térmica, reactancias subtransitoria/transitoria y de secuencia, cortocircuito sostenido, constante de tiempo, inercia y soportabilidad de sobrevelocidad. Sobredimensionar kVA no crea potencia hidráulica.
+
+\section{Transformador, grupo vectorial y neutros}
+La denominación Dyn5 indica devanado de mayor tensión en delta (D) y de menor tensión en estrella con neutro accesible (yn); el número de reloj describe desplazamiento de fase conforme a la convención. Alimentarlo como elevador no convierte el delta de 22.9 kV en una estrella con neutro. La frase ``neutro de alta sólidamente aterrado'' del borrador se retira.
+
+El grupo definitivo exige coordinación con Electro Puno: régimen de neutro de red, secuencia cero, puesta a tierra, sobretensiones temporales, protección de faltas y sincronismo. Se mantiene grupo vectorial \textbf{pendiente}. La rotación de fase, polaridades TC/TV y compensaciones de medición deberán corresponder al grupo real.
+
+La regla CNE-S 132 conduce a estudiar impedancia del neutro del generador. El esquema conceptual no une automáticamente el neutro del generador con el del transformador y los auxiliares. Se propone transformador de aislamiento para servicios propios, para resolver su sistema de utilización sin anular la impedancia de puesta a tierra del grupo. El diseño de secuencia cero debe confirmar conexiones y protecciones. Los conductores de protección se integran equipotencialmente según el estudio; aislamiento funcional de circuitos no equivale a masas metálicas desconectadas de tierra.
+
+\section{Conductores de potencia y auxiliares}
+\subsection{Criterios de selección}
+El diseño debe comprobar: corriente de servicio, ampacidad corregida, temperatura de terminales, operación continua, cortocircuito térmico, caída/elevación de tensión, instalación, resistencia mecánica, fuego y compatibilidad ambiental. La regla 050-104 distingue equipos marcados al 100\% o al 80\% y condiciones de tablas; no se aplica un factor 1.25 a todo circuito sin justificar.
+
+En el tramo principal candidato, la placa de 250 kVA implica 360.84 A a 400 V. Si se diseña para esa capacidad, el cableado y barras deben corresponder a ella aunque el punto hidráulico solo demande \IGen\ A. Alternativamente se documentará una limitación permanente de potencia/corriente y se dimensionará coherentemente, sin usar ese límite como sustituto de protección.
+
+\subsection{Lectura de carga continua del CNE Utilización}
+El circuito de utilización se considera continuo salvo demostración de los intervalos de 050-104(3): para corriente hasta 225 A, no más de una hora total en dos; para más de 225 A, no más de tres horas en seis. En 050-104(1) la capacidad nominal del circuito es la menor entre protección y conductor.
+
+Para marcado 100\%, 050-104(4) permite carga continua hasta 100\% con Tabla 2 o 85\% con Tabla 1; para marcado 80\%, 050-104(5) establece respectivamente 80\% y 70\%. Se verifican además las correcciones y la restricción subterránea de (6)-(7). La nota del Anexo B de 050-104 trata equipos sin marcado como 80\%. Estos requisitos de utilización se aplican dentro de su ámbito; para salida del generador se compatibilizan reglas de estación, fabricante y CNE-S, sin transferir un circuito doméstico como diseño de generación.
+
+\begin{longtable}{L{4.6cm}rrrr}
+\toprule Caso Cu 240 mm$^2$ & D8A (A) & D8B 100\% (A) & D8B 80\% (A) & Placa G (A)\\\midrule
+Diagrama B4-1 detalle 4 & 446 & 442 & 442 & 360.84\\
+Diagrama B4-1 detalle 7 & 390 & 386 & 386 & 360.84\\
+\bottomrule
+\end{longtable}
+Las Tablas D8A y D8B se consultan juntas y con 030-004; no se reemplaza D8B simplemente por $0.8\times D8A$. Que un valor tabulado exceda 360.84 A no prueba capacidad en sitio: faltan temperaturas de conductor/terminal, suelo, agrupamiento, disposición y protección. El detalle 6 de D8A da 359 A, menor que la corriente de placa. No se selecciona un cable ejecutivo de 240 mm$^2$.
+
+Para un ejemplo de utilización separado, Tabla 2, PVC 70 grados, método B2 y tres conductores cargados da 34 A para cobre 6 mm$^2$. Bajo hipótesis de 30 grados, sin agrupamiento y dispositivo marcado 80\%, un circuito nominal de 25 A tendría techo continuo 20 A, antes de otros factores. El ejemplo de 8 kW siguiente demanda 13.585 A y pasa ese contraste básico; no incluye arranque, protección de motores, neutro ni falla y no selecciona el alimentador del grupo.
+
+\subsection{Ejemplo trazable de caída de tensión}
+Para un alimentador trifásico auxiliar ilustrativo de 30 m, $P=8$ kW, fp=0.85, $U=400$ V y cobre de 6 mm$^2$, se usa resistividad a temperatura de servicio $\rho_e=0.0225$ ohm mm$^2$/m y reactancia $x=0.08$ ohm/km como supuestos:
+\[
+I=13.585\ \mathrm{A},\quad R=0.1125\ \Omega,\quad X=0.0024\ \Omega,
+\]
+\[
+\Delta U=\sqrt3 I(R\cos\varphi+X\sin\varphi)\approx2.28\ \mathrm{V}=0.57\%.
+\]
+Se cumple el límite individual de 2.5\% en este ejemplo de utilización [N02, 050-102]; faltan el circuito derivado, neutro/desbalance, arranque y ampacidad para concluir. Si un derivado monofásico de 20 m, 10 A y 2.5 mm$^2$ usa los mismos supuestos resistivos, su caída aproximada resistiva es 3.6 V a 230 V (1.57\%). La suma ilustrativa es 2.14\%, menor que 4\%, siempre que ambos tramos y cargas correspondan al punto más alejado. No son recorridos medidos de la casa de máquinas.
+
+Para esfuerzo térmico de falla puede estudiarse $S\ge I\sqrt{t}/k$ con material, aislamiento, temperaturas y $k$ documentados, o integrar $I^2t$ real de la protección. El cortocircuito decremental del generador requiere su curva; no basta extrapolar indefinidamente la corriente subtransitoria.
+
+\section{Línea de enlace en 22.9 kV}
+Se conserva 1.2 km como hipótesis. El conductor AAAC de 35 mm$^2$ del borrador es candidato, pendiente de ficha y cálculo mecánico. Se usan ilustrativamente $r=1.0$ ohm/km y $x=0.4$ ohm/km; no son valores certificados de ese conductor. Para longitud $\ell$:
+\begin{align}
+I_{MT}&=\frac{\sqrt{P^2+Q^2}}{\sqrt3 U}=\ILinea\ \mathrm{A},\\
+P_L&=3I_{MT}^2r\ell/1000=\PerdLinea\ \mathrm{kW},\\
+\delta U(\%)&\simeq\frac{r\ell P+x\ell Q}{10U^2}=\VariaLinea\ \%.
+\end{align}
+En la última ecuación P y Q se expresan en kW/kvar y U en kV. Para exportación, puede presentarse elevación de tensión en el extremo generador; el signo depende del flujo reactivo y de la convención. Se debe resolver flujo de carga con red, transformador, tomas, cargas locales y generación máxima/mínima.
+
+La corriente baja no libera la línea de comprobar sección mínima aplicable, cortocircuito, flecha, tensión mecánica, vibración, rotura, vano de viento/peso, estructuras, cimentaciones, cruces y servidumbre. Se revisarán distancias del CNE-S para cada cruce a temperatura/flecha crítica, aislamiento y sobretensiones por la altitud. No se adopta descargador de 24 kV solo por tensión nominal de red: determinar MCOV/Uc, régimen de neutro, TOV, energía y coordinación.
+
+\subsection{Consulta de distancias verticales hasta 23 kV}
+La Tabla 232-1 del CNE-S, página impresa 126, contiene una columna de conductor de suministro expuesto de más de 750 V hasta 23 kV. Para una línea desnuda nominal 22.9 kV, y si se cumple la definición de tensión indicada en el encabezado, son referencias iniciales:
+\begin{longtable}{L{10.7cm}r}
+\toprule Superficie / cruce & Distancia (m)\\\midrule
+Carreteras y avenidas sujetas a tráfico de camiones, fila 2.a & 7.0\\
+Caminos, calles y otras áreas con camiones, fila 2.b & 6.5\\
+Terrenos recorridos por vehículos, cultivos o pastos, fila 4 & 6.5\\
+Áreas peatonales no transitables por vehículos, fila 5.a & 5.0\\
+Calles y caminos en zonas rurales, fila 5.b & 6.5\\
+\bottomrule
+\end{longtable}
+Se requieren lectura de notas y demás reglas, tensión máxima y régimen de puesta a tierra; no se usa automáticamente la tensión fase-tierra para cambiar de columna. Las distancias se comprueban con el conductor en condición crítica definida por 232.A, temperatura y flecha final, y con terreno levantado. Una altura de poste de 12 m debe descontar empotramiento, ubicación de herrajes y flecha; no demuestra por sí sola 7 m libres. Cruces de río, líneas, edificaciones y carreteras tienen verificaciones adicionales en 233/234 y notas de 232. El factor de altitud de 232.C.1.b no se aplica globalmente a estos valores. El expediente ejecutivo documentará cada vano y cruce con la regla y medición correspondientes.
+
+\section{Cortocircuitos: órdenes de magnitud y límites}
+Para un grupo candidato de 250 kVA, 400 V, $I_n=360.84$ A. Si $x_d''=0.15$ pu como hipótesis y tensión prefalla 1 pu:
+\[
+I''_{k,G}\approx I_n/x_d''=2.406\ \mathrm{kA}.
+\]
+Es contribución inicial de una fuente idealizada, no capacidad de interrupción necesaria. Si el transformador de 250 kVA tiene $u_k=4\%$ y la red MT fuese rígida, la contribución de red al defecto BT, despreciando línea, sería aproximadamente $I_n/0.04=9.021$ kA. La suma escalar daría un orden de magnitud de 11.4 kA, no un cálculo IEC de falla.
+
+La selección exige modelo con potencia de cortocircuito de red, R/X, impedancias de secuencia, cableado, transformador, motores y generador; calcular máximos y mínimos, trifásico y fallas a tierra, corriente de pico, corriente de corte y evolución temporal. El interruptor debe cumplir Icu/Ics o capacidad aplicable, poder de cierre, servicio en sitio y selectividad. No se fija por ahora un interruptor ``10 kA'' ni fusible MT por el tamaño del portafusible.
+
+\section{Protecciones y matriz causa-efecto}
+Las funciones ANSI son identificación funcional, no ajustes automáticos. Se consideran 50/51 o variantes direccionales según flujos, falla a tierra acorde al neutro, 27/59, 81, 32, 40 y 25; evaluar 46, 49, 24, 87G/87T o alternativas según tamaño, sensibilidad y riesgos. La función 25 verifica sincronismo; no evita por sí sola una isla no intencional.
+
+\begin{longtable}{L{3.6cm}L{5.5cm}L{5.3cm}}
+\toprule Evento & Acción propuesta & Verificación pendiente\\\midrule
+Pérdida de red / isla & Abrir enlace y bloquear reconexión; regular/cerrar agua según secuencia segura & Método anti-isla aceptado, tiempos y rechazo de carga\\
+Sobrevelocidad & Disparo independiente; actuar agua y electricidad coordinadamente & Inercia, ley de cierre, presión y velocidad máxima\\
+Falla interna del grupo & Abrir 52G, desexcitar, actuar válvula y bloquear rearranque & Sensibilidad, TC, zona y tiempo de despeje\\
+Falla externa MT & Actuación selectiva en enlace, respaldo del grupo & Curvas, direccionalidad y recierre de distribuidora\\
+Nivel bajo de cámara & Reducir carga o parar antes de aspirar aire & Sensores redundantes si procede, submergencia y temporización\\
+Temperatura / vibración & Alarma y parada escalonada según criticidad & Límites garantizados y ubicación de sensores\\
+Pérdida CA auxiliar & Mantener CC para relés, disparo y cierre seguro & Autonomía, cargador, vigilancia y pruebas\\
+Parada de emergencia & Secuencia eléctrica/hidráulica definida, accesible y verificable & Riesgo de cierre brusco y energías residuales\\
+\bottomrule
+\end{longtable}
+No se asignan umbrales finales de frecuencia ni tiempos de sobrecorriente sin estudio y coordinación. El ajuste de 60$\pm$1.5 Hz del borrador se retira como valor garantizado.
+
+\section{Corriente continua y respaldo}
+Se puede estudiar 24 Vcc o 48 Vcc según relés y actuadores. Como cálculo de capacidad, una carga crítica de 120 W durante 2 h, a 24 V, profundidad utilizable 0.8 y rendimiento 0.9 exige $120(2)/(24\times0.8\times0.9)=13.9$ Ah antes de envejecimiento, temperatura y consumos de disparo. Un factor de envejecimiento ilustrativo 1.25 elevaría a 17.4 Ah. No se selecciona batería hasta incluir corriente instantánea, número de maniobras, curva de descarga y ventilación [N01, sección 14].
+
+\section{Puesta a tierra y equipotencialidad}
+No se valida la malla 8 por 6 m ni seis electrodos del borrador. Se requieren mediciones Wenner en distintas separaciones y direcciones, estratigrafía y estacionalidad, corriente efectiva hacia tierra, reparto por neutros/pantallas, tiempo de despeje, capa superficial y geometría. El estudio evaluará resistencia, elevación de potencial y tensiones de paso, toque y transferidas [N01, 036.A-B].
+
+El plano enlazará masas, bancada, carcasa, tubería, cercos, puertas, pantallas y descargadores; comprobará potenciales transferidos a obras alejadas. PE y neutro cumplen funciones distintas. Resistencia menor de 5 ohm no acredita seguridad. Guía y edición se acordarán contractualmente [N18].

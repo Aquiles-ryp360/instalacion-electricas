@@ -1,0 +1,41 @@
+\documentclass[11pt,letterpaper]{report}
+\input{preambulo}
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{capitulos/00-portada}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\chapter*{Resumen del anteproyecto}
+\addcontentsline{toc}{chapter}{Resumen del anteproyecto}
+Se estudia una minicentral de pasada en Limbani, Sandia, Puno, para la primera unidad de Centrales Hidroeléctricas. La meta de estudio es exportar 150 kW en el punto de conexión común (PCC); su adopción como requisito del curso debe confirmarse con el docente. Se plantea operación en paralelo con red de 22.9 kV, conservando como hipótesis los niveles y el caudal del borrador recibido.
+
+La alternativa prioritaria de estudio R02 usa $Q=0.420$ m$^3$/s, salto bruto 52 m, tubería de 220 m y diámetro interior 500 mm. Con Darcy-Colebrook y rendimientos supuestos, resulta salto neto \HnAlt\ m, potencia en eje de turbina \PtAlt\ kW y potencia de generador \PeAlt\ kW. El inventario operativo suma \PAuxNormal\ kW; se añaden pérdidas separadas del TSA, transformador principal y línea. El balance entrega \PExport\ kW en PCC, con margen de solo \MargenExport\ kW sobre la meta.
+
+La opción de 450 mm entrega \PExportRef\ kW con el mismo inventario y caudal. Aumentar diámetro reduce pérdidas, pero no resuelve por sí solo la disponibilidad de agua ni la eficiencia real. La sensibilidad a un caudal 5\% menor hace caer la exportación por debajo de 150 kW. Una reserva de estudio del 5\% en potencia exigiría \QMargen\ l/s con 500 mm, superior al saldo no verificado de 420 l/s.
+
+Se desarrollan conducción libre, reja, desarenado, alivio, transitorios, esfuerzos de tubería, apoyos, balance de carga, neutros, protecciones y metrado. Se comparan 450, 500 y 550 mm con las mismas fronteras energéticas. Las obras y equipos se especifican por desempeño y evidencia de aceptación. La ruta normativa enlaza cada requisito del CNE y legislación con el cálculo, plano, trámite o ensayo que lo puede demostrar.
+
+\estado{Resultado: anteproyecto académico condicionado. No se ha acreditado caudal, topografía, derechos de agua, clasificación ambiental, conexión, material ni suelo. Ninguna alternativa está aprobada para construcción. Los cálculos de membrana y viga son cribados; transitorios reales, estabilidad local, cortocircuitos, puesta a tierra y energía anual requieren entradas adicionales.}
+
+La revisión del borrador y de R01 se conserva en un informe separado. El cuerpo principal desarrolla la propuesta R02. Todas las cifras nuevas provienen de entradas identificadas y un constructor reproducible; las series hidrológicas y demanda externa permanecen vacías cuando no existe evidencia.
+\begingroup\small\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\clearpage\pagenumbering{arabic}
+\input{capitulos/01-memoria}
+\input{capitulos/02-normativa}
+\input{capitulos/03-recurso-demanda}
+\input{capitulos/04-hidraulica}
+\input{capitulos/05-electrico}
+\input{capitulos/06-especificaciones}
+\input{capitulos/07-presupuesto-programa}
+\input{capitulos/08-planos-conclusiones}
+\appendix
+\chapter{Matriz de requisitos y evidencias}
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.08}
+\input{generado/matriz}
+\endgroup
+\chapter{Fuentes y alcance de lectura}
+Consulta: 13 de octubre de 2026. Los identificadores N01-N20 se utilizan en los capítulos y en la matriz. Los textos públicos descargados se conservan con huella SHA-256. Las fichas comerciales y las vistas previas de normas internacionales no se presentan como textos normativos completos.
+\small\input{generado/fuentes}\normalsize
+\end{document}

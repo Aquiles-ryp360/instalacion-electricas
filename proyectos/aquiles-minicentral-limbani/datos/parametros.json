@@ -1,0 +1,362 @@
+{
+  "revision": "R02 - 2026-10-13",
+  "regla": "Los valores del borrador son observados en un documento, no medidos en campo. Las propuestas son hipótesis académicas.",
+  "base": {
+    "q": {
+      "valor": 0.38,
+      "unidad": "m3/s",
+      "fuente": "Borrador p. 10 y 13",
+      "estado": "propuesto sin aforo",
+      "confianza": "baja"
+    },
+    "z_camara": {
+      "valor": 3202,
+      "unidad": "m",
+      "fuente": "Borrador p. 6 y 12",
+      "estado": "sin topografía",
+      "confianza": "baja"
+    },
+    "z_turbina": {
+      "valor": 3150,
+      "unidad": "m",
+      "fuente": "Borrador p. 6 y 12",
+      "estado": "sin topografía",
+      "confianza": "baja"
+    },
+    "longitud": {
+      "valor": 175,
+      "unidad": "m",
+      "fuente": "Borrador p. 15",
+      "estado": "incompatible con coordenadas del mismo borrador",
+      "confianza": "baja"
+    },
+    "diametro": {
+      "valor": 0.39,
+      "unidad": "m interior",
+      "fuente": "Borrador p. 15",
+      "estado": "sin ficha de tubería",
+      "confianza": "baja"
+    },
+    "rugosidad": {
+      "valor": 4.5e-05,
+      "unidad": "m",
+      "fuente": "Borrador p. 15",
+      "estado": "hipótesis acero nuevo",
+      "confianza": "baja"
+    },
+    "viscosidad": {
+      "valor": 1.24e-06,
+      "unidad": "m2/s",
+      "fuente": "Borrador p. 15",
+      "estado": "hipótesis de temperatura",
+      "confianza": "baja"
+    },
+    "k": {
+      "valor": 1.0,
+      "unidad": "adimensional",
+      "fuente": "R01/R02: suma ilustrativa de entrada 0.5, dos codos 0.2 cada uno y válvula abierta 0.1",
+      "estado": "hipótesis, sustituir por catálogo y geometría",
+      "confianza": "baja"
+    },
+    "eta_t": {
+      "valor": 0.84,
+      "unidad": "adimensional",
+      "fuente": "Borrador p. 12",
+      "estado": "sin garantía de fabricante",
+      "confianza": "baja"
+    },
+    "eta_m": {
+      "valor": 0.985,
+      "unidad": "adimensional",
+      "fuente": "Borrador p. 12",
+      "estado": "sin garantía de fabricante",
+      "confianza": "baja"
+    },
+    "eta_g": {
+      "valor": 0.925,
+      "unidad": "adimensional",
+      "fuente": "Borrador p. 13",
+      "estado": "sin garantía de fabricante",
+      "confianza": "baja"
+    }
+  },
+  "escenario_objetivo": {
+    "q": {
+      "valor": 0.42,
+      "unidad": "m3/s",
+      "fuente": "R01/R02, alternativa para estudiar objetivo 150 kW",
+      "estado": "hipótesis; disponibilidad no acreditada",
+      "confianza": "baja"
+    },
+    "longitud": {
+      "valor": 220,
+      "unidad": "m",
+      "fuente": "R01/R02, supera recta espacial de 211.67 m",
+      "estado": "hipótesis, no trazo aprobado",
+      "confianza": "baja"
+    },
+    "diametro": {
+      "valor": 0.5,
+      "unidad": "m interior",
+      "fuente": "R02, alternativa prioritaria de estudio para exportacion; comparar 450/500/550 mm",
+      "estado": "hipótesis; no equivale automáticamente a DN 450",
+      "confianza": "baja"
+    },
+    "espesor": {
+      "valor": 0.00635,
+      "unidad": "m nominal",
+      "fuente": "Borrador p. 16, candidato uniforme para estudio",
+      "estado": "no aprobado mecánicamente",
+      "confianza": "baja"
+    },
+    "cierre": {
+      "valor": 4,
+      "unidad": "s",
+      "fuente": "Borrador p. 16",
+      "estado": "hipótesis de maniobra",
+      "confianza": "baja"
+    }
+  },
+  "coordenadas_borrador": {
+    "sistema": "UTM WGS84 19S declarado, sin verificación",
+    "fuente": "Borrador p. 6; no usar para replanteo",
+    "camara": [
+      425120,
+      8441860,
+      3202
+    ],
+    "casa": [
+      425260,
+      8441710,
+      3150
+    ],
+    "desarenador": [
+      424910,
+      8442060,
+      3203.5
+    ]
+  },
+  "electrico": {
+    "estado": "Hipotesis academicas R02; sin ficha, temperatura ni estudio de conexion. P_aux se calcula por modo, no se fija independientemente.",
+    "unidades": {
+      "tension_bt": "kV",
+      "tension_mt": "kV",
+      "fp": "adimensional",
+      "placa_kva": "kVA",
+      "linea_km": "km",
+      "r_ohm_km": "ohm/km",
+      "x_ohm_km": "ohm/km",
+      "trafo_p0_kw": "kW",
+      "trafo_pcu_kw": "kW",
+      "reactancia_subtransitoria_pu": "pu",
+      "uk_trafo_pu": "pu",
+      "tsa_kva": "kVA",
+      "tsa_p0_kw": "kW",
+      "tsa_pcu_kw": "kW"
+    },
+    "tension_bt": 0.4,
+    "tension_mt": 22.9,
+    "fp": 0.85,
+    "placa_kva": 250,
+    "linea_km": 1.2,
+    "r_ohm_km": 1.0,
+    "x_ohm_km": 0.4,
+    "trafo_p0_kw": 0.6,
+    "trafo_pcu_kw": 3.5,
+    "reactancia_subtransitoria_pu": 0.15,
+    "uk_trafo_pu": 0.04,
+    "tsa_kva": 15.0,
+    "tsa_p0_kw": 0.08,
+    "tsa_pcu_kw": 0.25,
+    "fp_convencion": "Q_G positivo: reactiva inyectada por generador, con auxiliares inductivos. Q de transformadores omitida; no es flujo AC."
+  },
+  "auxiliares": {
+    "estado": "Potencias electricas y modos propuestos R02. Generacion: un drenaje y gobernador activos sin descuento de intermitencia. Mantenimiento: maxima simultaneidad hipotetica con grupo parado. La reserva exige enclavamiento.",
+    "filas": [
+      {
+        "equipo": "Alumbrado interior",
+        "cantidad": 8,
+        "p_unit_kw": 0.04,
+        "fd": 1.0,
+        "fp": 0.95,
+        "id": "AL01"
+      },
+      {
+        "equipo": "Alumbrado exterior",
+        "cantidad": 4,
+        "p_unit_kw": 0.06,
+        "fd": 1.0,
+        "fp": 0.95,
+        "id": "AL02"
+      },
+      {
+        "equipo": "Control, relés y comunicaciones",
+        "cantidad": 1,
+        "p_unit_kw": 0.3,
+        "fd": 1.0,
+        "fp": 0.9,
+        "id": "CTRL"
+      },
+      {
+        "equipo": "Cargador de baterías",
+        "cantidad": 1,
+        "p_unit_kw": 0.5,
+        "fd": 1.0,
+        "fp": 0.9,
+        "id": "CC"
+      },
+      {
+        "equipo": "Ventilación",
+        "cantidad": 2,
+        "p_unit_kw": 0.37,
+        "fd": 1.0,
+        "fp": 0.85,
+        "id": "VENT"
+      },
+      {
+        "equipo": "Bomba de drenaje (una activa y una reserva)",
+        "cantidad": 2,
+        "p_unit_kw": 1.5,
+        "fd": 0.5,
+        "fp": 0.8,
+        "id": "DRN"
+      },
+      {
+        "equipo": "Unidad hidráulica del gobernador",
+        "cantidad": 1,
+        "p_unit_kw": 1.5,
+        "fd": 1.0,
+        "fp": 0.8,
+        "id": "GOB"
+      },
+      {
+        "equipo": "Tomas de mantenimiento",
+        "cantidad": 1,
+        "p_unit_kw": 2.0,
+        "fd": 1.0,
+        "fp": 0.9,
+        "id": "TOM"
+      },
+      {
+        "equipo": "Izaje durante mantenimiento",
+        "cantidad": 1,
+        "p_unit_kw": 2.2,
+        "fd": 1.0,
+        "fp": 0.8,
+        "id": "IZJ"
+      }
+    ],
+    "modos": {
+      "generacion": {
+        "AL01": 8,
+        "AL02": 4,
+        "CTRL": 1,
+        "CC": 1,
+        "VENT": 2,
+        "DRN": 1,
+        "GOB": 1,
+        "TOM": 0,
+        "IZJ": 0
+      },
+      "mantenimiento": {
+        "AL01": 8,
+        "AL02": 4,
+        "CTRL": 1,
+        "CC": 1,
+        "VENT": 2,
+        "DRN": 1,
+        "GOB": 1,
+        "TOM": 1,
+        "IZJ": 1
+      }
+    }
+  },
+  "canal": {
+    "fuente": "R01, hipótesis académica de confianza baja",
+    "b_m": 0.8,
+    "y_max_m": 0.6,
+    "altura_m": 0.85,
+    "s_m_m": 0.002,
+    "n_s_m13": 0.015
+  },
+  "datos_impeditivos": {
+    "serie_caudales": null,
+    "caudal_ecologico_aprobado": null,
+    "derechos_terceros": null,
+    "topografia": null,
+    "demanda_usuarios": null,
+    "punto_conexion": null,
+    "cortocircuito_red": null,
+    "resistividad_suelo": null,
+    "geotecnia": null,
+    "curvas_fabricante": null,
+    "rubrica_docente": null
+  },
+  "revision_anterior": "R01 local, fecha de portada 2026-10-14; conservada como antecedente",
+  "comparacion_diametros_m": [
+    0.39,
+    0.4,
+    0.45,
+    0.5,
+    0.55
+  ],
+  "mecanica": {
+    "estado": "Hipotesis de sensibilidad R02, no especificacion de producto ni calculo conforme a codigo",
+    "tolerancia_fraccion": 0.125,
+    "corrosion_m": 0.001,
+    "vano_m": 6.0,
+    "angulo_codo_deg": 45.0,
+    "delta_t_c": 40.0,
+    "rho_acero_kg_m3": 7850.0,
+    "modulo_acero_pa": 200000000000.0,
+    "alpha_k_inv": 1.2e-05,
+    "unidades": {
+      "tolerancia_fraccion": "adimensional",
+      "corrosion_m": "m",
+      "vano_m": "m",
+      "angulo_codo_deg": "grados",
+      "delta_t_c": "K de diferencia",
+      "rho_acero_kg_m3": "kg/m3",
+      "modulo_acero_pa": "Pa",
+      "alpha_k_inv": "1/K"
+    },
+    "fuente": "Equilibrio de membrana y viga simple; USBR EM03 referencia tecnica, sin atribuirle tolerancia/corrosion adoptadas"
+  },
+  "obras_hidraulicas": {
+    "estado": "Hipotesis R01/R02, no geometria de campo. Confianza baja",
+    "reja": {
+      "v_libre_ms": 0.6,
+      "porosidad": 0.6,
+      "bloqueo": 0.4
+    },
+    "desarenador": {
+      "ancho_m": 2.6,
+      "largo_m": 10.0,
+      "tirante_m": 1.5,
+      "ws_ms": 0.025,
+      "factor": 1.5
+    },
+    "aliviadero": {
+      "c_m05_s": 1.7,
+      "carga_m": 0.3
+    },
+    "fuente": "R01 conservado y parametrizado en R02; velocidad de caida y coeficientes pendientes de ensayo y tipo de obra"
+  },
+  "criterio_objetivo": {
+    "p_pcc_kw": 150.0,
+    "margen_adicional_fraccion": 0.05,
+    "estado": "Margen 5% solo sensibilidad propuesta para evaluar fragilidad; no requisito del docente o norma."
+  },
+  "economia_sensibilidad": {
+    "tasa_real": 0.1,
+    "anios": 20,
+    "horas_equivalentes": [
+      4000,
+      6000,
+      8000
+    ],
+    "estado": "Solo ejemplo de comparacion marginal, no rentabilidad ni energia anual del sitio",
+    "tarifa_pen_kwh": null,
+    "sobrecosto_pen": null
+  }
+}

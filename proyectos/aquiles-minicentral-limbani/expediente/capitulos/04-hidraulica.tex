@@ -1,0 +1,130 @@
+\chapter{Cálculos hidráulicos y selección del grupo}
+\section{Frontera energética y constantes}
+Se adopta agua con $\rho=1000$ kg/m$^3$, $g=9.81$ m/s$^2$ y $\nu=1.24\times10^{-6}$ m$^2$/s. Son constantes e hipótesis de cálculo, pendientes de temperatura del agua. La frontera se establece entre nivel de cámara y referencia de entrada/descarga de la turbina compatible con la garantía del fabricante:
+\begin{equation}
+H_b=Z_{cam}-Z_{ref}=3202-3150=52\ \mathrm{m}.
+\end{equation}
+Para la aproximación de flujo cruzado con descarga atmosférica se usa la referencia del eje como simplificación. La cota de restitución a 3148 m no se suma automáticamente a la energía utilizable: requiere configuración y recuperación efectiva en el equipo. Tampoco se usa el nivel de bocatoma como origen de la tubería a presión.
+
+\section{Pérdidas y verificación independiente}
+Para cada tramo y accesorios:
+\begin{align}
+A&=\pi D_i^2/4, & v&=Q/A, & Re&=vD_i/\nu,\\
+\frac{1}{\sqrt f}&=-2\log_{10}\left(\frac{\epsilon/D_i}{3.7}+\frac{2.51}{Re\sqrt f}\right),\\
+h_f&=f\frac{L}{D_i}\frac{v^2}{2g}, & h_{loc}&=\sum K\frac{v^2}{2g}, & H_n&=H_b-h_f-h_{loc}.
+\end{align}
+$f$ es el factor de Darcy, no el de Fanning. El motor resuelve Colebrook iterativamente; usa $64/Re$ en flujo laminar y rechaza el régimen de transición sin modelo específico. Se adopta rugosidad $\epsilon=0.045$ mm y $\sum K=1.0$ como sensibilidad de entrada, dos codos y válvula abierta. La distribución real de accesorios y envejecimiento pueden aumentar pérdidas.
+
+El borrador calcula $h_f=3.51$ m con $f=0.0152$ y luego declara 2 m totales en otra sección. Aun conservando ese factor, el salto no sería 50 m desde una cámara con $H_b=52$ m. La solución automatizada usa las mismas ecuaciones en todas las tablas:
+\small\input{generado/escenarios}\normalsize
+\fuente{Entradas del borrador e hipótesis R01; salida calculos.json. El primer escenario reconstruye la aritmética, pero no resuelve la contradicción del trazado.}
+
+\section{Alternativa para estudiar el objetivo}
+Se estudia prioritariamente $Q=0.420$ m$^3$/s, $L=220$ m y $D_i=0.500$ m. Se comparan los demás diámetros con la misma cadena energética y auxiliares. No se ha seleccionado diámetro nominal comercial ni garantizado caudal. Resultan:
+\begin{align}
+v&=\VelAlt\ \mathrm{m/s}, & Re&=\ReAlt, & f&=\FAlt,\\
+h_f&=\HfAlt\ \mathrm{m}, & h_{loc}&=\HlAlt\ \mathrm{m}, & H_n&=\HnAlt\ \mathrm{m}.
+\end{align}
+La cadena de conversión se mantiene explícita:
+\begin{align}
+\eta_{TG}&=0.84\times0.985\times0.925=0.765345,\\
+P_h&=\rho gQH_n/1000=\PhAlt\ \mathrm{kW},\\
+P_t&=\eta_tP_h=\PtAlt\ \mathrm{kW},\\
+P_{acople}&=\eta_mP_t=\PmAlt\ \mathrm{kW},\\
+P_G&=\eta_gP_{acople}=\PeAlt\ \mathrm{kW}.
+\end{align}
+La potencia nominal de una turbina se refiere al eje y la del generador a su salida eléctrica/capacidad térmica. Deben pedirse ambas, con el mismo punto de operación, y especificar qué pérdidas incluye cada garantía. La potencia exportada se calcula en el capítulo siguiente.
+
+\subsection{Comparación de diámetros interiores}
+\input{generado/diametros}
+La tabla compara hidráulica y exportación a 0.420 m$^3$/s y 220 m. Usa los auxiliares del capítulo 3, por eso cambia respecto de R01. El diámetro de 500 mm mejora pérdidas, pero el margen neto sigue siendo \MargenExport\ kW. Se elegirá mediante costo presente de inversión, mantenimiento y energía perdida, con caudal variable y precios verificables. Los metros de tubería, espesor y pérdidas locales son hipótesis comunes, no diseños comerciales intercambiables.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figuras/sensibilidad.pdf}
+\caption{Sensibilidad calculada. No representa disponibilidad hídrica ni eficiencia real a carga parcial.}
+\end{figure}
+La rugosidad, pérdidas locales y salto se someterán a sensibilidad. El margen del escenario objetivo es pequeño: una reducción de 1 m de salto neto a Q=0.420 m$^3$/s reduce la generación aproximadamente 3.15 kW. Una caída de tres puntos porcentuales de eficiencia de turbina (de 84\% a 81\%) reduce unos 5.55 kW cerca del punto ilustrado. Esa variación puede eliminar el margen de exportación.
+
+\section{Captación, canal y desarenado}
+\subsection{Captación y control de avenida}
+La captación debe derivar caudal de diseño y permitir el caudal ecológico en el tramo derivado, con medición y protección frente a obstrucción. La avenida, socavación, flotantes y acceso de limpieza definen azud, compuertas y defensas. No se fija altura de barraje 1.20 m sin hidráulica fluvial y análisis ambiental.
+
+Como ejemplo de rejilla de acceso (no diseño de azud tirolés), limitar velocidad normal a 0.60 m/s y admitir 40\% de área bloqueada exigiría:
+\[
+A_{bruta}\geq\frac{0.420}{0.60\,(0.60)\,(1-0.40)}=\AreaReja\ \mathrm{m^2}.
+\]
+Se distingue área bruta de área abierta. El 0.60 central es porosidad propuesta: $\phi=s/(s+t)$ para luz libre $s$ y ancho frontal de barra $t$. El otro 0.60 es velocidad de estudio en los huecos libres; 0.40 es fracción de bloqueo. R01 omitía la porosidad en su área bruta. Velocidad, porosidad y bloqueo no son valores normativos universales. Revisar pérdida limpia/sucia, separación según turbina y fauna, resistencia, limpieza y caudal máximo. La bocatoma tirolesa requiere modelo de admisión propio, no solo este cribado frontal.
+
+\subsection{Canal a superficie libre}
+Se estudia una sección rectangular independiente de la geometría no comprobada del borrador: ancho 0.80 m, profundidad total 0.85 m, pendiente 0.002 y $n=0.015$ de Manning, todos supuestos. Para $A=by$, $R=by/(b+2y)$:
+\[
+Q=\frac{1}{n}AR^{2/3}S^{1/2},\qquad Fr=\frac{Q/(by)}{\sqrt{gy}}.
+\]
+El tirante normal calculado es \Tirante\ m para 0.420 m$^3$/s, la velocidad \VCanal\ m/s y $Fr=\FrCanal$. A tirante límite de 0.60 m conduce \QCanal\ m$^3$/s y deja 0.25 m de borde libre. Esto verifica solo flujo uniforme: transiciones, curvas, remanso, pendiente disponible, disipación y arranque/parada pueden exigir mayor sección o borde libre.
+
+El tirante crítico rectangular es $y_c=(Q^2/(gb^2))^{1/3}=\TiranteCritico$ m. El tirante normal excede $y_c$ y el flujo es subcrítico. El borde libre hasta altura de 0.85 m es \BordeLibre\ m, antes de oleaje, remanso y sedimentación. Manning supone flujo uniforme; entradas, curvas, transiciones y nivel de cámara requieren cálculo de perfil.
+
+La pendiente implica caída de 0.002 m por metro. Entre desarenador y cámara, la distancia horizontal mínima declarada es 290 m y la diferencia de cotas es 1.5 m. Un canal de al menos esa longitud consumiría como mínimo 0.58 m por pendiente adoptada; el saldo sería como máximo 0.92 m antes de transiciones y variaciones de nivel. No se dispone de perfil para demostrar compatibilidad. Los 220 m del escenario son exclusivamente tubería forzada. No se fija concreto hasta contar con trazado, secciones y espesores.
+
+\subsection{Desarenador: comprobación preliminar}
+Se define como objetivo de estudio retirar partículas del orden de 0.20 mm, sujeto a la garantía de erosión de turbina. El tamaño no fija por sí solo velocidad de caída: se necesitan forma, densidad, temperatura y régimen. Se usa $w_s=0.025$ m/s únicamente como hipótesis de sensibilidad, sin aplicar Stokes fuera de su régimen.
+
+Con factor hidráulico propuesto $F_h=1.5$, el área efectiva de sedimentación por cámara activa es:
+\[
+A_s\geq F_h\frac{Q}{w_s}=1.5\frac{0.420}{0.025}=25.2\ \mathrm{m^2}.
+\]
+Un ejemplo de cámara activa de 10 m por 2.6 m y tirante 1.5 m tiene área 26 m$^2$, volumen 39 m$^3$, velocidad longitudinal 0.108 m/s y residencia 92.9 s. La caída ideal desde 1.5 m tarda 60 s; la relación es 1.55. Dos cámaras de igual capacidad permiten una en servicio y otra en limpieza, si compuertas y canal de acceso lo permiten. No se ofrecen como dimensiones finales: revisar turbulencia, distribución, cortocircuito hidráulico, tolva, capacidad de sólidos y purga.
+
+\subsection{Cámara de carga y alivio}
+Una reserva de 25 m$^3$ del borrador equivale a $25/0.420=59.5$ s a caudal de diseño si todo el volumen fuese utilizable. El volumen operativo real excluye submergencia mínima, sedimentos y volumen muerto. La cámara no sustituye regulación de energía de larga duración.
+
+El aliviadero debe evacuar la totalidad del caudal entrante cuando la turbina cierre, además de excedentes definidos por diseño. Con $Q=C_wbh^{3/2}$, $C_w=1.7$ m$^{1/2}$/s y carga $h=0.30$ m resulta $b\geq\AnchoVertedor$ m para 0.420 m$^3$/s. Coeficiente dimensional, aproximación, tipo de cresta, ahogamiento y descarga deben comprobarse. No equivale a avenida de diseño de la bocatoma. La entrada a tubería requiere submergencia y geometría que eviten vórtices y aire, sin imponer una profundidad arbitraria.
+
+\section{Transitorios y tubería forzada}
+\subsection{Celeridad y maniobra}
+Se realiza un cribado elástico con módulo volumétrico del agua $K_w=2.2$ GPa, módulo del acero $E=200$ GPa y espesor candidato 6.35 mm. La restricción axial se simplifica a coeficiente unitario:
+\[
+a=\sqrt{\frac{K_w/\rho}{1+K_wD/(Ee)}}=\Celeridad\ \mathrm{m/s},\qquad
+T_c=2L/a=\TCritico\ \mathrm{s}.
+\]
+Para cierre de 4 s, mayor que $T_c$, la aproximación de cierre lento tipo Michaud da:
+\[
+\Delta H_{lento}\simeq\frac{2Lv}{gT_s}=\DHlento\ \mathrm{m},\qquad
+p_{max,cribado}=\PLento\ \mathrm{bar}.
+\]
+No es una garantía de Allievi completa. Para cierre abrupto ideal, Joukowsky daría $\Delta H=av/g=\DHrapido$ m y presión total aproximada \PRapido\ bar. El contraste demuestra por qué una falla de maniobra puede gobernar sobre el cierre normal; no representa una presión final de diseño ni implica que ese cierre ocurra realmente.
+
+\estado{La simulación por características (MOC) queda pendiente de perfil, ley de apertura/área, inercia, regulador, aireación y condiciones de contorno. Debe obtener máximos y mínimos en toda la tubería, presión de vapor, separación de columna, sobrevelocidad y sensibilidad ante fallas.}
+
+\subsection{Espesor, esfuerzos y apoyos}
+El diámetro interior de 500 mm y espesor nominal 6.35 mm implican exterior 512.7 mm en la idealización; no se etiqueta como tubería comercial DN 500 sin catálogo. Deben definirse diámetro exterior comercial, espesor efectivo, material y soldadura.
+
+La relación de membrana $\sigma_\theta\simeq pD/(2e_{ef})$ sirve para estimar esfuerzo circunferencial en pared delgada. La comparación requiere tensión admisible del código seleccionado y eficiencia de junta verificadas. No basta obtener un espesor pequeño: presión externa/vacío, ovalización, estabilidad, peso, flexión entre apoyos, térmica, transporte, fatiga y sismo pueden gobernar.
+
+En un codo, el empuje por presión puede aproximarse por $F_p=2pA\sin(\theta/2)$, con fuerzas de cantidad de movimiento adicionales según el volumen de control. Los anclajes deben equilibrar esas acciones y comprobar deslizamiento, vuelco, presión admisible y estabilidad de ladera. La distancia de silletas depende de rigidez y esfuerzos, no se adopta 6 m sin cálculo.
+
+\input{capitulos/04b-mecanica}
+\section{Turbina, velocidad y dimensiones preliminares}
+La turbina de flujo cruzado es candidata por el rango de salto/caudal y la posibilidad de regulación por celdas; el fabricante N12 publica un rango que incluye el punto estudiado. Esto no acredita 84\% de eficiencia ni inmunidad a abrasión. Debe compararse con Francis y, si la selección de fabricante lo justifica, alternativas de impulso y velocidades distintas.
+
+La velocidad síncrona satisface $n=120f/p$. A 60 Hz, 8 polos dan 900 rpm y 10 polos 720 rpm. Se estudia 900 rpm con acoplamiento directo, condicionado a tamaño y precio reales. La velocidad específica debe indicar convención, por ejemplo:
+\[
+n_s=\frac{n\sqrt{P_t\,[\mathrm{kW}]}}{H_n^{5/4}}.
+\]
+Es un índice convencional que cambia si se usa HP; no se comparan valores sin declarar unidades. No sirve para descartar una familia de turbina por un umbral aislado.
+
+Con $C_v=0.97$ y $u/v_1=0.48$ como coeficientes académicos del borrador:
+\[
+v_1=C_v\sqrt{2gH_n},\quad u=0.48v_1,\quad D_r=\frac{60u}{\pi n}.
+\]
+En R02, $H_n=\HnAlt$ m produce $v_1=\VelChorro$ m/s y $D_r=\DiametroRodete$ m a 900 rpm. El índice específico de la convención anterior es \NsTurbina. Adoptar diámetro 0.300 m cambia la relación periférica y requiere rediseño de inyector. El ancho de 490 mm del borrador se puede contrastar por continuidad, sin repetir su coeficiente empírico 0.085:
+\[
+A_{chorro}=Q/v_1,\qquad s_{equiv}=\frac{Q}{Bv_1}=\EspesorChorro\ \mathrm{mm}\quad (B=490\ \mathrm{mm}).
+\]
+Es el espesor normal al chorro de una sección rectangular equivalente, no espesor de álabe ni dimensión de tobera aprobada. Arco de admisión, ángulos, obstrucción, distribución de agua y regulación por celdas requieren diseño propio. El par medio en eje sería
+\[
+T=P_t/\omega=\TorqueTurbina\ \mathrm{N\,m},\qquad \omega=2\pi(900/60)\ \mathrm{rad/s}.
+\]
+El acoplamiento y los ejes deben soportar además torsión transitoria, desalineación, fatiga, cargas radiales y velocidad de embalamiento. La velocidad síncrona no demuestra estabilidad del gobernador ante rechazo de carga.
+
+La requisición debe solicitar potencia en eje de aproximadamente \PtAlt\ kW en el punto ilustrado, eficiencia garantizada por carga, velocidad de embalamiento y esfuerzos admisibles, inercia, aireación, sedimentología límite, disposición y pruebas. Número de álabes, espesor, materiales y soldaduras quedan a diseño del fabricante y revisión técnica.

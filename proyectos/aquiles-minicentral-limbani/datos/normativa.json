@@ -1,0 +1,358 @@
+{
+  "fecha_consulta": "2026-10-13",
+  "alcance": "Revisión de reglas pertinentes, no certificación de cumplimiento ni lectura acreditada de cada disposición del corpus nacional. Vigencia consolidada y requisitos administrativos deben cerrarse antes de ejecución.",
+  "fuentes": [
+    {
+      "id": "N01",
+      "titulo": "CNE Suministro 2011, R.M. 214-2011-MEM/DM",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/95751/RM_214_2011_DM.pdf",
+      "local": "referencias/local/minicentral-limbani/cne-suministro-2011.pdf",
+      "lectura": "Texto completo disponible; lectura dirigida de secciones 1, 3, 10 a 19; reglas 230, 232 y 234 y estructura de secciones 24 a 27 y 40 a 44. No todas sus reglas se aplican ni están verificadas en diseño."
+    },
+    {
+      "id": "N02",
+      "titulo": "CNE Utilización, R.M. 037-2006-MEM/DM",
+      "url": "https://www.gob.pe/institucion/osinergmin/normas-legales/738607-037-2006-mem-dm",
+      "local": "referencias/normativa/pdf/Código_Nacional_de_Electricidad__Utilización_.pdf",
+      "lectura": "Archivo local: reglas 020, 030-004, 050-100 a 106, 060 y 160-900 a 904. Consultar modificación N03 junto al texto base. R02: subreglas 050-104(3)-(7), 050-106(3),(5), Tabla 2 (B2 PVC 70 grados tres cargados), Tablas D8A/D8B y notas."
+    },
+    {
+      "id": "N03",
+      "titulo": "Modificación CNE Utilización, R.M. 175-2008-MEM/DM",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/5332526/4778939-r-m-nro-175-2008-mem-dm.pdf",
+      "local": "referencias/local/minicentral-limbani/rm-175-2008.pdf",
+      "lectura": "Resolución completa: modificaciones, en especial reglas 020-126, 020-132 y 060-000."
+    },
+    {
+      "id": "N04",
+      "titulo": "D.L. 25844, Ley de Concesiones Eléctricas, compilación OSINERGMIN",
+      "url": "https://www.osinergmin.gob.pe/cartas/documentos/electricidad/normativa/LEY_CONCESIONES_ELECTRICAS.pdf",
+      "local": "referencias/local/minicentral-limbani/lce.pdf",
+      "lectura": "Artículos 3 y 7; compilación histórica con modificaciones identificadas. Contraste con información pública MINEM, no texto único consolidado a octubre de 2026."
+    },
+    {
+      "id": "N05",
+      "titulo": "Ley 29338, Ley de Recursos Hídricos",
+      "url": "https://www.ana.gob.pe/sites/default/files/normatividad/files/ley_29338_0_2.pdf",
+      "local": "referencias/local/minicentral-limbani/ley-29338.pdf",
+      "lectura": "Artículos 35, 44, 47, 53, 74, 81 y 104."
+    },
+    {
+      "id": "N06",
+      "titulo": "D.S. 001-2010-AG, Reglamento de Ley de Recursos Hídricos",
+      "url": "https://www.ana.gob.pe/sites/default/files/publication/files/reglamento_lrh_-_no_29338_0.pdf",
+      "local": "referencias/local/minicentral-limbani/reglamento-lrh.pdf",
+      "lectura": "Base para caudales ecológicos, artículos 153 a 155. Para procedimientos, consultar además modificatorias, D.S. 023-2014-MINAGRI y R.J. 007-2015-ANA, N19 descargado y leido; restantes modificaciones y anexos pendientes de consolidar."
+    },
+    {
+      "id": "N07",
+      "titulo": "R.J. 267-2019-ANA, Lineamientos generales para determinar caudales ecológicos",
+      "url": "https://www.gob.pe/institucion/ana/normas-legales/537631-rj-267-2019-ana",
+      "local": "referencias/local/minicentral-limbani/rj-267-2019.pdf",
+      "lectura": "PDF escaneado. Artículo 6 y 7 leídos visualmente en página PDF 4; artículos 5 y 8 y anexos requieren aplicación con estudio del sitio."
+    },
+    {
+      "id": "N08",
+      "titulo": "D.S. 014-2019-EM, Reglamento para la Protección Ambiental en las Actividades Eléctricas",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/340037/DS_N__014-2019-EM.pdf",
+      "local": "referencias/local/minicentral-limbani/ds-014-2019.pdf",
+      "lectura": "Artículos 7 a 11, 75 y Anexo 1; fe de erratas descargada. La consulta pública de enero de 2026 no equivale a una modificación aprobada; consolidación posterior pendiente."
+    },
+    {
+      "id": "N09",
+      "titulo": "Fe de erratas del D.S. 014-2019-EM",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/343295/FE_DE_ERRATAS.pdf",
+      "local": "referencias/local/minicentral-limbani/ds-014-2019-erratas.pdf",
+      "lectura": "Descargada; debe acompañar el reglamento base."
+    },
+    {
+      "id": "N10",
+      "titulo": "Reglamento Nacional de Edificaciones, repositorio oficial MVCS",
+      "url": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2309793",
+      "lectura": "Registro oficial de consulta. Seleccionar versiones vigentes de E.020, E.030, E.050, E.060, E.090, A.060, A.130 y EM.010 según obras; no se declara cálculo estructural conforme."
+    },
+    {
+      "id": "N11",
+      "titulo": "IEC 60034-1:2026, máquinas eléctricas rotativas",
+      "url": "https://webstore.iec.ch/en/publication/89961",
+      "lectura": "Ficha pública de edición 2026 verificada; texto normativo completo no adquirido. No se atribuye una fórmula universal de desclasificación."
+    },
+    {
+      "id": "N12",
+      "titulo": "OSSBERGER, turbina de flujo cruzado, ficha de fabricante",
+      "url": "https://www.ossberger.de/es/tecnologia-hidraulica/turbina-ossbergerr-de-flujo-cruzado",
+      "lectura": "Rango comercial H=4 a 200 m, Q=0.04 a 17 m3/s; confirma tecnología candidata, no rendimiento garantizado del proyecto."
+    },
+    {
+      "id": "N13",
+      "titulo": "MINEM, preguntas frecuentes del sector eléctrico",
+      "url": "https://www.gob.pe/institucion/minem/informes-publicaciones/2147053-preguntas-frecuentes-sector-electrico",
+      "lectura": "Contraste público de umbral de concesión hidráulica mayor de 500 kW."
+    },
+    {
+      "id": "N14",
+      "titulo": "Consulta pública de modificación del RPAAE, enero 2026",
+      "url": "https://www.gob.pe/institucion/minem/informes-publicaciones/7619585-consulta-publica-regulatoria-del-proyecto-de-decreto-supremo-que-modifica-el-reglamento-para-la-proteccion-ambiental-en-las-actividades-electricas-aprobado-por-decreto-supremo-n-014-2019-em",
+      "lectura": "Proyecto en consulta, no utilizado como norma aprobada."
+    },
+    {
+      "id": "N15",
+      "titulo": "D.S. 011-2026-EM, adecuación ambiental de actividades eléctricas en curso",
+      "url": "https://www.gob.pe/institucion/minem/normas-legales/8376639-011-2026-em",
+      "local": "referencias/local/minicentral-limbani/ds-011-2026.pdf",
+      "lectura": "Identificada modificación del artículo 48 del RPAAE, para actividades en curso; no sustituye evaluación previa de una central nueva."
+    },
+    {
+      "id": "N16",
+      "titulo": "Ley 29783, Seguridad y Salud en el Trabajo",
+      "url": "https://www.leyes.congreso.gob.pe/Documentos/Leyes/29783.pdf",
+      "lectura": "Base legal general; reglamento D.S. 005-2012-TR y modificatorias por consolidar para plan ejecutivo. No se declara cumplimiento laboral integral."
+    },
+    {
+      "id": "N17",
+      "titulo": "R.M. 111-2013-MEM/DM, Reglamento de Seguridad y Salud en el Trabajo con Electricidad",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/898454/RM-111-2013-MEM-DM.pdf",
+      "local": "referencias/local/minicentral-limbani/rm-111-2013.pdf",
+      "lectura": "Texto descargado; base para desarrollar procedimientos de trabajo y plan de seguridad por tarea, pendiente análisis completo de puestos y riesgos."
+    },
+    {
+      "id": "N18",
+      "titulo": "IEEE 80-2013, ficha de guía de seguridad en puesta a tierra de subestaciones CA",
+      "url": "https://ieeexplore.ieee.org/document/7109078",
+      "lectura": "Ficha consultada indica inactive - Reserved. No se afirma edición vigente; seleccionar edición contractual reconocida y consultar texto completo antes de cálculo definitivo."
+    },
+    {
+      "id": "N19",
+      "titulo": "D.S. 023-2014-MINAGRI, modificacion del Reglamento de Recursos Hidricos",
+      "url": "https://spij.minjus.gob.pe/Normas/textos/271214T.pdf",
+      "local": "referencias/local/minicentral-limbani/ds023-2014-texto-oficial.pdf",
+      "lectura": "Texto oficial descargado de SPIJ. Lectura de articulos modificados 79, 81, 84 y 85 (paginas PDF 3-6). No es texto consolidado de todas las reformas posteriores. La publicacion de aprobacion de RJ007-2015 no contiene todos los anexos."
+    },
+    {
+      "id": "N20",
+      "titulo": "USBR Engineering Monograph No. 3, Welded Steel Penstocks (1966)",
+      "url": "https://www.usbr.gov/tsc/techreferences/hydraulics_lab/pubs/EM/EM03.pdf",
+      "local": "referencias/local/minicentral-limbani/usbr-em03.pdf",
+      "lectura": "Referencia tecnica historica, no norma peruana. Lectura de golpe de ariete p. impresa 11 y apoyos/tensiones termicas p. 19. Se utiliza para identificar mecanismos que faltaban en R01, sin transferir admisibles ni codigos antiguos."
+    }
+  ],
+  "matriz": [
+    [
+      "M01",
+      "N01, 011.A-C, 011.F y 012",
+      "Definir límite entre generación, enlace y servicios auxiliares; documentos ejecutivos firmados por profesional habilitado.",
+      "Cap. 1 y esquema E-01",
+      "Alcance académico delimitado; firma ejecutiva pendiente"
+    ],
+    [
+      "M02",
+      "N01, 032, 033 y 036.A-B",
+      "Diseñar puesta a tierra con falla, duración, equipotencialidad y tensiones de paso, toque y transferidas.",
+      "Cap. 5, plan de medición de resistividad",
+      "Pendiente; no hay resistividad ni corriente de malla"
+    ],
+    [
+      "M03",
+      "N01, 036.D",
+      "El límite de 25 ohm para un solo electrodo no reemplaza la evaluación de una estación.",
+      "Corrección de afirmación de 5 ohm y Regla 362",
+      "Referencia corregida; seguridad no demostrada"
+    ],
+    [
+      "M04",
+      "N01, 110, 112, 113 y 124",
+      "Control de acceso, ventilación, humedad, salidas y guardas de partes vivas.",
+      "Cap. 6 y requerimientos de plano civil",
+      "Pendiente de planta dimensionada"
+    ],
+    [
+      "M05",
+      "N01, 111 y 114",
+      "Iluminación normal y de emergencia; protección contra incendios.",
+      "Cuadro auxiliar y especificaciones",
+      "Pendiente de fotometría y selección contra incendios"
+    ],
+    [
+      "M06",
+      "N01, 122 y 130.A-B-E",
+      "Guardas mecánicas, parada manual y disparo automático de sobrevelocidad además del regulador.",
+      "Cap. 5, matriz causa-efecto",
+      "Especificado; pruebas y fabricante pendientes"
+    ],
+    [
+      "M07",
+      "N01, 132",
+      "Resolver puesta a tierra del neutro del generador con impedancia según necesidades del sistema.",
+      "Esquema E-01 y estudio de secuencia cero",
+      "Pendiente; se retira neutro sólidamente aterrado sin estudio"
+    ],
+    [
+      "M08",
+      "N01, 140 a 147",
+      "Acceso, ventilación, protección y mantenimiento de baterías.",
+      "Cap. 5, sistema de corriente continua",
+      "Pendiente selección de tecnología y autonomía"
+    ],
+    [
+      "M09",
+      "N01, 150 a 152 y 190",
+      "Transformador: protección, ubicación, fuego y sobretensiones.",
+      "Cap. 5 y 6",
+      "Pendiente de ficha, contención y coordinación de aislamiento"
+    ],
+    [
+      "M10",
+      "N01, 161, 170 a 177",
+      "Protección de conductores; selección de maniobra y capacidad de interrupción.",
+      "Cap. 5, escenarios de cortocircuito",
+      "Pendiente de corrientes mínimas y máximas reales"
+    ],
+    [
+      "M11",
+      "N01, 230, 232, Tabla 232-1 y 234",
+      "Comprobar distancias para cada vano, cruce, terreno, temperatura y flecha.",
+      "Plan de línea MT",
+      "No verificable sin levantamiento y cruces"
+    ],
+    [
+      "M12",
+      "N01, secciones 24 a 27",
+      "Grado de construcción, cargas, resistencia y aislamiento de línea aérea.",
+      "Planos de perfiles y cálculo mecánico",
+      "Pendiente; no se aprueban postes de 12 m/300 kg"
+    ],
+    [
+      "M13",
+      "N02, 030-004 y 050-104",
+      "Ampacidad por método, temperatura, agrupamiento y régimen continuo.",
+      "Cap. 5, circuito BT ilustrativo",
+      "Pendiente de cable y disposición reales"
+    ],
+    [
+      "M14",
+      "N02, 050-102",
+      "Para utilización: 2.5% por alimentador o derivado y 4% combinado hasta punto más alejado.",
+      "Cap. 5, ejemplo de auxiliares",
+      "Ejemplo calculado; no aplicar como criterio único de interconexión"
+    ],
+    [
+      "M15",
+      "N03, 020-126, 020-132 y 060-000",
+      "Control de propagación de fuego, protección diferencial y enlace equipotencial en utilización.",
+      "Cap. 6, circuitos auxiliares",
+      "Especificado; comprobar tipos y selectividad"
+    ],
+    [
+      "M16",
+      "N02, 160-900 y 160-902",
+      "Desconexión y protección de generadores dentro de su ámbito; compatibilizar con CNE Suministro.",
+      "Cap. 5, unifilar",
+      "Pendiente de ingeniería de protección"
+    ],
+    [
+      "M17",
+      "N04, artículos 3 y 7; N13",
+      "150 kW queda por debajo del umbral hidráulico >500 kW; subsisten obligaciones técnicas, ambientales e información. Enlace requiere análisis propio.",
+      "Cap. 2, ruta administrativa",
+      "Inferencia sobre potencia objetivo; no exención integral"
+    ],
+    [
+      "M18",
+      "N05, artículos 35, 44, 47 y 53",
+      "Derechos de agua, prioridades, disponibilidad y requisitos de licencia.",
+      "Cap. 3, balance hídrico",
+      "Pendiente de ANA y derechos de terceros"
+    ],
+    [
+      "M19",
+      "N05, artículos 74, 81 y 104",
+      "Faja marginal, opinión hídrica ambiental y autorización de obras hidráulicas según corresponda.",
+      "Cap. 2 y registro de permisos",
+      "Pendiente"
+    ],
+    [
+      "M20",
+      "N06, artículos 153 a 155; N07, artículo 6",
+      "Caudal ecológico definido mediante estudio; no sustituir por porcentaje arbitrario.",
+      "Cap. 3, metodología de balance",
+      "Pendiente; 100 l/s no aprobado"
+    ],
+    [
+      "M21",
+      "N07, artículo 7",
+      "Comprobar protección especial, ANP, amortiguamiento, ACR y humedales Ramsar.",
+      "Cap. 2, revisión territorial",
+      "Pendiente de emplazamiento confirmado"
+    ],
+    [
+      "M22",
+      "N08, artículos 7 a 11, Anexo 1 y N09",
+      "Determinar instrumento ambiental por características y sensibilidad; obtener aprobación antes de ejecución cuando corresponda.",
+      "Cap. 2, ruta ambiental",
+      "Pendiente clasificación y consolidación normativa"
+    ],
+    [
+      "M23",
+      "N08, artículo 75",
+      "Mantener manejo de recursos hídricos y condiciones ambientales del aprovechamiento.",
+      "Cap. 3 y 6",
+      "Pendiente estudio y programa de monitoreo"
+    ],
+    [
+      "M24",
+      "N10; seguridad laboral sectorial por consolidar",
+      "Diseño de cimentaciones, sismo, concreto, acero, seguridad y montaje.",
+      "Cap. 6, entregables civiles y plan de ensayos",
+      "Pendiente versiones y cálculos; no declarar conforme"
+    ],
+    [
+      "M25",
+      "N11 y normas contractuales IEC/IEEE/ASME",
+      "Definir edición contractual, alcance y garantías; la ficha web no equivale al texto completo.",
+      "Cap. 6, requisiciones",
+      "Pendiente acceso autorizado a normas y oferta de fabricante"
+    ],
+    [
+      "M26",
+      "N02, 050-104(3)-(7), Anexo B",
+      "Demostrar carga continua, marcado de equipo, tabla y correcciones; no elegir ampacidad aislada.",
+      "Cap. 5, contraste D8A/D8B",
+      "Lectura ampliada; instalacion real pendiente"
+    ],
+    [
+      "M27",
+      "N02, 050-106(3),(5)",
+      "Exclusion o ciclo de cargas debe documentarse y no elimina maxima corriente servible.",
+      "Cap. 3, modos auxiliares",
+      "Hipotesis de una bomba activa; enclavamiento pendiente"
+    ],
+    [
+      "M28",
+      "N01, 232.A y Tabla 232-1",
+      "Distancia por superficie y conductor; evaluar flecha/temperatura critica y notas.",
+      "Cap. 5, filas de referencia a 23 kV",
+      "Valores verificados; vanos y mediciones faltan"
+    ],
+    [
+      "M29",
+      "N19, articulos 79, 81, 84 y 85",
+      "Separar acreditacion, permiso de obras y licencia, con ambiente, predios y servidumbres segun corresponda.",
+      "Cap. 2, secuencia de evidencia ANA",
+      "Texto leido; ningun permiso otorgado"
+    ],
+    [
+      "M30",
+      "N01, 130.A y N20 como referencia tecnica",
+      "Coordinar cierre seguro y rechazo de carga con presion y sobrevelocidad.",
+      "Cap. 4, tres diametros y cribados",
+      "MOC y fabricante pendientes"
+    ],
+    [
+      "M31",
+      "N10 y codigo mecanico a seleccionar",
+      "Comprobar membrana, termica, viga, estabilidad local, anclajes y suelos.",
+      "Cap. 4 y 6, espesor efectivo y apoyos",
+      "Cribados calculados; material y codigo pendientes"
+    ]
+  ]
+}

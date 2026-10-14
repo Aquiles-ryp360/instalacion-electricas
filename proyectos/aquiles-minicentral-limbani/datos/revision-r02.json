@@ -1,0 +1,65 @@
+[
+  {
+    "id": "R02-01",
+    "tema": "Carga auxiliar sin correspondencia operativa",
+    "hallazgo": "R01 resta 3.5 kW para exportacion sin cantidades activas por modo; el cuadro de mantenimiento incluye equipos que no operan continuamente.",
+    "correccion": "Definir modos de generacion y mantenimiento con cantidades enteras activas, sumar P y Q por equipo e incorporar perdidas del TSA.",
+    "validacion": "Cierre activo de recurso bruto a PCC. Las potencias son hipotesis y falta inventario del sitio."
+  },
+  {
+    "id": "R02-02",
+    "tema": "Alternativa Di500 incompleta",
+    "hallazgo": "R01 recomienda comparar 500 mm, pero sus transitorios, materiales y especificaciones siguen en 450 mm.",
+    "correccion": "Calcular hidraulica, exportacion, transitorio, membrana, apoyos y masa para 450/500/550 mm; 500 mm es alternativa prioritaria de estudio, sin seleccion comercial.",
+    "validacion": "Tablas proceden de la misma configuracion. Codigo de material, soldadura, perfil y suelos pendientes."
+  },
+  {
+    "id": "R02-03",
+    "tema": "Margen insuficiente para una garantia de 150 kW",
+    "hallazgo": "Superar la meta por aritmetica puntual se puede interpretar como diseño asegurado; no se cuantifica sensibilidad a caudal, salto ni rendimiento.",
+    "correccion": "Calcular caudal inverso para PCC, margen absoluto y escenarios aislados de deterioro; comparar adicionalmente un margen de estudio del 5%.",
+    "validacion": "El margen de estudio no se atribuye al CNE ni al docente. No se inventa hidrologia ni energia anual."
+  },
+  {
+    "id": "R02-04",
+    "tema": "Ampacidad y carga continua",
+    "hallazgo": "Citar 446 A de Tabla D8A no desarrolla las subreglas 050-104(3)-(7), la Tabla D8B ni los limites de terminales.",
+    "correccion": "Agregar lectura de carga continua, marcacion 80/100%, restriccion subterranea y ejemplo de contraste con Tablas D8A/D8B; separar circuito de generacion y utilizacion.",
+    "validacion": "Valores extraidos del texto oficial; configuracion, temperatura y proteccion siguen pendientes, no se selecciona cable ejecutivo."
+  },
+  {
+    "id": "R02-05",
+    "tema": "Distancias de linea sin caso de consulta",
+    "hallazgo": "R01 cita secciones de CNE-S, pero no muestra valores de la tabla aplicable a conductor desnudo hasta 23 kV.",
+    "correccion": "Incluir filas de Tabla 232-1 para carreteras, vias rurales y areas peatonales, con alcance de tension y condiciones de flecha, notas y cruces.",
+    "validacion": "Los valores son consulta normativa condicional; no hay perfiles para demostrar distancias reales."
+  },
+  {
+    "id": "R02-06",
+    "tema": "Ruta ANA dejada como lista",
+    "hallazgo": "R01 menciona D.S. 023-2014-MINAGRI sin descargar y aplicar sus articulos modificados.",
+    "correccion": "Leer el texto oficial y relacionar articulos 79, 81, 84 y 85 con acreditacion, obras y licencia; registrar limites del anexo RJ007-2015 no disponible completo.",
+    "validacion": "Texto oficial descargado y con SHA-256. No se da por consolidado el corpus administrativo ni se asignan permisos otorgados."
+  },
+  {
+    "id": "R02-07",
+    "tema": "Arquitectura auxiliar y arranque",
+    "hallazgo": "El dibujo R01 conecta elementos por flechas sin identificar una barra BT ni fuente de servicios propios antes del sincronismo.",
+    "correccion": "Mostrar barra BT, interruptor de generador, transformador principal, enlace y derivacion al TSA; explicar arranque desde red y parada con respaldo CC.",
+    "validacion": "Esquema conceptual sin ajustes ni grupos vectoriales definitivos; arranque autonomo no demostrado."
+  },
+  {
+    "id": "R02-08",
+    "tema": "Resultados desconectados de entradas",
+    "hallazgo": "R01 contiene constantes repetidas (.42, 220, 450) y metrados escritos manualmente; el manifiesto omite el motor de calculo.",
+    "correccion": "Usar configuracion canonica para alternativas, modos y mecanica; generar masa, tablas y libro de energia; incluir motor y escudo en manifiesto.",
+    "validacion": "Pruebas fisicas y de balance; generacion reproducible. El constructor no escribe fuentes ni entregables aprobados."
+  },
+  {
+    "id": "R02-09",
+    "tema": "Area bruta de reja sin porosidad",
+    "hallazgo": "R01 calcula 1.17 m2 usando velocidad y bloqueo, pero omite la fraccion abierta entre barras al llamarla area bruta.",
+    "correccion": "Distinguir velocidad en huecos libres, porosidad de barras y bloqueo; recalcular area bruta de estudio con porosidad 0.60.",
+    "validacion": "La porosidad es hipotesis, no regla normativa; geometria, perdida y resistencia local pendientes."
+  }
+]

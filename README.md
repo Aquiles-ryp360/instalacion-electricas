@@ -1,6 +1,6 @@
 # Automatizacion de instalaciones electricas
 
-Repositorio para transformar informacion de viviendas y una nave industrial, idealmente desde croquis o modelos estructurados, en datos canonicos, calculos electricos, planos CAD, metrados, cotizaciones y expedientes tecnicos revisables.
+Repositorio para transformar informacion de viviendas, proyectos industriales y un anteproyecto hidroeléctrico en datos canonicos, calculos, planos, metrados, cotizaciones y expedientes tecnicos revisables.
 
 El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar resultados preliminares como diseno definitivo. Toda salida tecnica requiere revision humana y contraste con el Codigo Nacional de Electricidad, el RNE y las condiciones reales de obra.
 
@@ -16,7 +16,8 @@ El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar
 │   ├── renzo/                            vivienda de tres pisos
 │   ├── renzo-industrial/                 estacion de servicio (grifo) - unidad 2 de Renzo
 │   ├── renzo-linea-primaria-capachica/   linea primaria 22.9 kV y redes secundarias Chifron (Capachica)
-│   └── unidad-2-industrial/              estacion de servicio (grifo) - unidad 2 de Aquiles
+│   ├── unidad-2-industrial/              estacion de servicio (grifo) - unidad 2 de Aquiles
+│   └── aquiles-minicentral-limbani/      Centrales Hidroeléctricas - anteproyecto R02
 ├── referencias/              normativa versionada y material local ignorado
 └── build/                    resultados regenerables, ignorados por Git
 ```
@@ -57,6 +58,12 @@ El proyecto de unidad 2 de Renzo (`renzo-industrial`) esta en etapa inicial y
 no tiene aun pipeline habilitado.
 
 Todas las ejecuciones escriben resultados regenerables en `build/<proyecto>/`.
+El proyecto de [minicentral Limbani](proyectos/aquiles-minicentral-limbani/README.md)
+usa un constructor específico, con balance hidráulico y eléctrico, modos auxiliares,
+cribados de tubería y matriz normativa. Se ejecuta desde la raíz con
+`python proyectos/aquiles-minicentral-limbani/scripts/construir.py`.
+El motor genérico está en `herramientas/hidroelectricas/`; el pipeline residencial
+no se aplica a generación.
 En Renzo, el PDF temporal queda en `build/renzo/expediente/main.pdf`; la
 version revisada se publica en `proyectos/renzo/entregables/expediente.pdf`.
 

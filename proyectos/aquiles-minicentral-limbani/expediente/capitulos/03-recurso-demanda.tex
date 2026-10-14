@@ -1,0 +1,61 @@
+\chapter{Recurso hídrico, demanda y energía}
+\section{Estudio hidrológico necesario}
+El borrador reporta área de cuenca, precipitación, caudal medio y Q95 sin estación, periodo, serie ni metodología de transferencia. La cercanía de Phara o Sandia no demuestra equivalencia hidrológica. Se requieren delimitación de cuenca en el punto de captación, registros SENAMHI/ANA con metadatos, control de faltantes, homogeneidad, aforos locales y método de regionalización calibrado.
+
+Cada aforo debe registrar fecha, coordenadas, sección, nivel, equipo, calibración, procedimiento y error estimado. Una campaña en estiaje ayuda a contrastar el modelo, pero un aforo aislado no genera una curva de duración ni garantiza caudal todo el año. Deben revisarse derechos y captaciones aguas arriba y en el tramo derivado, retornos, avenida de diseño y transporte de sedimentos.
+
+\section{Balance disponible y caudal de diseño}
+Para cada intervalo $i$:
+\begin{align}
+Q_{disp,i}&=\max[0,Q_{rio,i}-Q_{eco,i}-Q_{terceros,i}-Q_{otros,i}],\\
+Q_{turb,i}&=\min[Q_d,Q_{disp,i}].
+\end{align}
+El balance debe ser consistente con la sección de aforo: si el caudal observado ya refleja una extracción aguas arriba, no se descuenta nuevamente. Las purgas o pérdidas se incorporan donde realmente consumen o desvían agua. Cuando $Q_{turb,i}$ quede bajo el mínimo técnico del grupo, se analiza parada o funcionamiento parcial según fabricante.
+
+Con los valores no comprobados del borrador, $0.520-0.100=0.420$ m$^3$/s. Este número coincide exactamente con el caudal de la alternativa y deja \textbf{margen nulo} para otros usos, incertidumbre y purgas. Por ello no respalda 150 kW firmes. Ni siquiera un Q95 validado representa 100\% del tiempo.
+
+La curva de duración se obtendrá ordenando caudales de una serie definida, documentando periodo y posición de trazado (por ejemplo, $p=m/(n+1)$). Se debe diferenciar curva anual, mensual y de época seca. En esta revisión se genera una \emph{curva de potencia versus caudal}, no una falsa curva de duración del río.
+
+\section{Demanda que justifica la central}
+Hay dos problemas distintos. En paralelo a red, el objetivo puede ser exportar energía conforme a conexión y contrato; no implica atender un número inventado de viviendas. En modo aislado, se necesita inventario por usuario, demanda simultánea, perfil horario, cargas prioritarias, motores y crecimiento sustentado. Los 150 kW del borrador son una meta de oferta, no una demanda demostrada.
+
+El levantamiento de cargas externas deberá contener usuario o grupo, cantidad, potencia eléctrica de entrada, factor de potencia, horas de uso, simultaneidad medida o justificada, arranque y prioridad. Para cada intervalo:
+\[
+P_{dem}(t)=\sum_j n_jP_{u,j}f_j(t),\qquad
+Q_{dem}(t)=\sum_j P_j(t)\tan[\arccos(fp_j)].
+\]
+Se suman potencias reactivas algebraicamente; no se suman kVA indiscriminadamente ni se usa un único factor de demanda residencial para una central.
+
+\section{Servicios propios propuestos}
+El siguiente inventario es una \textbf{hipótesis de dimensionamiento}, con potencias eléctricas absorbidas. Para una bomba real cuya placa indique potencia mecánica se dividirá entre su eficiencia; no se duplicará esa corrección cuando el dato ya sea potencia eléctrica.
+\small\input{generado/auxiliares}\normalsize
+\small\input{generado/modos_auxiliares}\normalsize
+En generación se consideran ocho luminarias interiores, cuatro exteriores, control, cargador, dos ventiladores, una bomba de drenaje y un gobernador activos: $P=\PAuxNormal$ kW y $Q=\QAuxNormal$ kvar. No se descuenta intermitencia de bombas sin un ciclo comprobado. La simultaneidad es una hipótesis operativa explícita, no un factor de demanda residencial. Mantenimiento suma $P=\PAuxMax$ kW y $S=\SAuxMax$ kVA con tomas e izaje, y se estudia con grupo parado e importación desde red.
+
+Se conserva una bomba de reserva. Contar solo una exige enclavamiento y comprobar que la inundación de diseño no demanda ambas. La regla CNE-U 050-106(3) permite tratar cargas mutuamente excluyentes según la mayor, cuando esa exclusión está demostrada; 050-106(5) exige atender la máxima carga que pueda servirse para equipos cíclicos. No se reduce ampacidad simplemente por el consumo energético promedio.
+
+El TSA candidato de 15 kVA alimenta auxiliares desde barra BT. Se suponen $P_{0,TSA}=0.08$ kW y $P_{cu,TSA}=0.25$ kW a placa. En generación sus pérdidas son \PerdTsa\ kW y se añaden al balance, sin confundirlas con carga de usuario. Sus potencias reactivas de magnetización y dispersión faltan en el modelo y deben incorporarse al flujo AC. La garantía en altura, corriente de arranque y caída transitoria de tensión pueden exigir otra potencia. Potencia continua suficiente no demuestra capacidad de arrancar el mayor motor.
+
+\subsection{Arranque y transición entre modos}
+Con red disponible y generador separado por 52G, el transformador principal puede alimentar la barra y el TSA si su esquema permite energización inversa. El control verifica agua, auxiliares, tensión, fase, velocidad y excitación antes de sincronizar. Se necesita enclavamiento que impida cierre fuera de sincronismo y recierre de red sobre una isla alimentada.
+
+Al perder red, la CC debe mantener relés y disparos, pero una batería de control no demuestra capacidad para operar toda la unidad hidráulica del gobernador. Debe comprobarse acumulador hidráulico, retorno a posición segura o respaldo requerido para cerrar sin sobrepresión. El arranque autónomo queda sin demostrar: exige una fuente de servicios propios y una secuencia separada, además de control del sistema aislado.
+
+\section{Energía anual y potencia firme}
+La producción debe evaluarse con rendimientos variables y disponibilidad:
+\begin{equation}
+E_{net}=\sum_i\left[\rho g Q_{turb,i}H_{n,i}\eta_t\eta_m\eta_g/1000
+-P_{aux,i}-P_{T,i}-P_{L,i}\right]\Delta t_i.
+\end{equation}
+La expresión se aplica en intervalos de operación; se modela por separado importación de auxiliares durante parada. Las horas fuera de servicio, vertimientos, límite del generador, restricciones de red y mínimos de turbina deben incorporarse. Si el despacho permite absorción de reactivos cambia la corriente y las pérdidas.
+
+Como mera sensibilidad sobre el objetivo, $150\times8760\times FC$ da 657, 920 y 1117 MWh/año para $FC=0.50$, 0.70 y 0.85, redondeados. Ninguno es pronóstico del sitio. La energía firme, el factor de planta y la disponibilidad se mantienen sin valor validado hasta cerrar el recurso y operación.
+
+\section{Campaña y datos de cierre}
+\begin{enumerate}
+\item Topografía georreferenciada y niveles de operación, incluyendo avenidas y restitución.
+\item Series y aforos; inventario de derechos, usos y retornos; estudio ecológico según N05-N07.
+\item Granulometría, concentración y mineralogía de sedimentos; temperatura del agua.
+\item Registro horario de demanda o condiciones formales de exportación a red.
+\item Inventario de auxiliares y garantías de desempeño del grupo para el rango de caudales.
+\end{enumerate}

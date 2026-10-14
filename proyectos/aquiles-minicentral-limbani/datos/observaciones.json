@@ -1,0 +1,194 @@
+[
+  [
+    "O01",
+    "Crítica",
+    "6, 11-16",
+    "La tubería de 175 m une puntos separados 211.67 m en el espacio según las propias coordenadas.",
+    "Retirar trazado como dato real. La alternativa de 220 m solo comprueba consistencia geométrica mínima, pendiente levantamiento.",
+    "Motor: comprobar_longitud; H-01"
+  ],
+  [
+    "O02",
+    "Crítica",
+    "6 y 11",
+    "Entre desarenador y cámara hay unos 290 m horizontales; el canal figura con 220 m.",
+    "Levantar eje, pendientes y niveles. Longitud de aducción definitiva queda sin dato; no confundir con 220 m del escenario de tubería.",
+    "Control geométrico independiente"
+  ],
+  [
+    "O03",
+    "Crítica",
+    "12-13, 15-16",
+    "Se mezclan saltos de 55, 52, 50 y 52.5 m y pérdidas de 2 y 4 m.",
+    "Fijar frontera energética cámara-turbina: Hb=52 m como hipótesis. Calcular Hn=Hb-hf-hlocal. Sumergir la entrada no crea energía.",
+    "Cap. 4; balance de energía"
+  ],
+  [
+    "O04",
+    "Crítica",
+    "13, 26",
+    "Con Q=0.380 m3/s, Hn=50 m y los rendimientos declarados resultan 142.653 kW, no 150.",
+    "Recalcular todas las tablas. El escenario reconstruido con tubería interior 390 mm y 175 m da cerca de 138 kW; geometría aún inconsistente.",
+    "calculos.json; prueba de conservación de energía"
+  ],
+  [
+    "O05",
+    "Crítica",
+    "9-10, 26",
+    "Q95=520 l/s y datos de cuencas vecinas no tienen series, estaciones ni modelo reproducible. Q95 no garantiza suministro durante 100% del año.",
+    "Solicitar registros, aforos, regionalización calibrada y balance mensual/diario; energía firme y anual quedan pendientes.",
+    "Cap. 3"
+  ],
+  [
+    "O06",
+    "Crítica",
+    "10",
+    "Se llama obligatorio al caudal ecológico de 100 l/s; 100/520 es 19.23%, no 20% exacto.",
+    "Aplicar estudio según R.J. 267-2019-ANA, art. 6; restar derechos de terceros y otros compromisos sin doble conteo.",
+    "N05-N07; matriz M18-M20"
+  ],
+  [
+    "O07",
+    "Alta",
+    "15-16",
+    "DN 400, 16 pulgadas, interior 390 mm y espesores variables se usan como geometría única.",
+    "Separar DN, diámetro exterior, espesor y diámetro interior por tramo. Evaluar pérdida y presión por cada diámetro real.",
+    "Cap. 4; alternativas por diámetro interior"
+  ],
+  [
+    "O08",
+    "Crítica",
+    "16, 21-22",
+    "La fórmula de cierre lento se presenta como garantía de golpe de ariete y de espesor seguro.",
+    "Usar solo cribado. Simular cierre real, rechazo de carga, falla del regulador, presión mínima, aire y rotura de columna; verificar cierre rápido de emergencia.",
+    "Cap. 4; transitorio elástico y MOC pendiente"
+  ],
+  [
+    "O09",
+    "Alta",
+    "16, 21",
+    "ASME B31.3, tensión admisible, eficiencia de junta, FS>5.2, ensayos 25% y prueba de 4 h carecen de justificación contractual.",
+    "Definir código aplicable a tubería forzada, material certificado, soldadura, tolerancias, corrosión, vacío, anclajes y plan de inspección. Retirar factores y duraciones garantizados.",
+    "Cap. 6"
+  ],
+  [
+    "O10",
+    "Crítica",
+    "17, 26",
+    "La fórmula de altitud escrita da 0.785, mientras el borrador reporta 0.892.",
+    "Corregir aritmética y retirar atribución de ley universal a IEC. Garantía de kW/kVA en sitio debe venir del fabricante. 200 kVA no es garantía de 150 kW.",
+    "Cap. 5; N11"
+  ],
+  [
+    "O11",
+    "Crítica",
+    "20",
+    "Dyn5 se describe con neutro de alta tensión accesible.",
+    "D corresponde a devanado de mayor tensión en delta; yn al de menor tensión. Definir grupo y puesta a tierra en estudio de conexión, sin trasladar el neutro al devanado delta.",
+    "Cap. 5; E-01"
+  ],
+  [
+    "O12",
+    "Crítica",
+    "17",
+    "Rpat=3.83 ohm se garantiza sin resistividad, método ni falla; se cita Regla 362 como límite de 5 ohm.",
+    "La Regla 362 trata subidas de tuberías en postes. Aplicar sección 3 y 036.A-B: paso, toque y transferidas; no calcular resistencia sin datos.",
+    "N01; M02-M03"
+  ],
+  [
+    "O13",
+    "Crítica",
+    "19",
+    "Neutro de generador sólidamente puesto a tierra sin estudio de secuencia cero.",
+    "Revisar CNE-S 132 e impedancia según sistema; evitar múltiples fuentes de neutro no coordinadas y trayectorias de falla por auxiliares.",
+    "Cap. 5; M07"
+  ],
+  [
+    "O14",
+    "Alta",
+    "19-20",
+    "ANSI 25 y 50/51 se enumeran sin estudio; umbrales de frecuencia se fijan sin acuerdo de interconexión.",
+    "Agregar criterio de anti-isla, direccionalidad, bloqueo de recierre, coordinación, protección mecánica y capacidad interruptiva. Ajustes quedan pendientes.",
+    "Cap. 5; matriz causa-efecto"
+  ],
+  [
+    "O15",
+    "Alta",
+    "20",
+    "Línea 1.2 km AAAC 35 mm2 y postes 12 m/300 kg carecen de levantamiento, vanos, cargas y cruces.",
+    "Conservar como hipótesis. Calcular regulación preliminar y exigir diseño térmico, mecánico, aislamiento, servidumbre y fallas reales.",
+    "Cap. 5; M11-M12"
+  ],
+  [
+    "O16",
+    "Alta",
+    "14-15, 26",
+    "La velocidad específica se llama rpm sin precisar convención; tamaño y 26 álabes se vuelven definitivos sin fabricante.",
+    "Fijar convención kW-m-rpm; no descartar Pelton por un único umbral. Rodete Banki es estimación; comparar curvas y cotizaciones.",
+    "Cap. 4; N12"
+  ],
+  [
+    "O17",
+    "Alta",
+    "13, 17, 26",
+    "Se confunden potencia hidráulica, de eje, bornes y exportación; no hay cuadro de auxiliares.",
+    "Agregar balance hasta punto de conexión y cuadro de cargas de servicios propios; separar demanda externa de potencia objetivo.",
+    "Cap. 3 y 5"
+  ],
+  [
+    "O18",
+    "Alta",
+    "24",
+    "Presupuesto por porcentajes sin metrados ni cotizaciones se usa para afirmar viabilidad financiera.",
+    "Retirar viabilidad demostrada. Conservar S/1.15 millones como antecedente; elaborar cantidades trazables, ACU, impuestos y flujo de caja con datos reales.",
+    "Cap. 7"
+  ],
+  [
+    "O19",
+    "Alta",
+    "25",
+    "Se anuncian nueve planos de detalle que no aparecen en el PDF.",
+    "Distinguir esquemas conceptuales efectivamente generados de planos pendientes; no asignar escalas a geometría no levantada.",
+    "Cap. 8; H-01 y E-01"
+  ],
+  [
+    "O20",
+    "Alta",
+    "5-9, 27",
+    "Fotografías, mapa, ruta, clima, SENAMHI y central existente no tienen registros verificables.",
+    "Conservar PDF original como evidencia; no reutilizar fotos como prueba de sitio. Solicitar licencia/origen, estación y periodo; verificar accesos con cartografía oficial y visita.",
+    "Cap. 1 y registro de fuentes"
+  ],
+  [
+    "O21",
+    "Alta",
+    "27 y fichas del repositorio",
+    "Se cita CNE Suministro 2014 y una ficha del repositorio atribuye aprobación a R.M. 366-2011, secciones y límites incorrectos.",
+    "Corregir a CNE Suministro 2011, R.M. 214-2011-MEM/DM; reemplazar ficha con referencias comprobadas y sin valores universales.",
+    "N01; ficha común corregida"
+  ],
+  [
+    "O22",
+    "Alta",
+    "18-22",
+    "IP23 se describe como cerrado; vibración, megado y velocidad de embalamiento se garantizan sin tipo de máquina ni instrucciones.",
+    "Especificar protección ambiental y ensayos según equipo; IP23 no es envolvente cerrada estanca. Separar sensores/electrónica antes de ensayos y pedir límites al fabricante.",
+    "Cap. 6"
+  ],
+  [
+    "O23",
+    "Alta",
+    "Expediente completo",
+    "Faltan ruta legal hídrica y ambiental, seguridad laboral y verificación de afectaciones territoriales.",
+    "Agregar matriz requisito-evidencia-estado, permisos por componente y revisión de versiones. La potencia pequeña no elimina esas obligaciones.",
+    "Cap. 2; N04-N10"
+  ],
+  [
+    "O24",
+    "Media",
+    "Portada, índice y cuerpo",
+    "Faltan código, docente y grupo; hay marcas de Markdown y numeración de capítulos irregular.",
+    "Portada con 227368, MEZA MAROCHO GREGORIO, GRUPO A; fuentes LaTeX por capítulos, referencias y tablas automáticas.",
+    "Expediente R02"
+  ]
+]

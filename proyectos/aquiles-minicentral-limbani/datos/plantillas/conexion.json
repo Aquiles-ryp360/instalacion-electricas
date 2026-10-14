@@ -1,0 +1,19 @@
+{
+  "estado": "plantilla vacía, no autorización ni modelo de red",
+  "distribuidora_confirmada": null,
+  "pcc_coordenadas": null,
+  "tension_maxima_kv": null,
+  "regimen_neutro_mt": null,
+  "impedancia_secuencia_positiva_ohm": null,
+  "impedancia_secuencia_cero_ohm": null,
+  "corriente_falla_max_ka": null,
+  "corriente_falla_min_ka": null,
+  "relacion_x_r": null,
+  "exportacion_max_kw": null,
+  "regulacion_reactiva": null,
+  "requisitos_antiisla": null,
+  "recierre_red": null,
+  "limite_propiedad": null,
+  "medicion_comercial": null,
+  "fuente_documental": null
+}

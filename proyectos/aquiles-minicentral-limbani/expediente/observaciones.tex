@@ -1,0 +1,32 @@
+\documentclass[11pt,letterpaper]{report}
+\input{preambulo}
+\begin{document}
+\hypersetup{pdftitle={Observaciones al borrador y auditoría R01 - Minicentral Limbani R02}}
+\chapter*{Informe de observaciones al borrador}
+\textbf{Proyecto:} Minicentral hidroeléctrica Limbani, primera unidad.\\
+\textbf{Alumno:} Aquiles Taylor Ramos Yapo, 227368.\\
+\textbf{Docente:} MEZA MAROCHO GREGORIO. \textbf{Sección:} GRUPO A.\\
+\textbf{Base:} PDF recibido el 13 de octubre de 2026, 28 páginas físicas (27 numeradas y portada).\\
+\textbf{Revisión:} R02, técnica, normativa y documental.
+
+Se identifican 24 observaciones. ``Crítica'' significa que cambia la factibilidad, la seguridad o la base de diseño; ``Alta'' requiere resolución antes de especificar o construir; ``Media'' afecta presentación y trazabilidad. Corregir una afirmación en el informe no acredita que el equipo o instalación física cumpla.
+
+Las páginas siguientes se refieren a la numeración impresa del borrador, no al índice físico del lector PDF. Las fuentes N01-N20, las ecuaciones y el registro de evidencias están desarrollados en el expediente R02 y en \texttt{datos/normativa.json}.
+\setcounter{section}{0}
+\renewcommand{\thesection}{\arabic{section}}
+\begingroup
+\small
+\setlength{\parskip}{3pt}
+\titlespacing*{\section}{0pt}{.6em}{.2em}
+\input{generado/observaciones}
+\endgroup
+\clearpage
+\chapter*{Auditoría de R01 y correcciones R02}
+Además de los 24 hallazgos del borrador original, se identifican nueve mejoras de la revisión anterior. Los resultados antiguos se conservaron por separado y no se usan como salidas activas.
+\setcounter{section}{0}
+\begingroup\small
+\setlength{\parskip}{3pt}
+\titlespacing*{\section}{0pt}{.6em}{.2em}
+\input{generado/revision-r02}
+\endgroup
+\end{document}

@@ -1,41 +1,33 @@
-# Ficha de norma: Código Nacional de Electricidad - Suministro 2011
+﻿# Ficha: Código Nacional de Electricidad - Suministro 2011
 
-## Identificación
+- Aprobación: **R.M. 214-2011-MEM/DM**, 29 de abril de 2011.
+- [Ficha oficial MINEM](https://www.gob.pe/institucion/minem/normas-legales/108753-0214-2011-mem).
+- [Texto oficial completo](https://cdn.www.gob.pe/uploads/document/file/95751/RM_214_2011_DM.pdf).
+- Consulta: 2026-10-13. Lectura dirigida de disposiciones pertinentes; no certificación de proyectos.
+- El texto de 2011 sustituye la edición aprobada mediante R.M. 366-2001-EM/VME. La identificación anterior «366-2011» era incorrecta.
 
-- Código interno: CNE-Suministro.
-- Nombre: Código Nacional de Electricidad - Suministro 2011.
-- Entidad emisora: Ministerio de Energía y Minas (MINEM) / Dirección General de Electricidad (DGE).
-- Aprobación: R.M. N.° 366-2011-MEM/DM.
-- Base legal superior: Ley de Concesiones Eléctricas (D.L. N.° 25844) y su Reglamento (D.S. N.° 009-93-EM).
-- Fiscalización: OSINERGMIN.
-- Texto oficial: <https://www.gob.pe/institucion/minem/normas-legales/174312-366-2011-mem-dm>.
-- Fecha de comprobación: 2026-10-11.
+## Alcance y mapa de lectura correcto
 
----
+| Referencia | Materia | Aplicación y evidencia requerida |
+|---|---|---|
+| 010, 011 y 012 | Objetivo, alcance obligatorio y responsabilidades | Delimitar suministro/utilización y responsabilidad. El CNE no es un manual completo de diseño. |
+| Sección 3; 032 a 038 | Puesta a tierra | Estudio de neutros, electrodos, equipotencialidad y fallas. |
+| 036.A y 036.B | Seguridad de tierra y estaciones | Limitar tensiones de toque, paso y transferidas. Una resistencia baja no prueba por sí sola seguridad. |
+| 036.D | Sistema con un solo electrodo | Requisito de 25 ohm en ese supuesto; no crea un límite universal de 5 o 10 ohm para estaciones. |
+| Parte 1, secciones 10 a 19 | Estaciones y equipos | Recinto, humedad, iluminación, fuego, rotativos, baterías, transformadores, maniobra y sobretensiones. |
+| 130.A, B y E; 132 | Generación | Disparo por sobrevelocidad además del regulador cuando corresponde; parada manual y control protegido. Resolver impedancia del neutro del generador según sistema. |
+| Parte 2, sección 23; 230, 232, 234 y tablas | Distancias de líneas aéreas | Elegir fila, columna, notas, tensión y condiciones de cada cruce. Verificar flecha crítica y perfil. |
+| Secciones 24, 25, 26 y 27 | Grados de construcción, cargas, resistencia y aislamiento | Calcular vanos, estructuras, cimentación y aislamiento con condiciones del sitio. |
+| Parte 3, secciones 30 a 39 | Líneas subterráneas | No es una sección exclusiva de subestaciones aéreas. |
+| Regla 362 | Subida de tuberías en poste | No establece límite general de resistencia de puesta a tierra. |
+| Parte 4, secciones 40 a 44 | Operación y trabajo | Procedimientos, personal, distancias y protección durante intervención. |
 
-## Función dentro de un proyecto de Redes y Transmisión
+## Altitud: leer el supuesto de cada regla
 
-El CNE-Suministro 2011 es la norma de **cumplimiento obligatorio** que rige las instalaciones de generación, líneas de transmisión y redes de distribución en media y baja tensión en todo el territorio peruano. Define las condiciones de seguridad pública, distancias mínimas de seguridad (DMS), cálculo mecánico de estructuras y conductores, y servidumbres de paso.
+La regla 232.C.1.b incrementa la distancia **adicional** definida en 232.C.1.a para tensiones que sobrepasan 33 kV. No se aplica como incremento uniforme a todas las distancias de una línea de 22.9 kV. Otras separaciones tienen sus propios supuestos.
 
----
+La coordinación de aislamiento de equipos se verifica con altitud, tensión máxima, impulso, contaminación y ficha del fabricante. No identificar distancia en aire y línea de fuga ni imponer 28% a ambas por una expresión exponencial sin norma y alcance documentados.
 
-## Secciones y Reglas Críticas Aplicadas al Proyecto Limbani
+## Corrección de la ficha anterior
 
-| Parte / Sección | Título / Regla | Aplicación en el Proyecto de Limbani |
-| :--- | :--- | :--- |
-| **Parte 1 (Regla 010-017)** | Reglas para la puesta a tierra de sistemas eléctricos | Puesta a tierra de neutro de transformadores, puesta a tierra de protección (PAT) en estructuras de MT y BT, pararrayos en SED. Resistencia máxima $\le 25\ \Omega$ (o $\le 10\ \Omega$ en SED). |
-| **Parte 2 / Sección 21** | Separaciones y Distancias Mínimas de Seguridad (DMS) | Distancias verticales del conductor al suelo:<br>- Calles y avenidas transitables: $\ge 6.5\text{ m}$ en MT (10-22.9 kV), $\ge 5.5\text{ m}$ en BT.<br>- Terrenos no transitables / laderas andinas: $\ge 5.5\text{ m}$ en MT, $\ge 4.0\text{ m}$ en BT.<br>- Cruces sobre cursos de agua y ríos (Río Limbani): $\ge 6.0\text{ m}$ libre sobre nivel de crecida máxima. |
-| **Parte 2 / Sección 22** | Separaciones respecto a edificaciones y fajas marginales | Distancia horizontal mínima de conductores a fachadas, ventanas y balcones: $\ge 2.5\text{ m}$ en MT y $\ge 1.0\text{ m}$ en BT autoportante. |
-| **Parte 2 / Sección 23** | Sobrecargas mecánicas y factores de seguridad | Hipótesis de cálculo mecánico según zona climática (Zona 2 - Sierra/Altiplano):<br>- Hipótesis I: Viento máximo ($V_{\text{viento}} = 80-100\text{ km/h}$, $T_{\text{min}} = 5^\circ\text{C}$).<br>- Hipótesis II: Temperatura mínima ($T = -5^\circ\text{C}$, viento moderado).<br>- Hipótesis III: Temperatura máxima ($T = 35^\circ\text{C}$, viento nulo, flecha máxima). |
-| **Parte 2 / Sección 24** | Selección y esfuerzo en soportes (Postes CAC) | Factores de seguridad para postes de concreto armado centrifugado (CAC): factor $\ge 2.0$ respecto a la carga de rotura nominal en la cima. |
-| **Parte 3 / Sección 30** | Subestaciones de Distribución (SED) aéreas monoposte y biposte | Montaje de transformadores en estructura biposte (SAB) con seccionadores cut-out, pararrayos de óxido de zinc (ZnO) y tablero de distribución con termomagnéticos. |
-
----
-
-## Consideraciones Especiales por Altitud (> 1,000 m.s.n.m.)
-
-- Limbani se ubica a aproximadamente **3,050 m.s.n.m.**.
-- Conforme a la Regla 214 del CNE-Suministro y la norma IEC 60071, la densidad del aire disminuye con la altitud, reduciendo la rigidez dieléctrica del aire.
-- **Factor de corrección por altitud ($k_a$):**
-  $$k_a = e^{\frac{H - 1000}{8150}} \approx e^{\frac{3050 - 1000}{8150}} \approx 1.28$$
-- Por tanto, la línea de fuga de los aisladores (aisladores poliméricos o de porcelana tipo pin y suspensión) y las distancias dieléctricas en aire deben incrementarse en un **28%** respecto al nivel del mar.
+Se retiraron materias asignadas a secciones incorrectas, límites universales sin sustento y parámetros climáticos de un proyecto particular. Cada proyecto debe construir su matriz requisito-evidencia-estado. La revisión de Limbani está en `proyectos/aquiles-minicentral-limbani/datos/normativa.json`; los datos de campo siguen pendientes.

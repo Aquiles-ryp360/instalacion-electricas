@@ -1,0 +1,12 @@
+codigo,descripcion,unidad,cantidad,base,estado,precio_unitario_pen,costo_pen
+TF01,Tuberia forzada hipotetica,m,,Longitud del escenario canonico; cantidad se genera por modelo,hipotesis R02,,
+TF02,Acero envolvente tuberia,kg,,Masa envolvente del diametro prioritario y pared nominal; sin accesorios,"cantidad calculada, geometria hipotetica",,
+EM01,Turbina flujo cruzado candidata,conjunto,1,Desempeno segun calculos,no cotizado,,
+EM02,Generador candidato 250 kVA,unidad,1,Garantia en sitio requerida,no cotizado,,
+EM03,Transformador candidato 250 kVA,unidad,1,Grupo vectorial pendiente,no cotizado,,
+SA01,TSA candidato 15 kVA,unidad,1,Cuadro de auxiliares hipotetico,no cotizado,,
+MT01,Conductor de fase MT sin flecha ni reserva,m,,Tres fases por longitud canonica; sin flecha ni bajadas,hipotesis R02,,
+MT02,Postes y retenidas,unidad,,Requiere vanos y calculo mecanico,pendiente,,
+OC01,Concreto estructuras,m3,,Requiere planos y calculo estructural,pendiente,,
+OC02,Excavacion,m3,,Requiere perfil y suelos,pendiente,,
+PT01,Sistema de puesta a tierra,conjunto,,Requiere resistividad y fallas,pendiente,,
