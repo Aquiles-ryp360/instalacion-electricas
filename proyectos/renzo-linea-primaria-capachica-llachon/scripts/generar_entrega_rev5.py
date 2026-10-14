@@ -19,6 +19,7 @@ from shapely.geometry import LineString, Point, box
 
 from generar_entrega_rev4 import read_inputs, verify as verify_rev4
 from rev5_modelos import sensitivity_rows
+from planos_topografia_plantas_rev5 import generate as generate_geo_plans, verify as verify_geo_plans
 
 ROOT = Path(__file__).resolve().parents[1]
 REV4 = ROOT / "ENTREGA_FINAL_CAPACHICA_LLACHON_REV4"
@@ -201,8 +202,10 @@ def build(output: Path):
         shutil.copy2(REV4/rel,output/"02_DATOS_Y_CRITERIOS/fuentes"/name)
     shutil.copy2(ROOT/"scripts/rev5_modelos.py",output/"03_CALCULO_ELECTRICO/rev5_modelos.py")
     shutil.copy2(ROOT/"scripts/generar_entrega_rev5.py",output/"00_INDICE_Y_RESUMEN/generar_entrega_rev5.py")
+    shutil.copy2(ROOT/"scripts/planos_topografia_plantas_rev5.py",output/"00_INDICE_Y_RESUMEN/planos_topografia_plantas_rev5.py")
     shutil.copy2(ROOT/"requirements.txt",output/"00_INDICE_Y_RESUMEN/requirements.txt")
     make_gap_plan(output,lines,gis,gaps,inter)
+    generate_geo_plans(output)
 
     # Fuente única de parámetros. Confirmado significa documento visto, no realidad en terreno.
     inputs=[]
@@ -289,11 +292,13 @@ def build(output: Path):
     write(output/"README.md",f"""
 # Entrega académica Rev. 5 — línea primaria Capachica–Llachón
 
-**Estado: anteproyecto académico documentado, no apto para construcción.** La Rev. 5 incorpora modelos eléctricos/mecánicos condicionados, sensibilidad adimensional, tabla maestra de entradas y plano CL-06 de brechas. CL-01 a CL-05 son copias identificadas **Rev. 4**, conservadas como planos de referencia, no reemitidas como diseño Rev. 5.
+**Estado: anteproyecto académico documentado, no apto para construcción.** La Rev. 5 incorpora modelos eléctricos/mecánicos condicionados, sensibilidad adimensional, tabla maestra de entradas y planos CL-06 a CL-08. CL-01 a CL-05 son copias identificadas **Rev. 4**, conservadas como planos de referencia, no reemitidas como diseño Rev. 5.
 
 Resultado geométrico: KML original de cuatro segmentos, {kml_m:.3f} m UTM sin uniones; eje GIS alternativo {gis_m:.3f} m; diferencia {kml_m-gis_m:.3f} m entre ejes, no metrado. El KML tiene 187 vértices. PC={len(pc)} referencias GIS, PN={len(pn)} sitios por replantear y CV={len(cv)} alertas OSM. Ninguno es una estructura nueva aprobada.
 
 **Sin resultados de dimensionamiento del proyecto:** no constan punto oficial, tensión, fases, demanda, conductor, parámetros de red, topografía de vanos, clima/terreno o permisos. Los factores de `ESCENARIOS_ADIMENSIONALES.csv` son hipótesis matemáticas, no voltajes, cargas ni materiales asignados.
+
+CL-07-S1..S4 separa los cuatro segmentos KML y representa PC GISEM sin confirmar su existencia, PN como sitios candidatos de replanteo y CV como alertas OSM. CL-08 resume 57 muestras SRTM30m interpoladas cada 250 m sobre el eje GIS alternativo; no corresponde al KML y no sirve para gálibos. El KML `02_DATOS_Y_CRITERIOS/fuentes/GIS_REV5_ABRIR_EN_GOOGLE_EARTH.kml` se puede abrir en Google Earth Pro para inspección de gabinete.
 
 Desde raíz del repositorio: `python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_entrega_rev5.py --output RUTA_NUEVA`. No sobrescribe rutas existentes. Verificar con `--verify RUTA_EXISTENTE`. Dependencias en `00_INDICE_Y_RESUMEN/requirements.txt`; usar un entorno virtual. La copia del generador en el paquete es de referencia: requiere las fuentes originales y Rev. 4 en este repositorio. `manifest_rev5.json` da SHA-256 por archivo y la huella del manifiesto Rev. 4 de partida.
 """)
@@ -302,12 +307,14 @@ Desde raíz del repositorio: `python proyectos/renzo-linea-primaria-capachica-ll
 
 00 resumen, índice, revisión y script; 01 memoria del corredor; 02 datos maestros, geometría y copias controladas; 03 modelo y sensibilidad eléctrica; 04 modelo mecánico y registro de sitios; 05/06 planos PDF/DXF; 07 cantidades y presupuesto; 08 normativa y trazabilidad; 09 pruebas y manifiesto; 10 solicitudes y plan de campo.
 
-CL-01 a CL-05 conservan **REV4** en el nombre y cajetín. CL-06 es el único plano nuevo REV5. Los originales Rev. 4 no fueron editados.
+CL-01 a CL-05 conservan **REV4** en el nombre y cajetín. CL-06 documenta las brechas geométricas. CL-07-S1 a CL-07-S4 muestran los cuatro segmentos del KML y separan las referencias PC GISEM, sitios PN candidatos y alertas CV OSM. CL-08 muestra muestras SRTM únicamente como contexto del eje GIS alternativo. Los originales Rev. 4 no fueron editados.
 """)
     write(output/"00_INDICE_Y_RESUMEN/RESUMEN.md",f"""
 # Resultados y estado Rev. 5
 
 **Demostrado por cálculo sobre las fuentes:** {kml_m:.6f} m de KML UTM, {geod_m:.6f} m geodésicos, {gis_m:.6f} m de eje GIS alternativo; tres brechas rectas de {', '.join(f'{float(x["distancia_recta_m"]):.3f}' for x in gaps)} m; intersección S3/S4 en E {inter.x:.3f} m, N {inter.y:.3f} m. Estas magnitudes no completan el trazado de obra.
+
+**Plantas de contexto:** CL-07-S1..S4 representan la geometría original de cada segmento, con {len(pc)} PC GIS de referencia, {len(pn)} sitios PN candidatos y {len(cv)} alertas CV OSM, clasificados en sus tablas. CL-08 usa 57 muestras SRTM30m interpoladas cada 250 m nominalmente sobre el eje GIS alternativo; no es topografía constructiva ni está asociada al KML.
 
 **Preliminar cartográfico:** {len(pc)} PC, {len(pn)} PN, {len(cv)} CV. **Hipótesis:** multiplicadores de sensibilidad sin unidades. **Pendiente:** 21 entradas esenciales registradas como nulos; cálculos de corriente/caída/pérdidas/protecciones, vanos/flechas/despejes/estructuras y presupuesto del proyecto. **Validación profesional:** requiere fuentes oficiales, mediciones y memoria revisada; no se solicitó aprobación.
 """)
@@ -317,7 +324,7 @@ CL-01 a CL-05 conservan **REV4** en el nombre y cajetín. CL-06 es el único pla
 - Tabla maestra única con procedencia, método, estado y efecto de cada variable relevante.
 - Modelos condicionados de corriente, caída, pérdidas, ampacidad corregida, Icc ideal, vano regulador, flecha parabólica, viento y resultante angular; datos sintéticos solo en pruebas.
 - Sensibilidad adimensional de demanda y longitud; cero selección de conductor o protección.
-- CL-06 nuevo para las tres brechas y la intersección S3/S4; CL-01..05 Rev. 4 permanecen como referencia sin cambiar de estado.
+- CL-06 para las tres brechas y la intersección S3/S4; CL-07-S1..S4 para plantas por segmento y CL-08 para contexto SRTM del eje GIS; CL-01..05 Rev. 4 permanecen como referencia sin cambiar de estado.
 - Plantillas vacías de entrada y campo, matriz requisito–cálculo–plano–evidencia y verificación de integridad por SHA.
 """)
     write(output/"01_MEMORIA_DESCRIPTIVA/MEMORIA.md",f"""
@@ -416,12 +423,12 @@ El proyecto requiere respuesta formal de Electro Puno: factibilidad, punto/códi
     write(output/"09_CONTROL_DE_CALIDAD/CONTROL.md","""
 # Control de calidad de Rev. 5
 
-`--verify` reabre PDF, DXF, CSV y manifiesto, compara entidades métricas de CL-06 con KML, verifica las 21 entradas pendientes y diferencia clases de datos. Las pruebas unitarias usan valores sintéticos con solución analítica, validación de no finitos y escenarios adimensionales. Esto demuestra funcionamiento del software y coherencia de geometría; no sustituye revisión eléctrica, mecánica, legal o inspección de campo. CL-01..05 son copias idénticas por hash de Rev. 4. CL-06 se revisa visualmente mediante PNG. No se abrió AutoCAD.
+`--verify` reabre PDF, DXF, CSV y manifiesto, compara entidades métricas de CL-06 con KML, verifica las 21 entradas pendientes y diferencia clases de datos. También verifica CL-07-S1..S4, el perfil CL-08 y los 205 elementos del KML de visualización (40 PC, 27 PN, 44 CV, 57 muestras SRTM y cuatro ejes KML más el eje GIS). Esto demuestra funcionamiento del software y coherencia de datos; no sustituye revisión eléctrica, mecánica, legal o inspección de campo. CL-01..05 son copias idénticas por hash de Rev. 4. No se abrió AutoCAD ni Google Earth Pro.
 """)
     write(output/"09_CONTROL_DE_CALIDAD/PRUEBAS_EJECUTADAS.md","""
 # Pruebas ejecutadas en la preparación Rev. 5 (14-10-2026)
 
-Comando: `python -m pytest proyectos/renzo-linea-primaria-capachica-llachon/tests/test_rev5_modelos.py proyectos/renzo-linea-primaria-capachica-llachon/tests/test_entrega_rev5.py -q` → **13 passed**. Tras añadir el norte y coordenadas de extremos a CL-06/tabla de segmentos, se repitió la prueba de integración afectada: **4 passed**. `--verify` se ejecuta al generar el paquete; reabre seis PDF y seis DXF, coteja la geometría KML/las tres brechas, hashes y 21 entradas pendientes. Las 42 pruebas Rev. 4 con 5 xfail históricos habían pasado en la revisión precedente y no se repitieron porque sus fuentes y código no cambiaron.
+Comando de pruebas previamente ejecutado en Rev. 5: `python -m pytest proyectos/renzo-linea-primaria-capachica-llachon/tests/test_rev5_modelos.py proyectos/renzo-linea-primaria-capachica-llachon/tests/test_entrega_rev5.py -q` → **13 passed**. Tras añadir el norte y coordenadas de extremos a CL-06/tabla de segmentos, se repitió la prueba de integración afectada: **4 passed**. En esta actualización se ejecutó el generador y su `--verify`; no se repitió pytest. La verificación de paquete reabre seis planos base y cinco láminas nuevas (CL-07-S1..S4 y CL-08), valida geometrías/capas, tamaños PDF, referencias, hashes y conteos del overlay KML. Las 42 pruebas Rev. 4 con 5 xfail históricos habían pasado en la revisión precedente y no se repitieron porque sus fuentes y código no cambiaron.
 
 Se inspeccionó visualmente el PNG renderizado de CL-06. No se realizó inspección física, revisión profesional ni apertura en AutoCAD. Las pruebas sintéticas no son cálculos del alimentador real.
 """)
@@ -434,7 +441,7 @@ Se inspeccionó visualmente el PNG renderizado de CL-06. No se realizó inspecci
         rel=path.relative_to(output).as_posix()
         indexed.append({"ruta":rel,"bytes":path.stat().st_size,
                         "clase":"plano Rev4 conservado" if "CL-0" in rel and "REV4" in rel else
-                                "plano nuevo Rev5" if "CL-06_REV5" in rel else "documento o dato Rev5"})
+                                "plano nuevo Rev5" if "CL-06_REV5" in rel or "CL-07-S" in rel or "CL-08_REV5" in rel else "documento o dato Rev5"})
     table(output/"00_INDICE_Y_RESUMEN/INDICE_ARCHIVOS.csv",["ruta","bytes","clase"],indexed)
     files={p.relative_to(output).as_posix():{"bytes":p.stat().st_size,"sha256":digest(p)}
            for p in output.rglob("*") if p.is_file() and p.name!="manifest_rev5.json"}
@@ -508,7 +515,8 @@ def verify(output: Path):
             for rel in row[field].split("; "):
                 if not (output/rel).is_file():
                     raise ValueError(f"referencia rota en {row['codigo']}: {rel}")
-    print(json.dumps({"estado":"verificado por software","archivos":m["file_count"],"planos":6,
+    verify_geo_plans(output)
+    print(json.dumps({"estado":"verificado por software","archivos":m["file_count"],"planos":11,
                       "dimensionamiento_proyecto":"pendiente","ruta":str(output)},ensure_ascii=False))
     return m
 

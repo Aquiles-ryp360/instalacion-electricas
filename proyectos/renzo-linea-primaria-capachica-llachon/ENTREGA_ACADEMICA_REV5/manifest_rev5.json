@@ -3,35 +3,39 @@
   "estado": "ACADEMICO_NO_CONSTRUCTIVO",
   "rev4_manifest_sha256": "6f3f55ec8263bbeef32b1f9a0221c17ff1237da6d6d2091cf353a35cc40fc45f",
   "original_kml_sha256": "d68db8f50d3408e93612471acdc5db59ccaddb37bdbf08fa4c5e764fff082ec8",
-  "file_count": 49,
+  "file_count": 69,
   "files": {
     "README.md": {
-      "bytes": 1543,
-      "sha256": "f0bb2c2dcd609ca8577a479f33e4728632769bcd936c38aca9555054bffeccea"
+      "bytes": 1975,
+      "sha256": "d2488bfb2ade5f59166159d2b7288496c7ac92639bc4849bac235edf97212809"
     },
     "00_INDICE_Y_RESUMEN/generar_entrega_rev5.py": {
-      "bytes": 37775,
-      "sha256": "d631fb44cbd7d6c06145d7fb92657f7cdb717260e594b4d8bd27d0285143982b"
+      "bytes": 39383,
+      "sha256": "46915962a76742e93c1c9469726c5f0f095d2d65be445a6e612e8ab418d28450"
     },
     "00_INDICE_Y_RESUMEN/INDICE.md": {
-      "bytes": 499,
-      "sha256": "2b781fad746ef7cac3fba0db78715cd6b91f99e83c1a2f76aec11a82cfbce26f"
+      "bytes": 716,
+      "sha256": "afad8483968f41ddbc7d67886baf971fe6a8aa4289dffbdb5186258cf74dadc6"
     },
     "00_INDICE_Y_RESUMEN/INDICE_ARCHIVOS.csv": {
-      "bytes": 3286,
-      "sha256": "8fe848113c96afabb1a023e9325f766d7ea83af780348bc87ed6e1e4e126a11f"
+      "bytes": 4582,
+      "sha256": "dace5816bfa0ea0b671884448e0b2c2d64646a6f0286a921aeaa3e2da44686dd"
+    },
+    "00_INDICE_Y_RESUMEN/planos_topografia_plantas_rev5.py": {
+      "bytes": 26798,
+      "sha256": "562139ec45a7dbacf68b2be2c5e4bc9aefd58185d62dd5f52c0b8f6f70a2f5d3"
     },
     "00_INDICE_Y_RESUMEN/REGISTRO_CAMBIOS.md": {
-      "bytes": 678,
-      "sha256": "ae0bcd7624b449a9abe908e529d5ea97cbf2fff0480521b05f0410444b4118da"
+      "bytes": 751,
+      "sha256": "bba37ab1b47adeed043f6b073978c9156905790cd1a2bf14c123d890953a170f"
     },
     "00_INDICE_Y_RESUMEN/requirements.txt": {
       "bytes": 169,
       "sha256": "90d51aef190f1b8a875b92e0446749ec684f85ed52f4011705ba6cf07aa39e4a"
     },
     "00_INDICE_Y_RESUMEN/RESUMEN.md": {
-      "bytes": 740,
-      "sha256": "3b15fcd87f432178eeece3219b69b1b12bc77fd26b77bd44fc7081f894e2fd74"
+      "bytes": 1090,
+      "sha256": "e08e98418c252e67cf7bd12a7323390cef2dc336646ea36b632fbf4d5aa6434e"
     },
     "01_MEMORIA_DESCRIPTIVA/MEMORIA.md": {
       "bytes": 999,
@@ -53,6 +57,14 @@
       "bytes": 925,
       "sha256": "329556935ac3eb45e5828ac4f251f3fae489fb235618011713aaac6f86755f56"
     },
+    "02_DATOS_Y_CRITERIOS/SRTM30M_MUESTRAS.csv": {
+      "bytes": 5089,
+      "sha256": "e5cf86e1fca6de4a227f87ec7288318094d568383ccb12312750d2eb9dd39288"
+    },
+    "02_DATOS_Y_CRITERIOS/TOPOGRAFIA_SRTM.md": {
+      "bytes": 934,
+      "sha256": "95fbe9f8652ca34de6320210d8cc0c0d978b635f6f70b64b097f9ba2d3a63e64"
+    },
     "02_DATOS_Y_CRITERIOS/fuentes/CONCILIACION_REV3.json": {
       "bytes": 4886,
       "sha256": "58d26e38956d72c88c3fae6034d952b4acfc63be6393f6ed8d7be11ecdb6a100"
@@ -69,6 +81,10 @@
       "bytes": 837,
       "sha256": "27e5784deea1975cb41079f68ddc51592f081cb0101adaaec10e45f5397c007d"
     },
+    "02_DATOS_Y_CRITERIOS/fuentes/GIS_REV5_ABRIR_EN_GOOGLE_EARTH.kml": {
+      "bytes": 75763,
+      "sha256": "0e762ba011bab02043dc98751d2432bd832553c79ce04d22b0618a30dafb49d3"
+    },
     "02_DATOS_Y_CRITERIOS/fuentes/KML_ORIGINAL.kml": {
       "bytes": 9467,
       "sha256": "d68db8f50d3408e93612471acdc5db59ccaddb37bdbf08fa4c5e764fff082ec8"
@@ -84,6 +100,10 @@
     "02_DATOS_Y_CRITERIOS/fuentes/PN_SITIOS_REPLANTEO.csv": {
       "bytes": 13799,
       "sha256": "c140885e6a29ed70b71d51e34139f778975f24a3517b305b328ec3dd6757f1e0"
+    },
+    "02_DATOS_Y_CRITERIOS/fuentes/SRTM30M_MUESTRAS.json": {
+      "bytes": 14557,
+      "sha256": "3221067755e85f29860e8a4e7afd0dca35134a1ab1f84bf8e31b76726bcaced1"
     },
     "03_CALCULO_ELECTRICO/ENTRADAS_PENDIENTES.csv": {
       "bytes": 579,
@@ -133,6 +153,26 @@
       "bytes": 4507,
       "sha256": "a85d4a75c0b651cd5953bea5fc2dec68798e7417e5084552cc719052074c30b3"
     },
+    "05_PLANOS_PDF/CL-07-S1_REV5.pdf": {
+      "bytes": 5619,
+      "sha256": "5866a6fd73777d0a5dbda37b4e2356e4861b23b1be1e7b3bde93d000f7dd8636"
+    },
+    "05_PLANOS_PDF/CL-07-S2_REV5.pdf": {
+      "bytes": 9104,
+      "sha256": "a2de385b2938e3cd76c09f129cc26806e083f070095275d6b239e6f00d005774"
+    },
+    "05_PLANOS_PDF/CL-07-S3_REV5.pdf": {
+      "bytes": 5115,
+      "sha256": "b20d15ac7d35ce7cc4b6013a91c9cb9e6bfaa18e9ecf9ec178181cd641d2bfd3"
+    },
+    "05_PLANOS_PDF/CL-07-S4_REV5.pdf": {
+      "bytes": 7591,
+      "sha256": "b801a4b27065667d57247d1a8924870c6d34befa0b43697879aa59bf59d9167b"
+    },
+    "05_PLANOS_PDF/CL-08_REV5.pdf": {
+      "bytes": 34416,
+      "sha256": "ec66b98756d855ccb6d374c74ce9bdb60664b81b668a1864183c91e7adf974bd"
+    },
     "06_PLANOS_EDITABLES/CL-01_REV4.dxf": {
       "bytes": 76576,
       "sha256": "3ab73f4f7473ee14222cd16ad331fedb8cf7d0023e9bb999f76c596141d138e4"
@@ -155,7 +195,27 @@
     },
     "06_PLANOS_EDITABLES/CL-06_REV5.dxf": {
       "bytes": 51810,
-      "sha256": "89c7e9a0ea1149a8d68435ae1984d09dd0e9225e2bad8e2a00a6c4a8855fca9e"
+      "sha256": "27f19d349090a5a7c911044650f2569ff8e29f80efc1ef66827b6fa8c751a482"
+    },
+    "06_PLANOS_EDITABLES/CL-07-S1_REV5.dxf": {
+      "bytes": 47996,
+      "sha256": "cbb71b746bdaba49c55019a1634d03e6b73134beab26c01b754192d77366a00f"
+    },
+    "06_PLANOS_EDITABLES/CL-07-S2_REV5.dxf": {
+      "bytes": 75302,
+      "sha256": "e3d8f3003196743ab0c725de443790acb1f90481574ea3c726caaff70b4b4d69"
+    },
+    "06_PLANOS_EDITABLES/CL-07-S3_REV5.dxf": {
+      "bytes": 43705,
+      "sha256": "c211a0623fade76a9c37b03f1fef0cc078cc267c8006ab990a789977762fca83"
+    },
+    "06_PLANOS_EDITABLES/CL-07-S4_REV5.dxf": {
+      "bytes": 64982,
+      "sha256": "cb30235d9c4b5efe88eb7c6bc4c6a43d3f0cfa8066f0f6b21e214f841f1cb771"
+    },
+    "06_PLANOS_EDITABLES/CL-08_REV5.dxf": {
+      "bytes": 43925,
+      "sha256": "d65a0187135cd9ef1ca664870e65c5e92caebc81f31e66fbd5b385aaebce311a"
     },
     "07_METRADOS_Y_PRESUPUESTO/CANTIDADES_CLASIFICADAS.csv": {
       "bytes": 482,
@@ -181,17 +241,37 @@
       "bytes": 118225,
       "sha256": "8cab1f5439090b4ed9ef0644236fe0af91f28b7191184db6e8d7ccb863a9b7dd"
     },
+    "09_CONTROL_DE_CALIDAD/CL-07-S1_REV5.png": {
+      "bytes": 96369,
+      "sha256": "21decc8259b6149e8c55074f010a5785a5d7efec13d7746593f9ddabe246905b"
+    },
+    "09_CONTROL_DE_CALIDAD/CL-07-S2_REV5.png": {
+      "bytes": 173664,
+      "sha256": "bf2f16d1801dc86a653430fda412a2dfa1dedcfabda1ad2aa1978c422c7fae71"
+    },
+    "09_CONTROL_DE_CALIDAD/CL-07-S3_REV5.png": {
+      "bytes": 112104,
+      "sha256": "b13db978afc1c7b63134d51484f62ba3a1ae874cf2629214be7a5cbbc9665460"
+    },
+    "09_CONTROL_DE_CALIDAD/CL-07-S4_REV5.png": {
+      "bytes": 147818,
+      "sha256": "c4adf848e8ac63388103ff4a74dff169fa6d6131a18ecfffc2dc8bdb759d1630"
+    },
+    "09_CONTROL_DE_CALIDAD/CL-08_REV5.png": {
+      "bytes": 210442,
+      "sha256": "9a1fb93ef3a207b9da39f777dee29530ebc2173fd6d8072eeebc4c28ab407336"
+    },
     "09_CONTROL_DE_CALIDAD/CONTROL.md": {
-      "bytes": 584,
-      "sha256": "6fc3b2062124913b5b49e8a3690ee2af295ad3a29bc419c166dd423dcb9725ad"
+      "bytes": 598,
+      "sha256": "1eef5e4302003e344daf19c714170b1a652b74d3e76ccbb9c099533dfda056f7"
     },
     "09_CONTROL_DE_CALIDAD/DEPENDENCIAS_EJECUCION.json": {
       "bytes": 201,
       "sha256": "1dc749f799687803c47fcefc6040981e62ebe552ff881fbf65efc53cd5df7194"
     },
     "09_CONTROL_DE_CALIDAD/PRUEBAS_EJECUTADAS.md": {
-      "bytes": 908,
-      "sha256": "c384ad7085ac17edb743fef3adb42f0285bc002909163ce2a19d192915a69cf3"
+      "bytes": 1077,
+      "sha256": "56ccf11f59250948f9cb7243b9de25887dcf5645672199edc39a8cfb5c1b86d7"
     },
     "10_PENDIENTES_DE_CAMPO_Y_ELECTRO_PUNO/PLAN_CAMPO.md": {
       "bytes": 1138,
