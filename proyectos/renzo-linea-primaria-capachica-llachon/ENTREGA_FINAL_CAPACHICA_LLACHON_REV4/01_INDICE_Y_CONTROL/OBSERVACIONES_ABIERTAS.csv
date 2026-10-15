@@ -1,0 +1,9 @@
+﻿id,bloqueo,responsable,criterio_cierre,estado
+P0-01,Factibilidad/punto oficial de conexión,Electro Puno,"respuesta firmada con código, coordenadas, capacidad y alcance",abierto
+P0-02,Continuidad y elección del eje KML/GIS,topógrafo/Electro Puno,"levantamiento GAP-1..3, S3/S4 y eje aceptado",abierto
+P0-03,"Tensión, fases y demanda",Electro Puno/promotor,condiciones de red y estudio de carga,abierto
+P1-01,Cruces/obstáculos/servidumbres,campo/autoridades,inventario y permisos por sitio,abierto
+P1-02,"Conductor, cargas, clima, suelo",proyectista/fabricante/campo,"fichas, datos ambientales y geotecnia",abierto
+P1-03,"Protección, PAT y cortocircuito",Electro Puno/proyectista,"unifilar, impedancias y estudio",abierto
+P1-04,Spotting real y vanos,topógrafo/proyectista,ubicación aprobada y cálculo de flecha/despeje,abierto
+P2-01,"Planos constructivos, metrados y precios",proyectista/cotizaciones,expediente coordinado y revisado,abierto

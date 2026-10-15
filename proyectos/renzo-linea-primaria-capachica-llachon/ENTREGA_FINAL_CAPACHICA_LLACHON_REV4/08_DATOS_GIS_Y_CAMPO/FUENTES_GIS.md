@@ -1,0 +1,3 @@
+# Procedencia GIS y límites
+
+`KML_ORIGINAL.kml` es copia byte a byte del levantamiento manual aportado; el SHA figura en `manifest_entrega.json`. `EJE_GIS_ALTERNATIVO.json` es una ruta inferida de GISEM, no una línea aprobada. `PC_REFERENCIAS_GIS.csv`, `PN_SITIOS_REPLANTEO.csv`, `CV_ALERTAS_OSM.csv` y `GAP_EMPALMES.csv` mantienen sus clases separadas. El manifiesto `MANIFIESTO_FUENTES.json` registra URL, fecha de descarga y SHA de GISEM/OSM. La precisión de publicación no se declaró topográfica; OSM no acredita viales, servidumbres ni permisos. Las muestras SRTM existentes corresponden al eje GIS, por eso no se usaron en CL-03.

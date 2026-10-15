@@ -1,0 +1,9 @@
+﻿id,material,especificacion,cantidad,unidad,fuente_necesaria,estado
+M-01,poste y cimentación,dato requerido,dato requerido,unidad,diseño aprobado y ficha/cotización,pendiente
+M-02,conductor y tendido,dato requerido,dato requerido,m,diseño aprobado y ficha/cotización,pendiente
+M-03,armados y aisladores,dato requerido,dato requerido,conjunto,diseño aprobado y ficha/cotización,pendiente
+M-04,retenidas/anclajes,dato requerido,dato requerido,conjunto,diseño aprobado y ficha/cotización,pendiente
+M-05,puesta a tierra,dato requerido,dato requerido,conjunto,diseño aprobado y ficha/cotización,pendiente
+M-06,maniobra y protección,dato requerido,dato requerido,conjunto,diseño aprobado y ficha/cotización,pendiente
+M-07,transporte y montaje,dato requerido,dato requerido,partida,diseño aprobado y ficha/cotización,pendiente
+M-08,cruces/permisos/servidumbres,dato requerido,dato requerido,partida,diseño aprobado y ficha/cotización,pendiente

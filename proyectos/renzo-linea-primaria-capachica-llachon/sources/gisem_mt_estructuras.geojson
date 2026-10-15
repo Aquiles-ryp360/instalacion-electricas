@@ -1,0 +1,7925 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 236316,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84432831700002,
+          -15.681390577999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236316,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027701",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236306,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83886049900002,
+          -15.686431344000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236306,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027691",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236329,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.849088091,
+          -15.66507261999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236329,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027717",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236328,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84892592699998,
+          -15.666020532999994
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236328,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027716",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236320,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84812319399998,
+          -15.677945104999992
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236320,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027705",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236340,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84669772000001,
+          -15.658535039000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236340,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027728",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236343,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84573716699998,
+          -15.655758814000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236343,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027731",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236345,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.845287327,
+          -15.654430245000015
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236345,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027733",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236349,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84288502499999,
+          -15.652523771999995
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236349,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027737",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 301063,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84003717899998,
+          -15.653769461000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 301063,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000609039",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 301064,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83962761599997,
+          -15.65448156399998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 301064,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000609040",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236369,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83898035700003,
+          -15.65037352500002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236369,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027757",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236352,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84377732899998,
+          -15.638642972000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236352,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027740",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236360,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84155715100002,
+          -15.646757553999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236360,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027748",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236358,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84145026499999,
+          -15.644687925000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236358,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027746",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236093,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82107916000001,
+          -15.699551483999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236093,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027476",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236302,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83430361199999,
+          -15.687840366999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236302,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027687",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.828467612,
+          -15.69278800799998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236102,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027485",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248506,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83325664199998,
+          -15.64196394999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248506,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040710",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236378,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83267003399999,
+          -15.634814720000008
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236378,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027767",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246476,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83262463800003,
+          -15.642922860999988
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246476,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038471",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236380,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83239485600001,
+          -15.640060982000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236380,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027769",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236375,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.832133973,
+          -15.641759391999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236375,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027764",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 287168,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83035959099999,
+          -15.64334222299999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 287168,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000133515",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236646,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82298474599997,
+          -15.633510286999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236646,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028044",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236658,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.836729671,
+          -15.629386459999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236658,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028056",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236297,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83371700100002,
+          -15.620074715999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236297,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027682",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236296,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83369039500002,
+          -15.620508008999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236296,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027681",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236653,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82664356999999,
+          -15.629961928
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236653,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028051",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236092,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81985270799998,
+          -15.700238146000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236092,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027475",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236088,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.815170593,
+          -15.705541634999975
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236088,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027471",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236587,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81469462000001,
+          -15.706613731000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236587,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027980",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236086,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80778488099998,
+          -15.712849063000021
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236086,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027469",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235229,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80526113500002,
+          -15.673627837000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235229,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026450",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235231,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.803862622,
+          -15.67550632000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235231,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026452",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81963457,
+          -15.651886870999988
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236119,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027503",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 298592,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81871782500002,
+          -15.652494977000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 298592,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000512619",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81676727399997,
+          -15.653957408999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236117,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027500",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299185,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81326734999999,
+          -15.659944725000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299185,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549148",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236618,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81305029800001,
+          -15.660313726000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236618,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028011",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81072787199997,
+          -15.663823041
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236114,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027497",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248096,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.816768621,
+          -15.630755998999973
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248096,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040282",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251401,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81531059000002,
+          -15.626502528000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251401,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043656",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251403,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.813852145,
+          -15.625908321999987
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251403,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043658",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236074,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.792581891,
+          -15.72198896499998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236074,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027457",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236580,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.790135835,
+          -15.723639478999985
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236580,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027972",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248476,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79574158899999,
+          -15.709403690999977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248476,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040674",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248477,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79493280999998,
+          -15.707806571999981
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248477,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040675",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78960373000001,
+          -15.69380967699999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293118,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267105",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236598,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79328687700001,
+          -15.66436711
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236598,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027991",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236597,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79214048199998,
+          -15.664688108999997
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236597,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027990",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236643,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80272773799999,
+          -15.662015053000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236643,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028041",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236563,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.779301847,
+          -15.717338547999987
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236563,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027955",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236558,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77817210299997,
+          -15.726104437000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236558,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027950",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236036,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.770027422,
+          -15.727052868999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236036,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027417",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253993,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77998289200002,
+          -15.668518679999977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253993,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000046381",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 277527,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77896583900002,
+          -15.668931267999994
+        ]
+      },
+      "properties": {
+        "OBJECTID": 277527,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000076117",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253997,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.776211924,
+          -15.664411116999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253997,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000046385",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236600,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.770667882,
+          -15.67269197600001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236600,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027993",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236314,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84292524699998,
+          -15.682626581000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236314,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027699",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236307,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83993643100001,
+          -15.685437352999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236307,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027692",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236308,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83861858799997,
+          -15.679200848999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236308,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027693",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236334,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84849129600002,
+          -15.663437365999982
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236334,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027722",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236335,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84818374899999,
+          -15.662594688000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236335,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027723",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236336,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84787526000002,
+          -15.661749301999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236336,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027724",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236346,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84502016800002,
+          -15.653691906000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236346,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027734",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236365,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84129270900002,
+          -15.65121947199998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236365,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027753",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236355,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.842363395,
+          -15.641511877000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236355,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027743",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236356,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84185915500001,
+          -15.642516786999977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236356,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027744",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236094,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82175160600002,
+          -15.698873498000012
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236094,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027477",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236301,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83342904099999,
+          -15.688198424999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236301,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027686",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82765053399999,
+          -15.69352676599999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236101,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027484",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236097,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82415763300003,
+          -15.696596066999973
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236097,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027480",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 298556,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83522654299998,
+          -15.647306076999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 298556,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000508205",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.825505373,
+          -15.647463763000019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236123,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027508",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82076314599999,
+          -15.651338625999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235129,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026345",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 300852,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82067888199998,
+          -15.651194121999993
+        ]
+      },
+      "properties": {
+        "OBJECTID": 300852,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000595423",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236381,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.832534054,
+          -15.636831856000015
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236381,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027770",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236377,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83246452499998,
+          -15.63786348100001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236377,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027766",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246475,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83196427399997,
+          -15.64189789400001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246475,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038470",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246481,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.831765007,
+          -15.644462453000017
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246481,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038476",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246482,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.831406657,
+          -15.644206175000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246482,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038477",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236657,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83122414000002,
+          -15.63023579999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236657,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028055",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246487,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83002737599998,
+          -15.644360830999972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246487,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038482",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 287170,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.828712704,
+          -15.641793772000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 287170,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000133519",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 287171,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.828681431,
+          -15.641696169
+        ]
+      },
+      "properties": {
+        "OBJECTID": 287171,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000133520",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82799301,
+          -15.645403681000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236125,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027510",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236648,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82364573699999,
+          -15.63277349499998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236648,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028046",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236291,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.833174456,
+          -15.626465003000021
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236291,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027676",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236656,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.829662138,
+          -15.630119762999982
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236656,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028054",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236386,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82600519300001,
+          -15.629912080999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236386,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027775",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236385,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.825345379,
+          -15.62886566200001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236385,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027774",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236586,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81360318200001,
+          -15.706087790000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236586,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027979",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236584,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.809885119,
+          -15.711609782999972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236584,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027977",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.815794987,
+          -15.654774261
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236115,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027498",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299179,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81521056999998,
+          -15.656329583000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299179,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549142",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236624,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81252158000001,
+          -15.650964887999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236624,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028022",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236077,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79603703499998,
+          -15.71968062000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236077,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027460",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236073,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.791573846,
+          -15.722667179999974
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236073,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027456",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.789614987,
+          -15.699813142999972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293122,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267109",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235242,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79347175499998,
+          -15.685903729000017
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235242,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026463",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78835669300003,
+          -15.692268349000017
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293117,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267104",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236599,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79434178499997,
+          -15.664058188000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236599,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027992",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236568,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78397462200002,
+          -15.719007493999982
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236568,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027960",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236567,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78389456000002,
+          -15.718401384000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236567,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027959",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236561,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.782639244,
+          -15.724298106999981
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236561,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027953",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236592,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78471858,
+          -15.667092066999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236592,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027985",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236614,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78115697200002,
+          -15.668080846999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236614,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028007",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236604,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77492265900003,
+          -15.664635714999974
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236604,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027997",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 244419,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77496351999997,
+          -15.663718373999984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 244419,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000036366",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 244417,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77399865799998,
+          -15.662872842000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 244417,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000036364",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236315,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.843578342,
+          -15.682107437000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236315,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027700",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236312,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84066356699998,
+          -15.684765610999989
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236312,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027697",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236323,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84904243099999,
+          -15.671410895999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236323,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027711",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251391,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84900222099998,
+          -15.676131199999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251391,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043646",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251392,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.848902453,
+          -15.67418395499999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251392,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043647",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236326,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84859582000001,
+          -15.668099709999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236326,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027714",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251396,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.844744993,
+          -15.672870731999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251396,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043651",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236337,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84759659399998,
+          -15.660985700000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236337,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027725",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236338,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84729726400002,
+          -15.660165407000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236338,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027726",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235225,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.846406763,
+          -15.657729628000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235225,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026446",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251397,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84573475399998,
+          -15.656556048000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251397,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043652",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 301061,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84094245199998,
+          -15.652195674999973
+        ]
+      },
+      "properties": {
+        "OBJECTID": 301061,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000609037",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 301065,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83928047500001,
+          -15.655035500999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 301065,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000609041",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236300,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83828645599999,
+          -15.649992979999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236300,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027685",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236303,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83535685599998,
+          -15.68740894299998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236303,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027688",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83091966,
+          -15.690573884000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236105,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027488",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82930143599998,
+          -15.692037975000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236103,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027486",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236331,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83503549199997,
+          -15.647287369000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236331,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027719",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248504,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83444260200002,
+          -15.640312825000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248504,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040708",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248505,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83364033700002,
+          -15.641429680999977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248505,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040709",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236035,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83284759700001,
+          -15.630277013000011
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236035,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027416",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236379,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83280872400002,
+          -15.63127634
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236379,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027768",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83261730800001,
+          -15.635595244000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236382,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027771",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236376,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83237426400001,
+          -15.640944166999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236376,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027765",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236295,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.833642623,
+          -15.621058991999973
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236295,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027680",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82621077900001,
+          -15.629930651999985
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236128,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027513",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236089,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81570982699998,
+          -15.704327014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236089,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027472",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236583,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81564379999998,
+          -15.707059379999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236583,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027976",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236072,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81404302200002,
+          -15.708159174999992
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236072,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027455",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236633,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80730620600002,
+          -15.66846366599998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236633,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028031",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236632,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.807058348,
+          -15.669570252000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236632,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028030",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236631,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.806820921,
+          -15.67050612600002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236631,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028029",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236627,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81474651600001,
+          -15.653554067000016
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236627,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028025",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299183,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81410264499999,
+          -15.659324377000019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299183,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549146",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236616,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81140424300003,
+          -15.662811228999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236616,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028009",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236644,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80354651200003,
+          -15.661454376999984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236644,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028042",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236082,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80195112899997,
+          -15.715975312000012
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236082,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027465",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236581,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80265847499999,
+          -15.713146121000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236581,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027973",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248475,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.796799964,
+          -15.710385183000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248475,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040673",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78931799999998,
+          -15.704432622000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293124,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267111",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 277528,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79979810499998,
+          -15.680105808000008
+        ]
+      },
+      "properties": {
+        "OBJECTID": 277528,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000076118",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235226,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78454088199999,
+          -15.723694825999985
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235226,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026447",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236562,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78386278699998,
+          -15.72414537100002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236562,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027954",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236037,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78156288899999,
+          -15.724721959000021
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236037,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027418",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236557,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77765635100002,
+          -15.726202731
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236557,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027949",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236590,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78187508600001,
+          -15.667943046000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236590,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027983",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236589,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.781585796,
+          -15.668078954999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236589,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027982",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236611,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77601407399999,
+          -15.670132766999984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236611,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028004",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77395572500001,
+          -15.671170700999994
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236108,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027491",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253995,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.771652243,
+          -15.671440178000012
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253995,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000046383",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 244418,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.774869631,
+          -15.663637166000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 244418,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000036365",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251399,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.843463612,
+          -15.658475194999994
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251399,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043654",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236350,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.842064354,
+          -15.652083249999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236350,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027738",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236363,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84143373900002,
+          -15.649226182000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236363,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027751",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 301062,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84052900299997,
+          -15.652914393000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 301062,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000609038",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236370,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83772008599999,
+          -15.649954557000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236370,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027758",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236353,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84332411700001,
+          -15.639575641000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236353,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027741",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236354,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84285828399999,
+          -15.640525533000016
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236354,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027742",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236099,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82601491100002,
+          -15.69499216600002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236099,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027482",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236098,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82495851700003,
+          -15.695838760000015
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236098,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027481",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236330,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83559367599997,
+          -15.647701077000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236330,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027718",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255022,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.834656924,
+          -15.647154839999985
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255022,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000047413",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82346960799998,
+          -15.649149766999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236116,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027499",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.822556351,
+          -15.649854241000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236121,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027506",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82211216500002,
+          -15.654967156999987
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235134,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026350",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255023,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83408622399998,
+          -15.646759528000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255023,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000047414",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255024,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83355271099998,
+          -15.646354492
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255024,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000047415",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248507,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83284743299998,
+          -15.642533571000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248507,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040711",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255026,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83250497799997,
+          -15.645492181000009
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255026,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000047417",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255028,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83184774699998,
+          -15.64459819000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255028,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000047419",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246483,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83111483300002,
+          -15.643951453
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246483,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038478",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246488,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.829402367,
+          -15.644236365999973
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246488,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038483",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.829297424,
+          -15.642479227000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 295122,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000367727",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.826911225,
+          -15.646299458999977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236124,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027509",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236647,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82514615299999,
+          -15.631110569999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236647,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028045",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236032,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82214822600002,
+          -15.634422386999972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236032,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027413",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243894,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82189116699999,
+          -15.634574136000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243894,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035838",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243902,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82121517799999,
+          -15.627267802000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243902,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035846",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243910,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.820870582,
+          -15.620006143000012
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243910,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035854",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236038,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.816500486,
+          -15.701853554000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236038,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027419",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 298190,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81319291900002,
+          -15.709305614000016
+        ]
+      },
+      "properties": {
+        "OBJECTID": 298190,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000488510",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236070,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81098699500001,
+          -15.710971004999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236070,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027452",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236615,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81026978400001,
+          -15.664067095999997
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236615,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028008",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236030,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80931961200002,
+          -15.665661634000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236030,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027411",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236629,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80582745100003,
+          -15.672280161999993
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236629,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028027",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299180,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81486067499998,
+          -15.657666350999989
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299180,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549143",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299186,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81252577700002,
+          -15.65942099199998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299186,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549149",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235248,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81154504300002,
+          -15.658746633000021
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235248,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026469",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.809792093,
+          -15.657864766999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236113,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027496",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236621,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80636095400001,
+          -15.658429762000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236621,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028014",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236620,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80585324499998,
+          -15.659319260000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236620,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028013",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243907,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81883481,
+          -15.623443495000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243907,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035851",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248093,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81781287299998,
+          -15.627368374000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248093,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040279",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236579,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79781990200001,
+          -15.718485547
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236579,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027971",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236578,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79754575200002,
+          -15.718186152999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236578,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027970",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.789783436,
+          -15.695282537000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293119,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267106",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235233,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80276755,
+          -15.677008977000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235233,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026454",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236028,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80031953899999,
+          -15.664154757999995
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236028,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027409",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235236,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80012541100001,
+          -15.679691577000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235236,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026457",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236569,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78413984100001,
+          -15.720257935000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236569,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027961",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236565,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78128992299997,
+          -15.717487382000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236565,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027957",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236560,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78043421799998,
+          -15.725207102000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236560,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027952",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236553,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77086511800002,
+          -15.726938900999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236553,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027945",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236610,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.774961899,
+          -15.670663343000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236610,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028003",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236602,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77286962699998,
+          -15.67166531800001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236602,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027995",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236322,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.849162035,
+          -15.672288200000025
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236322,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027710",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251390,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84904639299998,
+          -15.675056826000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251390,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043645",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236321,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84895881599999,
+          -15.677188214000012
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236321,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027706",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236327,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84876568300001,
+          -15.667027198000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236327,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027715",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236318,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84597505199997,
+          -15.679895084999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236318,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027703",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236342,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84594365599997,
+          -15.656376162000015
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236342,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027730",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251398,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84461671399998,
+          -15.657500685999992
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251398,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043653",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236371,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83739735799998,
+          -15.649606489000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236371,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027759",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248503,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83783038799999,
+          -15.64138858199999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248503,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040707",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236650,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83779608600003,
+          -15.629170406000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236650,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028048",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236304,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83637879600002,
+          -15.686990470000012
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236304,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027689",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83174260300001,
+          -15.689837442999988
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236106,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027489",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83011495199997,
+          -15.691298140000015
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236104,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027487",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82683455799997,
+          -15.694262625000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236100,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027483",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236372,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83667883300001,
+          -15.648813182000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236372,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027760",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236351,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83564194899998,
+          -15.648032655999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236351,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027739",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83271407799998,
+          -15.633709787999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236127,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027512",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246477,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83255095599998,
+          -15.643158178000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246477,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038472",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236023,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83238485800001,
+          -15.639018448999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236023,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027404",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255027,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83226990999998,
+          -15.645085013000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255027,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000047418",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246479,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83202500300001,
+          -15.644066694999992
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246479,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038474",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82907701699997,
+          -15.644505809999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236126,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027511",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236649,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82411058500003,
+          -15.63225828200001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236649,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028047",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236294,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83355002799999,
+          -15.622128853999982
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236294,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027679",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236288,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83284730899999,
+          -15.629674776000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236288,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027673",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236091,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.818733587,
+          -15.701350809000019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236091,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027474",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236630,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80626627800001,
+          -15.671496864000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236630,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028028",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236623,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.814059687,
+          -15.659526577999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236623,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028018",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299184,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81374386800002,
+          -15.659928401000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299184,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549147",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236625,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81328583800001,
+          -15.651854203000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236625,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028023",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246701,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81046667599998,
+          -15.65817857899998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246701,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038705",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236029,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80842834700002,
+          -15.657253371000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236029,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027410",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243909,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81951376199999,
+          -15.620751853000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243909,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035853",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243903,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81940613799998,
+          -15.627188322999984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243903,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035847",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243906,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81853174999998,
+          -15.624646935999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243906,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035850",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251402,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.814527968,
+          -15.626183702999981
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251402,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043657",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248470,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80083658000001,
+          -15.716275369000016
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248470,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040668",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236080,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79949050200003,
+          -15.717273695000017
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236080,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027463",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236075,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79358804499998,
+          -15.721330186999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236075,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027458",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236576,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78858447800002,
+          -15.723755918999984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236576,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027968",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 294806,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80275054700002,
+          -15.71416032899998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 294806,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000348425",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248473,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.798283164,
+          -15.712612621999995
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248473,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040671",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248474,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79752308899998,
+          -15.711548691000019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248474,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040672",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248478,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.793992484,
+          -15.705974889999993
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248478,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040676",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248479,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79351262799997,
+          -15.704964163
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248479,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040677",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248482,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79268691099998,
+          -15.703611263000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248482,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040680",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78980225599997,
+          -15.697650296999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293121,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267108",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236639,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79878229799999,
+          -15.665457238999977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236639,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028037",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236638,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79802594199998,
+          -15.665087732000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236638,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028036",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236027,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.791061077,
+          -15.664961220999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236027,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027408",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236593,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.786889164,
+          -15.666613476999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236593,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027986",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79544923600002,
+          -15.66377763700001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236111,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027494",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236572,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.784518591,
+          -15.723235679000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236572,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027964",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236571,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.784386472,
+          -15.722124515000019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236571,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027963",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236570,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78426257400002,
+          -15.721185531999993
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236570,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027962",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253992,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78622528,
+          -15.666046615000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253992,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000046380",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235224,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77787758300002,
+          -15.669366885999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235224,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026445",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236609,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.773456974,
+          -15.66999862199998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236609,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028002",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236313,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84212882999998,
+          -15.683261350999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236313,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027698",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236310,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.839654355,
+          -15.682061965000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236310,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027695",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251389,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84909413100002,
+          -15.67389682999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251389,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043644",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236333,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84877412200001,
+          -15.664212521000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236333,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027721",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236319,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84684395599999,
+          -15.679104536000011
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236319,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027704",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251394,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84641067000001,
+          -15.67367987099999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251394,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043649",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236339,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.847000578,
+          -15.65935224499998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236339,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027727",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236341,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.846267275,
+          -15.657342809
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236341,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027729",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236651,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.838573548,
+          -15.629012853999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236651,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028049",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236096,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82335583000003,
+          -15.69735861700002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236096,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027479",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82447610399998,
+          -15.648316211000008
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236122,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027507",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82145480600002,
+          -15.652636334000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235131,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026347",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236332,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83264510999999,
+          -15.639080197999988
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236332,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027720",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236374,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.832497235,
+          -15.641916302000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236374,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027762",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83017030399998,
+          -15.643135202999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 295118,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000367723",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82973774099997,
+          -15.642751018000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 295119,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000367724",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.829466782,
+          -15.642510316000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 295120,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000367725",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 287172,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82930620100001,
+          -15.640952535999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 287172,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000133521",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82925516199998,
+          -15.642363314000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 295121,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000367726",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82912242700002,
+          -15.642623260999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 295123,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000367728",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236289,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83303140800001,
+          -15.628116503000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236289,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027674",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295787,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83235907400001,
+          -15.629843504999997
+        ]
+      },
+      "properties": {
+        "OBJECTID": 295787,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000411008",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236654,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82769052499998,
+          -15.630029938999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236654,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028052",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243900,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.824539077,
+          -15.627413809000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243900,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035844",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243901,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.822825298,
+          -15.627338520000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243901,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035845",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236083,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80409395700002,
+          -15.714893313000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236083,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027466",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236090,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81620225299997,
+          -15.703217790999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236090,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027473",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 298555,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81381447199999,
+          -15.708863780999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 298555,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000508204",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236585,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.812483386,
+          -15.70551629800002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236585,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027978",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236636,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.809749898,
+          -15.664943177999987
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236636,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028034",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236635,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.808591165,
+          -15.666675349000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236635,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028033",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236634,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80795244699999,
+          -15.667564341999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236634,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028032",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236628,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.805215164,
+          -15.673373442000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236628,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028026",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299182,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81491876299998,
+          -15.658975476000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299182,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549145",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236626,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81391447800002,
+          -15.652585820000013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236626,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028024",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243908,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.819197202,
+          -15.622006872999975
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243908,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035852",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248094,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81746429100002,
+          -15.628504365000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248094,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040280",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236577,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.796308468,
+          -15.71685629000001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236577,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027969",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248483,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79055631199998,
+          -15.704124675000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248483,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040681",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235241,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79504683200003,
+          -15.684806438999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235241,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026462",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235245,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78926087600001,
+          -15.688906662000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235245,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026466",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235246,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78888611000002,
+          -15.690941999000017
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235246,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026467",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235234,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80228474400002,
+          -15.677671475000011
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235234,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026455",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236640,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79961369400002,
+          -15.664752797000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236640,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028038",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236566,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78261869800002,
+          -15.717920155999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236566,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027958",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236564,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78033537300001,
+          -15.717415673999994
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236564,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027956",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236559,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77933121299998,
+          -15.725644597999974
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236559,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027951",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236555,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.774255041,
+          -15.726519651999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236555,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027947",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253996,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.775394398,
+          -15.664114788999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253996,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000046384",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236605,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77451448099998,
+          -15.66563336500002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236605,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027998",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236601,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77168315799997,
+          -15.672218591999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236601,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027994",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 244415,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.773320909,
+          -15.66136076700002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 244415,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000036362",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236305,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83735694699999,
+          -15.686589878999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236305,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027690",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236325,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84876435299998,
+          -15.669371141999989
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236325,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027713",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251395,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84511784300003,
+          -15.673051806999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251395,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043650",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236309,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83913302299999,
+          -15.680621837999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236309,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027694",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236039,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83826462600001,
+          -15.67807086800002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236039,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027420",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236344,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.845505478,
+          -15.655093470999986
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236344,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027732",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236347,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84428289200002,
+          -15.653295999000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236347,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027735",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236348,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84358652100002,
+          -15.652909335000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236348,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027736",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84151892900002,
+          -15.648133658999996
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236362,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027750",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236366,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.841263814,
+          -15.65163695299998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236366,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027754",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236368,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.839774438,
+          -15.650839925000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236368,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027756",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236034,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84102141400001,
+          -15.628516869999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236034,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027415",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236652,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83976942700002,
+          -15.628770531999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236652,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028050",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83256152899997,
+          -15.689124427000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236107,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027490",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236373,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83617509499999,
+          -15.648299287999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236373,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027761",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235132,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.821784659,
+          -15.653255053999999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235132,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026348",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.821642156,
+          -15.650512338999988
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236120,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027505",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82112279299997,
+          -15.652013463000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235130,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026346",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236383,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83274796400002,
+          -15.632838304000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236383,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027772",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246480,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.831805342,
+          -15.644401099999982
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246480,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038475",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 287169,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82917913099999,
+          -15.642248252999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 287169,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000133518",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243895,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82112810500001,
+          -15.634983337999984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243895,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035839",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236659,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.835064219,
+          -15.629753767000011
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236659,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028057",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236655,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82839267600002,
+          -15.630070862000025
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236655,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028053",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236588,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81714386800002,
+          -15.702494156
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236588,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027981",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236085,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80663035600003,
+          -15.713513150999972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236085,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027468",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235230,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80454820599999,
+          -15.674565458000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235230,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026451",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235232,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80316635899999,
+          -15.676461683000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235232,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026453",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236031,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.812622712,
+          -15.660907246000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236031,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027412",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80733076899998,
+          -15.65673102300002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236112,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027495",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236619,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80532940900002,
+          -15.660236841000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236619,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028012",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236645,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.804366958,
+          -15.660892697999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236645,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028043",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251404,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81904767600003,
+          -15.623628923000012
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251404,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043659",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248095,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81711650400001,
+          -15.629630227000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248095,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040281",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236582,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80276360599998,
+          -15.71556390500001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236582,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027975",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236081,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80084682699999,
+          -15.716580878999991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236081,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027464",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248471,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80031980400003,
+          -15.715552173999981
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248471,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040669",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236079,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79865170800002,
+          -15.717760761000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236079,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027462",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236078,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79684669699998,
+          -15.719138346000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236078,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027461",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248480,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79331546499998,
+          -15.70465752199999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248480,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040678",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78944303200001,
+          -15.702488587000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293123,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267110",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235237,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79912189100003,
+          -15.68111460199998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235237,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026458",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235238,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79850040600002,
+          -15.681993653000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235238,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026459",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235239,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79753794800001,
+          -15.68291932699998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235239,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026460",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235240,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79662189200002,
+          -15.683709137999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235240,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026461",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235243,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.791896662,
+          -15.687001007999982
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235243,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026464",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235244,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79032155099998,
+          -15.688098276999995
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235244,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026465",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235247,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78809762499998,
+          -15.692165233000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235247,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026468",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235235,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80140877999997,
+          -15.678873468000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235235,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026456",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236596,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79002865199999,
+          -15.665393440999992
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236596,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027989",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236594,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78795426200003,
+          -15.666182148000019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236594,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027987",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253991,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.786748569,
+          -15.666495467999994
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253991,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000046379",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236642,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80179496699998,
+          -15.662653705000025
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236642,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028040",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236641,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.801043913,
+          -15.663452058000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236641,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028039",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236573,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78457261699998,
+          -15.724085055999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236573,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027965",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236556,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77541941499999,
+          -15.726411197000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236556,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027948",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78588381200001,
+          -15.667078306000008
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236110,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027493",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236591,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78369134000002,
+          -15.667104243999972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236591,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027984",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236613,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78006692600002,
+          -15.668509520999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236613,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028006",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236608,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77295769099999,
+          -15.66873343200001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236608,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028001",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253994,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77178567599998,
+          -15.67213687100002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253994,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000046382",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236603,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77520676199998,
+          -15.66384190399998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236603,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027996",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 244416,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77399064899998,
+          -15.662604202000011
+        ]
+      },
+      "properties": {
+        "OBJECTID": 244416,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000036363",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236311,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84047402499999,
+          -15.684326189999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236311,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027696",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236324,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.848923695,
+          -15.670540188000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236324,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027712",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251393,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84766180600002,
+          -15.674287569
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251393,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043648",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236317,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.845350054,
+          -15.68048156399999
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236317,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027702",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236361,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84153877400001,
+          -15.647419614
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236361,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027749",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236364,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84136468100002,
+          -15.650111359999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236364,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027752",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236367,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84043956,
+          -15.651185499999997
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236367,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027755",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236359,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.841523559,
+          -15.645637824000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236359,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027747",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236357,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.84135963400001,
+          -15.643513180000014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236357,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027745",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236095,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82255131300002,
+          -15.698120723999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236095,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027478",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.822098439,
+          -15.653843730000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235133,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000026349",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255025,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83302823600002,
+          -15.645923023000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255025,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000047416",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236384,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83278810500002,
+          -15.631806428000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236384,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027773",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246478,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83229263300001,
+          -15.643713484999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246478,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038473",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246484,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83078032399999,
+          -15.643707377999988
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246484,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038479",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246485,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.830695677,
+          -15.64372315700001
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246485,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038480",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246486,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83036497299997,
+          -15.644052196000018
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246486,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000038481",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236660,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83383346300002,
+          -15.630024943000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236660,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028058",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236293,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83345493299998,
+          -15.623226839999973
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236293,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027678",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236292,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.83336197400001,
+          -15.624299597000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236292,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027677",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236290,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.833129982,
+          -15.626978457000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236290,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027675",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236033,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.82507165300001,
+          -15.627601646000016
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236033,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027414",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 294805,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80333223600002,
+          -15.715276062999976
+        ]
+      },
+      "properties": {
+        "OBJECTID": 294805,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000348424",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236071,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81230390399998,
+          -15.709937645000025
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236071,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027453",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236087,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80891246700003,
+          -15.712384036999993
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236087,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027470",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236084,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.80556107899997,
+          -15.714095018000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236084,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027467",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81772049199998,
+          -15.653156625000008
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236118,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027501",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299181,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81480436200002,
+          -15.658076881999989
+        ]
+      },
+      "properties": {
+        "OBJECTID": 299181,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000549144",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236617,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81200205200003,
+          -15.661942266999972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236617,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028010",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236622,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.806817137,
+          -15.657630670000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236622,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028015",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243896,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.819498942,
+          -15.635839181999984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243896,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035840",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243897,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.817860472,
+          -15.636704090000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243897,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035841",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243898,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81627716499997,
+          -15.637532620000002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243898,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035842",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243899,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.815575067,
+          -15.638241430999983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243899,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035843",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243905,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81819942200002,
+          -15.625974693999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243905,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035849",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243904,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.81791315700002,
+          -15.627133594999975
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243904,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000035848",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251400,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.816588722,
+          -15.627002747000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251400,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000043655",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236076,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79545618499998,
+          -15.720071904999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236076,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027459",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236575,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78785736100002,
+          -15.723809981999977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236575,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027967",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236574,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.786715507,
+          -15.723894826999981
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236574,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027966",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248472,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79918397099999,
+          -15.713912789999995
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248472,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040670",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248481,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79302421400001,
+          -15.704152344000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248481,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000040679",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.789863895,
+          -15.695942161000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 293120,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000267107",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "T"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236637,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.79724818099999,
+          -15.664707632999978
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236637,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028035",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236595,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.78900242999998,
+          -15.665789835999988
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236595,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027988",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236554,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77302265100002,
+          -15.726659077000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236554,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027946",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.782554533,
+          -15.667624129999979
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236109,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027492",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236612,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77840973999997,
+          -15.669153821000009
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236612,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028005",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236026,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77692641599998,
+          -15.669760429000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236026,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027407",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236606,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.774069984,
+          -15.666749837999987
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236606,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000027999",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236607,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.77355674799998,
+          -15.667701120000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236607,
+        "CODEMP": "ELPU",
+        "CODESTRUCTURA": "NMT000028000",
+        "ETIQUETACAMPO": " ",
+        "PROPIEDAD": "D"
+      }
+    }
+  ]
+}

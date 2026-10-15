@@ -1,5 +1,7 @@
 # Expediente Técnico - Línea Primaria 22.9 kV
 
+> **Para presentar ahora:** usar el [dictamen auditado Rev. 1](../documentacion/DICTAMEN_PRESENTACION_AUDITADA_REV1.md) y el dossier en `build/renzo-linea-primaria-capachica/presentacion_auditada_rev1/`. El PDF compilado anteriormente se conserva como antecedente; su conexión E-01 requiere validación.
+
 Esta carpeta contiene las fuentes editables y el PDF compilado del expediente final para el alcance exclusivo de línea primaria.
 
 ## Entregable Principal

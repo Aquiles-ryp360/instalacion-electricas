@@ -1,0 +1,5 @@
+# Control de calidad del paquete Rev. 4
+
+Las fuentes KML/GIS y tablas se validaron antes de generar. Cinco hojas se construyeron con comandos de dibujo compartidos para DXF/PDF y PNG renderizado del PDF. El DXF de CL-01/02 además conserva en modelo los cuatro segmentos KML y eje GIS en EPSG:32719, en metros; presentación A3 en mm. CL-04 incluye **40 PC y 27 PN** tanto en DXF como PDF. CL-05 incluye cajas, etiquetas y flechas en ambos. `--verify` reabre cada formato, comprueba tamaño, unidades, entidades y paridad de IDs/etiquetas; no verifica AutoCAD ni ingeniería.
+
+No hay resultados reales de demanda, conductor, caída, cortocircuito, flechas, postes, despejes, cimentaciones, PAT o presupuesto. Los datos medidos permanecen vacíos. La matriz normativa es de aplicabilidad preliminar; no se declaró cumplimiento. No se abrió AutoCAD ni se recibieron aprobaciones. Para convertir a expediente de revisión técnica deben cerrarse los P0/P1 de `OBSERVACIONES_ABIERTAS.csv` y someter el diseño a profesional responsable.

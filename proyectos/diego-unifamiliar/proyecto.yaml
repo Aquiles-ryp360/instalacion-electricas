@@ -1,0 +1,21 @@
+schema_version: 1
+id: diego-unifamiliar
+proyecto: Instalaciones eléctricas interiores de vivienda unifamiliar de tres niveles
+estudiante: Diego Jefferson Charaja Mamani
+codigo_estudiante: '214254'
+curso: Instalaciones Eléctricas
+curso_nivel: null
+estado: Documentación existente organizada; ingeniería no revalidada en esta reorganización
+entradas:
+  calculos_json: datos/resultados_diego.json
+  generador_existente: scripts/run_diego_cad_unifilar.py
+automatizacion:
+  pipeline_habilitado: false
+  motivo: El generador existente contiene datos estáticos; requiere revisión antes de ejecutarse.
+  requiere_revision_humana: true
+expediente_editable: expediente/EXPEDIENTE_TECNICO_COMPLETO_INSTALACIONES_ELECTRICAS.md
+entregables:
+  expediente: entregables/EXPEDIENTE_TECNICO_COMPLETO_INSTALACIONES_ELECTRICAS.pdf
+  word: entregables/EXPEDIENTE_TECNICO_COMPLETO_INSTALACIONES_ELECTRICAS.docx
+  cad: diseno-electrico/planos/plano_unifilar_diego_cad.dxf
+  unifilar_pdf: entregables/planos/plano_unifilar_diego_cad.pdf

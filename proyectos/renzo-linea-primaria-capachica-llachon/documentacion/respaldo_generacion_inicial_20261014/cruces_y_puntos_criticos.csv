@@ -1,0 +1,21 @@
+﻿id,tipo,segmento,estacion_m,distancia_m,fuente,estado
+GAP-1,empalme KML no conectado,1,255.99,14.133,ruta topografica capachica llachon.kml,inspección requerida
+GAP-2,empalme KML no conectado,2,4388.219,43.965,ruta topografica capachica llachon.kml,inspección requerida
+GAP-3,empalme KML no conectado,3,8966.604,6.979,ruta topografica capachica llachon.kml,inspección requerida
+V-1-18,cambio de dirección KML,1,24.567,,ruta topografica capachica llachon.kml,inspección requerida
+V-1-19,cambio de dirección KML,1,25.476,,ruta topografica capachica llachon.kml,inspección requerida
+V-1-53,cambio de dirección KML,1,69.499,,ruta topografica capachica llachon.kml,inspección requerida
+V-1-55,cambio de dirección KML,1,78.263,,ruta topografica capachica llachon.kml,inspección requerida
+V-1-56,cambio de dirección KML,1,80.329,,ruta topografica capachica llachon.kml,inspección requerida
+V-1-57,cambio de dirección KML,1,82.441,,ruta topografica capachica llachon.kml,inspección requerida
+V-1-58,cambio de dirección KML,1,84.01,,ruta topografica capachica llachon.kml,inspección requerida
+V-1-121,cambio de dirección KML,1,255.037,,ruta topografica capachica llachon.kml,inspección requerida
+V-2-12,cambio de dirección KML,2,2023.38,,ruta topografica capachica llachon.kml,inspección requerida
+V-2-17,cambio de dirección KML,2,3356.148,,ruta topografica capachica llachon.kml,inspección requerida
+V-3-2,cambio de dirección KML,3,4607.856,,ruta topografica capachica llachon.kml,inspección requerida
+V-3-6,cambio de dirección KML,3,6180.128,,ruta topografica capachica llachon.kml,inspección requerida
+V-4-10,cambio de dirección KML,4,11150.75,,ruta topografica capachica llachon.kml,inspección requerida
+V-4-14,cambio de dirección KML,4,12586.872,,ruta topografica capachica llachon.kml,inspección requerida
+V-4-17,cambio de dirección KML,4,12886.034,,ruta topografica capachica llachon.kml,inspección requerida
+V-4-18,cambio de dirección KML,4,12933.365,,ruta topografica capachica llachon.kml,inspección requerida
+V-4-27,cambio de dirección KML,4,13809.69,,ruta topografica capachica llachon.kml,inspección requerida

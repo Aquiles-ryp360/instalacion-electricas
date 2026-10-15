@@ -1,0 +1,28 @@
+id: renzo-linea-primaria-capachica-llachon
+nombre: Anteproyecto cartográfico de red MT Capachica–Llachón
+estado: borrador_para_revision
+objeto: Evaluar el corredor de media tensión publicado y la necesidad de intervención
+origen_referencia_gisem: NMT000367723
+final_referencia_gisem: NMT000027963
+longitud_corredor_gis_m: 13834.03
+crs_geografico: EPSG:4326
+crs_metrico: EPSG:32719
+planos:
+  - plans/CL-01_A3_AUTOCAD_PRELIMINAR.dxf
+  - plans/CL-02_A3_AUTOCAD_PRELIMINAR.dxf
+vistas:
+  - plans/CL-01_A3_AUTOCAD_PRELIMINAR_vista.pdf
+  - plans/CL-02_A3_AUTOCAD_PRELIMINAR_vista.pdf
+memoria: documentacion/MEMORIA_ANTEPROYECTO.md
+expediente_editable: expediente/README.md
+expediente_pdf_local: build/renzo-linea-primaria-capachica-llachon/EXPEDIENTE_PRELIMINAR_CAPACHICA_LLACHON_REV1.pdf
+paquete_revision_local: build/renzo-linea-primaria-capachica-llachon/PAQUETE_REVISION_CAPACHICA_LLACHON_REV1.zip
+parametros_diseno: datos/parametros_diseno_pendientes.json
+pendientes_criticos:
+  - comprobacion_de_red_y_extremos_en_campo
+  - topografia_apta_para_diseno
+  - tension_y_capacidad_confirmadas_por_operador
+  - punto_de_conexion_aprobado
+  - demanda_actual_y_proyectada
+  - inventario_de_equipos_y_estructuras
+  - servidumbres_y_cruces_verificados

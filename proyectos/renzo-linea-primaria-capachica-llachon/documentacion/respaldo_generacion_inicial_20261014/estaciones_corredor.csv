@@ -1,0 +1,5 @@
+﻿segmento,nombre,inicio_m,fin_m,longitud_m,vertices,brecha_siguiente_m
+1,ruta capachica chifron,0.0,255.99,255.99,122,14.133
+2,ruta cacpchica 2,255.99,4388.219,4132.229,24,43.965
+3,ruta3,4388.219,8966.604,4578.385,12,6.979
+4,ruta 4,8966.604,13939.512,4972.908,29,

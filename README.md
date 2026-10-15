@@ -1,100 +1,53 @@
-# Automatizacion de instalaciones electricas
+# Proyectos académicos de ingeniería eléctrica
 
-Repositorio para transformar informacion de viviendas, proyectos industriales y un proyecto académico hidroeléctrico en datos canonicos, calculos, planos, metrados, cotizaciones y expedientes tecnicos revisables.
+Repositorio de expedientes, cálculos, CAD y cartografía de estudiantes de la Universidad Nacional del Altiplano, Puno. Los proyectos se organizan por alcance y autor; las herramientas y referencias comunes tienen sus propias carpetas.
 
-El objetivo es automatizar el trabajo repetitivo con agentes de IA sin presentar resultados preliminares como diseno definitivo. Toda salida tecnica requiere revision humana y contraste con el Codigo Nacional de Electricidad, el RNE y las condiciones reales de obra.
+## Proyectos de Aquiles: dos cursos independientes
 
-## Estructura
+| Curso | Proyecto | Documentos para revisar |
+| --- | --- | --- |
+| **Centrales Hidroeléctricas** | [Minicentral Limbani · Michell-Banki](proyectos/aquiles-central-michell-banki/README.md) | [Memoria PDF](proyectos/aquiles-central-michell-banki/entregables/r03/Minicentral_Limbani_R03_proyecto_academico.pdf) · [Planos PDF](proyectos/aquiles-central-michell-banki/entregables/r03/Minicentral_Limbani_R03_planos_academicos.pdf) · [Exposición](proyectos/aquiles-central-michell-banki/entregables/r03/Minicentral_Limbani_R03_exposicion.pdf) |
+| **Instalaciones Eléctricas II** | [Línea primaria Limbani–Huancasayani](proyectos/aquiles-linea-primaria-inst-ii/README.md) | [Expediente PDF](proyectos/aquiles-linea-primaria-inst-ii/entregables/linea-primaria-r01/Linea_Primaria_Limbani_Huancasayani_R01_expediente.pdf) · [Cálculos](proyectos/aquiles-linea-primaria-inst-ii/entregables/linea-primaria-r01/Linea_Primaria_Limbani_Huancasayani_R01_calculos.pdf) · [CAD, QGIS y Google Earth](proyectos/aquiles-linea-primaria-inst-ii/README.md) |
 
-```text
-.
-├── AGENTS.md                 reglas de trabajo para agentes
-├── docs/                     arquitectura, flujo y politica de datos
-├── herramientas/             motores reutilizables
-├── proyectos/
-│   ├── aquiles/                          vivienda de dos pisos
-│   ├── renzo/                            vivienda de tres pisos
-│   ├── renzo-industrial/                 estacion de servicio (grifo) - unidad 2 de Renzo
-│   ├── renzo-linea-primaria-capachica/   linea primaria 22.9 kV y redes secundarias Chifron (Capachica)
-│   ├── unidad-2-industrial/              estacion de servicio (grifo) - unidad 2 de Aquiles
-│   └── aquiles-minicentral-limbani/      Centrales Hidroeléctricas - proyecto académico R03 aislado
-├── referencias/              normativa versionada y material local ignorado
-└── build/                    resultados regenerables, ignorados por Git
+La minicentral estudia generación hidroeléctrica. La línea primaria estudia el transporte desde la transformación de salida hasta la subestación de llegada en Huancasayani. Cada una conserva sus parámetros, cálculos, memoria y entregables; compartir antecedentes de Limbani no hace equivalentes sus hipótesis de diseño.
+
+## Todos los proyectos
+
+El **[catálogo por curso y autor](proyectos/README.md)** reúne los once proyectos: centrales, líneas primarias, estaciones de servicio y viviendas de Aquiles, Renzo y Diego. Incluye Capachica–Chifrón y Capachica–Llachón, con enlaces a sus revisiones y estados propios.
+
+Los documentos son trabajos académicos revisables. El estado y las entradas de cada proyecto se consultan en su `proyecto.yaml`; los pendientes técnicos permanecen en la documentación correspondiente. La presencia de un archivo en GitHub no supone aprobación para ejecutar una obra.
+
+## Organización
+
+| Carpeta | Contenido |
+| --- | --- |
+| [proyectos/](proyectos/README.md) | Un expediente independiente por proyecto, con identificación de curso y autor. |
+| [herramientas/](herramientas/README.md) | Motores de cálculo, CAD, presupuestos, topografía y levantamiento. |
+| [herramientas/biblioteca_dge/](herramientas/biblioteca_dge/README.md) | Referencias DGE y biblioteca vectorizada, con procedencia y limitaciones. |
+| [recursos/](recursos/README.md) | Identidad gráfica e imágenes de ubicación compartidas. |
+| [referencias/](referencias/README.md) | Normativa y documentos de consulta; material local identificado. |
+| [docs/](docs/README.md) | Guías de trabajo, política de datos y registro de organización. |
+| `build/`, `output/` | Resultados locales regenerables; ignorados por Git. |
+
+Dentro de cada proyecto se distinguen `fuentes/` (originales), `datos/` (entradas), `expediente/` (memoria editable), `documentacion/` (decisiones y pendientes), `entregables/` (archivos compartidos con su estado declarado) y `archivo/` (antecedentes). Las variantes históricas de otros estudiantes mantienen su ubicación y estado declarado; no se elige una revisión solo por su nombre.
+
+## Uso de las herramientas
+
+Desde la raíz del repositorio, con Python y las dependencias instaladas:
+
+```powershell
+python -m pip install -r requirements.txt
+python herramientas/verificar_organizacion.py
+python -m pytest -q herramientas/cotizacion/v0_legacy/tests herramientas/cotizacion/v1/tests proyectos/renzo/tests proyectos/unidad-2-industrial/tests
 ```
 
-Los proyectos conservan sus fuentes, datos canonicos, documentacion y entregables. Las herramientas comunes no deben contener nombres, rutas ni datos exclusivos de un alumno.
+Cada proyecto documenta su constructor y sus requisitos adicionales. El pipeline residencial se conserva para los proyectos que lo habilitan:
 
-## Inicio rapido
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -r requirements.txt
-make test
+```powershell
+python herramientas/pipeline_automatizado.py --proyecto aquiles
+python herramientas/pipeline_automatizado.py --proyecto renzo
 ```
 
-Pipeline general de Aquiles:
+La minicentral y la línea primaria utilizan sus **constructores específicos**, enlazados en sus README. Los programas escriben resultados de trabajo que deben revisarse antes de compartirlos. Algunas investigaciones requieren fuentes pesadas locales, LaTeX, QGIS o AutoCAD; no se presupone que estén instalados en otro equipo.
 
-```bash
-python3 herramientas/pipeline_automatizado.py --proyecto aquiles
-```
-
-Pipeline nativo y expediente de Renzo:
-
-```bash
-python3 herramientas/pipeline_automatizado.py --proyecto renzo
-# equivalente: cd proyectos/renzo && python3 scripts/construir_expediente.py
-```
-
-Pipeline industrial:
-
-```bash
-make nave-industrial
-```
-
-`nave-industrial` fue eliminado del repositorio (ver
-`proyectos/renzo-industrial/documentacion/registro-decisiones.md`, DEC-001).
-El proyecto de unidad 2 de Renzo (`renzo-industrial`) esta en etapa inicial y
-no tiene aun pipeline habilitado.
-
-Todas las ejecuciones escriben resultados regenerables en `build/<proyecto>/`.
-El proyecto de [minicentral Limbani](proyectos/aquiles-minicentral-limbani/README.md)
-usa un constructor específico, con balance hidráulico y eléctrico, modos auxiliares,
-cribados de tubería y matriz normativa. Se ejecuta desde la raíz con
-`python proyectos/aquiles-minicentral-limbani/scripts/construir.py`.
-El motor genérico está en `herramientas/hidroelectricas/`; el pipeline residencial
-no se aplica a generación.
-En Renzo, el PDF temporal queda en `build/renzo/expediente/main.pdf`; la
-version revisada se publica en `proyectos/renzo/entregables/expediente.pdf`.
-
-## Flujo esperado
-
-1. Conservar el croquis original sin modificarlo.
-2. Extraer geometria, ambientes, cotas e incertidumbres a JSON.
-3. Validar la planta arquitectonica antes del diseno electrico.
-4. Definir cargas, circuitos, protecciones, conductores y canalizaciones.
-5. Ejecutar calculos, CAD, BOM y cotizacion.
-6. Registrar observaciones y revision humana.
-7. Publicar unicamente resultados aprobados en `entregables/`.
-
-Consulta [docs/arquitectura.md](docs/arquitectura.md), [docs/flujo-agentes.md](docs/flujo-agentes.md) y [AGENTS.md](AGENTS.md) antes de modificar datos canonicos.
-
-El proyecto de la segunda unidad se inicia en
-[`proyectos/unidad-2-industrial/`](proyectos/unidad-2-industrial/README.md).
-Mientras su tipologia siga pendiente, solo se permite investigar, registrar
-fuentes y comparar alternativas; no se deben inventar cargas ni generar planos.
-
-## Motor CAD y QElectroTech
-
-El repositorio integra **[QElectroTech](https://github.com/qelectrotech/qelectrotech-source-mirror)** como solución de esquemática eléctrica de código abierto para la generación automatizada de diagramas unifilares, simulación de protecciones y tableros generales.
-
-* **Documentación QElectroTech:** [`herramientas/cad/QELECTROTECH.md`](herramientas/cad/QELECTROTECH.md)
-* **Generador de proyectos `.qet`:** `python3 herramientas/cad/scripts/qet_generator.py`
-* **Motor DXF / ezdxf:** `python3 herramientas/cad/scripts/generar_unifilar.py`
-
-## Datos pesados y respaldos
-
-`referencias/local/` y `proyectos/*/fuentes/local/` contienen material pesado o restringido que no se sube a Git. La reorganizacion anterior permanece respaldada en `respaldo/reorganizacion-base-antigua-2026-06-13`.
-
-Las configuraciones locales de asistentes, incluida `.gemini/`, estan ignoradas porque no forman parte del producto ni del pipeline reproducible.
-
+La [guía de organización](docs/organizacion-repositorio.md) registra las rutas anteriores y actuales, los archivos históricos y el alcance de esta reorganización. Antes de modificar entradas técnicas, consultar [AGENTS.md](AGENTS.md) y la [política de datos](docs/politica-datos.md).

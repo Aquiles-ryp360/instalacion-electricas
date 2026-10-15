@@ -20,4 +20,7 @@ jobs:
         run: python -m pip install -r requirements.txt
 
       - name: Run unit tests
-        run: python -m pytest -q herramientas/cotizacion/v0_legacy/tests proyectos/renzo/tests proyectos/nave-industrial/tests
+        run: python -m pytest -q herramientas/cotizacion/v0_legacy/tests herramientas/cotizacion/v1/tests proyectos/renzo/tests proyectos/unidad-2-industrial/tests
+
+      - name: Check repository navigation
+        run: python herramientas/verificar_organizacion.py

@@ -1,0 +1,5 @@
+﻿id,descripcion,estado,accion
+AI-06,CL-04 Rev. 2: 16 PC DXF vs 30 PC PDF,corregido en lámina Rev. 4,40 PC en ambos; tabla CSV completa
+AI-07,CL-05 Rev. 2: esquema solo PDF,corregido en lámina Rev. 4,cajas y flechas desde comandos comunes
+AI-08,Rev. 3 acepta NaN/infinito,módulo Rev. 4 disponible; integración pendiente,adoptar modelo validado en diseño posterior
+AI-09,Rev. 3 no regenera CAD/documentos,flujo Rev. 4 adicional,"generador de paquete, sin sobrescritura"

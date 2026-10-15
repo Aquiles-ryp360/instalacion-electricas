@@ -1,0 +1,11 @@
+id,alternativa,partida,unidad,cantidad,precio_unitario_pen,fuente_para_medir,estado
+M-01,A/B/C,Diagnostico y levantamiento de red existente,servicio,,,Alcance de estudio aprobado,PENDIENTE
+M-02,B,Desmontaje de conductor existente,m,,,Plano e inventario de intervencion,PENDIENTE
+M-03,B/C,Suministro y montaje de conductor de media tension,m,,,Plano de vanos y especificacion aprobada,PENDIENTE
+M-04,B/C,Apoyos y armados nuevos,unidad,,,Cuadro de estructuras y calculo mecanico,PENDIENTE
+M-05,B/C,Retenidas y cimentaciones,unidad,,,Planos de detalle y geotecnia,PENDIENTE
+M-06,B/C,Equipos de proteccion y seccionamiento,unidad,,,Unifilar y estudio de coordinacion,PENDIENTE
+M-07,B/C,Puesta a tierra,unidad,,,Esquema aprobado y resistividad medida,PENDIENTE
+M-08,B/C,Subestacion de distribucion si se requiere,unidad,,,Demanda y factibilidad de conexion,PENDIENTE
+M-09,B/C,Servidumbres y permisos,servicio,,,Estudio predial y ambiental,PENDIENTE
+M-10,B/C,Pruebas puesta en servicio y conforme a obra,servicio,,,Especificaciones de obra aprobadas,PENDIENTE

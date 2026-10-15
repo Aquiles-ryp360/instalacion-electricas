@@ -1,0 +1,87 @@
+{
+  "revision": 2,
+  "status": "PRELIMINARY_NOT_FOR_CONSTRUCTION",
+  "kml_sha256": "d68db8f50d3408e93612471acdc5db59ccaddb37bdbf08fa4c5e764fff082ec8",
+  "outputs": {
+    "derived/auditoria_corredor_manual.json": {
+      "bytes": 558,
+      "sha256": "8e94493beb4771559480e571e6b23629d3e5a83a7ebd72ceb5ff93e848dd8004"
+    },
+    "datos/estaciones_corredor.csv": {
+      "bytes": 271,
+      "sha256": "9a8ea3c897a84ebea4a48386a6f89cfe7cc02912f5b0938322a160d12bb2e475"
+    },
+    "datos/vertices_corredor_manual.csv": {
+      "bytes": 23284,
+      "sha256": "02d067e8b136ac0f4180b2905e38195a8aa18621f1c4333187263dc37826b5e4"
+    },
+    "datos/ubicaciones_postes_preliminares.csv": {
+      "bytes": 12922,
+      "sha256": "e85b622079fee27f4744ed0d7e7acd1daf967b96ab1031a944656c53428c84d7"
+    },
+    "datos/cruces_y_puntos_criticos.csv": {
+      "bytes": 7088,
+      "sha256": "a01c5ac1be66a502a6878ed40f214a433949f12a37cc793db6481c8179e93e6c"
+    },
+    "plans/CL-01_REV2_MANUAL.dxf": {
+      "bytes": 38460,
+      "sha256": "607d1ca2ae4ce23079ef6435d9f9277e15e0f7544efe47fdb1c45485b8d1ae59"
+    },
+    "plans/CL-01_REV2_MANUAL.pdf": {
+      "bytes": 36111,
+      "sha256": "68405ff0b60e6da02a942da08d128fd1039c66cf7fc21598912673e8615699d7"
+    },
+    "plans/CL-01_REV2_MANUAL.png": {
+      "bytes": 133400,
+      "sha256": "43008d492b5205daac60879a45f4f9d300bc88c389289d4639f1493a62376db5"
+    },
+    "plans/CL-02_REV2_MANUAL.dxf": {
+      "bytes": 38323,
+      "sha256": "1c7c4f61cdd3f5f607f9e7ffbe88fade0c36ff09336e233133515a46fb1b2ae2"
+    },
+    "plans/CL-02_REV2_MANUAL.pdf": {
+      "bytes": 37129,
+      "sha256": "630e749af62bbe50ed8edc0fa3ef4bae89681ea680bfa6aa407e977e9beff082"
+    },
+    "plans/CL-02_REV2_MANUAL.png": {
+      "bytes": 150564,
+      "sha256": "f457e46866631d10350cbe9b919d1623785b57689d67c766808c5ab028a1abc4"
+    },
+    "plans/CL-03_REV2_MANUAL.dxf": {
+      "bytes": 24665,
+      "sha256": "95c0cea7e92f40a37cd3ce5fe11fb39618c317e8f39b22f4f55804742c725e62"
+    },
+    "plans/CL-03_REV2_MANUAL.pdf": {
+      "bytes": 30445,
+      "sha256": "0746c14313a2a906fe544ef77e58749d36a10f56d07a527082622a9ccde8f39e"
+    },
+    "plans/CL-03_REV2_MANUAL.png": {
+      "bytes": 95772,
+      "sha256": "1587a2fea3af6f76d5ada24b8c54586e2d9e261311d2caeeb80c1ed42208096c"
+    },
+    "plans/CL-04_REV2_MANUAL.dxf": {
+      "bytes": 26268,
+      "sha256": "686f8119bcb53d1eafa44d305b69e13e1ce7f8edefa053ff31035b203aa969ff"
+    },
+    "plans/CL-04_REV2_MANUAL.pdf": {
+      "bytes": 34999,
+      "sha256": "8e948a86d3a878c8b11c67424894bbc00f9486317f23181fab2fde7878d600d3"
+    },
+    "plans/CL-04_REV2_MANUAL.png": {
+      "bytes": 226440,
+      "sha256": "e37c17ef7aa1ce57ab063562728dde4187ca4101116d65c3cb27e097b8ae0261"
+    },
+    "plans/CL-05_REV2_MANUAL.dxf": {
+      "bytes": 22848,
+      "sha256": "3df7e8e0812ad0e3abb0cfb154044e5bdabe306f82d591f1c94862545b891a00"
+    },
+    "plans/CL-05_REV2_MANUAL.pdf": {
+      "bytes": 30508,
+      "sha256": "808cccfd0c4863c9ac3395132c5b743b9cf18518512b9d6628f75c6782706883"
+    },
+    "plans/CL-05_REV2_MANUAL.png": {
+      "bytes": 91774,
+      "sha256": "280e3d69fa42774bccc88ba4cb53d0a209662948ed322e89c21f45a74027f197"
+    }
+  }
+}

@@ -60,10 +60,10 @@ python herramientas/biblioteca_dge/publicar.py
 La integración del proyecto se reproduce después de generar su CAD base:
 
 ```powershell
-python proyectos/aquiles-limbani-redes/scripts/lp_r01/integrar_armados_cad.py
-python proyectos/aquiles-limbani-redes/scripts/lp_r01/perfiles.py
-python proyectos/aquiles-limbani-redes/scripts/lp_r01/dwg.py
-python proyectos/aquiles-limbani-redes/scripts/lp_r01/finalizar.py
+python proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r01/integrar_armados_cad.py
+python proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r01/perfiles.py
+python proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r01/dwg.py
+python proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r01/finalizar.py
 ```
 
 Consultar los registros de verificación para saber qué se comprobó. La apertura y la coherencia geométrica no sustituyen la validación de ingeniería de los componentes.

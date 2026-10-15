@@ -1,0 +1,20 @@
+{
+  "fecha": "2026-10-14",
+  "kml_sha256": "d68db8f50d3408e93612471acdc5db59ccaddb37bdbf08fa4c5e764fff082ec8",
+  "segmentos": 4,
+  "vertices": 187,
+  "longitud_geodesica_m": 13943.736,
+  "longitud_utm_m": 13939.512,
+  "brechas_m": [
+    14.133,
+    43.965,
+    6.979
+  ],
+  "longitud_gis_referencia_m": 13834.03,
+  "diferencia_kml_gis_m": 105.482,
+  "desviacion_vertices_mediana_m": 121.067,
+  "desviacion_vertices_max_m": 269.289,
+  "candidatos_gis_cercanos": 40,
+  "cruces_osm_geometricos": 0,
+  "distancia_conexion_inicio_m": 0.561
+}

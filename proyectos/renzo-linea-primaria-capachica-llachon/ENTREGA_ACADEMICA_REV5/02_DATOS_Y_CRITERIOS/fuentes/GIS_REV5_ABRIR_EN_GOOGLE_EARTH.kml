@@ -1,0 +1,1498 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Capachica-Llachon Rev5 - PC GIS y PN candidatos</name>
+    <description>Datos de gabinete. PC son referencias GISEM; PN son sitios por replantear; CV son alertas OSM. No usar como ubicacion aprobada de postes. SRTM pertenece a ruta GIS alternativa.</description>
+    <Style id="kml">
+      <LineStyle>
+        <color>ff915b24</color>
+        <width>2</width>
+      </LineStyle>
+      <IconStyle>
+        <color>ff915b24</color>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="gis">
+      <LineStyle>
+        <color>ff808080</color>
+        <width>2</width>
+      </LineStyle>
+      <IconStyle>
+        <color>ff808080</color>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="pc">
+      <LineStyle>
+        <color>ff3434c6</color>
+        <width>2</width>
+      </LineStyle>
+      <IconStyle>
+        <color>ff3434c6</color>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="pn">
+      <LineStyle>
+        <color>ff997815</color>
+        <width>2</width>
+      </LineStyle>
+      <IconStyle>
+        <color>ff997815</color>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="cv">
+      <LineStyle>
+        <color>ff197acd</color>
+        <width>2</width>
+      </LineStyle>
+      <IconStyle>
+        <color>ff197acd</color>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="srtm">
+      <LineStyle>
+        <color>ff555555</color>
+        <width>2</width>
+      </LineStyle>
+      <IconStyle>
+        <color>ff555555</color>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>01 KML manual original - cuatro trazos</name>
+      <description>Geometria original; segmentos separados, sin enlaces inventados.</description>
+      <Placemark>
+        <name>KML segmento 1</name>
+        <description>Fuente original; no levantado para construccion.</description>
+        <styleUrl>#kml</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>-69.831612034,-15.642138286,0 -69.831608708,-15.642143545,0 -69.831597381,-15.642154124,0 -69.831588438,-15.642164619,0 -69.831569252,-15.642180396,0 -69.831558986,-15.642185720,0 -69.831550111,-15.642196182,0 -69.831544059,-15.642203990,0 -69.831532919,-15.642214436,0 -69.831524139,-15.642224790,0 -69.831515391,-15.642235106,0 -69.831504371,-15.642245429,0 -69.831495717,-15.642255630,0 -69.831487527,-15.642263285,0 -69.831477070,-15.642270954,0 -69.831466645,-15.642278601,0 -69.831458531,-15.642286190,0 -69.831448577,-15.642291308,0 -69.831445060,-15.642298790,0 -69.831434737,-15.642306356,0 -69.831426711,-15.642313865,0 -69.831416443,-15.642321387,0 -69.831408466,-15.642328855,0 -69.831400120,-15.642338746,0 -69.831391804,-15.642348602,0 -69.831383887,-15.642356016,0 -69.831375585,-15.642365881,0 -69.831367313,-15.642375710,0 -69.831361311,-15.642385464,0 -69.831353470,-15.642392813,0 -69.831345281,-15.642402543,0 -69.831334895,-15.642412273,0 -69.831331941,-15.642417090,0 -69.831320893,-15.642431520,0 -69.831310609,-15.642441140,0 -69.831302574,-15.642450693,0 -69.831294567,-15.642460211,0 -69.831289131,-15.642467318,0 -69.831278217,-15.642481625,0 -69.831270224,-15.642491170,0 -69.831264795,-15.642498296,0 -69.831256854,-15.642507776,0 -69.831251463,-15.642514856,0 -69.831243913,-15.642521944,0 -69.831235714,-15.642533655,0 -69.831225751,-15.642542978,0 -69.831215869,-15.642552182,0 -69.831208482,-15.642559063,0 -69.831201115,-15.642565924,0 -69.831191324,-15.642575044,0 -69.831183704,-15.642584120,0 -69.831176408,-15.642590913,0 -69.831171850,-15.642593184,0 -69.831189006,-15.642635811,0 -69.831203525,-15.642666173,0 -69.831222101,-15.642671158,0 -69.831234159,-15.642686262,0 -69.831247860,-15.642691254,0 -69.831267868,-15.642716339,0 -69.831284672,-15.642731331,0 -69.831300587,-15.642751292,0 -69.831321277,-15.642771183,0 -69.831337096,-15.642791032,0 -69.831348061,-15.642810835,0 -69.831364617,-15.642825698,0 -69.831382024,-15.642835591,0 -69.831389811,-15.642845491,0 -69.831406264,-15.642860305,0 -69.831421763,-15.642880019,0 -69.831442926,-15.642894752,0 -69.831451565,-15.642899654,0 -69.831463112,-15.642914361,0 -69.831492787,-15.642933903,0 -69.831535568,-15.642958432,0 -69.831581906,-15.642987815,0 -69.831597909,-15.643002425,0 -69.831623328,-15.643017052,0 -69.831643974,-15.643031625,0 -69.831658861,-15.643050940,0 -69.831683121,-15.643070250,0 -69.831712016,-15.643089534,0 -69.831723062,-15.643103899,0 -69.831760184,-15.643127884,0 -69.831771146,-15.643142167,0 -69.831802275,-15.643170764,0 -69.831815230,-15.643175582,0 -69.831831765,-15.643185148,0 -69.831848276,-15.643194699,0 -69.831863527,-15.643209059,0 -69.831896121,-15.643228333,0 -69.831915889,-15.643242683,0 -69.831932117,-15.643252276,0 -69.831956413,-15.643266640,0 -69.831972599,-15.643276182,0 -69.831997991,-15.643285824,0 -69.832021020,-15.643304723,0 -69.832050835,-15.643332907,0 -69.832079471,-15.643347124,0 -69.832098868,-15.643361195,0 -69.832102265,-15.643365840,0 -69.832123793,-15.643389067,0 -69.832141870,-15.643407596,0 -69.832147400,-15.643421353,0 -69.832165392,-15.643439783,0 -69.832178775,-15.643458097,0 -69.832202395,-15.643472001,0 -69.832235818,-15.643499560,0 -69.832254690,-15.643513353,0 -69.832267745,-15.643531512,0 -69.832277509,-15.643545093,0 -69.832287250,-15.643558643,0 -69.832298942,-15.643581083,0 -69.832311851,-15.643599029,0 -69.832321506,-15.643612452,0 -69.832334344,-15.643630300,0 -69.832347143,-15.643648092,0 -69.832356716,-15.643661400,0 -69.832367544,-15.643670327,0 -69.832384699,-15.643688069,0 -69.832398643,-15.643701357,0 -69.832413846,-15.643710295,0 -69.832422736,-15.643710441,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>KML segmento 2</name>
+        <description>Fuente original; no levantado para construccion.</description>
+        <styleUrl>#kml</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>-69.832309130,-15.643645600,0 -69.832840512,-15.644270527,0 -69.833308902,-15.645147017,0 -69.833931633,-15.645886177,0 -69.834883294,-15.647241217,0 -69.835907244,-15.648268712,0 -69.837392492,-15.649451294,0 -69.838813893,-15.650589124,0 -69.840790373,-15.651136536,0 -69.842075334,-15.651884541,0 -69.843709254,-15.652748528,0 -69.844783046,-15.653462006,0 -69.845666815,-15.655146981,0 -69.846933360,-15.658325859,0 -69.847710109,-15.660254005,0 -69.849421931,-15.662843267,0 -69.850118754,-15.664300008,0 -69.849808966,-15.665982749,0 -69.849420135,-15.667096712,0 -69.848831266,-15.668426447,0 -69.848762784,-15.669802112,0 -69.848797855,-15.671278420,0 -69.848993662,-15.672404810,0 -69.849281259,-15.673366521,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>KML segmento 3</name>
+        <description>Fuente original; no levantado para construccion.</description>
+        <styleUrl>#kml</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>-69.849530400,-15.673682260,0 -69.849873920,-15.675639627,0 -69.849447293,-15.677085301,0 -69.848982719,-15.677614840,0 -69.843171348,-15.682785333,0 -69.840193176,-15.686067942,0 -69.834500253,-15.687907148,0 -69.831020667,-15.691001922,0 -69.827932626,-15.693807991,0 -69.826477952,-15.696209764,0 -69.824402273,-15.698193143,0 -69.821339509,-15.702327509,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>KML segmento 4</name>
+        <description>Fuente original; no levantado para construccion.</description>
+        <styleUrl>#kml</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>-69.821389327,-15.702286870,0 -69.818595174,-15.704205703,0 -69.816707982,-15.706309887,0 -69.816169240,-15.706797879,0 -69.815397778,-15.707373550,0 -69.814425023,-15.708690742,0 -69.812584783,-15.709853563,0 -69.809175310,-15.712367223,0 -69.806204575,-15.714033606,0 -69.805715656,-15.714625192,0 -69.803356609,-15.715509389,0 -69.800559453,-15.717737557,0 -69.796553830,-15.720884206,0 -69.795585446,-15.722683064,0 -69.794451392,-15.723237324,0 -69.793830474,-15.723309397,0 -69.792943077,-15.723186303,0 -69.792586381,-15.722933906,0 -69.791625499,-15.723176947,0 -69.790630838,-15.723636355,0 -69.789701869,-15.724098898,0 -69.788761942,-15.724235488,0 -69.787274599,-15.724407964,0 -69.786645386,-15.724239471,0 -69.785772083,-15.723927811,0 -69.785310479,-15.723495781,0 -69.785040854,-15.723257013,0 -69.784389371,-15.723106011,0 -69.783850858,-15.723048741,0</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>02 Eje GIS alternativo</name>
+      <description>Ruta GIS inferida, distinta al KML manual.</description>
+      <Placemark>
+        <name>Eje GIS alternativo</name>
+        <description>No aprobado como eje de obra.</description>
+        <styleUrl>#gis</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>-69.830167874,-15.643180502,0 -69.830359087,-15.643356147,0 -69.830359087,-15.643356147,0 -69.830723669,-15.643677851,0 -69.830723669,-15.643677851,0 -69.830763647,-15.643713136,0 -69.830763647,-15.643713136,0 -69.831039063,-15.643970724,0 -69.831320112,-15.644237058,0 -69.831655465,-15.644527956,0 -69.831655465,-15.644527956,0 -69.831839929,-15.644602739,0 -69.832277373,-15.645084984,0 -69.832504514,-15.645492725,0 -69.832504514,-15.645492725,0 -69.833025788,-15.645917608,0 -69.833552234,-15.646352053,0 -69.834093636,-15.646769986,0 -69.834654329,-15.647159008,0 -69.835220646,-15.647324360,0 -69.835711532,-15.648005814,0 -69.835711532,-15.648005814,0 -69.836757128,-15.648886829,0 -69.837432581,-15.649572997,0 -69.837744187,-15.649939277,0 -69.838259276,-15.649962529,0 -69.838943290,-15.650343745,0 -69.839789630,-15.650813289,0 -69.840440445,-15.651173836,0 -69.841257507,-15.651623146,0 -69.841257507,-15.651623146,0 -69.842069191,-15.652079796,0 -69.842798964,-15.652490836,0 -69.843522373,-15.652873784,0 -69.844260107,-15.653291115,0 -69.844260107,-15.653291115,0 -69.844991171,-15.653673757,0 -69.845332171,-15.654649469,0 -69.845661139,-15.655579847,0 -69.845937206,-15.656373023,0 -69.845937206,-15.656373023,0 -69.846217608,-15.657153616,0 -69.846512817,-15.657972299,0 -69.846790254,-15.658734281,0 -69.847070506,-15.659544704,0 -69.847353187,-15.660355389,0 -69.847637694,-15.661133161,0 -69.847924455,-15.661936507,0 -69.848199347,-15.662734565,0 -69.848478361,-15.663513441,0 -69.848761433,-15.664303059,0 -69.849037085,-15.665057450,0 -69.848897924,-15.665995149,0 -69.848897924,-15.665995149,0 -69.848906130,-15.667801277,0 -69.848908000,-15.668660687,0 -69.848917409,-15.669605946,0 -69.848921986,-15.670555743,0 -69.849052030,-15.671430837,0 -69.849175533,-15.672325844,0 -69.849091735,-15.673881562,0 -69.849091735,-15.673881562,0 -69.849049279,-15.675032588,0 -69.849003591,-15.676056525,0 -69.848950415,-15.677142415,0 -69.847782853,-15.678205505,0 -69.846833317,-15.679081525,0 -69.846833317,-15.679081525,0 -69.846082278,-15.679762328,0 -69.845262755,-15.680513812,0 -69.844436341,-15.681269931,0 -69.843735129,-15.681909131,0 -69.842856501,-15.682723391,0 -69.841933097,-15.683565211,0 -69.840631908,-15.684758953,0 -69.840631908,-15.684758953,0 -69.839767026,-15.685563567,0 -69.838828914,-15.686420437,0 -69.837356877,-15.686572703,0 -69.837356877,-15.686572703,0 -69.836400751,-15.686974115,0 -69.836393019,-15.686977308,0 -69.836393019,-15.686977308,0 -69.835318182,-15.687421295,0 -69.834334791,-15.687820451,0 -69.833438456,-15.688196039,0 -69.833438456,-15.688196039,0 -69.832576821,-15.688960567,0 -69.831765148,-15.689713149,0 -69.830949534,-15.690461857,0 -69.830140238,-15.691205295,0 -69.829312233,-15.691961909,0 -69.829312233,-15.691961909,0 -69.828509210,-15.692690311,0 -69.827634161,-15.693493110,0 -69.826794500,-15.694256448,0 -69.825948881,-15.695024778,0 -69.825118565,-15.695794674,0 -69.824289723,-15.696561037,0 -69.823458517,-15.697321438,0 -69.822546088,-15.698144066,0 -69.821760788,-15.698859361,0 -69.821760788,-15.698859361,0 -69.820911373,-15.699528339,0 -69.819906508,-15.700320116,0 -69.818936948,-15.701074693,0 -69.818019395,-15.701791465,0 -69.817157934,-15.702464543,0 -69.817157934,-15.702464543,0 -69.816211633,-15.703206456,0 -69.815716635,-15.704302400,0 -69.815175799,-15.705536553,0 -69.814703673,-15.706613787,0 -69.814703673,-15.706613787,0 -69.814056421,-15.708125768,0 -69.813813105,-15.708872193,0 -69.813181206,-15.709246627,0 -69.812399591,-15.709827545,0 -69.811304635,-15.710679012,0 -69.809890012,-15.711572520,0 -69.809890012,-15.711572520,0 -69.808916173,-15.712353559,0 -69.807833326,-15.712875190,0 -69.806647051,-15.713510558,0 -69.805565196,-15.714073940,0 -69.804079141,-15.714851694,0 -69.803335010,-15.715245859,0 -69.803335010,-15.715245859,0 -69.802763606,-15.715563905,0 -69.802064993,-15.715929062,0 -69.800848152,-15.716561800,0 -69.800848152,-15.716561800,0 -69.799500051,-15.717257298,0 -69.798687178,-15.717833854,0 -69.797806482,-15.718442566,0 -69.797806482,-15.718442566,0 -69.796864979,-15.719087656,0 -69.796191883,-15.719540479,0 -69.795351048,-15.720131590,0 -69.793693769,-15.721277281,0 -69.792586456,-15.721986778,0 -69.791555262,-15.722640128,0 -69.791555262,-15.722640128,0 -69.790222878,-15.723485485,0 -69.788606373,-15.723673667,0 -69.787843867,-15.723747474,0 -69.786755983,-15.723862860,0 -69.784214802,-15.724137869,0 -69.784214802,-15.724137869,0 -69.784349418,-15.723683582,0 -69.784532974,-15.723116662,0 -69.784364544,-15.722101362,0</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>03 PC referencias de estructura GIS</name>
+      <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo.</description>
+      <Placemark>
+        <name>PC-001</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-001; segmento 2; progresiva 260.661 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.832292633,-15.643713485,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-002</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-002; segmento 2; progresiva 720.065 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.834656924,-15.647154840,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-003</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-003; segmento 2; progresiva 756.62 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.835035492,-15.647287369,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-004</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-004; segmento 2; progresiva 772.334 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.835226543,-15.647306077,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-005</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-005; segmento 2; progresiva 831.102 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.835593676,-15.647701077,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-006</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-006; segmento 2; progresiva 861.083 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.835641949,-15.648032656,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-007</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-007; segmento 2; progresiva 923.949 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.836175095,-15.648299288,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-008</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-008; segmento 2; progresiva 1001.758 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.836678833,-15.648813182,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-009</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-009; segmento 2; progresiva 1117.011 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.837397358,-15.649606489,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-010</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-010; segmento 2; progresiva 1168.203 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.837720086,-15.649954557,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-011</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-011; segmento 2; progresiva 1217.711 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.838286456,-15.649992980,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-012</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-012; segmento 2; progresiva 1409.915 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.839774438,-15.650839925,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-013</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-013; segmento 2; progresiva 1488.968 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.840439560,-15.651185500,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-014</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-014; segmento 2; progresiva 1574.513 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.841292709,-15.651219472,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-015</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-015; segmento 2; progresiva 1595.641 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.841263814,-15.651636953,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-016</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-016; segmento 2; progresiva 1693.805 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.842064354,-15.652083250,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-017</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-017; segmento 2; progresiva 1794.364 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.842885025,-15.652523772,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-018</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-018; segmento 2; progresiva 1880.797 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.843586521,-15.652909335,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-019</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-019; segmento 2; progresiva 1968.782 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.844282892,-15.653295999,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-020</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-020; segmento 2; progresiva 2057.567 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.845020168,-15.653691906,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-021</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-021; segmento 2; progresiva 2143.353 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.845287327,-15.654430245,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-022</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-022; segmento 2; progresiva 2219.353 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.845505478,-15.655093471,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-023</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-023; segmento 2; progresiva 2298.321 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.845737167,-15.655758814,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-024</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-024; segmento 2; progresiva 2370.001 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.845943656,-15.656376162,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-025</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-025; segmento 2; progresiva 3940.115 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.848764353,-15.669371142,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-026</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-026; segmento 2; progresiva 4069.766 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.848923695,-15.670540188,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-027</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-027; segmento 2; progresiva 4169.903 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.849042431,-15.671410896,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-028</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-028; segmento 2; progresiva 4267.734 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.849162035,-15.672288200,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-029</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-029; segmento 3; progresiva 6328.33 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.838860499,-15.686431344,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-030</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-030; segmento 3; progresiva 6718.733 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.835356856,-15.687408943,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-031</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-031; segmento 3; progresiva 6833.78 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.834303612,-15.687840367,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-032</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-032; segmento 4; progresiva 9783.268 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.815643800,-15.707059380,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-033</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-033; segmento 4; progresiva 10069.771 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.813814472,-15.708863781,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-034</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-034; segmento 4; progresiva 10152.258 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.813192919,-15.709305614,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-035</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-035; segmento 4; progresiva 10269.537 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.812303904,-15.709937645,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-036</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-036; segmento 4; progresiva 10451.058 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.810986995,-15.710971005,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-037</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-037; segmento 4; progresiva 10587.807 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.809885119,-15.711609783,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-038</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-038; segmento 4; progresiva 10724.381 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.808912467,-15.712384037,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-039</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-039; segmento 4; progresiva 13205.173 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.790135835,-15.723639479,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PC-040</name>
+        <description>Referencia GIS; validar existencia, codigo y estado. No equivale a poste nuevo. ID PC-040; segmento 4; progresiva 13864.661 m; estado pendiente.</description>
+        <styleUrl>#pc</styleUrl>
+        <Point>
+          <coordinates>-69.784518591,-15.723235679,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>04 PN sitios candidatos para replanteo</name>
+      <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño.</description>
+      <Placemark>
+        <name>PN-001</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-001; segmento 1; progresiva 0.0 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.831612034,-15.642138286,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-002</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-002; segmento 1; progresiva 78.263 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.831203525,-15.642666173,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-003</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-003; segmento 1; progresiva 255.99 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.832422736,-15.643710441,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-004</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-004; segmento 2; progresiva 255.99 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.832309130,-15.643645600,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-005</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-005; segmento 2; progresiva 1303.298 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.838813893,-15.650589124,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-006</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-006; segmento 2; progresiva 2023.38 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.844783046,-15.653462006,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-007</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-007; segmento 2; progresiva 3356.148 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.850118754,-15.664300008,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-008</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-008; segmento 2; progresiva 3835.386 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.848831266,-15.668426447,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-009</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-009; segmento 2; progresiva 4388.219 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.849281259,-15.673366521,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-010</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-010; segmento 3; progresiva 4388.219 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.849530400,-15.673682260,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-011</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-011; segmento 3; progresiva 4607.856 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.849873920,-15.675639627,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-012</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-012; segmento 3; progresiva 4774.188 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.849447293,-15.677085301,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-013</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-013; segmento 3; progresiva 6180.128 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.840193176,-15.686067942,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-014</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-014; segmento 3; progresiva 6823.253 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.834500253,-15.687907148,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-015</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-015; segmento 3; progresiva 8966.604 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.821339509,-15.702327509,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-016</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-016; segmento 4; progresiva 8966.604 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.821389327,-15.702286870,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-017</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-017; segmento 4; progresiva 10004.517 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.814425023,-15.708690742,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-018</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-018; segmento 4; progresiva 11066.921 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.806204575,-15.714033606,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-019</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-019; segmento 4; progresiva 11150.75 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.805715656,-15.714625192,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-020</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-020; segmento 4; progresiva 12362.453 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.796553830,-15.720884206,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-021</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-021; segmento 4; progresiva 12586.872 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.795585446,-15.722683064,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-022</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-022; segmento 4; progresiva 12886.034 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.792943077,-15.723186303,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-023</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-023; segmento 4; progresiva 12933.365 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.792586381,-15.722933906,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-024</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-024; segmento 4; progresiva 13532.101 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.787274599,-15.724407964,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-025</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-025; segmento 4; progresiva 13701.769 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.785772083,-15.723927811,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-026</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-026; segmento 4; progresiva 13809.69 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.785040854,-15.723257013,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PN-027</name>
+        <description>Sitio geométrico de gabinete; no es poste aprobado ni se debe instalar sin diseño. ID PN-027; segmento 4; progresiva 13939.512 m; estado pendiente.</description>
+        <styleUrl>#pn</styleUrl>
+        <Point>
+          <coordinates>-69.783850858,-15.723048741,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>05 CV alertas de cruces OSM</name>
+      <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso.</description>
+      <Placemark>
+        <name>CV-001</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-001; segmento 1; progresiva 8.059 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.831557567,-15.642187393,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-002</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-002; segmento 1; progresiva 67.389 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.831186510,-15.642580778,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-003</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-003; segmento 1; progresiva 70.071 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.831173787,-15.642597997,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-004</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-004; segmento 1; progresiva 120.25 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.831479247,-15.642924986,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-005</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-005; segmento 1; progresiva 184.823 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.831959960,-15.643268731,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-006</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-006; segmento 1; progresiva 216.229 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.832175133,-15.643453112,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-007</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-007; segmento 1; progresiva 217.775 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.832185722,-15.643462186,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-008</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-008; segmento 1; progresiva 229.89 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.832269543,-15.643534012,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-009</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-009; segmento 1; progresiva 240.737 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.832324260,-15.643616281,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-010</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-010; segmento 2; progresiva 766.434 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.835044128,-15.647402609,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-011</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-011; segmento 2; progresiva 844.442 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.835549657,-15.647909889,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-012</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-012; segmento 2; progresiva 1116.969 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.837473733,-15.649516328,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-013</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-013; segmento 2; progresiva 1291.251 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.838727250,-15.650519766,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-014</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-014; segmento 2; progresiva 2190.695 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.845490263,-15.654810372,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-015</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-015; segmento 2; progresiva 2779.274 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.847509596,-15.659756271,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-016</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-016; segmento 2; progresiva 3149.772 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.849277183,-15.662624328,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-017</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-017; segmento 2; progresiva 3270.482 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.849782661,-15.663597394,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-018</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-018; segmento 2; progresiva 3345.06 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.850075251,-15.664209064,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-019</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-019; segmento 2; progresiva 3367.067 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.850100865,-15.664397180,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-020</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-020; segmento 3; progresiva 4679.335 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.849690582,-15.676260889,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-021</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-021; segmento 3; progresiva 4762.12 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.849478246,-15.676980414,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-022</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-022; segmento 3; progresiva 4820.465 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.849167648,-15.677404052,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-023</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-023; segmento 3; progresiva 6709.021 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.835511438,-15.687580478,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-024</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-024; segmento 3; progresiva 7165.185 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.832149914,-15.689997576,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-025</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-025; segmento 3; progresiva 7279.234 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.831365965,-15.690694818,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-026</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-026; segmento 3; progresiva 7769.938 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.828022859,-15.693725998,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-027</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-027; segmento 3; progresiva 7830.704 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.827708280,-15.694178406,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-028</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-028; segmento 4; progresiva 9459.29 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.817826082,-15.705063233,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-029</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-029; segmento 4; progresiva 9573.073 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.817129687,-15.705839699,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-030</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-030; segmento 4; progresiva 9785.481 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.815692613,-15.707153543,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-031</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-031; segmento 4; progresiva 9931.139 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.814823447,-15.708151245,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-032</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-032; segmento 4; progresiva 10364.246 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.811661796,-15.710534053,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-033</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-033; segmento 4; progresiva 10491.439 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.810717251,-15.711230429,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-034</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-034; segmento 4; progresiva 11133.542 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.805816019,-15.714503754,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-035</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-035; segmento 4; progresiva 11136.778 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.805797149,-15.714526587,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-036</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-036; segmento 4; progresiva 12221.172 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.797577924,-15.720079736,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-037</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-037; segmento 4; progresiva 12385.033 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.796456393,-15.721065205,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-038</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-038; segmento 4; progresiva 13756.039 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.785407846,-15.723586910,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-039</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-039; segmento 4; progresiva 13812.262 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.785017511,-15.723251602,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-040</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-040; segmento 4; progresiva 13854.03 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.784638390,-15.723163729,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-041</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-041; segmento 4; progresiva 13874.546 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.784452172,-15.723120567,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-042</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-042; segmento 4; progresiva 13916.493 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.784064409,-15.723071452,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-043</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-043; segmento 4; progresiva 13922.921 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.784004777,-15.723065110,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CV-044</name>
+        <description>Interseccion cartografica OSM; verificar clase, cota, titular y permiso. ID CV-044; segmento 4; progresiva 13935.552 m; estado pendiente.</description>
+        <styleUrl>#cv</styleUrl>
+        <Point>
+          <coordinates>-69.783887594,-15.723052648,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>06 Muestras SRTM sobre eje GIS alternativo</name>
+      <description>57 puntos de un DEM; elevación informada solo en descripción. No es perfil constructivo ni corresponde al KML.</description>
+      <Placemark>
+        <name>SRTM PK 0 m</name>
+        <description>Elevación SRTM informada: 3867.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.830167874,-15.643180502,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 250 m</name>
+        <description>Elevación SRTM informada: 3860.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.831903116,-15.644672397,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 500 m</name>
+        <description>Elevación SRTM informada: 3863.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.833487195,-15.646298381,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 750 m</name>
+        <description>Elevación SRTM informada: 3870.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.835377258,-15.647541772,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 1000 m</name>
+        <description>Elevación SRTM informada: 3861.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.837007459,-15.649141132,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 1250 m</name>
+        <description>Elevación SRTM informada: 3850.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.838875509,-15.650305969,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 1500 m</name>
+        <description>Elevación SRTM informada: 3830.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.840900742,-15.651426958,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 1750 m</name>
+        <description>Elevación SRTM informada: 3826.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.842921370,-15.652555634,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 2000 m</name>
+        <description>Elevación SRTM informada: 3828.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.844958083,-15.653656438,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 2250 m</name>
+        <description>Elevación SRTM informada: 3826.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.845730367,-15.655778748,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 2500 m</name>
+        <description>Elevación SRTM informada: 3827.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.846492070,-15.657914763,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 2750 m</name>
+        <description>Elevación SRTM informada: 3824.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.847247668,-15.660052778,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 3000 m</name>
+        <description>Elevación SRTM informada: 3825.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.848011143,-15.662188179,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 3250 m</name>
+        <description>Elevación SRTM informada: 3840.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.848769556,-15.664325290,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 3500 m</name>
+        <description>Elevación SRTM informada: 3834.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.848900359,-15.666531054,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 3750 m</name>
+        <description>Elevación SRTM informada: 3825.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.848909297,-15.668790975,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 4000 m</name>
+        <description>Elevación SRTM informada: 3826.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.848994813,-15.671045813,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 4250 m</name>
+        <description>Elevación SRTM informada: 3823.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.849123464,-15.673292505,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 4500 m</name>
+        <description>Elevación SRTM informada: 3838.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.849026173,-15.675550424,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 4750 m</name>
+        <description>Elevación SRTM informada: 3832.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.848449296,-15.677598697,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 5000 m</name>
+        <description>Elevación SRTM informada: 3828.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.846755242,-15.679152299,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 5250 m</name>
+        <description>Elevación SRTM informada: 3835.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.845057226,-15.680701859,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 5500 m</name>
+        <description>Elevación SRTM informada: 3828.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.843362324,-15.682254625,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 5750 m</name>
+        <description>Elevación SRTM informada: 3828.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.841668220,-15.683808217,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 6000 m</name>
+        <description>Elevación SRTM informada: 3847.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.839978772,-15.685366577,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 6250 m</name>
+        <description>Elevación SRTM informada: 3832.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.838083263,-15.686497568,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 6500 m</name>
+        <description>Elevación SRTM informada: 3829.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.835885406,-15.687186990,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 6750 m</name>
+        <description>Elevación SRTM informada: 3829.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.833738246,-15.688070420,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 7000 m</name>
+        <description>Elevación SRTM informada: 3826.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.831971592,-15.689521735,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 7250 m</name>
+        <description>Elevación SRTM informada: 3830.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.830279447,-15.691077415,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 7500 m</name>
+        <description>Elevación SRTM informada: 3830.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.828580248,-15.692625875,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 7750 m</name>
+        <description>Elevación SRTM informada: 3830.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.826882814,-15.694176162,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 8000 m</name>
+        <description>Elevación SRTM informada: 3829.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.825188601,-15.695729735,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 8250 m</name>
+        <description>Elevación SRTM informada: 3829.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.823497111,-15.697286132,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 8500 m</name>
+        <description>Elevación SRTM informada: 3849.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.821793231,-15.698829811,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 8750 m</name>
+        <description>Elevación SRTM informada: 3852.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.819985333,-15.700258007,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 9000 m</name>
+        <description>Elevación SRTM informada: 3847.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.818168136,-15.701675272,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 9250 m</name>
+        <description>Elevación SRTM informada: 3844.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.816353298,-15.703095390,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 9500 m</name>
+        <description>Elevación SRTM informada: 3837.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.815358770,-15.705119027,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 9750 m</name>
+        <description>Elevación SRTM informada: 3835.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.814452152,-15.707201343,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 10000 m</name>
+        <description>Elevación SRTM informada: 3832.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.813393524,-15.709120818,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 10250 m</name>
+        <description>Elevación SRTM informada: 3827.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.811542581,-15.710493980,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 10500 m</name>
+        <description>Elevación SRTM informada: 3829.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.809628773,-15.711782040,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 10750 m</name>
+        <description>Elevación SRTM informada: 3833.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.807659539,-15.712968271,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 11000 m</name>
+        <description>Elevación SRTM informada: 3835.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.805611109,-15.714050031,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 11250 m</name>
+        <description>Elevación SRTM informada: 3828.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.803559817,-15.715126780,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 11500 m</name>
+        <description>Elevación SRTM informada: 3826.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.801515150,-15.716214973,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 11750 m</name>
+        <description>Elevación SRTM informada: 3825.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.799460731,-15.717285187,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 12000 m</name>
+        <description>Elevación SRTM informada: 3828.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.797567699,-15.718606174,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 12250 m</name>
+        <description>Elevación SRTM informada: 3835.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.795663476,-15.719911952,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 12500 m</name>
+        <description>Elevación SRTM informada: 3856.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.793766148,-15.721227245,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 12750 m</name>
+        <description>Elevación SRTM informada: 3859.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.791819359,-15.722472801,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 13000 m</name>
+        <description>Elevación SRTM informada: 3872.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.789801042,-15.723534593,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 13250 m</name>
+        <description>Elevación SRTM informada: 3887.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.787482352,-15.723785819,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 13500 m</name>
+        <description>Elevación SRTM informada: 3853.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.785163354,-15.724035219,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 13750 m</name>
+        <description>Elevación SRTM informada: 3876.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.784488960,-15.722851348,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SRTM PK 13834.03 m</name>
+        <description>Elevación SRTM informada: 3872.0 m; datum vertical y precisión local no comprobados.</description>
+        <styleUrl>#srtm</styleUrl>
+        <Point>
+          <coordinates>-69.784364544,-15.722101362,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

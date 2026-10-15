@@ -1,0 +1,47 @@
+{
+  "project_id": "renzo-linea-primaria-capachica-llachon",
+  "status": "PRELIMINARY",
+  "note": "null significa que el dato no ha sido validado para el corredor Capachica–Llachón",
+  "known_references": {
+    "start_structure_code": {"value": "NMT000367723", "source": "sources/gisem_mt_estructuras.geojson", "status": "EXTRACTED_GIS"},
+    "end_structure_code": {"value": "NMT000027963", "source": "sources/gisem_mt_estructuras.geojson", "status": "EXTRACTED_GIS"},
+    "route_geometry_length_m": {"value": 13834.03, "source": "derived/route.json", "status": "INFERRED_GIS"},
+    "route_segment_count": {"value": 27, "source": "derived/route.json", "status": "INFERRED_GIS"},
+    "terrain_sample_count": {"value": 57, "source": "sources/srtm30m_route_samples.json", "status": "EXTRACTED_REMOTE_DEM"}
+  },
+  "design_inputs_required": {
+    "network_operator_approved_connection": null,
+    "nominal_voltage_kv": null,
+    "system_phases": null,
+    "frequency_hz": null,
+    "existing_feeder_id": null,
+    "existing_line_as_built": null,
+    "existing_conductor_type_and_section": null,
+    "existing_structures_inventory": null,
+    "existing_transformers_and_protection": null,
+    "present_peak_demand_kva": null,
+    "forecast_peak_demand_kva": null,
+    "power_factor": null,
+    "source_short_circuit_levels": null,
+    "topographic_survey": null,
+    "crossings_and_clearances": null,
+    "weather_design_cases": null,
+    "soil_and_geotechnical_data": null,
+    "soil_resistivity_ohm_m": null,
+    "servitudes_and_land_rights": null,
+    "environmental_and_cultural_constraints": null,
+    "scope_of_work_approved": null
+  },
+  "derived_design_results": {
+    "design_current_a": null,
+    "voltage_drop_percent": null,
+    "short_circuit_current_ka": null,
+    "new_poles_count": null,
+    "critical_span_m": null,
+    "maximum_sag_m": null,
+    "minimum_clearance_m": null,
+    "earth_resistance_ohm": null,
+    "bill_of_quantities": null,
+    "construction_cost_pen": null
+  }
+}

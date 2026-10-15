@@ -1,5 +1,11 @@
 # Expediente Técnico - Línea Primaria 22.9 kV Capachica - Chifrón
 
+> **Revisión activa:** [dictamen auditado](documentacion/DICTAMEN_PRESENTACION_AUDITADA_REV1.md). La [carpeta de presentación local](../../build/renzo-linea-primaria-capachica/presentacion_auditada_rev3/) contiene un dossier PDF, un plano LP-00 DXF/PDF y una imagen georreferenciada PNG+PGW+PRJ. La conexión E-01 a la red citada queda pendiente de confirmar; los seis planos anteriores son referenciales. Estado: revisión académica, no apto para obra.
+
+Para regenerar la carpeta en una copia sin salida existente: `python scripts/preparar_presentacion_auditada.py` desde este directorio. Requiere conexión al servicio público GISEM y las dependencias Python `requests`, `Pillow`, `pyproj`, `ezdxf`, `PyMuPDF`, `reportlab` y `pypdf`. El script rehúsa sobrescribir una carpeta Rev. 3 ya generada.
+
+> **Este expediente corresponde a Chifrón.** Para el recorrido **Capachica–Llachón** y sus dos planos nuevos, abre el [proyecto separado de Llachón](../renzo-linea-primaria-capachica-llachon/README.md).
+
 **Proyecto:** Instalación de línea primaria en media tensión 22.9 kV y subestación biposte SAB-1 100 kVA para el sector Chifrón, distrito de Capachica, Puno.  
 **Alcance final:** Línea primaria, subestación de distribución, protecciones MT, retenidas, cimentaciones y puesta a tierra.  
 **No incluido en esta entrega:** redes secundarias, acometidas domiciliarias ni alumbrado público.  

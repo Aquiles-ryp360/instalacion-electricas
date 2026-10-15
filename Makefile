@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: install test test-tools test-renzo test-unidad-2 check-unidad-2 aquiles renzo clean
+.PHONY: install test test-tools test-renzo test-unidad-2 check-unidad-2 check-organizacion aquiles renzo renzo-industrial clean
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -19,6 +19,9 @@ test-unidad-2:
 
 check-unidad-2:
 	$(PYTHON) proyectos/unidad-2-industrial/scripts/verificar_preparacion.py
+
+check-organizacion:
+	$(PYTHON) herramientas/verificar_organizacion.py
 
 aquiles:
 	$(PYTHON) herramientas/pipeline_automatizado.py --proyecto aquiles

@@ -1,0 +1,6 @@
+concepto,cantidad,unidad,clasificacion,fuente,observacion
+Longitud polilineas KML,13939.512,m,B,derived/auditoria_corredor_manual.json,Cuatro segmentos sin agregar brechas ni vanos
+Estructuras GIS proximas,40,puntos,C,datos/ubicaciones_postes_preliminares.csv,Puntos de inspeccion; no postes nuevos
+Intersecciones geometricas viales OSM,44,alertas,C,datos/cruces_y_puntos_criticos.csv,Requieren depuracion y verificacion en campo
+Postes nuevos,,unidad,D,datos/parametros_diseno_pendientes.json,No cuantificable sin diseno aprobado
+Conductor nuevo,,m,D,datos/parametros_diseno_pendientes.json,No cuantificable sin topologia y seleccion
