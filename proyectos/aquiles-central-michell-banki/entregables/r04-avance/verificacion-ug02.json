@@ -1,0 +1,55 @@
+{
+  "estado": "Lámina de trabajo revisable, no nueva entrega integral",
+  "crs": "EPSG:32719",
+  "pagina_mm": [
+    420,
+    297
+  ],
+  "escala_pdf": 10000,
+  "extension_utm_m": [
+    424700.0,
+    8434700.0,
+    426700.0,
+    8436900.0
+  ],
+  "intervalo_curvas_m": 20,
+  "principales_m": 100,
+  "paso_dem_nativo_aprox_m": 30,
+  "paso_interpolacion_m": 20,
+  "distancia_entre_casas_candidatas_m": 152.0690632574555,
+  "referencias": [
+    {
+      "id": "CAP-P",
+      "e": 425541.9784755457,
+      "n": 8436230.755240517,
+      "color": "#277c65",
+      "descripcion": "Captación propuesta de estudio; no identificada en campo",
+      "fuente": "R03, topografia-r03.json"
+    },
+    {
+      "id": "CM-A",
+      "e": 425580.0,
+      "n": 8436580.0,
+      "color": "#52616a",
+      "descripcion": "Casa de máquinas candidata A; no confirmada",
+      "fuente": "Antecedente de memoria de línea"
+    },
+    {
+      "id": "CM-B",
+      "e": 425715.0,
+      "n": 8436650.0,
+      "color": "#a53639",
+      "descripcion": "Casa de máquinas candidata B; no confirmada",
+      "fuente": "Antecedente CAD recibido"
+    }
+  ],
+  "segmentos_curvas": 76,
+  "niveles_dem": 41,
+  "errores_dxf": 0,
+  "geometrias_invalidas_reparadas_solo_para_visualizacion": 3,
+  "diferencia_maxima_kml_utm_m": 4.789811257812869e-05,
+  "referencias_dxf_reabiertas": 3,
+  "origen_dem": "referencias\\local\\topografia-limbani\\S15W070-mapzen.hgt.gz",
+  "dem_sha256": "f6d32d0d99951833124e5bced24690a37a127a57939b52bd60f671a00ddb9885",
+  "catastro_sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8"
+}

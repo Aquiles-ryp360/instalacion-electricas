@@ -1,0 +1,40 @@
+{
+  "estado": "Avance R04 revisado para compartir; no sustituye R03",
+  "archivos": [
+    {
+      "archivo": "Limbani_R04_UG-02_emplazamiento_revision.pdf",
+      "bytes": 160191,
+      "sha256": "38193d35a886735ede2a39f910cc97f3f7e148ba169a87de11c7f98655358c70"
+    },
+    {
+      "archivo": "Limbani_R04_UG-02_emplazamiento_revision.dxf",
+      "bytes": 569122,
+      "sha256": "486579d9c1f2e256aeec2332403df9aaef31c72d1fe801834fbc07ebbe4051e9"
+    },
+    {
+      "archivo": "Limbani_R04_UG-02_emplazamiento_revision.svg",
+      "bytes": 444417,
+      "sha256": "3323140898d9b30f2f8a571a0f20945c1934cb2fad984315765455f5b57d99d1"
+    },
+    {
+      "archivo": "Limbani_R04_UG-02_emplazamiento_revision.kmz",
+      "bytes": 96255,
+      "sha256": "6da2257bf9193e870fa263739cad3a53f3974575de5fdd3136f2811099ddf662"
+    },
+    {
+      "archivo": "Limbani_R04_UG-02_emplazamiento_revision.png",
+      "bytes": 1010765,
+      "sha256": "a90f958742567833a208517f7cea32098f0a7ec00de5f37caa60127fa21b3280"
+    },
+    {
+      "archivo": "referencias_emplazamiento_UTM19S.geojson",
+      "bytes": 1422,
+      "sha256": "b234a2689487254a7dc9cadf51bfc51b671fb3cf493cecbf0efbbe4e1d621702"
+    },
+    {
+      "archivo": "verificacion-ug02.json",
+      "bytes": 1652,
+      "sha256": "8fc8b33ccc5236d8866c2231e28f7321517afb0e5b0f9443c413a88893680729"
+    }
+  ]
+}

@@ -4,6 +4,12 @@ Proyecto académico de diseño para **Centrales Hidroeléctricas**, primera unid
 
 La versión vigente parte de [proyecto.yaml](proyecto.yaml). La operación inicial es **aislada, sin SEIN**. Se comparan 150, 200, 400 y 600 kW; se dimensiona el caso conservador de tres grupos de 200 kW, con respaldo modular. No se presenta como una inversión óptima ni como expediente listo para construir.
 
+## Mejora en desarrollo · 16/10/2026
+
+[Diagnóstico y alcance propuesto R04](documentacion/MEJORA_PROPUESTA_R04.md): memoria más directa, planos dimensionados y desarrollo académico de un grupo Banki de 200 kW. Se incorpora un [contraste reproducible con el T12 de SKAT](datos/turbina/contraste-t12-r04.json); no se atribuye automáticamente el rendimiento supuesto de R03 a ese modelo.
+
+Ya está disponible una [primera lámina geográfica de revisión, con PDF, DXF y Google Earth](entregables/r04-avance/README.md). Muestra relieve, curvas y las dos casas de máquinas candidatas, con coordenadas y procedencia. **Es un avance; todavía no constituye el expediente R04 completo ni sustituye los tres PDF R03.**
+
 ## Resultados y alcance
 
 - PISCO/SENAMHI 1981–2025: 16 436 días y 540 meses recuperados. COMID 9080887; transposición exploratoria por área geodésica, sin calibración local. Caudales simulados, **no aforos oficiales en captación**.

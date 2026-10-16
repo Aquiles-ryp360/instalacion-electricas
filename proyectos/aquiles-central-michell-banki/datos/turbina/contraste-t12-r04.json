@@ -1,0 +1,111 @@
+{
+  "revision": "Contraste de trabajo R04; no sustituye la entrega R03",
+  "fecha": "2026-10-16",
+  "tipo": "Cálculo con hipótesis; no ensayo ni dato de central existente",
+  "entrada_r03_sha256": "230afdfa776aadac053a417b58ed48cb451294fb47be21b9b307f439f5098813",
+  "fuente": "SKAT 1993, Cross Flow Turbine Design and Equipment Engineering, vol. 3",
+  "pagina_editor": "https://skat.ch/publications/cross-flow-turbine-design-volume-3",
+  "eta_turbina_r03": 0.84,
+  "eta_turbina_t12_manual": 0.7,
+  "eta_mecanica_r03": 0.985,
+  "eta_generador_r03": 0.925,
+  "salto_bruto_gabinete_m": 45.3,
+  "longitud_tuberia_m": 350.0,
+  "diametro_tuberia_m": 1.0,
+  "q_max_diseno_r03_m3s": 1.9,
+  "casos": [
+    {
+      "unidades": 1,
+      "potencia_objetivo_bornes_kw": 200.0,
+      "q_teorico_total_m3s": 0.7094060046714739,
+      "q_unitario_m3s": 0.7094060046714739,
+      "supera_q_diseno_r03": false,
+      "salto_neto_m": 45.05988975754585,
+      "perdidas_m": 0.24011024245414944,
+      "potencia_eje_turbina_unitaria_kw": 219.50884895047324,
+      "potencia_acople_generador_unitaria_kw": 216.21621621621614,
+      "seleccion_t12": {
+        "diametro_exterior_m": 0.3,
+        "ancho_entrada_b0_mm": 382.88480528057306,
+        "velocidad_referencia_rpm": 895.0221822953971,
+        "velocidad_generador_r03_rpm": 900.0,
+        "desviacion_velocidad_generador_pct": 0.5561669646931611,
+        "torque_referencia_nm": 2342.0146933084357,
+        "limites_rectangulares_del_manual": true,
+        "campo_conjunto_y_discos": "Comprobar gráficas 0-8 y 9; límites rectangulares solos no validan selección",
+        "transmision": "Cotejar línea d-d del gráfico 9; no adoptar polea sobre eje sin comprobar"
+      }
+    },
+    {
+      "unidades": 2,
+      "potencia_objetivo_bornes_kw": 400.0,
+      "q_teorico_total_m3s": 1.4408096983840024,
+      "q_unitario_m3s": 0.7204048491920012,
+      "supera_q_diseno_r03": false,
+      "salto_neto_m": 44.37193391978154,
+      "perdidas_m": 0.9280660802184524,
+      "potencia_eje_turbina_unitaria_kw": 219.5088489504732,
+      "potencia_acople_generador_unitaria_kw": 216.2162162162161,
+      "seleccion_t12": {
+        "diametro_exterior_m": 0.3,
+        "ancho_entrada_b0_mm": 391.82377342502195,
+        "velocidad_referencia_rpm": 888.1634876508471,
+        "velocidad_generador_r03_rpm": 900.0,
+        "desviacion_velocidad_generador_pct": 1.3326952203878584,
+        "torque_referencia_nm": 2360.1005118067146,
+        "limites_rectangulares_del_manual": true,
+        "campo_conjunto_y_discos": "Comprobar gráficas 0-8 y 9; límites rectangulares solos no validan selección",
+        "transmision": "Cotejar línea d-d del gráfico 9; no adoptar polea sobre eje sin comprobar"
+      }
+    },
+    {
+      "unidades": 3,
+      "potencia_objetivo_bornes_kw": 600.0,
+      "q_teorico_total_m3s": 2.2219188319725687,
+      "q_unitario_m3s": 0.7406396106575229,
+      "supera_q_diseno_r03": true,
+      "salto_neto_m": 43.1596634906675,
+      "perdidas_m": 2.1403365093325006,
+      "potencia_eje_turbina_unitaria_kw": 219.50884895047332,
+      "potencia_acople_generador_unitaria_kw": 216.21621621621622,
+      "seleccion_t12": {
+        "diametro_exterior_m": 0.3,
+        "ancho_entrada_b0_mm": 408.447501902051,
+        "velocidad_referencia_rpm": 875.9468628294502,
+        "velocidad_generador_r03_rpm": 900.0,
+        "desviacion_velocidad_generador_pct": 2.745958481186217,
+        "torque_referencia_nm": 2393.016278409722,
+        "limites_rectangulares_del_manual": true,
+        "campo_conjunto_y_discos": "Comprobar gráficas 0-8 y 9; límites rectangulares solos no validan selección",
+        "transmision": "Cotejar línea d-d del gráfico 9; no adoptar polea sobre eje sin comprobar"
+      }
+    }
+  ],
+  "balance_al_q_max_r03": {
+    "q_m3s": 1.9,
+    "hb_m": 45.3,
+    "l_m": 350.0,
+    "d_m": 1.0,
+    "area_m2": 0.7853981633974483,
+    "v_ms": 2.4191551349968092,
+    "re": 1950931.5604812978,
+    "f": 0.011718080672124386,
+    "hf_m": 1.2233563033600174,
+    "hl_m": 0.3579395453933596,
+    "htotal_m": 1.581295848753377,
+    "hn_m": 43.71870415124662,
+    "p_hidraulica_kw": 814.8729266750858,
+    "p_turbina_kw": 570.41104867256,
+    "p_acople_kw": 561.8548829424716,
+    "p_bornes_kw": 519.7157667217863,
+    "eta_global": 0.6377875000000001
+  },
+  "limites": [
+    "Se conserva la tubería R03 para aislar el efecto del rendimiento; no está optimizada para una sola unidad.",
+    "El 70% es el valor de cálculo del modelo T12; no se atribuye a todas las Banki.",
+    "El 84% de R03 sigue siendo una hipótesis comercial por verificar, no una prestación demostrada.",
+    "Ancho b0 es ancho de entrada del T12, no espesor de chorro ni longitud de eje.",
+    "No se deduce potencia firme, energía anual ni costo de estas cuentas nominales.",
+    "No se dispone todavía del juego íntegro de planos de taller: el PDF recuperado contiene 44 páginas de manual."
+  ]
+}

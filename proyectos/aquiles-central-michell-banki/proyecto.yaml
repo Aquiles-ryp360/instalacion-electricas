@@ -9,6 +9,14 @@ seccion: GRUPO A
 unidad: 1
 revision: R03
 fecha_revision: 2026-10-14
+revision_en_desarrollo:
+  id: R04
+  fecha: 2026-10-16
+  estado: Diagnóstico, contraste de turbina y primera lámina geográfica; expediente integral pendiente
+  propuesta: documentacion/MEJORA_PROPUESTA_R04.md
+  contraste_turbina: datos/turbina/contraste-t12-r04.json
+  avance_grafico: entregables/r04-avance/README.md
+  sustituye_entrega_r03: false
 estado: proyecto académico de diseño; datos simulados y supuestos explícitos, no expediente
   constructivo
 operacion_inicial: aislada, sin SEIN

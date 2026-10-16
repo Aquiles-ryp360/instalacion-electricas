@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425541.9784755457,
+          8436230.755240517
+        ]
+      },
+      "properties": {
+        "id": "CAP-P",
+        "e": 425541.9784755457,
+        "n": 8436230.755240517,
+        "descripcion": "Captación propuesta de estudio; no identificada en campo",
+        "fuente": "R03, topografia-r03.json"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425580.0,
+          8436580.0
+        ]
+      },
+      "properties": {
+        "id": "CM-A",
+        "e": 425580.0,
+        "n": 8436580.0,
+        "descripcion": "Casa de máquinas candidata A; no confirmada",
+        "fuente": "Antecedente de memoria de línea"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          425715.0,
+          8436650.0
+        ]
+      },
+      "properties": {
+        "id": "CM-B",
+        "e": 425715.0,
+        "n": 8436650.0,
+        "descripcion": "Casa de máquinas candidata B; no confirmada",
+        "fuente": "Antecedente CAD recibido"
+      }
+    }
+  ]
+}
