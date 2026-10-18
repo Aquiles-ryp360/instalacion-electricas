@@ -26,3 +26,11 @@ usan como referencia de presentacion y estructura, especialmente para cuadros de
 insumos donde debe revisarse el `CODIGO DEL BIEN`.
 
 Las referencias sirven como evidencia y consulta. No deben modificarse para adecuarlas al resultado de un cálculo ni mezclarse con las entradas canónicas de un proyecto.
+
+
+## Bases y plantillas originales recuperadas
+
+[Consultar el catálogo de guías originales](guias-originales/README.md): fuentes
+seleccionadas del DVD de instalaciones, proyecto guía de red primaria, formatos
+de clase y bases CAD. Cada archivo conserva su procedencia y las comparaciones
+que justifican su recuperación.

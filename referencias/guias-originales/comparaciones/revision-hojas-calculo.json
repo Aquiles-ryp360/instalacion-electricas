@@ -1,0 +1,275 @@
+{
+  "baseline_commit": "3619a7f06e64488628182d915e9d85e87d1515a5",
+  "comparators_count": 24,
+  "inspection": "Solo lectura OOXML; sin recálculo ni macros. Los errores son valores almacenados originales.",
+  "workbooks": [
+    {
+      "path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Metrado Electricas/RESUMEN DE METRADO.xlsx",
+      "kind": "historical",
+      "sheets": [
+        {
+          "name": "Hoja 1",
+          "state": "visible"
+        }
+      ],
+      "cells": 4117,
+      "formula_cells": 0,
+      "formula_cells_with_external_notation": 0,
+      "cached_error_cells": 0,
+      "external_link_records": 0,
+      "macros_present": false,
+      "semantic_sha256": "073286b133c2cf1317bd22d13e0768b1763236def91cb36152231637e3509bb5",
+      "equivalent_current_workbook": null
+    },
+    {
+      "path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Metrado Electricas/METRADO DE INSTACONES ELECTRICAS-UNAP.xlsx",
+      "kind": "historical",
+      "sheets": [
+        {
+          "name": "Hoja 1",
+          "state": "visible"
+        }
+      ],
+      "cells": 18632,
+      "formula_cells": 446,
+      "formula_cells_with_external_notation": 0,
+      "cached_error_cells": 0,
+      "external_link_records": 0,
+      "macros_present": false,
+      "semantic_sha256": "d45e5eb7ae1397be124e8706baf6e90e4faae71e06e325cde6353914cb324648",
+      "equivalent_current_workbook": null
+    },
+    {
+      "path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/calculos justificativos/CALCULOS - CIRCUITOS Y TABLERO FRI.xlsx",
+      "kind": "historical",
+      "sheets": [
+        {
+          "name": "Computadoras",
+          "state": "hidden"
+        },
+        {
+          "name": "CUADRO DE CARGAS",
+          "state": "visible"
+        },
+        {
+          "name": "CALCULO POR CIRCUITOS",
+          "state": "visible"
+        },
+        {
+          "name": "CALCULOS  TAB. DIS.",
+          "state": "visible"
+        },
+        {
+          "name": "CALCULO TAB. GEN. Y SUB. TAB",
+          "state": "visible"
+        }
+      ],
+      "cells": 6464,
+      "formula_cells": 1215,
+      "formula_cells_with_external_notation": 0,
+      "cached_error_cells": 0,
+      "external_link_records": 0,
+      "macros_present": false,
+      "semantic_sha256": "7a82c3e03b5491abc1fe217fa80b9b486180bafee5f364cf9d0b2c1a65f8268e",
+      "equivalent_current_workbook": null
+    },
+    {
+      "path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm",
+      "kind": "historical",
+      "sheets": [
+        {
+          "name": "SELECCION DE EQUIPO E",
+          "state": "visible"
+        },
+        {
+          "name": "R-MD-TOTAL ",
+          "state": "visible"
+        },
+        {
+          "name": "TGN",
+          "state": "visible"
+        },
+        {
+          "name": "TDN",
+          "state": "visible"
+        },
+        {
+          "name": "FACT. DE CORR",
+          "state": "visible"
+        }
+      ],
+      "cells": 8987,
+      "formula_cells": 1000,
+      "formula_cells_with_external_notation": 0,
+      "cached_error_cells": 11,
+      "external_link_records": 4,
+      "macros_present": false,
+      "semantic_sha256": "fa85a91c27aebe2841ae61f56955f494c3eeb96dad0e39f61b8350008145b9c7",
+      "equivalent_current_workbook": null
+    },
+    {
+      "path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev2.xlsx",
+      "kind": "historical",
+      "sheets": [
+        {
+          "name": "RG",
+          "state": "visible"
+        },
+        {
+          "name": "Planilla_RP",
+          "state": "visible"
+        },
+        {
+          "name": "Planilla_RS",
+          "state": "hidden"
+        },
+        {
+          "name": "RPR",
+          "state": "hidden"
+        },
+        {
+          "name": "SumMonRP",
+          "state": "visible"
+        },
+        {
+          "name": "RPAPU",
+          "state": "hidden"
+        },
+        {
+          "name": "RSR",
+          "state": "hidden"
+        },
+        {
+          "name": "SumMonRS",
+          "state": "hidden"
+        },
+        {
+          "name": "RSAPU",
+          "state": "hidden"
+        },
+        {
+          "name": "CDR",
+          "state": "hidden"
+        },
+        {
+          "name": "SumMonCD",
+          "state": "hidden"
+        },
+        {
+          "name": "CDAPU",
+          "state": "hidden"
+        },
+        {
+          "name": "GG",
+          "state": "hidden"
+        },
+        {
+          "name": "FPRS",
+          "state": "hidden"
+        },
+        {
+          "name": "CRO",
+          "state": "hidden"
+        },
+        {
+          "name": "BD-S",
+          "state": "hidden"
+        },
+        {
+          "name": "BD-M",
+          "state": "hidden"
+        }
+      ],
+      "cells": 242535,
+      "formula_cells": 125744,
+      "formula_cells_with_external_notation": 9,
+      "cached_error_cells": 405,
+      "external_link_records": 115,
+      "macros_present": false,
+      "semantic_sha256": "2d7e47a58493dbd404ab6dfe417013b235c34d6181c341ae73dccc6d8a1b06f1",
+      "equivalent_current_workbook": null
+    },
+    {
+      "path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev1.xlsx",
+      "kind": "historical",
+      "sheets": [
+        {
+          "name": "RG",
+          "state": "hidden"
+        },
+        {
+          "name": "Planilla_RP",
+          "state": "visible"
+        },
+        {
+          "name": "Planilla_RS",
+          "state": "hidden"
+        },
+        {
+          "name": "RPR",
+          "state": "hidden"
+        },
+        {
+          "name": "SumMonRP",
+          "state": "visible"
+        },
+        {
+          "name": "RPAPU",
+          "state": "hidden"
+        },
+        {
+          "name": "RSR",
+          "state": "hidden"
+        },
+        {
+          "name": "SumMonRS",
+          "state": "hidden"
+        },
+        {
+          "name": "RSAPU",
+          "state": "hidden"
+        },
+        {
+          "name": "CDR",
+          "state": "hidden"
+        },
+        {
+          "name": "SumMonCD",
+          "state": "hidden"
+        },
+        {
+          "name": "CDAPU",
+          "state": "hidden"
+        },
+        {
+          "name": "GG",
+          "state": "hidden"
+        },
+        {
+          "name": "FPRS",
+          "state": "hidden"
+        },
+        {
+          "name": "CRO",
+          "state": "hidden"
+        },
+        {
+          "name": "BD-S",
+          "state": "hidden"
+        },
+        {
+          "name": "BD-M",
+          "state": "hidden"
+        }
+      ],
+      "cells": 245141,
+      "formula_cells": 125808,
+      "formula_cells_with_external_notation": 9,
+      "cached_error_cells": 405,
+      "external_link_records": 115,
+      "macros_present": false,
+      "semantic_sha256": "b318a92b2cff3eeccf08272af31a9aed252b8be6e6d94a08d445a668d6685b8a",
+      "equivalent_current_workbook": null
+    }
+  ]
+}

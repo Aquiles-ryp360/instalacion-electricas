@@ -1,0 +1,1195 @@
+{
+  "baseline_commit": "3619a7f06e64488628182d915e9d85e87d1515a5",
+  "historical_commit": "3fcb9f1143f3a8e4883f7142c893acceb9188b9f",
+  "decisions": [
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Anexo/cuarto nivel_Informe.pdf",
+      "git_blob_sha1": "cbab07542c8d1fe6ac5ec450ef0c3bf85a679eaf",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/Anexo/cuarto%20nivel_Informe.pdf",
+      "decision": "solo_historial",
+      "reason": "Informe de simulación anterior; se recupera la fuente DIALux original, no sus salidas pesadas."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Anexo/esterior_Informe.pdf",
+      "git_blob_sha1": "28c733cc5afe1ce87df34665d55f2779de3c8080",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/Anexo/esterior_Informe.pdf",
+      "decision": "solo_historial",
+      "reason": "Informe de simulación anterior; se recupera la fuente DIALux original, no sus salidas pesadas."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Anexo/quinto nivel_Informe.pdf",
+      "git_blob_sha1": "27d43256b438e31cf0e1f68c58977038dcf65066",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/Anexo/quinto%20nivel_Informe.pdf",
+      "decision": "solo_historial",
+      "reason": "Informe de simulación anterior; se recupera la fuente DIALux original, no sus salidas pesadas."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Anexo/simulacion dialux.rar",
+      "git_blob_sha1": "8920b3ca47ce88ded571c6559a35242fd0b9e9f7",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/Anexo/simulacion%20dialux.rar",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/Anexo/simulacion dialux.rar",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Metrado Electricas/METRADO DE INSTACONES ELECTRICAS-UNAP.xlsx",
+      "git_blob_sha1": "dfef96dae95a2d8864ea8fe67c7db6c89d9f0782",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/Metrado%20Electricas/METRADO%20DE%20INSTACONES%20ELECTRICAS-UNAP.xlsx",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/Metrado Electricas/METRADO DE INSTACONES ELECTRICAS-UNAP.xlsx",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/Metrado Electricas/RESUMEN DE METRADO.xlsx",
+      "git_blob_sha1": "f33e05cfe107f58fb6cf19c4e39f1c6758f9259c",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/Metrado%20Electricas/RESUMEN%20DE%20METRADO.xlsx",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/Metrado Electricas/RESUMEN DE METRADO.xlsx",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/calculos justificativos/CALCULOS - CIRCUITOS Y TABLERO FRI.xlsx",
+      "git_blob_sha1": "80bb560216d6153bc87c6f384b0304bdf856a5a5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/calculos%20justificativos/CALCULOS%20-%20CIRCUITOS%20Y%20TABLERO%20FRI.xlsx",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/calculos justificativos/CALCULOS - CIRCUITOS Y TABLERO FRI.xlsx",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/calculos justificativos/~$CALCULOS - CIRCUITOS Y TABLERO FRI.xlsx",
+      "git_blob_sha1": "be88051df8db7b2ffd63e1a7585296a407703f25",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/calculos%20justificativos/~%24CALCULOS%20-%20CIRCUITOS%20Y%20TABLERO%20FRI.xlsx",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/especificaciones tecnicas/especificaciones tecnicas.docx",
+      "git_blob_sha1": "1047d22bfc1cfc67db16ee4e6cba6b928f0969cb",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/especificaciones%20tecnicas/especificaciones%20tecnicas.docx",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/especificaciones tecnicas/especificaciones tecnicas.docx",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/especificaciones tecnicas/especificaciones tecnicas.pdf",
+      "git_blob_sha1": "72597d044cad0ce7ea8a2030e49ab034942dd884",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/especificaciones%20tecnicas/especificaciones%20tecnicas.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/especificaciones tecnicas/especificaciones tecnicas.pdf",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/memoria descriptiva/memoria descriptiva l.pdf",
+      "git_blob_sha1": "9a25c024c259468de94628608d9e45418a270f61",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/memoria%20descriptiva/memoria%20descriptiva%20l.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/memoria descriptiva/memoria descriptiva l.pdf",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/memoria descriptiva/memoria descriptiva.docx",
+      "git_blob_sha1": "9f2edd26cca3118ca4415eecbae12ae7cbbf01f3",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/memoria%20descriptiva/memoria%20descriptiva.docx",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/memoria descriptiva/memoria descriptiva.docx",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/DWG/IE_ALIMETACIÓN.bak",
+      "git_blob_sha1": "54a02eabd7b20c7e847dbe4b4f30358fe72da3cd",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/DWG/IE_ALIMETACI%C3%93N.bak",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/DWG/IE_ALIMETACIÓN.dwg",
+      "git_blob_sha1": "0161d69f0118b6955773fcd17f0d0d29ae6380a5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/DWG/IE_ALIMETACI%C3%93N.dwg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_ALIMENTACION/DWG/IE_ALIMETACIÓN.dwg",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACIÓN-IE-AL1 PRIMER NIVEL.pdf",
+      "git_blob_sha1": "dc05bd41599eaec04e7dda54b3a46bfdd041a6c7",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACI%C3%93N-IE-AL1%20PRIMER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACIÓN-IE-AL2 SEGUNDO NIVEL.pdf",
+      "git_blob_sha1": "e49be4852d5912e98fb6fe5c2220964a2ca2d19a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACI%C3%93N-IE-AL2%20SEGUNDO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACIÓN-IE-AL3 TERCER NIVEL.pdf",
+      "git_blob_sha1": "39f0d472391208a0c60830d8b20a23f6e4a0d808",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACI%C3%93N-IE-AL3%20TERCER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACIÓN-IE-AL4 CUARTO NIVEL.pdf",
+      "git_blob_sha1": "b672998ce30d4155c01e054d7f080417120fa04a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACI%C3%93N-IE-AL4%20CUARTO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACIÓN-IE-AL5 QUINTO NIVEL.pdf",
+      "git_blob_sha1": "c4dba50e8220c46c4b4e3f414f4899c9966f0554",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACI%C3%93N-IE-AL5%20QUINTO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACIÓN-IE-AL6 SEXTO  NIVEL.pdf",
+      "git_blob_sha1": "8b82cbadc153d1177b8f764df6982da2e1e33f43",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/PDF/IE_ALIMETACI%C3%93N-IE-AL6%20SEXTO%20%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ALIMENTACION/PDF/plot.log",
+      "git_blob_sha1": "c00eb2a3a949d39d787ff58e2cbb8973533ec694",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ALIMENTACION/PDF/plot.log",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_DETALLES/DWG/IE_ DETALLES.dwg",
+      "git_blob_sha1": "3313ea6cdd7e020da217f495863fd873de5a25bd",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_DETALLES/DWG/IE_%20DETALLES.dwg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_DETALLES/DWG/IE_ DETALLES.dwg",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_DETALLES/PDF/IE_ DETALLES-IE-DETALLES.pdf",
+      "git_blob_sha1": "ecb0943ab7c9500caf517cb6414969bbad975e21",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_DETALLES/PDF/IE_%20DETALLES-IE-DETALLES.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_DIAGRMA UNIFILAR/I.E.DIAGRAMA UNIFILAR-IE-T1 PRIMER NIVEL.pdf",
+      "git_blob_sha1": "86965860e2f240e4cb1948be09a7ae3687d53964",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_DIAGRMA%20UNIFILAR/I.E.DIAGRAMA%20UNIFILAR-IE-T1%20PRIMER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_DIAGRMA UNIFILAR/I.E.DIAGRAMA UNIFILAR.bak",
+      "git_blob_sha1": "3d550784d22f00760b8a360f435ddcaf7bf18c34",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_DIAGRMA%20UNIFILAR/I.E.DIAGRAMA%20UNIFILAR.bak",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_DIAGRMA UNIFILAR/I.E.DIAGRAMA UNIFILAR.dwg",
+      "git_blob_sha1": "988117128b5c918ba364e6509ee21939bd65ddf0",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_DIAGRMA%20UNIFILAR/I.E.DIAGRAMA%20UNIFILAR.dwg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_DIAGRMA UNIFILAR/I.E.DIAGRAMA UNIFILAR.dwg",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_DIAGRMA UNIFILAR/plot.log",
+      "git_blob_sha1": "35da76581dab9671113abb54fb257f332b2cf7fb",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_DIAGRMA%20UNIFILAR/plot.log",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACION EXTERIOR/DWG/I_E.EXTERIOR.dwg",
+      "git_blob_sha1": "1e5afe00b75cfc0a3dd1aef5bb2e95906800cac2",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACION%20EXTERIOR/DWG/I_E.EXTERIOR.dwg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_ILUMINACION EXTERIOR/DWG/I_E.EXTERIOR.dwg",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACION EXTERIOR/PDF/I_E.EXTERIOR-IE-ILUMINACIÓN EXT. 1 PRIMER NIVEL.pdf",
+      "git_blob_sha1": "ed685469cf427d0245d45708e7a76b06583040d5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACION%20EXTERIOR/PDF/I_E.EXTERIOR-IE-ILUMINACI%C3%93N%20EXT.%201%20PRIMER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACION EXTERIOR/PDF/plot.log",
+      "git_blob_sha1": "46401407a4069ecca2b70f885bc7c86d3db7a072",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACION%20EXTERIOR/PDF/plot.log",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/DWG/I_E.ILUMINACION INTERIOR.bak",
+      "git_blob_sha1": "9ad1f2254e29f9afc981e16be59fa5b08c197d82",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/DWG/I_E.ILUMINACION%20INTERIOR.bak",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/DWG/I_E.ILUMINACION INTERIOR.dwg",
+      "git_blob_sha1": "a0193cc07188fe71989cb0778a058e53f6f76655",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/DWG/I_E.ILUMINACION%20INTERIOR.dwg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_ILUMINACIÓN/DWG/I_E.ILUMINACION INTERIOR.dwg",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/PDF/I_E.ILUMINACION INTERIOR-IE-ILUMINACIÓN 1 PRIMER NIVEL.pdf",
+      "git_blob_sha1": "1377ac75a6d6ce00a82d646126d0383badf5b441",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/PDF/I_E.ILUMINACION%20INTERIOR-IE-ILUMINACI%C3%93N%201%20PRIMER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/PDF/I_E.ILUMINACION INTERIOR-IE-ILUMINACIÓN 2 SEGUNDO NIVEL.pdf",
+      "git_blob_sha1": "84d11ac978c2666de5d53a0433832c271860cd63",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/PDF/I_E.ILUMINACION%20INTERIOR-IE-ILUMINACI%C3%93N%202%20SEGUNDO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/PDF/I_E.ILUMINACION INTERIOR-IE-ILUMINACIÓN 3 TERCER NIVEL.pdf",
+      "git_blob_sha1": "edbf15af83e2fa75aba8ff1a6418a963d297ccdc",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/PDF/I_E.ILUMINACION%20INTERIOR-IE-ILUMINACI%C3%93N%203%20TERCER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/PDF/I_E.ILUMINACION INTERIOR-IE-ILUMINACIÓN 4 CUARTO NIVEL.pdf",
+      "git_blob_sha1": "7a4094f91f1d50392d7a3e00bdfd91f7d98b71f5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/PDF/I_E.ILUMINACION%20INTERIOR-IE-ILUMINACI%C3%93N%204%20CUARTO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/PDF/I_E.ILUMINACION INTERIOR-IE-ILUMINACIÓN 5 QUINTO NIVEL.pdf",
+      "git_blob_sha1": "68195133efc36d6b45b4dae62003ee0fb23289f0",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/PDF/I_E.ILUMINACION%20INTERIOR-IE-ILUMINACI%C3%93N%205%20QUINTO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/PDF/I_E.ILUMINACION INTERIOR-IE-ILUMINACIÓN 6 SEXTO NIVEL.pdf",
+      "git_blob_sha1": "79c6b2293e4f44e52565d631aa97260ccc63fa80",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/PDF/I_E.ILUMINACION%20INTERIOR-IE-ILUMINACI%C3%93N%206%20SEXTO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_ILUMINACIÓN/PDF/plot.log",
+      "git_blob_sha1": "14ff88ba9111bab2e338f30d4f16e5afbce767fe",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_ILUMINACI%C3%93N/PDF/plot.log",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/DWG/DWG.cdc",
+      "git_blob_sha1": "bc6b74a6f3bc3aa58b6b9b08aacce5b4de1bbfa7",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/DWG/DWG.cdc",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/DWG/I_E.TOMACORRINTES.bak",
+      "git_blob_sha1": "ff9a8b9ab69d05626dbf1512826c48773a6c0bd4",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/DWG/I_E.TOMACORRINTES.bak",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/DWG/I_E.TOMACORRINTES.dwg",
+      "git_blob_sha1": "8ffe09a2494c35953869dc385691e44d3616833d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/DWG/I_E.TOMACORRINTES.dwg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_TOMACORRIENTES/DWG/I_E.TOMACORRINTES.dwg",
+      "reason": "Fuente editable o documento modelo original de instalaciones de la UNAP; sin copia idéntica actual."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T1 PRIMER NIVEL.pdf",
+      "git_blob_sha1": "5d05a82ab1364640bd5d01a61e9d5b0e495855c8",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T1%20PRIMER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T2 SEGUNDO NIVEL.pdf",
+      "git_blob_sha1": "aad45df2c8ab4c70233d82dd4f3f443d9cb68c5d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T2%20SEGUNDO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T3 TERCER NIVEL.pdf",
+      "git_blob_sha1": "4bcf8f68b07f38ce8be1968e43e4c17957c12853",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T3%20TERCER%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T4 CUARTO NIVEL.pdf",
+      "git_blob_sha1": "9bdbf2fbaad19729ec1f1478d82f00d8e8a7e0b5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T4%20CUARTO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T5 QUINTO NIVEL.pdf",
+      "git_blob_sha1": "c6c4195b464c4a81e1a9145e6a1648b45e4eae1d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/PDF/I_E.TOMACORRINTES-IE-T5%20QUINTO%20NIVEL.pdf",
+      "decision": "solo_historial",
+      "reason": "Lámina derivada cuyo DWG original se recupera en esta colección."
+    },
+    {
+      "source_path": "materiales/INSTALACIONES ELECTRICAS DVD 28.02-23/planimetria/IE_TOMACORRIENTES/PDF/plot.log",
+      "git_blob_sha1": "c991783cd71c5bfb496107eae7697b650498cd68",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/INSTALACIONES%20ELECTRICAS%20DVD%2028.02-23/planimetria/IE_TOMACORRIENTES/PDF/plot.log",
+      "decision": "excluido_temporal",
+      "reason": "Respaldo, registro de impresión o bloqueo temporal."
+    },
+    {
+      "source_path": "materiales/README.md",
+      "git_blob_sha1": "439d41d657723a5409145e304e9664a1ca85a2d7",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/README.md",
+      "decision": "excluido_indice_antiguo",
+      "reason": "Índice anterior o archivo auxiliar sin contenido técnico nuevo."
+    },
+    {
+      "source_path": "materiales/entregables/primera-unidad.md",
+      "git_blob_sha1": "12e8f01cffbc3121dcf9c517e12f233e885823c7",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/entregables/primera-unidad.md",
+      "decision": "excluido_indice_antiguo",
+      "reason": "Índice anterior o archivo auxiliar sin contenido técnico nuevo."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.24.56.jpeg",
+      "git_blob_sha1": "2a67c14a3918d17ff57adba740fcdf08de521265",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.24.56.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.24.56.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.24.57.jpeg",
+      "git_blob_sha1": "974c290cf16e67f0ad5adb27d84476bf3bef4932",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.24.57.jpeg",
+      "decision": "excluido_toma_redundante",
+      "reason": "La inspección visual encontró una toma más clara del mismo contenido.",
+      "preferred_source": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.24.58.jpeg"
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.24.58.jpeg",
+      "git_blob_sha1": "a50f1b977324fec4f3b54a938a9eba7ac3d171ff",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.24.58.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.24.58.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.24.59.jpeg",
+      "git_blob_sha1": "871d34a6eea0604bdd7cd8284301c58b4683d4a6",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.24.59.jpeg",
+      "decision": "excluido_toma_redundante",
+      "reason": "La inspección visual encontró una toma más clara del mismo contenido.",
+      "preferred_source": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.12.jpeg"
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.12.jpeg",
+      "git_blob_sha1": "9f486a3a09959bf592401e546b8f12bc0a77af6d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.12.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.12.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.17 (1).jpeg",
+      "git_blob_sha1": "9f54f96a88c4ed11ef5f8b1c1c676a1080972a6d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.17%20%281%29.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.17 (1).jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.17.jpeg",
+      "git_blob_sha1": "53d3fdf90451c0a1eb394e71fdfa505ca0a11cf8",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.17.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.17.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.25.jpeg",
+      "git_blob_sha1": "6a5aee5f0de6d13b7501d12fc98699df9a2d34f5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.25.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.25.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.26.jpeg",
+      "git_blob_sha1": "cbe14160ff69b3771c1a15d00bfef3da46c54031",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.26.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.26.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.47 (1).jpeg",
+      "git_blob_sha1": "d488cd80613683a7368b29a3392f740ffa32b8da",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.47%20%281%29.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.47 (1).jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.47.jpeg",
+      "git_blob_sha1": "86b4627e0dcc91cf290fbf71e9dc7605ad3a31d3",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.47.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.47.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.48.jpeg",
+      "git_blob_sha1": "902abbcc5b8d3bac854dda82aab2429fff7300c8",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.48.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.48.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/WhatsApp Image 2026-05-22 at 11.25.49.jpeg",
+      "git_blob_sha1": "2ac6ed604162881a230d674aebff2aa9d71b9775",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/WhatsApp%20Image%202026-05-22%20at%2011.25.49.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.49.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/fotos-clase/electro puno.jpeg",
+      "git_blob_sha1": "69d158a499a22bca480fd00c5048e7b8ef3b8975",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/fotos-clase/electro%20puno.jpeg",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/formatos-electro-puno-clase/electro puno.jpeg",
+      "reason": "Fotografía de clase con formatos y listas de revisión de expedientes eléctricos; evidencia original, no norma vigente."
+    },
+    {
+      "source_path": "materiales/normas/Código_Nacional_de_Electricidad__Utilización_.pdf",
+      "git_blob_sha1": "0c180d46e9e66f2cd0af4dbe1008cc9beb351974",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normas/C%C3%B3digo_Nacional_de_Electricidad__Utilizaci%C3%B3n_.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "referencias/normativa/pdf/Código_Nacional_de_Electricidad__Utilización_.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/normas/EM.010 Instalaciones Eléctricas Interiores.pdf",
+      "git_blob_sha1": "e849d9d3d3bb3fe0bdfecf1271425ff0b78989b9",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normas/EM.010%20Instalaciones%20El%C3%A9ctricas%20Interiores.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "referencias/normativa/pdf/EM.010 Instalaciones Eléctricas Interiores.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/normativas/README.md",
+      "git_blob_sha1": "c50b8fa17d8861a4323b385ecee881c6e66d40ce",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normativas/README.md",
+      "decision": "version_actual_conservada",
+      "reason": "Las fichas normativas actuales conservan su ubicación y revisiones; no se reincorporan textos de apoyo antiguos."
+    },
+    {
+      "source_path": "materiales/normativas/fichas/cne-utilizacion.md",
+      "git_blob_sha1": "00564a56f95e3a3b48035b353b6c943a0f67acf5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normativas/fichas/cne-utilizacion.md",
+      "decision": "version_actual_conservada",
+      "reason": "Las fichas normativas actuales conservan su ubicación y revisiones; no se reincorporan textos de apoyo antiguos."
+    },
+    {
+      "source_path": "materiales/normativas/fichas/plantilla-ficha-norma.md",
+      "git_blob_sha1": "e845e907b0f8bab0c593cfeb8cab37fac0eb4632",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normativas/fichas/plantilla-ficha-norma.md",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "referencias/normativa/documentacion/fichas/plantilla-ficha-norma.md"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/normativas/fichas/rne-em010.md",
+      "git_blob_sha1": "dc714bd1bdddf6adb6ab3229d3a59e019b19cc3a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normativas/fichas/rne-em010.md",
+      "decision": "version_actual_conservada",
+      "reason": "Las fichas normativas actuales conservan su ubicación y revisiones; no se reincorporan textos de apoyo antiguos."
+    },
+    {
+      "source_path": "materiales/normativas/fuentes-oficiales.md",
+      "git_blob_sha1": "a014bb5b16600ccdc0dca09a6f29a7f139219558",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normativas/fuentes-oficiales.md",
+      "decision": "version_actual_conservada",
+      "reason": "Las fichas normativas actuales conservan su ubicación y revisiones; no se reincorporan textos de apoyo antiguos."
+    },
+    {
+      "source_path": "materiales/normativas/matriz-cumplimiento.md",
+      "git_blob_sha1": "69463469f92a88b53d64ccad141ae0a168184a2a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/normativas/matriz-cumplimiento.md",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "referencias/normativa/documentacion/matriz-cumplimiento.md"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/otros-referencia/EXP VAL INVERSION 01 - FEBRERO CS.pdf",
+      "git_blob_sha1": "70a5bfd5190193ea6c9cb9b7a35706a41d3dc5c8",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/otros-referencia/EXP%20VAL%20INVERSION%2001%20-%20FEBRERO%20CS.pdf",
+      "decision": "pendiente_solo_enlace",
+      "reason": "Expediente, liquidación o presentación fuera de la selección de bases y plantillas; utilidad no confirmada."
+    },
+    {
+      "source_path": "materiales/otros-referencia/LIQUIDACION INVERSION OI 71225234.pdf",
+      "git_blob_sha1": "1036e979953627fa49d08debd693a7daeec09512",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/otros-referencia/LIQUIDACION%20INVERSION%20OI%2071225234.pdf",
+      "decision": "pendiente_solo_enlace",
+      "reason": "Expediente, liquidación o presentación fuera de la selección de bases y plantillas; utilidad no confirmada."
+    },
+    {
+      "source_path": "materiales/otros-referencia/presentacion-2-21-11-2019.pdf",
+      "git_blob_sha1": "686f6d3da7001b74583aa7678652d69e3363e28b",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/otros-referencia/presentacion-2-21-11-2019.pdf",
+      "decision": "pendiente_solo_enlace",
+      "reason": "Expediente, liquidación o presentación fuera de la selección de bases y plantillas; utilidad no confirmada."
+    },
+    {
+      "source_path": "materiales/otros-referencia/slidesaver.app_zvsnbi.pdf",
+      "git_blob_sha1": "00eb7d5959b132e03b9d6862dad58f837a0539b5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/otros-referencia/slidesaver.app_zvsnbi.pdf",
+      "decision": "pendiente_solo_enlace",
+      "reason": "Expediente, liquidación o presentación fuera de la selección de bases y plantillas; utilidad no confirmada."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/aspectos-generales/00. Portada Caratula_1.doc",
+      "git_blob_sha1": "b4a2bbdf2bb2b3a16397c5e3a2af0a4976c999c7",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/aspectos-generales/00.%20Portada%20Caratula_1.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/aspectos-generales/INDICEGENERAL.doc",
+      "git_blob_sha1": "2f71736c3e4ff2da67ca63b84af3100abb759e43",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/aspectos-generales/INDICEGENERAL.doc",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/INDICEGENERAL.doc",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/aspectos-generales/INDICEGENERAL.pdf",
+      "git_blob_sha1": "012d831ae80765ec288ffce26825405d0ba916ed",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/aspectos-generales/INDICEGENERAL.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/INDICEGENERAL.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/aspectos-generales/RESUMEN ejecutivo.pdf",
+      "git_blob_sha1": "7507e9647b3bd5778f487a1f333068f1f7ff4976",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/aspectos-generales/RESUMEN%20ejecutivo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/RESUMEN ejecutivo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/aspectos-generales/RESUMEN.doc",
+      "git_blob_sha1": "bbde01f4da567eb12c9331220638f1d2c7b4bb2c",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/aspectos-generales/RESUMEN.doc",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/RESUMEN.doc",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/aspectos-generales/portada.pdf",
+      "git_blob_sha1": "3a98921722820548ddf8b193903f38fa4384636e",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/aspectos-generales/portada.pdf",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-i-memoria/CARATULA.doc",
+      "git_blob_sha1": "b3f01441a8a61b8bb9a5f552fdb0989421b7ef9a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-i-memoria/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-i-memoria/CARATULA.pdf",
+      "git_blob_sha1": "7641f0c3f45751b2d4c09510ab974718413d5922",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-i-memoria/CARATULA.pdf",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-i-memoria/MEMORIA.doc",
+      "git_blob_sha1": "d45a6be6408c1397381580d3824ed0f638aba53f",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-i-memoria/MEMORIA.doc",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/documentos/MEMORIA.doc"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-i-memoria/MEMORIA.pdf",
+      "git_blob_sha1": "4aeb1c3dc4ee348a7de65929635bd570cdad1e50",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-i-memoria/MEMORIA.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-i-memoria/MEMORIA.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm",
+      "git_blob_sha1": "6126b6ee3e0000e8877588ed3b77252c98f3022d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULO%20DE%20MAXIMA%20DEMANDA%20-%20PHARAok.xlsm",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm.pdf",
+      "git_blob_sha1": "72552d5ee486420b34e171863734279d50aff9a6",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULO%20DE%20MAXIMA%20DEMANDA%20-%20PHARAok.xlsm.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICO.doc",
+      "git_blob_sha1": "dee525d3a365b0fac8062c6cf0f2301e800738e9",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICO.doc",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICO.doc",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICO.pdf",
+      "git_blob_sha1": "19091e8f30a44962e263f9b66059709321275d6d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICO.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICO.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICOCONDUCTORES 35.xls",
+      "git_blob_sha1": "37133f3e4216fa4dc707a2ac4d510cfc4194ef2d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICOCONDUCTORES%2035.xls",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/documentos/CALCULOMECANICOCONDUCTORES 35.xls"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICOCONDUCTORES 35.xls.pdf",
+      "git_blob_sha1": "8d49e0cf5941a30ea7d945489493518b7a68ac0d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOMECANICOCONDUCTORES%2035.xls.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICOCONDUCTORES 35.xls.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULORETENIDA.xls",
+      "git_blob_sha1": "008b5239181330a57283348714efabc0976acfc3",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULORETENIDA.xls",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/documentos/CALCULORETENIDA.xls"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULORETENIDA.xls.pdf",
+      "git_blob_sha1": "2a93cf7b7b9dce664df453ad3c72a2d6da570ef0",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULORETENIDA.xls.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULORETENIDA.xls.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOSELECTRICOS.doc",
+      "git_blob_sha1": "affa864cb30a64ea84048024326f13e854d2f340",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOSELECTRICOS.doc",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOSELECTRICOS.doc",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOSELECTRICOS.pdf",
+      "git_blob_sha1": "6d56d036f2d848015f5c37392baace019f46f8d6",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALCULOSELECTRICOS.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOSELECTRICOS.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALMECANICODEPOSTES.xls",
+      "git_blob_sha1": "d168da487a27297f01f3eff700fe8d05bbeccf4c",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CALMECANICODEPOSTES.xls",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/documentos/CALMECANICODEPOSTES.xls"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CARATULA.doc",
+      "git_blob_sha1": "534b4d85396e77ac56f380370ae4c9cfa3030cf4",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CARATULA.pdf",
+      "git_blob_sha1": "a4ec1d60eeb8cc49147dd00284c888a7556d8ca9",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CARATULA.pdf",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CIMENTACIONPOSTES.xls",
+      "git_blob_sha1": "3edad936c3b72882d1b7d897596b9b7c551fa4a9",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CIMENTACIONPOSTES.xls",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CIMENTACIONPOSTES.xls",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CIMENTACIONPOSTES.xls.pdf",
+      "git_blob_sha1": "1e85905cb99702845d512592a2598b5e5d60b625",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/CIMENTACIONPOSTES.xls.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CIMENTACIONPOSTES.xls.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/COORDINACION DE PROTECCION.xlsx",
+      "git_blob_sha1": "103154b4658911d5f770a1da2f73156dab64438b",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/COORDINACION%20DE%20PROTECCION.xlsx",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/documentos/COORDINACION DE PROTECCION.xlsx"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/COORDINACION DE PROTECCION.xlsx.pdf",
+      "git_blob_sha1": "ab0a59462a6b3079204b9f489baa4ef2a2896c31",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/COORDINACION%20DE%20PROTECCION.xlsx.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/COORDINACION DE PROTECCION.xlsx.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/DIAGRAMAUNIFILAR-Model.pdf",
+      "git_blob_sha1": "719f56a735794ff3488cdac979721913e8e15c2f",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/DIAGRAMAUNIFILAR-Model.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica-v2/entregables/planos/referencias_dge/DIAGRAMA_UNIFILAR_GUIA.pdf",
+        "proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DIAGRAMA_UNIFILAR_GUIA.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/DIAGRAMAUNIFILAR.dwg",
+      "git_blob_sha1": "c4c0e09c2cfbf64704672d269067a6fada053e80",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/DIAGRAMAUNIFILAR.dwg",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/DIAGRAMAUNIFILAR.dwg"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/calculo termomagnetico.pdf",
+      "git_blob_sha1": "3c07c2863a6a9fb6436ece75193b6698cbdbcd32",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-ii-calculos/calculo%20termomagnetico.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/calculo termomagnetico.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/CARATULA.doc",
+      "git_blob_sha1": "d264bd31e7f0d49cf8f3d866b0c042b547130468",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/CARATULA.pdf",
+      "git_blob_sha1": "037c7a8c08843ffb1ca267e1151c4bd1853b7c47",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/CARATULA.pdf",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.doc",
+      "git_blob_sha1": "1a4fe8149e100365a85655f5d050f9f22386bcf1",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.doc",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.doc",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.pdf",
+      "git_blob_sha1": "537ba6f6f591858da727df613eed214ed54fac8a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/CARATULA.doc",
+      "git_blob_sha1": "70d89c9536d39bb3ee444bdad39457ae2cb7f50a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/CARATULA.pdf",
+      "git_blob_sha1": "76b35184837b6d76e545c2ce76840f10c8bb2c2c",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/CARATULA.pdf",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/MONTAJE.doc",
+      "git_blob_sha1": "ead19e83c2da28ea1f828058a8de43ecb51da17a",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/MONTAJE.doc",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iv-montaje/MONTAJE.doc",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/MONTAJE.pdf",
+      "git_blob_sha1": "19dcff24c53b6e5d1ab8ed925ff286527dfea05b",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-iv-montaje/MONTAJE.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iv-montaje/MONTAJE.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-v-cronograma/CARATULA.doc",
+      "git_blob_sha1": "2c886a8becafe585fc1817ea768442617dc637a2",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-v-cronograma/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-v-cronograma/CARATULA.pdf",
+      "git_blob_sha1": "02a88e28c900297252ff0b39f8a66029868b9bc5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-v-cronograma/CARATULA.pdf",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-v-cronograma/Cronograma.mpp",
+      "git_blob_sha1": "9b81bd75e6d850d3d4617062e5b326b57f4dfbb8",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-v-cronograma/Cronograma.mpp",
+      "decision": "pendiente_solo_enlace",
+      "reason": "No se verificó en Microsoft Project; se conserva el enlace histórico."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/CARATULA.doc",
+      "git_blob_sha1": "bf3cfb60817bf58b5acb1bd27b5e3d1474a12239",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/CARATULA.pdf",
+      "git_blob_sha1": "e4115edd3cc26ad2261426609748b8a60ab7deb6",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/CARATULA.pdf",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev1.xlsx",
+      "git_blob_sha1": "854b48c0d3095ac14cc052fc4f1606e06d3e1c07",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev1.xlsx",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev1.xlsx",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev1.xlsx.pdf",
+      "git_blob_sha1": "e06da4b3a6e361f30ab8946fd61f6e916c74106e",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev1.xlsx.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev1.xlsx.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev2.xlsx",
+      "git_blob_sha1": "7dc11333f984973d528bf2e7690190157ac762f9",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Metrado_Rev2.xlsx",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev2.xlsx",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Planilla RP.pdf",
+      "git_blob_sha1": "ba3b65c629f32e5e5045dc932184491e22699a4e",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vi-metrados/Planilla%20RP.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Planilla RP.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/CARATULA.doc",
+      "git_blob_sha1": "b02fc0f1754eab87b6af3be3ee4a4cdde8800eba",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE 1_SECCIONAMIENTO.pdf",
+      "git_blob_sha1": "9fd20afc7d9acdba5ff37dfb156f5f34941bca58",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE%201_SECCIONAMIENTO.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica-v2/entregables/planos/referencias_dge/DETALLE_SECCIONAMIENTO_CUTOUT.pdf",
+        "proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SECCIONAMIENTO_CUTOUT.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE 3_TS.pdf",
+      "git_blob_sha1": "f58c26cd34bec843faa9a7d63c99aded914b79fe",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE%203_TS.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/DETALLE 3_TS.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE 4_SUB ESTACION.pdf",
+      "git_blob_sha1": "b564ede5a9d648668bca30cdcd6bf25e19d609d3",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE%204_SUB%20ESTACION.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica-v2/entregables/planos/referencias_dge/DETALLE_SUBESTACION_SAB1.pdf",
+        "proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SUBESTACION_SAB1.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE 5_SOPORTE S.E.pdf",
+      "git_blob_sha1": "ec15f12c932d84dd72e61089c281264f050260bd",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE%205_SOPORTE%20S.E.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica-v2/entregables/planos/referencias_dge/DETALLE_SOPORTE_SUBESTACION.pdf",
+        "proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_SOPORTE_SUBESTACION.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE 9_PAT 3.pdf",
+      "git_blob_sha1": "27e0a0b75acd2fe28e87e4ea77432ff85143dc66",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE%209_PAT%203.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica-v2/entregables/planos/referencias_dge/DETALLE_PUESTA_A_TIERRA_PAT3.pdf",
+        "proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_PUESTA_A_TIERRA_PAT3.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE7_RETENIDA.pdf",
+      "git_blob_sha1": "36b94be8b76977dbc43c73c25106ab8066e16c9e",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/DETALLE7_RETENIDA.pdf",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica-v2/entregables/planos/referencias_dge/DETALLE_RETENIDA_MECANICA.pdf",
+        "proyectos/renzo-linea-primaria-capachica/entregables/planos/referencias_dge/DETALLE_RETENIDA_MECANICA.pdf"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 1-Modelo.pdf",
+      "git_blob_sha1": "f701b7d90ffbaacd39a4d7fab93105c676e7bf1f",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%201-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 1-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 10-Modelo.pdf",
+      "git_blob_sha1": "b2d52bba2136c5581f3943e76da1f15f019c74bf",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%2010-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 10-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 11-Modelo.pdf",
+      "git_blob_sha1": "5a2020d2693048862e8f65ea3bd2b6975be8d3ee",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%2011-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 11-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 12-Modelo.pdf",
+      "git_blob_sha1": "03513ca56830b3e2cb544180bd74c36a3afe6c8e",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%2012-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 12-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 13-Modelo.pdf",
+      "git_blob_sha1": "3c3fbf8a9fada7b09811cac87e46ac007dbd947e",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%2013-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 13-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 14-Modelo.pdf",
+      "git_blob_sha1": "a9e02666840ab5fcfe71040dae92dea622e844f7",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%2014-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 14-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 15-Modelo.pdf",
+      "git_blob_sha1": "a3e448496418f1aae0886c3afb53716be56589d1",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%2015-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 15-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 2-Modelo.pdf",
+      "git_blob_sha1": "351ba00a0f7f9e6f7b1c31b6a48b976c6866f5ad",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%202-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 2-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 3-Modelo.pdf",
+      "git_blob_sha1": "d0609dc10d56cd3bf20da0490d7d33e1f66c7b77",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%203-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 3-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 4-Modelo.pdf",
+      "git_blob_sha1": "0d4895f63f5ef675fd84dd577bf688ad180d4cdd",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%204-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 4-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 5-Modelo.pdf",
+      "git_blob_sha1": "c27d06fb963aa9314181e4c481c5331e4a3ab546",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%205-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 5-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 6-Modelo.pdf",
+      "git_blob_sha1": "3366fcaae3e45794446b349ba2a9e77409ee1c4d",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%206-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 6-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 7-Modelo.pdf",
+      "git_blob_sha1": "4ed40406851e11b2b4a4e4849119c5374c2c7416",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%207-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 7-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 8-Modelo.pdf",
+      "git_blob_sha1": "90bae4d8a6865e9b7195460ca172ad51149e4f17",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%208-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 8-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA 9-Modelo.pdf",
+      "git_blob_sha1": "912e96d5eb811e2ef5dc6d9e3e16b36fbc6c8b41",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/LAMINA%209-Modelo.pdf",
+      "decision": "recuperado",
+      "destination": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 9-Modelo.pdf",
+      "reason": "Documento, cálculo o detalle de referencia del proyecto guía, ausente del estado actual."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/PLANO DE RED PRIMARIA ARICATO_PHARA.dwg",
+      "git_blob_sha1": "2e05d16e367a8af75da6a078bf6f05abd1c539e5",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/PLANO%20DE%20RED%20PRIMARIA%20ARICATO_PHARA.dwg",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/PLANO_DE_RED_PRIMARIA_ARICATO_PHARA.dwg"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/PLANO DE RED PRIMARIA ARICATO_PHARA_ok-TOP1.pdf",
+      "git_blob_sha1": "9aac8e60bae1c3eaadd6dd61137d9bb87722d3b6",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/PLANO%20DE%20RED%20PRIMARIA%20ARICATO_PHARA_ok-TOP1.pdf",
+      "decision": "pendiente_solo_enlace",
+      "reason": "Variante antigua del plano general; ya existe otro DWG original de Aricato. No se confirmó una necesidad distinta para recuperar esta variante."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/PLANO DE RED PRIMARIA ARICATO_PHARA_ok.dwg",
+      "git_blob_sha1": "bf34e549690a27b7a4eeb3396d409b92ec52be1e",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/PLANO%20DE%20RED%20PRIMARIA%20ARICATO_PHARA_ok.dwg",
+      "decision": "pendiente_solo_enlace",
+      "reason": "Variante antigua del plano general; ya existe otro DWG original de Aricato. No se confirmó una necesidad distinta para recuperar esta variante."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-vii-planos/laminas_de_detalle[1].dwg",
+      "git_blob_sha1": "dfadce71ef10affa1f72b6fdfa5ec4350abd1ec4",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-vii-planos/laminas_de_detalle%5B1%5D.dwg",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "proyectos/renzo-linea-primaria-capachica/fuentes/referencia_aricato/laminas_de_detalle.dwg"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    },
+    {
+      "source_path": "materiales/proyecto-guia-red-primaria/capitulo-viii-anexos/CARATULA.doc",
+      "git_blob_sha1": "7fee8e871ec9cefaf0fd8a7322ab3d30de8c18a6",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-guia-red-primaria/capitulo-viii-anexos/CARATULA.doc",
+      "decision": "excluido_presentacion",
+      "reason": "Carátula aislada y redundante; se conserva el índice y los capítulos técnicos útiles."
+    },
+    {
+      "source_path": "materiales/proyecto-ins-electricas",
+      "git_blob_sha1": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "source_url": "https://github.com/gaelrenzo/instalacion-electricas/blob/3fcb9f1143f3a8e4883f7142c893acceb9188b9f/materiales/proyecto-ins-electricas",
+      "decision": "ya_presente",
+      "current_identical_paths": [
+        "herramientas/cotizacion/v1/salidas/.gitkeep"
+      ],
+      "reason": "Contenido idéntico ya versionado en la rama actual; se enlaza y no se duplica."
+    }
+  ]
+}
