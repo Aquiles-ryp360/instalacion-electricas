@@ -1,5 +1,5 @@
-# Memoria editable · Instalaciones Eléctricas II
+# Documentación del expediente
 
-Los capítulos activos están en [lp-r01/](lp-r01/); [memoria-completa.md](lp-r01/memoria-completa.md) permite revisar el texto conjunto. Su generación utiliza los parámetros y resultados de `datos/lp-r01/`.
+La revisión vigente se declara en [proyecto.yaml](../proyecto.yaml). ParaLP-R02 ver [memoriaeditable](lp-r02/memoria-completa.md) y [guía de reproducción](../documentacion/lp-r02/CONTINUIDAD_IA.md).
 
-Los [PDF y archivos gráficos](../entregables/linea-primaria-r01/) corresponden al transporte Limbani–Huancasayani. Los capítulos antiguos de distribución urbana se conservan en [archivo/red-urbana/](../archivo/red-urbana/README.md).
+`lp-r01/` y la entrega R01 se conservan como revisión previa. La copia para evaluación está en [revisiones/lp-r02](../revisiones/lp-r02/LEER_PRIMERO.md); se conserva el estado académico y las observaciones abiertas. Las reconstrucciones se generan en `build/` de la raíz.

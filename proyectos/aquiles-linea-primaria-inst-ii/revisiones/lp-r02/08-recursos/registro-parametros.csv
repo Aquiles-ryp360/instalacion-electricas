@@ -1,0 +1,38 @@
+﻿grupo,parametro,valor,unidad,fuente,estado,confianza
+conductor,seccion_real_mm2,49.5,mm2,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+conductor,diametro_mm,9,mm,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,media
+conductor,masa_kg_km,135,kg/km,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,media
+conductor,r20_ohm_km,0.671,ohm/km,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+conductor,rts_n,14700,N,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+conductor,e_pa,62000000000,Pa,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+conductor,alpha_termica,2.3e-05,1/K,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+conductor,alpha_r,0.0036,1/K,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+conductor,tension_eds_fraccion_rts,0.15,fraccion RTS,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+conductor,creep_sensibilidad,0.000345,m/m,LP-R01; comparación parcial RD018 §4.2.2; ficha contractual ausente,HIPOTESIS DE EQUIPO,baja
+poste,poste_longitud_m,13,m,LP-R01; ficha SEACE13/400 sólo referencia de designación,PROPUESTA; SIN CERTIFICADO,baja
+poste,poste_trabajo_dan,600,daN,LP-R01; ficha SEACE13/400 sólo referencia de designación,PROPUESTA; SIN CERTIFICADO,baja
+poste,empotramiento_m,1.9,m,LP-R01; ficha SEACE13/400 sólo referencia de designación,PROPUESTA; SIN CERTIFICADO,baja
+poste,altura_amarre_m,10.6,m,LP-R01; ficha SEACE13/400 sólo referencia de designación,PROPUESTA; SIN CERTIFICADO,baja
+electrico,trafo_salida_kva,250,kVA,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,trafo_llegada_kva,250,kVA,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,generador_kva,250,kVA,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,referencia_generacion_kw,200,kW,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,trafo_p0_kw,0.45,kW,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,trafo_pcu_kw,3.1,kW,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,trafo_uk_pu,0.06,pu,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,trafo_q0_kvar,2.5,kvar,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,aux_generacion_estudio_kw,5,kW,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,generador_xdpp_pu,0.2,pu,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,generador_xdp_pu,0.3,pu,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+electrico,generador_xd_pu,1.8,pu,LP-R01 sin placas; Q0 explicita supuesto existente,HIPOTESIS; NO OFERTA CONFIRMADA,baja
+conexion,tension_confirmada,,kV,Se requiere placa y/o punto de diseño,DATO REQUERIDO,sin verificar
+conexion,potencia_disponible_estiaje,,kW,Se requiere estudio de generación y aforo,DATO REQUERIDO,sin verificar
+criterios,gamma_vertical,1.5,adimensional,CNE253-1 grado B,CRITERIO DE ESTUDIO APLICADO; GRADO REAL PENDIENTE,media
+criterios,gamma_viento,2.5,adimensional,CNE253-1 grado B,CRITERIO DE ESTUDIO APLICADO; GRADO REAL PENDIENTE,media
+criterios,gamma_tension,1.65,adimensional,CNE253-1 grado B,CRITERIO DE ESTUDIO APLICADO; GRADO REAL PENDIENTE,media
+criterios,phi_poste,0.65,adimensional,CNE261-1A concreto armado grado B,CRITERIO DE ESTUDIO APLICADO; GRADO REAL PENDIENTE,media
+criterios,phi_retenida,0.9,adimensional,CNE261-1A alambre de retenida,CRITERIO DE ESTUDIO APLICADO; GRADO REAL PENDIENTE,media
+criterios,punto_carga_bajo_cima,0.15,m,RD018 §5.3/5.5: referencia de conversión de momento; ensayo proveedor por confirmar,CRITERIO DE ESTUDIO APLICADO; GRADO REAL PENDIENTE,media
+estructura,diametro_cima_estudio_m,0.18,m,Hipótesis LP-R01/R02; dimensiones tipo de referencia,PROPUESTA SIN FICHA DEL EQUIPO CONTRATADO,baja
+estructura,diametro_base_estudio_m,0.375,m,Hipótesis LP-R01/R02; dimensiones tipo de referencia,PROPUESTA SIN FICHA DEL EQUIPO CONTRATADO,baja
+estructura,retenida_rotura_min_n,60000,N,Hipótesis LP-R01/R02; dimensiones tipo de referencia,PROPUESTA SIN FICHA DEL EQUIPO CONTRATADO,baja

@@ -76,9 +76,10 @@ def verificar() -> dict:
     for ruta in h["entregables"]["para_revision"]:
         exigir(hidro, ruta)
     l = yaml.safe_load((linea / "proyecto.yaml").read_text(encoding="utf-8"))
-    for clave in ("fuente_unica", "resultados", "documentos", "entregables",
-                  "cad_dwg_activo", "google_earth", "biblioteca_normativa", "antecedente_historico"):
+    for clave in ("fuente_unica", "resultados", "documentos", "google_earth", "biblioteca_normativa", "antecedente_historico"):
         exigir(linea, l[clave])
+    exigir(linea, l["paquete_revision"] if "paquete_revision" in l else l["entregables"])
+    exigir(linea, l["cad_dxf_activo"] if "cad_dxf_activo" in l else l["cad_dwg_activo"])
     d = yaml.safe_load((diego / "proyecto.yaml").read_text(encoding="utf-8"))
     for ruta in [*d["entradas"].values(), *d["entregables"].values(), d["expediente_editable"]]:
         exigir(diego, ruta)

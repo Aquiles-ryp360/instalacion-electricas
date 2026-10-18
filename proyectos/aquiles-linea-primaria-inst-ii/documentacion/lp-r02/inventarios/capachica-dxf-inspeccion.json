@@ -1,0 +1,62 @@
+[
+  {
+    "archivo": "autocad_lp/LP-01_PLANTA_LINEA_PRIMARIA_A3_AUTOCAD.dxf",
+    "unidades": 6,
+    "entidades": 0,
+    "presentaciones": [
+      "Model",
+      "Layout1"
+    ],
+    "errores_auditoria": 0
+  },
+  {
+    "archivo": "autocad_lp/PL-01_PERFIL_LONGITUDINAL_A3_AUTOCAD.dxf",
+    "unidades": 6,
+    "entidades": 0,
+    "presentaciones": [
+      "Model",
+      "Layout1"
+    ],
+    "errores_auditoria": 0
+  },
+  {
+    "archivo": "autocad_lp/U-01_DIAGRAMA_UNIFILAR_MT_A3_AUTOCAD.dxf",
+    "unidades": 6,
+    "entidades": 0,
+    "presentaciones": [
+      "Model",
+      "Layout1"
+    ],
+    "errores_auditoria": 0
+  },
+  {
+    "archivo": "autocad_lp/D-01_ARMADOS_PS1_PA1_A3_AUTOCAD.dxf",
+    "unidades": 6,
+    "entidades": 0,
+    "presentaciones": [
+      "Model",
+      "Layout1"
+    ],
+    "errores_auditoria": 0
+  },
+  {
+    "archivo": "autocad_lp/D-02_ARMADOS_PR1_SAB1_A3_AUTOCAD.dxf",
+    "unidades": 6,
+    "entidades": 0,
+    "presentaciones": [
+      "Model",
+      "Layout1"
+    ],
+    "errores_auditoria": 0
+  },
+  {
+    "archivo": "autocad_lp/D-03_CIMENTACION_RETENIDA_PAT3_A3_AUTOCAD.dxf",
+    "unidades": 6,
+    "entidades": 0,
+    "presentaciones": [
+      "Model",
+      "Layout1"
+    ],
+    "errores_auditoria": 0
+  }
+]

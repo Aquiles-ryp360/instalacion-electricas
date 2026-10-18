@@ -1,3 +1,5 @@
+> **Alcance histórico, identificado el18/10/2026:** este análisis mezcla unproyecto urbano deLimbani con referencias deCapachica. No gobierna lalínea principal aHuancasayani. Ver `proyectos/aquiles-linea-primaria-inst-ii/proyecto.yaml` ylaauditoríaLP-R02. La precisión delcatastro y lascapacidades deequipos deben verificarse, no deducirse de serCAD.
+
 # Análisis Profundo de Proyectos de Referencia de Líneas Eléctricas en el Repositorio
 
 - **Autor de análisis:** Br. Aquiles Taylor Ramos Yapo (Cód. 227368)

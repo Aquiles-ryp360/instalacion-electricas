@@ -1,0 +1,9 @@
+{
+  "estado": "RECONSTRUCCION INDEPENDIENTE COMPLETA APROBADA",
+  "metodo": "Restaurador y constructor desde fragmento incluido, en carpeta nueva sin historialGit ni archivosWindows",
+  "resultados_json_identicos": true,
+  "sha256_resultados": "85765a4cfaa04f16c934468b4b73225013d56f00fcfab6e7d2fcac6c0502e4fd",
+  "controles_original": 68,
+  "controles_reconstruccion": 68,
+  "observacion": "Los resultados numéricos se reproducen; permanece pendiente la verificación de campo/equipos y la aprobación de ingeniería"
+}

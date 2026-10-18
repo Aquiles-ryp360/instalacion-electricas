@@ -1,0 +1,462 @@
+[
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/.gitattributes",
+    "bytes": 10,
+    "comprimido": 12
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/cad/indice-armados-cad.json",
+    "bytes": 8055,
+    "comprimido": 590
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/cad/LP_Limbani_Huancasayani_R01.dwg",
+    "bytes": 11795067,
+    "comprimido": 10470377
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/cad/LP_Limbani_Huancasayani_R01.dwl",
+    "bytes": 67,
+    "comprimido": 67
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/cad/LP_Limbani_Huancasayani_R01.dwl2",
+    "bytes": 218,
+    "comprimido": 165
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/cad/LP_Limbani_Huancasayani_R01.dxf",
+    "bytes": 37547609,
+    "comprimido": 7265500
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/cad/LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg",
+    "bytes": 10660765,
+    "comprimido": 9030687
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/cad/verificacion-dwg.json",
+    "bytes": 525,
+    "comprimido": 345
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/.gitattributes",
+    "bytes": 50,
+    "comprimido": 47
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/armados-adjuntos.json",
+    "bytes": 15177,
+    "comprimido": 1572
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/casas-originales.geojson",
+    "bytes": 196630,
+    "comprimido": 46689
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/corredor-vial.json",
+    "bytes": 15127,
+    "comprimido": 3156
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/cruces.geojson",
+    "bytes": 2616,
+    "comprimido": 545
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/curvas-dem.geojson",
+    "bytes": 1108608,
+    "comprimido": 416635
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/fuentes.json",
+    "bytes": 11133,
+    "comprimido": 4254
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/indice-planos.json",
+    "bytes": 2794,
+    "comprimido": 377
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/linea.geojson",
+    "bytes": 10437,
+    "comprimido": 2129
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/osm_bbox.xml",
+    "bytes": 1069816,
+    "comprimido": 92850
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/osm_consulta.json",
+    "bytes": 529,
+    "comprimido": 360
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/parametros.json",
+    "bytes": 5004,
+    "comprimido": 2223
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/perfiles-explicitos.json",
+    "bytes": 5266,
+    "comprimido": 875
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/postes.geojson",
+    "bytes": 120129,
+    "comprimido": 15028
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/presentacion-academica.json",
+    "bytes": 150,
+    "comprimido": 121
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/referencias-osm.geojson",
+    "bytes": 403655,
+    "comprimido": 77743
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/resultados.json",
+    "bytes": 1102454,
+    "comprimido": 198860
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/retenidas.geojson",
+    "bytes": 87348,
+    "comprimido": 8291
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/subestaciones.geojson",
+    "bytes": 893,
+    "comprimido": 309
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/topografia-gabinete.json",
+    "bytes": 336,
+    "comprimido": 214
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/datos/vanos.geojson",
+    "bytes": 65758,
+    "comprimido": 6482
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/leyenda.png",
+    "bytes": 35469,
+    "comprimido": 33257
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/PF-01.png",
+    "bytes": 387051,
+    "comprimido": 363877
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/PF-02.png",
+    "bytes": 412564,
+    "comprimido": 388675
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/PF-03.png",
+    "bytes": 414227,
+    "comprimido": 389646
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/PF-04.png",
+    "bytes": 414521,
+    "comprimido": 390896
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/PF-05.png",
+    "bytes": 402142,
+    "comprimido": 377914
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/PF-06.png",
+    "bytes": 410258,
+    "comprimido": 386241
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/PF-07.png",
+    "bytes": 374268,
+    "comprimido": 349806
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/poste-cac.png",
+    "bytes": 404,
+    "comprimido": 396
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/relieve-dem.png",
+    "bytes": 314397,
+    "comprimido": 314497
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/files/subestacion.png",
+    "bytes": 429,
+    "comprimido": 434
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/LEER_PRIMERO.md",
+    "bytes": 1487,
+    "comprimido": 851
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/LP_Limbani_Huancasayani_R01.kml",
+    "bytes": 2457555,
+    "comprimido": 445009
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/LP_Limbani_Huancasayani_R01.kmz",
+    "bytes": 3441962,
+    "comprimido": 3442214
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/verificacion-google-earth.json",
+    "bytes": 430,
+    "comprimido": 264
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/google-earth/vista-topografica.png",
+    "bytes": 950070,
+    "comprimido": 949207
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/LEER_PRIMERO.md",
+    "bytes": 836,
+    "comprimido": 550
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/Linea_Primaria_Limbani_Huancasayani_R01_anexo_armados.pdf",
+    "bytes": 5552698,
+    "comprimido": 5483471
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/Linea_Primaria_Limbani_Huancasayani_R01_calculos.pdf",
+    "bytes": 1129188,
+    "comprimido": 877066
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/Linea_Primaria_Limbani_Huancasayani_R01_expediente.pdf",
+    "bytes": 15312137,
+    "comprimido": 12885500
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/Linea_Primaria_Limbani_Huancasayani_R01_planos.pdf",
+    "bytes": 8620638,
+    "comprimido": 6528465
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/manifest-entrega.json",
+    "bytes": 15608,
+    "comprimido": 5000
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/01-alcance.md",
+    "bytes": 2005,
+    "comprimido": 987
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/02-antecedentes.md",
+    "bytes": 2103,
+    "comprimido": 1049
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/03-ubicacion.md",
+    "bytes": 2466,
+    "comprimido": 1353
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/04-demanda.md",
+    "bytes": 1995,
+    "comprimido": 1023
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/05-electrico.md",
+    "bytes": 3365,
+    "comprimido": 1777
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/06-balance.md",
+    "bytes": 1979,
+    "comprimido": 1020
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/07-mecanica.md",
+    "bytes": 3510,
+    "comprimido": 1835
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/08-protecciones.md",
+    "bytes": 3653,
+    "comprimido": 1914
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/09-normativa.md",
+    "bytes": 2779,
+    "comprimido": 1419
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/10-presupuesto.md",
+    "bytes": 1993,
+    "comprimido": 1092
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/11-entregables.md",
+    "bytes": 2864,
+    "comprimido": 1468
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/12-conclusiones.md",
+    "bytes": 1836,
+    "comprimido": 984
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/identidad/escudo-unap.png",
+    "bytes": 933759,
+    "comprimido": 731564
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/identidad/procedencia.md",
+    "bytes": 263,
+    "comprimido": 175
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/memoria-editable/memoria-completa.md",
+    "bytes": 30759,
+    "comprimido": 12731
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/PENDIENTES_LP_R01.md",
+    "bytes": 4039,
+    "comprimido": 2129
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/Catastro-Limbani-original.gpkg",
+    "bytes": 278528,
+    "comprimido": 63998
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/DEM-gabinete-30m.tif",
+    "bytes": 39663,
+    "comprimido": 39206
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/DEM-gabinete-30m.tif.aux.xml",
+    "bytes": 362,
+    "comprimido": 178
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/LP-Limbani-Huancasayani.gpkg",
+    "bytes": 954368,
+    "comprimido": 463543
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/LP-Limbani-Huancasayani.qgz",
+    "bytes": 39024,
+    "comprimido": 37092
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/ortofoto_limbani.jgw",
+    "bytes": 72,
+    "comprimido": 51
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/ortofoto_limbani.jpg",
+    "bytes": 1483278,
+    "comprimido": 1391831
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/ortofoto_limbani.jpg.aux.xml",
+    "bytes": 1633,
+    "comprimido": 348
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/portabilidad-verificada.json",
+    "bytes": 398,
+    "comprimido": 240
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/simbolos/SE-DGE-09-90-09.svg",
+    "bytes": 258,
+    "comprimido": 162
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/verificacion-qgis.json",
+    "bytes": 1672,
+    "comprimido": 378
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/qgis/vista-general.png",
+    "bytes": 1257340,
+    "comprimido": 1231436
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/README-LINEA-PRIMARIA.md",
+    "bytes": 2266,
+    "comprimido": 1184
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/RESUMEN_CORRECCIONES_LP_R01.md",
+    "bytes": 4684,
+    "comprimido": 2368
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/cantones.csv",
+    "bytes": 3374,
+    "comprimido": 1397
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/cortocircuito.csv",
+    "bytes": 569,
+    "comprimido": 298
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/cruces.csv",
+    "bytes": 686,
+    "comprimido": 300
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/demanda.csv",
+    "bytes": 295,
+    "comprimido": 192
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/estados_mecanicos.csv",
+    "bytes": 79367,
+    "comprimido": 31443
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/metrados_civiles_y_tierra.csv",
+    "bytes": 527,
+    "comprimido": 371
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/postes.csv",
+    "bytes": 32016,
+    "comprimido": 11643
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/presupuesto.csv",
+    "bytes": 1693,
+    "comprimido": 686
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/retenidas.csv",
+    "bytes": 15841,
+    "comprimido": 4924
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/tablas/vanos.csv",
+    "bytes": 13848,
+    "comprimido": 5858
+  },
+  {
+    "archivo": "Linea_Primaria_Limbani_Huancasayani_R01/verificacion-final.json",
+    "bytes": 2666,
+    "comprimido": 1298
+  }
+]

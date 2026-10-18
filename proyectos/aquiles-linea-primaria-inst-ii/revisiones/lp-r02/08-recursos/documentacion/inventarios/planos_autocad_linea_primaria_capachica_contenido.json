@@ -1,0 +1,37 @@
+[
+  {
+    "archivo": "autocad_lp/LP-01_PLANTA_LINEA_PRIMARIA_A3_AUTOCAD.dxf",
+    "bytes": 89274,
+    "comprimido": 12488
+  },
+  {
+    "archivo": "autocad_lp/PL-01_PERFIL_LONGITUDINAL_A3_AUTOCAD.dxf",
+    "bytes": 88069,
+    "comprimido": 14291
+  },
+  {
+    "archivo": "autocad_lp/U-01_DIAGRAMA_UNIFILAR_MT_A3_AUTOCAD.dxf",
+    "bytes": 62525,
+    "comprimido": 9301
+  },
+  {
+    "archivo": "autocad_lp/D-01_ARMADOS_PS1_PA1_A3_AUTOCAD.dxf",
+    "bytes": 60698,
+    "comprimido": 8861
+  },
+  {
+    "archivo": "autocad_lp/D-02_ARMADOS_PR1_SAB1_A3_AUTOCAD.dxf",
+    "bytes": 61942,
+    "comprimido": 9036
+  },
+  {
+    "archivo": "autocad_lp/D-03_CIMENTACION_RETENIDA_PAT3_A3_AUTOCAD.dxf",
+    "bytes": 60345,
+    "comprimido": 8899
+  },
+  {
+    "archivo": "autocad_lp/README_AUTOCAD_LP.md",
+    "bytes": 1524,
+    "comprimido": 854
+  }
+]

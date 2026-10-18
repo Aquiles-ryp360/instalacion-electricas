@@ -1,0 +1,35 @@
+schema_version: 2
+id: aquiles-linea-primaria-inst-ii
+revision: LP-R02
+proyecto: Proyecto académico de línea primaria Limbani–Huancasayani
+curso: Instalaciones Eléctricas II
+autor: Aquiles Taylor Ramos Yapo
+denominacion: Estudiante
+codigo_estudiante: '227368'
+docente: null
+estado: Revisión académica con observaciones abiertas; sin aprobación para construcción
+modo: Aislado, sin SEIN
+alcance: MCH y transformación de salida - línea primaria - SE llegada Huancasayani;
+  excluye redes de usuarios
+fuente_unica: datos/lp-r02/parametros.json
+resultados: ../../build/aquiles-linea-primaria-inst-ii/lp-r02/03-calculos/resultados.json
+documentos: expediente/lp-r02
+google_earth: ../../build/aquiles-linea-primaria-inst-ii/lp-r02/04-planos/LP_R02.kmz
+biblioteca_normativa: ../../herramientas/biblioteca_dge/README.md
+antecedente_historico: archivo/red-urbana
+originales_locales: fuentes/local/lp-r01/antecedente
+revision_previa: LP-R01
+geometria_canonica: datos/lp-r02/geometria-base.json
+paquete_revision: ../../build/aquiles-linea-primaria-inst-ii/lp-r02
+cad_dxf_activo: ../../build/aquiles-linea-primaria-inst-ii/lp-r02/04-planos/LP_Limbani_Huancasayani_R02.dxf
+tension_confirmada_kv: null
+tension_alternativas_kv:
+- 10
+- 20
+- 22
+- 22.9
+datos_pendientes: documentacion/lp-r02/CONTINUIDAD_IA.md
+entregables_previos_r01: entregables/linea-primaria-r01
+cad_dwg_previo_r01: entregables/linea-primaria-r01/cad/LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg
+constructor: scripts/lp_r02/construir.py
+verificador: scripts/lp_r02/verificar.py

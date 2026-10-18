@@ -1,0 +1,752 @@
+[
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BIBLIOTECA_DGE_BT_COMPLETA.dwg",
+    "bytes": 4076616,
+    "comprimido": 3544594
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BIBLIOTECA_DGE_BT_COMPLETA.dxf",
+    "bytes": 17486844,
+    "comprimido": 2215550
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_001.dxf",
+    "bytes": 1143008,
+    "comprimido": 142784
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_002.dxf",
+    "bytes": 1080623,
+    "comprimido": 141157
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_003.dxf",
+    "bytes": 1449254,
+    "comprimido": 254365
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_004.dxf",
+    "bytes": 1051363,
+    "comprimido": 137606
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_005.dxf",
+    "bytes": 1215388,
+    "comprimido": 157685
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_006.dxf",
+    "bytes": 1090398,
+    "comprimido": 141603
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_007.dxf",
+    "bytes": 846129,
+    "comprimido": 110933
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_008.dxf",
+    "bytes": 839407,
+    "comprimido": 108430
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_009.dxf",
+    "bytes": 438046,
+    "comprimido": 58318
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_010.dxf",
+    "bytes": 555887,
+    "comprimido": 72303
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_011.dxf",
+    "bytes": 678032,
+    "comprimido": 69757
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_012.dxf",
+    "bytes": 542388,
+    "comprimido": 70745
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_013.dxf",
+    "bytes": 829561,
+    "comprimido": 104104
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_014.dxf",
+    "bytes": 834304,
+    "comprimido": 104115
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_015.dxf",
+    "bytes": 1181863,
+    "comprimido": 147246
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_016.dxf",
+    "bytes": 322182,
+    "comprimido": 44749
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_017.dxf",
+    "bytes": 397116,
+    "comprimido": 52148
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_018.dxf",
+    "bytes": 521708,
+    "comprimido": 67554
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_019.dxf",
+    "bytes": 543196,
+    "comprimido": 67199
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_020.dxf",
+    "bytes": 1003475,
+    "comprimido": 120695
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_021.dxf",
+    "bytes": 1090397,
+    "comprimido": 131382
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_022_RD002_2019.dwg",
+    "bytes": 204785,
+    "comprimido": 163609
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/BT/DGE_BT_022_RD002_2019.dxf",
+    "bytes": 790016,
+    "comprimido": 106835
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_001.dxf",
+    "bytes": 1206101,
+    "comprimido": 241361
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_002.dxf",
+    "bytes": 1466853,
+    "comprimido": 297746
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_003.dxf",
+    "bytes": 2303043,
+    "comprimido": 462405
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_004.dxf",
+    "bytes": 2368957,
+    "comprimido": 477069
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_005.dxf",
+    "bytes": 1902541,
+    "comprimido": 382786
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_006.dxf",
+    "bytes": 2233633,
+    "comprimido": 449350
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_007.dxf",
+    "bytes": 2588345,
+    "comprimido": 510562
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_008.dxf",
+    "bytes": 2815336,
+    "comprimido": 556500
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_009.dxf",
+    "bytes": 1185507,
+    "comprimido": 243433
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_010.dxf",
+    "bytes": 1616183,
+    "comprimido": 332804
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_011.dxf",
+    "bytes": 1787469,
+    "comprimido": 366674
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_012.dxf",
+    "bytes": 1929467,
+    "comprimido": 396272
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_013.dxf",
+    "bytes": 1228649,
+    "comprimido": 255869
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_014.dxf",
+    "bytes": 1869457,
+    "comprimido": 381905
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_015.dxf",
+    "bytes": 2086731,
+    "comprimido": 431443
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_016.dxf",
+    "bytes": 2177641,
+    "comprimido": 449699
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_017.dxf",
+    "bytes": 1601745,
+    "comprimido": 326819
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_018.dxf",
+    "bytes": 2096771,
+    "comprimido": 426673
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_019.dxf",
+    "bytes": 2720703,
+    "comprimido": 551022
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_020.dxf",
+    "bytes": 3208695,
+    "comprimido": 645495
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_021.dxf",
+    "bytes": 1031750,
+    "comprimido": 212844
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_022.dxf",
+    "bytes": 1621961,
+    "comprimido": 335449
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_023.dxf",
+    "bytes": 1760127,
+    "comprimido": 360029
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_024.dxf",
+    "bytes": 1824389,
+    "comprimido": 372068
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_025.dxf",
+    "bytes": 2551925,
+    "comprimido": 513555
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_026.dxf",
+    "bytes": 2467087,
+    "comprimido": 497996
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_027.dxf",
+    "bytes": 1603967,
+    "comprimido": 322121
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_028.dxf",
+    "bytes": 1655987,
+    "comprimido": 331925
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_029.dxf",
+    "bytes": 1635481,
+    "comprimido": 335076
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_030.dxf",
+    "bytes": 1885425,
+    "comprimido": 386617
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_031.dxf",
+    "bytes": 1567027,
+    "comprimido": 323361
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_032.dxf",
+    "bytes": 2176297,
+    "comprimido": 441927
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_033.dxf",
+    "bytes": 1501425,
+    "comprimido": 297669
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_034.dxf",
+    "bytes": 1949445,
+    "comprimido": 394962
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_035.dxf",
+    "bytes": 2411307,
+    "comprimido": 485142
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_036.dxf",
+    "bytes": 2647781,
+    "comprimido": 525157
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_037.dxf",
+    "bytes": 2737235,
+    "comprimido": 545765
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_038.dxf",
+    "bytes": 1407285,
+    "comprimido": 279359
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_039.dxf",
+    "bytes": 2100487,
+    "comprimido": 415768
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_040.dxf",
+    "bytes": 2297417,
+    "comprimido": 461456
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_040_A.dxf",
+    "bytes": 1935773,
+    "comprimido": 384886
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_040_B.dxf",
+    "bytes": 1955117,
+    "comprimido": 389599
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_041.dxf",
+    "bytes": 2260181,
+    "comprimido": 459681
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_042.dxf",
+    "bytes": 2806511,
+    "comprimido": 566336
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_043.dxf",
+    "bytes": 3245443,
+    "comprimido": 653768
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_044.dxf",
+    "bytes": 2669905,
+    "comprimido": 541967
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_045.dxf",
+    "bytes": 3238321,
+    "comprimido": 650659
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_046.dxf",
+    "bytes": 2714307,
+    "comprimido": 552284
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_047.dxf",
+    "bytes": 2624641,
+    "comprimido": 528507
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_048.dxf",
+    "bytes": 3148467,
+    "comprimido": 632436
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_049.dxf",
+    "bytes": 2958051,
+    "comprimido": 598495
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_050.dxf",
+    "bytes": 2414547,
+    "comprimido": 492276
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_051.dxf",
+    "bytes": 2983269,
+    "comprimido": 604487
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_052.dxf",
+    "bytes": 2454547,
+    "comprimido": 501335
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_053.dxf",
+    "bytes": 2569623,
+    "comprimido": 524658
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_053_A.dxf",
+    "bytes": 2479777,
+    "comprimido": 505357
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_054.dxf",
+    "bytes": 1552209,
+    "comprimido": 310444
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_055.dxf",
+    "bytes": 1496341,
+    "comprimido": 299282
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_056.dxf",
+    "bytes": 1940403,
+    "comprimido": 388673
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_057.dxf",
+    "bytes": 2292551,
+    "comprimido": 461629
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_058.dxf",
+    "bytes": 2716145,
+    "comprimido": 548981
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_059.dxf",
+    "bytes": 2387121,
+    "comprimido": 478765
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_060.dxf",
+    "bytes": 2434373,
+    "comprimido": 496308
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_061.dxf",
+    "bytes": 2355045,
+    "comprimido": 479967
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_062.dxf",
+    "bytes": 2499079,
+    "comprimido": 500442
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_063.dxf",
+    "bytes": 2463599,
+    "comprimido": 491856
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_064_1_2.dxf",
+    "bytes": 1335924,
+    "comprimido": 268522
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_064_2_2.dxf",
+    "bytes": 2759286,
+    "comprimido": 530489
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_064_A.dxf",
+    "bytes": 1816719,
+    "comprimido": 350943
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_064_B.dxf",
+    "bytes": 2118023,
+    "comprimido": 412410
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_065.dxf",
+    "bytes": 1000022,
+    "comprimido": 218782
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_065_A.dxf",
+    "bytes": 1049870,
+    "comprimido": 207008
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_065_B.dxf",
+    "bytes": 731428,
+    "comprimido": 144468
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_066.dxf",
+    "bytes": 901398,
+    "comprimido": 177958
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_066_A.dxf",
+    "bytes": 737282,
+    "comprimido": 150179
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_067.dxf",
+    "bytes": 1101758,
+    "comprimido": 231513
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_068.dxf",
+    "bytes": 603802,
+    "comprimido": 135497
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_069.dxf",
+    "bytes": 742202,
+    "comprimido": 159346
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_070.dxf",
+    "bytes": 746075,
+    "comprimido": 150397
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_071.dxf",
+    "bytes": 1042476,
+    "comprimido": 200719
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_071_A.dxf",
+    "bytes": 964780,
+    "comprimido": 201531
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_071_B.dxf",
+    "bytes": 772738,
+    "comprimido": 162972
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_072.dxf",
+    "bytes": 1422521,
+    "comprimido": 292781
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_073.dxf",
+    "bytes": 897844,
+    "comprimido": 183170
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_073_A.dxf",
+    "bytes": 1024683,
+    "comprimido": 191519
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_074.dxf",
+    "bytes": 1830165,
+    "comprimido": 358462
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_075.dxf",
+    "bytes": 1625219,
+    "comprimido": 330868
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_076.dxf",
+    "bytes": 915930,
+    "comprimido": 184464
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_076_A.dxf",
+    "bytes": 626076,
+    "comprimido": 128051
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_077.dxf",
+    "bytes": 2926652,
+    "comprimido": 567008
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_078.dxf",
+    "bytes": 2278838,
+    "comprimido": 438172
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_078_A.dxf",
+    "bytes": 520970,
+    "comprimido": 103164
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_079.dxf",
+    "bytes": 2068377,
+    "comprimido": 417178
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_080.dxf",
+    "bytes": 2035581,
+    "comprimido": 413795
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_081.dxf",
+    "bytes": 1949339,
+    "comprimido": 389672
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_082.dxf",
+    "bytes": 2091953,
+    "comprimido": 419255
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_083.dxf",
+    "bytes": 2467837,
+    "comprimido": 497414
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_084.dxf",
+    "bytes": 2718409,
+    "comprimido": 550257
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_085.dxf",
+    "bytes": 1807285,
+    "comprimido": 365458
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_086.dxf",
+    "bytes": 1949153,
+    "comprimido": 399301
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_087.dxf",
+    "bytes": 1836825,
+    "comprimido": 373695
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/MT/DGE_MT_088.dxf",
+    "bytes": 2002175,
+    "comprimido": 406676
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/SIMBOLOGIA_DGE_SECCION_9.dwg",
+    "bytes": 1121376,
+    "comprimido": 844533
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/cad/SIMBOLOGIA_DGE_SECCION_9.dxf",
+    "bytes": 10228948,
+    "comprimido": 482773
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/catalogo-armados-BT.csv",
+    "bytes": 7307,
+    "comprimido": 1093
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/catalogo-armados-BT.json",
+    "bytes": 13481,
+    "comprimido": 1294
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/catalogo-armados-MT.csv",
+    "bytes": 34399,
+    "comprimido": 3553
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/catalogo-armados-MT.json",
+    "bytes": 64020,
+    "comprimido": 4238
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/catalogo-complementos.json",
+    "bytes": 318,
+    "comprimido": 216
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/catalogo-simbolos.json",
+    "bytes": 71767,
+    "comprimido": 7777
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/fuentes/rd002-2019-elperuano.pdf",
+    "bytes": 268699,
+    "comprimido": 216574
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/fuentes/rd023-gobpe.pdf",
+    "bytes": 3902713,
+    "comprimido": 2358672
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/fuentes/rd024-directo.pdf",
+    "bytes": 23748563,
+    "comprimido": 14734430
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/fuentes/simbologia-directo.pdf",
+    "bytes": 5549535,
+    "comprimido": 5371732
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/fuentes.json",
+    "bytes": 2409,
+    "comprimido": 996
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/LEER_PRIMERO.md",
+    "bytes": 1014,
+    "comprimido": 611
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/README.md",
+    "bytes": 7130,
+    "comprimido": 3213
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/terceros/esolutions/Copias-normativas/Armados BT-Peru-DGE-RD023-2003.pdf",
+    "bytes": 1526117,
+    "comprimido": 1451728
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/terceros/esolutions/Copias-normativas/Armados MT-Peru-DGE-RD024-2003.pdf",
+    "bytes": 5298463,
+    "comprimido": 4846723
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/terceros/esolutions/Leeme.txt",
+    "bytes": 6144,
+    "comprimido": 2645
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/terceros/esolutions/REDLIN-Plantilla-Peru.dxf",
+    "bytes": 1624398,
+    "comprimido": 178498
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/verificacion-biblioteca.json",
+    "bytes": 688,
+    "comprimido": 373
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/verificacion-compactacion.json",
+    "bytes": 16813,
+    "comprimido": 1319
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/verificacion-dwg.json",
+    "bytes": 1483,
+    "comprimido": 369
+  },
+  {
+    "archivo": "Biblioteca_CAD_DGE_Peru/manifest-paquete.json",
+    "bytes": 24812,
+    "comprimido": 7329
+  }
+]

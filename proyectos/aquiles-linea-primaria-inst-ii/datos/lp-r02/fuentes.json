@@ -1,0 +1,112 @@
+[
+  {
+    "id": "R02-F01",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/rd018_2003.pdf",
+    "url": "https://cdn.www.gob.pe/uploads/document/file/5327057/4775002-r-d-nro-018-2003-em-dge.pdf?v=1698249931",
+    "entidad": "MINEM",
+    "uso_y_limites": "Bases primarias; texto aprobado2003. No sustituye consolidación normativa completa.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "934da5fe6351b9cc5a5f8868a938f046b872d57b8e96c9baebb6508fffb809b8",
+    "bytes": 400996,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F02",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/cne_suministro_2011.pdf",
+    "url": "https://cdn.www.gob.pe/uploads/document/file/95751/RM_214_2011_DM.pdf",
+    "entidad": "MINEM",
+    "uso_y_limites": "Cargas, grados, distancias, factores. Revisar modificaciones aplicables al cierre.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "930e88a3b09d7317b605ce857ee18152783496d864f8c28712854a424a71ca2c",
+    "bytes": 2217275,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F03",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/poste_seace_13_400.pdf",
+    "url": "https://prod4.seace.gob.pe/documentos/documentos/FichaSubInv/421061013rad4FAFB.pdf",
+    "entidad": "SEACE/PERU COMPRAS",
+    "uso_y_limites": "Ficha de bien13/400/2/180/375; rotulado daN. No certificado de poste600daN ni ensayo axial.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "d62fdec484c421d8001ac2caa1da1b8a941791c1ccfbc1d7863c9e1424ab87a8",
+    "bytes": 209944,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F04",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/tdr_electropuno_lp.pdf",
+    "url": "https://cdn.www.gob.pe/uploads/document/file/5815296/5158350-tdr-implementacion-de-linea-primaria.pdf",
+    "entidad": "Electro Puno",
+    "uso_y_limites": "Referencia de estructura documental Tototani; normativa histórica requiere cotejo actual.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "50ef37491f22fbbcd66a23af68156c622850aa3e776cb9d59c1e79901507afdd",
+    "bytes": 1223145,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F05",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/seace_ubinas_contrato_023_2021.pdf",
+    "url": "https://prod3.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=014e2650-5f12-4500-b206-578563305740.pdf",
+    "entidad": "SEACE/Electrosur",
+    "uso_y_limites": "LP007-2020-ES. Línea33kV. Contrato y resumen de presupuesto; no planos de ingeniería.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "889f5ad743a3761e2a6c68524bdcf32bf8cea70fcb40fc0c694d9cc510fba835",
+    "bytes": 891976,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F06",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/seace_carhuaz_contrato_091_2024.pdf",
+    "url": "https://prod3.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=e25131e7-2ff8-42af-96fe-f49fad02d1fc.pdf",
+    "entidad": "SEACE/Hidrandina",
+    "uso_y_limites": "AS-SM44-2023-HDNA-3. Consultoría13.2kV; no expediente técnico adjunto descargado.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "cd71ff62036fa1dd0870d82fd2c8bcae9efc8bcc3034f70b545cd253f03525e7",
+    "bytes": 511644,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F07",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/dia_tinyacclla_pachachaca.pdf",
+    "url": "https://sinia.minam.gob.pe/sites/default/files/siar-huancavelica/archivos/public/docs/1.1._declaracion_de_impacto_ambiental_v3.pdf",
+    "entidad": "SINIA/Municipalidad Huando",
+    "uso_y_limites": "Referencia de componentes. Se observaron diferencias13.2/22.9kV y presupuesto: requiere evaluación crítica.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "bc86da76a3940b33c232d31cfe887bf3a9d22c8cbf5cd9f750cb92bd4fab81fe",
+    "bytes": 698698,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F08",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/dia-hospital_lircay.pdf",
+    "url": "https://sinia.minam.gob.pe/sites/default/files/siar-huancavelica/archivos/public/docs/dia-hospital_lircay.pdf",
+    "entidad": "SINIA",
+    "uso_y_limites": "DIA de sistema22.9kV; se revisaron planos decomponentes/trazo/ubicación enanexos186–195. No trasladar1250kVA ni ajustes.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "a98b82f19dabb57184066fd12a39d8bc646f00531a4d210f912cdcf57a58bf32",
+    "bytes": 40011385,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F09",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/plano_trazo_tablachaca.pdf",
+    "url": "https://sinia.minam.gob.pe/sites/default/files/siar-huancavelica/archivos/public/docs/mapa_ampliacion_y_mejoramiento_del_servicio_de_energia.pdf",
+    "entidad": "SINIA",
+    "uso_y_limites": "Plano de ejes con coordenadas y cuadro de tramos. Referencia de presentación, no ruta de Limbani.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "bd0f2bb142dd0062539fb4e1eef7f79a12a045a86c6bb7fcb60541b6811644a5",
+    "bytes": 8016661,
+    "estado": "DESCARGADO"
+  },
+  {
+    "id": "R02-F10",
+    "archivo": "recursos/linea-primaria-limbani/2026-10-18/dia_choclococha.pdf",
+    "url": "https://sinia.minam.gob.pe/sites/default/files/siar-huancavelica/archivos/public/docs/dia_choclococha.pdf",
+    "entidad": "SINIA",
+    "uso_y_limites": "Planilla de estructuras con poste/armado/vano/coordenadas. No transferir clima ni equipos.",
+    "fecha_consulta": "2026-10-18",
+    "sha256": "9aa6a0c3475591d52c35dfb920937bb281c012562361ba03eae4cc55537f70e8",
+    "bytes": 3927409,
+    "estado": "DESCARGADO"
+  }
+]

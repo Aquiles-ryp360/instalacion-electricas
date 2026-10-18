@@ -1,0 +1,784 @@
+{
+  "revision": "LP-R02",
+  "estado": "REVISION ACADEMICA CON DATOS REQUERIDOS",
+  "aprobacion_ingenieria": false,
+  "entradas": [
+    {
+      "ruta": "proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r02/parametros.json",
+      "sha256": "43261f4dc94db26af04db769f0b33f044029b2225ebcc6371387456cb55812ca"
+    },
+    {
+      "ruta": "proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r02/geometria-base.json",
+      "sha256": "659470296d4c1ad82b24ac678d272ac3f5ec1955182d703e88312cd9ce16cb09"
+    },
+    {
+      "ruta": "proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r01/casas-originales.geojson",
+      "sha256": "e4a020f662842a8a5c7dae1df45c83e856653a813bcb5160516ad36846cdebbf"
+    },
+    {
+      "ruta": "proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r01/referencias-osm.geojson",
+      "sha256": "9fb61985f9f6a420e0f7eb0817d778986fa090299c7c275f825900dae6461d1c"
+    },
+    {
+      "ruta": "proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r01/curvas-dem.geojson",
+      "sha256": "2e6ecd2d58d95698fa981fda391685f159b461458e878cb0750af76f616c4bfb"
+    }
+  ],
+  "archivos": [
+    {
+      "ruta": "01-expediente/Expediente_revisado_LP_R02.docx",
+      "bytes": 48925,
+      "sha256": "25a9613f96bb02afc67a595927e6b918add2262741b7e311e4f371ec484d6b72"
+    },
+    {
+      "ruta": "01-expediente/Expediente_revisado_LP_R02.md",
+      "bytes": 24487,
+      "sha256": "b828f6e31bdf6c08742b0c3d61d5ec58412383db9d48a7d4ba8c96175492e049"
+    },
+    {
+      "ruta": "01-expediente/Expediente_revisado_LP_R02.pdf",
+      "bytes": 76712,
+      "sha256": "c9027541aad4b457a2074cb27b7aab551f6c08f58bbe5bb3706a0613fbde6978"
+    },
+    {
+      "ruta": "02-metrados/Metrados_trazables_LP_R02.xlsx",
+      "bytes": 73817,
+      "sha256": "aaf48381e94f34ed156b8c95bba5ae2d9192c58f3ba21af7be6bfa6c1fd75ce6"
+    },
+    {
+      "ruta": "02-metrados/civiles_pendientes.csv",
+      "bytes": 12989,
+      "sha256": "35412c763f7e3df69675ca0836cb58198a284dc6694a02912f8adb85c75811c6"
+    },
+    {
+      "ruta": "02-metrados/metrado_detallado.csv",
+      "bytes": 61115,
+      "sha256": "a604ea904d9fe8e8a098683b46d42faab151cc5877f76f1c95e417b2535bb962"
+    },
+    {
+      "ruta": "02-metrados/postes.csv",
+      "bytes": 47501,
+      "sha256": "6b7614ef5177e442c71a01909d65877770150e44fa6d04c6dc06c48a4310ede6"
+    },
+    {
+      "ruta": "02-metrados/resumen_metrados.csv",
+      "bytes": 1012,
+      "sha256": "a6c741bf4ef9906fd81e5a0ef5aa6e110c56af340dc2c5a584610b43fb087fd4"
+    },
+    {
+      "ruta": "02-metrados/retenidas.csv",
+      "bytes": 28918,
+      "sha256": "2ad8a54cc37c46746459fca3107444aad220ed40a41aa6159155d47f7ed77268"
+    },
+    {
+      "ruta": "03-calculos/Calculos_explicitos_LP_R02.xlsx",
+      "bytes": 718427,
+      "sha256": "9eb604e57e9e4cb136695bd56e61a394e76124682755a302cec2581737c46ed8"
+    },
+    {
+      "ruta": "03-calculos/Memoria_calculo_explicita_LP_R02.docx",
+      "bytes": 44231,
+      "sha256": "91db68473b0914ebf83be74deb34aac83d8cf92908ac504f64e830a628f78d7e"
+    },
+    {
+      "ruta": "03-calculos/Memoria_calculo_explicita_LP_R02.md",
+      "bytes": 14335,
+      "sha256": "f837757631007cdcf65615201bd71f3b013925ce72e12e297240b26ec85f8494"
+    },
+    {
+      "ruta": "03-calculos/Memoria_calculo_explicita_LP_R02.pdf",
+      "bytes": 63492,
+      "sha256": "9a9c1a151a1195486095b204c09f322a195a07582b5bdaa064fe04edcf887d7a"
+    },
+    {
+      "ruta": "03-calculos/balance_fuente.csv",
+      "bytes": 1085,
+      "sha256": "e8e4cfa2e4062e3fd23469a8f531de50862d11e4f5430e00859a72003263986c"
+    },
+    {
+      "ruta": "03-calculos/comparacion_tensiones.csv",
+      "bytes": 3493,
+      "sha256": "ed44a559faca4e16f793cd29673759fefc8a7b929c1cb86c73a930f7954b325a"
+    },
+    {
+      "ruta": "03-calculos/cortocircuito.csv",
+      "bytes": 2256,
+      "sha256": "e5fa43e5737d9e7ea4f102044eb5c05a7b213c31fa156a87455a1621fe119a87"
+    },
+    {
+      "ruta": "03-calculos/demanda.csv",
+      "bytes": 339,
+      "sha256": "ef88ebefc1ecd2d49cb8880824779061ba31286a6050f2ebb8ee909742dc8a2e"
+    },
+    {
+      "ruta": "03-calculos/energia.csv",
+      "bytes": 1025,
+      "sha256": "990e85077bac31556b2455571488287f73e1db7ef7896f14c2b2b6a37e261bb0"
+    },
+    {
+      "ruta": "03-calculos/estados_por_vano.csv",
+      "bytes": 144825,
+      "sha256": "110bad3745bef79e3ea9f3efc15558568c2422764dc1256df3ba455d6e685d6d"
+    },
+    {
+      "ruta": "03-calculos/fuerzas_por_apoyo.csv",
+      "bytes": 964078,
+      "sha256": "0638991620afc76bb865b9efad59fc953b54ed56631d60c96b905b7cdc914052"
+    },
+    {
+      "ruta": "03-calculos/origen_MT_fijo.csv",
+      "bytes": 489,
+      "sha256": "bedb3766521b458ec73d9892b7a054955a57368aa8bfe30a317fa630d9d159d9"
+    },
+    {
+      "ruta": "03-calculos/resultados.json",
+      "bytes": 1835029,
+      "sha256": "85765a4cfaa04f16c934468b4b73225013d56f00fcfab6e7d2fcac6c0502e4fd"
+    },
+    {
+      "ruta": "03-calculos/sensibilidad_fluencia.csv",
+      "bytes": 20493,
+      "sha256": "f3706bcda415829390d73bbf6eadd99eeb20783d942c270fd6e0706c94c653a7"
+    },
+    {
+      "ruta": "03-calculos/tabla_tensado_orientativa.csv",
+      "bytes": 102558,
+      "sha256": "d54601c5426e1e6738f45b58178fae8d16b404428457bc55e6488302692877fa"
+    },
+    {
+      "ruta": "03-calculos/vanos_limite_ejemplo.csv",
+      "bytes": 345,
+      "sha256": "53f5caedd0bcefc5fc54549a16406a2f9e96c748225755606441a6676ced4e85"
+    },
+    {
+      "ruta": "04-planos/LP-01.pdf",
+      "bytes": 311733,
+      "sha256": "a9776123a7f2179037217ae75d24cb4ad80d57b4d96b93ab0f5d2e135f893fbf"
+    },
+    {
+      "ruta": "04-planos/LP-02.pdf",
+      "bytes": 231183,
+      "sha256": "ef9cd367db5e5e33578080be5e454b22ac9737de73883822a9bee907f8c44f86"
+    },
+    {
+      "ruta": "04-planos/LP-03.pdf",
+      "bytes": 224203,
+      "sha256": "9f864d6a619b4aab735219e1669bfb0363769bc8bb8a131d48451939f5bf7cff"
+    },
+    {
+      "ruta": "04-planos/LP-04.pdf",
+      "bytes": 235333,
+      "sha256": "4d629c015eefe854bcd5042d2b90a06707dbbca44d6686b7c48a02b5c1a7e1f9"
+    },
+    {
+      "ruta": "04-planos/LP-05.pdf",
+      "bytes": 304032,
+      "sha256": "cd086fd9d1f0fa8c544a354d22d9d42da8bf40f32623a75803ea7cbe711b2bb1"
+    },
+    {
+      "ruta": "04-planos/LP-06.pdf",
+      "bytes": 318869,
+      "sha256": "a630814314778cfdb15d1c7488bb30136748f484c7335aa2ef24eacd03b365b5"
+    },
+    {
+      "ruta": "04-planos/LP-07.pdf",
+      "bytes": 321406,
+      "sha256": "e602e56e7dd6dc3d73b3ecb3008ad5014cf60626e721ef8b9127a1799f27334c"
+    },
+    {
+      "ruta": "04-planos/LP-08.pdf",
+      "bytes": 325657,
+      "sha256": "c33bf4de7404cc0963e3e930bdca287e93e6f86b47bf6bc334c19ca9ef8ae3e9"
+    },
+    {
+      "ruta": "04-planos/LP-09.pdf",
+      "bytes": 312603,
+      "sha256": "620221d0a39237ed2fbe8c1deb103424eb3b39db294f38a9219c5c351d203b00"
+    },
+    {
+      "ruta": "04-planos/LP-10.pdf",
+      "bytes": 316256,
+      "sha256": "8d1550a35e744477a499e3094c73f321d70d4e1122b531430a3b6a832f4cba2b"
+    },
+    {
+      "ruta": "04-planos/LP-11.pdf",
+      "bytes": 311349,
+      "sha256": "3260465156ffc5af8448518fcb532db0dd644d23633fdac4df64e3c2abbb9b1a"
+    },
+    {
+      "ruta": "04-planos/LP-12.pdf",
+      "bytes": 378327,
+      "sha256": "f459156fa5962c4418d90c23518eef30258d4f0a84b730205a1222347851aeff"
+    },
+    {
+      "ruta": "04-planos/LP-13.pdf",
+      "bytes": 373984,
+      "sha256": "7e7c243e6a898ceb9b24d57a82883f4808f3c3ccdafaf57e76f2b80c45eb52b4"
+    },
+    {
+      "ruta": "04-planos/LP-14.pdf",
+      "bytes": 403760,
+      "sha256": "ba98965b6155c49523b1ff3134c1328851c27b259d882ffc31c64fee6e08c5b4"
+    },
+    {
+      "ruta": "04-planos/LP-15.pdf",
+      "bytes": 387321,
+      "sha256": "0e080c7f673f135470c822e374bf8e0f91d7a89d89b7756215f57e163202300d"
+    },
+    {
+      "ruta": "04-planos/LP-16.pdf",
+      "bytes": 275420,
+      "sha256": "e88dd2455b4b5a77b6e55d333108a1fd7c800ae0ebf5af8b4eaf782f5573700b"
+    },
+    {
+      "ruta": "04-planos/LP-17.pdf",
+      "bytes": 171980,
+      "sha256": "c93f70711d89d7b629183e5fe5360c1dd6031ea9fa91027f261cc10ffc38f458"
+    },
+    {
+      "ruta": "04-planos/LP-18.pdf",
+      "bytes": 240394,
+      "sha256": "2a62e54e7dd53a213b54989f49b1754545b060f0112f39bf94b135b84c64e32a"
+    },
+    {
+      "ruta": "04-planos/LP-19.pdf",
+      "bytes": 259220,
+      "sha256": "e9999cb4381ddc03e6c0b991cffd9bb1ec055f60ad8d9a14b53961c817c78f25"
+    },
+    {
+      "ruta": "04-planos/LP_Limbani_Huancasayani_R02.dxf",
+      "bytes": 2635992,
+      "sha256": "65d4dde79938a4731536f3b7ed48069ff3414defe36a64acd9c95f90910f5f4c"
+    },
+    {
+      "ruta": "04-planos/LP_R02.kml",
+      "bytes": 33955,
+      "sha256": "3489419fa0a9103b70660353d6c962ccc3944eb9a20dd7ced247466631f1a988"
+    },
+    {
+      "ruta": "04-planos/LP_R02.kmz",
+      "bytes": 3497,
+      "sha256": "0de26a12cc470630d7216ec912892842a056fd94c833893f08cfae4b5a3422ce"
+    },
+    {
+      "ruta": "04-planos/Planos_LP_R02_A3.pdf",
+      "bytes": 5694258,
+      "sha256": "0e4998390b2d81c185a8b2155f6096c8cc37b8b9a7286f372a81b4d15650b60c"
+    },
+    {
+      "ruta": "04-planos/auditoria-dxf.json",
+      "bytes": 90,
+      "sha256": "5019c3e60fd4a4e88f532f3f97b91150e98cc170e5b82f470fb581d2583c24f7"
+    },
+    {
+      "ruta": "04-planos/eje_R02_UTM19S.geojson",
+      "bytes": 9951,
+      "sha256": "5728cc163b9299c6419ae4a0b44cf33925e9776d25389e946980de27a7851fe8"
+    },
+    {
+      "ruta": "04-planos/indice-planos.json",
+      "bytes": 3347,
+      "sha256": "2fe5f04f4a26861e7c6bfbe323a237029b4273da989f75765434fb44239dd41a"
+    },
+    {
+      "ruta": "04-planos/postes_R02_UTM19S.geojson",
+      "bytes": 161575,
+      "sha256": "5a271f1dd9d4486fcacbc071196408f11e1f8405ca97a48ab7efe094e913946d"
+    },
+    {
+      "ruta": "05-especificaciones/Especificaciones_y_montaje_R02.docx",
+      "bytes": 37925,
+      "sha256": "49f9b10c2524d54c3d6a5e5e605ef24196121ed725ed4e6f1facf66476925b39"
+    },
+    {
+      "ruta": "05-especificaciones/Especificaciones_y_montaje_R02.md",
+      "bytes": 2273,
+      "sha256": "7bef414bfaa8909d024cda6e300654196f051e351c24c5935f98c88e22f545c5"
+    },
+    {
+      "ruta": "05-especificaciones/Especificaciones_y_montaje_R02.pdf",
+      "bytes": 46783,
+      "sha256": "8d7ea0e716d08bf6bddcbe89e01d5c8fe0a75e93680b4ddfa1de7f4ee6eedc84"
+    },
+    {
+      "ruta": "06-presupuesto-y-cronograma/Presupuesto_y_planificacion_R02.xlsx",
+      "bytes": 9100,
+      "sha256": "888155b82901f26f638f3b2c55ceea863244ed7eb9a413abf4fa0609e3d0795c"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/CONTINUIDAD_IA.md",
+      "bytes": 5771,
+      "sha256": "532a42201f52dfc24606ac2f8240272dbc670259c850cea581b5b4201d029338"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Cuestionario_autoevaluacion.docx",
+      "bytes": 40620,
+      "sha256": "1980fdc472046203d64d200ce87955ac63997317a92554df3998c00f31a2299b"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Cuestionario_autoevaluacion.md",
+      "bytes": 7641,
+      "sha256": "ffefaca3009e4d597054c13336de5f917f7997fc7fb3bef8b6f0d4cfa4df0be3"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Cuestionario_autoevaluacion.pdf",
+      "bytes": 53050,
+      "sha256": "1f7ea0d79afaa9ffd8719bcc850c6b15207c302c18f4567168e4f327595e3f82"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Evaluacion_tecnica_LP_R02.docx",
+      "bytes": 40470,
+      "sha256": "07c67ccd75ff670d757ad3408d805c917f4e40fb56aecd13dab0cdc31d260d51"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Evaluacion_tecnica_LP_R02.md",
+      "bytes": 7072,
+      "sha256": "d66e6194b41741a29d3a04ebc6d15841d9cc786d6ff07b520f018e9006f4883a"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Evaluacion_tecnica_LP_R02.pdf",
+      "bytes": 52523,
+      "sha256": "3cb4704c04ef1ce5079a129a0784ecc067f73719b3d8feecdf600207ef33595a"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/LECTURA_REFERENCIAS.md",
+      "bytes": 3058,
+      "sha256": "e08a27005ad5ccee783472091d13645a05b87b26d2bf90d90608c9dbb4ea8853"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/OBSERVACIONES_REPOSITORIO.md",
+      "bytes": 2125,
+      "sha256": "381191118c05fbc405aa85934b6eee77ab7bfbc71caca523b686ee6f902124e0"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/PLANEACION.md",
+      "bytes": 1478,
+      "sha256": "2f134aab5d5dbe68b05357d58319a07760f2cfe5766b8cc348f9bda6b279b611"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/VALIDACION.md",
+      "bytes": 1601,
+      "sha256": "48b4d89cdda05670c4093684ec1fa4fa65c8c7a4cb6ab7014a75ff390804022d"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/anclajes_conflictos_cartograficos.csv",
+      "bytes": 17335,
+      "sha256": "b283e4626e32229dd6304793744c17792befb1f2412adfeba527a0b7d9cfc23b"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/cuestionario_autoevaluacion.csv",
+      "bytes": 7000,
+      "sha256": "d082998613c6a8d6d89003faf61f676edbe09912f50b432e40fe3a1a3f2b72ed"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/reproducibilidad.json",
+      "bytes": 522,
+      "sha256": "9d3d58c030095dfa47f2d6029ae32666a86e66291a8c9ae8a16e2fe361c1edf0"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/revision-visual-laminas.png",
+      "bytes": 317029,
+      "sha256": "02bd6657dcbdc53c2365cd6f6a0a27530d78be001c3815703ac57dbfbdea0a65"
+    },
+    {
+      "ruta": "08-recursos/LEER_RECURSOS.md",
+      "bytes": 816,
+      "sha256": "2db5bc70b0b258abb1e5dbd1db1b07ecbdefa8aaecbb64722ccab12cb42f9607"
+    },
+    {
+      "ruta": "08-recursos/codigo/README.md",
+      "bytes": 755,
+      "sha256": "87306c70cfcd47a69bc17903f6ed059239a5c85df9e909bb599310df9b500fb4"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/AGENTS.md",
+      "bytes": 2018,
+      "sha256": "8cbf0f89a97cff394508767d1ffecd8c2e19b80d2ebf06c30f81a757348c670a"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/herramientas/lineas_primarias/__init__.py",
+      "bytes": 82,
+      "sha256": "b32045ba0f07c967b7d4898dbddaa2a5967df2960cbc0e5329686b3a3d20e576"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/herramientas/lineas_primarias/mecanica.py",
+      "bytes": 1970,
+      "sha256": "84a193c2007003cc347ec53e478d9d07b6b014a1984988f60e6cb11992720659"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/herramientas/lineas_primarias/revision.py",
+      "bytes": 8957,
+      "sha256": "7a4bf3129e1423181e8f3ccd0088be661eae73cd9fe325f257f648af5920e20a"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/herramientas/lineas_primarias/tests/__init__.py",
+      "bytes": 47,
+      "sha256": "c7c9d5c40f95ae511cc14e87e2c05dea4e90450c9da1230b97629384e933f768"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/herramientas/lineas_primarias/tests/test_mecanica.py",
+      "bytes": 1076,
+      "sha256": "9b7787f92a17539a201d1d656d5ff05b32f2ef71aadba3738a2008663f651340"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/herramientas/lineas_primarias/tests/test_revision.py",
+      "bytes": 2957,
+      "sha256": "eed9d3040a2e471bbb08892f6eaefd8dfe9e3a33837a1b590446d35e7ff69412"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/AGENTS.md",
+      "bytes": 1337,
+      "sha256": "29ac87de909677bafc4bc7d15feb1fabab34f786365251824d5ba4dd5ddb044f"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r01/casas-originales.geojson",
+      "bytes": 196630,
+      "sha256": "e4a020f662842a8a5c7dae1df45c83e856653a813bcb5160516ad36846cdebbf"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r01/curvas-dem.geojson",
+      "bytes": 1108608,
+      "sha256": "2e6ecd2d58d95698fa981fda391685f159b461458e878cb0750af76f616c4bfb"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r01/referencias-osm.geojson",
+      "bytes": 385648,
+      "sha256": "9fb61985f9f6a420e0f7eb0817d778986fa090299c7c275f825900dae6461d1c"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r01/resultados.json",
+      "bytes": 1066771,
+      "sha256": "11b00b299050081deb5affbcbcb82650cee945fe6bc7b56a3fcfc1b8ee8f175e"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r02/fuentes.json",
+      "bytes": 5569,
+      "sha256": "419ce4de9068c8bf765a814fd36829aa1d4c7d549d0dfca6375688b24b05db6d"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r02/geometria-base.json",
+      "bytes": 636167,
+      "sha256": "659470296d4c1ad82b24ac678d272ac3f5ec1955182d703e88312cd9ce16cb09"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r02/parametros.json",
+      "bytes": 7414,
+      "sha256": "43261f4dc94db26af04db769f0b33f044029b2225ebcc6371387456cb55812ca"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/datos/lp-r02/registro-parametros.csv",
+      "bytes": 4762,
+      "sha256": "392ea512b98c7766de57c90446796e9a2b1178c5ad6662dddb7f3ebd17b9bb41"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/BITACORA.md",
+      "bytes": 2346,
+      "sha256": "609a81732f71b14e218dd81263dcf4b243b848965ed7896e16ca0875761d3e22"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/CONTINUIDAD_IA.md",
+      "bytes": 5771,
+      "sha256": "532a42201f52dfc24606ac2f8240272dbc670259c850cea581b5b4201d029338"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/LECTURA_REFERENCIAS.md",
+      "bytes": 3058,
+      "sha256": "e08a27005ad5ccee783472091d13645a05b87b26d2bf90d90608c9dbb4ea8853"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/OBSERVACIONES_REPOSITORIO.md",
+      "bytes": 2125,
+      "sha256": "381191118c05fbc405aa85934b6eee77ab7bfbc71caca523b686ee6f902124e0"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/PLANEACION.md",
+      "bytes": 1478,
+      "sha256": "2f134aab5d5dbe68b05357d58319a07760f2cfe5766b8cc348f9bda6b279b611"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/README_LP_R01_antecedente.md",
+      "bytes": 6197,
+      "sha256": "5e6fc9ec1c0e02fd78b7b5d296d9e12c8c44b9798bfab0c3cc72ac2ecb2cbe11"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/VALIDACION.md",
+      "bytes": 1601,
+      "sha256": "48b4d89cdda05670c4093684ec1fa4fa65c8c7a4cb6ab7014a75ff390804022d"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/entorno.json",
+      "bytes": 510,
+      "sha256": "1aa7abed9d4c0833a15800e349e0682c310d0edc125d9ed5fbda02791e9d336a"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/Biblioteca_CAD_DGE_Peru_contenido.json",
+      "bytes": 18177,
+      "sha256": "7e671c2ee63a7521c693842df209161f6d0632711a7315e1a65ba0aaff57f0d5"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/Paquete_LP_Limbani_Huancasayani_R01_contenido.json",
+      "bytes": 12928,
+      "sha256": "bcf79dc5368cba4e837a040d17817774cb3d49dc2aa08476d1358f862d26544a"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/capachica-dxf-inspeccion.json",
+      "bytes": 1242,
+      "sha256": "ebf3b2253027c3eea8293ed95c7e37a23b0eb71ad139c88f6aec93421cb9c159"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/capachica_zip/README_AUTOCAD_LP.md",
+      "bytes": 1524,
+      "sha256": "5f6e63faa9751e6f07a814f024a5d9632a272fe179caabbf2206b5c7ffb4c828"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/inventario-repositorio.csv",
+      "bytes": 167686,
+      "sha256": "5e5bd80bb91721811876bc3858849f7fbeb76eed25f35915fd222bf506101589"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/paginas-referencias.json",
+      "bytes": 759,
+      "sha256": "6619503a7b0bc0e9fe4346df6f77bfff80b5bdcb0a42c3c4157a5486e08bb368"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/planos_autocad_linea_primaria_capachica_contenido.json",
+      "bytes": 835,
+      "sha256": "45ee74767436229124155c2a15083bd28f8f6f32ac305704d940aa3ed31a8854"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/zips_revisados.json",
+      "bytes": 1136,
+      "sha256": "c067614378d8f7f76a522dc32b1ae05f46380545d34fcf7f0af4301164908908"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/reproducibilidad.json",
+      "bytes": 522,
+      "sha256": "9d3d58c030095dfa47f2d6029ae32666a86e66291a8c9ae8a16e2fe361c1edf0"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/proyecto.yaml",
+      "bytes": 1544,
+      "sha256": "a197f5b2478ea8c582e31936af3b995bb87e2c8e46e0b63db64468bbb166dc8a"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/requirements-lp-r02.txt",
+      "bytes": 232,
+      "sha256": "927a0702718f9b727db2fb1b619696fb16579b580e9770cf4daacebc07472897"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/analizar.py",
+      "bytes": 17540,
+      "sha256": "ac1ae7cbda75ca1c8220ac86956a43fffc48adacc7a140c33c09a370cb17b937"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/complementos.py",
+      "bytes": 17513,
+      "sha256": "fcd7b930c816ed113692473f859a153b13443146ebdfbf1ffe759aace43a04a0"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/construir.py",
+      "bytes": 2496,
+      "sha256": "d782bff83d8fe402652094fcc20f666f43f5dfaa7e9032f646d303ebb4ff4342"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/documentar.py",
+      "bytes": 34333,
+      "sha256": "435d8bbd5bc9368d91ee6b1b4056aa1671eac8b82f8fa1e786a5967a388e4dd1"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/planos.py",
+      "bytes": 23233,
+      "sha256": "61f8fddf0e58218525251ba3d0358811509c40687b5f2a35c8975c218a502085"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/prosa.py",
+      "bytes": 6256,
+      "sha256": "adde5888f5f759ea07c7f17b29c218a4cd4683365b24beb270e0d2c9631c6dd7"
+    },
+    {
+      "ruta": "08-recursos/codigo/fragmento-repositorio/proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/verificar.py",
+      "bytes": 7444,
+      "sha256": "10cd51a653252754630c01f6bb2afefbe45f109948c14e1c04b8b8b2ed6386be"
+    },
+    {
+      "ruta": "08-recursos/codigo/restaurar.py",
+      "bytes": 849,
+      "sha256": "1fc06f0ef8e2d21c60b503da63f654a7df79fd0ee5f6b361c3a207977ddf9e58"
+    },
+    {
+      "ruta": "08-recursos/documentacion/BITACORA.md",
+      "bytes": 2346,
+      "sha256": "609a81732f71b14e218dd81263dcf4b243b848965ed7896e16ca0875761d3e22"
+    },
+    {
+      "ruta": "08-recursos/documentacion/CONTINUIDAD_IA.md",
+      "bytes": 5771,
+      "sha256": "532a42201f52dfc24606ac2f8240272dbc670259c850cea581b5b4201d029338"
+    },
+    {
+      "ruta": "08-recursos/documentacion/LECTURA_REFERENCIAS.md",
+      "bytes": 3058,
+      "sha256": "e08a27005ad5ccee783472091d13645a05b87b26d2bf90d90608c9dbb4ea8853"
+    },
+    {
+      "ruta": "08-recursos/documentacion/OBSERVACIONES_REPOSITORIO.md",
+      "bytes": 2125,
+      "sha256": "381191118c05fbc405aa85934b6eee77ab7bfbc71caca523b686ee6f902124e0"
+    },
+    {
+      "ruta": "08-recursos/documentacion/PLANEACION.md",
+      "bytes": 1478,
+      "sha256": "2f134aab5d5dbe68b05357d58319a07760f2cfe5766b8cc348f9bda6b279b611"
+    },
+    {
+      "ruta": "08-recursos/documentacion/README_LP_R01_antecedente.md",
+      "bytes": 6197,
+      "sha256": "5e6fc9ec1c0e02fd78b7b5d296d9e12c8c44b9798bfab0c3cc72ac2ecb2cbe11"
+    },
+    {
+      "ruta": "08-recursos/documentacion/VALIDACION.md",
+      "bytes": 1601,
+      "sha256": "48b4d89cdda05670c4093684ec1fa4fa65c8c7a4cb6ab7014a75ff390804022d"
+    },
+    {
+      "ruta": "08-recursos/documentacion/entorno.json",
+      "bytes": 510,
+      "sha256": "1aa7abed9d4c0833a15800e349e0682c310d0edc125d9ed5fbda02791e9d336a"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/Biblioteca_CAD_DGE_Peru_contenido.json",
+      "bytes": 18177,
+      "sha256": "7e671c2ee63a7521c693842df209161f6d0632711a7315e1a65ba0aaff57f0d5"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/Paquete_LP_Limbani_Huancasayani_R01_contenido.json",
+      "bytes": 12928,
+      "sha256": "bcf79dc5368cba4e837a040d17817774cb3d49dc2aa08476d1358f862d26544a"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/capachica-dxf-inspeccion.json",
+      "bytes": 1242,
+      "sha256": "ebf3b2253027c3eea8293ed95c7e37a23b0eb71ad139c88f6aec93421cb9c159"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/capachica_zip/README_AUTOCAD_LP.md",
+      "bytes": 1524,
+      "sha256": "5f6e63faa9751e6f07a814f024a5d9632a272fe179caabbf2206b5c7ffb4c828"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/inventario-repositorio.csv",
+      "bytes": 167686,
+      "sha256": "5e5bd80bb91721811876bc3858849f7fbeb76eed25f35915fd222bf506101589"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/paginas-referencias.json",
+      "bytes": 759,
+      "sha256": "6619503a7b0bc0e9fe4346df6f77bfff80b5bdcb0a42c3c4157a5486e08bb368"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/planos_autocad_linea_primaria_capachica_contenido.json",
+      "bytes": 835,
+      "sha256": "45ee74767436229124155c2a15083bd28f8f6f32ac305704d940aa3ed31a8854"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/zips_revisados.json",
+      "bytes": 1136,
+      "sha256": "c067614378d8f7f76a522dc32b1ae05f46380545d34fcf7f0af4301164908908"
+    },
+    {
+      "ruta": "08-recursos/documentacion/reproducibilidad.json",
+      "bytes": 522,
+      "sha256": "9d3d58c030095dfa47f2d6029ae32666a86e66291a8c9ae8a16e2fe361c1edf0"
+    },
+    {
+      "ruta": "08-recursos/fuentes.json",
+      "bytes": 6216,
+      "sha256": "d268237503b7c325c848266a3b0cccf43770a6520ee5081079cc83d9ce6ac064"
+    },
+    {
+      "ruta": "08-recursos/geometria-base.json",
+      "bytes": 636167,
+      "sha256": "659470296d4c1ad82b24ac678d272ac3f5ec1955182d703e88312cd9ce16cb09"
+    },
+    {
+      "ruta": "08-recursos/parametros.json",
+      "bytes": 7414,
+      "sha256": "43261f4dc94db26af04db769f0b33f044029b2225ebcc6371387456cb55812ca"
+    },
+    {
+      "ruta": "08-recursos/pdf/cne_suministro_2011.pdf",
+      "bytes": 2217275,
+      "sha256": "930e88a3b09d7317b605ce857ee18152783496d864f8c28712854a424a71ca2c"
+    },
+    {
+      "ruta": "08-recursos/pdf/dia-hospital_lircay.pdf",
+      "bytes": 40011385,
+      "sha256": "a98b82f19dabb57184066fd12a39d8bc646f00531a4d210f912cdcf57a58bf32"
+    },
+    {
+      "ruta": "08-recursos/pdf/dia_choclococha.pdf",
+      "bytes": 3927409,
+      "sha256": "9aa6a0c3475591d52c35dfb920937bb281c012562361ba03eae4cc55537f70e8"
+    },
+    {
+      "ruta": "08-recursos/pdf/dia_tinyacclla_pachachaca.pdf",
+      "bytes": 698698,
+      "sha256": "bc86da76a3940b33c232d31cfe887bf3a9d22c8cbf5cd9f750cb92bd4fab81fe"
+    },
+    {
+      "ruta": "08-recursos/pdf/plano_trazo_tablachaca.pdf",
+      "bytes": 8016661,
+      "sha256": "bd0f2bb142dd0062539fb4e1eef7f79a12a045a86c6bb7fcb60541b6811644a5"
+    },
+    {
+      "ruta": "08-recursos/pdf/poste_seace_13_400.pdf",
+      "bytes": 209944,
+      "sha256": "d62fdec484c421d8001ac2caa1da1b8a941791c1ccfbc1d7863c9e1424ab87a8"
+    },
+    {
+      "ruta": "08-recursos/pdf/rd018_2003.pdf",
+      "bytes": 400996,
+      "sha256": "934da5fe6351b9cc5a5f8868a938f046b872d57b8e96c9baebb6508fffb809b8"
+    },
+    {
+      "ruta": "08-recursos/pdf/rd023-2003-EM-DGE.pdf",
+      "bytes": 3363313,
+      "sha256": "3ac796fdeb8835e7ca5df6a9911fd82a5186555fc1ad803a0827832742a61655"
+    },
+    {
+      "ruta": "08-recursos/pdf/rd024-2003-EM.pdf",
+      "bytes": 23748563,
+      "sha256": "c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8"
+    },
+    {
+      "ruta": "08-recursos/pdf/seace_carhuaz_contrato_091_2024.pdf",
+      "bytes": 511644,
+      "sha256": "cd71ff62036fa1dd0870d82fd2c8bcae9efc8bcc3034f70b545cd253f03525e7"
+    },
+    {
+      "ruta": "08-recursos/pdf/seace_ubinas_contrato_023_2021.pdf",
+      "bytes": 891976,
+      "sha256": "889f5ad743a3761e2a6c68524bdcf32bf8cea70fcb40fc0c694d9cc510fba835"
+    },
+    {
+      "ruta": "08-recursos/pdf/tdr_electropuno_lp.pdf",
+      "bytes": 1223145,
+      "sha256": "50ef37491f22fbbcd66a23af68156c622850aa3e776cb9d59c1e79901507afdd"
+    },
+    {
+      "ruta": "08-recursos/registro-parametros.csv",
+      "bytes": 4762,
+      "sha256": "392ea512b98c7766de57c90446796e9a2b1178c5ad6662dddb7f3ebd17b9bb41"
+    },
+    {
+      "ruta": "LEER_PRIMERO.md",
+      "bytes": 1062,
+      "sha256": "72597060426f65b411ff6f083de749b01f0ee1561e3fe562374374e949652bec"
+    },
+    {
+      "ruta": "validacion.json",
+      "bytes": 4028,
+      "sha256": "963e32053d6da720144b0b5b8fa16e193d11d09248f29496a4771cd8b6b4cadc"
+    }
+  ]
+}
