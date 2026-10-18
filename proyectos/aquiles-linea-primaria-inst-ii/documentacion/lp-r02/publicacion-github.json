@@ -1,0 +1,17 @@
+{
+  "registro_utc": "2026-10-18T23:55:23Z",
+  "repositorio": "https://github.com/gaelrenzo/instalacion-electricas",
+  "commit_contenido_tecnico": "67a0bada7bc7831e8aef54b762512e3126eb0ac1",
+  "arbol_git_local_y_remoto": "3e8bdf811c99be690bfd5af5114b21788078d128",
+  "referencias_verificadas_en_publicacion_inicial": [
+    "refs/heads/main",
+    "refs/heads/revision/lp-r02-auditoria-2026-10-18"
+  ],
+  "envio": "git push --atomic; sin force",
+  "comprobacion": "git ls-remote y objeto de commit consultado en GitHub API",
+  "cuenta_cli": "Aquiles-ryp360",
+  "fuentes_recuperadas_preservadas": 81,
+  "archivos_manifest_verificados": 151,
+  "zip_sha256": "242543fa470a108c4bf11170994ecd6d1bee2611f39075c63fe48a9b3c641760",
+  "aprobacion_ingenieria": false
+}

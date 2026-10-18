@@ -58,3 +58,8 @@ Fuentes de sistema requeridas: DejaVu Sans. En Debian, si faltan, instalar el pa
 ## Continuación desde otro equipo
 
 Los enlaces activos del manifiesto apuntan a `revisiones/lp-r02`, que se versiona con los PDF, XLSX, DXF y recursos listos para abrir. `build/` sigue reservado a reconstrucciones. El paquete congelado conserva el contexto de su generación; la documentación viva es la de este proyecto. Las fuentes recuperadas posteriormente del DVD UNAP y Aricato–Phara se integran sin modificar sus bytes: ver `FUENTES_RECUPERADAS_GITHUB.md` y `fuentes-recuperadas-preservar.json`. No afirmar que estos nuevos documentos ya se aplicaron al cálculo R02.
+
+
+## Publicación en GitHub
+
+El contenido técnico se publicó y verificó en `main` y `revision/lp-r02-auditoria-2026-10-18`, commit `67a0bada7bc7831e8aef54b762512e3126eb0ac1`. La sesión GitHub CLI quedó autenticada con escritura. Consultar `SINCRONIZACION_PC.md` y `publicacion-github.json` para la evidencia de sincronización. La publicación conserva el estado académico con observaciones; no añade aprobación de ingeniería.

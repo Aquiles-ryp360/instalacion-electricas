@@ -15,3 +15,6 @@
 
 12. Se corrigieron desbordes de notas ydensidad de rótulos tras revisar renders. Se añadieron curvasDEM heredadas ygrillaUTM. Se detectó el truncamiento del tamañoA3 enelbackendPDF y se implementó adaptador de tamaño/coordenadas exactos. Los19PDFse renderizaron yverificaron tras lacorrección.
 13. Se incluyen código, insumos yrestaurador enelpaquete para queotraIApueda reconstruir sin datos privados ni archivos de Windows.
+
+14. Por solicitud del usuario, se incorporaron los commits remotos de recuperación hasta `85fcb7e`, preservando 81 archivos originales del DVD UNAP, Aricato–Phara y otras guías. Se versionó la copia íntegra de revisión y su ZIP para abrir en PC sin reconstrucción.
+15. Tras resolver la autenticación con GitHub CLI, se envió el commit técnico `67a0bad` a `main` y a la rama de revisión mediante envío atómico sin forzar. Ambas referencias remotas y el árbol de archivos de GitHub coincidieron con el local. Se documentó la publicación y se mantuvieron intactos el paquete, las fuentes recuperadas y las observaciones técnicas.
