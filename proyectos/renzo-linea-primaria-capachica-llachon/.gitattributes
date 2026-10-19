@@ -1,4 +1,5 @@
-# La entrega usa SHA-256 de cada archivo; conservar sus bytes al extraerla en Windows.
-ENTREGA_FINAL_CAPACHICA_LLACHON_REV4/** -text whitespace=cr-at-eol
-ENTREGA_ACADEMICA_REV5/** -text whitespace=cr-at-eol
+# Las entregas usan SHA-256 de cada archivo; conservar sus bytes al extraerlas en Windows.
+archivo/rev1_a_rev5/ENTREGA_FINAL_CAPACHICA_LLACHON_REV4/** -text whitespace=cr-at-eol
+archivo/rev1_a_rev5/ENTREGA_ACADEMICA_REV5/** -text whitespace=cr-at-eol
+archivo/rev1_a_rev5/expediente/** -text whitespace=cr-at-eol
 expediente/** -text whitespace=cr-at-eol

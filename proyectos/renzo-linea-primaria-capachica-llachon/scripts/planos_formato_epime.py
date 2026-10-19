@@ -31,9 +31,10 @@ ROOT = Path(__file__).resolve().parents[1]
 VERTICES = ROOT / "datos" / "vertices_corredor_manual.csv"
 ROADS = ROOT / "sources" / "osm_roads.json"
 CRUCES = ROOT / "datos" / "cruces_viales_rev3.csv"
-OUT_CSV = ROOT / "datos" / "estructuras_propuesta_academica_rev6.csv"
-OUT_DXF = ROOT / "plans" / "LP_REV6.dxf"
-OUT_PDF = ROOT / "plans" / "LP_REV6.pdf"
+REV6 = ROOT / "archivo" / "rev6_planos_gabinete"   # Rev. 6 superada por la Rev. 7 (planos_motor_epime.py)
+OUT_CSV = REV6 / "estructuras_propuesta_academica_rev6.csv"
+OUT_DXF = REV6 / "LP_REV6.dxf"
+OUT_PDF = REV6 / "LP_REV6.pdf"
 
 # Datos del cajetín: editar aquí.
 CAJETIN = {

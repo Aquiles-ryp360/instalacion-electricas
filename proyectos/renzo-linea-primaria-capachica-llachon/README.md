@@ -1,130 +1,43 @@
-# Capachica–Llachón: anteproyecto y planos AutoCAD
+# Línea primaria 22,9 kV Capachica–Llachón
 
-> **Expediente técnico completo (11 volúmenes, 17/17 verificaciones CONFORME, VR S/ 1 359 760,11):** [ZIP](expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON.zip) · [resumen y supuestos pendientes](documentacion/EXPEDIENTE_LP229.md).
+Línea troncal trifásica en 22,9 kV de 13,89 km, con 122 estructuras, desde la red existente de Capachica hasta Llachón (Puno).
+Proyecto académico, EPIME – UNA Puno. **Revisión vigente: Rev. 7.**
 
-> **Planos Rev. 7, ingeniería del motor LP 22,9 kV + formato EPIME (23 láminas A3):** [PDF](plans/LP_REV7.pdf) · editables [DWG](plans/LP_REV7.dwg) / [DXF](plans/LP_REV7.dxf) · [14 láminas de armados](plans/armados_lp229/) (DWG/DXF/PDF) · [explicación](documentacion/PLANOS_REV7_MOTOR_LP229.md) · **[guía de uso en AutoCAD](documentacion/GUIA_AUTOCAD_EDITABLES.md)**.
-> 122 estructuras con plantillado sobre DEM (motor de D. H. Ccora), plantas 1:5000 y 9 hojas de perfil y planimetría con conductor a flecha máxima y distancia de seguridad.
+## Qué abrir
 
-> **Planos Rev. 6, formato EPIME (13 láminas A3):** [PDF](plans/LP_REV6.pdf) · editables [DWG](plans/LP_REV6.dwg) / [DXF](plans/LP_REV6.dxf) · [estructuras CSV](datos/estructuras_propuesta_academica_rev6.csv) · [formato e hipótesis](documentacion/FORMATO_PLANOS_EPIME_REV6.md).
-> Siguen la forma de dibujo del proyecto de curso Conima–Tilali: cajetín EPIME, plantas 1:5000 con 168 postes numerados, cuadro por poste, vanos, retenidas, PAT, leyenda con cantidades, unifilar y cuadro de coordenadas. La distribución de postes es una **propuesta académica por replantear**.
+| Necesito… | Archivo |
+|---|---|
+| El expediente técnico completo (11 volúmenes) | [`expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON.zip`](expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON.zip) · [resumen y supuestos](documentacion/EXPEDIENTE_LP229.md) |
+| Los planos en AutoCAD | [`plans/LP_REV7.dwg`](plans/LP_REV7.dwg) (23 láminas A3) · [guía de AutoCAD](documentacion/GUIA_AUTOCAD_EDITABLES.md) |
+| Los planos en PDF | [`plans/LP_REV7.pdf`](plans/LP_REV7.pdf) |
+| Las láminas de armados | [`plans/armados_lp229/`](plans/armados_lp229/) (14 láminas, DWG/DXF/PDF) |
+| Cómo se hicieron los planos | [PLANOS_REV7_MOTOR_LP229.md](documentacion/PLANOS_REV7_MOTOR_LP229.md) · [formato EPIME](documentacion/FORMATO_PLANOS_EPIME_REV6.md) |
+| Versiones anteriores (Rev. 1 a Rev. 6) | [`archivo/`](archivo/README.md) |
 
-> **Expediente Técnico Compilado Rev. 5:** [Abrir Expediente Compilado PDF (19 páginas)](EXPEDIENTE_TECNICO_CAPACHICA_LLACHON_REV5_COMPILADO.pdf) · [Copia en expediente/](expediente/expediente_linea_primaria_capachica_llachon_compilado.pdf).  
-> Integra memoria descriptiva, criterios normativos DGE/CNE, memorias de cálculo eléctrico y mecánico, cuadro de estructuras (40 postes PC GIS, 27 candidatos PN, 44 cruces CV), metrados y las **11 láminas de planos A3** completas.
->
-> **Paquete de entrega Rev. 5:** [Ver entrega académica Rev. 5](ENTREGA_ACADEMICA_REV5/README.md).
+Resultados: valor referencial **S/ 1 359 760,11**, máxima demanda de 143 kW al año 2047, caída de tensión de 0,29 %. **17 de 17 verificaciones CONFORME.**
+Antes de presentarlo como estudio definitivo hay que reemplazar los supuestos: factibilidad de Electro Puno, población, topografía, resistividad y suelos.
+La lista está en [EXPEDIENTE_LP229.md](documentacion/EXPEDIENTE_LP229.md).
 
-## Planos de Ingeniería del Corredor (11 Láminas A3)
+## Carpetas
 
-| Lámina | Título / Contenido del Plano | Vista PDF (A3) | AutoCAD Editable (DXF) | Estructuras / Postes Mostrados |
-|---|---|---|---|---|
-| **CL-01** | Ubicación general y comparación de ejes | [CL-01 PDF](plans/CL-01_REV4.pdf) | [CL-01 DXF](plans/CL-01_REV4.dxf) | Eje KML (13.94 km) vs Eje GIS (13.83 km) |
-| **CL-02** | Planta por segmentos del corredor con alertas | [CL-02 PDF](plans/CL-02_REV4.pdf) | [CL-02 DXF](plans/CL-02_REV4.dxf) | 4 paneles con los 40 postes PC y 27 sitios PN |
-| **CL-03** | Perfil longitudinal referencial | [CL-03 PDF](plans/CL-03_REV4.pdf) | [CL-03 DXF](plans/CL-03_REV4.dxf) | Criterios topográficos y restricciones |
-| **CL-04** | Cuadro maestro de estructuras y vértices | [CL-04 PDF](plans/CL-04_REV4.pdf) | [CL-04 DXF](plans/CL-04_REV4.dxf) | Tabla de 40 postes PC (coordenadas UTM y PK) |
-| **CL-05** | Armados normalizados DGE, retenidas y PAT | [CL-05 PDF](plans/CL-05_REV4.pdf) | [CL-05 DXF](plans/CL-05_REV4.dxf) | Armados PS-1, PR-1, PA-1, SAB-1, R-1 y PAT-3 |
-| **CL-06** | Conciliación cartográfica KML vs GIS | [CL-06 PDF](plans/CL-06_REV5.pdf) | [CL-06 DXF](plans/CL-06_REV5.dxf) | Análisis de continuidad y 3 brechas |
-| **CL-07-S1** | **Planta georreferenciada Segmento 1** | [CL-07-S1 PDF](plans/CL-07-S1_REV5.pdf) | [CL-07-S1 DXF](plans/CL-07-S1_REV5.dxf) | **Postes GIS PC-01 a PC-04, sitios PN y cruces** |
-| **CL-07-S2** | **Planta georreferenciada Segmento 2** | [CL-07-S2 PDF](plans/CL-07-S2_REV5.pdf) | [CL-07-S2 DXF](plans/CL-07-S2_REV5.dxf) | **Postes GIS PC-05 a PC-20, sitios PN y cruces** |
-| **CL-07-S3** | **Planta georreferenciada Segmento 3** | [CL-07-S3 PDF](plans/CL-07-S3_REV5.pdf) | [CL-07-S3 DXF](plans/CL-07-S3_REV5.dxf) | **Postes GIS PC-21 a PC-28, sitios PN y cruces** |
-| **CL-07-S4** | **Planta georreferenciada Segmento 4** | [CL-07-S4 PDF](plans/CL-07-S4_REV5.pdf) | [CL-07-S4 DXF](plans/CL-07-S4_REV5.dxf) | **Postes GIS PC-29 a PC-40, sitios PN y cruces** |
-| **CL-08** | Perfil topográfico referencial SRTM 30m | [CL-08 PDF](plans/CL-08_REV5.pdf) | [CL-08 DXF](plans/CL-08_REV5.dxf) | 57 puntos SRTM cada 250 m sobre eje GIS |
-
-Para recompilar el expediente técnico completo con todos sus planos:
-```powershell
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/compilar_expediente_completo.py
+```text
+datos/            entradas: eje KML (vertices_corredor_manual.csv), cruces viales y motor_lp229/ (entrada y resultados del motor)
+sources/          fuentes originales sin modificar (KML, GISEM, OSM, SRTM)
+scripts/          planos_motor_epime.py (Rev. 7) y planos_formato_epime.py (formato EPIME y funciones comunes)
+tests/            pruebas de los dos scripts
+plans/            planos vigentes Rev. 7 y armados
+expediente/       expediente técnico completo (ZIP)
+documentacion/    guía de AutoCAD, explicación de los planos y del expediente
+archivo/          Rev. 1 a Rev. 6 (no usar como entrada vigente)
 ```
 
-## Plano de planta con imagen satelital georreferenciada
-
-[`scripts/generar_planta_satelital.py`](scripts/generar_planta_satelital.py) genera una lámina A3 con imagen satelital ESRI World Imagery (~2.3 m/px en zoom 16) reproyectada a UTM 19S, sobre la cual inserta las 40 PC (referencias GIS GISEM) como bloques `POSTE_CAC_PLANTA`, más 27 PN como círculos y 44 CV como cruces OSM. Las PC/PN/CV son referencias de gabinete pendientes de verificación en campo; **no** son postes aprobados. El expediente PDF integra la lámina satelital y la lámina simbólica de planta.
-
-Salidas en `build/renzo-linea-primaria-capachica-llachon/planta_satelital/` (sin sobrescritura): DXF A3 georreferenciado con IMAGE + INSERTs, PNG + PGW/PRJ del mosaico, JPEG de planta, dos PDFs A3 y expediente PDF de 10 páginas, más `reporte_planta_satelital.json` con SHA-256 y conteos. Requiere `pyproj`, `Pillow`, `numpy`, `ezdxf`, `pypdf`, `reportlab`.
+## Regenerar los planos
 
 ```powershell
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_planta_satelital.py
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_planta_satelital.py --zoom 15 --salida <dir>
-```
-
-Las teselas JPEG se cachean en `tiles_satelitales/` con manifiesto SHA-256; re-ejecuciones reutilizan la caché sin volver a descargar. Pruebas offline: `tests/test_planta_satelital.py`.
-
-## Revisión activa 3: conciliación y preparación del diseño
-
-La [conciliación de ejes](documentacion/CONCILIACION_CORREDORES_REV3.md) distingue la diferencia publicada de **105,482 m** del KML frente al GIS, las tres brechas que suman **65,077 m** y los **40,405 m** que resultan solo de restar cifras redondeadas. Esa resta no identifica un tramo faltante. Las fuentes originales siguen inalteradas.
-
-Los [27 sitios PN para replanteo](datos/candidatos_nuevos_replanteo_rev3.csv) son candidatos geométricos a evaluar para apoyos nuevos; están separados de las 40 estructuras GISEM PC del inventario Rev. 2. Su [método de selección](documentacion/METODOLOGIA_UBICACION_POSTES_REV3.md) y [registro de procedencia y estado](datos/registro_datos_rev3.json) impiden tratarlos como postes aprobados.
-
-Se prepararon, **sin enviar**, la [solicitud a Electro Puno](documentacion/SOLICITUD_TECNICA_ELECTRO_PUNO_REV3.md), el [plan de campo y cruces](documentacion/PLAN_CAMPO_Y_CRUCES_REV3.md) con [44 indicios viales georreferenciados](datos/cruces_viales_rev3.csv), el [flujo de cálculos](documentacion/FLUJO_CALCULOS_REV3.md), la [auditoría de los cinco planos](documentacion/AUDITORIA_PLANOS_REV3.md) y los [bloqueos y criterios de avance](documentacion/BLOQUEOS_Y_PUERTAS_REV3.md). Los DXF/PDF Rev. 2 permanecen como antecedentes para corregir tras topografía y datos del operador.
-
-Desde la raíz del repositorio, con el entorno virtual instalado según la sección inferior:
-
-~~~powershell
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/reproducir_rev3.py --archive-existing
-python -m pytest proyectos/renzo-linea-primaria-capachica-llachon/tests -q
-~~~
-
-La opción --archive-existing respalda las salidas Rev. 3 ya incluidas en el repositorio bajo build/ antes de regenerarlas. Si no existen salidas, puede omitirse. Las pruebas verifican datos y software, **no** la ingeniería de construcción.
-
-## Colocación automática de postes (espera CSV aprobado)
-
-[`scripts/colocar_postes_automatico.py`](scripts/colocar_postes_automatico.py) coloca bloques reutilizables de poste, PAT, retenida y SED sobre el corredor: modelo DXF georreferenciado en metros UTM 19S más lámina A3, y reporte JSON con SHA-256 del CSV fuente. Lee `datos/estructuras_aprobadas.csv`; el esquema está en [`datos/estructuras_aprobadas_plantilla.csv`](datos/estructuras_aprobadas_plantilla.csv). Las PC/PN de gabinete **no** son insumo: solo acepta la lista aprobada en campo y por Electro Puno. Salidas en `build/renzo-linea-primaria-capachica-llachon/colocacion_postes/`, sin sobrescritura. Pruebas: `tests/test_colocar_postes_automatico.py`.
-
-```powershell
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/colocar_postes_automatico.py
-```
-
-## Revisión activa 2: corredor manual KML
-
-La [auditoría KML Rev. 2](documentacion/AUDITORIA_KML_REV2.md) es la referencia activa del corredor manual. Calcula **13 939,512 m UTM** en cuatro segmentos separados por brechas de 14,133, 43,965 y 6,979 m. Difiere **105,482 m** de la longitud GIS anterior. El punto de conexión informado está a 0,561 m del comienzo del KML y coincide con un tramo GISEM, pero su aprobación eléctrica está pendiente.
-
-La [tabla de 40 puntos de inspección](datos/ubicaciones_postes_preliminares.csv) registra estructuras GIS situadas a 25 m o menos del KML. No son postes nuevos ni una solución de vanos aprobada. Las [estaciones](datos/estaciones_corredor.csv), [vértices](datos/vertices_corredor_manual.csv), [puntos críticos](datos/cruces_y_puntos_criticos.csv), [cálculos condicionados](documentacion/CALCULOS_Y_PENDIENTES_REV2.md) y [matriz normativa](documentacion/MATRIZ_NORMATIVA_REV2.md) explican el alcance.
-
-Planos de revisión: [CL-01](plans/CL-01_REV2_MANUAL.pdf), [CL-02](plans/CL-02_REV2_MANUAL.pdf), [CL-03](plans/CL-03_REV2_MANUAL.pdf), [CL-04](plans/CL-04_REV2_MANUAL.pdf) y [CL-05](plans/CL-05_REV2_MANUAL.pdf). Cada uno tiene DXF y PNG del mismo nombre base. Los archivos Rev. 1 se conservan más abajo como antecedente del **corredor GIS distinto**.
-
-Reproducir en Windows desde la raíz del repositorio, en un entorno virtual:
-
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r proyectos/renzo-linea-primaria-capachica-llachon/requirements.txt
-python -m pip install lxml shapely matplotlib
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/auditar_corredor_manual.py
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_revision_manual.py
+python proyectos/renzo-linea-primaria-capachica-llachon/scripts/planos_motor_epime.py --autocad
 python -m pytest proyectos/renzo-linea-primaria-capachica-llachon/tests -q
 ```
 
-Los generadores rechazan sobrescrituras. Antes de regenerar, archive explícitamente los CSV, JSON y planos `*_REV2_MANUAL.*` existentes; no modifique `sources/`. [Control de calidad y pendientes](documentacion/CALCULOS_Y_PENDIENTES_REV2.md). El expediente sigue siendo **preliminar y no apto para construcción**.
-
-Para ejecutar y verificar todo en una sola orden desde la raíz del repositorio: `python proyectos/renzo-linea-primaria-capachica-llachon/scripts/reproducir_rev2.py --archive-existing`. La opción archiva únicamente las salidas Rev. 2 existentes bajo `build/renzo-linea-primaria-capachica-llachon/archive_rev2/` antes de regenerarlas.
-
-**Este es el estudio de Capachica a Llachón.** Todos los datos y planos activos de este proyecto corresponden a ese corredor.
-
-**Expediente integrado Rev. 1:** [abrir capítulos editables](expediente/README.md). El [informe de auditoría correctiva](documentacion/AUDITORIA_REV0.md) explica los hallazgos previos. La copia PDF y el ZIP **Rev. 1** para revisión están en `build/renzo-linea-primaria-capachica-llachon/` de esta máquina. Incluyen los dos planos A3; mantienen visible que faltan datos esenciales para ingeniería de construcción.
-
-## Abrir los dos planos en AutoCAD
-
-| Lámina | DXF con presentación A3 para AutoCAD | Vista del DXF | PDF cartográfico complementario |
-|---|---|---|---|
-| **CL-01 · Ubicación y corredor** | [CL-01 A3 DXF](plans/CL-01_A3_AUTOCAD_PRELIMINAR.dxf) | [PDF renderizado](plans/CL-01_A3_AUTOCAD_PRELIMINAR_vista.pdf) · [PNG](plans/CL-01_A3_AUTOCAD_PRELIMINAR_vista.png) | [PDF de ubicación](plans/CL-01_ubicacion_corredor.pdf) |
-| **CL-02 · Perfil referencial del terreno** | [CL-02 A3 DXF](plans/CL-02_A3_AUTOCAD_PRELIMINAR.dxf) | [PDF renderizado](plans/CL-02_A3_AUTOCAD_PRELIMINAR_vista.pdf) · [PNG](plans/CL-02_A3_AUTOCAD_PRELIMINAR_vista.png) | [PDF de perfil](plans/CL-02_perfil_referencial.pdf) |
-
-En AutoCAD, abre la pestaña **`CL-01_A3`** o **`CL-02_A3`** y selecciona A3 horizontal, escala de papel 1:1. La geometría en modelo está en metros. También se conservan los [DXF iniciales georreferenciados](plans/CL-01_corredor_utm19s.dxf) y [del perfil en metros](plans/CL-02_perfil_srtm_metros.dxf).
-
-El origen de referencia es la estructura GIS `NMT000367723` próxima a Capachica y el final elegido es `NMT000027963` próximo a Llachón. La longitud calculada sobre el corredor GIS es **13,834 km**. Las coordenadas, los 27 tramos utilizados, las fuentes y las limitaciones están en el [planteamiento técnico](PLANTEAMIENTO_CAPACHICA_LLACHON.md), la [memoria del anteproyecto](documentacion/MEMORIA_ANTEPROYECTO.md) y el [control de calidad](documentacion/CONTROL_CALIDAD.md).
-
-**Estado: borrador cartográfico.** La ruta azul del CL-01 sigue una red de media tensión publicada; no representa una línea nueva aprobada. El CL-02 usa terreno SRTM30m y no sirve para definir postes, flechas ni distancias de seguridad. Falta validar en campo y con Electro Puno el punto de conexión, la tensión, la capacidad y la necesidad de obra.
-
-Las fuentes originales están en [`sources/`](sources/), con URL, fecha y SHA-256 en [`manifest.json`](sources/manifest.json). La geometría derivada está en [`route.json`](derived/route.json). El [cuadro GIS de tramos](datos/cuadro_tramos_gisem.csv) y el [reporte CAD](datos/reporte_generacion_cad.json) permiten comprobar el origen de las láminas. Los parámetros de diseño aún no validados se registran como `null` en [parametros_diseno_pendientes.json](datos/parametros_diseno_pendientes.json).
-
-Los DXF A3 fueron generados por [`scripts/generar_anteproyecto_cad.py`](scripts/generar_anteproyecto_cad.py), reabiertos con `ezdxf` y renderizados por [`scripts/render_verificacion_cad.py`](scripts/render_verificacion_cad.py). Los scripts no sobrescriben las salidas existentes. Para reproducirlos, prepara una copia del proyecto sin los archivos de salida y ejecuta desde la raíz del repositorio:
-
-```powershell
-python -m pip install -r proyectos/renzo-linea-primaria-capachica-llachon/requirements.txt
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_anteproyecto_cad.py
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/render_verificacion_cad.py
-python -m pytest proyectos/renzo-linea-primaria-capachica-llachon/tests -q
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/compilar_expediente.py
-```
-
-El compilador genera la Rev. 1 y rechaza la sobrescritura de una salida existente. Los paquetes anteriores se conservan como historial local; la revisión activa es la indicada en `proyecto.yaml`.
-
-La extracción cartográfica inicial se hizo en el repositorio local `workspace/seace-cad-intelligence/studies/capachica_llachon`; sus archivos fuente y derivados necesarios están copiados aquí. **AutoCAD no se ejecutó en esta máquina**: el control realizado fue apertura y auditoría estructural con `ezdxf` más render de las presentaciones mediante su motor de dibujo.
+`--autocad` usa AutoCAD 2027 para generar el DWG y el PDF. Sin esa opción solo sale el DXF y un PDF de vista previa.
+La ingeniería (estructuras, perfil y flechas) viene del motor [expediente-lp-22.9kv](https://github.com/dilmar231gabriel-ops/expediente-lp-22.9kv), de D. H. Ccora.
+Su entrada está en `datos/motor_lp229/entrada/proyecto.yaml`.
