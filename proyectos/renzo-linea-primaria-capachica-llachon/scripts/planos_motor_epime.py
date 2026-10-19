@@ -1,4 +1,4 @@
-"""Planos Rev. 7: ingeniería del motor «expediente-lp-22.9kv» + formato EPIME.
+"""Planos Rev. 8: ingeniería del motor «expediente-lp-22.9kv» + formato EPIME.
 
 El motor de D. H. Ccora (github.com/dilmar231gabriel-ops/expediente-lp-22.9kv)
 calcula sobre el DEM Copernicus el plantillado, los armados, los postes, las
@@ -9,7 +9,8 @@ Este script los dibuja con el formato de lámina EPIME de la Rev. 6 y agrega:
       conductor a flecha máxima, distancia de seguridad, tabla de estructuras
       bajo cada poste y franja de planimetría con vías y agua de OSM
 
-Salidas: plans/LP_REV7.dxf (modelo UTM 19S + presentaciones A3), .dwg y .pdf.
+Rev. 8: conductor AAAC 35 mm² (óptimo económico), revisor en el cajetín.
+Salidas: plans/LP_REV8.dxf (modelo UTM 19S + presentaciones A3), .dwg y .pdf.
 """
 from __future__ import annotations
 
@@ -27,8 +28,8 @@ import planos_formato_epime as pe
 
 ROOT = Path(__file__).resolve().parents[1]
 MOTOR = ROOT / "datos" / "motor_lp229"
-OUT_DXF = ROOT / "plans" / "LP_REV7.dxf"
-OUT_PDF = ROOT / "plans" / "LP_REV7.pdf"
+OUT_DXF = ROOT / "plans" / "LP_REV8.dxf"
+OUT_PDF = ROOT / "plans" / "LP_REV8.pdf"
 
 ESC_H = 5000                     # perfil: escala horizontal
 XL, XR = 45.0, 400.0             # zona de dibujo del perfil (mm)
@@ -99,7 +100,8 @@ def cargar_motor(d: Path = MOTOR) -> dict:
             "vano_anterior_m": f"{float(r['vano_atras_m'] or 0):.1f}",
             "cota_m": float(r["cota_m"]), "poste": r["poste"],
         })
-    return {"filas": filas, "troncal": LineString(meta["vertices"]), "perfil": np.array(prof),
+    seccion = json.loads((res / "resultados.json").read_text(encoding="utf-8"))["electrico"]["seccion"]
+    return {"filas": filas, "troncal": LineString(meta["vertices"]), "perfil": np.array(prof), "seccion": seccion,
             "par": np.array(par), "cruces": cruces, "osm": d / "entrada" / "datos" / "osm_corredor.geojson"}
 
 
@@ -255,11 +257,11 @@ def dibujar_pp(lay, mot, i0, i1, osm):
     return esc_v
 
 
-def notas_pp(lay):
+def notas_pp(lay, seccion):
     lineas = [
         "NOTAS",
         "1. Terreno: DEM Copernicus GLO-30 (30 m), no apto para replanteo; verificar con topografia.",
-        "2. Conductor AAAC 70 mm2 a flecha maxima (H6: 40 C + 10 C creep) segun calculo mecanico del motor.",
+        f"2. Conductor AAAC {seccion} mm2 a flecha maxima (H6: 40 C + 10 C creep) segun calculo mecanico del motor.",
         f"3. Linea discontinua: distancia minima al terreno {DIST_GENERAL:.1f} m ({DIST_CRUCE:.1f} m en cruces de via), CNE-S 2011.",
         "4. Estructuras por plantillado automatico (motor expediente-lp-22.9kv, D. H. Ccora).",
         "5. Planimetria: eje rectificado desarrollado; vias y agua de OpenStreetMap.",
@@ -272,8 +274,8 @@ def notas_pp(lay):
 def generar(out_dxf: Path = OUT_DXF, out_pdf: Path | None = OUT_PDF, motor: Path = MOTOR) -> dict:
     mot = cargar_motor(motor)
     filas = mot["filas"]
-    pe.CAJETIN["revision"] = "REV. 7"
-    pe.CONDUCTOR = "AAAC 3x70 mm2"
+    pe.CAJETIN["revision"] = "REV. 8"
+    pe.CONDUCTOR = f"AAAC 3x{mot['seccion']} mm2"
     pe.TENSION = "22.9 kV(*)"
     pe.DESCRIPCION.update(DESCRIPCION_MOTOR)
     pe.LEYENDA.update({"retenida": "RETENIDA INCLINADA RI", "pat": "PUESTA A TIERRA PAT-1 / PAT-2",
@@ -294,7 +296,7 @@ def generar(out_dxf: Path = OUT_DXF, out_pdf: Path | None = OUT_PDF, motor: Path
             lay = nueva(nombre)
             esc_v = dibujar_pp(lay, mot, i0, i1, osm)
             escalas.append(esc_v)
-            notas_pp(lay)
+            notas_pp(lay, mot["seccion"])
             s0, s1 = float(filas[i0]["progresiva_m"]), float(filas[i1]["progresiva_m"])
             pe.cajetin(lay, f"PERFIL Y PLANIMETRIA  KM {s0 / 1000:.3f} - {s1 / 1000:.3f}", nombre,
                        f"{primero + k:02d}/{n_total:02d}", f"H1:{ESC_H} V1:{esc_v}")
@@ -308,11 +310,15 @@ def generar(out_dxf: Path = OUT_DXF, out_pdf: Path | None = OUT_PDF, motor: Path
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--autocad", action="store_true", help="DWG + PDF con accoreconsole")
+    ap.add_argument("--autocad", action="store_true", help="DWG + PDF con accoreconsole (si AutoCAD está instalado)")
+    ap.add_argument("--dwg", action="store_true", help="DWG con AutoCAD o, si no está, con ODA File Converter")
     a = ap.parse_args()
     print(json.dumps(generar(out_pdf=None if a.autocad else OUT_PDF), ensure_ascii=False))
     if a.autocad:
         pe.exportar_autocad(OUT_DXF)
+    elif a.dwg:
+        pe.dxf_a_dwg(OUT_DXF)
+    if a.autocad or a.dwg:
         for dxf in sorted((OUT_DXF.parent / "armados_lp229").glob("*.dxf")):
             pe.dxf_a_dwg(dxf)
 

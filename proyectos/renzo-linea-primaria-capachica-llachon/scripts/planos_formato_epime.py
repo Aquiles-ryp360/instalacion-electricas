@@ -43,8 +43,8 @@ CAJETIN = {
     "proyecto": "LINEA PRIMARIA 22.9 kV(*) CAPACHICA - LLACHON",
     "ubicacion": "DIST. CAPACHICA - PROV. PUNO - REG. PUNO",
     "autor": "RENZO GABRIEL MAMANI GALINDO",
-    "revisado": "",
-    "fecha": "18/10/2026",
+    "revisado": "LEONIDAS VILCA CALLATA",
+    "fecha": "19/10/2026",
     "revision": "REV. 6",
 }
 # Hipótesis académicas (marcadas con (*) en planos).
@@ -560,10 +560,26 @@ def exportar_pdf(doc, path: Path):
 
 
 ACCORE = Path(r"C:\Program Files\Autodesk\AutoCAD 2027\accoreconsole.exe")
+ODA = Path.home() / "ODAFileConverter" / "ODAFileConverter.exe"   # extraído del .msi, sin instalar
+
+
+def dxf_a_dwg_oda(dxf: Path, oda: Path = ODA) -> Path:
+    """DXF -> DWG 2018 con ODA File Converter (con AUDIT); para equipos sin AutoCAD."""
+    import shutil
+    import subprocess
+    import tempfile
+    a, b = Path(tempfile.mkdtemp()), Path(tempfile.mkdtemp())
+    shutil.copy(dxf, a / dxf.name)
+    subprocess.run([str(oda), str(a), str(b), "ACAD2018", "DWG", "0", "1", "*.DXF"], check=True, timeout=600)
+    dwg = dxf.with_suffix(".dwg")
+    shutil.copy(b / dwg.name, dwg)
+    return dwg
 
 
 def dxf_a_dwg(dxf: Path, accore: Path = ACCORE) -> Path:
     """DXF -> DWG 2018 revisado con AUDIT y encuadrado, para abrir directo en AutoCAD."""
+    if not accore.is_file():
+        return dxf_a_dwg_oda(dxf)
     import subprocess
     import tempfile
     dwg = dxf.with_suffix(".dwg")

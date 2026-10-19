@@ -1,4 +1,4 @@
-"""Planos Rev. 7 (motor LP 22,9 kV + formato EPIME): datos y láminas de perfil.
+"""Planos Rev. 8 (motor LP 22,9 kV + formato EPIME): datos y láminas de perfil.
 
 No certifica ingeniería; verifica que el dibujo respeta los resultados del motor.
 """
@@ -39,6 +39,8 @@ def test_dxf_con_hojas_de_perfil(tmp_path):
     assert len({l.dxf_layout.dxf.taborder for l in lays}) == len(lays)
     assert len(doc.modelspace().query('INSERT[name=="POSTE_LP"]')) == info["estructuras"] == 122
     assert sum(len(l.query('LWPOLYLINE[layer=="PP_CONDUCTOR"]')) for l in lays) == info["estructuras"] - 1
+    textos = " ".join(e.dxf.text for l in lays for e in l.query("TEXT"))
+    assert f"AAAC {cargar_motor()['seccion']} mm2" in textos   # notas = sección que calculó el motor
     for l in lays:   # listas para imprimir en AutoCAD sin reconfigurar
         assert l.dxf_layout.dxf.paper_size == "ISO_full_bleed_A3_(420.00_x_297.00_MM)"
         assert l.dxf_layout.dxf.current_style_sheet == "acad.ctb"

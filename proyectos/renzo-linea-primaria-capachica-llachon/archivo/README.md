@@ -1,10 +1,11 @@
 # Archivo: versiones anteriores de Capachica–Llachón
 
-Antecedentes que **no se usan** para los resultados vigentes. La versión vigente es la Rev. 7: ver el [README del proyecto](../README.md).
+Antecedentes que **no se usan** para los resultados vigentes. La versión vigente es la Rev. 8: ver el [README del proyecto](../README.md).
 Se movieron con `git mv`, así que `git log --follow` muestra el historial de cada archivo.
 
 | Carpeta | Contenido |
 |---|---|
+| `rev7_planos/` | Rev. 7: 23 láminas EPIME con AAAC 70 mm² (kit del motor). La Rev. 8 cambió a 35 mm², el óptimo económico |
 | `rev6_planos_gabinete/` | Rev. 6: 13 láminas EPIME con 168 postes de una distribución de gabinete (vano máx. 100 m). La Rev. 7 la reemplazó con el plantillado del motor. La regenera `scripts/planos_formato_epime.py` |
 | `rev1_a_rev5/` | Rev. 1 a 5: anteproyecto cartográfico, conciliación KML/GIS, auditorías y entregas |
 

@@ -4,7 +4,7 @@ Archivos, en `plans/`:
 
 | Archivo | Contenido |
 |---|---|
-| `LP_REV7.dwg` | **Plano principal**: 23 láminas A3, ingeniería del motor LP 22,9 kV |
+| `LP_REV8.dwg` | **Plano principal**: 23 láminas A3, ingeniería del motor LP 22,9 kV |
 | `LP_REV6.dwg` | Versión anterior: 13 láminas, con la distribución de postes de gabinete |
 | `armados_lp229/LD-LP-01…14.dwg` | Láminas de armados con lista de materiales (motor de D. H. Ccora) |
 | `*.dxf` | Las mismas láminas en DXF, para otros programas CAD (BricsCAD, LibreCAD, QGIS) |
@@ -12,7 +12,7 @@ Archivos, en `plans/`:
 
 Los DWG se guardaron con AutoCAD 2018. AUDIT no encontró errores. Se abren desde AutoCAD 2018 en adelante.
 
-## Al abrir `LP_REV7.dwg`
+## Al abrir `LP_REV8.dwg`
 
 - Abre en la lámina **LP-01**; las demás están en las pestañas de presentación, de **LP-01** a **LP-23**:
   - **LP-01:** ubicación, clave de láminas, unifilar y datos técnicos.
@@ -71,8 +71,9 @@ Las láminas de armados (`armados_lp229`) están en Modelo, en mm, con su marco:
 Si cambia el diseño, no hace falta redibujar a mano:
 
 ```powershell
-python proyectos/renzo-linea-primaria-capachica-llachon/scripts/planos_motor_epime.py --autocad
+python proyectos/renzo-linea-primaria-capachica-llachon/scripts/planos_motor_epime.py --dwg
 ```
 
-Esto rehace el DXF, el DWG y el PDF, y convierte los armados a DWG. Necesita AutoCAD 2027 instalado; la ruta está en `ACCORE`, en `planos_formato_epime.py`.
+Esto rehace el DXF, el DWG y el PDF, y convierte los armados a DWG. Usa AutoCAD 2027 si está instalado (`ACCORE`) y,
+si no, ODA File Converter (`ODA`, en `planos_formato_epime.py`). Con `--autocad` el PDF también lo traza AutoCAD.
 **Ojo:** si se regenera, se pierden los cambios hechos a mano en el DWG. Conviene guardarlos con otro nombre.

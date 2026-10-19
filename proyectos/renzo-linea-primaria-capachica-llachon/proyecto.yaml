@@ -1,7 +1,7 @@
 id: renzo-linea-primaria-capachica-llachon
 nombre: Línea primaria 22,9 kV Capachica–Llachón
 estado: expediente_academico_completo
-revision_activa: 7
+revision_activa: 8
 objeto: Línea troncal trifásica 22,9 kV Capachica–Llachón (13,89 km, 122 estructuras)
 crs_geografico: EPSG:4326
 crs_metrico: EPSG:32719
@@ -12,17 +12,18 @@ entradas:
   motor_resultados: datos/motor_lp229/resultados/
   fuentes_originales: sources/
 scripts:
+  expediente: scripts/generar_expediente.py
   planos: scripts/planos_motor_epime.py
   formato_epime: scripts/planos_formato_epime.py
 planos:
-  - plans/LP_REV7.dwg
-  - plans/LP_REV7.dxf
-  - plans/LP_REV7.pdf
+  - plans/LP_REV8.dwg
+  - plans/LP_REV8.dxf
+  - plans/LP_REV8.pdf
   - plans/armados_lp229/
 expediente: expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON.zip
 documentacion:
   expediente: documentacion/EXPEDIENTE_LP229.md
-  planos: documentacion/PLANOS_REV7_MOTOR_LP229.md
+  planos: documentacion/PLANOS_REV8_MOTOR_LP229.md
   autocad: documentacion/GUIA_AUTOCAD_EDITABLES.md
   formato: documentacion/FORMATO_PLANOS_EPIME_REV6.md
 archivo: archivo/README.md
@@ -31,5 +32,6 @@ pendientes_criticos:
   - poblacion_inei_2017
   - topografia_de_replanteo
   - resistividad_y_mecanica_de_suelos
-  - cotizaciones_y_tipo_de_cambio
+  - cotizaciones
+  - clima_senamhi
   - proyectista_cip_firma

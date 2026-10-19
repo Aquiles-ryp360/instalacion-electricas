@@ -15,7 +15,7 @@ Cada carpeta corresponde a un trabajo independiente. El alcance y el estado decl
 | Aquiles Taylor Ramos Yapo · 227368 | [Limbani–Huancasayani](aquiles-linea-primaria-inst-ii/README.md) | [Entrega consolidada](aquiles-linea-primaria-inst-ii/entregables/proyecto-final/): un expediente con ecuaciones, metrados y planos; tres Excel con fórmulas y ZIP limpio. |
 | Renzo Gabriel Mamani Galindo · 228447 | [Capachica–Chifrón](renzo-linea-primaria-capachica/README.md) | [Variante con subestación y redes secundarias](renzo-linea-primaria-capachica/proyecto.yaml); consultar el dictamen de presentación auditada. |
 | Renzo Gabriel Mamani Galindo · 228447 | [Capachica–Chifrón: solo línea primaria](renzo-linea-primaria-capachica-v2/README.md) | [Alcance declarado de esta variante](renzo-linea-primaria-capachica-v2/proyecto.yaml); no se presupone que sustituya a la anterior. |
-| Renzo Gabriel Mamani Galindo · 228447 | [Capachica–Llachón](renzo-linea-primaria-capachica-llachon/README.md) | [Estado y entradas declaradas](renzo-linea-primaria-capachica-llachon/proyecto.yaml) · [Expediente completo Rev. 7](renzo-linea-primaria-capachica-llachon/documentacion/EXPEDIENTE_LP229.md). |
+| Renzo Gabriel Mamani Galindo · 228447 | [Capachica–Llachón](renzo-linea-primaria-capachica-llachon/README.md) | [Estado y entradas declaradas](renzo-linea-primaria-capachica-llachon/proyecto.yaml) · [Expediente completo Rev. 8](renzo-linea-primaria-capachica-llachon/documentacion/EXPEDIENTE_LP229.md). |
 
 La adscripción de Capachica–Llachón a esta sección facilita encontrar los trabajos de líneas primarias; su YAML no consigna el curso. Sus revisiones de cartografía y de entrega se consultan en su documentación, sin inferir vigencia por el número de un archivo.
 

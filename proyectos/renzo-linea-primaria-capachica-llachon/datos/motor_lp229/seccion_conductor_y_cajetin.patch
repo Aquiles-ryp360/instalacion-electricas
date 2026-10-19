@@ -1,0 +1,484 @@
+diff --git a/src/catalogo.py b/src/catalogo.py
+index 0247a31..692f775 100644
+--- a/src/catalogo.py
++++ b/src/catalogo.py
+@@ -11,7 +11,10 @@ Fuentes de precios (columna FUENTE):
+ import sys
+ from pathlib import Path
+ sys.path.insert(0, str(Path(__file__).parent))
+-from params import ECON, CFG
++from params import ECON, CFG, SECCION, C_SEL
++# Conductor y accesorios que dependen de la sección: (US$/m conductor, fuente, US$ varilla, fuente, S/ manguito)
++# 35 mm²: conductor escalado con la relación de precios 35/70 de p03 (5,20/9,50); varilla y manguito estimados.
++COND_KIT = {70: (1.1487, "COT-M", 3.47, "COT-M", 40.00), 35: (0.6288, "EST", 2.60, "EST", 30.00)}[SECCION]
+ TC = float(ECON.get("tipo_cambio", 3.453))            # S/ por US$
+ TC_FUENTE = ECON.get("tipo_cambio_fuente", "BCRP – tipo de cambio SBS venta")
+ PRECIOS_PROYECTO = {str(k): float(v) for k, v in (CFG.get("precios") or {}).items()}
+@@ -29,15 +32,15 @@ MAT = [
+     ("2.04", "Aislador polimérico tipo suspensión 36 kV, conexión horquilla-lengüeta (línea de fuga ≥ 720 mm)", "u", 16.24, None, "COT-M", "AI"),
+     ("2.05", "Grillete de AºGº tipo lira de 16 mm Ø, con pasador de seguridad", "u", 2.58, None, "COT-M", "AI"),
+     # 3 CONDUCTOR
+-    ("3.01", "Conductor de aleación de aluminio AAAC de 70 mm², 19 hilos", "m", 1.1487, None, "COT-M", "CO"),
++    ("3.01", f"Conductor de aleación de aluminio AAAC de {SECCION} mm², {C_SEL['n']} hilos", "m", COND_KIT[0], None, COND_KIT[1], "CO"),
+     # 4 ACCESORIOS DEL CONDUCTOR
+-    ("4.01", "Varilla de armar preformada simple para conductor AAAC de 70 mm²", "u", 3.47, None, "COT-M", "CO"),
++    ("4.01", f"Varilla de armar preformada simple para conductor AAAC de {SECCION} mm²", "u", COND_KIT[2], None, COND_KIT[3], "CO"),
+     ("4.02", "Grapa de anclaje tipo pistola de 3 pernos para conductor AAAC 35–70 mm²", "u", 7.84, None, "COT-M", "CO"),
+     ("4.03", "Cinta plana de armar de aluminio", "m", 0.25, None, "COT-M", "CO"),
+     ("4.04", "Alambre de amarre de aluminio de 16 mm²", "m", 0.28, None, "COT-M", "CO"),
+     ("4.05", "Conector doble vía Al/Al para conductor 35–70 mm², tres pernos", "u", 1.34, None, "COT-M", "CO"),
+     ("4.06", "Conector bimetálico Al/Cu para conexión de equipos", "u", None, 19.00, "COT-MS", "CO"),
+-    ("4.07", "Manguito de empalme a compresión para conductor AAAC 70 mm²", "u", None, 40.00, "EST", "CO"),
++    ("4.07", f"Manguito de empalme a compresión para conductor AAAC {SECCION} mm²", "u", None, COND_KIT[4], "EST", "CO"),
+     # 5 CONDUCTOR DE COBRE
+     ("5.01", "Conductor de cobre recocido cableado de 25 mm², para puesta a tierra", "m", 2.6242, None, "COT-M", "CC"),
+     # 6 FERRETERÍA PARA POSTES Y CRUCETAS
+diff --git a/src/p03_ingenieria.py b/src/p03_ingenieria.py
+index 4510224..2b62bc0 100644
+--- a/src/p03_ingenieria.py
++++ b/src/p03_ingenieria.py
+@@ -67,7 +67,7 @@ FCg = M["fc"]; FP = 0.15 * FCg + 0.85 * FCg ** 2                         # RD 01
+ AMP = {25: 135, 35: 170, 50: 210, 70: 255, 95: 320}                    # A, catálogo referencial (Alfanar)
+ def x_geo(c):
+     """Reactancia por geometría del armado (RD 018 6.2): X = 2πf[0,5 + 4,6 log(DMG/re)]·10⁻⁴ Ω/km."""
+-    re_ = 0.758 * c["D"] / 2
++    re_ = RMG_K[c["n"]] * c["D"] / 2
+     Dp = math.hypot(ARM["sep_h"] / 2, ARM["d_inf"] - ARM["d_sup"])
+     dmg = (ARM["sep_h"] * Dp * Dp) ** (1 / 3) * 1000
+     return 2 * math.pi * SIS["f"] * (0.5 + 4.6 * math.log10(dmg / re_)) * 1e-4
+@@ -96,8 +96,8 @@ comp = pd.DataFrame(comp)
+ RESERVA_DV = SIS["reserva_dV"]   # se exige reserva sobre el límite de caída de tensión (incertidumbre del estudio de mercado)
+ comp["cumple_reserva"] = comp.dV20_pct <= RESERVA_DV * SIS["dV_max_pct"]
+ ok = comp[comp.cumple_reserva & comp.cumple_Icc & comp.cumple_I]
+-# Óptimo económico entre las secciones que cumplen; la sección ADOPTADA es la del kit de materiales (diseno.conductor_mm2, 70 mm²),
+-# porque metrados, precios, láminas y anexos están armados para ella. Si el kit no cumple, el paso 11 lo marca NO CONFORME.
++# Óptimo económico entre las secciones que cumplen; la sección ADOPTADA es diseno.conductor_mm2.
++# Si no cumple, el paso 11 lo marca NO CONFORME.
+ SEC_OPT = int(ok.sort_values("Costo_total_S").iloc[0].seccion_mm2) if len(ok) else None
+ SEC = SECCION
+ comp["optimo"] = comp.seccion_mm2 == (SEC_OPT or -1)
+diff --git a/src/p04_anexos_electricos.py b/src/p04_anexos_electricos.py
+index f6418df..33f5b07 100644
+--- a/src/p04_anexos_electricos.py
++++ b/src/p04_anexos_electricos.py
+@@ -199,9 +199,9 @@ dem = pd.read_csv(W / "demanda.csv")
+ wb = libro()
+ ws = hoja(wb, "PARAMETROS", [44, 12, 13, 13, 13, 13, 13, 26])
+ r = cab(ws, "ANEXO 8: PARÁMETROS ELÉCTRICOS, CAÍDA DE TENSIÓN Y PÉRDIDAS DE POTENCIA Y ENERGÍA")
+-titulo_seccion(ws, r, "PARÁMETROS DEL CONDUCTOR AAAC 70 mm² Y DE LA LÍNEA"); r += 1
++titulo_seccion(ws, r, f"PARÁMETROS DEL CONDUCTOR AAAC {SECCION} mm² Y DE LA LÍNEA"); r += 1
+ fila(ws, r, ["Descripción", "Símbolo", "Valor", "Unidad", "Fuente / observación"], font=FB, fill=AZ); ws.merge_cells(start_row=r, start_column=5, end_row=r, end_column=8); r += 1
+-c70 = COND[70]
++c70 = C_SEL
+ V = d("Tensión nominal", "VL", SIS["Vn"], "kV", "")
+ COS = d("Factor de potencia", "cos φ", SIS["cos"], "–", "RD 018")
+ R20 = d("Resistencia eléctrica a 20 °C", "R20", c70["R20"], "Ω/km", "RD 018-2003, Cuadro 6.1")
+@@ -209,7 +209,7 @@ ALF = d("Coeficiente térmico de resistencia", "α", 0.0036, "1/°C", "AAAC (exp
+ TOP = d("Temperatura de operación del conductor", "t", 40, "°C", "RD 018")
+ RT = d("Resistencia a la temperatura de operación  R = R20·[1 + α(t − 20)]", "r1", f"={R20}*(1+{ALF}*({TOP}-20))", "Ω/km", "", fmt="0.0000", entrada=False)
+ DIA = d("Diámetro exterior del conductor", "D", c70["D"], "mm", "")
+-RE = d("Radio medio geométrico  RMG = 0,7788·D/2 (aprox. 19 hilos: 0,758·D/2)", "re", f"=0.758*{DIA}/2", "mm", "", fmt="0.00", entrada=False)
++RE = d(f"Radio medio geométrico  RMG ({C_SEL['n']} hilos: {str(RMG_K[C_SEL['n']]).replace('.', ',')}·D/2)", "re", f"={RMG_K[C_SEL['n']]}*{DIA}/2", "mm", "", fmt="0.00", entrada=False)
+ DAB = d("Distancia entre fases inferiores (cruceta)", "Y", ARM["sep_h"], "m", "Armado PS1-3")
+ DV_ = d("Distancia vertical fase superior – cruceta", "h", ARM["d_inf"] - ARM["d_sup"], "m", "Armado PS1-3", fmt="0.00")
+ DD = d("Distancia fase superior a fases inferiores  D = √[(Y/2)² + h²]", "D'", f"=SQRT(({DAB}/2)^2+{DV_}^2)", "m", "", fmt="0.000", entrada=False)
+diff --git a/src/p05_anexos_mecanicos.py b/src/p05_anexos_mecanicos.py
+index a28aa22..59df4ae 100644
+--- a/src/p05_anexos_mecanicos.py
++++ b/src/p05_anexos_mecanicos.py
+@@ -13,7 +13,7 @@ R = json.load(open(W / "resultados.json"))
+ E = pd.read_csv(W / "planilla_estructuras.csv")
+ CHK = pd.read_csv(W / "verificacion_vanos.csv")
+ G = 9.80665
+-c70 = COND[70]
++c70 = C_SEL
+ HIPS = [("H1 EDS inicial", "Esfuerzo cada día inicial"), ("H2 EDS final", "Esfuerzo cada día final (referencia)"),
+         ("H3 Temp. mínima", "Mínima temperatura"), ("H4 Viento máximo", "Máxima velocidad de viento"),
+         ("H5 Hielo", "Máxima carga de hielo"), ("H5b Hielo + viento", "Hielo + viento reducido"),
+@@ -33,10 +33,10 @@ def sigma_formula(A, B):
+ def cmc_sheet(wb, nombre, vanos, titulo):
+     """Hoja de cálculo mecánico del conductor (ecuación de cambio de estado, RD 018 4.5) con fórmulas."""
+     ws = hoja(wb, nombre, [9] + [10.5] * 40, apaisado=True)
+-    r = cab(ws, titulo, "CONDUCTOR AAAC 70 mm² – ECUACIÓN DE CAMBIO DE ESTADO: σ2²·[σ2 + A] = B", ncol=36)
++    r = cab(ws, titulo, f"CONDUCTOR AAAC {SECCION} mm² – ECUACIÓN DE CAMBIO DE ESTADO: σ2²·[σ2 + A] = B", ncol=36)
+     titulo_seccion(ws, r, "CARACTERÍSTICAS DEL CONDUCTOR Y PARÁMETROS DE CÁLCULO", ncol=12); r += 1
+     ref = {}
+-    datos = [("S", "Sección real (19 hilos de 2,10 mm)", "=19*PI()*(2.1/2)^2", "mm²", "RD 018 / ASTM B399"),
++    datos = [("S", f"Sección real ({CT['n']} hilos de {CT['dw']} mm)", f"={C_SEL['n']}*PI()*({C_SEL['dw']}/2)^2", "mm²", "RD 018 / ASTM B399"),
+              ("D", "Diámetro exterior", c70["D"], "mm", "RD 018 Cuadro 4.2"),
+              ("m", "Masa unitaria", c70["kg_m"], "kg/m", "RD 018"),
+              ("wc", "Peso unitario  wc = m·g", f"=__m*{G}", "N/m", ""),
+@@ -131,16 +131,16 @@ def cmc_sheet(wb, nombre, vanos, titulo):
+ 
+ # =====================================================================================  ANEXO 4
+ wb = libro()
+-ws, info4 = cmc_sheet(wb, "CMC_AAAC-70", list(range(10, 401, 10)), "ANEXO 4: CÁLCULO MECÁNICO DE CONDUCTORES")
++ws, info4 = cmc_sheet(wb, f"CMC_AAAC-{SECCION}", list(range(10, 401, 10)), "ANEXO 4: CÁLCULO MECÁNICO DE CONDUCTORES")
+ # Tabla de templado
+ wt = hoja(wb, "TABLA DE TEMPLADO", [10] + [11] * 8, apaisado=True)
+-r = cab(wt, "TABLA DE TEMPLADO – CONDUCTOR AAAC 70 mm² (flechas de tendido con compensación de CREEP: t − 10 °C)", ncol=9)
++r = cab(wt, f"TABLA DE TEMPLADO – CONDUCTOR AAAC {SECCION} mm² (flechas de tendido con compensación de CREEP: t − 10 °C)", ncol=9)
+ nota(wt, r, "Flecha de tendido f (m) y tiro horizontal (N) en función del vano regulador y de la temperatura del conductor al momento del "
+      "tendido. Se calcula desde el estado de referencia H2 (EDS final 15 % a la temperatura media) con peso propio; la temperatura de "
+      "cálculo se reduce 10 °C para compensar el asentamiento (CREEP) – RD 018 4.4.", ncol=9, h=40); r += 2
+ temps = list(range(-5, 31, 5)); vt = list(range(60, 301, 20))
+-ref = info4["ref"]; S_ = f"'CMC_AAAC-70'!{ref['S']}"; sref = f"'CMC_AAAC-70'!{ref['sref']}"; Ef = f"'CMC_AAAC-70'!{ref['Ef']}"
+-al = f"'CMC_AAAC-70'!{ref['al']}"; wc_ = f"'CMC_AAAC-70'!{ref['wc']}"; tr_ = f"'CMC_AAAC-70'!{ref['tref']}"
++ref = info4["ref"]; H4 = f"'CMC_AAAC-{SECCION}'!"; S_ = f"{H4}{ref['S']}"; sref = f"{H4}{ref['sref']}"; Ef = f"{H4}{ref['Ef']}"
++al = f"{H4}{ref['al']}"; wc_ = f"{H4}{ref['wc']}"; tr_ = f"{H4}{ref['tref']}"
+ blocks = {}
+ for bi, (tit, kind) in enumerate([("FLECHA DE TENDIDO f (m)", "f"), ("TIRO HORIZONTAL DE TENDIDO (N)", "T"), ("aux A", "A"), ("aux B", "B"), ("aux σ", "s")]):
+     titulo_seccion(wt, r, tit if kind in ("f", "T") else f"Cálculo auxiliar: {tit[4:]}", ncol=9, fill=AZ2 if kind in ("f", "T") else None); r += 1
+diff --git a/src/p06_presupuesto.py b/src/p06_presupuesto.py
+index d26c098..726db71 100644
+--- a/src/p06_presupuesto.py
++++ b/src/p06_presupuesto.py
+@@ -85,7 +85,7 @@ for cod in usados:
+     m = MATD[cod]
+     vals = [cod, m[1], m[2]] + [BOM[a].get(cod, None) for a in ARMADOS] + [RET_RI.get(cod, None)] + [PAT_KIT[p].get(cod, None) for p in ("PAT-1", "PAT-2")]
+     fila(bo, r, vals); BOROW[cod] = r; r += 1
+-fila(bo, r, ["PTE", "Conductor AAAC 70 mm² para puentes y bajadas a equipos", "m"] + [PUENTE_M.get(a, None) for a in ARMADOS] + [None] * 3)
++fila(bo, r, ["PTE", f"Conductor AAAC {SECCION} mm² para puentes y bajadas a equipos", "m"] + [PUENTE_M.get(a, None) for a in ARMADOS] + [None] * 3)
+ BOROW["PTE"] = r; r += 1
+ BOR0, BOR1 = BOH + 1, r - 1
+ BOM_RANGE = f"BOM_ARMADOS!$D${BOR0}:${CL(3+len(cols_b))}${BOR1}"; BOM_CODES = f"BOM_ARMADOS!$A${BOR0}:$A${BOR1}"
+@@ -203,7 +203,7 @@ PART = [
+      f"={c5('12/300')}+{c5('12/400')}"),
+     ("2.02", "Transporte de poste de 13 m de almacén a punto de izaje", "u", 9.0, {OPE: 1, PEO: 4}, {"Camión grúa de 6 t": 1}, [], 0, f"={c5('13/400')}"),
+     ("2.03", "Transporte de armados, retenidas y puesta a tierra de almacén a punto de instalación", "Jgo.", 25.0, {OFI: 1, PEO: 2}, {"Camión de 4 t": 1}, [], 0, f"={N}"),
+-    ("2.04", "Transporte de conductor AAAC 70 mm² de almacén a punto de instalación", "km", 12.0, {OFI: 1, PEO: 2}, {"Camión de 4 t": 1}, [], 0, f"=ROUND({COND_KM},3)"),
++    ("2.04", f"Transporte de conductor AAAC {SECCION} mm² de almacén a punto de instalación", "km", 12.0, {OFI: 1, PEO: 2}, {"Camión de 4 t": 1}, [], 0, f"=ROUND({COND_KM},3)"),
+     ("3", "INSTALACIÓN DE POSTES", None),
+     ("3.01", "Excavación en terreno tipo I (limo-arcilloso) para poste, incluye hoyo de cimentación", "m3", 5.0, {OFI: 0.2, PEO: 2}, {}, [], 0,
+      f"=ROUND({c5('12/300')}*{VEXC['12/300']}+{c5('12/400')}*{VEXC['12/400']}+{c5('13/400')}*{VEXC['13/400']},2)"),
+@@ -231,7 +231,7 @@ PART = [
+     ("5.10", "Montaje de seccionador fusible tipo cut-out, incluye fusible", "u", 12.0, {OPE: 1, OFI: 1}, {"Escalera de tres cuerpos": 1}, [], 0, f"=PLANILLA!D{PLROW['9.01']}"),
+     ("5.11", "Montaje de pararrayos de óxido metálico, incluye conexión a tierra", "u", 12.0, {OPE: 1, OFI: 1}, {"Escalera de tres cuerpos": 1}, [], 0, f"=PLANILLA!D{PLROW['9.04']}"),
+     ("6", "MONTAJE DE CONDUCTORES", None),
+-    ("6.01", "Tendido y puesta en flecha de conductor AAAC 70 mm², por fase", "km", 2.5,
++    ("6.01", f"Tendido y puesta en flecha de conductor AAAC {SECCION} mm², por fase", "km", 2.5,
+      {OPE: 2, OFI: 3, PEO: 6}, {"Winche de 3 t": 1, "Freno hidráulico": 1, "Caballete porta bobina": 2, "Juego de poleas": 10, "Dinamómetro": 1,
+                                 "Equipo de comunicación (par)": 2, "Camioneta rural 4x4": 1}, [], 0, f"=ROUND({COND_KM},3)"),
+     ("7", "INSTALACIÓN DE PUESTA A TIERRA", None),
+diff --git a/src/p07_laminas.py b/src/p07_laminas.py
+index 407d790..ff85cfa 100644
+--- a/src/p07_laminas.py
++++ b/src/p07_laminas.py
+@@ -87,7 +87,7 @@ def items_armado(arm, poste):
+     it = [(f"Poste de C.A.C. {poste} daN, con perilla", "u", 1)]
+     for cod, q in BOM[arm].items():
+         m = MATD[cod]; it.append((m[1], m[2], q))
+-    if arm in PUENTE_M: it.append(("Conductor AAAC 70 mm² para puentes y conexión a equipos", "m", PUENTE_M[arm]))
++    if arm in PUENTE_M: it.append((f"Conductor AAAC {SECCION} mm² para puentes y conexión a equipos", "m", PUENTE_M[arm]))
+     return it
+ 
+ 
+diff --git a/src/p08_planos.py b/src/p08_planos.py
+index 06f6e79..c92be4c 100644
+--- a/src/p08_planos.py
++++ b/src/p08_planos.py
+@@ -67,7 +67,7 @@ T(msp, "UBICACIÓN POLÍTICA", 16, 276, 2.6, "Txt_Planos")
+ for k, t in enumerate(["País: Perú", f"Departamento: {PROYECTO['departamento']}", f"Provincias: {PROYECTO['provincias']}", f"Distritos: {PROYECTO['distritos']}",
+                        "Región natural: Altiplano (circunlacustre)", f"Altitud: {RS['electrico']['cota_min']:.0f} – {RS['electrico']['cota_max']:.0f} m s.n.m.",
+                        f"Sistema de coordenadas: UTM WGS 84, zona {ZONA_UTM}", f"Longitud de la línea: {troncal.length/1000:,.3f} km".replace(".", ","),
+-                       f"Estructuras: {len(E)}   Conductor: AAAC 70 mm²", "Tensión: 22,9 kV trifásico (3ø), 60 Hz"]):
++                       f"Estructuras: {len(E)}   Conductor: AAAC {SECCION} mm²", "Tensión: 22,9 kV trifásico (3ø), 60 Hz"]):
+     T(msp, t, 17, 270 - 6.6 * k, 2.1, "Txt_Planos")
+ T(msp, "LEYENDA", 255, 112, 2.4, "Txt_Planos")
+ L(msp, [(255, 106), (270, 106)], "Eje_LP", lw=70); T(msp, "Línea primaria 22,9 kV proyectada", 272, 105, 2.0, "Txt_Planos")
+@@ -130,7 +130,7 @@ for blk in range(2):
+ # leyenda y resumen
+ lx, ly = 330, 182
+ T(msp, "LEYENDA", lx, ly, 2.8, "Txt_Planos")
+-L(msp, [(lx, ly - 8), (lx + 18, ly - 8)], "Eje_LP", lw=50); T(msp, "Línea primaria 22,9 kV – 3ø – AAAC 70 mm²", lx + 21, ly - 9, 2.0, "Txt_Planos")
++L(msp, [(lx, ly - 8), (lx + 18, ly - 8)], "Eje_LP", lw=50); T(msp, f"Línea primaria 22,9 kV – 3ø – AAAC {SECCION} mm²", lx + 21, ly - 9, 2.0, "Txt_Planos")
+ C(msp, lx + 9, ly - 15, 0.9, "Soportes_pl"); T(msp, "Estructura de suspensión PS1-3 (número)", lx + 21, ly - 16, 2.0, "Txt_Planos")
+ R(msp, lx + 7.7, ly - 23.3, 2.6, 2.6, "Soportes_pl", color=1); T(msp, "Estructura especial (ángulo, anclaje, equipos)", lx + 21, ly - 23, 2.0, "Txt_Planos")
+ L(msp, [(lx, ly - 29), (lx + 18, ly - 29)], "Via"); T(msp, "Vías y caminos (OpenStreetMap)", lx + 21, ly - 30, 2.0, "Txt_Planos")
+@@ -209,7 +209,7 @@ for k in range(nh):
+             T(msp, str(v).replace(".", ","), x, rowy(j), 1.8, "Txt_Planos", TA.BOTTOM_CENTER)
+         if i < i1:
+             d = E.vano_adelante_m[i]; xm = X(r.progresiva_m + d / 2)
+-            for j, v in {3: f"{d:.2f}", 7: f"{p6(d):.2f}", 8: "18,00%", 9: "15,00%", 12: "AAAC-70"}.items():
++            for j, v in {3: f"{d:.2f}", 7: f"{p6(d):.2f}", 8: "18,00%", 9: "15,00%", 12: f"AAAC-{SECCION}"}.items():
+                 T(msp, v.replace(".", ","), xm, rowy(j), 1.8, "Txt_Planos", TA.BOTTOM_CENTER)
+     # --- perfil
+     pts = [(X(s), Y(z)) for s, z in zip(PX[seg], PZ[seg])]
+@@ -279,7 +279,7 @@ for k in range(nh):
+         if s0 <= c.progresiva_m <= s1:
+             T(msp, f"{c.cruce_id} – cruce {c.nombre}", X(c.progresiva_m) + 1.5, yp - 16, 1.8, "Bloques1")
+     # leyenda
+-    T(msp, "Conductor: AAAC 70 mm², flecha a máxima temperatura (50 °C con CREEP). Línea discontinua: distancia mínima al terreno (6,0 m; 7,0 m en cruces).",
++    T(msp, f"Conductor: AAAC {SECCION} mm², flecha a máxima temperatura (50 °C con CREEP). Línea discontinua: distancia mínima al terreno (6,0 m; 7,0 m en cruces).",
+       22, 66, 1.8, "Txt_Planos")
+     T(msp, "Cotas de terreno: DEM Copernicus GLO-30 interpolado (margen 0,30 m). Deben verificarse con el levantamiento topográfico de replanteo.",
+       22, 62, 1.8, "Txt_Planos")
+@@ -311,13 +311,13 @@ xpos = lambda s_: 80 + s_ / Ltot * 270
+ prev_x, prev_s = 70, 0.0
+ for d in DERP:
+     xc = xpos(d["prog"])
+-    T(msp, f"3ø AAAC 70 mm² – {(d['prog']-prev_s)/1000:.3f} km".replace(".", ","), (prev_x + xc) / 2, y + 2, 1.8, "TEXTO", TA.BOTTOM_CENTER)
++    T(msp, f"3ø AAAC {SECCION} mm² – {(d['prog']-prev_s)/1000:.3f} km".replace(".", ","), (prev_x + xc) / 2, y + 2, 1.8, "TEXTO", TA.BOTTOM_CENTER)
+     L(msp, [(xc, y), (xc, y - 45)], "DIBUJO", lw=50); cutout(xc, y - 20)
+     T(msp, "PSEC-3P", xc + 5, y - 20, 1.7, "TEXTO")
+     T(msp, f"{d['estructura']} (DT-3) – {d['nombre'].upper()}", xc, y + 6, 1.8, "TEXTO", TA.BOTTOM_CENTER)
+     T(msp, "Red primaria (fuera del alcance)", xc + 2, y - 50, 1.7, "TEXTO")
+     prev_x, prev_s = xc, d["prog"]
+-T(msp, f"3ø AAAC 70 mm² – {(Ltot-prev_s)/1000:.3f} km".replace(".", ","), (prev_x + 360) / 2, y + 2, 1.8, "TEXTO", TA.BOTTOM_CENTER)
++T(msp, f"3ø AAAC {SECCION} mm² – {(Ltot-prev_s)/1000:.3f} km".replace(".", ","), (prev_x + 360) / 2, y + 2, 1.8, "TEXTO", TA.BOTTOM_CENTER)
+ cutout(362); ppr(368); T(msp, f"{E.estructura.iloc[-1]} (PTH-3) – 3 cut-out + 3 pararrayos", 362, y + 6, 2.0, "TEXTO", TA.BOTTOM_CENTER)
+ T(msp, f"Llegada a {FIN['nombre'].upper()} (punto de interconexión por confirmar)", 290, y - 30, 1.9, "TEXTO")
+ dem = RS["demanda"]
+diff --git a/src/p11_verificacion.py b/src/p11_verificacion.py
+index f14bb50..1c9f4e3 100644
+--- a/src/p11_verificacion.py
++++ b/src/p11_verificacion.py
+@@ -40,10 +40,10 @@ for r in range(1, a8.max_row + 1):
+         K["elec"]["dV_cut"] = a8.cell(r, 5).value
+ chk("ΔV Excel (Anexo 8) = ΔV motor de cálculo", abs(K["elec"]["dV"] - R["electrico"]["dV_fin_pct"]) < 0.005, f"{K['elec']['dV']:.3f} % vs {R['electrico']['dV_fin_pct']:.3f} %")
+ _e = R["electrico"]
+-chk(f"Conductor del kit AAAC {SECCION} mm² cumple ΔV con reserva, corriente y cortocircuito", _e.get("kit_cumple", True),
++chk(f"Conductor adoptado AAAC {SECCION} mm² cumple ΔV con reserva, corriente y cortocircuito", _e.get("kit_cumple", True),
+     f"ΔV {R['electrico']['dV_fin_pct']:.2f} % ≤ {SIS['reserva_dV']*SIS['dV_max_pct']:.2f} %; óptimo económico: {_e.get('seccion_optima')} mm²")
+ # CMC
+-a4 = wbv(A / "Anexo 4 CMC.xlsx")["CMC_AAAC-70"]
++a4 = wbv(A / "Anexo 4 CMC.xlsx")[f"CMC_AAAC-{SECCION}"]
+ mec = pd.read_csv(W / "calculo_mecanico_conductor.csv")
+ rows = {a4.cell(r, 1).value: r for r in range(1, a4.max_row + 1) if isinstance(a4.cell(r, 1).value, (int, float))}
+ hdr = {}
+diff --git a/src/p12_docs_generales.py b/src/p12_docs_generales.py
+index 93f03e6..d3d3a42 100644
+--- a/src/p12_docs_generales.py
++++ b/src/p12_docs_generales.py
+@@ -68,7 +68,7 @@ p(d, f"Dotar de una línea primaria trifásica en 22,9 kV entre {INI} y {FINN}{C
+      "electrificación rural y al Código Nacional de Electricidad – Suministro 2011.")
+ h(d, "6. Alcances del proyecto")
+ p(d, f"El proyecto comprende el suministro, transporte, montaje electromecánico, pruebas y puesta en servicio de {fmt(L,3)} km de línea primaria trifásica "
+-     f"en 22,9 kV con conductor de aleación de aluminio AAAC de 70 mm², desde la estructura de arranque con reconectador ({E0}, {INI}) hasta la "
++     f"en 22,9 kV con conductor de aleación de aluminio AAAC de {SECCION} mm², desde la estructura de arranque con reconectador ({E0}, {INI}) hasta la "
+      f"estructura terminal {EF} ({FINN})"
+      + ("" if not DER else ", incluyendo " + lista([f"la estructura de derivación y seccionamiento hacia {x['nombre']} ({x['estructura']}, progresiva {fmt(x['prog'],2)} m)" for x in DER]))
+      + ". "
+@@ -78,7 +78,7 @@ datos(d, [("Sistema", "Trifásico (3ø), 60 Hz, neutro efectivamente puesto a ti
+           ("Longitud de la línea", f"{fmt(L,3)} km"),
+           ("Estructuras", f"Postes de concreto armado centrifugado: 12/300 = {nP.get('12/300',0)} u; 12/400 = {nP.get('12/400',0)} u; 13/400 = {nP.get('13/400',0)} u (total {len(E)})"),
+           ("Armados", "; ".join(f"{a} = {n}" for a, n in nA.items())),
+-          ("Conductor", f"Aleación de aluminio AAAC 70 mm², 19 hilos: {fmt(M['cond_m']/1000,3)} km (3 fases, incluye flecha, puentes y desperdicio)"),
++          ("Conductor", f"Aleación de aluminio AAAC {SECCION} mm², {CT['n']} hilos: {fmt(M['cond_m']/1000,3)} km (3 fases, incluye flecha, puentes y desperdicio)"),
+           ("Crucetas", "Perfil angular de FºGº 64 × 64 × 6,4 × 2 400 mm (Tipo I) con riostras 64 × 64 × 6,4 × 1 000 mm"),
+           ("Aisladores", f"Porcelana tipo PIN ANSI 56-4 (línea de fuga 685 mm) = {fmt(M['pin'],0)} u; polimérico de suspensión 36 kV (línea de fuga ≥ 720 mm) = {fmt(M['susp'],0)} u"),
+           ("Vano promedio / máximo", f"{fmt(K['plan']['vano_medio'],1)} m / {fmt(K['plan']['vano_max'],1)} m"),
+@@ -118,7 +118,7 @@ p(d, txt("antecedentes"))
+ h(d, "1.5 Situación actual", 2)
+ p(d, txt("situacion_actual") + " La demanda del proyecto se ha estimado con un estudio de mercado basado en el Censo 2017 (INEI).")
+ h(d, "1.6 Objetivo del proyecto", 2)
+-p(d, f"Construir una línea primaria trifásica en 22,9 kV de {fmt(L,3)} km, con conductor AAAC 70 mm², que permita atender la máxima demanda proyectada de "
++p(d, f"Construir una línea primaria trifásica en 22,9 kV de {fmt(L,3)} km, con conductor AAAC {SECCION} mm², que permita atender la máxima demanda proyectada de "
+      f"{fmt(K['dem']['MD_anio20_kW'],0)} kW al año {A20} (" + "; ".join([f"{x['nombre']} {fmt(x['P20'],0)} kW" for x in DER] + [f"{FINN} {fmt(C['Pfin'],0)} kW"]) + ") "
+      f"con una caída de tensión máxima de {fmt(K['elec']['dV'],2)} % y pérdidas de potencia de {fmt(K['elec']['PJ'],1)} kW.")
+ h(d, "1.7 Condiciones climatológicas", 2)
+@@ -137,7 +137,7 @@ tabla(d, ["Característica", "Descripción"], [
+     ("Punto de inicio", f"{E0} – {INI} (armado PSER-3 con reconectador)")] +
+     [("Derivación", f"{x['estructura']} – progresiva {fmt(x['prog'],2)} m, derivación a {x['nombre']} (armado DT-3 con seccionamiento PSEC-3P)") for x in DER] + [
+     ("Punto final", f"{EF} – {FINN} (armado terminal PTH-3 con seccionamiento)"),
+-    ("Conductor", "AAAC 70 mm², 19 hilos; EDS inicial 18 %, final 15 %"), ("Estructuras", f"{len(E)} postes de CAC (12/300, 12/400 y 13/400)"),
++    ("Conductor", f"AAAC {SECCION} mm², {CT['n']} hilos; EDS inicial 18 %, final 15 %"), ("Estructuras", f"{len(E)} postes de CAC (12/300, 12/400 y 13/400)"),
+     ("Vano medio / máximo / mínimo", f"{fmt(K['plan']['vano_medio'],1)} / {fmt(K['plan']['vano_max'],1)} / {fmt(K['plan']['vano_min'],1)} m")], widths=[5.5, 10.1])
+ h(d, "2.2 Postes y crucetas", 2)
+ tabla(d, ["Poste", "Cantidad"], [(f"CAC {k}", v) for k, v in nP.items()] + [("Total", len(E))], widths=[6, 3], bold_last=True)
+@@ -145,7 +145,7 @@ p(d, "Crucetas de perfil angular FºGº 64 × 64 × 6,4 × 2 400 mm con riostras
+ h(d, "2.3 Armados", 2)
+ tabla(d, ["Armado", "Descripción", "Cant."], [(a, ARM_DESC[a], n) for a, n in nA.items()], widths=[2.2, 11.2, 2.2])
+ h(d, "2.4 Conductor", 2)
+-p(d, f"Conductor de aleación de aluminio AAAC de 70 mm²: {fmt(M['cond_m'],0)} m (tres fases, incluye flecha, puentes y 3 % de desperdicio).")
++p(d, f"Conductor de aleación de aluminio AAAC de {SECCION} mm²: {fmt(M['cond_m'],0)} m (tres fases, incluye flecha, puentes y 3 % de desperdicio).")
+ h(d, "2.5 Aisladores", 2)
+ p(d, f"Aisladores de porcelana tipo PIN clase ANSI 56-4 ({fmt(M['pin'],0)} u) para suspensión y ángulos hasta 30°, y aisladores poliméricos de suspensión de 36 kV "
+      f"({fmt(M['susp'],0)} u) para anclajes, ángulos mayores, zonas de arrancamiento y estructuras con equipos.")
+@@ -257,7 +257,7 @@ h(d, "3.3.1 Postes", 3)
+ p(d, "Postes de concreto armado centrifugado (CAC) de 12 m (300 y 400 daN) y 13 m (400 daN), seleccionados por estructura en el plantillado y la verificación "
+      "mecánica (Anexo 6). El empotramiento es L/10 + 0,60 m, con cimentación de concreto ciclópeo y solado (Anexo 5).")
+ h(d, "3.3.2 Conductores", 3)
+-p(d, "Conductor de aleación de aluminio AAAC de 70 mm² (19 hilos de 2,10 mm, diámetro 10,5 mm, masa 0,181 kg/m, esfuerzo de rotura 295,8 N/mm²), seleccionado "
++p(d, f"Conductor de aleación de aluminio AAAC de {SECCION} mm² ({CT['n']} hilos de {CT['dw']} mm, diámetro {CT['D']} mm, masa {CT['kg_m']} kg/m, esfuerzo de rotura 295,8 N/mm²), seleccionado "
+      "por caída de tensión con 15 % de reserva, capacidad de corriente, cortocircuito y costo total (inversión + pérdidas) frente a las secciones de 25 a 95 mm².")
+ h(d, "3.3.3 Aisladores", 3)
+ p(d, f"Porcelana tipo PIN clase ANSI 56-4 (línea de fuga 685 mm) y polimérico de suspensión de 36 kV (línea de fuga ≥ 720 mm), seleccionados para una línea de fuga "
+@@ -285,7 +285,7 @@ p(d, "Reconectador con funciones de sobrecorriente de fase y tierra y recierre e
+      "cada punto de seccionamiento. Los ajustes preliminares están en el Vol. IX y serán confirmados con el estudio de coordinación de la obra (partida 1.02).")
+ h(d, "4.4 Nivel de cortocircuito", 2)
+ p(d, f"Potencia de cortocircuito de diseño en el punto de diseño: {SIS['Scc_MVA']:.0f} MVA (valor a confirmar con {CONC}). "
+-     f"La sección mínima por cortocircuito resulta {fmt(el['S_min_cc'],1)} mm² < 70 mm².")
++     f"La sección mínima por cortocircuito resulta {fmt(el['S_min_cc'],1)} mm² < {SECCION} mm².")
+ h(d, "4.5 Sistema de puesta a tierra", 2)
+ p(d, "Puesta a tierra en una de cada tres estructuras y en las adyacentes a equipos (PAT-1), y PAT-2 en las estructuras con equipos con resistencia ≤ 25 Ω. "
+      "La resistividad del terreno debe medirse en campo (Anexo 3, tabla de sensibilidad).")
+diff --git a/src/p13_docs_especificaciones.py b/src/p13_docs_especificaciones.py
+index a263afa..59bcd72 100644
+--- a/src/p13_docs_especificaciones.py
++++ b/src/p13_docs_especificaciones.py
+@@ -48,20 +48,20 @@ ETS = [
+    ("Tensión de sostenimiento a 60 Hz bajo lluvia", "kV", "≥ 100"), ("Carga mecánica especificada (SML)", "kN", "≥ 70"), ("Carga de rutina (RTL)", "kN", "≥ 35"),
+    ("Longitud aproximada", "mm", "≈ 650")],
+   ["Ensayos de diseño, tipo, muestreo y rutina según IEC 61109.", "Protocolos de ensayo de envejecimiento (1 000 h) y de erosión/tracking para el material de las aletas."]),
+- ("ETS-LP-04", "CONDUCTOR DE ALEACIÓN DE ALUMINIO AAAC 70 mm²",
++ ("ETS-LP-04", f"CONDUCTOR DE ALEACIÓN DE ALUMINIO AAAC {SECCION} mm²",
+   "Conductor desnudo de aleación de aluminio para las fases de la línea primaria.",
+   ["ASTM B398 Alambre de aleación de aluminio 6201-T81", "ASTM B399 Conductores cableados concéntricos AAAC", "IEC 61089", "R.D. N.° 026-2003-EM/DGE"],
+-  ["Conductor cableado concéntrico de 19 hilos de aleación 6201-T81, sin empalmes en los hilos durante el cableado (salvo los permitidos por ASTM B399).",
++  [f"Conductor cableado concéntrico de {CT['n']} hilos de aleación 6201-T81, sin empalmes en los hilos durante el cableado (salvo los permitidos por ASTM B399).",
+    "Se entregará en carretes de madera tratada o metálicos, con longitudes que minimicen empalmes (≥ 2 000 m por carrete)."],
+-  [("Sección nominal / real", "mm²", "70 / 65,8"), ("Número y diámetro de hilos", "N.° × mm", "19 × 2,10"), ("Diámetro exterior", "mm", "10,5"),
+-   ("Masa", "kg/km", "181"), ("Carga de rotura mínima", "kN", "19,5 (295,8 N/mm²)"), ("Módulo de elasticidad final", "N/mm²", "60 760"),
+-   ("Coeficiente de dilatación lineal", "1/°C", "23 × 10⁻⁶"), ("Resistencia eléctrica en c.c. a 20 °C", "Ω/km", "≤ 0,507")],
++  [("Sección nominal / real", "mm²", f"{SECCION} / {CT['real']}"), ("Número y diámetro de hilos", "N.° × mm", f"{CT['n']} × {CT['dw']}"), ("Diámetro exterior", "mm", CT["D"]),
++   ("Masa", "kg/km", CT["kg_km"]), ("Carga de rotura mínima", "kN", f"{CT['rot_kN']} (295,8 N/mm²)"), ("Módulo de elasticidad final", "N/mm²", "60 760"),
++   ("Coeficiente de dilatación lineal", "1/°C", "23 × 10⁻⁶"), ("Resistencia eléctrica en c.c. a 20 °C", "Ω/km", f"≤ {CT['R20']}")],
+   ["Ensayos de rutina sobre hilos (diámetro, tracción, alargamiento, resistividad) y sobre el conductor (masa, cableado, resistencia).",
+    "Ensayo de tensión-deformación (stress-strain) y de rotura del conductor como ensayo de tipo."]),
+  ("ETS-LP-05", "ACCESORIOS DEL CONDUCTOR",
+   "Varillas de armar, alambre y cinta de amarre, grapas de anclaje tipo pistola, conectores doble vía, conectores bimetálicos y manguitos de empalme.",
+   ["ASTM B398/B231", "IEC 61284 Herrajes para líneas aéreas", "R.D. N.° 026-2003-EM/DGE"],
+-  ["Varillas de armar preformadas de aleación de aluminio para AAAC 70 mm²; alambre de amarre de Al de 16 mm²; cinta plana de Al de 1,27 × 7,62 mm.",
++  [f"Varillas de armar preformadas de aleación de aluminio para AAAC {SECCION} mm²; alambre de amarre de Al de 16 mm²; cinta plana de Al de 1,27 × 7,62 mm.",
+    "Grapas de anclaje tipo pistola de aleación de aluminio con 3 pernos U de acero galvanizado; carga de deslizamiento ≥ 90 % de la rotura del conductor.",
+    "Conectores doble vía Al/Al de 3 pernos para 35–70 mm² y conectores bimetálicos Al/Cu para conexión de equipos.",
+    "Manguitos de empalme a compresión con resistencia ≥ 95 % de la rotura del conductor."],
+diff --git a/src/p14_docs_calculos.py b/src/p14_docs_calculos.py
+index 375f082..448bb2c 100644
+--- a/src/p14_docs_calculos.py
++++ b/src/p14_docs_calculos.py
+@@ -87,8 +87,8 @@ p(d, f"Se exige ΔV ≤ {_n(SIS['reserva_dV']*100)} % del límite (reserva por l
+      + (f"Resultado: AAAC {SECCION} mm²." if _opt == SECCION else
+         f"El óptimo económico resulta {_opt} mm²; se adopta AAAC {SECCION} mm² por estandarización del kit de materiales (troncal), que también cumple todos los criterios."
+         if el.get("kit_cumple", True) else f"ATENCIÓN: la sección del kit ({SECCION} mm²) NO cumple; ver Vol. VI 2.9 y reemplazar el kit."))
+-datos(d, [("Sección nominal / real", "70 / 65,8 mm²"), ("Diámetro exterior", "10,5 mm"), ("Masa", "0,181 kg/m"), ("Esfuerzo de rotura", "295,8 N/mm² (19,46 kN)"),
+-          ("Resistencia eléctrica a 20 °C", "0,507 Ω/km")])
++datos(d, [("Sección nominal / real", f"{SECCION} / {CT['real']} mm²"), ("Diámetro exterior", f"{CT['D']} mm"), ("Masa", f"{CT['kg_m']} kg/m"), ("Esfuerzo de rotura", f"295,8 N/mm² ({CT['rot_kN']} kN)"),
++          ("Resistencia eléctrica a 20 °C", f"{CT['R20']} Ω/km")])
+ h(d, "2.6.4 Parámetros de la línea primaria", 2)
+ formula(d, "R40 = R20 · [1 + α (40 − 20)]          XL = 2πf [0,5 + 4,6 log(DMG/re)] · 10⁻⁴ Ω/km")
+ formula(d, "DMG = (Y · D' · D')^(1/3)          D' = √[(Y/2)² + h²]")
+@@ -102,7 +102,7 @@ tabla(d, ["Tramo", "L (km)", "P (kW)", "ΔV acum. (%)", "PJ (kW)"],
+        for a, b, nd in zip(NODOS[:-1], NODOS[1:], el["nodos"])] +
+       [("Total línea", fmt(L, 3), fmt(K["dem"]["MD_anio20_kW"], 1), fmt(K["elec"]["dV"], 3), fmt(K["elec"]["PJ"], 2))],
+       titulo=f"Caída de tensión y pérdidas – año {A20}", widths=[6.4, 2.0, 2.4, 2.6, 2.2], bold_last=True)
+-p(d, f"Corriente máxima al año {A20}: {fmt(comp[comp.seleccion].I20_A.iloc[0],1)} A < 255 A de capacidad del AAAC 70 mm². Pérdidas: {fmt(K['elec']['PJ']/K['dem']['MD_anio20_kW']*100,2)} % "
++p(d, f"Corriente máxima al año {A20}: {fmt(comp[comp.seleccion].I20_A.iloc[0],1)} A < {AMP_SEL} A de capacidad del AAAC {SECCION} mm². Pérdidas: {fmt(K['elec']['PJ']/K['dem']['MD_anio20_kW']*100,2)} % "
+      f"de la máxima demanda; energía perdida {fmt(K['elec']['PE'],1)} MWh/año (Anexo 8).")
+ h(d, "2.6.6 Selección de pararrayos", 2)
+ datos(d, [("Tensión nominal del sistema (Vn)", "22,9 kV"), ("Factor de mayor variación de tensión (Ft)", "1,05 p.u."), ("Factor de falla a tierra (Ce)", "1,4 (neutro efectivamente a tierra)"),
+@@ -130,8 +130,8 @@ p(d, "La resistividad real se medirá en campo (método Wenner); el Anexo 3 cont
+ h(d, "2.7 Cálculos mecánicos")
+ h(d, "2.7.1 Cálculos mecánicos del conductor", 2)
+ p(d, "Determinan los esfuerzos horizontales y en los apoyos, las flechas, los parámetros de la catenaria, la plantilla de flecha máxima y los vanos peso y viento.")
+-tabla(d, ["Descripción", "AAAC 70 mm²"], [("Sección real (mm²)", "65,8"), ("Número de hilos", "19"), ("Diámetro exterior (mm)", "10,5"), ("Peso unitario (N/m)", fmt(K['mec']['w_c_N_m'], 4)),
+-                                         ("Carga de rotura (N)", "19 466"), ("Módulo de elasticidad final (N/mm²)", "60 760"), ("Coeficiente de dilatación (1/°C)", "23 × 10⁻⁶"),
++tabla(d, ["Descripción", f"AAAC {SECCION} mm²"], [("Sección real (mm²)", CT["real"]), ("Número de hilos", CT["n"]), ("Diámetro exterior (mm)", CT["D"]), ("Peso unitario (N/m)", fmt(K['mec']['w_c_N_m'], 4)),
++                                         ("Carga de rotura (N)", CT["rot_N"]), ("Módulo de elasticidad final (N/mm²)", "60 760"), ("Coeficiente de dilatación (1/°C)", "23 × 10⁻⁶"),
+                                          ("EDS inicial / final", "18 % / 15 % UTS"), ("Esfuerzo máximo admisible", "60 % UTS = 177,5 N/mm²")],
+       titulo="Características de los conductores utilizados", widths=[8.0, 4.0])
+ formula(d, "Wv = Pv · (D + 2e);   Wh = ρh · g · π[(D + 2e)² − D²]/4;   Wr = √[(Wc + Wh)² + Wv²];   Pv = K · V²  (K = " + fmt(K_VIENTO, 3) + ")")
+@@ -156,7 +156,7 @@ for hh, lab in (("H6 Temp. máxima", f"Flecha a {_n(TH6)} °C (H6)"), ("H4 Vient
+     g = mec[mec.hipotesis == hh]; ax.plot(g.vano_m, g.flecha_m, marker="o", ms=3, label=lab)
+ ax.set_xlabel("Vano (m)"); ax.set_ylabel("Flecha (m)"); ax.grid(alpha=.3); ax.legend(fontsize=8); fig.tight_layout()
+ fig.savefig(W / "prev" / "flechas.png", dpi=150); plt.close(fig)
+-imagen(d, W / "prev" / "flechas.png", 14.5, "Figura 2.1: Flechas del conductor AAAC 70 mm² por vano e hipótesis (Anexo 4)")
++imagen(d, W / "prev" / "flechas.png", 14.5, f"Figura 2.1: Flechas del conductor AAAC {SECCION} mm² por vano e hipótesis (Anexo 4)")
+ h(d, "2.7.2 Cálculo mecánico de soportes", 2)
+ datos(d, [("Velocidad / presión del viento", f"{_n(VMS,1)} m/s / {fmt(K_VIENTO*VMS**2,1)} Pa"), ("Vanos de la línea", f"{fmt(K['plan']['vano_min'],1)} a {fmt(K['plan']['vano_max'],1)} m"),
+           ("Postes", "CAC 12/300, 12/400, 13/400 daN"), ("Empotramiento", "he = L/10 + 0,60 m"), ("Punto de aplicación de la fuerza", "0,15 m bajo la punta"),
+@@ -199,7 +199,7 @@ p(d, f"Con Hb = 2,00 m, D = f = 0,80 m, γ = 1 500 kg/m³, θ = 23°, μ = 0,5:
+      "0,80 × 0,80 × 2,00 m.")
+ h(d, "2.8 Anexos")
+ bullets(d, ["Anexo 1: Selección del nivel de aislamiento y de aisladores para líneas primarias 22,9 kV.", "Anexo 2: Estudio de coordinación de aislamiento – selección de pararrayos.",
+-            "Anexo 3: Cálculo de resistencia de puesta a tierra.", "Anexo 4: Cálculo mecánico del conductor AAAC 70 mm² y tabla de templado.", "Anexo 5: Cimentación de estructuras.",
++            "Anexo 3: Cálculo de resistencia de puesta a tierra.", f"Anexo 4: Cálculo mecánico del conductor AAAC {SECCION} mm² y tabla de templado.", "Anexo 5: Cimentación de estructuras.",
+             "Anexo 6: Cálculo mecánico de estructuras, retenidas y crucetas (prestaciones por armado y verificación estructura por estructura).",
+             "Anexo 7: Cálculo de retenidas y bloque de anclaje.", "Anexo 8: Parámetros eléctricos, caída de tensión y pérdidas.",
+             "Anexo 9: Planilla de estructuras y verificación de distancias de seguridad por vano."])
+diff --git a/src/p15_paquete.py b/src/p15_paquete.py
+index 36ccb07..11163e7 100644
+--- a/src/p15_paquete.py
++++ b/src/p15_paquete.py
+@@ -108,7 +108,7 @@ h(d, "2. Decisiones de diseño")
+ _E = C["E"]; _nts = int((_E.armado == "TS-3").sum())
+ bullets(d, ["Armados normalizados (crucetas FºGº Tipo I, PIN ANSI 56-4, poliméricos 36 kV) con la nomenclatura PS1-3, PA1-3, PA2-3, TS-3, PR3-3, DT-3, PSER-3 y PTH-3.",
+             f"Equipos de clase 38 kV, 170 kV-BIL (altitud de diseño {fmt(C['ALT'],0)} m s.n.m.); pararrayos de 24 kV.",
+-            f"Conductor AAAC {SECCION} mm² (kit de materiales); óptimo económico calculado: {C['K']['el'].get('seccion_optima')} mm².",
++            f"Conductor AAAC {SECCION} mm² (adoptado); óptimo económico calculado: {C['K']['el'].get('seccion_optima')} mm².",
+             (f"Estructuras TS-3 en {_nts} ubicaciones con arrancamiento a temperatura mínima detectado por el cálculo del vano peso." if _nts else
+              "No se detectó arrancamiento en estructuras de suspensión."),
+             "Bloque de anclaje de retenidas en excavación de 0,80 × 0,80 × 2,00 m (FS ≥ 2).",
+diff --git a/src/params.py b/src/params.py
+index a41deee..b6953bc 100644
+--- a/src/params.py
++++ b/src/params.py
+@@ -2,7 +2,7 @@
+ El archivo se indica con la variable de entorno LP_CONFIG (la define generar.py).
+ Las constantes de normas (conductores, hipótesis, etc.) que no cambian entre proyectos están aquí; todo lo propio del
+ lugar viene del YAML."""
+-import os
++import math, os
+ from pathlib import Path
+ import yaml
+ 
+@@ -23,7 +23,7 @@ PROYECTO = {"nombre": _p["nombre"], "nombre_corto": _p["nombre_corto"], "ubicaci
+             "entidad": _p.get("entidad", "Por definir"), "proyectista": _p["proyectista"], "anio_base": int(_p["anio_base"]),
+             "horizonte": int(_p["horizonte"]), "departamento": _p["departamento"], "provincias": _p["provincias"],
+             "distritos": _p["distritos"], "concesionaria": _p.get("concesionaria", "la empresa concesionaria"),
+-            "iniciales": _p.get("iniciales", ""), "ciudad_fecha": _p.get("ciudad_fecha_caratula", _p["fecha"]).upper(),
++            "iniciales": _p.get("iniciales", ""), "revisor": _p.get("revisor", ""), "ciudad_fecha": _p.get("ciudad_fecha_caratula", _p["fecha"]).upper(),
+             "plazo_dias": int(_p.get("plazo_dias", 120))}
+ EPSG = int(CFG.get("epsg_utm", 32719))
+ ZONA_UTM = f"{EPSG - 32700} S" if EPSG > 32700 else f"{EPSG - 32600} N"
+@@ -87,8 +87,17 @@ PAT = {k: float(v) if k != "cada_n" else int(v) for k, v in _d["puesta_tierra"].
+ PLANT = {"vano_max": float(_d["vano_max_m"]), "vano_min": float(_d["vano_min_m"]), "paso": float(_d.get("paso_plantillado_m", 5)),
+          "anclaje_cada_m": float(_d.get("anclaje_cada_m", 3000))}
+ LF_MM_KV = float(_d.get("linea_fuga_mm_kV", 20))
+-SECCION = int(_d.get("conductor_mm2", 70))      # kit de materiales: AAAC 70 mm² (catálogo, láminas y anexos preparados para esta sección)
+-assert SECCION == 70, "El kit de materiales está preparado para AAAC 70 mm²; otra sección exige actualizar catalogo.py, p05 y los textos"
++SECCION = int(_d.get("conductor_mm2", 70))      # sección adoptada (mm²); precios del kit en catalogo.py -> COND_KIT
++assert SECCION in (35, 70), "El catálogo tiene precios de conductor y accesorios solo para AAAC 35 y 70 mm²"
++C_SEL = COND[SECCION]
++S_REAL = C_SEL["n"] * math.pi * (C_SEL["dw"] / 2) ** 2         # mm² real
++ROTURA_N = SIGMA_R * S_REAL
++AMP_SEL = {25: 135, 35: 170, 50: 210, 70: 255, 95: 320}[SECCION]  # A, catálogo referencial (Alfanar)
++RMG_K = {7: 0.726, 19: 0.758}                                  # RMG/radio según número de hilos
++_c = lambda x, n: f"{x:.{n}f}".replace(".", ",")
++CT = {"sec": f"{SECCION} mm²", "real": _c(S_REAL, 1), "n": str(C_SEL["n"]), "dw": _c(C_SEL["dw"], 2), "D": _c(C_SEL["D"], 1),
++      "kg_m": _c(C_SEL["kg_m"], 3), "kg_km": f"{C_SEL['kg_m'] * 1000:.0f}", "R20": _c(C_SEL["R20"], 3),
++      "rot_kN": _c(ROTURA_N / 1000, 2), "rot_N": f"{ROTURA_N:,.0f}".replace(",", " "), "amp": str(AMP_SEL)}
+ 
+ # ---------------------------------------------------------------- económico y textos
+ ECON = CFG.get("economico", {})
+diff --git a/src/planos_common.py b/src/planos_common.py
+index 6b33e5a..732e7ac 100644
+--- a/src/planos_common.py
++++ b/src/planos_common.py
+@@ -21,6 +21,7 @@ CAPAS = {
+     "CUADROS": 2, "CONDUCTOR": 1, "CRUZETAS": 157, "MATERIALES": 140, "HATCH": 8, "EQUIPOS": 30, "AISLADORES": 5, "NUMERACION": 2,
+ }
+ INI = PROYECTO.get("iniciales") or "".join(w[0] + "." for w in PROYECTO["proyectista"].split()[-3:])
++REV_INI = "".join(w[0].upper() + "." for w in PROYECTO["revisor"].split()) or "—"   # revisor (proyecto.yaml → proyecto.revisor)
+ 
+ 
+ def nuevo():
+@@ -111,7 +112,7 @@ def membrete_a4(msp, codigo, titulo, sub="", escala="S/E"):
+     L(msp, [(10, y0 + 10), (202, y0 + 10)], "MEMBRETE"); L(msp, [(10, y0 + 20), (202, y0 + 20)], "MEMBRETE")
+     for x in (52, 160): L(msp, [(x, y0), (x, y0 + h)], "MEMBRETE")
+     T(msp, "DISEÑO :", 12, y0 + 23, 1.8, "MEMBRETE"); T(msp, INI, 30, y0 + 23, 1.8, "MEMBRETE")
+-    T(msp, "REVISÓ :", 12, y0 + 13, 1.8, "MEMBRETE"); T(msp, "—", 30, y0 + 13, 1.8, "MEMBRETE")
++    T(msp, "REVISÓ :", 12, y0 + 13, 1.8, "MEMBRETE"); T(msp, REV_INI, 30, y0 + 13, 1.8, "MEMBRETE")
+     T(msp, "FECHA :", 12, y0 + 3, 1.8, "MEMBRETE"); T(msp, PROYECTO["fecha"].upper(), 26, y0 + 3, 1.8, "MEMBRETE")
+     T(msp, "PROYECTISTA:", 54, y0 + 26, 1.5, "MEMBRETE"); T(msp, PROYECTO["proyectista"].upper(), 106, y0 + 22.5, 2.0, "MEMBRETE", TA.BOTTOM_CENTER)
+     T(msp, PROYECTO["nombre"], 106, y0 + 13.2, 1.75, "MEMBRETE", TA.BOTTOM_CENTER)
+@@ -137,7 +138,7 @@ def membrete_grande(msp, W, H, codigo, titulo, escala_h, escala_v=None, hoja="")
+     T(msp, "PROYECTO:", x0 + 2, y0 + 19.5, 1.8, "MEMBRETE")
+     T(msp, PROYECTO["nombre"], x0 + 67, y0 + 13.5, 2.2, "MEMBRETE", TA.BOTTOM_CENTER)
+     T(msp, titulo, x0 + 67, y0 + 4, 2.8, "MEMBRETE", TA.BOTTOM_CENTER)
+-    for k, (a, b) in enumerate([("DIS. :", INI), ("DIB. :", "—"), ("REV. :", "—"), ("APR. :", "—")]):
++    for k, (a, b) in enumerate([("DIS. :", INI), ("DIB. :", INI), ("REV. :", REV_INI), ("APR. :", REV_INI)]):
+         yy = y0 + 39 - 12 * k
+         T(msp, a, x0 + 138, yy, 2.0, "MEMBRETE"); T(msp, b, x0 + 160, yy, 2.0, "MEMBRETE")
+     for k, (a, b) in enumerate(list(UBIC.items()) + [("FECHA", PROYECTO["fecha"].upper())]):

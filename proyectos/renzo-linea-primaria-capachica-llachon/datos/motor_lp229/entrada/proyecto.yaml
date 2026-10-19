@@ -12,7 +12,8 @@ proyecto:
   concesionaria: "Electro Puno S.A.A."
   entidad: "Por definir"                 # entidad que licita / financia
   proyectista: "Renzo Gabriel Mamani Galindo"   # sin CIP, firma ni sello
-  iniciales: "—"
+  iniciales: "R.G.M.G."
+  revisor: "Leonidas Vilca Callata"   # revisor y aprobador en el cajetín
   fecha: "Octubre 2026"                  # fecha del expediente (texto)
   ciudad_fecha_caratula: "PUNO – OCTUBRE – 2026"
   anio_base: 2027                        # año 0 del estudio de mercado
@@ -109,13 +110,13 @@ diseno:
   retenida: {cable: "Cable de acero galvanizado grado Siemens-Martin 10 mm (3/8\")", rotura_N: 30920.0, FS: 2.0, angulo_deg: 37.0}
   puesta_tierra: {rho: 100.0, L: 2.4, d: 0.016, cada_n: 3, R_equipo_max: 25.0}   # rho SUPUESTO: medir en campo
   linea_fuga_mm_kV: 20     # IEC 60815, contaminación media
-  conductor_mm2: 70        # kit de materiales (AAAC 70 mm²); el Vol. VI muestra además el óptimo económico
+  conductor_mm2: 35        # óptimo económico del Vol. VI (cumple ΔV con reserva, corriente y cortocircuito)
   cable_guarda: false
 
 # Parámetros económicos
 economico:
-  tipo_cambio: 3.453
-  tipo_cambio_fuente: "BCRP – Tipo de cambio SBS venta, 07/10/2026 (serie PD04640PD)"
+  tipo_cambio: 3.439
+  tipo_cambio_fuente: "BCRP – Tipo de cambio interbancario venta, cierre 16/10/2026"
   utilidad: 0.08
   igv: 0.18
   transporte_pct: 0.07

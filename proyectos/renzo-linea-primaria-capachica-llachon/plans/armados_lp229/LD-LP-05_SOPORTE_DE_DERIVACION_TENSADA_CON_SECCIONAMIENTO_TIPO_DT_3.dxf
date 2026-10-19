@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461332.9874421298
+2461333.381064815
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461332.9874421298
+2461333.381064815
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{3AE99EBE-9C46-4FF9-A15A-58A8A8182C01}
+{278E0D12-B39A-450E-8982-06BBFEE4FB8A}
   9
 $VERSIONGUID
   2
-{B2FA1924-A7FD-434C-BEB1-BDFC954DF9FB}
+{8ACAA9C7-F729-4FDF-9E5B-EBBF62D3316D}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -6213,7 +6213,7 @@ AcDbText
  40
 1.8
   1
-—
+R.G.M.G.
   7
 ARIAL
  11
@@ -6281,7 +6281,7 @@ AcDbText
  40
 1.8
   1
-—
+L.V.C.
   7
 ARIAL
  11
@@ -13129,7 +13129,7 @@ AcDbText
  40
 1.65
   1
-Varilla de armar preformada simple para conductor AAAC de 70 mm²
+Varilla de armar preformada simple para conductor AAAC de 35 mm²
   7
 ARIAL
  11
@@ -14869,7 +14869,7 @@ AcDbText
  40
 1.65
   1
-Conductor AAAC 70 mm² para puentes y conexión a equipos
+Conductor AAAC 35 mm² para puentes y conexión a equipos
   7
 ARIAL
  11
@@ -16159,7 +16159,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-19T04:41:55.594937+00:00
+1.4.4 @ 2026-10-19T14:08:44.724473+00:00
   0
 VISUALSTYLE
   5
@@ -22721,7 +22721,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-19T04:41:55.600142+00:00
+1.4.4 @ 2026-10-19T14:08:44.748284+00:00
   0
 ENDSEC
   0
