@@ -1,0 +1,62 @@
+{
+  "revision": "LP-R03-229KV",
+  "fecha": "2026-10-19",
+  "fuente": "LP-R02/comparacion_tensiones.csv de commit M01 f7c29c2",
+  "clase": "RESULTADO REUTILIZADO Y POSTPROCESADO, NO NUEVO ESTUDIO CERTIFICADO",
+  "tension_kV": 22.9,
+  "carga_kw": 171.486,
+  "carga_kva": 190.54,
+  "trafo_salida_entrada_kva_asumido": 250,
+  "trafo_salida_generador_tension_real_desconocida": true,
+  "casos": [
+    {
+      "fuente_pu": 1,
+      "mt_salida_kV": 22.132625,
+      "mt_llegada_kV": 22.076455,
+      "bt_v": 354.633876,
+      "corriente_linea_estimada_A": 5.188944,
+      "caida_linea_pct": 0.253789,
+      "perdida_linea_kw": 0.438818,
+      "fuente_kw": 182.027477,
+      "fuente_kva": 211.757819,
+      "desviacion_BT_pct": -6.675296,
+      "margen_nominal_200_kw": 17.972523,
+      "margen_con_25kw_Limbani": -7.027477
+    },
+    {
+      "fuente_pu": 1.025,
+      "mt_salida_kV": 22.729232,
+      "mt_llegada_kV": 22.674646,
+      "bt_v": 364.904989,
+      "corriente_linea_estimada_A": 5.042854,
+      "caida_linea_pct": 0.240161,
+      "perdida_linea_kw": 0.414457,
+      "fuente_kw": 181.769809,
+      "fuente_kva": 210.966501,
+      "desviacion_BT_pct": -3.972371,
+      "margen_nominal_200_kw": 18.230191,
+      "margen_con_25kw_Limbani": -6.769809
+    },
+    {
+      "fuente_pu": 1.05,
+      "mt_salida_kV": 23.324235,
+      "mt_llegada_kV": 23.271138,
+      "bt_v": 375.126347,
+      "corriente_linea_estimada_A": 4.905415,
+      "caida_linea_pct": 0.227647,
+      "perdida_linea_kw": 0.392173,
+      "fuente_kw": 181.534118,
+      "fuente_kva": 210.24555,
+      "desviacion_BT_pct": -1.28254,
+      "margen_nominal_200_kw": 18.465882,
+      "margen_con_25kw_Limbani": -6.534118
+    }
+  ],
+  "alertas": [
+    "La condición a 1.0 pu no cumple banda de estudio ±5% sobre 380V; verificar taps/AVR.",
+    "200kW no equivale a potencia firme, particularmente en estiaje.",
+    "No utilizar cifras para elegir protección y aislamiento sin transformadores reales.",
+    "LP-M01 de 10kV y su presupuesto no representan aún el diseño 22.9kV."
+  ],
+  "aprobacion_ingenieria": false
+}
