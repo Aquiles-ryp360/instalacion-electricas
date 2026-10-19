@@ -1,0 +1,12 @@
+El repositorio UNAP no responde desde esta PC (conexion rechazada). Descargar a mano en el navegador
+y guardar los PDF en esta carpeta:
+
+- Tesis SAIDI/SAIFI Puno (asesor D.Sc. Leonidas Vilca Callata, 2024):
+  https://repositorio.unap.edu.pe/server/api/core/bitstreams/405d89d9-b1ef-4fe7-93ce-3c9d424a51f5/content
+- Tesis FIME (controlador hibrido FV, agradece a Vilca Callata):
+  https://repositorio.unap.edu.pe/server/api/core/bitstreams/5c3b38d1-f9cd-416c-991e-c13d92d5c2e8/content
+- Tesis bateria ion-litio Titicaca (jurado):
+  https://repositorio.unap.edu.pe/handle/20.500.14082/23571
+- Buscar el resto: https://repositorio.unap.edu.pe  -> "Vilca Callata"
+  (hidrogeno por electrolisis FV 2024; energia de olas Amantani 2023; LT 60 kV Azangaro-Putina-Ananea;
+   bombeo solar Villacucho-Azangaro 2024; regulacion tension/frecuencia 2022)
