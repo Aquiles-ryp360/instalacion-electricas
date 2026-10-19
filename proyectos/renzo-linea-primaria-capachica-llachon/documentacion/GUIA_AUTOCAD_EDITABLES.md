@@ -31,7 +31,7 @@ Los DWG se guardaron con AutoCAD 2018. AUDIT no encontró errores. Se abren desd
 |---|---|
 | Armado o PAT de un poste | Doble clic en su cuadro (bloque `CUADRO_POSTE`) → editor de atributos (`EATTEDIT`). Los atributos son `NUMERO`, `ARMADO` y `PAT` |
 | Mover un poste | En Modelo, mover el bloque `POSTE_LP` y luego su cuadro y su línea de llamada |
-| Datos del cajetín (autor, revisor, fecha) | Son textos en cada lámina; con `FIND` se cambian en todas a la vez (p. ej. «POR DESIGNAR») |
+| Datos del cajetín (autor, revisor, fecha) | Son textos en cada lámina; con `FIND` se cambian en todas a la vez (p. ej. el nombre del autor) |
 | Ocultar algo | Desactivar su capa (tabla siguiente) |
 | Perfil y planimetría | Están dibujados en la propia lámina (espacio papel), en mm a escala H 1:5 000 y V según el cajetín |
 

@@ -42,7 +42,7 @@ CAJETIN = {
     "universidad": "UNIVERSIDAD NACIONAL DEL ALTIPLANO - PUNO",
     "proyecto": "LINEA PRIMARIA 22.9 kV(*) CAPACHICA - LLACHON",
     "ubicacion": "DIST. CAPACHICA - PROV. PUNO - REG. PUNO",
-    "autor": "POR DESIGNAR",
+    "autor": "RENZO GABRIEL MAMANI GALINDO",
     "revisado": "",
     "fecha": "18/10/2026",
     "revision": "REV. 6",

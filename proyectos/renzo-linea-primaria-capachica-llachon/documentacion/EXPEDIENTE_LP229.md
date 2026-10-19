@@ -48,7 +48,7 @@ Están marcados como SUPUESTO en el `proyecto.yaml` y en el Vol. XI:
 - Mecánica de suelos y cotizaciones.
 - Tipo de cambio: 3,453, tomado del ejemplo del motor; actualizar con el BCRP.
 - Plazo: 90 días.
-- Proyectista: «Por designar». El expediente no lleva CIP, firma ni sello.
+- Proyectista: Renzo Gabriel Mamani Galindo. El expediente no lleva CIP, firma ni sello.
 
 ## Regenerar
 
