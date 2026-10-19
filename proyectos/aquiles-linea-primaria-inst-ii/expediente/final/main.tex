@@ -1,0 +1,17 @@
+\documentclass[12pt,letterpaper]{report}
+\input{metadatos}\input{plantilla/estilo}\decimalpoint
+\newcommand{\un}[1]{\,\mathrm{#1}}
+\begin{document}\hypersetup{pageanchor=false}\pagenumbering{gobble}
+\input{plantilla/caratula}\clearpage
+\hypersetup{pageanchor=true}\pagenumbering{arabic}
+\begingroup\footnotesize\setlength{\cftbeforechapskip}{2pt}\setlength{\cftbeforesecskip}{0pt}\tableofcontents\endgroup\clearpage
+\input{capitulos/01-memoria}
+\input{capitulos/02-demanda}
+\input{capitulos/03-electrico}
+\input{capitulos/04-protecciones}
+\input{capitulos/05-mecanica}
+\input{capitulos/06-metrados}
+\input{capitulos/07-presupuesto}
+\input{capitulos/08-especificaciones}
+\input{capitulos/09-conclusiones}
+\input{capitulos/10-indice-grafico}\end{document}

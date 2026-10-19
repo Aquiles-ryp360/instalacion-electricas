@@ -12,7 +12,7 @@ Cada carpeta corresponde a un trabajo independiente. El alcance y el estado decl
 
 | Estudiante | Proyecto | Alcance y acceso |
 | --- | --- | --- |
-| Aquiles Taylor Ramos Yapo · 227368 | [Limbani–Huancasayani](aquiles-linea-primaria-inst-ii/README.md) | [LP-R02 / presentación P01: transporte en sistema aislado](aquiles-linea-primaria-inst-ii/proyecto.yaml). Expediente integrado, ZIP, cálculos, CAD, QGIS y KMZ propios. |
+| Aquiles Taylor Ramos Yapo · 227368 | [Limbani–Huancasayani](aquiles-linea-primaria-inst-ii/README.md) | [Entrega consolidada](aquiles-linea-primaria-inst-ii/entregables/proyecto-final/): un expediente con ecuaciones, metrados y planos; tres Excel con fórmulas y ZIP limpio. |
 | Renzo Gabriel Mamani Galindo · 228447 | [Capachica–Chifrón](renzo-linea-primaria-capachica/README.md) | [Variante con subestación y redes secundarias](renzo-linea-primaria-capachica/proyecto.yaml); consultar el dictamen de presentación auditada. |
 | Renzo Gabriel Mamani Galindo · 228447 | [Capachica–Chifrón: solo línea primaria](renzo-linea-primaria-capachica-v2/README.md) | [Alcance declarado de esta variante](renzo-linea-primaria-capachica-v2/proyecto.yaml); no se presupone que sustituya a la anterior. |
 | Renzo Gabriel Mamani Galindo · 228447 | [Capachica–Llachón](renzo-linea-primaria-capachica-llachon/README.md) | [Estado y entradas declaradas](renzo-linea-primaria-capachica-llachon/proyecto.yaml) · [Entrega académica](renzo-linea-primaria-capachica-llachon/ENTREGA_ACADEMICA_REV5/README.md). |

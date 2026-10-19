@@ -1,0 +1,34 @@
+\chapter{CORTOCIRCUITO Y PROTECCIONES}
+\section{Corrientes trifásicas de referencia}
+Se representa el generador de 250 kVA por $R_a=0.02$ pu y tres reactancias: $X_d''=0.20$ pu, $X_d'=0.30$ pu y $X_d=1.80$ pu. Se calculan las impedancias de secuencia positiva referidas a MT:
+\begin{align}
+Z_G&=(R_a+jX_d)\frac{V_n^2}{S_G},\\
+I_{k3,\mathrm{MT}}&=\frac{V_n}{\sqrt{3}|Z_G+Z_{T1}+Z_{\mathrm{LP}}|},\\
+I_{k3,\mathrm{BT}}&=\frac{V_n}{\sqrt{3}|Z_G+Z_{T1}+Z_{\mathrm{LP}}+Z_{T2}|}\frac{V_n}{V_{\mathrm{BT},n}}.
+\end{align}
+Para el punto MT de salida se omite la impedancia de línea. La tabla distingue el instante de cortocircuito y el punto eléctrico; no utiliza un único valor de corriente para toda la instalación.
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{MT salida A} & \textbf{MT llegada A} & \textbf{BT llegada A} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{MT salida A} & \textbf{MT llegada A} & \textbf{BT llegada A} \\ \midrule
+\endhead
+Subtransitorio & 55.360 & 53.385 & 1\,149.840 \\
+Transitorio & 40.075 & 39.083 & 885.134 \\
+Sostenido & 7.764 & 7.731 & 197.212 \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Esquema funcional de protección}
+La corriente sostenida de falla MT, aproximadamente 7.731 A en llegada, es inferior a la corriente de carga del escenario. Por ello la sobrecorriente convencional no se considera suficiente por sí sola para la fuente débil. El esquema funcional incorpora protección dependiente de tensión (51V), supervisión de tensión (27/59), frecuencia (81), falla a tierra y protección térmica, con disparo de interruptores y enclavamientos del sistema aislado.
+
+Se prevén TC/TT compatibles con la sensibilidad requerida, pararrayos en los extremos y transformación, seccionamiento visible y enclavamiento de puesta a tierra para mantenimiento. La relación de TC/TT y las curvas de relé no se deducen de corrientes tipo ni se presentan como ajustes de un equipo instalado.
+\section{Puesta a tierra y neutro}
+El caso de neutro resistivo se expresa con $I_N=5$ A y $t_N=10$ s como base académica. La resistencia equivalente a 10 kV sería:
+\begin{align}
+R_N&=\frac{10\,000}{\sqrt{3}(5)}=1\,154.701\ \Omega,\\
+P_N&=I_N^2R_N=28.868\ \mathrm{kW},\\
+W_N&=P_Nt_N=288.675\ \mathrm{kJ}.
+\end{align}
+El uso de transformador de neutro o conexión zigzag depende del grupo de transformación real. El valor resistivo no dimensiona por sí solo el aislamiento, régimen térmico ni tensiones de paso y contacto. El presupuesto incluye los conjuntos de puesta a tierra como unidades de montaje, sin atribuir resistividad medida al terreno.

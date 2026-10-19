@@ -7,22 +7,22 @@ autor: Aquiles Taylor Ramos Yapo
 denominacion: Estudiante
 codigo_estudiante: '227368'
 docente: null
-estado: Revisión académica con observaciones abiertas; sin aprobación para construcción
+estado: Proyecto académico de diseño; entrega consolidada para presentación
 modo: Aislado, sin SEIN
 alcance: MCH y transformación de salida - línea primaria - SE llegada Huancasayani;
   excluye redes de usuarios
 fuente_unica: datos/lp-r02/parametros.json
 resultados: revisiones/lp-r02/03-calculos/resultados.json
-documentos: expediente/lp-r02
-google_earth: revisiones/lp-r02/04-planos/LP_R02.kmz
+documentos: expediente/final
+google_earth: entregables/proyecto-final/04_Cartografia/Linea_Primaria.kmz
 biblioteca_normativa: ../../herramientas/biblioteca_dge/README.md
 antecedente_historico: archivo/red-urbana
 originales_locales: fuentes/local/lp-r01/antecedente
 revision_previa: LP-R01
 geometria_canonica: datos/lp-r02/geometria-base.json
-paquete_revision: revisiones/lp-r02
-cad_dxf_activo: entregables/linea-primaria-r02-presentacion/04-planos/LP_Limbani_Huancasayani_R02.dxf
-cad_dwg_activo: entregables/linea-primaria-r02-presentacion/04-planos/LP_Limbani_Huancasayani_R02.dwg
+paquete_revision: entregables/proyecto-final
+cad_dxf_activo: entregables/proyecto-final/03_Planos/Linea_Primaria.dxf
+cad_dwg_activo: entregables/proyecto-final/03_Planos/Linea_Primaria.dwg
 tension_confirmada_kv: null
 tension_alternativas_kv:
 - 10
@@ -34,18 +34,22 @@ entregables_previos_r01: entregables/linea-primaria-r01
 cad_dwg_previo_r01: entregables/linea-primaria-r01/cad/LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg
 constructor: scripts/lp_r02/construir.py
 verificador: scripts/lp_r02/verificar.py
-paquete_zip: revisiones/Limbani_Huancasayani_LP_R02.zip
-guia_pc: revisiones/README.md
+verificador_presentacion: scripts/lp_r02/entrega_final.py
+comando_verificacion_presentacion: python -X utf8 proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/entrega_final.py verificar
+paquete_zip: entregables/Proyecto_Linea_Primaria_Limbani_Huancasayani.zip
+guia_pc: README.md
 salida_regenerable: ../../build/aquiles-linea-primaria-inst-ii/lp-r02
 presentacion:
-  revision: P01
-  fecha: 2026-10-18
+  estado: Entrega consolidada
+  fecha: '2026-10-19'
   base_tecnica: LP-R02
-  resultados_tecnicos_modificados: false
-  carpeta: entregables/linea-primaria-r02-presentacion
-  expediente_integrado: entregables/linea-primaria-r02-presentacion/00-expediente-integrado/Expediente_integral_Linea_Primaria_LP_R02_P01.pdf
-  plantilla: ../../recursos/plantillas/expediente-aquiles
-  qgis: entregables/linea-primaria-r02-presentacion/04-planos/QGIS/Linea_Primaria_LP_R02.qgz
-  zip_url: https://github.com/gaelrenzo/instalacion-electricas/releases/download/lp-r02-p01-20261018/Proyecto_Final_Linea_Primaria_Limbani_Huancasayani_LP_R02_P01.zip
-  registro: documentacion/lp-r02/PRESENTACION_P01.md
+  carpeta: entregables/proyecto-final
+  expediente: entregables/proyecto-final/Expediente.pdf
+  paginas: 72
+  capitulos_editables: expediente/final/capitulos
+  qgis: entregables/proyecto-final/04_Cartografia/QGIS/Linea_Primaria.qgz
+  verificacion: documentacion/lp-r02/VALIDACION_ENTREGA_FINAL.json
   aprobacion_ingenieria: false
+paquete_revision_movil: revisiones/lp-r02
+paquete_zip_movil: revisiones/Limbani_Huancasayani_LP_R02.zip
+presentacion_anterior_conservada: entregables/linea-primaria-r02-presentacion

@@ -1,0 +1,79 @@
+\chapter{DEMANDA Y BALANCE DE POTENCIA}
+\section{Proyección de usuarios}
+La base corresponde a las viviendas ocupadas del Directorio INEI 2017, tomo 4, páginas 1713--1714, para los tres registros de Huancasayani empleados en el ámbito de estudio. Se aplica crecimiento geométrico de 1\% anual hasta 2026, con redondeo superior por localidad:
+\begin{equation}
+N_i=\left\lceil V_{i,2017}(1+r)^{2026-2017}\right\rceil,
+\qquad r=0.01.
+\end{equation}
+La vivienda proyectada representa un usuario potencial del escenario. No se suma la población distrital de Limbani a los registros de Huancasayani.
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.315789\linewidth-2\tabcolsep\relax}L{\dimexpr 0.131579\linewidth-2\tabcolsep\relax}L{\dimexpr 0.131579\linewidth-2\tabcolsep\relax}L{\dimexpr 0.131579\linewidth-2\tabcolsep\relax}L{\dimexpr 0.131579\linewidth-2\tabcolsep\relax}L{\dimexpr 0.157895\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Localidad} & \textbf{Viviendas 2017} & \textbf{Usuarios 2026} & \textbf{kW por usuario} & \textbf{Simult.} & \textbf{Demanda kW} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Localidad} & \textbf{Viviendas 2017} & \textbf{Usuarios 2026} & \textbf{kW por usuario} & \textbf{Simult.} & \textbf{Demanda kW} \\ \midrule
+\endhead
+Huancasayani Centro & 95 & 104 & 0.6 & 0.80 & 49.920 \\
+Huancasayani Bellavista & 140 & 154 & 0.6 & 0.80 & 73.920 \\
+Huancasayani Lince & 86 & 95 & 0.4 & 0.80 & 30.400 \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Demanda doméstica y complementaria}
+\begin{align}
+P_{\mathrm{dom}}&=\sum_i N_i\,p_i\,f_s\\
+&=104(0.6)(0.8)+154(0.6)(0.8)+95(0.4)(0.8)\notag\\
+&=154.240\ \mathrm{kW}.\notag
+\end{align}
+\begin{equation}
+P_{\mathrm{AP}}=60(0.0541)=3.246\ \mathrm{kW}.
+\end{equation}
+Los servicios se asignan en 3 kW para salud, 3 kW para educación y comunicaciones, 3 kW para agua/bombeo, 4 kW para comercio/talleres y 1 kW para servicios comunales. Son cargas académicas, con suma de 14 kW.
+\begin{equation}
+\boxed{P_D=154.240+3.246+14.000=171.486\ \mathrm{kW}}
+\end{equation}
+\begin{align}
+Q_D&=P_D\tan(\arccos 0.9)=83.054\ \mathrm{kvar},\\
+S_D&=\frac{P_D}{0.9}=190.540\ \mathrm{kVA}.
+\end{align}
+\section{Balance con la fuente aislada}
+La potencia de generación requerida incluye la pérdida en la línea, ambos transformadores y 5 kW de auxiliares. Para el caso desarrollado se obtiene:
+\begin{equation}
+P_{G,\mathrm{req}}=P_D+\Delta P_{T1}+\Delta P_{\mathrm{LP}}+\Delta P_{T2}+2P_0+P_{\mathrm{aux}}
+=183.326\ \mathrm{kW}.
+\end{equation}
+En esta expresión $\Delta P_{T1}$ y $\Delta P_{T2}$ representan exclusivamente pérdidas de cobre. Los consumos en vacío $2P_0$ se contabilizan una sola vez en los nodos del modelo.
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Oferta nominal kW} & \textbf{Reserva Limbani kW} & \textbf{Necesidad total kW} & \textbf{Margen kW} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Oferta nominal kW} & \textbf{Reserva Limbani kW} & \textbf{Necesidad total kW} & \textbf{Margen kW} \\ \midrule
+\endhead
+150 & 0 & 183.326 & -33.326 \\
+150 & 25 & 208.326 & -58.326 \\
+150 & 50 & 233.326 & -83.326 \\
+200 & 0 & 183.326 & 16.674 \\
+200 & 25 & 208.326 & -8.326 \\
+200 & 50 & 233.326 & -33.326 \\
+\bottomrule\end{longtable}\endgroup
+
+Con 200 kW y sin reserva simultánea para Limbani, el margen nominal es 16.674 kW. Al reservar 25 kW para Limbani, el balance arroja un déficit de 8.326 kW. Por ello la operación compartida se rige por el balance de potencia disponible y la gestión de carga; el valor nominal de 200 kW no garantiza el abastecimiento permanente de ambas demandas.
+\begin{equation}
+P_{G,\mathrm{req}}(P_H)+P_{\mathrm{Limbani}}\leq P_{\mathrm{disponible}}.
+\end{equation}
+\section{Crecimiento de demanda}
+Se aplica $P_{D,t}=P_{D,2026}(1.01)^{t-2026}$ al perfil de estudio. La transformación se contrasta con la potencia aparente de fuente, además de la potencia activa.
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Año} & \textbf{Carga kW} & \textbf{Generación kW} & \textbf{Fuente kVA} & \textbf{BT V} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Año} & \textbf{Carga kW} & \textbf{Generación kW} & \textbf{Fuente kVA} & \textbf{BT V} \\ \midrule
+\endhead
+2026 & 171.486 & 183.326 & 212.481 & 371.067 \\
+2036 & 189.427 & 202.694 & 235.941 & 367.794 \\
+2046 & 209.246 & 224.306 & 262.424 & 364.068 \\
+\bottomrule\end{longtable}\endgroup

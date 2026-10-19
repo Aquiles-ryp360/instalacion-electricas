@@ -1,0 +1,179 @@
+{
+  "fecha": "2026-10-19",
+  "revision_tecnica": "LP-R02",
+  "entrega": "presentacion consolidada",
+  "aprobacion_ingenieria": false,
+  "libros": {
+    "Calculos": {
+      "hojas": [
+        "Resumen",
+        "Demanda",
+        "Electrico",
+        "Flujo",
+        "Cortocircuito",
+        "Mecanica",
+        "Estados",
+        "Postes",
+        "Vanos",
+        "Parametros"
+      ],
+      "formulas": 10216,
+      "errores": [],
+      "recalculado_con_excel": true
+    },
+    "Metrados": {
+      "hojas": [
+        "Resumen",
+        "Postes",
+        "Vanos",
+        "Parametros"
+      ],
+      "formulas": 1672,
+      "errores": [],
+      "recalculado_con_excel": true
+    },
+    "Presupuesto": {
+      "hojas": [
+        "Presupuesto",
+        "Resumen",
+        "Postes",
+        "Vanos",
+        "Parametros"
+      ],
+      "formulas": 1705,
+      "errores": [],
+      "recalculado_con_excel": true
+    }
+  },
+  "presupuesto_referencial_pen": 2559924.11,
+  "paginas_expediente": 72,
+  "expedientes_principales": 1,
+  "resumenes_pdf": [
+    "Resumen_Calculos",
+    "Resumen_Metrados",
+    "Resumen_Presupuesto"
+  ],
+  "cad": {
+    "postes": 111,
+    "laminas": 19,
+    "referencias_dge": 23,
+    "delta_xy_m": 1.870812694540736e-09,
+    "contornos_y_tipos_coinciden": true,
+    "dwg_nativo": true,
+    "audit_errores": 0
+  },
+  "qgis": {
+    "version": "3.44.15-Solothurn",
+    "capas_validas": 11,
+    "postes": 111,
+    "diferencia_xy_m": 0.0,
+    "longitud_horizontal_m": 6696.368693212355,
+    "rutas_externas": 0,
+    "reabierto_tras_traslado": true
+  },
+  "ensayos_dinamicos_excel": {
+    "conteo_por_altura_actualiza": true,
+    "funcion_apoyo_actualiza_ramales_puentes_compra": true,
+    "fp_095": {
+      "bt_v": 376.49002422054855,
+      "generacion_kw": 182.5548912524374,
+      "kva": 198.6059591145791
+    },
+    "delta_presupuesto_por_un_sol_conductor": 31497.12000000011,
+    "cambios_de_ensayo_guardados": false
+  },
+  "geometria_datos": {
+    "postes": 111,
+    "vanos": 110,
+    "longitud_horizontal_m": 6696.368693212352,
+    "suministro_conductor_m": 21873
+  },
+  "zip": {
+    "nombre": "Proyecto_Linea_Primaria_Limbani_Huancasayani.zip",
+    "bytes": 29101073,
+    "sha256": "40ac386a8f663c69823e4ec931fb2fc8b5a70268acdc1708cdbf9c0f234fa824",
+    "archivos": 16
+  },
+  "archivos_entrega": [
+    {
+      "ruta": "01_Calculos/Calculos.xlsx",
+      "sha256": "2c3473db656914df8c48a1ce3aa146bc68c606042919cd6e92c56b0bedac1e17",
+      "bytes": 288062
+    },
+    {
+      "ruta": "01_Calculos/Resumen_Calculos.pdf",
+      "sha256": "bc75dc9354bd51b04c748ac7a1f1b6bacad93eb9346e6e6c47948a7d031a931e",
+      "bytes": 67983
+    },
+    {
+      "ruta": "02_Metrados/Metrados.xlsx",
+      "sha256": "1996abf8128ea3e7a8ea5f695d64af5a074c2a9bf252c89ce97da11d728e945b",
+      "bytes": 65068
+    },
+    {
+      "ruta": "02_Metrados/Resumen_Metrados.pdf",
+      "sha256": "8fd7a8fad3e737b158d863bc8a3b47d41774166a598583ab148da38461970b02",
+      "bytes": 66878
+    },
+    {
+      "ruta": "03_Planos/Linea_Primaria.dwg",
+      "sha256": "30c71c17e2b1681229c8052b2dd77151da51a2cd9433451c777075265d87fdb0",
+      "bytes": 10681336
+    },
+    {
+      "ruta": "03_Planos/Linea_Primaria.dxf",
+      "sha256": "b5e8910f5247f6a210db469ad37239c965323260932fd0cd79c90c4386737a4b",
+      "bytes": 37170668
+    },
+    {
+      "ruta": "04_Cartografia/Linea_Primaria.kmz",
+      "sha256": "0de26a12cc470630d7216ec912892842a056fd94c833893f08cfae4b5a3422ce",
+      "bytes": 3497
+    },
+    {
+      "ruta": "04_Cartografia/QGIS/Catastro-original.gpkg",
+      "sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8",
+      "bytes": 278528
+    },
+    {
+      "ruta": "04_Cartografia/QGIS/DEM-gabinete-30m.tif",
+      "sha256": "f68c10409142277e1d46e21ed1cd30367004f1ca580e1c82d1755248286411e5",
+      "bytes": 39663
+    },
+    {
+      "ruta": "04_Cartografia/QGIS/Linea_Primaria.gpkg",
+      "sha256": "1f61bd5b0d0a039e126a673bc3b565d4315d0323adc889396fa01fc0786c7f7d",
+      "bytes": 962560
+    },
+    {
+      "ruta": "04_Cartografia/QGIS/Linea_Primaria.qgz",
+      "sha256": "f922feb3c53d040005ac40a5d24b7ffa5177816b10b4b0c694eda4db86cac508",
+      "bytes": 25839
+    },
+    {
+      "ruta": "04_Cartografia/Vista_General.png",
+      "sha256": "9e42d98f38c8b90e79b41bc02c3b3074ca79eff4fb1f0885d1daf07d4b5f3f52",
+      "bytes": 1120389
+    },
+    {
+      "ruta": "05_Presupuesto/Presupuesto.xlsx",
+      "sha256": "742d0a69c866189effd56a08f856283f4ebd9ec1d5f19ef643a81809ada2b26e",
+      "bytes": 69158
+    },
+    {
+      "ruta": "05_Presupuesto/Resumen_Presupuesto.pdf",
+      "sha256": "218af20957373301f14293a33e50169b107dd85d7cd012da0596700ec181c097",
+      "bytes": 19108
+    },
+    {
+      "ruta": "Expediente.pdf",
+      "sha256": "da6732e54b835936ebcd8ff2ebeda2810894656f66135a5cf59e89b10190e44f",
+      "bytes": 21456962
+    },
+    {
+      "ruta": "LEEME.txt",
+      "sha256": "668f56507f90103ed0a52ec902f5f1aec89cb5d1e93fedf1932078e072806e25",
+      "bytes": 661
+    }
+  ]
+}

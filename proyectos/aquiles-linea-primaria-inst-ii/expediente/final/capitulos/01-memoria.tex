@@ -1,0 +1,36 @@
+\chapter{MEMORIA DESCRIPTIVA}
+\section{Objeto del proyecto}
+El proyecto desarrolla una línea primaria trifásica para transportar energía desde la transformación de salida de la minicentral de Limbani hasta la subestación de llegada en Huancasayani, provincia de Sandia, Puno. El sistema opera de forma aislada. El diseño de las redes secundarias y acometidas de usuarios queda fuera de este expediente.
+
+El alcance académico comprende el corredor georreferenciado, la demanda de transporte, el conductor, la transformación, el comportamiento eléctrico y mecánico, las cantidades de suministro y montaje, el presupuesto referencial y las láminas de planta, perfil y esquemas. Las cantidades y resultados de las hojas de cálculo se incorporan en los capítulos correspondientes.
+
+\section{Configuración del sistema}
+\begin{equation}
+\text{MCH}\;\longrightarrow\;T_1\;\longrightarrow\;\text{LP}\;\longrightarrow\;T_2\;\longrightarrow\;\text{Huancasayani}
+\end{equation}
+La línea se representa por un eje en planta, correspondiente a una terna de tres conductores AAAC de 50 mm$^2$. El caso de compatibilidad se calcula a 10 kV y se contrasta con 20, 22 y 22.9 kV. Los transformadores de salida y llegada se modelan con 250 kVA netos disponibles en el emplazamiento. La relación física y las prestaciones reales de los equipos no se infieren a partir del caso numérico.
+
+\section{Ficha del emplazamiento}
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.3\linewidth-2\tabcolsep\relax}L{\dimexpr 0.7\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Parámetro} & \textbf{Definición} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Parámetro} & \textbf{Definición} \\ \midrule
+\endhead
+Departamento / provincia / distrito & Puno / Sandia / Limbani \\
+Sistema de referencia & WGS 84 / UTM zona 19 Sur, EPSG:32719 \\
+Inicio del corredor & $E=425\,715.000\ \mathrm{m}$; $N=8\,436\,650.000\ \mathrm{m}$ \\
+Final del corredor & $E=423\,945.208\ \mathrm{m}$; $N=8\,430\,951.878\ \mathrm{m}$ \\
+Longitud horizontal & 6\,696.369 m \\
+Número de apoyos / vanos & 111 / 110 \\
+Modo de operación & Sistema aislado, sin interconexión inicial con el SEIN \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Procedencia y condiciones del diseño}
+Las coordenadas y el perfil proceden del corredor de gabinete, cartografía pública, catastro aportado y elevaciones DEM de aproximadamente 30 m. No constituyen un levantamiento topográfico de campo. Los emplazamientos de T1 y T2 son posiciones académicas del corredor; no se atribuye titularidad ni servidumbre aprobada a esos puntos.
+
+Las cargas de usuarios son proyecciones y asignaciones de diseño. Los datos de conductor, transformadores, generador y capacidad transversal de postes son datos tipo. La verificación resistente presentada cubre la flexión idealizada; no acredita capacidad axial, interacción N--M, geotecnia ni rigidez y pretensión reales de las retenidas. El anclaje R02-P019-2 presenta interferencia en la cartografía de referencia. Esta condición y las cargas ascendentes se identifican en las láminas y en la interpretación mecánica.
+
+La potencia nominal de referencia de 200 kW se utiliza para evaluar balances, sin convertirla en potencia firme de estiaje. El expediente corresponde al diseño académico de la línea primaria y conserva independencia respecto del dimensionamiento del curso de Centrales Hidroeléctricas.

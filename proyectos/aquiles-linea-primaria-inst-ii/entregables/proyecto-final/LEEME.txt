@@ -1,0 +1,14 @@
+LÍNEA PRIMARIA LIMBANI - HUANCASAYANI
+Instalaciones Eléctricas II
+Estudiante: Aquiles Taylor Ramos Yapo - 227368
+
+DOCUMENTO PRINCIPAL: Expediente.pdf
+Reúne memoria, ecuaciones, metrados desarrollados, presupuesto y planos.
+
+01_Calculos: libro con fórmulas y resumen de una página.
+02_Metrados: conteo de postes/armados, conductor y resumen de una página.
+03_Planos: CAD editable DXF/DWG, con láminas LP y referencias DGE.
+04_Cartografia: QGIS portable, Google Earth y vista general del corredor.
+05_Presupuesto: cantidades, precios referenciales y resumen de una página.
+
+Los planos y armados en PDF están incorporados en Expediente.pdf.

@@ -1,0 +1,108 @@
+\chapter{CÁLCULOS MECÁNICOS}
+\section{Estados de carga y datos de conductor}
+La carga de rotura tipo es RTS = 14\,700 N, el módulo elástico $E=62$ GPa, la sección real $A=49.5$ mm$^2$ y el coeficiente térmico $\alpha=2.3\times10^{-5}\ {}^\circ\mathrm{C}^{-1}$. El estado inicial se define a 15 °C:
+\begin{align}
+H_0&=0.15(14\,700)=2\,205\ \mathrm{N},\\
+q_0&=\frac{135}{1000}(9.80665)=1.323898\ \mathrm{N/m},\\
+EA&=62\times10^9(49.5\times10^{-6})=3\,069\,000\ \mathrm{N}.
+\end{align}
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}L{\dimexpr 0.2\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{T \ensuremath{^\circ}C} & \textbf{Viento m/s} & \textbf{Hielo mm} & \textbf{Fluencia} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{T \ensuremath{^\circ}C} & \textbf{Viento m/s} & \textbf{Hielo mm} & \textbf{Fluencia} \\ \midrule
+\endhead
+EDS & 15 & 0.0 & 0 & 0.000000 \\
+VIENTO & 5 & 29.0 & 0 & 0.000000 \\
+HIELO & 0 & 0.0 & 6 & 0.000000 \\
+COMBINADO & 0 & 14.5 & 3 & 0.000000 \\
+FRIO & -5 & 0.0 & 0 & 0.000000 \\
+CALOR\_\allowbreak{}FINAL & 75 & 0.0 & 0 & 0.000345 \\
+\bottomrule\end{longtable}\endgroup
+
+El peso adicional de hielo y la presión de viento se incorporan por estado:
+\begin{align}
+d_h&=d+2e_h,\\
+q_v&=q_0+\rho_hg\frac{\pi}{4}(d_h^2-d^2),\qquad \rho_h=913\ \mathrm{kg/m^3},\\
+p_v&=0.455v^2,\qquad q_w=p_vd_h.
+\end{align}
+La presión anterior es la formulación de estudio usada por el modelo. El viento de 29 m/s y el hielo se asignan a los estados de carga, mientras que el frío de --5 °C y la fluencia final de 345 microdeformaciones son sensibilidades académicas. No son registros medidos en el corredor.
+\section{Catenaria con desnivel y viento}
+En el plano de carga resultante, con $L$ horizontal, $\Delta z$ entre amarres y $q=\sqrt{q_v^2+q_w^2}$:
+\begin{align}
+d_y&=\Delta z\frac{q_v}{q},\qquad
+d_x=\sqrt{L^2+\Delta z^2-d_y^2},\\
+a&=\frac{H}{q},\qquad
+u=\operatorname{asinh}\!\left[\frac{d_y}{2a\sinh(d_x/2a)}\right],\\
+x_0&=\frac{d_x}{2}-au,\qquad
+u_0=-\frac{x_0}{a},\quad u_1=\frac{d_x-x_0}{a},\\
+L_c&=a[\sinh(u_1)-\sinh(u_0)],\\
+T_0&=H\cosh(u_0),\qquad T_1=H\cosh(u_1).
+\end{align}
+El cambio de estado conserva la longitud natural del conductor bajo la aproximación elástica de primer orden:
+\begin{align}
+L_n&=L_c-\frac{1}{EA}\int T\,ds,\\
+\int T\,ds&=H\left\{\frac{d_x}{2}+\frac{a}{4}[\sinh(2u_1)-\sinh(2u_0)]\right\},\\
+L_{n,2}&=L_{n,1}[1+\alpha(T_2-T_1)+\varepsilon_c].
+\end{align}
+La tracción de cada estado se resuelve por bisección. Para aisladores rígidos, cada vano conserva su propia condición geométrica; no se impone una tracción horizontal común a vanos desiguales.
+\section{Ejemplo desarrollado: vano V001}
+Para P001--P002, $L=47.146597$ m y $\Delta z=14.315387$ m. En EDS se toma $q=q_0$ y $H=H_0$:
+\begin{equation}
+a=\frac{2205}{1.32389775}=1665.536\ \mathrm{m},\qquad L_c=49.273525\ \mathrm{m}.
+\end{equation}
+La longitud de suministro de la terna de ese vano es $3L_c=147.820576$ m. La diferencia frente a $3L$ procede del desnivel y de la curvatura del conductor.
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.166667\linewidth-2\tabcolsep\relax}L{\dimexpr 0.166667\linewidth-2\tabcolsep\relax}L{\dimexpr 0.166667\linewidth-2\tabcolsep\relax}L{\dimexpr 0.166667\linewidth-2\tabcolsep\relax}L{\dimexpr 0.166667\linewidth-2\tabcolsep\relax}L{\dimexpr 0.166667\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{H N} & \textbf{T0 N} & \textbf{T1 N} & \textbf{Flecha m} & \textbf{Separación m} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{H N} & \textbf{T0 N} & \textbf{T1 N} & \textbf{Flecha m} & \textbf{Separación m} \\ \midrule
+\endhead
+EDS & 2\,205.0 & 2\,295.2 & 2\,314.1 & 0.174 & 9.688 \\
+VIENTO & 3\,281.3 & 3\,291.1 & 3\,310.0 & 0.122 & 9.719 \\
+HIELO & 3\,439.8 & 3\,568.5 & 3\,623.7 & 0.325 & 9.597 \\
+COMBINADO & 3\,344.7 & 3\,436.1 & 3\,469.6 & 0.205 & 9.669 \\
+FRIO & 3\,500.8 & 3\,649.3 & 3\,668.2 & 0.110 & 9.726 \\
+CALOR\_\allowbreak{}FINAL & 363.2 & 371.4 & 390.4 & 1.059 & 9.144 \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Momentos y capacidad tipo de postes}
+Se combinan fuerzas de extremo de los vanos adyacentes con su signo y dirección. El modelo aplica factores de estudio $\gamma_T=1.65$, $\gamma_V=1.5$ y $\gamma_W=2.5$. Se incluye el viento sobre el poste cónico. La capacidad tipo de flexión se expresa:
+\begin{equation}
+M_{Rd}=\phi\,k_r\,(10W)\,(h_p-e_p-e_0)/1000.
+\end{equation}
+Con $W=600$ daN, $\phi=0.65$, $k_r=2$, $h_p=13$ m, $e_p=1.9$ m y $e_0=0.15$ m:
+\begin{equation}
+M_{Rd}=0.65(2)(6000)(10.95)/1000=85.410\ \mathrm{kN\,m}.
+\end{equation}
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}L{\dimexpr 0.25\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Poste m} & \textbf{Empotr. m} & \textbf{Brazo m} & \textbf{Capacidad tipo kN\ensuremath{\cdot}m} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Poste m} & \textbf{Empotr. m} & \textbf{Brazo m} & \textbf{Capacidad tipo kN\ensuremath{\cdot}m} \\ \midrule
+\endhead
+13 & 1.9 & 10.95 & 85.410 \\
+15 & 2.1 & 12.75 & 99.450 \\
+17 & 2.1 & 14.75 & 115.050 \\
+\bottomrule\end{longtable}\endgroup
+
+\begin{equation}
+\eta_M=\frac{M_{Ed}}{M_{Rd}}.
+\end{equation}
+El máximo cociente de flexión del esquema con retenidas ideales es 0.598. Este resultado corresponde a la envolvente calculada y la capacidad transversal tipo; no es una verificación de carga axial ni de interacción N--M. Se mantienen 46 apoyos con reacción vertical ascendente en algún estado y 16 retenciones adicionales en el esquema académico.
+\section{Retenidas y anclajes}
+Las componentes horizontales longitudinales se equilibran mediante ramales ideales. Para ángulo vertical $\theta=45^\circ$:
+\begin{align}
+T_R&=\frac{F_H}{\cos\theta},\\
+T_{\mathrm{rot,adop}}&=10\left\lceil\frac{\max(60,T_R/0.9)}{10}\right\rceil\ \mathrm{kN},\\
+\eta_R&=\frac{T_R}{0.9T_{\mathrm{rot,adop}}}.
+\end{align}
+La resistencia mínima de suministro se conserva en 60 kN. La coordenada geométrica de cada anclaje no equivale a capacidad geotécnica; el modelo no introduce rigidez ni pretensión de cables de retenida.
+\section{Flecha y separación al terreno}
+El mínimo calculado respecto al perfil DEM heredado es 7.549 m, superior al margen académico de comparación de 7.5 m. La comparación se limita al perfil disponible y no acredita un gálibo topográfico real, la envolvente lateral por viento ni la ausencia de obstáculos. Las láminas muestran las cotas de gabinete y las condiciones mecánicas que sustentan esta interpretación.

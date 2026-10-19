@@ -69,3 +69,11 @@ El contenido técnico se publicó y verificó en `main` y `revision/lp-r02-audit
 La presentación P01 se registra en `PRESENTACION_P01.md` y `proyecto.yaml`, sin modificar los resultados técnicos LP-R02. La entrega está en `entregables/linea-primaria-r02-presentacion/`. Incluye expediente integrado con el formato de vivienda Aquiles, capítulos editables, DWG nativo guardado y reabierto con AutoCAD 2027 y QGIS 3.44.15 portable verificado. Las afirmaciones anteriores de «sólo DXF» y «sin QGIS» describen la generación móvil, conservada en `revisiones/lp-r02`, no esta continuación.
 
 El ZIP P01 completo se adjunta a la versión GitHub `lp-r02-p01-20261018` por superar 100 MiB. Mantener la copia móvil con su manifiesto y las fuentes recuperadas. El diseño sigue con sus observaciones abiertas; no cambiar la tensión ni trasladar el dimensionamiento del curso de Centrales Hidroeléctricas por haber mejorado la presentación.
+
+## Entrega consolidada para presentación — 19/10/2026
+
+La entrega activa pasa a `entregables/proyecto-final/Expediente.pdf` y `entregables/Proyecto_Linea_Primaria_Limbani_Huancasayani.zip`. Un expediente de 72 páginas integra ecuaciones LaTeX, los metrados por vano/apoyo, presupuesto y láminas. Tres libros con fórmulas y sus resúmenes PDF completan el ZIP limpio de 16 archivos. No reintroducir cuestionarios, listas de pendientes, plantillas ni versiones de memoria en el paquete del estudiante.
+
+Las condiciones reales no verificadas se explican como bases y límites del modelo dentro de la memoria; no se convierten en certificaciones ni se borran del registro técnico. El capítulo de metrados presenta cantidades y operaciones, no remite a una plantilla sin completar. El presupuesto es referencial académico con precios estimados identificados. La memoria no atribuye un levantamiento de campo ni una capacidad N-M certificada.
+
+Ver `PRESENTACION_FINAL.md`, `VALIDACION_ENTREGA_FINAL.json` y `expediente/final/`. Las copias móviles y P01 se conservan como antecedentes. El modelo eléctrico/mecánico sigue siendo LP-R02; no mezclar parámetros de Centrales Hidroeléctricas.

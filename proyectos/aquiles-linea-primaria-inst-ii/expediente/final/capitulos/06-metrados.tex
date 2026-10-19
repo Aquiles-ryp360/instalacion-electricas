@@ -1,0 +1,286 @@
+\chapter{METRADOS DESARROLLADOS}
+\section{Criterio de medición}
+Se mide un poste y un armado por apoyo, una retenida por ramal de anclaje y la longitud de conductor por catenaria EDS de cada fase. El metrado distingue longitud instalada, asignación de puentes y reserva de suministro. La suma procede de los 111 apoyos y 110 vanos representados en CAD y QGIS.
+\section{Conteo de postes y armados}
+\begin{align}
+N_P&=N_{13}+N_{15}+N_{17}=72+30+9=\boxed{111},\\
+N_A&=N_S+N_{\angle}+N_R+N_{R,\mathrm{ad}}+N_T\\
+&=30+41+22+16+2=\boxed{111},\notag\\
+N_{\mathrm{ret}}&=30(0)+(41+22+16)(2)+2(1)=\boxed{160}.
+\end{align}
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.444444\linewidth-2\tabcolsep\relax}L{\dimexpr 0.111111\linewidth-2\tabcolsep\relax}L{\dimexpr 0.296296\linewidth-2\tabcolsep\relax}L{\dimexpr 0.148148\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Partida} & \textbf{Unidad} & \textbf{Operación} & \textbf{Cantidad} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Partida} & \textbf{Unidad} & \textbf{Operación} & \textbf{Cantidad} \\ \midrule
+\endhead
+Poste CAC 13 m / 600 daN & ud & Conteo por altura & 72 \\
+Poste CAC 15 m / 600 daN & ud & Conteo por altura & 30 \\
+Poste CAC 17 m / 600 daN & ud & Conteo por altura & 9 \\
+Armado de suspensión & jgo & Conteo por función & 30 \\
+Armado de ángulo & jgo & Conteo por función & 41 \\
+Armado de anclaje & jgo & Conteo por función & 22 \\
+Retención adicional & jgo & Conteo por función & 16 \\
+Armado terminal & jgo & Conteo por función & 2 \\
+Retenida con anclaje & ud & Suma de ramales & 160 \\
+Transformación de salida y llegada & ud & 1 + 1 & 2 \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Conductor: tendido, puentes y reserva}
+\begin{align}
+L_{\mathrm{terna}}&=3\sum_{i=1}^{110}L_{c,i}=20\,274.360891\ \mathrm{m},\\
+L_{\mathrm{puentes}}&=3\,N_{\mathrm{ret}}\,l_p=3(160)(2)=960\ \mathrm{m},\\
+L_{\mathrm{res}}&=\left\lceil0.03(L_{\mathrm{terna}}+L_{\mathrm{puentes}})\right\rceil\\
+&=\left\lceil0.03(21\,234.360891)\right\rceil=638\ \mathrm{m},\notag\\
+L_{\mathrm{compra}}&=\left\lceil L_{\mathrm{terna}}+L_{\mathrm{puentes}}+L_{\mathrm{res}}\right\rceil\\
+&=\boxed{21\,873\ \mathrm{m}}.\notag
+\end{align}
+La asignación de 2 m por ramal y fase es el coeficiente geométrico adoptado para puentes y colas. El 3\% constituye una reserva adicional de suministro; ambos conceptos se separan para evitar contabilizarlos dos veces.
+\section{Planilla de medición por vano}
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.138889\linewidth-2\tabcolsep\relax}L{\dimexpr 0.138889\linewidth-2\tabcolsep\relax}L{\dimexpr 0.138889\linewidth-2\tabcolsep\relax}L{\dimexpr 0.166667\linewidth-2\tabcolsep\relax}L{\dimexpr 0.208333\linewidth-2\tabcolsep\relax}L{\dimexpr 0.208333\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Vano} & \textbf{Desde} & \textbf{Hasta} & \textbf{L XY m} & \textbf{Cable/fase m} & \textbf{Terna m} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Vano} & \textbf{Desde} & \textbf{Hasta} & \textbf{L XY m} & \textbf{Cable/fase m} & \textbf{Terna m} \\ \midrule
+\endhead
+V001 & P001 & P002 & 47.147 & 49.274 & 147.821 \\
+V002 & P002 & P003 & 47.147 & 48.979 & 146.936 \\
+V003 & P003 & P004 & 75.565 & 75.571 & 226.713 \\
+V004 & P004 & P005 & 75.565 & 75.578 & 226.733 \\
+V005 & P005 & P006 & 71.025 & 71.414 & 214.241 \\
+V006 & P006 & P007 & 71.025 & 71.077 & 213.232 \\
+V007 & P007 & P008 & 57.507 & 57.530 & 172.590 \\
+V008 & P008 & P009 & 70.114 & 70.144 & 210.432 \\
+V009 & P009 & P010 & 70.114 & 70.401 & 211.204 \\
+V010 & P010 & P011 & 50.214 & 51.298 & 153.895 \\
+V011 & P011 & P012 & 60.969 & 61.087 & 183.261 \\
+V012 & P012 & P013 & 54.308 & 54.426 & 163.279 \\
+V013 & P013 & P014 & 39.661 & 41.356 & 124.067 \\
+V014 & P014 & P015 & 71.825 & 72.911 & 218.734 \\
+V015 & P015 & P016 & 71.825 & 72.719 & 218.157 \\
+V016 & P016 & P017 & 71.825 & 72.040 & 216.120 \\
+V017 & P017 & P018 & 48.166 & 48.225 & 144.674 \\
+V018 & P018 & P019 & 48.046 & 48.221 & 144.663 \\
+V019 & P019 & P020 & 26.000 & 26.439 & 79.317 \\
+V020 & P020 & P021 & 26.306 & 26.466 & 79.398 \\
+V021 & P021 & P022 & 61.348 & 62.325 & 186.974 \\
+V022 & P022 & P023 & 61.348 & 62.010 & 186.031 \\
+V023 & P023 & P024 & 61.348 & 62.270 & 186.811 \\
+V024 & P024 & P025 & 73.110 & 73.146 & 219.438 \\
+V025 & P025 & P026 & 73.110 & 73.131 & 219.392 \\
+V026 & P026 & P027 & 73.110 & 73.434 & 220.302 \\
+V027 & P027 & P028 & 73.110 & 73.572 & 220.716 \\
+V028 & P028 & P029 & 59.013 & 59.255 & 177.764 \\
+V029 & P029 & P030 & 14.142 & 14.533 & 43.600 \\
+V030 & P030 & P031 & 81.902 & 82.312 & 246.937 \\
+V031 & P031 & P032 & 81.902 & 82.026 & 246.077 \\
+V032 & P032 & P033 & 73.460 & 73.614 & 220.843 \\
+V033 & P033 & P034 & 73.460 & 73.866 & 221.598 \\
+V034 & P034 & P035 & 73.460 & 73.466 & 220.398 \\
+V035 & P035 & P036 & 24.944 & 26.034 & 78.103 \\
+V036 & P036 & P037 & 20.005 & 23.640 & 70.920 \\
+V037 & P037 & P038 & 30.417 & 36.763 & 110.290 \\
+V038 & P038 & P039 & 75.725 & 75.745 & 227.236 \\
+V039 & P039 & P040 & 82.374 & 82.771 & 248.314 \\
+V040 & P040 & P041 & 82.374 & 85.461 & 256.384 \\
+V041 & P041 & P042 & 63.028 & 63.239 & 189.717 \\
+V042 & P042 & P043 & 49.879 & 50.249 & 150.746 \\
+V043 & P043 & P044 & 80.018 & 80.105 & 240.316 \\
+V044 & P044 & P045 & 80.018 & 80.462 & 241.386 \\
+V045 & P045 & P046 & 61.428 & 61.444 & 184.332 \\
+V046 & P046 & P047 & 61.428 & 61.448 & 184.343 \\
+V047 & P047 & P048 & 61.428 & 61.596 & 184.789 \\
+V048 & P048 & P049 & 38.438 & 39.697 & 119.091 \\
+V049 & P049 & P050 & 79.668 & 80.116 & 240.349 \\
+V050 & P050 & P051 & 57.855 & 57.858 & 173.574 \\
+V051 & P051 & P052 & 57.855 & 57.942 & 173.827 \\
+V052 & P052 & P053 & 82.715 & 85.479 & 256.436 \\
+V053 & P053 & P054 & 48.001 & 48.040 & 144.119 \\
+V054 & P054 & P055 & 48.001 & 48.020 & 144.059 \\
+V055 & P055 & P056 & 74.462 & 75.212 & 225.636 \\
+V056 & P056 & P057 & 81.912 & 82.473 & 247.419 \\
+V057 & P057 & P058 & 47.317 & 47.988 & 143.963 \\
+V058 & P058 & P059 & 47.317 & 49.892 & 149.675 \\
+V059 & P059 & P060 & 38.400 & 39.744 & 119.232 \\
+V060 & P060 & P061 & 68.153 & 68.211 & 204.634 \\
+V061 & P061 & P062 & 68.153 & 69.030 & 207.089 \\
+V062 & P062 & P063 & 68.153 & 69.349 & 208.046 \\
+V063 & P063 & P064 & 68.153 & 68.281 & 204.843 \\
+V064 & P064 & P065 & 56.009 & 57.174 & 171.522 \\
+V065 & P065 & P066 & 69.795 & 70.856 & 212.567 \\
+V066 & P066 & P067 & 69.795 & 69.885 & 209.655 \\
+V067 & P067 & P068 & 56.885 & 58.102 & 174.305 \\
+V068 & P068 & P069 & 56.885 & 57.713 & 173.138 \\
+V069 & P069 & P070 & 68.149 & 68.217 & 204.650 \\
+V070 & P070 & P071 & 68.149 & 68.176 & 204.529 \\
+V071 & P071 & P072 & 58.678 & 58.685 & 176.055 \\
+V072 & P072 & P073 & 58.678 & 59.787 & 179.360 \\
+V073 & P073 & P074 & 71.734 & 72.528 & 217.585 \\
+V074 & P074 & P075 & 71.734 & 71.917 & 215.751 \\
+V075 & P075 & P076 & 48.477 & 48.604 & 145.812 \\
+V076 & P076 & P077 & 53.078 & 53.088 & 159.265 \\
+V077 & P077 & P078 & 53.078 & 53.425 & 160.275 \\
+V078 & P078 & P079 & 71.770 & 71.780 & 215.341 \\
+V079 & P079 & P080 & 67.990 & 68.088 & 204.263 \\
+V080 & P080 & P081 & 80.009 & 80.666 & 241.998 \\
+V081 & P081 & P082 & 80.009 & 80.131 & 240.392 \\
+V082 & P082 & P083 & 80.009 & 80.700 & 242.099 \\
+V083 & P083 & P084 & 74.263 & 74.744 & 224.231 \\
+V084 & P084 & P085 & 74.263 & 74.629 & 223.888 \\
+V085 & P085 & P086 & 74.263 & 75.273 & 225.820 \\
+V086 & P086 & P087 & 37.018 & 37.216 & 111.648 \\
+V087 & P087 & P088 & 70.695 & 70.728 & 212.185 \\
+V088 & P088 & P089 & 55.408 & 56.013 & 168.038 \\
+V089 & P089 & P090 & 55.408 & 56.099 & 168.296 \\
+V090 & P090 & P091 & 63.217 & 63.326 & 189.978 \\
+V091 & P091 & P092 & 45.089 & 45.292 & 135.876 \\
+V092 & P092 & P093 & 52.391 & 52.413 & 157.239 \\
+V093 & P093 & P094 & 48.255 & 48.901 & 146.703 \\
+V094 & P094 & P095 & 49.360 & 49.866 & 149.597 \\
+V095 & P095 & P096 & 71.763 & 71.988 & 215.964 \\
+V096 & P096 & P097 & 71.763 & 71.798 & 215.395 \\
+V097 & P097 & P098 & 71.763 & 72.199 & 216.597 \\
+V098 & P098 & P099 & 71.763 & 72.733 & 218.199 \\
+V099 & P099 & P100 & 71.763 & 71.788 & 215.363 \\
+V100 & P100 & P101 & 45.536 & 45.718 & 137.153 \\
+V101 & P101 & P102 & 45.536 & 45.598 & 136.794 \\
+V102 & P102 & P103 & 47.979 & 48.706 & 146.117 \\
+V103 & P103 & P104 & 47.979 & 47.990 & 143.970 \\
+V104 & P104 & P105 & 77.615 & 78.012 & 234.036 \\
+V105 & P105 & P106 & 77.615 & 77.792 & 233.377 \\
+V106 & P106 & P107 & 58.600 & 58.604 & 175.811 \\
+V107 & P107 & P108 & 58.600 & 58.799 & 176.398 \\
+V108 & P108 & P109 & 43.960 & 44.144 & 132.431 \\
+V109 & P109 & P110 & 38.097 & 38.100 & 114.300 \\
+V110 & P110 & P111 & 19.702 & 19.726 & 59.178 \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Planilla de cantidades por apoyo}
+La columna de puentes corresponde a $3n_R(2\ \mathrm{m})$. Las funciones se expresan como S (suspensión), A (ángulo), R (anclaje), RA (retención adicional) y T (terminal).
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.133333\linewidth-2\tabcolsep\relax}L{\dimexpr 0.133333\linewidth-2\tabcolsep\relax}L{\dimexpr 0.133333\linewidth-2\tabcolsep\relax}L{\dimexpr 0.133333\linewidth-2\tabcolsep\relax}L{\dimexpr 0.16\linewidth-2\tabcolsep\relax}L{\dimexpr 0.16\linewidth-2\tabcolsep\relax}L{\dimexpr 0.146667\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Poste} & \textbf{Altura m} & \textbf{Función} & \textbf{Postes ud} & \textbf{Armados jgo} & \textbf{Retenidas ud} & \textbf{Puentes m} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Poste} & \textbf{Altura m} & \textbf{Función} & \textbf{Postes ud} & \textbf{Armados jgo} & \textbf{Retenidas ud} & \textbf{Puentes m} \\ \midrule
+\endhead
+P001 & 13 & T & 1 & 1 & 1 & 6 \\
+P002 & 13 & S & 1 & 1 & 0 & 0 \\
+P003 & 15 & R & 1 & 1 & 2 & 12 \\
+P004 & 15 & S & 1 & 1 & 0 & 0 \\
+P005 & 15 & A & 1 & 1 & 2 & 12 \\
+P006 & 17 & S & 1 & 1 & 0 & 0 \\
+P007 & 15 & A & 1 & 1 & 2 & 12 \\
+P008 & 13 & A & 1 & 1 & 2 & 12 \\
+P009 & 13 & RA & 1 & 1 & 2 & 12 \\
+P010 & 13 & A & 1 & 1 & 2 & 12 \\
+P011 & 13 & R & 1 & 1 & 2 & 12 \\
+P012 & 13 & A & 1 & 1 & 2 & 12 \\
+P013 & 13 & R & 1 & 1 & 2 & 12 \\
+P014 & 13 & R & 1 & 1 & 2 & 12 \\
+P015 & 15 & S & 1 & 1 & 0 & 0 \\
+P016 & 15 & S & 1 & 1 & 0 & 0 \\
+P017 & 13 & A & 1 & 1 & 2 & 12 \\
+P018 & 13 & S & 1 & 1 & 0 & 0 \\
+P019 & 13 & A & 1 & 1 & 2 & 12 \\
+P020 & 13 & A & 1 & 1 & 2 & 12 \\
+P021 & 13 & A & 1 & 1 & 2 & 12 \\
+P022 & 13 & S & 1 & 1 & 0 & 0 \\
+P023 & 15 & S & 1 & 1 & 0 & 0 \\
+P024 & 17 & S & 1 & 1 & 0 & 0 \\
+P025 & 17 & S & 1 & 1 & 0 & 0 \\
+P026 & 15 & RA & 1 & 1 & 2 & 12 \\
+P027 & 15 & S & 1 & 1 & 0 & 0 \\
+P028 & 15 & A & 1 & 1 & 2 & 12 \\
+P029 & 13 & RA & 1 & 1 & 2 & 12 \\
+P030 & 15 & A & 1 & 1 & 2 & 12 \\
+P031 & 17 & S & 1 & 1 & 0 & 0 \\
+P032 & 15 & A & 1 & 1 & 2 & 12 \\
+P033 & 15 & S & 1 & 1 & 0 & 0 \\
+P034 & 15 & S & 1 & 1 & 0 & 0 \\
+P035 & 13 & R & 1 & 1 & 2 & 12 \\
+P036 & 13 & R & 1 & 1 & 2 & 12 \\
+P037 & 13 & R & 1 & 1 & 2 & 12 \\
+P038 & 13 & R & 1 & 1 & 2 & 12 \\
+P039 & 17 & A & 1 & 1 & 2 & 12 \\
+P040 & 17 & RA & 1 & 1 & 2 & 12 \\
+P041 & 17 & A & 1 & 1 & 2 & 12 \\
+P042 & 17 & A & 1 & 1 & 2 & 12 \\
+P043 & 15 & A & 1 & 1 & 2 & 12 \\
+P044 & 15 & RA & 1 & 1 & 2 & 12 \\
+P045 & 13 & R & 1 & 1 & 2 & 12 \\
+P046 & 13 & S & 1 & 1 & 0 & 0 \\
+P047 & 13 & RA & 1 & 1 & 2 & 12 \\
+P048 & 13 & R & 1 & 1 & 2 & 12 \\
+P049 & 13 & R & 1 & 1 & 2 & 12 \\
+P050 & 13 & A & 1 & 1 & 2 & 12 \\
+P051 & 13 & RA & 1 & 1 & 2 & 12 \\
+P052 & 13 & R & 1 & 1 & 2 & 12 \\
+P053 & 13 & A & 1 & 1 & 2 & 12 \\
+P054 & 13 & S & 1 & 1 & 0 & 0 \\
+P055 & 13 & A & 1 & 1 & 2 & 12 \\
+P056 & 13 & R & 1 & 1 & 2 & 12 \\
+P057 & 13 & R & 1 & 1 & 2 & 12 \\
+P058 & 13 & RA & 1 & 1 & 2 & 12 \\
+P059 & 13 & A & 1 & 1 & 2 & 12 \\
+P060 & 15 & A & 1 & 1 & 2 & 12 \\
+P061 & 15 & S & 1 & 1 & 0 & 0 \\
+P062 & 13 & RA & 1 & 1 & 2 & 12 \\
+P063 & 13 & S & 1 & 1 & 0 & 0 \\
+P064 & 13 & R & 1 & 1 & 2 & 12 \\
+P065 & 15 & A & 1 & 1 & 2 & 12 \\
+P066 & 15 & S & 1 & 1 & 0 & 0 \\
+P067 & 15 & A & 1 & 1 & 2 & 12 \\
+P068 & 15 & S & 1 & 1 & 0 & 0 \\
+P069 & 13 & A & 1 & 1 & 2 & 12 \\
+P070 & 13 & RA & 1 & 1 & 2 & 12 \\
+P071 & 13 & A & 1 & 1 & 2 & 12 \\
+P072 & 13 & RA & 1 & 1 & 2 & 12 \\
+P073 & 15 & A & 1 & 1 & 2 & 12 \\
+P074 & 17 & S & 1 & 1 & 0 & 0 \\
+P075 & 15 & A & 1 & 1 & 2 & 12 \\
+P076 & 13 & A & 1 & 1 & 2 & 12 \\
+P077 & 13 & RA & 1 & 1 & 2 & 12 \\
+P078 & 13 & A & 1 & 1 & 2 & 12 \\
+P079 & 13 & A & 1 & 1 & 2 & 12 \\
+P080 & 13 & A & 1 & 1 & 2 & 12 \\
+P081 & 13 & S & 1 & 1 & 0 & 0 \\
+P082 & 13 & RA & 1 & 1 & 2 & 12 \\
+P083 & 13 & A & 1 & 1 & 2 & 12 \\
+P084 & 13 & S & 1 & 1 & 0 & 0 \\
+P085 & 13 & RA & 1 & 1 & 2 & 12 \\
+P086 & 13 & A & 1 & 1 & 2 & 12 \\
+P087 & 13 & A & 1 & 1 & 2 & 12 \\
+P088 & 13 & R & 1 & 1 & 2 & 12 \\
+P089 & 13 & S & 1 & 1 & 0 & 0 \\
+P090 & 15 & A & 1 & 1 & 2 & 12 \\
+P091 & 15 & R & 1 & 1 & 2 & 12 \\
+P092 & 13 & R & 1 & 1 & 2 & 12 \\
+P093 & 13 & R & 1 & 1 & 2 & 12 \\
+P094 & 13 & R & 1 & 1 & 2 & 12 \\
+P095 & 13 & A & 1 & 1 & 2 & 12 \\
+P096 & 15 & S & 1 & 1 & 0 & 0 \\
+P097 & 15 & S & 1 & 1 & 0 & 0 \\
+P098 & 13 & RA & 1 & 1 & 2 & 12 \\
+P099 & 15 & S & 1 & 1 & 0 & 0 \\
+P100 & 15 & A & 1 & 1 & 2 & 12 \\
+P101 & 13 & S & 1 & 1 & 0 & 0 \\
+P102 & 13 & A & 1 & 1 & 2 & 12 \\
+P103 & 13 & S & 1 & 1 & 0 & 0 \\
+P104 & 13 & A & 1 & 1 & 2 & 12 \\
+P105 & 13 & S & 1 & 1 & 0 & 0 \\
+P106 & 13 & A & 1 & 1 & 2 & 12 \\
+P107 & 13 & RA & 1 & 1 & 2 & 12 \\
+P108 & 13 & R & 1 & 1 & 2 & 12 \\
+P109 & 13 & R & 1 & 1 & 2 & 12 \\
+P110 & 13 & A & 1 & 1 & 2 & 12 \\
+P111 & 13 & T & 1 & 1 & 1 & 6 \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Alcance de partidas de montaje}
+Los postes instalados y las retenidas con anclaje se valoran como conjuntos de montaje en el presupuesto referencial. No se convierte una geometría esquemática de cimentación en volumen civil certificado. Por ello el metrado cuantifica unidades electromecánicas y longitudes de conductor, mientras el precio de los conjuntos incluye la cimentación tipo de su hipótesis económica.
