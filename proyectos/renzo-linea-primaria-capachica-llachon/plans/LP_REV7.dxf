@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461333.003090278
+2461333.0214699074
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461333.003101852
+2461333.0214814814
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{7546CAF5-88C1-4782-80D1-D87C092ED423}
+{E06C9401-763A-4E8A-A4A8-C6285E0E830F}
   9
 $VERSIONGUID
   2
-{A124BCE5-ED54-4E6F-B8CC-778BF66B403E}
+{3E04E465-E6D7-4E4B-8E38-771BCC8AB3F5}
   9
 $EXTNAMES
 290
@@ -7367,7 +7367,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -9877,7 +9877,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -12421,7 +12421,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -14965,7 +14965,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -17509,7 +17509,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -20053,7 +20053,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -22597,7 +22597,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -25141,7 +25141,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -27685,7 +27685,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -30229,7 +30229,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -32773,7 +32773,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -35317,7 +35317,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -265417,7 +265417,7 @@ AcDbViewport
  72
 100
  90
-0
+16384
   1
 
 281
@@ -269425,7 +269425,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-19T05:04:27.947141+00:00
+1.4.4 @ 2026-10-19T05:30:55.709306+00:00
   0
 VISUALSTYLE
   5
@@ -275987,9 +275987,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276029,7 +276029,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -276115,9 +276115,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276157,7 +276157,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -276243,9 +276243,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276285,7 +276285,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -276371,9 +276371,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276413,7 +276413,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -276499,9 +276499,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276541,7 +276541,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -276627,9 +276627,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276669,7 +276669,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -276755,9 +276755,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276797,7 +276797,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -276883,9 +276883,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -276925,7 +276925,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277011,9 +277011,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277053,7 +277053,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277139,9 +277139,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277181,7 +277181,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277267,9 +277267,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277309,7 +277309,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277395,9 +277395,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277437,7 +277437,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277523,9 +277523,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277565,7 +277565,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277651,9 +277651,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277693,7 +277693,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277779,9 +277779,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277821,7 +277821,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -277907,9 +277907,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -277949,7 +277949,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278035,9 +278035,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -278077,7 +278077,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278163,9 +278163,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -278205,7 +278205,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278291,9 +278291,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -278333,7 +278333,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278419,9 +278419,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -278461,7 +278461,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278547,9 +278547,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -278589,7 +278589,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278675,9 +278675,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -278717,7 +278717,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278803,9 +278803,9 @@ AcDbPlotSettings
   1
 
   2
-DWG to PDF.pc3
+DWG To PDF.pc3
   4
-ezdxf_(420.00_x_297.00_MM)
+ISO_full_bleed_A3_(420.00_x_297.00_MM)
   6
 
  40
@@ -278845,7 +278845,7 @@ ezdxf_(420.00_x_297.00_MM)
  74
 5
   7
-
+acad.ctb
  75
 16
  76
@@ -278931,7 +278931,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-19T05:04:28.613982+00:00
+1.4.4 @ 2026-10-19T05:30:56.411627+00:00
   0
 ENDSEC
   0
