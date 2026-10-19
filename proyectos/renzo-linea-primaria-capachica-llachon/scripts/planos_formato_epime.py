@@ -196,7 +196,14 @@ def _rect(lay, x0, y0, x1, y1, layer="ROTULO"):
     lay.add_lwpolyline([(x0, y0), (x1, y0), (x1, y1), (x0, y1)], close=True, dxfattribs={"layer": layer})
 
 
-def dibujar_modelo(msp, filas, segs):
+def leer_cruces_rev3() -> list[tuple[str, float, float]]:
+    if not CRUCES.is_file():
+        return []
+    with CRUCES.open(encoding="utf-8-sig", newline="") as f:
+        return [(r["id"], float(r["este_utm19s_m"]), float(r["norte_utm19s_m"])) for r in csv.DictReader(f)]
+
+
+def dibujar_modelo(msp, filas, segs, cruces=None):
     k = ESCALA_PLANTA / 1000.0   # m de modelo por mm de papel
     for s in segs.values():
         msp.add_lwpolyline(s, dxfattribs={"layer": "RP_CONDUCTOR", "const_width": 0.25 * k})
@@ -246,12 +253,9 @@ def dibujar_modelo(msp, filas, segs):
             g = w.get("geometry") or []
             if len(g) > 1:
                 msp.add_lwpolyline([TO_UTM.transform(q["lon"], q["lat"]) for q in g], dxfattribs={"layer": "VIAS"})
-    if CRUCES.is_file():
-        with CRUCES.open(encoding="utf-8-sig", newline="") as f:
-            for r in csv.DictReader(f):
-                x, y = float(r["este_utm19s_m"]), float(r["norte_utm19s_m"])
-                msp.add_circle((x, y), 1.8 * k, dxfattribs={"layer": "CRUCES"})
-                _t(msp, x + 2.2 * k, y - 3.2 * k, r["id"], 1.2 * k, "CRUCES")
+    for ident, x, y in leer_cruces_rev3() if cruces is None else cruces:
+        msp.add_circle((x, y), 1.8 * k, dxfattribs={"layer": "CRUCES"})
+        _t(msp, x + 2.2 * k, y - 3.2 * k, ident, 1.2 * k, "CRUCES")
 
 
 def ventanas(pts, ancho_m, alto_m):
@@ -289,7 +293,7 @@ def cajetin(lay, tema, plano, hoja, escala):
     _t(lay, x0 + 26, rows[3] + 3.5, CAJETIN["proyecto"], 3.0)
     _t(lay, x0 + 3, rows[2] + 6.5, "ESCALA", 1.8)
     _t(lay, x0 + 30, rows[2] + 6.5, "FECHA", 1.8)
-    _t(lay, x0 + 3, rows[2] + 2, escala, 2.6)
+    _t(lay, x0 + 3, rows[2] + 2, escala, 2.6 if len(escala) <= 8 else 1.6)
     _t(lay, x0 + 30, rows[2] + 2, CAJETIN["fecha"], 2.4)
     _t(lay, x0 + 58, rows[2] + 3.5, "TEMA:", 2.0)
     _t(lay, x0 + 72, rows[2] + 3.5, tema, 2.6)
@@ -305,18 +309,21 @@ def cajetin(lay, tema, plano, hoja, escala):
     _t(lay, x1 - 17.5, y0 + 6, hoja, 2.6, align=TextEntityAlignment.MIDDLE_CENTER)
 
 
-def leyenda(lay, filas, x, y, k_papel=1.0):
-    cnt = lambda key, val: sum(1 for f in filas if f[key] == val)
+LEYENDA = {"retenida": "RETENIDA SIMPLE R-1", "pat": "PUESTA A TIERRA PAT-3", "empalmes": 3, "cruces": 44}
+
+
+def leyenda(lay, filas, x, y):
     n_ret = sum(int(f["retenida"][0]) for f in filas if f["retenida"] != "NINGUNA")
     L = sum(float(f["vano_anterior_m"]) for f in filas)
     items = [
-        ("POSTE_LP", len(filas), "POSTE DE C.A.C. 12 m (PROYECTADO)"),
-        ("RETENIDA", n_ret, "RETENIDA SIMPLE R-1"),
-        ("PAT", sum(1 for f in filas if f["pat"] != "NINGUNO"), "PUESTA A TIERRA PAT-3"),
+        ("POSTE_LP", len(filas), "POSTE DE C.A.C. " + "/".join(sorted({f["tipo_poste"].split()[-1].split("/")[0] for f in filas})) + " m (PROYECTADO)"),
+        ("RETENIDA", n_ret, LEYENDA["retenida"]),
+        ("PAT", sum(1 for f in filas if f["pat"] != "NINGUNO"), LEYENDA["pat"]),
         ("LINEA", f"{L:,.0f} m", f"CONDUCTOR {CONDUCTOR} - {TENSION}"),
-        ("EMPALME", 3, "EMPALME ENTRE TRAMOS KML (POR LEVANTAR)"),
-        ("CRUCE", "44", "CRUCE VIAL OSM (VERIFICAR EN CAMPO)"),
+        ("EMPALME", LEYENDA["empalmes"], "EMPALME ENTRE TRAMOS KML (POR LEVANTAR)"),
+        ("CRUCE", LEYENDA["cruces"], "CRUCE VIAL OSM (VERIFICAR EN CAMPO)"),
     ]
+    items = [it for it in items if it[1] != 0]
     _t(lay, x, y + 4, "LEYENDA", 2.4, "RP_LEYENDA")
     for n, (sym, q, txt) in enumerate(items):
         yy = y - n * 6
@@ -343,9 +350,9 @@ def cuadro_tipos(lay, filas, x, y):
         grupos[key] = grupos.get(key, 0) + 1
     for n, ((motivo, arm, ret, pat), q) in enumerate(sorted(grupos.items(), key=lambda kv: (kv[0][1], kv[0][0]))):
         yy = y - 4.2 * (n + 1)
-        for v, dx in ((motivo.capitalize(), 0), (arm, 32), (POSTE[arm].replace("CAC ", ""), 50),
+        for v, dx in ((motivo.capitalize(), 0), (arm, 32), (next(f["tipo_poste"] for f in filas if f["armado"] == arm).replace("CAC ", ""), 50),
                       (ret.replace("NINGUNA", "-"), 72), (pat.replace("NINGUNO", "-"), 90), (q, 104),
-                      (DESCRIPCION[arm], 116)):
+                      (DESCRIPCION.get(arm, ""), 116)):
             _t(lay, x + dx, yy, v, 1.5, "RP_LEYENDA")
     _t(lay, x + 80, y - 4.2 * (len(grupos) + 1), f"TOTAL DE POSTES      {len(filas)}", 1.8, "RP_LEYENDA")
 
@@ -358,19 +365,26 @@ def generar(out_dxf: Path = OUT_DXF, out_csv: Path = OUT_CSV, out_pdf: Path | No
         w.writeheader()
         w.writerows(filas)
 
+    return armar_doc(filas, segs, out_dxf, out_pdf)
+
+
+def armar_doc(filas, segs, out_dxf, out_pdf, cruces=None, extra=None, n_extra=0) -> dict:
+    """Modelo UTM + LP-01 ubicación, plantas, [láminas extra], cuadro final.
+
+    extra(doc, nueva, primer_numero, n_total) agrega n_extra presentaciones tras las plantas."""
     doc = ezdxf.new("R2018", setup=True)
     doc.header["$INSUNITS"] = 6
     doc.styles.add("ROMANS", font="romans.shx") if "ROMANS" not in doc.styles else None
     _layers(doc)
     _blocks(doc)
     msp = doc.modelspace()
-    dibujar_modelo(msp, filas, segs)
+    dibujar_modelo(msp, filas, segs, cruces)
 
     pts = [(float(f["este_m"]), float(f["norte_m"])) for f in filas]
     vw, vh = VP[2] - VP[0], VP[3] - VP[1]
     k = ESCALA_PLANTA / 1000.0
     vents = ventanas(pts, vw * k, vh * k)
-    n_total = len(vents) + 2
+    n_total = len(vents) + 2 + n_extra
     def nueva(nombre):
         lay = doc.layouts.new(nombre)
         if "Layout1" in doc.layouts:
@@ -420,6 +434,9 @@ def generar(out_dxf: Path = OUT_DXF, out_csv: Path = OUT_CSV, out_pdf: Path | No
         leyenda(lay, filas, 15, 52)
         cajetin(lay, "RED DE LINEA PRIMARIA - PLANTA", nombre, f"{n + 2:02d}/{n_total:02d}", f"1:{ESCALA_PLANTA}")
 
+    if extra:
+        extra(doc, nueva, len(vents) + 2, n_total)
+
     # cuadro de estructuras
     nombre = f"LP-{n_total:02d}"
     lay = nueva(nombre)
@@ -448,6 +465,9 @@ def escala_grafica(lay, x, y, escala):
     _t(lay, x, y - 3.5, f"ESCALA GRAFICA 1:{escala}", 1.6)
 
 
+UNIFILAR = {"seccionamiento": "SECC. CUT-OUT 27 kV", "pararrayos": "PARARRAYOS 21 kV"}
+
+
 def unifilar(lay, x, y, filas):
     L = sum(float(f["vano_anterior_m"]) for f in filas)
     _t(lay, x, y + 32, "DIAGRAMA UNIFILAR", 3.0, "UNIFILAR")
@@ -458,13 +478,13 @@ def unifilar(lay, x, y, filas):
     # seccionador fusible tipo expulsión (cut-out)
     lay.add_line((x + 14, y), (x + 22, y + 4), dxfattribs={"layer": "UNIFILAR"})
     _rect(lay, x + 16, y + 0.5, x + 20, y + 2.5, "UNIFILAR")
-    _t(lay, x + 12, y - 5, "SECC. CUT-OUT 27 kV", 1.5, "UNIFILAR")
+    _t(lay, x + 12, y - 5, UNIFILAR["seccionamiento"], 1.5, "UNIFILAR")
     lay.add_line((x + 22, y), (x + 30, y), dxfattribs={"layer": "UNIFILAR"})
     # pararrayos
     lay.add_line((x + 26, y), (x + 26, y - 6), dxfattribs={"layer": "UNIFILAR"})
     _rect(lay, x + 24.8, y - 10, x + 27.2, y - 6, "UNIFILAR")
     lay.add_blockref("PAT", (x + 26, y - 10), dxfattribs={"layer": "RP_PTIERRA"})
-    _t(lay, x + 22, y - 17, "PARARRAYOS 21 kV", 1.5, "UNIFILAR")
+    _t(lay, x + 22, y - 17, UNIFILAR["pararrayos"], 1.5, "UNIFILAR")
     lay.add_line((x + 30, y), (x + 120, y), dxfattribs={"layer": "RP_CONDUCTOR", "lineweight": 50})
     for xx in (x + 55, x + 57, x + 59):
         lay.add_line((xx - 1, y - 1.5), (xx + 1, y + 1.5), dxfattribs={"layer": "UNIFILAR"})
@@ -482,7 +502,7 @@ def datos_tecnicos(lay, x, y, filas):
         "CARACTERISTICAS TECNICAS",
         f"Tension nominal: {TENSION}   Sistema: trifasico 3 hilos",
         f"Conductor: {CONDUCTOR}",
-        "Postes: concreto armado centrifugado 12 m",
+        "Postes C.A.C.: " + ", ".join(sorted({f["tipo_poste"].replace("CAC ", "") for f in filas})),
         "Aislamiento: polimerico (pin y suspension)",
         f"Longitud total: {L:,.0f} m   Estructuras: {len(filas)}",
         f"Vano max/prom: {max(vanos):.0f} / {sum(vanos) / len(vanos):.0f} m",
@@ -541,6 +561,8 @@ def exportar_autocad(dxf: Path, accore: Path = ACCORE) -> None:
     import subprocess
     import tempfile
     dwg, pdf = dxf.with_suffix(".dwg"), dxf.with_suffix(".pdf")
+    for viejo in (dwg, pdf):   # si existen, AutoCAD pregunta si reemplazar y se queda esperando
+        viejo.unlink(missing_ok=True)
     scr = Path(tempfile.mkdtemp()) / "exportar.scr"
     scr.write_text(f'FILEDIA 0\n_.SAVEAS 2018 "{dwg}"\n_.LAYOUT _Set LP-01\n'
                    f'_-EXPORT _P _A "{pdf}"\n_.QUIT _Y\n', encoding="ascii")

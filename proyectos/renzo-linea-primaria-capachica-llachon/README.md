@@ -1,5 +1,8 @@
 # Capachica–Llachón: anteproyecto y planos AutoCAD
 
+> **Planos Rev. 7, ingeniería del motor LP 22,9 kV + formato EPIME (23 láminas A3):** [PDF](plans/LP_REV7.pdf) · editables [DWG](plans/LP_REV7.dwg) / [DXF](plans/LP_REV7.dxf) · [14 láminas de armados](plans/armados_lp229/) · [explicación](documentacion/PLANOS_REV7_MOTOR_LP229.md).
+> 122 estructuras con plantillado sobre DEM (motor de D. H. Ccora), plantas 1:5000 y 9 hojas de perfil y planimetría con conductor a flecha máxima y distancia de seguridad.
+
 > **Planos Rev. 6, formato EPIME (13 láminas A3):** [PDF](plans/LP_REV6.pdf) · editables [DWG](plans/LP_REV6.dwg) / [DXF](plans/LP_REV6.dxf) · [estructuras CSV](datos/estructuras_propuesta_academica_rev6.csv) · [formato e hipótesis](documentacion/FORMATO_PLANOS_EPIME_REV6.md).
 > Siguen la forma de dibujo del proyecto de curso Conima–Tilali: cajetín EPIME, plantas 1:5000 con 168 postes numerados, cuadro por poste, vanos, retenidas, PAT, leyenda con cantidades, unifilar y cuadro de coordenadas. La distribución de postes es una **propuesta académica por replantear**.
 
