@@ -1,0 +1,85 @@
+diff --git a/src/oficina.py b/src/oficina.py
+index d382c56..17a3344 100644
+--- a/src/oficina.py
++++ b/src/oficina.py
+@@ -1,4 +1,4 @@
+-"""Puente con LibreOffice (gratuito) para: recalcular libros Excel y convertir Word/Excel a PDF.
++"""Puente con LibreOffice (gratuito) o, en Windows sin LibreOffice, con Microsoft Office, para: recalcular libros Excel y convertir Word/Excel a PDF.
+ Funciona en Windows, macOS y Linux. Si LibreOffice no está en el PATH, defina la variable de entorno
+ SOFFICE con la ruta completa del ejecutable (p. ej. C:\\Program Files\\LibreOffice\\program\\soffice.exe)."""
+ import os, shutil, subprocess, sys, tempfile
+@@ -8,10 +8,53 @@ CANDIDATOS = [r"C:\Program Files\LibreOffice\program\soffice.exe", r"C:\Program
+               "/Applications/LibreOffice.app/Contents/MacOS/soffice", "/usr/bin/soffice", "/usr/local/bin/soffice", "/opt/libreoffice/program/soffice"]
+ 
+ 
+-def soffice():
++def _buscar_soffice():
+     exe = os.environ.get("SOFFICE") or shutil.which("soffice") or shutil.which("libreoffice")
+-    if not exe:
+-        exe = next((c for c in CANDIDATOS if Path(c).exists()), None)
++    return exe or next((c for c in CANDIDATOS if Path(c).exists()), None)
++
++
++def _usar_office():
++    """Sin LibreOffice, en Windows se usa Microsoft Excel/Word por COM (pywin32) si están instalados."""
++    if _buscar_soffice() or sys.platform != "win32":
++        return False
++    try:
++        import win32com.client  # noqa: F401
++        return True
++    except ImportError:
++        return False
++
++
++def _office_a_pdf(archivos, carpeta_salida):
++    import win32com.client
++    carpeta_salida = Path(carpeta_salida).resolve(); carpeta_salida.mkdir(parents=True, exist_ok=True)
++    for a in archivos:
++        a = Path(a).resolve(); pdf = str(carpeta_salida / (a.stem + ".pdf"))
++        if a.suffix.lower() == ".docx":
++            app = win32com.client.DispatchEx("Word.Application"); app.Visible = False; app.DisplayAlerts = 0
++            try:
++                doc = app.Documents.Open(str(a), ReadOnly=True); doc.Fields.Update(); doc.SaveAs2(pdf, FileFormat=17); doc.Close(False)
++            finally:
++                app.Quit()
++        else:
++            app = win32com.client.DispatchEx("Excel.Application"); app.Visible = False; app.DisplayAlerts = False
++            try:
++                wb = app.Workbooks.Open(str(a), ReadOnly=True); wb.ExportAsFixedFormat(0, pdf); wb.Close(False)
++            finally:
++                app.Quit()
++
++
++def _excel_recalcular(xlsx):
++    import win32com.client
++    app = win32com.client.DispatchEx("Excel.Application"); app.Visible = False; app.DisplayAlerts = False
++    try:
++        wb = app.Workbooks.Open(str(Path(xlsx).resolve())); app.CalculateFull(); wb.Save(); wb.Close(False)
++    finally:
++        app.Quit()
++    return errores_excel(xlsx)[0]
++
++
++def soffice():
++    exe = _buscar_soffice()
+     if not exe:
+         sys.exit("ERROR: no se encontró LibreOffice. Instálelo (https://www.libreoffice.org) o defina la variable SOFFICE.")
+     return exe
+@@ -27,6 +70,8 @@ def _run(args, timeout=1800):
+ def a_pdf(archivos, carpeta_salida):
+     """Convierte .docx/.xlsx a PDF en la carpeta indicada."""
+     archivos = [Path(a) for a in archivos]
++    if archivos and _usar_office():
++        return _office_a_pdf(archivos, carpeta_salida)
+     if archivos:
+         _run(["--convert-to", "pdf", "--outdir", carpeta_salida] + archivos)
+ 
+@@ -35,6 +80,8 @@ def recalcular(xlsx):
+     """Abre el libro en LibreOffice, calcula todas las fórmulas y lo guarda (los valores quedan en caché
+     para que Python y cualquier visor los lean). Devuelve el número de celdas con error (#VALUE!, #REF!, …)."""
+     xlsx = Path(xlsx)
++    if _usar_office():
++        return _excel_recalcular(xlsx)
+     with tempfile.TemporaryDirectory(prefix="lo_recalc_") as tmp:
+         _run(["--convert-to", "xlsx:Calc MS Excel 2007 XML", "--outdir", tmp, xlsx])
+         out = Path(tmp) / xlsx.name

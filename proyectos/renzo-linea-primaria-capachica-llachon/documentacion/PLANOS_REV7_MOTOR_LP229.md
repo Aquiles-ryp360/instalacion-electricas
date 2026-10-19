@@ -54,10 +54,9 @@ Láminas en `plans/LP_REV7.*` (23 en total):
   Hay que confirmarlos con Electro Puno.
 - El DEM de 30 m no sirve para replantear; se necesita topografía.
 - El clima es de SENAMHI Puno sin verificar.
-- Los pasos 4–6 y 11 del motor (anexos, presupuesto y verificación) no se ejecutaron. Requieren LibreOffice.
-- Parte de la línea pasa de los 3 950 m s.n.m.
-  El README del motor advierte que, a esa altitud, el aislador PIN 56-4 puede no alcanzar la línea de fuga.
-  Su paso 11 lo verificaría.
+- La línea va de 3 813 a 3 867 m s.n.m. El valor de 4 238 m citado arriba es la cota máxima del recuadro del DEM (cerros vecinos), no de la línea.
+  El motor verificó el aislamiento a 3 900 m de altitud de diseño y salió CONFORME, aunque con poco margen: PIN 56-4, línea de fuga requerida de 681 mm frente a los 685 mm disponibles.
+- Expediente completo de 11 volúmenes: ver [EXPEDIENTE_LP229.md](EXPEDIENTE_LP229.md).
 
 ## Regenerar
 
