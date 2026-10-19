@@ -1,5 +1,8 @@
 # Capachica–Llachón: anteproyecto y planos AutoCAD
 
+> **Planos Rev. 6, formato EPIME (13 láminas A3):** [PDF](plans/LP_REV6.pdf) · editables [DWG](plans/LP_REV6.dwg) / [DXF](plans/LP_REV6.dxf) · [estructuras CSV](datos/estructuras_propuesta_academica_rev6.csv) · [formato e hipótesis](documentacion/FORMATO_PLANOS_EPIME_REV6.md).
+> Siguen la forma de dibujo del proyecto de curso Conima–Tilali: cajetín EPIME, plantas 1:5000 con 168 postes numerados, cuadro por poste, vanos, retenidas, PAT, leyenda con cantidades, unifilar y cuadro de coordenadas. La distribución de postes es una **propuesta académica por replantear**.
+
 > **Expediente Técnico Compilado Rev. 5:** [Abrir Expediente Compilado PDF (19 páginas)](EXPEDIENTE_TECNICO_CAPACHICA_LLACHON_REV5_COMPILADO.pdf) · [Copia en expediente/](expediente/expediente_linea_primaria_capachica_llachon_compilado.pdf).  
 > Integra memoria descriptiva, criterios normativos DGE/CNE, memorias de cálculo eléctrico y mecánico, cuadro de estructuras (40 postes PC GIS, 27 candidatos PN, 44 cruces CV), metrados y las **11 láminas de planos A3** completas.
 >
