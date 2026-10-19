@@ -39,3 +39,7 @@ def test_dxf_con_hojas_de_perfil(tmp_path):
     assert len({l.dxf_layout.dxf.taborder for l in lays}) == len(lays)
     assert len(doc.modelspace().query('INSERT[name=="POSTE_LP"]')) == info["estructuras"] == 122
     assert sum(len(l.query('LWPOLYLINE[layer=="PP_CONDUCTOR"]')) for l in lays) == info["estructuras"] - 1
+    for l in lays:   # listas para imprimir en AutoCAD sin reconfigurar
+        assert l.dxf_layout.dxf.paper_size == "ISO_full_bleed_A3_(420.00_x_297.00_MM)"
+        assert l.dxf_layout.dxf.current_style_sheet == "acad.ctb"
+        assert all(v.dxf.flags & 16384 for v in l.query("VIEWPORT") if v.dxf.status > 1)

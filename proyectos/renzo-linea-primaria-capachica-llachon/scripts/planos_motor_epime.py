@@ -313,6 +313,8 @@ def main():
     print(json.dumps(generar(out_pdf=None if a.autocad else OUT_PDF), ensure_ascii=False))
     if a.autocad:
         pe.exportar_autocad(OUT_DXF)
+        for dxf in sorted((OUT_DXF.parent / "armados_lp229").glob("*.dxf")):
+            pe.dxf_a_dwg(dxf)
 
 
 if __name__ == "__main__":

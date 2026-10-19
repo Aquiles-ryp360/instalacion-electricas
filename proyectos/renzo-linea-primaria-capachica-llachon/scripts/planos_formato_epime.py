@@ -389,7 +389,9 @@ def armar_doc(filas, segs, out_dxf, out_pdf, cruces=None, extra=None, n_extra=0)
         lay = doc.layouts.new(nombre)
         if "Layout1" in doc.layouts:
             doc.layouts.delete("Layout1")
-        lay.page_setup(size=A3, margins=(0, 0, 0, 0), units="mm")
+        lay.page_setup(size=A3, margins=(0, 0, 0, 0), units="mm", device="DWG To PDF.pc3")
+        lay.dxf_layout.dxf.paper_size = "ISO_full_bleed_A3_(420.00_x_297.00_MM)"   # nombre que AutoCAD reconoce
+        lay.dxf_layout.dxf.current_style_sheet = "acad.ctb"   # imprime a color, como Conima-Tilali
         return lay
 
     # LP-01 ubicación + unifilar
@@ -446,6 +448,9 @@ def armar_doc(filas, segs, out_dxf, out_pdf, cruces=None, extra=None, n_extra=0)
 
     for n, lay in enumerate(l for l in doc.layouts if l.name != "Model"):
         lay.dxf_layout.dxf.taborder = n + 1   # AutoCAD omite láminas con taborder repetido
+        for v in lay.query("VIEWPORT"):
+            if v.dxf.status > 1:
+                v.dxf.flags |= 16384   # ventana bloqueada: un zoom no cambia la escala de la lámina
     doc.saveas(out_dxf)
     if out_pdf:
         exportar_pdf(doc, out_pdf)
@@ -556,6 +561,21 @@ def exportar_pdf(doc, path: Path):
 ACCORE = Path(r"C:\Program Files\Autodesk\AutoCAD 2027\accoreconsole.exe")
 
 
+def dxf_a_dwg(dxf: Path, accore: Path = ACCORE) -> Path:
+    """DXF -> DWG 2018 revisado con AUDIT y encuadrado, para abrir directo en AutoCAD."""
+    import subprocess
+    import tempfile
+    dwg = dxf.with_suffix(".dwg")
+    dwg.unlink(missing_ok=True)
+    scr = Path(tempfile.mkdtemp()) / "dwg.scr"
+    scr.write_text(f'FILEDIA 0\n_.AUDIT _Y\n_.ZOOM _E\n_.SAVEAS 2018 "{dwg}"\n_.QUIT _Y\n', encoding="ascii")
+    subprocess.run([str(accore), "/i", str(dxf), "/s", str(scr)], cwd=scr.parent,
+                   capture_output=True, timeout=300, check=False)
+    if not dwg.is_file():
+        raise RuntimeError(f"AutoCAD no generó {dwg.name}")
+    return dwg
+
+
 def exportar_autocad(dxf: Path, accore: Path = ACCORE) -> None:
     """DXF -> DWG 2018 y PDF de todas las láminas con AutoCAD (si está instalado)."""
     import subprocess
@@ -564,8 +584,11 @@ def exportar_autocad(dxf: Path, accore: Path = ACCORE) -> None:
     for viejo in (dwg, pdf):   # si existen, AutoCAD pregunta si reemplazar y se queda esperando
         viejo.unlink(missing_ok=True)
     scr = Path(tempfile.mkdtemp()) / "exportar.scr"
-    scr.write_text(f'FILEDIA 0\n_.SAVEAS 2018 "{dwg}"\n_.LAYOUT _Set LP-01\n'
-                   f'_-EXPORT _P _A "{pdf}"\n_.QUIT _Y\n', encoding="ascii")
+    laminas = [l.name for l in ezdxf.readfile(dxf).layouts if l.name != "Model"]
+    zooms = "".join(f"_.LAYOUT _Set {n}\n_.ZOOM _E\n" for n in laminas)
+    # AUDIT corrige el DXF; cada lámina queda encuadrada y el dibujo abre en LP-01
+    scr.write_text(f'FILEDIA 0\n_.AUDIT _Y\nTILEMODE 1\n_.ZOOM _E\n{zooms}_.LAYOUT _Set LP-01\n'
+                   f'_.SAVEAS 2018 "{dwg}"\n_-EXPORT _P _A "{pdf}"\n_.QUIT _Y\n', encoding="ascii")
     subprocess.run([str(accore), "/i", str(dxf), "/s", str(scr)], cwd=scr.parent,
                    capture_output=True, timeout=600, check=False)
     if not dwg.is_file():
