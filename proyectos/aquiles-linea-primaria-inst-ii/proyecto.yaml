@@ -23,6 +23,11 @@ paquete_revision: entregables/proyecto-final
 cad_dxf_activo: entregables/proyecto-final/04_Planos/Linea_Primaria.dxf
 cad_dwg_activo: entregables/proyecto-final/04_Planos/Linea_Primaria.dwg
 tension_confirmada_kv: null
+tension_nominal_diseno_adoptada_kv: 22.9
+revision_electrica_en_desarrollo: LP-R03-229KV
+documento_decision_229kv: documentacion/lp-r03-229kv/DECISION_TENSION_229KV.md
+estado_recalculo_229kv: pendiente_regeneracion_integral_y_validacion
+nota_revision_r03: 'Adopcion de 22.9 kV para diseño; los PDFs/XLSX/DWG M01 son antecedentes 10 kV hasta nueva generacion.'
 tension_alternativas_kv:
 - 10
 - 20
