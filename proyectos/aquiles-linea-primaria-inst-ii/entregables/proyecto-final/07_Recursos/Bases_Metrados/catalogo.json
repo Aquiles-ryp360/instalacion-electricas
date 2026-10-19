@@ -1,0 +1,702 @@
+{
+  "revision": "LP-R02-M01",
+  "materiales": {
+    "PIN": {
+      "descripcion": "Aislador tipo PIN para MT; clase según coordinación de aislamiento",
+      "unidad": "ud",
+      "grupo": "Aisladores",
+      "codigo_referencia": "a2",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "DISCO": {
+      "descripcion": "Aislador de suspensión de porcelana ANSI 52-3",
+      "unidad": "ud",
+      "grupo": "Aisladores",
+      "codigo_referencia": "k1",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "ESP-C": {
+      "descripcion": "Espiga para cabeza de poste CAC, compatible con PIN",
+      "unidad": "ud",
+      "grupo": "Aisladores",
+      "codigo_referencia": "b1 / adaptación CAC",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "ESP-X": {
+      "descripcion": "Espiga para cruceta, compatible con PIN",
+      "unidad": "ud",
+      "grupo": "Aisladores",
+      "codigo_referencia": "f1",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "CRU-M": {
+      "descripcion": "Cruceta metálica galvanizada, longitud nominal de metrado 2.50 m",
+      "unidad": "ud",
+      "grupo": "Crucetas y soportes",
+      "codigo_referencia": "g1-M / PAC Electro Puno p.59",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "RIO": {
+      "descripcion": "Riostra angular galvanizada, referencia 38x38x5 mm, L=710 mm",
+      "unidad": "ud",
+      "grupo": "Crucetas y soportes",
+      "codigo_referencia": "cu1",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "CAS": {
+      "descripcion": "Abrazadera CAC para par de riostras; incluye 2 pernos y accesorios",
+      "unidad": "jgo",
+      "grupo": "Crucetas y soportes",
+      "codigo_referencia": "CAS-M01",
+      "incluye": {
+        "B75": 2,
+        "N16": 2,
+        "A16INC": 2
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "CS1": {
+      "descripcion": "Soporte separador de vértice, separación de referencia 110 mm",
+      "unidad": "ud",
+      "grupo": "Crucetas y soportes",
+      "codigo_referencia": "cs1",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "TUB": {
+      "descripcion": "Tubo espaciador galvanizado, referencia 19x89 mm",
+      "unidad": "ud",
+      "grupo": "Crucetas y soportes",
+      "codigo_referencia": "dl",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "B305": {
+      "descripcion": "Perno maquinado A°G° 16x305 mm, con tuerca y contratuerca",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "c2",
+      "incluye": {
+        "N16": 1,
+        "C16": 1
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "B356": {
+      "descripcion": "Perno maquinado A°G° 16x356 mm, con tuerca y contratuerca",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "c3",
+      "incluye": {
+        "N16": 1,
+        "C16": 1
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "B508": {
+      "descripcion": "Perno maquinado A°G° 16x508 mm, con tuerca y contratuerca",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "c5",
+      "incluye": {
+        "N16": 1,
+        "C16": 1
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "BD508": {
+      "descripcion": "Perno doble armado A°G° 16x508 mm, con 4 tuercas",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "n1",
+      "incluye": {
+        "N16": 4
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "BC152": {
+      "descripcion": "Perno coche A°G° 13x152 mm, con arandela, tuerca y contratuerca",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "i1",
+      "incluye": {
+        "N13": 1,
+        "C13": 1,
+        "A13INC": 1
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "BO305": {
+      "descripcion": "Perno ojo A°G° 16x305 mm, con tuerca y contratuerca",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "o1",
+      "incluye": {
+        "N16": 1,
+        "C16": 1
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "AO16": {
+      "descripcion": "Tuerca ojo forjada, para perno de 16 mm",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "aa",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "AP16": {
+      "descripcion": "Arandela cuadrada plana A°G° 57x57x5 mm, agujero 18 mm",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "d1",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "AC16": {
+      "descripcion": "Arandela cuadrada curva A°G° 57x57x5 mm, agujero 18 mm",
+      "unidad": "ud",
+      "grupo": "Pernos y accesorios",
+      "codigo_referencia": "d2",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "GRI": {
+      "descripcion": "Grillete para cadena de aisladores",
+      "unidad": "ud",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "ag",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "ACO": {
+      "descripcion": "Adaptador casquillo-ojo alargado",
+      "unidad": "ud",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "ac",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "ANB": {
+      "descripcion": "Adaptador anillo-bola",
+      "unidad": "ud",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "hb",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "GAN": {
+      "descripcion": "Grapa de anclaje para AAAC 50 mm², compatible con cadena",
+      "unidad": "ud",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "l1",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "GDV": {
+      "descripcion": "Grapa de doble vía, compatible con AAAC 50 mm²",
+      "unidad": "ud",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "p",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "VRS": {
+      "descripcion": "Varilla de armar preformada simple, compatible con AAAC 50 mm²",
+      "unidad": "ud",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "vs",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "VRD": {
+      "descripcion": "Varilla de armar preformada doble, compatible con AAAC 50 mm²",
+      "unidad": "ud",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "vd",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "AL-AM": {
+      "descripcion": "Alambre de amarre de aluminio, compatible con conductor",
+      "unidad": "m",
+      "grupo": "Conexiones y amarres",
+      "codigo_referencia": "ca",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "GUY": {
+      "descripcion": "Cable de acero para retenida, rotura certificada mínima 60 kN",
+      "unidad": "m",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-2 / resistencia LP-R02",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "MOR": {
+      "descripcion": "Mordaza preformada compatible con el cable de retenida",
+      "unidad": "ud",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-5",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "AIS-R": {
+      "descripcion": "Aislador de tracción para retenida, compatible con 60 kN",
+      "unidad": "ud",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-8",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "VAR-R": {
+      "descripcion": "Varilla de anclaje con ojal, referencia DGE 16x2400 mm, con T+CT",
+      "unidad": "ud",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-3",
+      "incluye": {
+        "N16": 1,
+        "C16": 1
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "ANC-R": {
+      "descripcion": "Arandela de anclaje 102x102x6.35 mm, agujero 18 mm",
+      "unidad": "ud",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-4",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "BLO-R": {
+      "descripcion": "Bloque de anclaje de concreto armado; geometría según suelo y tiro",
+      "unidad": "ud",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-7",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "BA254": {
+      "descripcion": "Perno angular con ojal, referencia 16x254 mm, con T+CT",
+      "unidad": "ud",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-1",
+      "incluye": {
+        "N16": 1,
+        "C16": 1
+      },
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "AL14": {
+      "descripcion": "Alambre galvanizado N.º 14 para amarre de retenida",
+      "unidad": "m",
+      "grupo": "Retenida",
+      "codigo_referencia": "RI-9",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "B75": {
+      "descripcion": "Perno A°G° 16x75 mm incluido en abrazadera CAS",
+      "unidad": "ud",
+      "grupo": "Accesorios incluidos",
+      "codigo_referencia": "B75",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "N16": {
+      "descripcion": "Tuerca de 16 mm incluida con perno/abrazadera",
+      "unidad": "ud",
+      "grupo": "Accesorios incluidos",
+      "codigo_referencia": "N16",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "C16": {
+      "descripcion": "Contratuerca de 16 mm incluida con perno",
+      "unidad": "ud",
+      "grupo": "Accesorios incluidos",
+      "codigo_referencia": "C16",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "A16INC": {
+      "descripcion": "Arandela de 16 mm incluida en abrazadera CAS",
+      "unidad": "ud",
+      "grupo": "Accesorios incluidos",
+      "codigo_referencia": "A16INC",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "N13": {
+      "descripcion": "Tuerca de 13 mm incluida con perno coche",
+      "unidad": "ud",
+      "grupo": "Accesorios incluidos",
+      "codigo_referencia": "N13",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "C13": {
+      "descripcion": "Contratuerca de 13 mm incluida con perno coche",
+      "unidad": "ud",
+      "grupo": "Accesorios incluidos",
+      "codigo_referencia": "C13",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "A13INC": {
+      "descripcion": "Arandela de 13 mm incluida con perno coche",
+      "unidad": "ud",
+      "grupo": "Accesorios incluidos",
+      "codigo_referencia": "A13INC",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "P13": {
+      "descripcion": "Poste CAC 13 m / 600 daN, capacidad transversal tipo",
+      "unidad": "ud",
+      "grupo": "Postes",
+      "codigo_referencia": "Modelo LP-R02",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "P15": {
+      "descripcion": "Poste CAC 15 m / 600 daN, capacidad transversal tipo",
+      "unidad": "ud",
+      "grupo": "Postes",
+      "codigo_referencia": "Modelo LP-R02",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "P17": {
+      "descripcion": "Poste CAC 17 m / 600 daN, capacidad transversal tipo",
+      "unidad": "ud",
+      "grupo": "Postes",
+      "codigo_referencia": "Modelo LP-R02",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "EL-PAT": {
+      "descripcion": "Electrodo de puesta a tierra; referencia cobreado 16 mm x 2.40 m",
+      "unidad": "ud",
+      "grupo": "Puesta a tierra de apoyo",
+      "codigo_referencia": "DGE 077/078-A; adaptación PAT-P",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "CO-PAT": {
+      "descripcion": "Conector de bronce para electrodo y bajante de cobre",
+      "unidad": "ud",
+      "grupo": "Puesta a tierra de apoyo",
+      "codigo_referencia": "DGE 077/078-A",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "CU-PAT": {
+      "descripcion": "Bajante de cobre desnudo, sección nominal de metrado 16 mm²",
+      "unidad": "m",
+      "grupo": "Puesta a tierra de apoyo",
+      "codigo_referencia": "DGE 077; longitud de proyecto",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "TE-PAT": {
+      "descripcion": "Terminal de unión del bajante al conjunto metálico",
+      "unidad": "ud",
+      "grupo": "Puesta a tierra de apoyo",
+      "codigo_referencia": "PAT-P / coeficiente de proyecto",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    },
+    "FI-PAT": {
+      "descripcion": "Juego de fijación del bajante a CAC por fleje y hebilla",
+      "unidad": "jgo",
+      "grupo": "Puesta a tierra de apoyo",
+      "codigo_referencia": "PAT-P / una fijación por metro más extremos",
+      "incluye": {},
+      "masa_unitaria_kg": null,
+      "estado": "Descripción de metrado académico; compatibilidad y suministro por confirmar",
+      "confianza": "Documental para la referencia indicada; adaptación CAC sin validación de fabricación"
+    }
+  },
+  "armados": {
+    "CAC-S": {
+      "nombre": "Suspensión 0–5°, trifásica sin neutro",
+      "lamina": "004",
+      "pagina": 9,
+      "variante": "PS1-3",
+      "coef": {
+        "PIN": 3,
+        "ESP-C": 1,
+        "ESP-X": 2,
+        "CRU-M": 1,
+        "RIO": 2,
+        "CAS": 1,
+        "B305": 2,
+        "B356": 1,
+        "BC152": 2,
+        "AP16": 1,
+        "AC16": 3,
+        "VRS": 3,
+        "AL-AM": 7.5
+      },
+      "codigo": "CAC-S",
+      "fuente_cantidades": "RD 024-2003-EM/DGE, lámina 004, p. PDF 9, variante PS1-3",
+      "estado": "Despiece académico de metrado; adaptación CAC explícita, sin aprobación de fabricación",
+      "aprobado_fabricacion": false
+    },
+    "CAC-A": {
+      "nombre": "Ángulo 5–30°, trifásico sin neutro",
+      "lamina": "008",
+      "pagina": 13,
+      "variante": "PA1-3",
+      "coef": {
+        "PIN": 6,
+        "ESP-C": 2,
+        "ESP-X": 4,
+        "CRU-M": 2,
+        "RIO": 4,
+        "CAS": 2,
+        "CS1": 2,
+        "TUB": 2,
+        "B305": 1,
+        "B508": 2,
+        "BD508": 3,
+        "BC152": 4,
+        "AP16": 12,
+        "AC16": 2,
+        "VRD": 3,
+        "AL-AM": 15
+      },
+      "codigo": "CAC-A",
+      "fuente_cantidades": "RD 024-2003-EM/DGE, lámina 008, p. PDF 13, variante PA1-3",
+      "estado": "Despiece académico de metrado; adaptación CAC explícita, sin aprobación de fabricación",
+      "aprobado_fabricacion": false
+    },
+    "CAC-R": {
+      "nombre": "Retención / anclaje, trifásico sin neutro",
+      "lamina": "020",
+      "pagina": 25,
+      "variante": "PR3-3",
+      "coef": {
+        "PIN": 1,
+        "DISCO": 12,
+        "ESP-C": 1,
+        "CRU-M": 2,
+        "RIO": 4,
+        "CAS": 2,
+        "B305": 2,
+        "BD508": 3,
+        "BC152": 4,
+        "BO305": 1,
+        "AO16": 5,
+        "AP16": 10,
+        "AC16": 4,
+        "GRI": 6,
+        "ACO": 6,
+        "ANB": 6,
+        "GAN": 6,
+        "GDV": 3,
+        "AL-AM": 2.5
+      },
+      "codigo": "CAC-R",
+      "fuente_cantidades": "RD 024-2003-EM/DGE, lámina 020, p. PDF 25, variante PR3-3",
+      "estado": "Despiece académico de metrado; adaptación CAC explícita, sin aprobación de fabricación",
+      "aprobado_fabricacion": false
+    },
+    "CAC-T": {
+      "nombre": "Terminal horizontal, trifásico sin neutro",
+      "lamina": "026",
+      "pagina": 31,
+      "variante": "PTH-3",
+      "coef": {
+        "DISCO": 6,
+        "CRU-M": 2,
+        "RIO": 4,
+        "CAS": 2,
+        "BD508": 3,
+        "BC152": 4,
+        "BO305": 1,
+        "AO16": 2,
+        "AP16": 10,
+        "AC16": 2,
+        "GRI": 3,
+        "ACO": 3,
+        "ANB": 3,
+        "GAN": 3
+      },
+      "codigo": "CAC-T",
+      "fuente_cantidades": "RD 024-2003-EM/DGE, lámina 026, p. PDF 31, variante PTH-3",
+      "estado": "Despiece académico de metrado; adaptación CAC explícita, sin aprobación de fabricación",
+      "aprobado_fabricacion": false
+    },
+    "RI-A": {
+      "nombre": "Retenida inclinada aislada, por ramal",
+      "lamina": "074",
+      "pagina": 91,
+      "variante": "RI-A",
+      "coef": {
+        "MOR": 4,
+        "AIS-R": 1,
+        "VAR-R": 1,
+        "ANC-R": 1,
+        "BLO-R": 1,
+        "BA254": 1,
+        "AC16": 2,
+        "AL14": 1.5
+      },
+      "codigo": "RI-A",
+      "fuente_cantidades": "RD 024-2003-EM/DGE, lámina 074, p. PDF 91, variante RI-A",
+      "estado": "Despiece académico de metrado; adaptación CAC explícita, sin aprobación de fabricación",
+      "aprobado_fabricacion": false
+    },
+    "PAT-P": {
+      "codigo": "PAT-P",
+      "nombre": "Puesta a tierra de apoyo, hipótesis de desglose presupuestal",
+      "lamina": "077 / 078-A",
+      "pagina": 95,
+      "variante": "PAT-P (proyecto)",
+      "coef": {
+        "EL-PAT": 1,
+        "CO-PAT": 1,
+        "TE-PAT": 1
+      },
+      "fuente_cantidades": "Una puesta a tierra por apoyo ya presupuestada; desglose de proyecto referido a DGE 077/078-A",
+      "estado": "Hipótesis académica: no certifica resistencia de dispersión ni reemplaza Wenner y coordinación de tierra",
+      "aprobado_fabricacion": false
+    }
+  },
+  "adaptaciones": [
+    "La columna sin neutro de las láminas DGE proporciona los coeficientes documentales; se excluyen carretes, portalíneas y accesorios del neutro.",
+    "Se mantiene el poste CAC de 13/15/17 m del modelo. No se suministra el poste de madera pm de las láminas de referencia.",
+    "g1 se sustituye por cruceta metálica de 2.50 m como hipótesis de metrado, referida al PAC Electro Puno 2024 p.59. El PAC no certifica un conjunto para 600 daN ni proporciona el despiece de todos sus pernos.",
+    "Se eliminan tirafondos j1 destinados a madera. Cada par de riostras se asigna a una abrazadera CAC CAS-M01, con dos pernos M16x75, dos tuercas y dos arandelas: coeficiente de proyecto declarado, no cantidad publicada por el PAC.",
+    "La espiga de cabeza se especifica para CAC. Diámetro de abrazadera, perforaciones de fábrica, longitud efectiva de pernos, rigidez, separaciones y compatibilidad se verifican con plano de fabricante antes de compra.",
+    "Los coeficientes de cadena (dos discos por cadena) son los de la referencia DGE. Clase/longitud final de aislamiento dependen del estudio a la altitud y tensión elegidas; la lista no cambia el modelo geométrico LP-R02.",
+    "P003, P035 y P057 conservan su anclaje en el metrado con base PR3-3; sus giros mayores de 90° requieren detalle geométrico específico. No se presentan como una adaptación constructiva resuelta.",
+    "La referencia RI-A dibuja cable de 10 mm y 16 m; aquí no se copia una resistencia por diámetro ni una longitud fija. Se exige rotura mínima 60 kN y se calcula longitud desde la geometría ideal más colas.",
+    "Los materiales incluidos con pernos/abrazaderas se muestran en el despiece analítico, separados de las cantidades de compra para evitar doble suministro.",
+    "PAT-P desglosa las 111 puestas a tierra ya incluidas en el presupuesto: un electrodo, un conector y un terminal por apoyo. Cu 16 mm², longitud amarre+3 m y fijaciones cada 1 m más extremos son hipótesis de metrado, no resistencia de dispersión verificada; no se copian grapas para madera. No incluye las dos mallas de subestación.",
+    "La carga tipo LP-R02 de aisladores/accesorios es 300 N por apoyo. Las masas unitarias se mantienen null por falta de ficha de suministro: no se certifica que el nuevo despiece pese 300 N. Se requiere recalcular esfuerzos y separaciones con el armado suministrado antes de validar resistencia."
+  ],
+  "fuentes": [
+    {
+      "id": "DGE-024",
+      "titulo": "RD 024-2003-EM/DGE, soportes normalizados",
+      "url": "https://intranet2.minem.gob.pe/web/archivos/dge/legislacion/dispositivos/rd024-2003-EM.pdf",
+      "ruta_repositorio": "referencias/normativa/pdf/rd024-2003-EM.pdf",
+      "sha256": "c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8",
+      "uso": "Coeficientes de la columna trifásica sin neutro; las adaptaciones a CAC se declaran por separado."
+    },
+    {
+      "id": "ELPU-PAC-2024",
+      "titulo": "Plan Anual de Contrataciones Electro Puno 2024",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/5756349/5113884-01_pac_2024_final_elpu-r.pdf",
+      "ruta_repositorio": "recursos/linea-primaria-limbani/2026-10-19/electropuno-pac-2024.pdf",
+      "sha256": "20ec082d5a15fc3bdb7c40a60660a8fbe5cb89b87436c9bae52958885e3aacc3",
+      "pagina_pdf": 59,
+      "uso": "Evidencia de familia de crucetas metálicas para CAC, sin certificación del armado elegido."
+    }
+  ]
+}

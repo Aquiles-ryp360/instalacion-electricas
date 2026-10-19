@@ -77,3 +77,12 @@ La entrega activa pasa a `entregables/proyecto-final/Expediente.pdf` y `entregab
 Las condiciones reales no verificadas se explican como bases y límites del modelo dentro de la memoria; no se convierten en certificaciones ni se borran del registro técnico. El capítulo de metrados presenta cantidades y operaciones, no remite a una plantilla sin completar. El presupuesto es referencial académico con precios estimados identificados. La memoria no atribuye un levantamiento de campo ni una capacidad N-M certificada.
 
 Ver `PRESENTACION_FINAL.md`, `VALIDACION_ENTREGA_FINAL.json` y `expediente/final/`. Las copias móviles y P01 se conservan como antecedentes. El modelo eléctrico/mecánico sigue siendo LP-R02; no mezclar parámetros de Centrales Hidroeléctricas.
+
+
+## Continuación activa M01 — metrados, memoria y ubicación
+
+Se continúa desde d98269a, preservando la entrega PC de Aquiles d777714. La presentación activa está organizada en ocho carpetas dentro de `entregables/proyecto-final/`. El expediente se encuentra en `00_Expediente/Expediente.pdf`; la memoria tiene su propia carpeta y UB-01 desarrolla la ubicación Perú--Puno--Sandia--Limbani con fuente oficial referencial IGN.
+
+M01 incorpora 111 fichas por poste y un catálogo de componentes basado en variantes DGE sin neutro, con adaptación académica explícita a CAC. Los puentes dejan de depender de los 160 ramales: 38 retenciones + 2 terminales suman 240 m auxiliares; la compra es 21 131 m. La base eléctrica/mecánica permanece LP-R02. No atribuir al despiece una comprobación de masa de 300 N ni una aprobación resistente.
+
+Leer `documentacion/metrados-m01/REVISION.md`, `datos/metrados-m01/` y el manifiesto antes de continuar. Verificación vigente: `python3 proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/actualizar_metrados.py verificar-publicado`. El constructor prepara y revisa en build; la entrega anterior está preservada en archivo y Git. Los párrafos anteriores de 72 páginas y recálculo Microsoft describen la entrega histórica. M01 se recalculó con LibreOffice; los archivos CAD/QGIS de PC conservan sus bytes y no se atribuye una nueva reapertura nativa.

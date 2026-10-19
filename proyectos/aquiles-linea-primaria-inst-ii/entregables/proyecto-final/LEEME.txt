@@ -1,14 +1,19 @@
-LÍNEA PRIMARIA LIMBANI - HUANCASAYANI
-Instalaciones Eléctricas II
-Estudiante: Aquiles Taylor Ramos Yapo - 227368
+LÍNEA PRIMARIA LIMBANI–HUANCASAYANI · M01
+Instalaciones Eléctricas II · Aquiles Taylor Ramos Yapo · 227368
 
-DOCUMENTO PRINCIPAL: Expediente.pdf
-Reúne memoria, ecuaciones, metrados desarrollados, presupuesto y planos.
+00_Expediente: expediente integrado, con 111 fichas de inventario por poste.
+01_Memoria_Descriptiva: memoria independiente, con ubicación y lámina UB-01 A3.
+02_Calculos: libro eléctrico/mecánico formulado y resumen PDF.
+03_Metrados: libro de 12 hojas y resumen PDF. Selecciona el poste en Ficha_poste!B4.
+04_Planos: CAD base LP-R02 y plano UB-01 de ubicación en PDF/SVG editable.
+05_Cartografia: QGIS portable, DEM, GeoPackage y Google Earth de la base.
+06_Presupuesto: cantidades M01 vinculadas y precios referenciales por conjunto.
+07_Recursos: fuentes oficiales, cartografía IGN y bases del metrado.
 
-01_Calculos: libro con fórmulas y resumen de una página.
-02_Metrados: conteo de postes/armados, conductor y resumen de una página.
-03_Planos: CAD editable DXF/DWG, con láminas LP y referencias DGE.
-04_Cartografia: QGIS portable, Google Earth y vista general del corredor.
-05_Presupuesto: cantidades, precios referenciales y resumen de una página.
-
-Los planos y armados en PDF están incorporados en Expediente.pdf.
+En Metrados.xlsx: Matriz_armados → Inventario → Ficha_poste → Resumen_materiales.
+Accesorios_incluidos informa piezas ya suministradas con pernos/abrazaderas.
+Los tres libros se recalcularon con LibreOffice. Si editas entradas, regenera el PDF.
+Cada XLSX es autónomo: editar uno no modifica los otros. Regenera los tres desde
+las entradas canónicas para sincronizar sus cantidades; no hay vínculos externos.
+Las adaptaciones CAC son académicas y se explican en las bases del metrado.
+El plano usa límites referenciales oficiales; el corredor es de gabinete.

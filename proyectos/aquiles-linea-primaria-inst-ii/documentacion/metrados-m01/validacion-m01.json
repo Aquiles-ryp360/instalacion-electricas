@@ -1,0 +1,231 @@
+{
+  "revision_metrado": "LP-R02-M01",
+  "base_tecnica": "LP-R02",
+  "aprobacion_ingenieria": false,
+  "libros": {
+    "Calculos": {
+      "hojas": [
+        "Resumen",
+        "Demanda",
+        "Electrico",
+        "Flujo",
+        "Cortocircuito",
+        "Mecanica",
+        "Estados",
+        "Postes",
+        "Vanos",
+        "Parametros",
+        "Criterios_M01"
+      ],
+      "formulas": 10882,
+      "sha256": "e54d061cfe5224081fd09fa336344e08fe2dd3f3409ce7afe2578ac02961bca1",
+      "motor_recalculo": "LibreOffice",
+      "errores": 0
+    },
+    "Metrados": {
+      "hojas": [
+        "Guia",
+        "Resumen",
+        "Ficha_poste",
+        "Resumen_materiales",
+        "Inventario",
+        "Matriz_armados",
+        "Accesorios_incluidos",
+        "Postes",
+        "Vanos",
+        "Parametros",
+        "Criterios_M01",
+        "Trazabilidad"
+      ],
+      "formulas": 35722,
+      "sha256": "e80e6a0c3b2db88bf4be2b703e066efffe1d199fabde4ca902e6139bd9959942",
+      "motor_recalculo": "LibreOffice",
+      "errores": 0
+    },
+    "Presupuesto": {
+      "hojas": [
+        "Presupuesto",
+        "Resumen",
+        "Postes",
+        "Vanos",
+        "Parametros",
+        "Criterios_M01"
+      ],
+      "formulas": 2371,
+      "sha256": "2510fd758fa4014d69de91a99207a14a5ce7c360bc11f2b1d44e16ce0c5a75e5",
+      "motor_recalculo": "LibreOffice",
+      "errores": 0
+    }
+  },
+  "presupuesto_referencial_pen": 2553726.92,
+  "paginas_expediente": 195,
+  "fichas_individuales": 111,
+  "ficha_por_pagina": true,
+  "archivos_nativos_sin_cambios": [
+    "03_Planos/Linea_Primaria.dwg",
+    "03_Planos/Linea_Primaria.dxf",
+    "04_Cartografia/Linea_Primaria.kmz",
+    "04_Cartografia/Vista_General.png",
+    "04_Cartografia/QGIS/Catastro-original.gpkg",
+    "04_Cartografia/QGIS/DEM-gabinete-30m.tif",
+    "04_Cartografia/QGIS/Linea_Primaria.gpkg",
+    "04_Cartografia/QGIS/Linea_Primaria.qgz"
+  ],
+  "conductor": {
+    "tendido_terna_m": 20274.36089125725,
+    "puentes_provision_m": 240.0,
+    "reserva_m": 616,
+    "total_compra_estudio_m": 21131,
+    "redondeo_compra_m": 0.6391087427509774
+  },
+  "materiales_compra": {
+    "P13": 72,
+    "DISCO": 468,
+    "CRU-M": 192,
+    "RIO": 384,
+    "CAS": 192,
+    "BD508": 243,
+    "BC152": 384,
+    "BO305": 40,
+    "AO16": 194,
+    "AP16": 922,
+    "AC16": 648,
+    "GRI": 234,
+    "ACO": 234,
+    "ANB": 234,
+    "GAN": 234,
+    "MOR": 640,
+    "AIS-R": 160,
+    "VAR-R": 160,
+    "ANC-R": 160,
+    "BLO-R": 160,
+    "BA254": 160,
+    "AL14": 240.0,
+    "GUY": 3005.7854223983472,
+    "EL-PAT": 111,
+    "CO-PAT": 111,
+    "TE-PAT": 111,
+    "CU-PAT": 1595.9999999999984,
+    "FI-PAT": 1428,
+    "PIN": 374,
+    "ESP-C": 150,
+    "ESP-X": 224,
+    "B305": 177,
+    "B356": 30,
+    "VRS": 90,
+    "AL-AM": 935.0,
+    "P15": 30,
+    "GDV": 114,
+    "CS1": 82,
+    "TUB": 82,
+    "B508": 82,
+    "VRD": 123,
+    "P17": 9
+  },
+  "accesorios_incluidos": {
+    "B75": 384,
+    "N16": 2005,
+    "A16INC": 384,
+    "N13": 384,
+    "C13": 384,
+    "A13INC": 384,
+    "C16": 649
+  },
+  "giros_especiales": [
+    "P003",
+    "P035",
+    "P057"
+  ],
+  "motor_version": "LibreOffice 25.2.3.2 520(Build:2)",
+  "insumos_sha256": {
+    "datos/metrados-m01/catalogo.json": "979c25f312061f7cf23f28157bb390942ed2a55b7d22e17e2705e91e8bb3f449",
+    "datos/metrados-m01/criterios.json": "d49c273406da3115f5d9d4f82b053364a0921d70451978372314f538ddf1d62a",
+    "datos/lp-r02/parametros.json": "43261f4dc94db26af04db769f0b33f044029b2225ebcc6371387456cb55812ca",
+    "revisiones/lp-r02/03-calculos/resultados.json": "85765a4cfaa04f16c934468b4b73225013d56f00fcfab6e7d2fcac6c0502e4fd",
+    "recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign/capa-3-metadatos.json": "cd26661c0edd7b2a3b24b89dd619b7f7a904a223a9c062a9fe278e0c2ba2b2a0",
+    "recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign/capa-4-metadatos.json": "23b44c09c2e07692584950993b0669c0ce9c24f69c3f98ae80f4e82064c47d89",
+    "recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign/capa-5-metadatos.json": "f8e36063b00370076b8734e4e0985137a66db826fb0c7f2e2415013fc4d8dfdd",
+    "recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign/provincias-puno.geojson": "23dc6685cef7ffa28acf611e747060dc409ab2b45a6b95bdfc41206f9cd14de0",
+    "recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign/distritos-sandia.geojson": "d173ac8aafaac319c1c275653f244daa8e52c993c432f30c5606e227f485d815",
+    "recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign/departamentos.geojson": "4f82a6f6b1cef06152f05762c2c2fa768c645f4fa481698623c30e63bb187811",
+    "recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign/procedencia.json": "979409f2e61be96791fdab0891a2bee3016bce7d5683283b948be5c99024e119",
+    "referencias/normativa/pdf/rd024-2003-EM.pdf": "c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8",
+    "recursos/linea-primaria-limbani/2026-10-19/electropuno-pac-2024.pdf": "20ec082d5a15fc3bdb7c40a60660a8fbe5cb89b87436c9bae52958885e3aacc3"
+  },
+  "entregables_sha256": {
+    "00_Expediente/Expediente.pdf": "c00cd7dd90aba9c338dda5bed437cbd0ef49759123bae644e125053ce053b8d4",
+    "01_Memoria_Descriptiva/Memoria_Descriptiva.pdf": "c6070dd88d63de238cb22c3e17ee4551f24dcc5ef43377de359e8823cc0332c6",
+    "02_Calculos/Calculos.xlsx": "e54d061cfe5224081fd09fa336344e08fe2dd3f3409ce7afe2578ac02961bca1",
+    "02_Calculos/Resumen_Calculos.pdf": "bc75dc9354bd51b04c748ac7a1f1b6bacad93eb9346e6e6c47948a7d031a931e",
+    "03_Metrados/Metrados.xlsx": "e80e6a0c3b2db88bf4be2b703e066efffe1d199fabde4ca902e6139bd9959942",
+    "03_Metrados/Resumen_Metrados.pdf": "efe510d268ad4753d5d62658eb7e3c9a87939d7c38dbc0dc070c2f7b438d88d4",
+    "04_Planos/Linea_Primaria.dwg": "30c71c17e2b1681229c8052b2dd77151da51a2cd9433451c777075265d87fdb0",
+    "04_Planos/Linea_Primaria.dxf": "b5e8910f5247f6a210db469ad37239c965323260932fd0cd79c90c4386737a4b",
+    "04_Planos/Plano_Ubicacion.pdf": "70f2e96a7f90ef51e78df53ec773f5e5a7bab611ab9a7b5915a95b8e838f73fe",
+    "04_Planos/Plano_Ubicacion.svg": "9f421e74ad60967f667edcfe394e3e33785ccd70b14e55e8e33eb247e52fa71e",
+    "05_Cartografia/Linea_Primaria.kmz": "0de26a12cc470630d7216ec912892842a056fd94c833893f08cfae4b5a3422ce",
+    "05_Cartografia/QGIS/Catastro-original.gpkg": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8",
+    "05_Cartografia/QGIS/DEM-gabinete-30m.tif": "f68c10409142277e1d46e21ed1cd30367004f1ca580e1c82d1755248286411e5",
+    "05_Cartografia/QGIS/Linea_Primaria.gpkg": "1f61bd5b0d0a039e126a673bc3b565d4315d0323adc889396fa01fc0786c7f7d",
+    "05_Cartografia/QGIS/Linea_Primaria.qgz": "f922feb3c53d040005ac40a5d24b7ffa5177816b10b4b0c694eda4db86cac508",
+    "05_Cartografia/Vista_General.png": "9e42d98f38c8b90e79b41bc02c3b3074ca79eff4fb1f0885d1daf07d4b5f3f52",
+    "06_Presupuesto/Presupuesto.xlsx": "2510fd758fa4014d69de91a99207a14a5ce7c360bc11f2b1d44e16ce0c5a75e5",
+    "06_Presupuesto/Resumen_Presupuesto.pdf": "6b148a111f0200a46db8aed01774bd73326866bd3c8fd67e506aa3637375df0b",
+    "07_Recursos/Bases_Metrados/catalogo.json": "979c25f312061f7cf23f28157bb390942ed2a55b7d22e17e2705e91e8bb3f449",
+    "07_Recursos/Bases_Metrados/criterios.json": "d49c273406da3115f5d9d4f82b053364a0921d70451978372314f538ddf1d62a",
+    "07_Recursos/Cartografia_IGN/capa-3-metadatos.json": "cd26661c0edd7b2a3b24b89dd619b7f7a904a223a9c062a9fe278e0c2ba2b2a0",
+    "07_Recursos/Cartografia_IGN/capa-4-metadatos.json": "23b44c09c2e07692584950993b0669c0ce9c24f69c3f98ae80f4e82064c47d89",
+    "07_Recursos/Cartografia_IGN/capa-5-metadatos.json": "f8e36063b00370076b8734e4e0985137a66db826fb0c7f2e2415013fc4d8dfdd",
+    "07_Recursos/Cartografia_IGN/departamentos.geojson": "4f82a6f6b1cef06152f05762c2c2fa768c645f4fa481698623c30e63bb187811",
+    "07_Recursos/Cartografia_IGN/distritos-sandia.geojson": "d173ac8aafaac319c1c275653f244daa8e52c993c432f30c5606e227f485d815",
+    "07_Recursos/Cartografia_IGN/procedencia.json": "979409f2e61be96791fdab0891a2bee3016bce7d5683283b948be5c99024e119",
+    "07_Recursos/Cartografia_IGN/provincias-puno.geojson": "23dc6685cef7ffa28acf611e747060dc409ab2b45a6b95bdfc41206f9cd14de0",
+    "07_Recursos/LEEME_Fuentes.txt": "75fe3fe5b80ea319590d527d003c538e4a69ef9346af05f7f23934b75fe9ff50",
+    "07_Recursos/Normativa/ElectroPuno_PAC2024.pdf": "20ec082d5a15fc3bdb7c40a60660a8fbe5cb89b87436c9bae52958885e3aacc3",
+    "07_Recursos/Normativa/RD024_2003_EM.pdf": "c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8",
+    "LEEME.txt": "53f2649f822eaa3fad3754807e6cf17c1bef58f1ec8dffb16098b09705365c65"
+  },
+  "zip_sha256": "a9ddb2f49e54d181eba973c2585e60513b42a4aa4a0fd7dcdb62ef35375e0f62",
+  "archivos_zip": 31,
+  "carpetas_entrega": 8,
+  "paginas_memoria": 10,
+  "ubicacion": {
+    "fuente": "IGN, límites referenciales",
+    "pais": "Perú",
+    "departamento": "Puno",
+    "provincia": "Sandia",
+    "distrito": "Limbani",
+    "ubigeo": "211203",
+    "epsg_local": 32719,
+    "epsg_nacional": 4326,
+    "coordenadas_inicio": [
+      425715.0,
+      8436650.0
+    ],
+    "coordenadas_final": [
+      423945.20799878985,
+      8430951.877688147
+    ],
+    "inicio_lon_lat": [
+      -69.68828771219033,
+      -14.140282943082434
+    ],
+    "final_lon_lat": [
+      -69.70484380000002,
+      -14.19175319999999
+    ],
+    "intersecciones_distritales": [
+      {
+        "distrito": "LIMBANI",
+        "longitud_eje_interseccion_m": 6696.368693212355
+      }
+    ],
+    "contencion_extremos_limbani": true,
+    "aprobacion_topografica": false,
+    "sha256": {
+      "Plano_Ubicacion.pdf": "70f2e96a7f90ef51e78df53ec773f5e5a7bab611ab9a7b5915a95b8e838f73fe",
+      "Plano_Ubicacion.svg": "9f421e74ad60967f667edcfe394e3e33785ccd70b14e55e8e33eb247e52fa71e",
+      "Plano_Ubicacion.png": "7210277f52b4c8771d5dafea345e8639685531f3f8944bb51858aa0167cfe625"
+    }
+  }
+}

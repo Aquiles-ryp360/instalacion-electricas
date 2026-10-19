@@ -1,31 +1,40 @@
 # Línea primaria Limbani–Huancasayani
 
-**Instalaciones Eléctricas II · Estudiante Aquiles Taylor Ramos Yapo · 227368.**
+**Instalaciones Eléctricas II · Aquiles Taylor Ramos Yapo · 227368 · Metrados M01.**
 
-## Entrega para presentación
-
-- [Descargar el proyecto completo en ZIP](entregables/Proyecto_Linea_Primaria_Limbani_Huancasayani.zip).
-- [Abrir el único expediente principal](entregables/proyecto-final/Expediente.pdf): 72 páginas con memoria, ecuaciones LaTeX, metrados desarrollados, presupuesto, 19 planos y 23 referencias DGE.
-- [Ver las carpetas de la entrega](entregables/proyecto-final/).
+[Descargar todo en ZIP](entregables/Proyecto_Linea_Primaria_Limbani_Huancasayani.zip) · [Abrir las ocho carpetas](entregables/proyecto-final/)
 
 | Carpeta | Contenido |
 | --- | --- |
-| [01_Calculos](entregables/proyecto-final/01_Calculos/) | Libro Excel con demanda, balance radial, cortocircuito, mecánica y estados; resumen PDF de una página. |
-| [02_Metrados](entregables/proyecto-final/02_Metrados/) | Conteo por altura/función, catenaria de 110 vanos, ramales, puentes y reserva; Excel con fórmulas y resumen PDF. |
-| [03_Planos](entregables/proyecto-final/03_Planos/) | DXF y DWG nativo; sus láminas PDF están incorporadas en el expediente principal. |
-| [04_Cartografia](entregables/proyecto-final/04_Cartografia/) | QGIS portable, GeoPackage, DEM, Google Earth y vista del corredor. |
-| [05_Presupuesto](entregables/proyecto-final/05_Presupuesto/) | Cantidades vinculadas al metrado, precios referenciales y costos calculados; resumen PDF. |
+| [00_Expediente](entregables/proyecto-final/00_Expediente/) | Expediente integrado: 195 páginas; memoria, cálculos, 111 fichas de inventario, presupuesto, ubicación UB-01, 19 planos base y 23 referencias DGE. |
+| [01_Memoria_Descriptiva](entregables/proyecto-final/01_Memoria_Descriptiva/) | Memoria independiente de 10 páginas: antecedentes, objetivos, ubicación, coordenadas, condiciones del emplazamiento, instalaciones y alcance; UB-01 en A3. |
+| [02_Calculos](entregables/proyecto-final/02_Calculos/) | Cálculo eléctrico/mecánico formulado de LP-R02 y resumen PDF. |
+| [03_Metrados](entregables/proyecto-final/03_Metrados/) | Excel de 12 hojas con recetas por armado, inventario por poste, ficha seleccionable, compra global y accesorios incluidos; resumen PDF. |
+| [04_Planos](entregables/proyecto-final/04_Planos/) | DWG/DXF base y nuevo plano de ubicación UB-01 en PDF A3 y SVG editable: Perú → Puno → Sandia → Limbani → corredor. |
+| [05_Cartografia](entregables/proyecto-final/05_Cartografia/) | QGIS portable, GeoPackage, DEM y Google Earth. |
+| [06_Presupuesto](entregables/proyecto-final/06_Presupuesto/) | Cantidades M01, precios referenciales por conjunto y resumen PDF. |
+| [07_Recursos](entregables/proyecto-final/07_Recursos/) | Cartografía oficial IGN, normativa DGE, PAC Electro Puno y criterios del metrado con procedencia. |
 
-El ZIP contiene 16 archivos. El documento principal se llama **Expediente.pdf**. Los otros tres PDF son resúmenes de una página en las carpetas de cálculo, metrados y presupuesto; no son expedientes alternativos. La entrega excluye cuestionarios, listas de trabajo, plantillas, código, fuentes de otros proyectos y copias anteriores.
+Para consultar un poste, abre [Metrados.xlsx](entregables/proyecto-final/03_Metrados/Metrados.xlsx), entra a **Ficha_poste** y selecciónalo en **B4**. `Inventario` permite filtrar todos los postes y `Matriz_armados` desarrolla el consumo unitario. Las tuercas, contratuercas y arandelas que ya vienen con pernos o abrazaderas se controlan en `Accesorios_incluidos`, sin duplicar su compra.
 
-Los libros contienen fórmulas editables y valores recalculados con Microsoft Excel. Se verificó que los cambios de altura/función actualizan los conteos, retenidas y conductor; el factor de potencia actualiza el balance; y los precios actualizan el presupuesto. El metrado mantiene 111 postes, 110 vanos, 160 ramales y 21 873 m de conductor de suministro. La memoria incluye las planillas por vano y por apoyo.
+El metrado comprende 111 postes, 110 vanos y 160 ramales. Los puentes se calculan por interrupción del conductor: 38 retenciones y 2 terminales, con 240 m auxiliares; el suministro total es **21 131 m**, incluida reserva y redondeo. El presupuesto recalculado es **S/ 2 553 726.92**, de carácter referencial académico.
 
-## Bases del diseño
+Los tres libros se recalcularon con LibreOffice y sus fórmulas se comprobaron contra la base. Cada XLSX es autónomo: editar uno no actualiza los otros ni el PDF. Para sincronizar la entrega se regenera desde las entradas canónicas. Las pruebas incluyeron cambios de altura/función, consumo unitario y selector de ficha en una copia del libro.
 
-Sistema aislado, desde T1 en Limbani hasta T2 en Huancasayani, sin redes secundarias. Caso de cálculo de 10 kV, con comparación 20/22/22.9 kV. Demanda académica 171.486 kW. La geometría es de gabinete y los equipos se modelan con datos tipo; las condiciones de interpretación están explicadas dentro del expediente. El presupuesto es una estimación académica, sin cotizaciones comerciales. Los parámetros del curso de Centrales Hidroeléctricas se mantienen independientes.
+## Bases y fuentes
 
-## Fuentes editables y trazabilidad
+Sistema aislado desde T1 en Limbani hasta T2 en Huancasayani, sin derivaciones ni redes de usuarios. La base técnica sigue siendo LP-R02: caso académico de 10 kV y alternativas 20/22/22.9 kV, sin tensión de equipo real confirmada. La geometría es de gabinete y las condiciones resistentes siguen sujetas a los límites del modelo.
 
-La memoria LaTeX está en [expediente/final](expediente/final/), fuera del ZIP de presentación. El [registro de revisión](documentacion/lp-r02/PRESENTACION_FINAL.md) y la [verificación](documentacion/lp-r02/VALIDACION_ENTREGA_FINAL.json) documentan cálculos, recálculo nativo, CAD y QGIS. Los archivos móviles originales y la presentación anterior se conservan en el historial; no forman parte del ZIP actual. La base de cálculo sigue siendo LP-R02 según [proyecto.yaml](proyecto.yaml).
+La ubicación usa el [servicio oficial de límites referenciales IGN](https://www.idep.gob.pe/geoportal/rest/services/DATOS_GEOESPACIALES/L%C3%8DMITES/MapServer). El plano UB-01 es una elaboración del proyecto; no constituye demarcación ni levantamiento oficial. Los GeoJSON, consultas y SHA256 se conservan junto a las fuentes. Se comprobó la pertenencia del corredor al polígono referencial de Limbani, ubigeo 211203.
 
-Para recalcular el motor se conserva `scripts/lp_r02/construir.py`; para esta presentación se utilizan `excel_final.mjs`, `excel_recalcular.ps1`, `planos_final.py`, `expediente_final.py`, `gis_final.py` y `entrega_final.py`. Los cálculos y originales previos no se sobrescriben.
+El despiece toma las variantes DGE trifásicas sin neutro y declara sus adaptaciones a CAC. El catálogo es académico, sujeto a compatibilidad del suministro. Las masas de accesorios no están certificadas: no se afirma que el despiece nuevo valide la carga tipo de 300 N del modelo previo. Ver [criterios y alcance de la revisión](documentacion/metrados-m01/REVISION.md).
+
+## Continuar en PC u otro equipo
+
+[proyecto.yaml](proyecto.yaml) declara las rutas y entradas activas. Las fuentes editables están en [expediente/final](expediente/final/) y [expediente/memoria-descriptiva](expediente/memoria-descriptiva/). El [informe de verificación](documentacion/metrados-m01/validacion-m01.json), las [pruebas](documentacion/metrados-m01/pruebas.json) y la [guía de reproducción](documentacion/metrados-m01/REVISION.md) conservan la trazabilidad para otras IA.
+
+```bash
+python3 proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/actualizar_metrados.py verificar-publicado
+```
+
+El ZIP anterior de 72 páginas se conserva en `archivo/presentacion-pre-m01/`; las revisiones móviles y P01 siguen intactas. Los comandos de `entrega_final.py` describen la presentación previa; el constructor vigente de presentación M01 es `actualizar_metrados.py`. Los parámetros del curso de Centrales Hidroeléctricas se mantienen independientes.

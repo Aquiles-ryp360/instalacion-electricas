@@ -1,5 +1,7 @@
 # Consolidación de entrega — 19/10/2026
 
+> Registro histórico de la presentación de 72 páginas. La entrega activa posterior es M01: consultar `../metrados-m01/REVISION.md` y `proyecto.yaml`.
+
 Base inicial sincronizada: 6dbfd3aaed6c224049870aebe11f2e1ec9898455. Antes de publicar se incorporaron también los avances paralelos del repositorio hasta e81f214. Proyecto exclusivo de línea primaria, Instalaciones Eléctricas II. La minicentral del otro curso no se modifica.
 
 ## Cambios

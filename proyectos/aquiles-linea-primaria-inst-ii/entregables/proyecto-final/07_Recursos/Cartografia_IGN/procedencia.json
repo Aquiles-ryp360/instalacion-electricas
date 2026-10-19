@@ -1,0 +1,35 @@
+[
+  {
+    "nombre": "departamentos.geojson",
+    "url": "https://www.idep.gob.pe/geoportal/rest/services/DATOS_GEOESPACIALES/L%C3%8DMITES/MapServer/3/query?f=geojson&where=1%3D1&outFields=NOMBDEP%2CCCDD%2CFUENTE&returnGeometry=true&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.001",
+    "sha256": "4f82a6f6b1cef06152f05762c2c2fa768c645f4fa481698623c30e63bb187811",
+    "features": 26,
+    "consulta_utc": "2026-10-19T17:50:16.671013+00:00",
+    "fuente": "Instituto Geográfico Nacional, servicio de límites referenciales",
+    "unidad_geometria": "grados; EPSG:4326",
+    "estado": "Cartografía referencial oficial consultada; no levantamiento de campo",
+    "simplificacion_angular_grados": 0.001
+  },
+  {
+    "nombre": "provincias-puno.geojson",
+    "url": "https://www.idep.gob.pe/geoportal/rest/services/DATOS_GEOESPACIALES/L%C3%8DMITES/MapServer/4/query?f=geojson&where=CCDD%3D%2721%27&outFields=NOMBDEP%2CNOMBPROV%2CIDPROV%2CCCDD%2CCCPP%2CFUENTE&returnGeometry=true&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0003",
+    "sha256": "23dc6685cef7ffa28acf611e747060dc409ab2b45a6b95bdfc41206f9cd14de0",
+    "features": 13,
+    "consulta_utc": "2026-10-19T17:50:10.865831+00:00",
+    "fuente": "Instituto Geográfico Nacional, servicio de límites referenciales",
+    "unidad_geometria": "grados; EPSG:4326",
+    "estado": "Cartografía referencial oficial consultada; no levantamiento de campo",
+    "simplificacion_angular_grados": 0.0003
+  },
+  {
+    "nombre": "distritos-sandia.geojson",
+    "url": "https://www.idep.gob.pe/geoportal/rest/services/DATOS_GEOESPACIALES/L%C3%8DMITES/MapServer/5/query?f=geojson&where=UBIGEO+LIKE+%272112%25%27&outFields=NOMBDEP%2CNOMBPROV%2CNOMBDIST%2CUBIGEO%2CCAPITAL%2CFUENTE&returnGeometry=true&outSR=4326&geometryPrecision=6&maxAllowableOffset=5e-05",
+    "sha256": "d173ac8aafaac319c1c275653f244daa8e52c993c432f30c5606e227f485d815",
+    "features": 10,
+    "consulta_utc": "2026-10-19T17:50:14.328434+00:00",
+    "fuente": "Instituto Geográfico Nacional, servicio de límites referenciales",
+    "unidad_geometria": "grados; EPSG:4326",
+    "estado": "Cartografía referencial oficial consultada; no levantamiento de campo",
+    "simplificacion_angular_grados": 5e-05
+  }
+]

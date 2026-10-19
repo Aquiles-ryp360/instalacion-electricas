@@ -7,22 +7,21 @@ autor: Aquiles Taylor Ramos Yapo
 denominacion: Estudiante
 codigo_estudiante: '227368'
 docente: null
-estado: Proyecto académico de diseño; entrega consolidada para presentación
+estado: Proyecto académico; metrados por componente y memoria organizada en ocho carpetas
 modo: Aislado, sin SEIN
-alcance: MCH y transformación de salida - línea primaria - SE llegada Huancasayani;
-  excluye redes de usuarios
+alcance: MCH y transformación de salida - línea primaria - SE llegada Huancasayani; excluye redes de usuarios
 fuente_unica: datos/lp-r02/parametros.json
 resultados: revisiones/lp-r02/03-calculos/resultados.json
 documentos: expediente/final
-google_earth: entregables/proyecto-final/04_Cartografia/Linea_Primaria.kmz
+google_earth: entregables/proyecto-final/05_Cartografia/Linea_Primaria.kmz
 biblioteca_normativa: ../../herramientas/biblioteca_dge/README.md
 antecedente_historico: archivo/red-urbana
 originales_locales: fuentes/local/lp-r01/antecedente
 revision_previa: LP-R01
 geometria_canonica: datos/lp-r02/geometria-base.json
 paquete_revision: entregables/proyecto-final
-cad_dxf_activo: entregables/proyecto-final/03_Planos/Linea_Primaria.dxf
-cad_dwg_activo: entregables/proyecto-final/03_Planos/Linea_Primaria.dwg
+cad_dxf_activo: entregables/proyecto-final/04_Planos/Linea_Primaria.dxf
+cad_dwg_activo: entregables/proyecto-final/04_Planos/Linea_Primaria.dwg
 tension_confirmada_kv: null
 tension_alternativas_kv:
 - 10
@@ -34,22 +33,35 @@ entregables_previos_r01: entregables/linea-primaria-r01
 cad_dwg_previo_r01: entregables/linea-primaria-r01/cad/LP_Limbani_Huancasayani_R01_Armados_Perfiles.dwg
 constructor: scripts/lp_r02/construir.py
 verificador: scripts/lp_r02/verificar.py
-verificador_presentacion: scripts/lp_r02/entrega_final.py
-comando_verificacion_presentacion: python -X utf8 proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/entrega_final.py verificar
+verificador_presentacion: scripts/lp_r02/actualizar_metrados.py
+comando_verificacion_presentacion: python3 proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02/actualizar_metrados.py
+  verificar-publicado
 paquete_zip: entregables/Proyecto_Linea_Primaria_Limbani_Huancasayani.zip
 guia_pc: README.md
 salida_regenerable: ../../build/aquiles-linea-primaria-inst-ii/lp-r02
 presentacion:
-  estado: Entrega consolidada
+  estado: 'M01 revisada: memoria, ubicación e inventarios por poste'
   fecha: '2026-10-19'
   base_tecnica: LP-R02
   carpeta: entregables/proyecto-final
-  expediente: entregables/proyecto-final/Expediente.pdf
-  paginas: 72
+  expediente: entregables/proyecto-final/00_Expediente/Expediente.pdf
+  paginas: 195
   capitulos_editables: expediente/final/capitulos
-  qgis: entregables/proyecto-final/04_Cartografia/QGIS/Linea_Primaria.qgz
-  verificacion: documentacion/lp-r02/VALIDACION_ENTREGA_FINAL.json
+  qgis: entregables/proyecto-final/05_Cartografia/QGIS/Linea_Primaria.qgz
+  verificacion: documentacion/metrados-m01/validacion-m01.json
   aprobacion_ingenieria: false
+  revision_metrado: LP-R02-M01
+  carpetas: 8
+  paginas_memoria: 10
+  archivos: 31
 paquete_revision_movil: revisiones/lp-r02
 paquete_zip_movil: revisiones/Limbani_Huancasayani_LP_R02.zip
 presentacion_anterior_conservada: entregables/linea-primaria-r02-presentacion
+revision_metrado: LP-R02-M01
+memoria_descriptiva: entregables/proyecto-final/01_Memoria_Descriptiva/Memoria_Descriptiva.pdf
+plano_ubicacion: entregables/proyecto-final/04_Planos/Plano_Ubicacion.pdf
+fuentes_ubicacion: ../../recursos/linea-primaria-limbani/2026-10-19/ubicacion-ign
+criterios_metrado: datos/metrados-m01/criterios.json
+catalogo_metrado: datos/metrados-m01/catalogo.json
+continuidad_metrados: documentacion/metrados-m01/REVISION.md
+presentacion_previa_m01: archivo/presentacion-pre-m01/Proyecto_Linea_Primaria_Limbani_Huancasayani.zip

@@ -34,3 +34,151 @@ Las coordenadas y el perfil proceden del corredor de gabinete, cartografía púb
 Las cargas de usuarios son proyecciones y asignaciones de diseño. Los datos de conductor, transformadores, generador y capacidad transversal de postes son datos tipo. La verificación resistente presentada cubre la flexión idealizada; no acredita capacidad axial, interacción N--M, geotecnia ni rigidez y pretensión reales de las retenidas. El anclaje R02-P019-2 presenta interferencia en la cartografía de referencia. Esta condición y las cargas ascendentes se identifican en las láminas y en la interpretación mecánica.
 
 La potencia nominal de referencia de 200 kW se utiliza para evaluar balances, sin convertirla en potencia firme de estiaje. El expediente corresponde al diseño académico de la línea primaria y conserva independencia respecto del dimensionamiento del curso de Centrales Hidroeléctricas.
+
+\section{Antecedentes, finalidad y objetivos}
+El proyecto corresponde al curso de Instalaciones Eléctricas II. La finalidad del
+escenario es evaluar el transporte de energía entre la transformación de salida de
+Limbani y la llegada prevista en Huancasayani. El trazado y las obras se estudian
+como una línea principal, sin derivaciones de distribución en el recorrido.
+La necesidad real y el número de suministros deben contrastarse con el padrón y
+la disponibilidad firme de la fuente; el censo permite construir el escenario académico.
+
+Los objetivos son delimitar el corredor, comparar niveles de tensión, comprobar el
+comportamiento eléctrico y mecánico del modelo y desarrollar los materiales por
+armado y poste. El proyecto ordena memoria, cálculos, metrados, planos y presupuesto
+para que sus cantidades puedan comprobarse desde una misma base.
+
+\section{Ubicación política y geográfica}
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.288889\linewidth-2\tabcolsep\relax}L{\dimexpr 0.711111\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Nivel} & \textbf{Ubicación / referencia} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Nivel} & \textbf{Ubicación / referencia} \\ \midrule
+\endhead
+País & Perú \\
+Departamento & Puno \\
+Provincia & Sandia \\
+Distrito & Limbani \\
+Ubigeo distrital & 211203, atributo del servicio oficial IGN \\
+Ámbito del proyecto & Corredor de gabinete Limbani--Huancasayani \\
+Sistema local & WGS 84 / UTM zona 19 Sur, EPSG:32719 \\
+Punto inicial P001 / T1 & E 425\,715.000 m; N 8\,436\,650.000 m \\
+Punto final P111 / T2 & E 423\,945.208 m; N 8\,430\,951.878 m \\
+Latitud / longitud inicial & -14.140283\ensuremath{^\circ} / -69.688288\ensuremath{^\circ} \\
+Latitud / longitud final & -14.191753\ensuremath{^\circ} / -69.704844\ensuremath{^\circ} \\
+Longitud horizontal del eje & 6\,696.369 m \\
+Apoyos / vanos & 111 / 110 \\
+\bottomrule\end{longtable}\endgroup
+
+Los límites administrativos se obtuvieron del servicio oficial del Instituto
+Geográfico Nacional (IGN), capas departamental, provincial y distrital. Se conservan
+los archivos descargados, su consulta y sus huellas SHA256. Son límites referenciales;
+su fuente oficial no convierte al plano elaborado para el curso en una demarcación
+legal ni valida los emplazamientos de equipos. La comprobación espacial sitúa los
+dos extremos del eje dentro del polígono referencial de Limbani.
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figuras/ubicacion.pdf}
+\caption{Ubicación Perú--Puno--Sandia--Limbani y corredor del proyecto. La lámina UB-01 se entrega también en A3 para lectura de detalle.}
+\end{figure}
+
+\section{Acceso, relieve y condiciones del emplazamiento}
+El acceso a los frentes y el transporte de postes se consideran condiciones de
+planificación. La cartografía aporta contexto del corredor, pero no se dispone de
+un reconocimiento vial que certifique ruta de ingreso, ancho, pendientes,
+capacidad de puentes o recorrido de maquinaria. No se asignan distancias ni
+tiempos de viaje como datos medidos. Antes del montaje se define la logística con
+inspección del acceso y autorización de los predios correspondientes.
+
+El relieve se representa con el perfil DEM del modelo y no con cotas levantadas.
+Los cruces con cauces, viviendas y otras interferencias son cartográficos. Las
+excavaciones, cimentaciones y anclajes requieren caracterización de suelo y
+replanteo; la memoria no atribuye una capacidad portante ensayada ni una resistividad
+de terreno medida. La servidumbre y las posiciones definitivas de apoyo dependen
+de esa verificación.
+
+\section{Condiciones ambientales usadas en el cálculo}
+Los valores siguientes son estados de diseño y sensibilidades del modelo, no una
+serie climática observada en Limbani. El viento y el hielo se contrastan con el
+CNE y con la clasificación aplicable al emplazamiento. La temperatura de conductor
+de 75 grados Celsius corresponde al estado térmico adoptado, no a temperatura ambiente.
+\begingroup\footnotesize
+\begin{longtable}{L{\dimexpr 0.191176\linewidth-2\tabcolsep\relax}L{\dimexpr 0.102941\linewidth-2\tabcolsep\relax}L{\dimexpr 0.117647\linewidth-2\tabcolsep\relax}L{\dimexpr 0.117647\linewidth-2\tabcolsep\relax}L{\dimexpr 0.470588\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{Temp. \ensuremath{^\circ}C} & \textbf{Viento m/s} & \textbf{Hielo mm} & \textbf{Procedencia / estado} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Estado} & \textbf{Temp. \ensuremath{^\circ}C} & \textbf{Viento m/s} & \textbf{Hielo mm} & \textbf{Procedencia / estado} \\ \midrule
+\endhead
+EDS & 15.0 & 0.0 & 0.0 & Estado inicial supuesto \\
+VIENTO & 5.0 & 29.0 & 0.0 & CNE250-1B área1, sólo viento \\
+HIELO & 0.0 & 0.0 & 6.0 & CNE250-1B área1, sólo hielo \\
+COMBINADO & 0.0 & 14.5 & 3.0 & CNE250-1B área1, hielo y viento \\
+FRIO & -5.0 & 0.0 & 0.0 & Sensibilidad académica, no registro climático \\
+CALOR\_\allowbreak{}FINAL & 75.0 & 0.0 & 0.0 & Máxima temperatura adoptada coherente con resistencia eléctrica; fluencia de sensibilidad, sin curva de proveedor \\
+\bottomrule\end{longtable}\endgroup
+
+\section{Descripción de las instalaciones previstas}
+La transformación de salida T1 eleva la tensión para el transporte y T2 reduce
+la tensión en llegada. En el modelo ambas unidades son de 250 kVA netos disponibles
+en el emplazamiento; sus placas y relaciones reales se mantienen por confirmar.
+Se compara el transporte a 10, 20, 22 y 22.9 kV con la misma demanda y conductor.
+No se declara confirmada una tensión real de generación o de subestación.
+
+La línea aérea comprende una terna AAAC de 50 mm$^2$, apoyos de concreto armado
+centrifugado (CAC), armados de suspensión, ángulo, retención y terminal,
+aislamiento, herrajes, retenidas y puesta a tierra. Las alturas de apoyo son de
+13, 15 y 17 m. La capacidad transversal tipo de 600 daN no equivale a una capacidad
+vertical de 600 kg ni sustituye la revisión de flexocompresión y cimentación.
+Las retenidas se especifican con rotura mínima de 60 kN, pendiente de certificado.
+
+El detalle M01 desarrolla cada componente del metrado con una receta y una ficha
+por poste. Las referencias DGE trifásicas sin neutro se adaptan académicamente a
+CAC mediante los criterios declarados; no se toman los tirafondos de madera como
+accesorios para concreto. Las masas del conjunto suministrado deben incorporarse
+al cálculo mecánico antes de validar su configuración resistente.
+
+\section{Alcance de las obras y organización del expediente}
+\begingroup\small
+\begin{longtable}{L{\dimexpr 0.270833\linewidth-2\tabcolsep\relax}L{\dimexpr 0.729167\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{modelblue!12}
+\textbf{Conjunto} & \textbf{Alcance del escenario} \\ \midrule
+\endfirsthead
+\toprule\rowcolor{modelblue!12}
+\textbf{Conjunto} & \textbf{Alcance del escenario} \\ \midrule
+\endhead
+Transformación & T1 de salida y T2 de llegada; dos unidades de referencia de 250 kVA. \\
+Línea principal & 111 apoyos y 110 vanos, sin ramificaciones; tres fases AAAC. \\
+Apoyos & 72 CAC de 13 m, 30 de 15 m y 9 de 17 m. \\
+Armados & 30 suspensión, 41 ángulo, 38 retención y 2 terminales. \\
+Retenidas & 160 ramales; longitud geométrica ideal más provisión de montaje. \\
+Puesta a tierra & 111 sistemas de apoyo en el metrado; dos mallas de subestación en partida independiente. \\
+Protección y operación & Esquema conceptual de protección y puesta a tierra; ajustes sujetos a la fuente real. \\
+Fuera del alcance & Redes secundarias, acometidas de usuarios y dimensionamiento de la central del otro curso. \\
+\bottomrule\end{longtable}\endgroup
+
+El expediente se organiza en ocho carpetas: expediente integrado, memoria
+descriptiva, cálculos, metrados, planos, cartografía, presupuesto y recursos de
+consulta. La memoria identifica el proyecto y sus bases; los capítulos de cálculo
+desarrollan las ecuaciones; los metrados permiten comprobar piezas por apoyo y los
+planos sitúan el corredor. El presupuesto conserva su carácter referencial académico.
+
+\section{Secuencia prevista de ejecución}
+La secuencia técnica comprende confirmar equipos y demanda, realizar topografía
+y estudios de suelo/tierra, cerrar el diseño de apoyos y armados, obtener las
+autorizaciones del corredor y preparar el suministro. La ejecución comprende
+replanteo, accesos, excavación y cimentación, izado, montaje de armados y retenidas,
+tendido y regulación, conexiones y tierra. Las verificaciones de aislamiento,
+continuidad, puesta a tierra y protección preceden a la energización autorizada.
+No se asigna un plazo contractual ni una cuadrilla real sin rendimiento y
+programación de obra sustentados.
+
+\section{Fuentes de la memoria y plano de ubicación}
+La fuente cartográfica administrativa es el IGN, servicio
+DATOS\_GEOESPACIALES/LÍMITES, consultado el 19 de octubre de 2026. El eje, las
+coordenadas y los estados de cálculo proceden de la base LP-R02. La demanda usa
+los registros INEI 2017 citados en el capítulo de demanda. Las láminas DGE de la
+RD 024-2003-EM/DGE sirven como referencia documental de armados. El registro de
+recursos identifica enlaces y alcance de uso para conservar la trazabilidad.

@@ -1,0 +1,81 @@
+{
+  "revision": "LP-R02-M01",
+  "base_calculo": "LP-R02",
+  "fecha": "2026-10-19",
+  "mapa_funciones": {
+    "SUSPENSION": "CAC-S",
+    "ANGULO": "CAC-A",
+    "ANCLAJE": "CAC-R",
+    "ANCLAJE_PROPUESTO": "CAC-R",
+    "TERMINAL": "CAC-T"
+  },
+  "fases": 3,
+  "longitud_puente_por_fase_m": 2,
+  "reserva_conductor": 0.03,
+  "casos_con_puentes": [
+    "ANCLAJE",
+    "ANCLAJE_PROPUESTO",
+    "TERMINAL"
+  ],
+  "ang_retenida_grados": 45,
+  "colas_retenida_por_ramal_m": 3,
+  "estado_coeficiente_colas": "Hipótesis académica explícita; ajustar al suministro y regulación",
+  "capacidad_minima_retenida_kN": 60,
+  "proposito": "Inventario por armado y poste, independiente del recuento de ramales de retenida para puentes",
+  "metodo_compra": "ceil(tendido_terna + puentes_colas + ceil(0.03*(tendido_terna+puentes_colas)))",
+  "aprobacion_ingenieria": false,
+  "cola_bajante_pat_m": 3,
+  "paso_fijacion_pat_m": 1,
+  "estado_pat": "Despiece académico de partida presupuestal existente; geometría y sección a validar por estudio de tierra",
+  "base_git": "d98269a992758689f302c4dcd35b9b4e4878cca2",
+  "metadatos_parametros": {
+    "fases": {
+      "unidad": "ud",
+      "fuente": "Configuración trifásica LP-R02",
+      "estado": "Base académica de diseño",
+      "confianza": "Alta respecto de la configuración del modelo"
+    },
+    "longitud_puente_por_fase_m": {
+      "unidad": "m/fase",
+      "fuente": "Hipótesis M01, heredada longitud unitaria de la presentación",
+      "estado": "Provisión, no medición de montaje",
+      "confianza": "Por confirmar con geometría de suministro"
+    },
+    "reserva_conductor": {
+      "unidad": "pu",
+      "fuente": "Reserva académica de la presentación LP-R02",
+      "estado": "Coeficiente de provisión",
+      "confianza": "Decisión de metrado"
+    },
+    "ang_retenida_grados": {
+      "unidad": "°",
+      "fuente": "Geometría ideal LP-R02",
+      "estado": "Hipótesis de gabinete",
+      "confianza": "Por confirmar en replanteo"
+    },
+    "colas_retenida_por_ramal_m": {
+      "unidad": "m/ramal",
+      "fuente": "Hipótesis explícita M01",
+      "estado": "Provisión para lazos y regulación",
+      "confianza": "Por confirmar con fabricante"
+    },
+    "capacidad_minima_retenida_kN": {
+      "unidad": "kN",
+      "fuente": "Especificación mínima LP-R02",
+      "estado": "Requisito de resistencia a rotura, no fuerza de trabajo",
+      "confianza": "Pendiente certificado de suministro"
+    },
+    "cola_bajante_pat_m": {
+      "unidad": "m/apoyo",
+      "fuente": "Hipótesis explícita M01",
+      "estado": "Provisión geométrica",
+      "confianza": "Por confirmar con estudio de tierra"
+    },
+    "paso_fijacion_pat_m": {
+      "unidad": "m",
+      "fuente": "Hipótesis explícita M01",
+      "estado": "Coeficiente de montaje para metrado",
+      "confianza": "Por confirmar con accesorio CAC"
+    }
+  }
+}

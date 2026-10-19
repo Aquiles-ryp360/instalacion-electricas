@@ -1,0 +1,5 @@
+# Entradas e informes con SHA256 estable al clonar en Windows o Debian.
+datos/lp-r02/parametros.json text eol=lf
+datos/metrados-m01/*.json text eol=lf
+documentacion/metrados-m01/*.json text eol=lf
+documentacion/metrados-m01/*.csv text eol=lf

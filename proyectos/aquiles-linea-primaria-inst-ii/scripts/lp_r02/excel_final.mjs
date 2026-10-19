@@ -71,7 +71,7 @@ function core(w,full=false){
  const p=hoja(w,'Postes','PLANILLA DE POSTES Y ARMADOS',[10,17,18,13,11,13,12,13,26,13,10,10,16]);
  header(p,6,['Poste','Este (m)','Norte (m)','Cota DEM (m)','Altura (m)','Empotr. (m)','Amarre (m)','Ángulo (°)','Función','Ramales','Postes (ud)','Armados (jgo)','Puentes (m)']);
  p.getRange('A7:I117').values=r.postes.map(x=>[x.id,x.e,x.n,x.cota_dem_m,x.poste_m,x.empotramiento_estudio_m,x.amarre_m,x.angulo_deg,x.tipo_r02]);
- const fp=r.postes.map((_,i)=>{let n=i+7;return [`=IF(I${n}="SUSPENSION",0,IF(I${n}="TERMINAL",1,2))`,'=1','=1',`=J${n}*'Parametros'!$E$5*'Parametros'!$E$6`];});p.getRange('J7:M117').formulas=fp;
+ const fp=r.postes.map((_,i)=>{let n=i+7;return [`=IF(I${n}="SUSPENSION",0,IF(I${n}="TERMINAL",1,2))`,'=1','=1',`=IF(OR(I${n}="ANCLAJE",I${n}="ANCLAJE_PROPUESTO",I${n}="TERMINAL"),'Parametros'!$E$5*'Parametros'!$E$6,0)`];});p.getRange('J7:M117').formulas=fp;
  p.freezePanes.freezeRows(6);p.freezePanes.freezeColumns(1);cuerpo(p,'B7:H117','#,##0.00');cuerpo(p,'J7:L117','0');cuerpo(p,'M7:M117','0.00');input(p,'B7:I117');
  p.getRange('I7:I117').dataValidation={rule:{type:'list',values:['SUSPENSION','ANGULO','ANCLAJE','ANCLAJE_PROPUESTO','TERMINAL']}};
  const v=hoja(w,'Vanos','LONGITUD DE CONDUCTOR POR CATENARIA EDS',[9,10,10,14,14,14,14,16,14,14,14,14,17,17]);
@@ -106,7 +106,7 @@ function resumenMetrado(w){
  [22,'04.01','Longitud horizontal del eje','m','Suma de longitudes XY de los 110 vanos',`=SUM('Vanos'!$D$7:$D$116)`],
  [23,'04.02','Conductor por fase (EDS)','m','Suma de longitudes de catenaria',`=SUM('Vanos'!$M$7:$M$116)`],
  [24,'04.03','Terna tendida','m','3 × longitud por fase',`=E23*'Parametros'!$E$5`],
- [25,'04.04','Puentes y colas','m','3 fases × 160 ramales × 2 m',`=SUM('Postes'!$M$7:$M$117)`],
+ [25,'04.04','Puentes y colas','m','3 fases × (38 retenciones + 2 terminales) × 2 m',`=SUM('Postes'!$M$7:$M$117)`],
  [26,'04.05','Reserva adicional','m','Redondeo superior de 3% de tendido + puentes',`=ROUNDUP(SUM(E24:E25)*'Parametros'!$E$7,0)`],
  [27,'','CONDUCTOR PARA SUMINISTRO','m','Redondeo superior de tendido + puentes + reserva','=ROUNDUP(SUM(E24:E26),0)']];
  for(const [n,id,desc,u,des,f]of filas){s.getRange(`A${n}:D${n}`).values=[[id,desc,u,des]];formula(s,`E${n}`,f);}

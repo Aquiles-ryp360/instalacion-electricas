@@ -1,0 +1,21 @@
+FUENTES Y ALCANCE DE USO · M01
+
+IGN: límites referenciales oficiales; plano UB-01 elaborado por el proyecto.
+https://www.idep.gob.pe/geoportal/rest/services/DATOS_GEOESPACIALES/L%C3%8DMITES/MapServer
+Consulta 19/10/2026. Cartografia_IGN conserva respuestas y procedencia con SHA256.
+Se excluye del dibujo la entidad departamental vacía sin nombre/código; el original se conserva.
+El eje y las posiciones de equipo proceden de LP-R02; no de un levantamiento del IGN.
+
+RD 024-2003-EM/DGE, soportes normalizados
+https://intranet2.minem.gob.pe/web/archivos/dge/legislacion/dispositivos/rd024-2003-EM.pdf
+SHA256: c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8
+Uso: Coeficientes de la columna trifásica sin neutro; las adaptaciones a CAC se declaran por separado.
+
+Plan Anual de Contrataciones Electro Puno 2024
+https://cdn.www.gob.pe/uploads/document/file/5756349/5113884-01_pac_2024_final_elpu-r.pdf
+SHA256: 20ec082d5a15fc3bdb7c40a60660a8fbe5cb89b87436c9bae52958885e3aacc3
+Uso: Evidencia de familia de crucetas metálicas para CAC, sin certificación del armado elegido.
+
+Bases_Metrados conserva coeficientes, unidades, hipótesis y compatibilidades pendientes.
+Los antecedentes censales INEI y restantes fuentes de cálculo se citan en el expediente y en el repositorio completo.
+El recálculo eléctrico/mecánico sigue la base LP-R02. Las masas reales del despiece no están certificadas.

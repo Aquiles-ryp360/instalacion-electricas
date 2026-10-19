@@ -1,0 +1,17 @@
+{
+  "expediente_sha256": "c00cd7dd90aba9c338dda5bed437cbd0ef49759123bae644e125053ce053b8d4",
+  "muestras_ficha": [
+    "P001",
+    "P002",
+    "P003",
+    "P035",
+    "P111"
+  ],
+  "inspeccion": "Renderizado visual de tablas y encabezados; consulta de marcadores de las 111 fichas",
+  "resultado": "Fichas con cantidades, unidades, origen del conjunto y accesorios incluidos legibles en una página.",
+  "memoria": "Portada, texto y tablas; PDF independiente de 10 páginas con UB-01 A3.",
+  "plano_ubicacion": "Revisión visual de las cuatro vistas IGN, eje, rótulo, coordenadas y fuentes.",
+  "limite": "La revisión de presentación no equivale a aprobación resistente, topográfica ni de fabricación.",
+  "planilla_vanos": "110 vanos conservados, con total de longitud horizontal, por fase y terna.",
+  "paginas_expediente": 195
+}

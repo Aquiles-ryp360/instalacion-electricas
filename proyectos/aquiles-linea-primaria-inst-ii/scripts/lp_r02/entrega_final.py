@@ -203,4 +203,6 @@ def sha(f):return hashlib.sha256(f.read_bytes()).hexdigest()
 
 
 if __name__=='__main__':
+    if (P/'datos/metrados-m01/catalogo.json').exists():
+        raise SystemExit('La entrega activa es M01. Usar actualizar_metrados.py verificar-publicado; para regenerar, consultar documentacion/metrados-m01/REVISION.md. Este constructor conserva la presentación histórica de 72 páginas.')
     {'cartografia':cartografia,'verificar':verificar,'empaquetar':empaquetar,'publicar':publicar}[sys.argv[1]]()

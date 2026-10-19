@@ -1,0 +1,30 @@
+{
+  "motor": "LibreOffice",
+  "ediciones": [
+    "P002 suspensión -> anclaje",
+    "P002 altura 13 -> 15 m",
+    "DISCO por CAC-R 12 -> 13",
+    "Ficha_poste selecciona P002"
+  ],
+  "resultados_esperados": {
+    "E7": 71,
+    "E8": 31,
+    "E9": 9,
+    "E10": 111,
+    "E19": 162,
+    "E25": 246,
+    "E27": 21137
+  },
+  "materiales_comprobados": {
+    "PIN": 372,
+    "DISCO": 519,
+    "CRU-M": 193
+  },
+  "ficha_P002": {
+    "DISCO": 13,
+    "PIN": 1,
+    "BLO-R": 2,
+    "P15": 1
+  },
+  "libro_entrega_sin_modificaciones": true
+}

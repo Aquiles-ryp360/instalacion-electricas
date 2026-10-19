@@ -1,0 +1,39 @@
+{
+  "fuente": "IGN, límites referenciales",
+  "pais": "Perú",
+  "departamento": "Puno",
+  "provincia": "Sandia",
+  "distrito": "Limbani",
+  "ubigeo": "211203",
+  "epsg_local": 32719,
+  "epsg_nacional": 4326,
+  "coordenadas_inicio": [
+    425715.0,
+    8436650.0
+  ],
+  "coordenadas_final": [
+    423945.20799878985,
+    8430951.877688147
+  ],
+  "inicio_lon_lat": [
+    -69.68828771219033,
+    -14.140282943082434
+  ],
+  "final_lon_lat": [
+    -69.70484380000002,
+    -14.19175319999999
+  ],
+  "intersecciones_distritales": [
+    {
+      "distrito": "LIMBANI",
+      "longitud_eje_interseccion_m": 6696.368693212355
+    }
+  ],
+  "contencion_extremos_limbani": true,
+  "aprobacion_topografica": false,
+  "sha256": {
+    "Plano_Ubicacion.pdf": "70f2e96a7f90ef51e78df53ec773f5e5a7bab611ab9a7b5915a95b8e838f73fe",
+    "Plano_Ubicacion.svg": "9f421e74ad60967f667edcfe394e3e33785ccd70b14e55e8e33eb247e52fa71e",
+    "Plano_Ubicacion.png": "7210277f52b4c8771d5dafea345e8639685531f3f8944bb51858aa0167cfe625"
+  }
+}

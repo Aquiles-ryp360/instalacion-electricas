@@ -1,0 +1,22 @@
+{
+  "fecha_utc": "2026-10-19T18:07:05.748471+00:00",
+  "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+  "ejecutable": "/usr/bin/python3",
+  "plataforma": "linux",
+  "paquetes": {
+    "openpyxl": "3.1.5",
+    "PyMuPDF": "1.28.2",
+    "reportlab": "5.0.1",
+    "pypdf": "6.21.1",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "shapely": "2.2.0",
+    "pyproj": "3.8.0",
+    "PyYAML": "6.0.3"
+  },
+  "libreoffice": "LibreOffice 25.2.3.2 520(Build:2)",
+  "paquete_instalado_sesion": "texlive-lang-spanish 2024.20250309-1",
+  "autorizacion": "Instalación y documentación autorizadas por el usuario para trabajar en Debian proot.",
+  "entorno": "Debian en proot de Termux; proyecto en Documents de Android"
+}

@@ -1,0 +1,32 @@
+{
+  "fecha_utc": "2026-10-19T18:02:39.946534+00:00",
+  "pruebas_unitarias": 19,
+  "ejecuciones": [
+    {
+      "comando": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "proyectos/aquiles-linea-primaria-inst-ii/scripts/lp_r02",
+        "-p",
+        "test_metrados_componentes.py",
+        "-v"
+      ],
+      "codigo_salida": 0,
+      "salida": "test_conductor_y_asignacion_cuadran (test_metrados_componentes.MetradoPorPoste.test_conductor_y_asignacion_cuadran) ... ok\ntest_geometria_y_cable_retenida (test_metrados_componentes.MetradoPorPoste.test_geometria_y_cable_retenida) ... ok\ntest_incluidos_y_compra_separados (test_metrados_componentes.MetradoPorPoste.test_incluidos_y_compra_separados) ... ok\ntest_puentes_dependen_de_la_interrupcion_electrica (test_metrados_componentes.MetradoPorPoste.test_puentes_dependen_de_la_interrupcion_electrica) ... ok\ntest_rechaza_funcion_sin_desglose (test_metrados_componentes.MetradoPorPoste.test_rechaza_funcion_sin_desglose) ... ok\ntest_referencia_dge_sin_neutro (test_metrados_componentes.MetradoPorPoste.test_referencia_dge_sin_neutro) ... ok\ntest_terminal_y_paso_no_se_confunden (test_metrados_componentes.MetradoPorPoste.test_terminal_y_paso_no_se_confunden) ... ok\ntest_totales_independientes_por_poblacion (test_metrados_componentes.MetradoPorPoste.test_totales_independientes_por_poblacion) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.288s\n\nOK\n"
+    },
+    {
+      "comando": [
+        "python3",
+        "-m",
+        "unittest",
+        "herramientas.lineas_primarias.tests.test_revision",
+        "-v"
+      ],
+      "codigo_salida": 0,
+      "salida": "test_elevar_tension_reduce_perdida (herramientas.lineas_primarias.tests.test_revision.Electrica.test_elevar_tension_reduce_perdida) ... ok\ntest_flujo_coincide_con_solucion_cuadratica_resistiva (herramientas.lineas_primarias.tests.test_revision.Electrica.test_flujo_coincide_con_solucion_cuadratica_resistiva) ... ok\ntest_resistencia_usa_longitud_real_y_temperatura (herramientas.lineas_primarias.tests.test_revision.Electrica.test_resistencia_usa_longitud_real_y_temperatura) ... ok\ntest_sin_carga_sin_perdida (herramientas.lineas_primarias.tests.test_revision.Electrica.test_sin_carga_sin_perdida) ... ok\ntest_cambio_estado_conserva_longitud (herramientas.lineas_primarias.tests.test_revision.Mecanica.test_cambio_estado_conserva_longitud) ... ok\ntest_carga_transversal_no_es_peso_vertical (herramientas.lineas_primarias.tests.test_revision.Mecanica.test_carga_transversal_no_es_peso_vertical) ... ok\ntest_catenaria_horizontal_solucion_cerrada (herramientas.lineas_primarias.tests.test_revision.Mecanica.test_catenaria_horizontal_solucion_cerrada) ... ok\ntest_desnivel_puede_arrancar_aislador (herramientas.lineas_primarias.tests.test_revision.Mecanica.test_desnivel_puede_arrancar_aislador) ... ok\ntest_equilibrio_vectorial_inclinado_viento (herramientas.lineas_primarias.tests.test_revision.Mecanica.test_equilibrio_vectorial_inclinado_viento) ... ok\ntest_rechaza_dato_no_fisico (herramientas.lineas_primarias.tests.test_revision.Mecanica.test_rechaza_dato_no_fisico) ... ok\ntest_vanos_rigidos_desiguales_no_comparten_traccion (herramientas.lineas_primarias.tests.test_revision.Mecanica.test_vanos_rigidos_desiguales_no_comparten_traccion) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.295s\n\nOK\n"
+    }
+  ]
+}

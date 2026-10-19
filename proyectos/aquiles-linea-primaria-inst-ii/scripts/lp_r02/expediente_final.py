@@ -8,10 +8,12 @@ P=Path(__file__).resolve().parents[2];ROOT=P.parents[1]
 sys.path.insert(0,str(ROOT))
 from herramientas.documentos.formato_aquiles import compilar,tex
 from herramientas.lineas_primarias.revision import flujo_sistema
+from metrados_componentes import actualizar_resultados_para_documento, capitulo as capitulo_metrado
 
 B=ROOT/'build'/P.name/'presentacion-final';O=B/'Proyecto_Linea_Primaria';T=B/'latex'
 R=json.loads((P/'revisiones/lp-r02/03-calculos/resultados.json').read_text(encoding='utf-8'))
 C=json.loads((P/'datos/lp-r02/parametros.json').read_text(encoding='utf-8'))
+R=actualizar_resultados_para_documento(R)
 F=next(x for x in R['comparacion_tensiones'] if x['kV']==10 and x['toma_pu']==1.05)
 
 
@@ -31,6 +33,10 @@ def preparar():
     T.mkdir(exist_ok=True);(T/'capitulos').mkdir(exist_ok=True);(T/'plantilla').mkdir(exist_ok=True);(T/'figuras').mkdir(exist_ok=True)
     for name in ['estilo.tex','caratula.tex']:shutil.copy2(ROOT/'recursos/plantillas/expediente-aquiles'/name,T/'plantilla'/name)
     shutil.copy2(ROOT/'recursos/identidad/escudo-unap.png',T/'figuras/escudo-unap.png')
+    if not (B/'ubicacion/Plano_Ubicacion.pdf').is_file():
+        from ubicacion_memoria import generar
+        generar(B)
+    shutil.copy2(B/'ubicacion/Plano_Ubicacion.pdf',T/'figuras/ubicacion.pdf')
     macros=dict(ProyectoCabecera='PROYECTO DE LÍNEA PRIMARIA LIMBANI - HUANCASAYANI, SANDIA - PUNO',
         CursoCabecera=r'\shortstack{INSTALACIONES\\ELÉCTRICAS II}',DocumentoPie='LÍNEA PRIMARIA LIMBANI - HUANCASAYANI',AutorDocumento='Aquiles Taylor Ramos Yapo',
         CursoCaratula='INSTALACIONES ELÉCTRICAS II',TituloCaratula='PROYECTO: ``LÍNEA PRIMARIA LIMBANI - HUANCASAYANI\'\'',
@@ -258,37 +264,7 @@ La resistencia mínima de suministro se conserva en 60 kN. La coordenada geomét
 \section{Flecha y separación al terreno}
 El mínimo calculado respecto al perfil DEM heredado es 7.549 m, superior al margen académico de comparación de 7.5 m. La comparación se limita al perfil disponible y no acredita un gálibo topográfico real, la envolvente lateral por viento ni la ausencia de obstáculos. Las láminas muestran las cotas de gabinete y las condiciones mecánicas que sustentan esta interpretación.
 '''
-    partes['06-metrados']=r'''\chapter{METRADOS DESARROLLADOS}
-\section{Criterio de medición}
-Se mide un poste y un armado por apoyo, una retenida por ramal de anclaje y la longitud de conductor por catenaria EDS de cada fase. El metrado distingue longitud instalada, asignación de puentes y reserva de suministro. La suma procede de los 111 apoyos y 110 vanos representados en CAD y QGIS.
-\section{Conteo de postes y armados}
-\begin{align}
-N_P&=N_{13}+N_{15}+N_{17}=72+30+9=\boxed{111},\\
-N_A&=N_S+N_{\angle}+N_R+N_{R,\mathrm{ad}}+N_T\\
-&=30+41+22+16+2=\boxed{111},\notag\\
-N_{\mathrm{ret}}&=30(0)+(41+22+16)(2)+2(1)=\boxed{160}.
-\end{align}
-'''+tabla(['Partida','Unidad','Operación','Cantidad'],[
- ['Poste CAC 13 m / 600 daN','ud','Conteo por altura','72'],['Poste CAC 15 m / 600 daN','ud','Conteo por altura','30'],['Poste CAC 17 m / 600 daN','ud','Conteo por altura','9'],
- ['Armado de suspensión','jgo','Conteo por función','30'],['Armado de ángulo','jgo','Conteo por función','41'],['Armado de anclaje','jgo','Conteo por función','22'],['Retención adicional','jgo','Conteo por función','16'],['Armado terminal','jgo','Conteo por función','2'],['Retenida con anclaje','ud','Suma de ramales','160'],['Transformación de salida y llegada','ud','1 + 1','2']], [2.4,.6,1.6,.8])+r'''
-\section{Conductor: tendido, puentes y reserva}
-\begin{align}
-L_{\mathrm{terna}}&=3\sum_{i=1}^{110}L_{c,i}=20\,274.360891\ \mathrm{m},\\
-L_{\mathrm{puentes}}&=3\,N_{\mathrm{ret}}\,l_p=3(160)(2)=960\ \mathrm{m},\\
-L_{\mathrm{res}}&=\left\lceil0.03(L_{\mathrm{terna}}+L_{\mathrm{puentes}})\right\rceil\\
-&=\left\lceil0.03(21\,234.360891)\right\rceil=638\ \mathrm{m},\notag\\
-L_{\mathrm{compra}}&=\left\lceil L_{\mathrm{terna}}+L_{\mathrm{puentes}}+L_{\mathrm{res}}\right\rceil\\
-&=\boxed{21\,873\ \mathrm{m}}.\notag
-\end{align}
-La asignación de 2 m por ramal y fase es el coeficiente geométrico adoptado para puentes y colas. El 3\% constituye una reserva adicional de suministro; ambos conceptos se separan para evitar contabilizarlos dos veces.
-\section{Planilla de medición por vano}
-'''+tabla(['Vano','Desde','Hasta','L XY m','Cable/fase m','Terna m'],[[v['id'],v['desde'],v['hasta'],n(v['longitud_m']),n(v['estados']['EDS']['longitud_cable_m']),n(3*v['estados']['EDS']['longitud_cable_m'])] for v in R['vanos']], [1,1,1,1.2,1.5,1.5])+r'''
-\section{Planilla de cantidades por apoyo}
-La columna de puentes corresponde a $3n_R(2\ \mathrm{m})$. Las funciones se expresan como S (suspensión), A (ángulo), R (anclaje), RA (retención adicional) y T (terminal).
-'''+tabla(['Poste','Altura m','Función','Postes ud','Armados jgo','Retenidas ud','Puentes m'],[[p['id'],str(p['poste_m']),{'SUSPENSION':'S','ANGULO':'A','ANCLAJE':'R','ANCLAJE_PROPUESTO':'RA','TERMINAL':'T'}[p['tipo_r02']],'1','1',str(p['retenidas_r02']),n(6*p['retenidas_r02'],0)] for p in R['postes']], [1,1,1,1,1.2,1.2,1.1])+r'''
-\section{Alcance de partidas de montaje}
-Los postes instalados y las retenidas con anclaje se valoran como conjuntos de montaje en el presupuesto referencial. No se convierte una geometría esquemática de cimentación en volumen civil certificado. Por ello el metrado cuantifica unidades electromecánicas y longitudes de conductor, mientras el precio de los conjuntos incluye la cimentación tipo de su hipótesis económica.
-'''
+    partes['06-metrados']=capitulo_metrado(R,tabla,tex,n)
     partes['07-presupuesto']=presupuesto_tex()
     partes['08-especificaciones']=r'''\chapter{ESPECIFICACIONES Y EJECUCIÓN}
 \section{Equipos y materiales}
@@ -307,13 +283,15 @@ Las referencias documentales utilizadas en el desarrollo son:
 \item MINEM, Código Nacional de Electricidad -- Suministro 2011, RM 214-2011-MEM/DM. Copia pública consultada en la base de diseño.
 \item MINEM, RD 018-2003-EM/DGE, Bases para el diseño de líneas y redes primarias para electrificación rural.
 \item MINEM, RD 024-2003-EM/DGE, Especificaciones técnicas de soportes normalizados para líneas y redes primarias. Las láminas adjuntas son referencias documentales vectorizadas.
+\item Electro Puno, Plan Anual de Contrataciones 2024, p.59: familia de crucetas metálicas para postes CAC; alcance de uso declarado en el metrado M01.
+\item Instituto Geográfico Nacional, servicio de límites referenciales departamentales, provinciales y distritales, consultado el 19/10/2026: base de ubicación UB-01.
 \item INEI, Directorio Nacional de Centros Poblados 2017, tomo 4, registros del ámbito de Huancasayani.
 \item Datos de cartografía OSM, catastro aportado y DEM público empleados en el corredor de gabinete.
 \end{enumerate}
 La referencia de armados no acredita automáticamente una adaptación a poste CAC ni una lista de fabricación. Las hojas conservan su título y lista de componentes, y se separan de las láminas propias de la línea.
 '''
     partes['09-conclusiones']=r'''\chapter{RESULTADOS DEL DISEÑO}
-La línea primaria académica se desarrolla sobre un corredor horizontal de 6.696 km, con 111 apoyos y 110 vanos. La terna AAAC 50 mm$^2$ demanda 20\,274.361 m de tendido, 960 m de puentes/colas y 638 m de reserva; la cantidad de suministro redondeada es 21\,873 m. Los apoyos se distribuyen en 72 de 13 m, 30 de 15 m y 9 de 17 m, con 111 armados y 160 ramales de retenida.
+La línea primaria académica se desarrolla sobre un corredor horizontal de 6.696 km, con 111 apoyos y 110 vanos. La terna AAAC 50 mm$^2$ demanda '''+n(R['conductor']['tendido_terna_m'])+r''' m de tendido, '''+n(R['conductor']['puentes_provision_m'],0)+r''' m de puentes/colas y '''+n(R['conductor']['reserva_m'],0)+r''' m de reserva; la cantidad de suministro redondeada es '''+n(R['conductor']['total_compra_estudio_m'],0)+r''' m. Los apoyos se distribuyen en 72 de 13 m, 30 de 15 m y 9 de 17 m, con 111 armados y 160 ramales de retenida. El metrado M01 incorpora el despiece por componente y sus fichas individuales.
 
 La demanda máxima del escenario es 171.486 kW y 190.540 kVA. Con el caso de 10 kV y fuente equivalente a 1.05 pu, la corriente de línea es 11.356 A, la pérdida activa es 2.102 kW y la BT de llegada es 371.067 V. El balance requiere 183.326 kW en generación y 212.481 kVA de fuente. Los resultados incorporan ambos transformadores y auxiliares.
 
@@ -332,10 +310,12 @@ La entrega reúne en un único expediente la memoria, las ecuaciones, los metrad
 \addcontentsline{toc}{chapter}{ÍNDICE DE PLANOS Y ARMADOS}
 \section*{Anexo A. Láminas de la línea primaria}
 Las láminas se incorporan inmediatamente después de la memoria. El código impreso identifica la misma presentación en el CAD editable.
-'''+tabla(['Código','Lámina'],[[f'LP-{i+1:02}',tex(t)] for i,t in enumerate(titulos)],[1,4])+r'''
+'''+tabla(['Código','Lámina'],[['UB-01','Ubicación política y geográfica: Perú--Puno--Sandia--Limbani']]+[[f'LP-{i+1:02}',tex(t)] for i,t in enumerate(titulos)],[1,4])+r'''
 \section*{Anexo B. Referencias documentales DGE}
 Las hojas siguientes conservan las vistas y listas de componentes de su referencia. No constituyen una adaptación constructiva aprobada al corredor ni piezas paramétricas de fabricación.
 '''+tabla(['Lámina DGE','Descripción'],[[tex(x['lamina']),tex(x['titulo'])] for x in catalogo],[1,4],'footnotesize')
+    from memoria_descriptiva import ampliar
+    partes['01-memoria']=ampliar(partes['01-memoria'],R,C,tabla,tex,n)
     for key,value in partes.items():(T/'capitulos'/(key+'.tex')).write_text(value,encoding='utf-8')
     main=r'''\documentclass[12pt,letterpaper]{report}
 \input{metadatos}\input{plantilla/estilo}\decimalpoint
@@ -382,6 +362,7 @@ def integrar():
         start=len(w.pages)+1;w.append(PdfReader(path),pages=pages,outline_item=titulo,import_outline=pages is None)
         indice.append(dict(seccion=titulo,desde=start,hasta=len(w.pages)))
     agregar('Memoria, cálculos, metrados y presupuesto',cuerpo)
+    agregar('UB-01: ubicación Perú–Puno–Sandia–Limbani',B/'ubicacion/Plano_Ubicacion.pdf')
     agregar('Planos de línea primaria',planos)
     source=P/'entregables/linea-primaria-r02-presentacion/09-armados-referencia/Referencia_documental_DGE.pdf'
     # Sólo se actualiza la identidad del rótulo de proyecto, fuera del dibujo normativo.
