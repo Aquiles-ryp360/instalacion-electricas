@@ -1,0 +1,41 @@
+{
+  "revision": "LP-R03-229KV",
+  "base_git": "f7c29c2f2c11fef388141da51e735d352f853daa",
+  "fecha": "2026-10-19",
+  "tension_nominal_linea_kv": 22.9,
+  "frecuencia_hz": 60,
+  "fases": 3,
+  "modo": "AISLADO",
+  "estado": "TENSION ADOPTADA PARA DISEÑO; INGENIERIA PENDIENTE",
+  "base_geometrica": "datos/lp-r02/geometria-base.json",
+  "base_electrica": "datos/lp-r02/parametros.json",
+  "mt_ll_nominal_kv": 22.9,
+  "bt_estudio_v": 380,
+  "fuente_tension_generador_kv": null,
+  "trafo_elevador_relacion_real": null,
+  "trafo_reductor_relacion_real": null,
+  "trafo_salida_kva_estudio": 250,
+  "trafo_llegada_kva_estudio": 250,
+  "potencia_firme_estiaje_kw": null,
+  "proyeccion_carga_pico_kw": 171.486,
+  "fp_estudio": 0.9,
+  "conductor_revision_preliminar": "AAAC 50 mm2 de M01; no aprobado para compra",
+  "tension_maxima_equipo_kv": null,
+  "aislamiento_bil_kvp": null,
+  "esquema_neutro_verificado": null,
+  "medicion_resistividad_suelo": null,
+  "regulacion_fuente_confirmada_pu": null,
+  "regulacion_fuente_sensibilidades_pu": [
+    1,
+    1.025,
+    1.05
+  ],
+  "aprobacion_ingenieria": false,
+  "aprobado_para_construccion": false,
+  "notas": [
+    "Los PDF/XLSX/DWG M01 siguen siendo 10 kV hasta generación integral R03.",
+    "Datos T1, T2 y generador hipotéticos hasta obtener placas.",
+    "No presuponer disponibilidad de generación ni límite de altura.",
+    "La tensión elegida no resuelve 46 apoyos con carga vertical ascendente."
+  ]
+}
