@@ -14,6 +14,7 @@ Motores reutilizables del repositorio. Los parámetros y decisiones particulares
 | [calculadora/](calculadora/) | Calculadora HTML local. |
 | [hidroelectricas/](hidroelectricas/README.md) | Hidráulica, cuencas y transitorios para proyectos hidroeléctricos. |
 | [lineas_primarias/](lineas_primarias/) | Cálculos mecánicos y eléctricos de líneas. |
+| [documentos/](documentos/README.md) | Memorias por capítulos y maquetación LaTeX con el formato de Aquiles. |
 | [red_mt/](red_mt/) | Utilidades de representación de media tensión. |
 | [linea_primaria_preliminar/](linea_primaria_preliminar/README.md) | Preparación cartográfica preliminar de corredores y láminas. |
 | [topografia/](topografia/README.md) | Datos de elevación y productos de topografía de gabinete. |

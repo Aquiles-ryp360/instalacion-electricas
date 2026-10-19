@@ -1,2 +1,3 @@
 osm_bbox.xml -text
 casas-originales.geojson -text
+resultados.json -text

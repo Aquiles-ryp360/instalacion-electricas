@@ -1,0 +1,497 @@
+﻿id,recurso,unidad,cantidad,formula,referencia,estado
+C-V001,Conductor AAAC 50: terna tendida,m,147.82057574919781,3 x longitud catenaria EDS del vano,V001,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V002,Conductor AAAC 50: terna tendida,m,146.93621419970538,3 x longitud catenaria EDS del vano,V002,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V003,Conductor AAAC 50: terna tendida,m,226.7133938635011,3 x longitud catenaria EDS del vano,V003,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V004,Conductor AAAC 50: terna tendida,m,226.73270288756493,3 x longitud catenaria EDS del vano,V004,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V005,Conductor AAAC 50: terna tendida,m,214.24122965385004,3 x longitud catenaria EDS del vano,V005,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V006,Conductor AAAC 50: terna tendida,m,213.2315858140379,3 x longitud catenaria EDS del vano,V006,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V007,Conductor AAAC 50: terna tendida,m,172.5898134188793,3 x longitud catenaria EDS del vano,V007,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V008,Conductor AAAC 50: terna tendida,m,210.43201101451595,3 x longitud catenaria EDS del vano,V008,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V009,Conductor AAAC 50: terna tendida,m,211.20391155640488,3 x longitud catenaria EDS del vano,V009,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V010,Conductor AAAC 50: terna tendida,m,153.89464624909687,3 x longitud catenaria EDS del vano,V010,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V011,Conductor AAAC 50: terna tendida,m,183.26069799412593,3 x longitud catenaria EDS del vano,V011,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V012,Conductor AAAC 50: terna tendida,m,163.27941937238253,3 x longitud catenaria EDS del vano,V012,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V013,Conductor AAAC 50: terna tendida,m,124.06721990122892,3 x longitud catenaria EDS del vano,V013,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V014,Conductor AAAC 50: terna tendida,m,218.73442672281794,3 x longitud catenaria EDS del vano,V014,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V015,Conductor AAAC 50: terna tendida,m,218.15678983063486,3 x longitud catenaria EDS del vano,V015,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V016,Conductor AAAC 50: terna tendida,m,216.12008315328086,3 x longitud catenaria EDS del vano,V016,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V017,Conductor AAAC 50: terna tendida,m,144.6739719041593,3 x longitud catenaria EDS del vano,V017,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V018,Conductor AAAC 50: terna tendida,m,144.66330535456837,3 x longitud catenaria EDS del vano,V018,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V019,Conductor AAAC 50: terna tendida,m,79.31654465085538,3 x longitud catenaria EDS del vano,V019,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V020,Conductor AAAC 50: terna tendida,m,79.39756186716612,3 x longitud catenaria EDS del vano,V020,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V021,Conductor AAAC 50: terna tendida,m,186.97429282530504,3 x longitud catenaria EDS del vano,V021,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V022,Conductor AAAC 50: terna tendida,m,186.03074587983264,3 x longitud catenaria EDS del vano,V022,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V023,Conductor AAAC 50: terna tendida,m,186.8113126025148,3 x longitud catenaria EDS del vano,V023,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V024,Conductor AAAC 50: terna tendida,m,219.43807789754638,3 x longitud catenaria EDS del vano,V024,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V025,Conductor AAAC 50: terna tendida,m,219.39176850458426,3 x longitud catenaria EDS del vano,V025,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V026,Conductor AAAC 50: terna tendida,m,220.3023411596381,3 x longitud catenaria EDS del vano,V026,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V027,Conductor AAAC 50: terna tendida,m,220.7156383529438,3 x longitud catenaria EDS del vano,V027,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V028,Conductor AAAC 50: terna tendida,m,177.7638272272245,3 x longitud catenaria EDS del vano,V028,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V029,Conductor AAAC 50: terna tendida,m,43.60014181129469,3 x longitud catenaria EDS del vano,V029,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V030,Conductor AAAC 50: terna tendida,m,246.93651007476421,3 x longitud catenaria EDS del vano,V030,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V031,Conductor AAAC 50: terna tendida,m,246.0770616751704,3 x longitud catenaria EDS del vano,V031,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V032,Conductor AAAC 50: terna tendida,m,220.84252301336534,3 x longitud catenaria EDS del vano,V032,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V033,Conductor AAAC 50: terna tendida,m,221.59778527200896,3 x longitud catenaria EDS del vano,V033,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V034,Conductor AAAC 50: terna tendida,m,220.39788556940573,3 x longitud catenaria EDS del vano,V034,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V035,Conductor AAAC 50: terna tendida,m,78.10320302265565,3 x longitud catenaria EDS del vano,V035,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V036,Conductor AAAC 50: terna tendida,m,70.9202199690375,3 x longitud catenaria EDS del vano,V036,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V037,Conductor AAAC 50: terna tendida,m,110.28976901819601,3 x longitud catenaria EDS del vano,V037,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V038,Conductor AAAC 50: terna tendida,m,227.23635506141,3 x longitud catenaria EDS del vano,V038,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V039,Conductor AAAC 50: terna tendida,m,248.31397419447754,3 x longitud catenaria EDS del vano,V039,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V040,Conductor AAAC 50: terna tendida,m,256.38423486826247,3 x longitud catenaria EDS del vano,V040,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V041,Conductor AAAC 50: terna tendida,m,189.7173416353247,3 x longitud catenaria EDS del vano,V041,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V042,Conductor AAAC 50: terna tendida,m,150.74600151493308,3 x longitud catenaria EDS del vano,V042,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V043,Conductor AAAC 50: terna tendida,m,240.31645400135866,3 x longitud catenaria EDS del vano,V043,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V044,Conductor AAAC 50: terna tendida,m,241.38594877140872,3 x longitud catenaria EDS del vano,V044,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V045,Conductor AAAC 50: terna tendida,m,184.33184470371668,3 x longitud catenaria EDS del vano,V045,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V046,Conductor AAAC 50: terna tendida,m,184.34259703360215,3 x longitud catenaria EDS del vano,V046,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V047,Conductor AAAC 50: terna tendida,m,184.78882538802512,3 x longitud catenaria EDS del vano,V047,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V048,Conductor AAAC 50: terna tendida,m,119.09129580306487,3 x longitud catenaria EDS del vano,V048,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V049,Conductor AAAC 50: terna tendida,m,240.34920499792912,3 x longitud catenaria EDS del vano,V049,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V050,Conductor AAAC 50: terna tendida,m,173.5740221802273,3 x longitud catenaria EDS del vano,V050,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V051,Conductor AAAC 50: terna tendida,m,173.82738366495084,3 x longitud catenaria EDS del vano,V051,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V052,Conductor AAAC 50: terna tendida,m,256.43622231093184,3 x longitud catenaria EDS del vano,V052,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V053,Conductor AAAC 50: terna tendida,m,144.11863868322507,3 x longitud catenaria EDS del vano,V053,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V054,Conductor AAAC 50: terna tendida,m,144.0588391847033,3 x longitud catenaria EDS del vano,V054,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V055,Conductor AAAC 50: terna tendida,m,225.6356112483423,3 x longitud catenaria EDS del vano,V055,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V056,Conductor AAAC 50: terna tendida,m,247.41949465920663,3 x longitud catenaria EDS del vano,V056,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V057,Conductor AAAC 50: terna tendida,m,143.96320034893026,3 x longitud catenaria EDS del vano,V057,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V058,Conductor AAAC 50: terna tendida,m,149.67452283764914,3 x longitud catenaria EDS del vano,V058,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V059,Conductor AAAC 50: terna tendida,m,119.23217998573166,3 x longitud catenaria EDS del vano,V059,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V060,Conductor AAAC 50: terna tendida,m,204.6336946849624,3 x longitud catenaria EDS del vano,V060,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V061,Conductor AAAC 50: terna tendida,m,207.08883869592893,3 x longitud catenaria EDS del vano,V061,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V062,Conductor AAAC 50: terna tendida,m,208.0461368360115,3 x longitud catenaria EDS del vano,V062,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V063,Conductor AAAC 50: terna tendida,m,204.84262961744213,3 x longitud catenaria EDS del vano,V063,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V064,Conductor AAAC 50: terna tendida,m,171.52206460053856,3 x longitud catenaria EDS del vano,V064,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V065,Conductor AAAC 50: terna tendida,m,212.56680163772435,3 x longitud catenaria EDS del vano,V065,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V066,Conductor AAAC 50: terna tendida,m,209.65546850044882,3 x longitud catenaria EDS del vano,V066,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V067,Conductor AAAC 50: terna tendida,m,174.30522254516316,3 x longitud catenaria EDS del vano,V067,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V068,Conductor AAAC 50: terna tendida,m,173.13763946886394,3 x longitud catenaria EDS del vano,V068,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V069,Conductor AAAC 50: terna tendida,m,204.65016873588417,3 x longitud catenaria EDS del vano,V069,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V070,Conductor AAAC 50: terna tendida,m,204.52902325588047,3 x longitud catenaria EDS del vano,V070,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V071,Conductor AAAC 50: terna tendida,m,176.05529237563277,3 x longitud catenaria EDS del vano,V071,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V072,Conductor AAAC 50: terna tendida,m,179.35992783803846,3 x longitud catenaria EDS del vano,V072,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V073,Conductor AAAC 50: terna tendida,m,217.5849117810675,3 x longitud catenaria EDS del vano,V073,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V074,Conductor AAAC 50: terna tendida,m,215.75071137305343,3 x longitud catenaria EDS del vano,V074,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V075,Conductor AAAC 50: terna tendida,m,145.8120797951668,3 x longitud catenaria EDS del vano,V075,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V076,Conductor AAAC 50: terna tendida,m,159.2650059147967,3 x longitud catenaria EDS del vano,V076,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V077,Conductor AAAC 50: terna tendida,m,160.27511474817902,3 x longitud catenaria EDS del vano,V077,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V078,Conductor AAAC 50: terna tendida,m,215.34116338413332,3 x longitud catenaria EDS del vano,V078,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V079,Conductor AAAC 50: terna tendida,m,204.26281656949936,3 x longitud catenaria EDS del vano,V079,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V080,Conductor AAAC 50: terna tendida,m,241.99820815142118,3 x longitud catenaria EDS del vano,V080,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V081,Conductor AAAC 50: terna tendida,m,240.39248190437826,3 x longitud catenaria EDS del vano,V081,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V082,Conductor AAAC 50: terna tendida,m,242.09873370922577,3 x longitud catenaria EDS del vano,V082,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V083,Conductor AAAC 50: terna tendida,m,224.2308190372168,3 x longitud catenaria EDS del vano,V083,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V084,Conductor AAAC 50: terna tendida,m,223.888081581115,3 x longitud catenaria EDS del vano,V084,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V085,Conductor AAAC 50: terna tendida,m,225.8199428907257,3 x longitud catenaria EDS del vano,V085,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V086,Conductor AAAC 50: terna tendida,m,111.6477875796957,3 x longitud catenaria EDS del vano,V086,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V087,Conductor AAAC 50: terna tendida,m,212.1846669621495,3 x longitud catenaria EDS del vano,V087,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V088,Conductor AAAC 50: terna tendida,m,168.0376004637161,3 x longitud catenaria EDS del vano,V088,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V089,Conductor AAAC 50: terna tendida,m,168.29647547817052,3 x longitud catenaria EDS del vano,V089,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V090,Conductor AAAC 50: terna tendida,m,189.97816204945298,3 x longitud catenaria EDS del vano,V090,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V091,Conductor AAAC 50: terna tendida,m,135.87574524000775,3 x longitud catenaria EDS del vano,V091,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V092,Conductor AAAC 50: terna tendida,m,157.2389834247635,3 x longitud catenaria EDS del vano,V092,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V093,Conductor AAAC 50: terna tendida,m,146.70306315069925,3 x longitud catenaria EDS del vano,V093,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V094,Conductor AAAC 50: terna tendida,m,149.59690860637824,3 x longitud catenaria EDS del vano,V094,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V095,Conductor AAAC 50: terna tendida,m,215.96413399578185,3 x longitud catenaria EDS del vano,V095,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V096,Conductor AAAC 50: terna tendida,m,215.3952926272375,3 x longitud catenaria EDS del vano,V096,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V097,Conductor AAAC 50: terna tendida,m,216.59721754142683,3 x longitud catenaria EDS del vano,V097,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V098,Conductor AAAC 50: terna tendida,m,218.19944700145476,3 x longitud catenaria EDS del vano,V098,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V099,Conductor AAAC 50: terna tendida,m,215.3633715578505,3 x longitud catenaria EDS del vano,V099,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V100,Conductor AAAC 50: terna tendida,m,137.15329174222938,3 x longitud catenaria EDS del vano,V100,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V101,Conductor AAAC 50: terna tendida,m,136.79414164959033,3 x longitud catenaria EDS del vano,V101,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V102,Conductor AAAC 50: terna tendida,m,146.11697935219632,3 x longitud catenaria EDS del vano,V102,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V103,Conductor AAAC 50: terna tendida,m,143.9701773228459,3 x longitud catenaria EDS del vano,V103,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V104,Conductor AAAC 50: terna tendida,m,234.03642033731128,3 x longitud catenaria EDS del vano,V104,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V105,Conductor AAAC 50: terna tendida,m,233.37658869669508,3 x longitud catenaria EDS del vano,V105,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V106,Conductor AAAC 50: terna tendida,m,175.8113968841165,3 x longitud catenaria EDS del vano,V106,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V107,Conductor AAAC 50: terna tendida,m,176.3978563494052,3 x longitud catenaria EDS del vano,V107,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V108,Conductor AAAC 50: terna tendida,m,132.43125743782025,3 x longitud catenaria EDS del vano,V108,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V109,Conductor AAAC 50: terna tendida,m,114.29997057313413,3 x longitud catenaria EDS del vano,V109,CALCULADO SOBRE CORREDOR DE GABINETE
+C-V110,Conductor AAAC 50: terna tendida,m,59.17757348974841,3 x longitud catenaria EDS del vano,V110,CALCULADO SOBRE CORREDOR DE GABINETE
+P-P001,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P001,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P001,Armado TERMINAL,jgo,1,1 armado funcional; piezas pendientes,P001,NO ES LISTA DE FABRICACION
+R-P001,Retenida y anclaje por ramal,ud,1,1 por ramal retenido,P001,COORDENADA Y GEOTECNIA PENDIENTES
+J-P001,Conductor para puentes/colas,m,6.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P001,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P002,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P002,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P002,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P002,NO ES LISTA DE FABRICACION
+P-P003,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P003,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P003,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P003,NO ES LISTA DE FABRICACION
+R-P003,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P003,COORDENADA Y GEOTECNIA PENDIENTES
+J-P003,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P003,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P004,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P004,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P004,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P004,NO ES LISTA DE FABRICACION
+P-P005,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P005,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P005,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P005,NO ES LISTA DE FABRICACION
+R-P005,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P005,COORDENADA Y GEOTECNIA PENDIENTES
+J-P005,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P005,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P006,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P006,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P006,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P006,NO ES LISTA DE FABRICACION
+P-P007,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P007,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P007,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P007,NO ES LISTA DE FABRICACION
+R-P007,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P007,COORDENADA Y GEOTECNIA PENDIENTES
+J-P007,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P007,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P008,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P008,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P008,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P008,NO ES LISTA DE FABRICACION
+R-P008,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P008,COORDENADA Y GEOTECNIA PENDIENTES
+J-P008,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P008,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P009,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P009,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P009,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P009,NO ES LISTA DE FABRICACION
+R-P009,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P009,COORDENADA Y GEOTECNIA PENDIENTES
+J-P009,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P009,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P010,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P010,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P010,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P010,NO ES LISTA DE FABRICACION
+R-P010,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P010,COORDENADA Y GEOTECNIA PENDIENTES
+J-P010,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P010,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P011,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P011,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P011,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P011,NO ES LISTA DE FABRICACION
+R-P011,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P011,COORDENADA Y GEOTECNIA PENDIENTES
+J-P011,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P011,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P012,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P012,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P012,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P012,NO ES LISTA DE FABRICACION
+R-P012,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P012,COORDENADA Y GEOTECNIA PENDIENTES
+J-P012,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P012,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P013,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P013,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P013,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P013,NO ES LISTA DE FABRICACION
+R-P013,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P013,COORDENADA Y GEOTECNIA PENDIENTES
+J-P013,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P013,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P014,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P014,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P014,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P014,NO ES LISTA DE FABRICACION
+R-P014,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P014,COORDENADA Y GEOTECNIA PENDIENTES
+J-P014,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P014,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P015,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P015,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P015,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P015,NO ES LISTA DE FABRICACION
+P-P016,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P016,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P016,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P016,NO ES LISTA DE FABRICACION
+P-P017,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P017,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P017,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P017,NO ES LISTA DE FABRICACION
+R-P017,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P017,COORDENADA Y GEOTECNIA PENDIENTES
+J-P017,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P017,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P018,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P018,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P018,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P018,NO ES LISTA DE FABRICACION
+P-P019,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P019,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P019,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P019,NO ES LISTA DE FABRICACION
+R-P019,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P019,COORDENADA Y GEOTECNIA PENDIENTES
+J-P019,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P019,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P020,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P020,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P020,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P020,NO ES LISTA DE FABRICACION
+R-P020,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P020,COORDENADA Y GEOTECNIA PENDIENTES
+J-P020,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P020,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P021,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P021,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P021,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P021,NO ES LISTA DE FABRICACION
+R-P021,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P021,COORDENADA Y GEOTECNIA PENDIENTES
+J-P021,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P021,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P022,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P022,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P022,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P022,NO ES LISTA DE FABRICACION
+P-P023,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P023,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P023,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P023,NO ES LISTA DE FABRICACION
+P-P024,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P024,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P024,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P024,NO ES LISTA DE FABRICACION
+P-P025,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P025,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P025,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P025,NO ES LISTA DE FABRICACION
+P-P026,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P026,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P026,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P026,NO ES LISTA DE FABRICACION
+R-P026,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P026,COORDENADA Y GEOTECNIA PENDIENTES
+J-P026,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P026,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P027,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P027,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P027,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P027,NO ES LISTA DE FABRICACION
+P-P028,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P028,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P028,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P028,NO ES LISTA DE FABRICACION
+R-P028,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P028,COORDENADA Y GEOTECNIA PENDIENTES
+J-P028,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P028,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P029,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P029,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P029,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P029,NO ES LISTA DE FABRICACION
+R-P029,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P029,COORDENADA Y GEOTECNIA PENDIENTES
+J-P029,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P029,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P030,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P030,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P030,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P030,NO ES LISTA DE FABRICACION
+R-P030,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P030,COORDENADA Y GEOTECNIA PENDIENTES
+J-P030,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P030,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P031,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P031,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P031,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P031,NO ES LISTA DE FABRICACION
+P-P032,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P032,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P032,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P032,NO ES LISTA DE FABRICACION
+R-P032,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P032,COORDENADA Y GEOTECNIA PENDIENTES
+J-P032,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P032,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P033,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P033,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P033,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P033,NO ES LISTA DE FABRICACION
+P-P034,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P034,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P034,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P034,NO ES LISTA DE FABRICACION
+P-P035,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P035,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P035,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P035,NO ES LISTA DE FABRICACION
+R-P035,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P035,COORDENADA Y GEOTECNIA PENDIENTES
+J-P035,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P035,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P036,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P036,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P036,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P036,NO ES LISTA DE FABRICACION
+R-P036,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P036,COORDENADA Y GEOTECNIA PENDIENTES
+J-P036,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P036,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P037,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P037,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P037,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P037,NO ES LISTA DE FABRICACION
+R-P037,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P037,COORDENADA Y GEOTECNIA PENDIENTES
+J-P037,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P037,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P038,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P038,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P038,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P038,NO ES LISTA DE FABRICACION
+R-P038,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P038,COORDENADA Y GEOTECNIA PENDIENTES
+J-P038,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P038,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P039,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P039,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P039,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P039,NO ES LISTA DE FABRICACION
+R-P039,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P039,COORDENADA Y GEOTECNIA PENDIENTES
+J-P039,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P039,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P040,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P040,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P040,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P040,NO ES LISTA DE FABRICACION
+R-P040,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P040,COORDENADA Y GEOTECNIA PENDIENTES
+J-P040,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P040,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P041,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P041,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P041,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P041,NO ES LISTA DE FABRICACION
+R-P041,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P041,COORDENADA Y GEOTECNIA PENDIENTES
+J-P041,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P041,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P042,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P042,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P042,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P042,NO ES LISTA DE FABRICACION
+R-P042,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P042,COORDENADA Y GEOTECNIA PENDIENTES
+J-P042,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P042,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P043,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P043,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P043,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P043,NO ES LISTA DE FABRICACION
+R-P043,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P043,COORDENADA Y GEOTECNIA PENDIENTES
+J-P043,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P043,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P044,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P044,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P044,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P044,NO ES LISTA DE FABRICACION
+R-P044,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P044,COORDENADA Y GEOTECNIA PENDIENTES
+J-P044,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P044,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P045,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P045,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P045,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P045,NO ES LISTA DE FABRICACION
+R-P045,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P045,COORDENADA Y GEOTECNIA PENDIENTES
+J-P045,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P045,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P046,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P046,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P046,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P046,NO ES LISTA DE FABRICACION
+P-P047,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P047,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P047,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P047,NO ES LISTA DE FABRICACION
+R-P047,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P047,COORDENADA Y GEOTECNIA PENDIENTES
+J-P047,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P047,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P048,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P048,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P048,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P048,NO ES LISTA DE FABRICACION
+R-P048,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P048,COORDENADA Y GEOTECNIA PENDIENTES
+J-P048,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P048,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P049,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P049,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P049,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P049,NO ES LISTA DE FABRICACION
+R-P049,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P049,COORDENADA Y GEOTECNIA PENDIENTES
+J-P049,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P049,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P050,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P050,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P050,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P050,NO ES LISTA DE FABRICACION
+R-P050,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P050,COORDENADA Y GEOTECNIA PENDIENTES
+J-P050,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P050,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P051,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P051,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P051,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P051,NO ES LISTA DE FABRICACION
+R-P051,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P051,COORDENADA Y GEOTECNIA PENDIENTES
+J-P051,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P051,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P052,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P052,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P052,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P052,NO ES LISTA DE FABRICACION
+R-P052,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P052,COORDENADA Y GEOTECNIA PENDIENTES
+J-P052,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P052,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P053,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P053,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P053,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P053,NO ES LISTA DE FABRICACION
+R-P053,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P053,COORDENADA Y GEOTECNIA PENDIENTES
+J-P053,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P053,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P054,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P054,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P054,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P054,NO ES LISTA DE FABRICACION
+P-P055,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P055,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P055,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P055,NO ES LISTA DE FABRICACION
+R-P055,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P055,COORDENADA Y GEOTECNIA PENDIENTES
+J-P055,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P055,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P056,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P056,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P056,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P056,NO ES LISTA DE FABRICACION
+R-P056,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P056,COORDENADA Y GEOTECNIA PENDIENTES
+J-P056,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P056,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P057,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P057,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P057,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P057,NO ES LISTA DE FABRICACION
+R-P057,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P057,COORDENADA Y GEOTECNIA PENDIENTES
+J-P057,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P057,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P058,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P058,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P058,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P058,NO ES LISTA DE FABRICACION
+R-P058,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P058,COORDENADA Y GEOTECNIA PENDIENTES
+J-P058,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P058,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P059,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P059,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P059,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P059,NO ES LISTA DE FABRICACION
+R-P059,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P059,COORDENADA Y GEOTECNIA PENDIENTES
+J-P059,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P059,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P060,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P060,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P060,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P060,NO ES LISTA DE FABRICACION
+R-P060,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P060,COORDENADA Y GEOTECNIA PENDIENTES
+J-P060,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P060,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P061,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P061,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P061,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P061,NO ES LISTA DE FABRICACION
+P-P062,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P062,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P062,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P062,NO ES LISTA DE FABRICACION
+R-P062,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P062,COORDENADA Y GEOTECNIA PENDIENTES
+J-P062,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P062,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P063,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P063,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P063,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P063,NO ES LISTA DE FABRICACION
+P-P064,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P064,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P064,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P064,NO ES LISTA DE FABRICACION
+R-P064,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P064,COORDENADA Y GEOTECNIA PENDIENTES
+J-P064,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P064,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P065,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P065,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P065,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P065,NO ES LISTA DE FABRICACION
+R-P065,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P065,COORDENADA Y GEOTECNIA PENDIENTES
+J-P065,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P065,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P066,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P066,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P066,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P066,NO ES LISTA DE FABRICACION
+P-P067,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P067,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P067,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P067,NO ES LISTA DE FABRICACION
+R-P067,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P067,COORDENADA Y GEOTECNIA PENDIENTES
+J-P067,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P067,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P068,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P068,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P068,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P068,NO ES LISTA DE FABRICACION
+P-P069,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P069,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P069,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P069,NO ES LISTA DE FABRICACION
+R-P069,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P069,COORDENADA Y GEOTECNIA PENDIENTES
+J-P069,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P069,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P070,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P070,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P070,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P070,NO ES LISTA DE FABRICACION
+R-P070,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P070,COORDENADA Y GEOTECNIA PENDIENTES
+J-P070,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P070,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P071,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P071,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P071,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P071,NO ES LISTA DE FABRICACION
+R-P071,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P071,COORDENADA Y GEOTECNIA PENDIENTES
+J-P071,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P071,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P072,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P072,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P072,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P072,NO ES LISTA DE FABRICACION
+R-P072,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P072,COORDENADA Y GEOTECNIA PENDIENTES
+J-P072,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P072,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P073,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P073,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P073,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P073,NO ES LISTA DE FABRICACION
+R-P073,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P073,COORDENADA Y GEOTECNIA PENDIENTES
+J-P073,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P073,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P074,Poste CAC 17 m / 600 daN tipo,ud,1,1 por apoyo candidato,P074,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P074,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P074,NO ES LISTA DE FABRICACION
+P-P075,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P075,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P075,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P075,NO ES LISTA DE FABRICACION
+R-P075,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P075,COORDENADA Y GEOTECNIA PENDIENTES
+J-P075,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P075,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P076,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P076,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P076,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P076,NO ES LISTA DE FABRICACION
+R-P076,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P076,COORDENADA Y GEOTECNIA PENDIENTES
+J-P076,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P076,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P077,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P077,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P077,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P077,NO ES LISTA DE FABRICACION
+R-P077,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P077,COORDENADA Y GEOTECNIA PENDIENTES
+J-P077,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P077,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P078,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P078,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P078,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P078,NO ES LISTA DE FABRICACION
+R-P078,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P078,COORDENADA Y GEOTECNIA PENDIENTES
+J-P078,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P078,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P079,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P079,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P079,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P079,NO ES LISTA DE FABRICACION
+R-P079,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P079,COORDENADA Y GEOTECNIA PENDIENTES
+J-P079,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P079,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P080,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P080,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P080,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P080,NO ES LISTA DE FABRICACION
+R-P080,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P080,COORDENADA Y GEOTECNIA PENDIENTES
+J-P080,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P080,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P081,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P081,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P081,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P081,NO ES LISTA DE FABRICACION
+P-P082,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P082,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P082,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P082,NO ES LISTA DE FABRICACION
+R-P082,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P082,COORDENADA Y GEOTECNIA PENDIENTES
+J-P082,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P082,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P083,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P083,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P083,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P083,NO ES LISTA DE FABRICACION
+R-P083,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P083,COORDENADA Y GEOTECNIA PENDIENTES
+J-P083,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P083,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P084,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P084,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P084,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P084,NO ES LISTA DE FABRICACION
+P-P085,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P085,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P085,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P085,NO ES LISTA DE FABRICACION
+R-P085,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P085,COORDENADA Y GEOTECNIA PENDIENTES
+J-P085,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P085,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P086,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P086,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P086,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P086,NO ES LISTA DE FABRICACION
+R-P086,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P086,COORDENADA Y GEOTECNIA PENDIENTES
+J-P086,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P086,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P087,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P087,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P087,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P087,NO ES LISTA DE FABRICACION
+R-P087,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P087,COORDENADA Y GEOTECNIA PENDIENTES
+J-P087,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P087,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P088,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P088,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P088,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P088,NO ES LISTA DE FABRICACION
+R-P088,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P088,COORDENADA Y GEOTECNIA PENDIENTES
+J-P088,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P088,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P089,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P089,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P089,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P089,NO ES LISTA DE FABRICACION
+P-P090,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P090,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P090,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P090,NO ES LISTA DE FABRICACION
+R-P090,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P090,COORDENADA Y GEOTECNIA PENDIENTES
+J-P090,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P090,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P091,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P091,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P091,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P091,NO ES LISTA DE FABRICACION
+R-P091,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P091,COORDENADA Y GEOTECNIA PENDIENTES
+J-P091,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P091,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P092,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P092,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P092,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P092,NO ES LISTA DE FABRICACION
+R-P092,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P092,COORDENADA Y GEOTECNIA PENDIENTES
+J-P092,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P092,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P093,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P093,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P093,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P093,NO ES LISTA DE FABRICACION
+R-P093,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P093,COORDENADA Y GEOTECNIA PENDIENTES
+J-P093,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P093,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P094,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P094,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P094,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P094,NO ES LISTA DE FABRICACION
+R-P094,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P094,COORDENADA Y GEOTECNIA PENDIENTES
+J-P094,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P094,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P095,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P095,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P095,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P095,NO ES LISTA DE FABRICACION
+R-P095,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P095,COORDENADA Y GEOTECNIA PENDIENTES
+J-P095,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P095,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P096,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P096,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P096,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P096,NO ES LISTA DE FABRICACION
+P-P097,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P097,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P097,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P097,NO ES LISTA DE FABRICACION
+P-P098,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P098,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P098,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P098,NO ES LISTA DE FABRICACION
+R-P098,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P098,COORDENADA Y GEOTECNIA PENDIENTES
+J-P098,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P098,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P099,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P099,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P099,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P099,NO ES LISTA DE FABRICACION
+P-P100,Poste CAC 15 m / 600 daN tipo,ud,1,1 por apoyo candidato,P100,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P100,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P100,NO ES LISTA DE FABRICACION
+R-P100,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P100,COORDENADA Y GEOTECNIA PENDIENTES
+J-P100,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P100,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P101,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P101,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P101,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P101,NO ES LISTA DE FABRICACION
+P-P102,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P102,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P102,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P102,NO ES LISTA DE FABRICACION
+R-P102,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P102,COORDENADA Y GEOTECNIA PENDIENTES
+J-P102,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P102,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P103,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P103,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P103,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P103,NO ES LISTA DE FABRICACION
+P-P104,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P104,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P104,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P104,NO ES LISTA DE FABRICACION
+R-P104,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P104,COORDENADA Y GEOTECNIA PENDIENTES
+J-P104,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P104,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P105,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P105,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P105,Armado SUSPENSION,jgo,1,1 armado funcional; piezas pendientes,P105,NO ES LISTA DE FABRICACION
+P-P106,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P106,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P106,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P106,NO ES LISTA DE FABRICACION
+R-P106,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P106,COORDENADA Y GEOTECNIA PENDIENTES
+J-P106,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P106,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P107,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P107,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P107,Armado ANCLAJE_PROPUESTO,jgo,1,1 armado funcional; piezas pendientes,P107,NO ES LISTA DE FABRICACION
+R-P107,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P107,COORDENADA Y GEOTECNIA PENDIENTES
+J-P107,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P107,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P108,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P108,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P108,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P108,NO ES LISTA DE FABRICACION
+R-P108,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P108,COORDENADA Y GEOTECNIA PENDIENTES
+J-P108,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P108,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P109,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P109,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P109,Armado ANCLAJE,jgo,1,1 armado funcional; piezas pendientes,P109,NO ES LISTA DE FABRICACION
+R-P109,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P109,COORDENADA Y GEOTECNIA PENDIENTES
+J-P109,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P109,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P110,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P110,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P110,Armado ANGULO,jgo,1,1 armado funcional; piezas pendientes,P110,NO ES LISTA DE FABRICACION
+R-P110,Retenida y anclaje por ramal,ud,2,1 por ramal retenido,P110,COORDENADA Y GEOTECNIA PENDIENTES
+J-P110,Conductor para puentes/colas,m,12.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P110,PROVISION: LONGITUD DE PUENTES POR DETALLE
+P-P111,Poste CAC 13 m / 600 daN tipo,ud,1,1 por apoyo candidato,P111,"PENDIENTE: AXIAL/FLEXION, SUELO, HERRAJES Y TOPOGRAFIA"
+A-P111,Armado TERMINAL,jgo,1,1 armado funcional; piezas pendientes,P111,NO ES LISTA DE FABRICACION
+R-P111,Retenida y anclaje por ramal,ud,1,1 por ramal retenido,P111,COORDENADA Y GEOTECNIA PENDIENTES
+J-P111,Conductor para puentes/colas,m,6.0,3 fases x ramales x reserva geométrica 2 m/ramal/fase,P111,PROVISION: LONGITUD DE PUENTES POR DETALLE
+C-RES,Reserva adicional conductor,m,638,ceil(3% x (tendido + puentes)),TODOS,HIPOTESIS DE SUMINISTRO
+T-01,Transformador 250 kVA netos en sitio,ud,2,1 salida + 1 llegada,SE-LIM/SE-HUA,"RELACION, PERDIDAS, ALTITUD Y PLACAS PENDIENTES"

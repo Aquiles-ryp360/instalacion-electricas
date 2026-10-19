@@ -1,0 +1,96 @@
+\setcounter{section}{4}
+\section{Memoria de cálculo mecánico explícita}
+\setcounter{subsection}{0}
+\subsection{Un poste 13 m: qué puede soportar}
+Longitud total 13 m, empotramiento de estudio 1.9 m, longitud libre 11.1 m y amarre 10.6 m. Para 13/400,400 daN=4000 N\ensuremath{\approx}407.9 kgf de carga transversal equivalente; no400 kg de peso colgado. Con aplicación a 0.15 m bajo cima, brazo=13-1.9-0.15=10.95 m. El punto de ensayo y el empotramiento deben confirmarse con proveedor.
+
+Momento de trabajo tipo 4000\ensuremath{\times}10.95=43.80 kN\ensuremath{\cdot}m. Si la rotura garantizada fuese 2\ensuremath{\times}trabajo: Mrot=87.60 kN\ensuremath{\cdot}m. Método de estudio gradoB, phi0.65: resistencia de comparación 56.94 kN\ensuremath{\cdot}m. Para 600 daN,85.41 kN\ensuremath{\cdot}m. Se comparan cargas factorizadas con resistencia reducida; no se aplica además otro divisor 2 a esta misma verificación. Peso propio, interacción axial-flexión, fisuración, anclajes y suelo aún requieren comprobación.
+
+\setcounter{subsection}{1}
+\subsection{Peso, tracción y ángulo son cargas distintas}
+Peso lineal por fase=0.135\ensuremath{\times}9.80665=1.323898 N/m. En dos vanos iguales 85 m y terreno horizontal, un apoyo interior recibe aproximadamente el peso de 85 m por fase:3\ensuremath{\times}0.135\ensuremath{\times}85=34.425 kg de cable sin hielo. Eso no incluye aisladores ni poste. La tracción EDS por fase es0.15\ensuremath{\times}14700=2205 N; en un terminal, tres fases ejercen 6615 N horizontales antes de factores. En un ángulo 30\ensuremath{^\circ}, resultante ideal 3\ensuremath{\times}2\ensuremath{\times}2205\ensuremath{\times}sin 15\ensuremath{^\circ}=3424.2 N. Por eso dividir 400 entre kg/m no determina el vano.
+
+\setcounter{subsection}{2}
+\subsection{Catenaria y cambio de estado}
+Se resuelve cada vano por separado bajo la hipótesis de aisladores rígidos. Para apoyo inclinado y viento, se rota al plano de carga. a=H/q; dy=\ensuremath{\Delta}z\ensuremath{\times}qv/q; dx=sqrt(L\textsuperscript{2}+\ensuremath{\Delta}z\textsuperscript{2}-dy\textsuperscript{2}); x0=dx/2-a\ensuremath{\times}asinh[dy/(2a\ensuremath{\times}sinh(dx/2a))]. y(x)=a[cosh((x-x0)/a)-cosh(x0/a)]. La longitud y las fuerzas tangenciales se calculan con hiperbólicas, sin asumir parábola para desniveles grandes.
+
+Compatibilidad termoelástica: Lnatural\ensuremath{\approx}Lc-\ensuremath{\int}Tds/(EA). En el nuevo estado Lnatural\_\allowbreak{}2=Lnatural\_\allowbreak{}ref\ensuremath{\times}[1+\ensuremath{\alpha}\ensuremath{\Delta}T+\ensuremath{\varepsilon}\_\allowbreak{}creep]. Se obtiene H por bisección y se exporta el residuo. Se conserva la sensibilidad heredada 345 microstrain; la alternativa normativa histórica de temperatura equivalente 10\ensuremath{^\circ}C corresponde 230 microstrain con \ensuremath{\alpha}23\ensuremath{\times}10\textasciicircum{}-6/K y debe contrastarse con curva de proveedor. No se suma simultáneamente 10\ensuremath{^\circ}C y 345 microstrain.
+
+\begingroup\small\setlength{\LTpre}{4pt}\setlength{\LTpost}{6pt}
+\begin{longtable}{*{5}{L{\dimexpr\linewidth/5-2\tabcolsep\relax}}}
+\toprule
+\textbf{Estado} & \textbf{T\ensuremath{^\circ}C} & \textbf{V m/s} & \textbf{Hielo mm} & \textbf{Fluencia m/m} \\ \midrule
+\endfirsthead
+\toprule
+\textbf{Estado} & \textbf{T\ensuremath{^\circ}C} & \textbf{V m/s} & \textbf{Hielo mm} & \textbf{Fluencia m/m} \\ \midrule
+\endhead
+EDS & 15 & 0 & 0 & 0 \\
+VIENTO & 5 & 29 & 0 & 0 \\
+HIELO & 0 & 0 & 6 & 0 \\
+COMBINADO & 0 & 14.5 & 3 & 0 \\
+FRIO & -5 & 0 & 0 & 0 \\
+CALOR\_\allowbreak{}FINAL & 75 & 0 & 0 & 0.000345 \\
+\bottomrule\end{longtable}\endgroup
+
+\setcounter{subsection}{3}
+\subsection{Fuerzas con signo, viento y retenidas}
+Las fuerzas de extremo se convierten de cada vano a Este/Norte/Vertical y se suman en el poste. La parte paralela a la cuerda recibe factor 1.65; la reacción distribuida horizontal 2.5 y vertical 1.5. Se muestrea viento 0--345\ensuremath{^\circ} cada 15\ensuremath{^\circ}. No es búsqueda continua exacta del azimut crítico. Se integra el viento sobre un poste cónico tipo 180/375 mm; dimensiones de 15/17 m son sensibilidad geométrica, no catálogo certificado.
+
+Fvertical negativa en la convención del CSV es carga ascendente de los conductores/aisladores. No se reemplaza el desnivel por su valor absoluto. Retenida ideal por ramal: neutraliza el componente horizontal de tracción a 45\ensuremath{^\circ}, Tg=Fh/cos45\ensuremath{^\circ}; agrega Fh\ensuremath{\times}tan45\ensuremath{^\circ} hacia abajo. Resistencia mínima rotura\ensuremath{\geq}Tg/0.90 y se conserva el mínimo 60 kN de la especificación inicial. El modelo ideal no incluye pretensión, rigidez, deslizamiento ni transferencia real de carga: no demuestra estabilidad ni capacidad de anclaje.
+
+Comparación del esquema de apoyos: 0 excedencias de flexión tipo en la base recalculada; 16 apoyos con retención adicional propuesta. Después de esas retenidas ideales quedan 0 excedencias de flexión de estudio. Todos mantienen la capacidad axial y de cimentación pendiente; pasar una relación D/C no equivale a aprobación.
+
+El cruce de los 160 anclajes ideales y sus segmentos con casas/cauces heredados identifica 1 alertas cartográficas. Sus posiciones deben replantearse y recalcularse antes de aceptar el sistema de retenidas. La ausencia de alerta tampoco demuestra disponibilidad del predio.
+
+\setcounter{subsection}{4}
+\subsection{Vano admisible: ejemplo controlado}
+\begingroup\small\setlength{\LTpre}{4pt}\setlength{\LTpost}{6pt}
+\begin{longtable}{*{4}{L{\dimexpr\linewidth/4-2\tabcolsep\relax}}}
+\toprule
+\textbf{Poste tipo} & \textbf{Último vano que pasa m} & \textbf{Primero que falla m} & \textbf{Restricción} \\ \midrule
+\endfirsthead
+\toprule
+\textbf{Poste tipo} & \textbf{Último vano que pasa m} & \textbf{Primero que falla m} & \textbf{Restricción} \\ \midrule
+\endhead
+13 m/400 daN & 128 & 129 & FLECHA/GALIBO DE ESTUDIO \\
+13 m/600 daN & 128 & 129 & FLECHA/GALIBO DE ESTUDIO \\
+\bottomrule\end{longtable}\endgroup
+
+La tabla anterior corresponde sólo a dos vanos iguales en terreno plano, amarre 10.6 m, hipótesis de cable 50mm\textsuperscript{2} y estados indicados. Se recorre 10--300 m y se exige flexión tipo, separación 7.5 m de estudio y T/RTS\ensuremath{\leq}40\% de estudio. No se transfiere ese vano límite a quebradas, giros, cruces ni terrenos inclinados. En el corredor real cada vano conserva su resultado individual y su observación.
+
+\setcounter{subsection}{5}
+\subsection{Cálculo desarrollado de un vano}
+Ejemplo V037, P037--P038: L=30.4171 m; desnivel de amarres=20.6474 m. H inicial 2205 N. EA=62\ensuremath{\times}10\textasciicircum{}9\ensuremath{\times}49.5\ensuremath{\times}10\textasciicircum{}-6=3069000 N. La pendiente relativa|\ensuremath{\Delta}z|/L=0.6788 exige conservar la inclinación. Cada fila siguiente procede de una solución independiente del cambio de estado.
+
+\begingroup\small\setlength{\LTpre}{4pt}\setlength{\LTpost}{6pt}
+\begin{longtable}{*{5}{L{\dimexpr\linewidth/5-2\tabcolsep\relax}}}
+\toprule
+\textbf{Estado} & \textbf{H N} & \textbf{T mayor N} & \textbf{Flecha m} & \textbf{Separación modelo m} \\ \midrule
+\endfirsthead
+\toprule
+\textbf{Estado} & \textbf{H N} & \textbf{T mayor N} & \textbf{Flecha m} & \textbf{Separación modelo m} \\ \midrule
+\endhead
+EDS & 2,205.0 & 2,678.8 & 0.084 & 9.013 \\
+VIENTO & 3,450.4 & 3,536.9 & 0.063 & 9.033 \\
+HIELO & 3,155.8 & 3,854.6 & 0.171 & 8.926 \\
+COMBINADO & 3,305.2 & 3,788.7 & 0.105 & 8.992 \\
+FRIO & 3,358.3 & 4,072.7 & 0.055 & 9.041 \\
+CALOR\_\allowbreak{}FINAL & 220.5 & 281.2 & 0.839 & 8.258 \\
+\bottomrule\end{longtable}\endgroup
+
+\setcounter{subsection}{6}
+\subsection{Apoyos que requieren más atención}
+P024: poste 17 m; ángulo 4.38\ensuremath{^\circ}; M sin retenidas=68.765 kN\ensuremath{\cdot}m; M con retenidas ideales=49.968 kN\ensuremath{\cdot}m; M resistente tipo=115.050 kN\ensuremath{\cdot}m. D/C base recalculado=0.598; D/C propuesta=0.598. Vertical exterior mínima=1.339 kN. Acciones: CONSERVAR COMO CANDIDATO; CONFIRMAR CAMPO Y CERTIFICADOS.
+
+P040: poste 17 m; ángulo 0.00\ensuremath{^\circ}; M sin retenidas=56.022 kN\ensuremath{\cdot}m; M con retenidas ideales=55.983 kN\ensuremath{\cdot}m; M resistente tipo=115.050 kN\ensuremath{\cdot}m. D/C base recalculado=0.487; D/C propuesta=0.487. Vertical exterior mínima=-2.148 kN. Acciones: PROPONER RETENCION Y RETENIDAS; VERIFICAR ARMADO; CARGA ASCENDENTE; COMPROBAR FIJACION Y HERREJES.
+
+P031: poste 17 m; ángulo 0.00\ensuremath{^\circ}; M sin retenidas=55.285 kN\ensuremath{\cdot}m; M con retenidas ideales=55.282 kN\ensuremath{\cdot}m; M resistente tipo=115.050 kN\ensuremath{\cdot}m. D/C base recalculado=0.481; D/C propuesta=0.481. Vertical exterior mínima=1.079 kN. Acciones: CONSERVAR COMO CANDIDATO; CONFIRMAR CAMPO Y CERTIFICADOS.
+
+P029: poste 13 m; ángulo 3.88\ensuremath{^\circ}; M sin retenidas=40.625 kN\ensuremath{\cdot}m; M con retenidas ideales=23.942 kN\ensuremath{\cdot}m; M resistente tipo=85.410 kN\ensuremath{\cdot}m. D/C base recalculado=0.476; D/C propuesta=0.280. Vertical exterior mínima=-1.951 kN. Acciones: PROPONER RETENCION Y RETENIDAS; VERIFICAR ARMADO; CARGA ASCENDENTE; COMPROBAR FIJACION Y HERREJES.
+
+P039: poste 17 m; ángulo 10.23\ensuremath{^\circ}; M sin retenidas=97.852 kN\ensuremath{\cdot}m; M con retenidas ideales=53.948 kN\ensuremath{\cdot}m; M resistente tipo=115.050 kN\ensuremath{\cdot}m. D/C base recalculado=0.469; D/C propuesta=0.469. Vertical exterior mínima=-0.447 kN. Acciones: CARGA ASCENDENTE; COMPROBAR FIJACION Y HERREJES.
+
+\setcounter{subsection}{7}
+\subsection{Ubicación de postes y perfiles pendientes}
+La ubicación definitiva se obtiene sobre topografía del eje y sus fases, con cotas de cruce, obstáculos, techo/vegetación, terreno bajo balanceo, fajas y predios. Se recalcula flecha y fuerzas al mover un apoyo. Las alertas actuales identifican dónde insertar apoyo, elevarlo o replantear tramo; no se inventa una coordenada aprobada para ocultar la falta de topografía. Los girosP003/P035/P057 mayores 90\ensuremath{^\circ} exigen replanteo o armado especial. No se presenta hoja 008 como una retención equivalente para CAC.
+

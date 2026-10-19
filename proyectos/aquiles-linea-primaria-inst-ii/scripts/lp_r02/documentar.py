@@ -23,6 +23,10 @@ def num(x,n=2):return 'pendiente' if x is None else f'{x:,.{n}f}'
 def doc_outputs(blocks,path,title):
     path.parent.mkdir(parents=True,exist_ok=True)
     font=Path('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf');bold=font.with_name('DejaVuSans-Bold.ttf')
+    if not font.exists():
+        from matplotlib import font_manager
+        font=Path(font_manager.findfont('DejaVu Sans',fallback_to_default=False))
+        bold=Path(font_manager.findfont(font_manager.FontProperties(family='DejaVu Sans',weight='bold'),fallback_to_default=False))
     if 'DV' not in pdfmetrics.getRegisteredFontNames():pdfmetrics.registerFont(TTFont('DV',str(font)));pdfmetrics.registerFont(TTFont('DVB',str(bold)))
     ss=getSampleStyleSheet();ss.add(ParagraphStyle('BodyLP',fontName='DV',fontSize=9.2,leading=14,spaceAfter=7,alignment=TA_JUSTIFY,textColor=colors.HexColor('#243746')))
     ss.add(ParagraphStyle('HLP',fontName='DVB',fontSize=15,leading=20,textColor=colors.HexColor(BLUE),spaceBefore=12,spaceAfter=10))

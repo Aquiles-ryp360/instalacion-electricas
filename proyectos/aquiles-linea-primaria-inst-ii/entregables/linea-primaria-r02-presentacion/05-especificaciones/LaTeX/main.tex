@@ -1,0 +1,12 @@
+\documentclass[12pt,letterpaper]{report}
+\input{metadatos}\input{plantilla/estilo}
+\renewcommand{\thesection}{\arabic{section}.}\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\begin{document}\hypersetup{pageanchor=false}\pagenumbering{gobble}\input{plantilla/caratula}
+\clearpage\hypersetup{pageanchor=true}\pagenumbering{arabic}\tableofcontents\clearpage
+\chapter*{ESPECIFICACIONES Y MONTAJE}\addcontentsline{toc}{chapter}{ESPECIFICACIONES Y MONTAJE}
+metrado\_\allowbreak{}detallado.csv conserva ID, recurso, fórmula, poste/vano y estado. Los civiles no reciben volumen cerrado: excavación=\ensuremath{\pi}D\textsuperscript{2}h/4 y concreto=excavación-volumen desplazado cuando se defina geometría real. Un bloque 1.2 m o una malla dibujada no acredita capacidad ni resistividad. Las planillas dejan esas dimensiones vacías.
+
+
+\input{capitulos/01-7-materiales-montaje-y-pruebas}
+\input{capitulos/02-8-presupuesto-cronograma-y-cierre}
+\end{document}

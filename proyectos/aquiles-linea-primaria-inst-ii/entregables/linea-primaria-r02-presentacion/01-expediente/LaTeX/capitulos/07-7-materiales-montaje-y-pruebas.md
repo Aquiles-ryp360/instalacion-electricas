@@ -1,0 +1,6 @@
+## 7. Materiales, montaje y pruebas
+
+Postes: solicitar carga transversal de trabajo/rotura, posición del ensayo, dimensiones, peso, capacidad axial, interacciónN-M, comportamiento de fisuración, certificados por lote, orificios y transporte. Conductores: ficha AAAC, R20, masa, diámetro, GMR, RTS, E, α, curva tensión/deformación/fluencia y carga mínima de grapas. Aisladores/crucetas: comprobar cargas con signo, distancias y fijación CAC de cada función.
+
+Transformadores/celdas: capacidad neta a altitud local, relaciones/tomas, uk, pérdidas, grupo, neutro, aislamiento y ensayos. Montaje: replantear y liberar predios; ejecutar geotecnia/cimentaciones; izar con procedimiento del proveedor; tender por poleas; ajustar tabla de tensado a temperatura medida; comprobar puesta a tierra/protecciones y energizar tras pruebas. La tabla de tensado de esta revisión es orientativa para el modelo, no orden de tendido.
+

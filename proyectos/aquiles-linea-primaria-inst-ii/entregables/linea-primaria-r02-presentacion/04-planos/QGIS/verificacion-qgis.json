@@ -1,0 +1,70 @@
+{
+  "version_qgis": "3.44.15-Solothurn",
+  "crs": "EPSG:32719",
+  "longitud_horizontal_m": 6696.368693212355,
+  "postes": 111,
+  "vanos": 110,
+  "retenidas_ideales": 160,
+  "diferencia_maxima_xy_m": 0.0,
+  "tipos_poste_coinciden": true,
+  "catastro_original_sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8",
+  "copia_catastro_sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8",
+  "capas": [
+    {
+      "capa": "eje",
+      "entidades": 1,
+      "crs": "EPSG:32719"
+    },
+    {
+      "capa": "postes",
+      "entidades": 111,
+      "crs": "EPSG:32719"
+    },
+    {
+      "capa": "vanos",
+      "entidades": 110,
+      "crs": "EPSG:32719"
+    },
+    {
+      "capa": "retenidas-ideales",
+      "entidades": 160,
+      "crs": "EPSG:32719"
+    },
+    {
+      "capa": "subestaciones",
+      "entidades": 2,
+      "crs": "EPSG:32719"
+    },
+    {
+      "capa": "curvas-dem",
+      "entidades": 208,
+      "crs": "EPSG:32719"
+    },
+    {
+      "capa": "referencias-osm",
+      "entidades": 56,
+      "crs": "EPSG:32719"
+    },
+    {
+      "capa": "Calles",
+      "entidades": 19,
+      "crs": "EPSG:32719",
+      "origen": "Original sin modificar"
+    },
+    {
+      "capa": "Casas",
+      "entidades": 485,
+      "crs": "EPSG:32719",
+      "origen": "Original sin modificar"
+    },
+    {
+      "capa": "Rios-Cuencas",
+      "entidades": 5,
+      "crs": "EPSG:32719",
+      "origen": "Original sin modificar"
+    }
+  ],
+  "capas_validas_tras_traslado": 11,
+  "rutas_fuera_paquete": 0,
+  "estado": "Proyecto QGIS nativo verificado; geometría académica, sin replanteo de campo"
+}

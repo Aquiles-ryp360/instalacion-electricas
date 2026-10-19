@@ -1,0 +1,14 @@
+{
+  "formato": "DWG nativo R2018/AC1032",
+  "herramienta": "C:\\Program Files\\Autodesk\\AutoCAD 2027\\accoreconsole.exe",
+  "postes": 111,
+  "diferencia_maxima_xy_m": 1.870812694540736e-09,
+  "tipos_coinciden": true,
+  "planos_linea": 19,
+  "referencias_documentales_dge": 23,
+  "contornos_coinciden": true,
+  "audit_errores": 0,
+  "sha256_dxf": "c7ba0b3cdbc4f3a1755984c74f875f83b5b8e4f59b17b40c3d719f3d2d4acdf5",
+  "sha256_dwg": "67a0ed443170166be23c178318004fa0decc7ee26f3b5de86961ad261abd26bc",
+  "alcance": "Modelo LP-R02 sin modificación; referencias DGE en layouts separados, sin aprobación de adaptación CAC."
+}

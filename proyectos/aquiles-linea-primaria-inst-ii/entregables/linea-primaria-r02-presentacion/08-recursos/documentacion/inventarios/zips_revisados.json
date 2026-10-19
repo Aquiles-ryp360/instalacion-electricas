@@ -1,0 +1,23 @@
+[
+  {
+    "zip": "herramientas/biblioteca_dge/entregables/Biblioteca_CAD_DGE_Peru.zip",
+    "archivos": 150,
+    "error_crc": null,
+    "sha256": "f4fba006530aa6d73a5a20acfc5fa93bc40f2da3b9d64e97dec807576e4bafa5",
+    "contenido": "proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/Biblioteca_CAD_DGE_Peru_contenido.json"
+  },
+  {
+    "zip": "proyectos/aquiles-linea-primaria-inst-ii/entregables/Paquete_LP_Limbani_Huancasayani_R01.zip",
+    "archivos": 92,
+    "error_crc": null,
+    "sha256": "f2a5f98aa80385df924200a2a3540ce041e734a0fa42e3882f5c635c6b389195",
+    "contenido": "proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/Paquete_LP_Limbani_Huancasayani_R01_contenido.json"
+  },
+  {
+    "zip": "proyectos/renzo-linea-primaria-capachica/entregables/planos/planos_autocad_linea_primaria_capachica.zip",
+    "archivos": 7,
+    "error_crc": null,
+    "sha256": "d72d2d982faa6a55c5fd0e04bb4ff497ffdaf9feac5587c035c86b095f5ab5e8",
+    "contenido": "proyectos/aquiles-linea-primaria-inst-ii/documentacion/lp-r02/inventarios/planos_autocad_linea_primaria_capachica_contenido.json"
+  }
+]

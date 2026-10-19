@@ -1,0 +1,24 @@
+{
+  "fecha": "2026-10-18",
+  "revision_tecnica": "LP-R02",
+  "presentacion": "P01",
+  "pruebas_motor_aprobadas": 15,
+  "comando_pruebas": "python -m unittest discover -s herramientas/lineas_primarias/tests -v",
+  "controles_paquete_aprobados": 70,
+  "paginas_integrado": 59,
+  "postes": 111,
+  "planos_propios": 19,
+  "referencias_dge": 23,
+  "documentos_visualmente_revisados": [
+    "memoria",
+    "calculos",
+    "especificaciones",
+    "19 planos A3",
+    "referencias DGE"
+  ],
+  "compilacion_sin_desbordamientos": true,
+  "originales_manifiesto_verificados": 151,
+  "fuentes_recuperadas_verificadas": 81,
+  "resultados_y_planillas_moviles_sin_cambios": true,
+  "aprobacion_ingenieria": false
+}

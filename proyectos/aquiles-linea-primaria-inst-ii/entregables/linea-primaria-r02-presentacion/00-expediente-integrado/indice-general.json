@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Memoria descriptiva y cálculos",
+    "primera_pagina": 1,
+    "ultima_pagina": 14,
+    "archivo": "01-expediente\\Expediente_revisado_LP_R02.pdf"
+  },
+  {
+    "titulo": "Especificaciones y montaje",
+    "primera_pagina": 15,
+    "ultima_pagina": 17,
+    "archivo": "05-especificaciones\\Especificaciones_y_montaje_R02.pdf"
+  },
+  {
+    "titulo": "Hojas DGE de referencia; adaptación pendiente",
+    "primera_pagina": 18,
+    "ultima_pagina": 40,
+    "archivo": "09-armados-referencia\\Referencia_documental_DGE.pdf"
+  },
+  {
+    "titulo": "Planos de la línea primaria LP-R02",
+    "primera_pagina": 41,
+    "ultima_pagina": 59,
+    "archivo": "04-planos\\Planos_LP_R02_A3.pdf"
+  }
+]

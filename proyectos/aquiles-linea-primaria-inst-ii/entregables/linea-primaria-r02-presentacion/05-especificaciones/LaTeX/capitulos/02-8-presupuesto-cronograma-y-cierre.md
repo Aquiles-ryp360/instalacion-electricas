@@ -1,0 +1,6 @@
+## 8. Presupuesto, cronograma y cierre
+
+Se reemplaza el total aparente cerrado por una plantilla con cantidades trazables y precios sin cotizar. El presupuestoR01 se conserva como antecedente estimado; no se reutiliza como oferta local. Suministro, montaje, transporte, obras civiles y gestión se separan para evitar doble contabilización. Se solicita precio entregado en destino y tratamiento de IGV por oferta. APU, gastos, utilidad y cronograma de rendimiento permanecen editables.
+
+Secuencia propuesta:1) confirmar curso y fuente;2) verificar generación y demanda;3) comparar tensión con cotizaciones;4) levantar corredor/cruces y predios;5) resolver mecánica/aislamiento/protección/tierra/cimentación;6) congelar planillas;7) generar CAD, metrados y presupuesto;8) revisión de responsable y pruebas. Duraciones en hoja de planificación son hipótesis, sin fecha de obra comprometida.
+

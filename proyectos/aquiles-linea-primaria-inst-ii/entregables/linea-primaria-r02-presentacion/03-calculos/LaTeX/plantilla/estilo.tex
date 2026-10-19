@@ -1,0 +1,70 @@
+% Adaptación de proyectos/aquiles/expediente/preambulo.tex.
+% Las variables de identidad y alcance se definen por documento.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{geometry,amsmath,amssymb,graphicx,float,booktabs,tabularx,longtable,array,enumitem,xcolor}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{hyperref,fancyhdr,titlesec,tocloft,tikz,colortbl,needspace,etoolbox}
+\usepackage[normalem]{ulem}
+\definecolor{modelblue}{RGB}{91,155,213}
+\definecolor{headingred}{RGB}{220,0,0}
+\definecolor{azul}{RGB}{91,155,213}
+\definecolor{rojo}{RGB}{220,0,0}
+\definecolor{gris}{RGB}{70,82,92}
+\geometry{letterpaper,left=1.08in,right=.92in,top=1.55in,bottom=.92in,headheight=78pt,headsep=18pt,footskip=36pt}
+\providecommand{\ProyectoCabecera}{PROYECTO ACADÉMICO}
+\providecommand{\CursoCabecera}{INGENIERÍA}
+\providecommand{\DocumentoPie}{MEMORIA ACADÉMICA}
+\providecommand{\AutorDocumento}{Estudiante}
+\providecommand{\LogoDocumento}{figuras/escudo-unap.png}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue,pdfauthor={\AutorDocumento},pdftitle={\ProyectoCabecera}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.62em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\setlength{\headwidth}{\textwidth}
+\setlist[itemize]{leftmargin=1.05cm,itemsep=.05em,topsep=.2em,label=\(\triangleright\)}
+\setlist[enumerate]{leftmargin=1.05cm,itemsep=.05em,topsep=.2em}
+\setcounter{secnumdepth}{3}\setcounter{tocdepth}{2}
+\addto\captionsspanish{\renewcommand{\contentsname}{CONTENIDO}}
+\renewcommand{\cfttoctitlefont}{\color{modelblue}\Large}
+\renewcommand{\cftaftertoctitle}{\par\vspace{.4em}}
+\setlength{\cftbeforetoctitleskip}{0pt}\setlength{\cftaftertoctitleskip}{.75em}
+\renewcommand{\cftchapfont}{\bfseries}\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftsecindent}{.25in}\setlength{\cftsubsecindent}{.60in}
+\setlength{\cftbeforechapskip}{.30em}\setlength{\cftbeforesecskip}{.16em}
+\titleformat{\chapter}[display]{\normalfont\bfseries\color{black}}{\normalsize\color{headingred}CAPÍTULO \thechapter}{6pt}{\LARGE}
+\titleformat{name=\chapter,numberless}{\normalfont\bfseries\LARGE\color{black}}{}{0pt}{}
+\titleformat{\section}{\normalfont\bfseries\Large\color{headingred}}{\thesection}{1em}{\uline}
+\titleformat{\subsection}{\normalfont\bfseries\normalsize\color{headingred}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\normalsize\color{headingred}}{\thesubsubsection}{1em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{.95em}
+\titlespacing*{\section}{0pt}{1em}{.55em}
+\titlespacing*{\subsection}{0pt}{.85em}{.35em}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\memoriaheader}{%
+ \begingroup\arrayrulecolor{modelblue}\setlength{\arrayrulewidth}{1.1pt}\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.18}%
+ \makebox[.90\headwidth][c]{\begin{minipage}{.90\headwidth}\centering
+ \resizebox{\linewidth}{!}{\begin{tabular}{|>{\centering\arraybackslash}m{3.55in}|>{\centering\arraybackslash}m{1.05in}|>{\centering\arraybackslash}m{.55in}|}\hline
+ \scriptsize\ProyectoCabecera & \scriptsize\CursoCabecera & \includegraphics[height=.50in]{\LogoDocumento}\\\hline
+ \end{tabular}}\par\vspace{.13in}\textcolor{modelblue}{\rule{\linewidth}{.45pt}}
+ \end{minipage}}\endgroup}
+\newcommand{\memoriafooter}{\makebox[.90\headwidth][c]{\begin{minipage}{.90\headwidth}
+ \textcolor{modelblue}{\rule{\linewidth}{.45pt}}\par\vspace{.08in}{\small\DocumentoPie\hfill\thepage}\end{minipage}}}
+\fancypagestyle{memoria}{\fancyhf{}\fancyhead[C]{\makebox[0pt][c]{\memoriaheader}}\fancyfoot[C]{\makebox[0pt][c]{\memoriafooter}}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[C]{\makebox[0pt][c]{\memoriaheader}}\fancyfoot[C]{\makebox[0pt][c]{\memoriafooter}}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+\pagestyle{memoria}
+\newcommand{\estado}[1]{\par\noindent\colorbox{modelblue!8}{\parbox{\dimexpr\linewidth-2\fboxsep}{\small\textbf{Condiciones del modelo.} #1}}\par}
+\newcommand{\dato}[1]{\csname dato#1\endcsname}
+\newcommand{\fuente}[1]{{\small\color{gris}\textit{Fuente / trazabilidad: #1}}\par}
+\emergencystretch=3em
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\sloppy

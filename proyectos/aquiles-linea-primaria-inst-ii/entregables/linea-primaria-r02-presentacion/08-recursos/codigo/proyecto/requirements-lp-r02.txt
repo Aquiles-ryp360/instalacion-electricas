@@ -1,0 +1,13 @@
+# Sistema Debian: fonts-dejavu-core (DejaVu Sans)
+numpy==2.5.3
+scipy==1.18.1
+reportlab==5.0.1
+ezdxf==1.4.5
+PyYAML==6.0.3
+pypdf==6.21.1
+requests==2.34.2
+PyMuPDF==1.28.2
+shapely==2.2.0
+pyproj==3.8.0
+openpyxl==3.1.5
+python-docx==1.2.0

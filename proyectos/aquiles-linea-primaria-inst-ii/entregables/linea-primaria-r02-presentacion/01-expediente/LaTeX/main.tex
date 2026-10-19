@@ -1,0 +1,19 @@
+\documentclass[12pt,letterpaper]{report}
+\input{metadatos}\input{plantilla/estilo}
+\renewcommand{\thesection}{\arabic{section}.}\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\begin{document}\hypersetup{pageanchor=false}\pagenumbering{gobble}\input{plantilla/caratula}
+\clearpage\hypersetup{pageanchor=true}\pagenumbering{arabic}\tableofcontents\clearpage
+\chapter*{MEMORIA DESCRIPTIVA Y CÁLCULOS}\addcontentsline{toc}{chapter}{MEMORIA DESCRIPTIVA Y CÁLCULOS}
+
+
+\input{capitulos/01-1-alcance-y-decisi-n-de-dise-o}
+\input{capitulos/02-2-resultado-de-la-evaluaci-n}
+\input{capitulos/03-3-demanda-horizonte-y-suficiencia-de-generaci-n}
+\input{capitulos/04-4-memoria-de-c-lculo-el-ctrico-expl-cita}
+\input{capitulos/05-5-memoria-de-c-lculo-mec-nico-expl-cita}
+\input{capitulos/06-6-metrados-vinculados-al-dise-o}
+\input{capitulos/07-7-materiales-montaje-y-pruebas}
+\input{capitulos/08-8-presupuesto-cronograma-y-cierre}
+\input{capitulos/09-9-recursos-y-referencias-de-contraste}
+\input{capitulos/10-10-datos-necesarios-para-cerrar-ingenier-a}
+\end{document}

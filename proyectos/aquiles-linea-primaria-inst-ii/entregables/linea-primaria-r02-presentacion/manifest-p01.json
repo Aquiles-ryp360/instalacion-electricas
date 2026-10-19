@@ -1,0 +1,1514 @@
+{
+  "revision_tecnica": "LP-R02",
+  "presentacion": "P01",
+  "fecha": "2026-10-18",
+  "base_git": "1819362f278c5fffd88498e156200d34eeedc134",
+  "aprobacion_ingenieria": false,
+  "archivos": [
+    {
+      "ruta": ".gitattributes",
+      "bytes": 86,
+      "sha256": "835a3cb515dbb3a5ed66b9b8d9db1ccbae1dcdbf478bac3648a38e36b2fe2bd0"
+    },
+    {
+      "ruta": "00-expediente-integrado/Expediente_integral_Linea_Primaria_LP_R02_P01.pdf",
+      "bytes": 11361647,
+      "sha256": "e36657c6d0066925d99f338bf78ed7b7cc6731fad84f7ede0158bac521e90cce"
+    },
+    {
+      "ruta": "00-expediente-integrado/indice-general.json",
+      "bytes": 733,
+      "sha256": "9e927626da13ffe5c63cdab3c2d9cb1cd1ad9ed5f2dc4908dd05a1cc20b85a35"
+    },
+    {
+      "ruta": "00-expediente-integrado/INDICE.md",
+      "bytes": 279,
+      "sha256": "6e963b50a137aaa37075a84896d8088a31b985b54090d632932c29d1e0813276"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/01-1-alcance-y-decisi-n-de-dise-o.md",
+      "bytes": 1589,
+      "sha256": "7ed03293a31d7b9d7e0ba9709de99d5897ae0a34574c2cd8d347c40b48b81fc9"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/01-1-alcance-y-decisi-n-de-dise-o.tex",
+      "bytes": 1891,
+      "sha256": "9766b7af40f93abd78a72afd0db0c2fd409e9ea7491ec18e4dd2e1117970c238"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/02-2-resultado-de-la-evaluaci-n.md",
+      "bytes": 1017,
+      "sha256": "16dfeb8f43cf9f0b114560daf534074325bf4e3a2baab7b6cfa1e0d5c9ffe6c7"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/02-2-resultado-de-la-evaluaci-n.tex",
+      "bytes": 1044,
+      "sha256": "43f9055f7a40a3921c1d46d74b61f9eb36846febcabc19494170ec8cf49906ed"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/03-3-demanda-horizonte-y-suficiencia-de-generaci-n.md",
+      "bytes": 1531,
+      "sha256": "da26bd9492d7fafb445477f28057451f54964cc9f875af14191e99e72528dd43"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/03-3-demanda-horizonte-y-suficiencia-de-generaci-n.tex",
+      "bytes": 2342,
+      "sha256": "1e02c49aec8e0588a90efdfd2e17eb54d6b0552d24cd8a9c7d13904046bf67e2"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/04-4-memoria-de-c-lculo-el-ctrico-expl-cita.md",
+      "bytes": 5236,
+      "sha256": "2c4958d9748eae82a1216f46dcad0e4c38e5f4612965539e0a48295fe14b3b87"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/04-4-memoria-de-c-lculo-el-ctrico-expl-cita.tex",
+      "bytes": 7125,
+      "sha256": "0ab96c0d65ff8c3d27a7a3956ce2bd4bc16081e842f08d3b4872b74577e82909"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/05-5-memoria-de-c-lculo-mec-nico-expl-cita.md",
+      "bytes": 7717,
+      "sha256": "6668e2e9692d0b54a5f686450bd0da27814f8dcb6f06cf8d95626f7b877bb02f"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/05-5-memoria-de-c-lculo-mec-nico-expl-cita.tex",
+      "bytes": 10301,
+      "sha256": "fffe11722325b30af74d10f9074bc6ac3d8c0b0dd3d122d53cb02174974a5e04"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/06-6-metrados-vinculados-al-dise-o.md",
+      "bytes": 1362,
+      "sha256": "979d6e148ace1f2ddcd76c150516df94023e40c25057f99b4b48c76ce186b774"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/06-6-metrados-vinculados-al-dise-o.tex",
+      "bytes": 1825,
+      "sha256": "45769229cfa6858de61ebe0e7ab4a1fbece1f37b9d67119f9fcb247207bee072"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/07-7-materiales-montaje-y-pruebas.md",
+      "bytes": 934,
+      "sha256": "a6035b80b5aca5250ad6a8f16368b2cd06c4e039c8638521d0155b0b1b50e3e9"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/07-7-materiales-montaje-y-pruebas.tex",
+      "bytes": 978,
+      "sha256": "2bf82e1a42518c2f3a8fc7eeb488756e2dcfd33616b4f708b45df7762a290287"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/08-8-presupuesto-cronograma-y-cierre.md",
+      "bytes": 905,
+      "sha256": "ff4aad92aeaa582cb20d830ce5a2b63fef6a9673f0ea8b2a75e5cc8d6a1cc2b3"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/08-8-presupuesto-cronograma-y-cierre.tex",
+      "bytes": 932,
+      "sha256": "e0f81c4be6c7068e0ae5032f94f5dd6dba6410f36258adbb852c4b7072f5a1aa"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/09-9-recursos-y-referencias-de-contraste.md",
+      "bytes": 3167,
+      "sha256": "0a1ffc49626363deec991f80ea53d375a70777deaaab6c7e316c4688418012f1"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/09-9-recursos-y-referencias-de-contraste.tex",
+      "bytes": 3950,
+      "sha256": "cc998cc48c30e509fbed413737c23fd664d146455673566574772c40021ddd27"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/10-10-datos-necesarios-para-cerrar-ingenier-a.md",
+      "bytes": 1273,
+      "sha256": "b0f85a03e4a77c1a66f225999a2ad8d7940d203ad8cef99a8d89c96da99b8150"
+    },
+    {
+      "ruta": "01-expediente/Capitulos/10-10-datos-necesarios-para-cerrar-ingenier-a.tex",
+      "bytes": 1627,
+      "sha256": "ccee9fbc7e36eeb9b3670d6f7e171283ac43b0322d9740a311aa0a3f3740b610"
+    },
+    {
+      "ruta": "01-expediente/Expediente_revisado_LP_R02.md",
+      "bytes": 24854,
+      "sha256": "00d0a0f9343bed43dcb73e447306ee91a7e6d5eb8d3c9561ec1cb8aaa085aa62"
+    },
+    {
+      "ruta": "01-expediente/Expediente_revisado_LP_R02.pdf",
+      "bytes": 148593,
+      "sha256": "dc178aaa7770b38cdbb99769b0ddf121f8abcf9ea1716403fa6fd2d959eb9700"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/01-1-alcance-y-decisi-n-de-dise-o.md",
+      "bytes": 1589,
+      "sha256": "7ed03293a31d7b9d7e0ba9709de99d5897ae0a34574c2cd8d347c40b48b81fc9"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/01-1-alcance-y-decisi-n-de-dise-o.tex",
+      "bytes": 1891,
+      "sha256": "9766b7af40f93abd78a72afd0db0c2fd409e9ea7491ec18e4dd2e1117970c238"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/02-2-resultado-de-la-evaluaci-n.md",
+      "bytes": 1017,
+      "sha256": "16dfeb8f43cf9f0b114560daf534074325bf4e3a2baab7b6cfa1e0d5c9ffe6c7"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/02-2-resultado-de-la-evaluaci-n.tex",
+      "bytes": 1044,
+      "sha256": "43f9055f7a40a3921c1d46d74b61f9eb36846febcabc19494170ec8cf49906ed"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/03-3-demanda-horizonte-y-suficiencia-de-generaci-n.md",
+      "bytes": 1531,
+      "sha256": "da26bd9492d7fafb445477f28057451f54964cc9f875af14191e99e72528dd43"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/03-3-demanda-horizonte-y-suficiencia-de-generaci-n.tex",
+      "bytes": 2342,
+      "sha256": "1e02c49aec8e0588a90efdfd2e17eb54d6b0552d24cd8a9c7d13904046bf67e2"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/04-4-memoria-de-c-lculo-el-ctrico-expl-cita.md",
+      "bytes": 5236,
+      "sha256": "2c4958d9748eae82a1216f46dcad0e4c38e5f4612965539e0a48295fe14b3b87"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/04-4-memoria-de-c-lculo-el-ctrico-expl-cita.tex",
+      "bytes": 7125,
+      "sha256": "0ab96c0d65ff8c3d27a7a3956ce2bd4bc16081e842f08d3b4872b74577e82909"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/05-5-memoria-de-c-lculo-mec-nico-expl-cita.md",
+      "bytes": 7717,
+      "sha256": "6668e2e9692d0b54a5f686450bd0da27814f8dcb6f06cf8d95626f7b877bb02f"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/05-5-memoria-de-c-lculo-mec-nico-expl-cita.tex",
+      "bytes": 10301,
+      "sha256": "fffe11722325b30af74d10f9074bc6ac3d8c0b0dd3d122d53cb02174974a5e04"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/06-6-metrados-vinculados-al-dise-o.md",
+      "bytes": 1362,
+      "sha256": "979d6e148ace1f2ddcd76c150516df94023e40c25057f99b4b48c76ce186b774"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/06-6-metrados-vinculados-al-dise-o.tex",
+      "bytes": 1825,
+      "sha256": "45769229cfa6858de61ebe0e7ab4a1fbece1f37b9d67119f9fcb247207bee072"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/07-7-materiales-montaje-y-pruebas.md",
+      "bytes": 934,
+      "sha256": "a6035b80b5aca5250ad6a8f16368b2cd06c4e039c8638521d0155b0b1b50e3e9"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/07-7-materiales-montaje-y-pruebas.tex",
+      "bytes": 978,
+      "sha256": "2bf82e1a42518c2f3a8fc7eeb488756e2dcfd33616b4f708b45df7762a290287"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/08-8-presupuesto-cronograma-y-cierre.md",
+      "bytes": 905,
+      "sha256": "ff4aad92aeaa582cb20d830ce5a2b63fef6a9673f0ea8b2a75e5cc8d6a1cc2b3"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/08-8-presupuesto-cronograma-y-cierre.tex",
+      "bytes": 932,
+      "sha256": "e0f81c4be6c7068e0ae5032f94f5dd6dba6410f36258adbb852c4b7072f5a1aa"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/09-9-recursos-y-referencias-de-contraste.md",
+      "bytes": 3167,
+      "sha256": "0a1ffc49626363deec991f80ea53d375a70777deaaab6c7e316c4688418012f1"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/09-9-recursos-y-referencias-de-contraste.tex",
+      "bytes": 3950,
+      "sha256": "cc998cc48c30e509fbed413737c23fd664d146455673566574772c40021ddd27"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/10-10-datos-necesarios-para-cerrar-ingenier-a.md",
+      "bytes": 1273,
+      "sha256": "b0f85a03e4a77c1a66f225999a2ad8d7940d203ad8cef99a8d89c96da99b8150"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/capitulos/10-10-datos-necesarios-para-cerrar-ingenier-a.tex",
+      "bytes": 1627,
+      "sha256": "ccee9fbc7e36eeb9b3670d6f7e171283ac43b0322d9740a311aa0a3f3740b610"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/contenido.md",
+      "bytes": 24854,
+      "sha256": "00d0a0f9343bed43dcb73e447306ee91a7e6d5eb8d3c9561ec1cb8aaa085aa62"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/figuras/escudo-unap.png",
+      "bytes": 7995,
+      "sha256": "d79083f2d5d15ae72cecd4293b4035e8de06becb69925db5276bb3c05f7d9bed"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/main.tex",
+      "bytes": 1097,
+      "sha256": "e4910748a5a7dbb21c1712723c0143dd855cc3eca1023b09ea5d38cd03f5bb34"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/metadatos.tex",
+      "bytes": 1022,
+      "sha256": "e476b516d7063dc5081636802f3b8b9d572b3180806f0ec1c9c32fea3351af85"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/plantilla/caratula.tex",
+      "bytes": 2202,
+      "sha256": "ef58b41e359d9440023cbcaa82665f6830db181d825fdfb8647ee01eb9825511"
+    },
+    {
+      "ruta": "01-expediente/LaTeX/plantilla/estilo.tex",
+      "bytes": 4619,
+      "sha256": "6c1fb96cb16ecd86dd56a943d934a97e354a4f3b472e91a1ff63ba01b1b97c96"
+    },
+    {
+      "ruta": "02-metrados/civiles_pendientes.csv",
+      "bytes": 12989,
+      "sha256": "35412c763f7e3df69675ca0836cb58198a284dc6694a02912f8adb85c75811c6"
+    },
+    {
+      "ruta": "02-metrados/metrado_detallado.csv",
+      "bytes": 61115,
+      "sha256": "a604ea904d9fe8e8a098683b46d42faab151cc5877f76f1c95e417b2535bb962"
+    },
+    {
+      "ruta": "02-metrados/Metrados_trazables_LP_R02.xlsx",
+      "bytes": 73817,
+      "sha256": "aaf48381e94f34ed156b8c95bba5ae2d9192c58f3ba21af7be6bfa6c1fd75ce6"
+    },
+    {
+      "ruta": "02-metrados/postes.csv",
+      "bytes": 47501,
+      "sha256": "6b7614ef5177e442c71a01909d65877770150e44fa6d04c6dc06c48a4310ede6"
+    },
+    {
+      "ruta": "02-metrados/resumen_metrados.csv",
+      "bytes": 1012,
+      "sha256": "a6c741bf4ef9906fd81e5a0ef5aa6e110c56af340dc2c5a584610b43fb087fd4"
+    },
+    {
+      "ruta": "02-metrados/retenidas.csv",
+      "bytes": 28918,
+      "sha256": "2ad8a54cc37c46746459fca3107444aad220ed40a41aa6159155d47f7ed77268"
+    },
+    {
+      "ruta": "03-calculos/balance_fuente.csv",
+      "bytes": 1085,
+      "sha256": "e8e4cfa2e4062e3fd23469a8f531de50862d11e4f5430e00859a72003263986c"
+    },
+    {
+      "ruta": "03-calculos/Calculos_explicitos_LP_R02.xlsx",
+      "bytes": 718427,
+      "sha256": "9eb604e57e9e4cb136695bd56e61a394e76124682755a302cec2581737c46ed8"
+    },
+    {
+      "ruta": "03-calculos/comparacion_tensiones.csv",
+      "bytes": 3493,
+      "sha256": "ed44a559faca4e16f793cd29673759fefc8a7b929c1cb86c73a930f7954b325a"
+    },
+    {
+      "ruta": "03-calculos/cortocircuito.csv",
+      "bytes": 2256,
+      "sha256": "e5fa43e5737d9e7ea4f102044eb5c05a7b213c31fa156a87455a1621fe119a87"
+    },
+    {
+      "ruta": "03-calculos/demanda.csv",
+      "bytes": 339,
+      "sha256": "ef88ebefc1ecd2d49cb8880824779061ba31286a6050f2ebb8ee909742dc8a2e"
+    },
+    {
+      "ruta": "03-calculos/energia.csv",
+      "bytes": 1025,
+      "sha256": "990e85077bac31556b2455571488287f73e1db7ef7896f14c2b2b6a37e261bb0"
+    },
+    {
+      "ruta": "03-calculos/estados_por_vano.csv",
+      "bytes": 144825,
+      "sha256": "110bad3745bef79e3ea9f3efc15558568c2422764dc1256df3ba455d6e685d6d"
+    },
+    {
+      "ruta": "03-calculos/fuerzas_por_apoyo.csv",
+      "bytes": 964078,
+      "sha256": "0638991620afc76bb865b9efad59fc953b54ed56631d60c96b905b7cdc914052"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/capitulos/01-3-demanda-horizonte-y-suficiencia-de-generaci-n.md",
+      "bytes": 1531,
+      "sha256": "da26bd9492d7fafb445477f28057451f54964cc9f875af14191e99e72528dd43"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/capitulos/01-3-demanda-horizonte-y-suficiencia-de-generaci-n.tex",
+      "bytes": 2342,
+      "sha256": "1e02c49aec8e0588a90efdfd2e17eb54d6b0552d24cd8a9c7d13904046bf67e2"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/capitulos/02-4-memoria-de-c-lculo-el-ctrico-expl-cita.md",
+      "bytes": 5236,
+      "sha256": "2c4958d9748eae82a1216f46dcad0e4c38e5f4612965539e0a48295fe14b3b87"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/capitulos/02-4-memoria-de-c-lculo-el-ctrico-expl-cita.tex",
+      "bytes": 7125,
+      "sha256": "0ab96c0d65ff8c3d27a7a3956ce2bd4bc16081e842f08d3b4872b74577e82909"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/capitulos/03-5-memoria-de-c-lculo-mec-nico-expl-cita.md",
+      "bytes": 7717,
+      "sha256": "6668e2e9692d0b54a5f686450bd0da27814f8dcb6f06cf8d95626f7b877bb02f"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/capitulos/03-5-memoria-de-c-lculo-mec-nico-expl-cita.tex",
+      "bytes": 10301,
+      "sha256": "fffe11722325b30af74d10f9074bc6ac3d8c0b0dd3d122d53cb02174974a5e04"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/contenido.md",
+      "bytes": 14586,
+      "sha256": "a419cc562036fb9a9dc44c4f0db21491706fde85b23ae4aa4c56132a0a68712b"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/figuras/escudo-unap.png",
+      "bytes": 7995,
+      "sha256": "d79083f2d5d15ae72cecd4293b4035e8de06becb69925db5276bb3c05f7d9bed"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/main.tex",
+      "bytes": 691,
+      "sha256": "bfb3a6f0fc408f8dd78a23d89befc617c6d06e32c813e34bb3e54d8a0fcca3d4"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/metadatos.tex",
+      "bytes": 994,
+      "sha256": "fe515f4c00fac609ea094a3e27a58e6304b08ddfa38935062c5f00ab8cafee58"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/plantilla/caratula.tex",
+      "bytes": 2202,
+      "sha256": "ef58b41e359d9440023cbcaa82665f6830db181d825fdfb8647ee01eb9825511"
+    },
+    {
+      "ruta": "03-calculos/LaTeX/plantilla/estilo.tex",
+      "bytes": 4619,
+      "sha256": "6c1fb96cb16ecd86dd56a943d934a97e354a4f3b472e91a1ff63ba01b1b97c96"
+    },
+    {
+      "ruta": "03-calculos/Memoria_calculo_explicita_LP_R02.md",
+      "bytes": 14586,
+      "sha256": "a419cc562036fb9a9dc44c4f0db21491706fde85b23ae4aa4c56132a0a68712b"
+    },
+    {
+      "ruta": "03-calculos/Memoria_calculo_explicita_LP_R02.pdf",
+      "bytes": 126159,
+      "sha256": "2e69b3a36a62174dbbb63d4d95daceaffeab3689f770ebb0a71851cbc08a0e5c"
+    },
+    {
+      "ruta": "03-calculos/origen_MT_fijo.csv",
+      "bytes": 489,
+      "sha256": "bedb3766521b458ec73d9892b7a054955a57368aa8bfe30a317fa630d9d159d9"
+    },
+    {
+      "ruta": "03-calculos/resultados.json",
+      "bytes": 1835029,
+      "sha256": "85765a4cfaa04f16c934468b4b73225013d56f00fcfab6e7d2fcac6c0502e4fd"
+    },
+    {
+      "ruta": "03-calculos/sensibilidad_fluencia.csv",
+      "bytes": 20493,
+      "sha256": "f3706bcda415829390d73bbf6eadd99eeb20783d942c270fd6e0706c94c653a7"
+    },
+    {
+      "ruta": "03-calculos/tabla_tensado_orientativa.csv",
+      "bytes": 102558,
+      "sha256": "d54601c5426e1e6738f45b58178fae8d16b404428457bc55e6488302692877fa"
+    },
+    {
+      "ruta": "03-calculos/vanos_limite_ejemplo.csv",
+      "bytes": 345,
+      "sha256": "53f5caedd0bcefc5fc54549a16406a2f9e96c748225755606441a6676ced4e85"
+    },
+    {
+      "ruta": "04-planos/auditoria-dxf.json",
+      "bytes": 90,
+      "sha256": "5019c3e60fd4a4e88f532f3f97b91150e98cc170e5b82f470fb581d2583c24f7"
+    },
+    {
+      "ruta": "04-planos/eje_R02_UTM19S.geojson",
+      "bytes": 9951,
+      "sha256": "5728cc163b9299c6419ae4a0b44cf33925e9776d25389e946980de27a7851fe8"
+    },
+    {
+      "ruta": "04-planos/indice-planos.json",
+      "bytes": 3347,
+      "sha256": "2fe5f04f4a26861e7c6bfbe323a237029b4273da989f75765434fb44239dd41a"
+    },
+    {
+      "ruta": "04-planos/LP-01.pdf",
+      "bytes": 311733,
+      "sha256": "a9776123a7f2179037217ae75d24cb4ad80d57b4d96b93ab0f5d2e135f893fbf"
+    },
+    {
+      "ruta": "04-planos/LP-02.pdf",
+      "bytes": 231183,
+      "sha256": "ef9cd367db5e5e33578080be5e454b22ac9737de73883822a9bee907f8c44f86"
+    },
+    {
+      "ruta": "04-planos/LP-03.pdf",
+      "bytes": 224203,
+      "sha256": "9f864d6a619b4aab735219e1669bfb0363769bc8bb8a131d48451939f5bf7cff"
+    },
+    {
+      "ruta": "04-planos/LP-04.pdf",
+      "bytes": 235333,
+      "sha256": "4d629c015eefe854bcd5042d2b90a06707dbbca44d6686b7c48a02b5c1a7e1f9"
+    },
+    {
+      "ruta": "04-planos/LP-05.pdf",
+      "bytes": 304032,
+      "sha256": "cd086fd9d1f0fa8c544a354d22d9d42da8bf40f32623a75803ea7cbe711b2bb1"
+    },
+    {
+      "ruta": "04-planos/LP-06.pdf",
+      "bytes": 318869,
+      "sha256": "a630814314778cfdb15d1c7488bb30136748f484c7335aa2ef24eacd03b365b5"
+    },
+    {
+      "ruta": "04-planos/LP-07.pdf",
+      "bytes": 321406,
+      "sha256": "e602e56e7dd6dc3d73b3ecb3008ad5014cf60626e721ef8b9127a1799f27334c"
+    },
+    {
+      "ruta": "04-planos/LP-08.pdf",
+      "bytes": 325657,
+      "sha256": "c33bf4de7404cc0963e3e930bdca287e93e6f86b47bf6bc334c19ca9ef8ae3e9"
+    },
+    {
+      "ruta": "04-planos/LP-09.pdf",
+      "bytes": 312603,
+      "sha256": "620221d0a39237ed2fbe8c1deb103424eb3b39db294f38a9219c5c351d203b00"
+    },
+    {
+      "ruta": "04-planos/LP-10.pdf",
+      "bytes": 316256,
+      "sha256": "8d1550a35e744477a499e3094c73f321d70d4e1122b531430a3b6a832f4cba2b"
+    },
+    {
+      "ruta": "04-planos/LP-11.pdf",
+      "bytes": 311349,
+      "sha256": "3260465156ffc5af8448518fcb532db0dd644d23633fdac4df64e3c2abbb9b1a"
+    },
+    {
+      "ruta": "04-planos/LP-12.pdf",
+      "bytes": 378327,
+      "sha256": "f459156fa5962c4418d90c23518eef30258d4f0a84b730205a1222347851aeff"
+    },
+    {
+      "ruta": "04-planos/LP-13.pdf",
+      "bytes": 373984,
+      "sha256": "7e7c243e6a898ceb9b24d57a82883f4808f3c3ccdafaf57e76f2b80c45eb52b4"
+    },
+    {
+      "ruta": "04-planos/LP-14.pdf",
+      "bytes": 403760,
+      "sha256": "ba98965b6155c49523b1ff3134c1328851c27b259d882ffc31c64fee6e08c5b4"
+    },
+    {
+      "ruta": "04-planos/LP-15.pdf",
+      "bytes": 387321,
+      "sha256": "0e080c7f673f135470c822e374bf8e0f91d7a89d89b7756215f57e163202300d"
+    },
+    {
+      "ruta": "04-planos/LP-16.pdf",
+      "bytes": 275420,
+      "sha256": "e88dd2455b4b5a77b6e55d333108a1fd7c800ae0ebf5af8b4eaf782f5573700b"
+    },
+    {
+      "ruta": "04-planos/LP-17.pdf",
+      "bytes": 171980,
+      "sha256": "c93f70711d89d7b629183e5fe5360c1dd6031ea9fa91027f261cc10ffc38f458"
+    },
+    {
+      "ruta": "04-planos/LP-18.pdf",
+      "bytes": 240394,
+      "sha256": "2a62e54e7dd53a213b54989f49b1754545b060f0112f39bf94b135b84c64e32a"
+    },
+    {
+      "ruta": "04-planos/LP-19.pdf",
+      "bytes": 259220,
+      "sha256": "e9999cb4381ddc03e6c0b991cffd9bb1ec055f60ad8d9a14b53961c817c78f25"
+    },
+    {
+      "ruta": "04-planos/LP_Limbani_Huancasayani_R02.dwg",
+      "bytes": 10733802,
+      "sha256": "67a0ed443170166be23c178318004fa0decc7ee26f3b5de86961ad261abd26bc"
+    },
+    {
+      "ruta": "04-planos/LP_Limbani_Huancasayani_R02.dxf",
+      "bytes": 37169982,
+      "sha256": "c7ba0b3cdbc4f3a1755984c74f875f83b5b8e4f59b17b40c3d719f3d2d4acdf5"
+    },
+    {
+      "ruta": "04-planos/LP_R02.kml",
+      "bytes": 33955,
+      "sha256": "3489419fa0a9103b70660353d6c962ccc3944eb9a20dd7ced247466631f1a988"
+    },
+    {
+      "ruta": "04-planos/LP_R02.kmz",
+      "bytes": 3497,
+      "sha256": "0de26a12cc470630d7216ec912892842a056fd94c833893f08cfae4b5a3422ce"
+    },
+    {
+      "ruta": "04-planos/Planos_LP_R02_A3.pdf",
+      "bytes": 5694258,
+      "sha256": "0e4998390b2d81c185a8b2155f6096c8cc37b8b9a7286f372a81b4d15650b60c"
+    },
+    {
+      "ruta": "04-planos/postes_R02_UTM19S.geojson",
+      "bytes": 161575,
+      "sha256": "5a271f1dd9d4486fcacbc071196408f11e1f8405ca97a48ab7efe094e913946d"
+    },
+    {
+      "ruta": "04-planos/QGIS/Catastro-original.gpkg",
+      "bytes": 278528,
+      "sha256": "656a85b9763dc23f077b377d275850b0f9562a85df13adb52a454bed632542b8"
+    },
+    {
+      "ruta": "04-planos/QGIS/DEM-gabinete-30m.tif",
+      "bytes": 39663,
+      "sha256": "f68c10409142277e1d46e21ed1cd30367004f1ca580e1c82d1755248286411e5"
+    },
+    {
+      "ruta": "04-planos/QGIS/DEM-gabinete-30m.tif.aux.xml",
+      "bytes": 362,
+      "sha256": "9cc7233b2fac802a1209fcc93ae19aac64a08b1cb49a5fbf82d7ce97f7fd1d7b"
+    },
+    {
+      "ruta": "04-planos/QGIS/Linea_Primaria_LP_R02.qgz",
+      "bytes": 25740,
+      "sha256": "a1675d87a41ea83c5e82ca920c71c0e4d0a43a9fe7f604a23bceb1890809fcfd"
+    },
+    {
+      "ruta": "04-planos/QGIS/LP-R02.gpkg",
+      "bytes": 962560,
+      "sha256": "1f61bd5b0d0a039e126a673bc3b565d4315d0323adc889396fa01fc0786c7f7d"
+    },
+    {
+      "ruta": "04-planos/QGIS/README.md",
+      "bytes": 576,
+      "sha256": "2d96d795c2c4c47722bd5649f2a4d57fd568b3258bbaaa27b657d2059e2a8c0c"
+    },
+    {
+      "ruta": "04-planos/QGIS/retenidas-ideales.geojson",
+      "bytes": 93810,
+      "sha256": "6592796ba21e94878db7be998126d701d3d1348cccd3fa401eaf9630fe1f95f2"
+    },
+    {
+      "ruta": "04-planos/QGIS/subestaciones.geojson",
+      "bytes": 493,
+      "sha256": "dc505712f5cbc4d1add630da2aa53d0845b830a87aec165dd58fae2b7bcae363"
+    },
+    {
+      "ruta": "04-planos/QGIS/vanos.geojson",
+      "bytes": 31395,
+      "sha256": "60da85878a82d3b61f59d4b1e02bf34b5a0da4bd4bf02206940fe9bada551634"
+    },
+    {
+      "ruta": "04-planos/QGIS/verificacion-qgis.json",
+      "bytes": 1697,
+      "sha256": "cfc5c03dc122ef2b41423d80a6fc4699371c8c851596a86b7c33b03478c97d61"
+    },
+    {
+      "ruta": "04-planos/QGIS/vista-general.png",
+      "bytes": 1120389,
+      "sha256": "9e42d98f38c8b90e79b41bc02c3b3074ca79eff4fb1f0885d1daf07d4b5f3f52"
+    },
+    {
+      "ruta": "04-planos/verificacion-dwg.json",
+      "bytes": 637,
+      "sha256": "76cf268a971018e5f02c809954468f6cc927e73b2847146ee7fd0fe3797d22d4"
+    },
+    {
+      "ruta": "05-especificaciones/Especificaciones_y_montaje_R02.md",
+      "bytes": 2292,
+      "sha256": "ca0a567c3aec60f495e7c3a3e934f8ad9fa600fdee179f04511c52dc1d50e140"
+    },
+    {
+      "ruta": "05-especificaciones/Especificaciones_y_montaje_R02.pdf",
+      "bytes": 62219,
+      "sha256": "4bab0350d17e9061c9db868c5d4867f4d8533e89319ec1f4f93b69bf3afbc617"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/capitulos/01-7-materiales-montaje-y-pruebas.md",
+      "bytes": 934,
+      "sha256": "a6035b80b5aca5250ad6a8f16368b2cd06c4e039c8638521d0155b0b1b50e3e9"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/capitulos/01-7-materiales-montaje-y-pruebas.tex",
+      "bytes": 978,
+      "sha256": "2bf82e1a42518c2f3a8fc7eeb488756e2dcfd33616b4f708b45df7762a290287"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/capitulos/02-8-presupuesto-cronograma-y-cierre.md",
+      "bytes": 905,
+      "sha256": "ff4aad92aeaa582cb20d830ce5a2b63fef6a9673f0ea8b2a75e5cc8d6a1cc2b3"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/capitulos/02-8-presupuesto-cronograma-y-cierre.tex",
+      "bytes": 932,
+      "sha256": "e0f81c4be6c7068e0ae5032f94f5dd6dba6410f36258adbb852c4b7072f5a1aa"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/contenido.md",
+      "bytes": 2292,
+      "sha256": "ca0a567c3aec60f495e7c3a3e934f8ad9fa600fdee179f04511c52dc1d50e140"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/figuras/escudo-unap.png",
+      "bytes": 7995,
+      "sha256": "d79083f2d5d15ae72cecd4293b4035e8de06becb69925db5276bb3c05f7d9bed"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/main.tex",
+      "bytes": 989,
+      "sha256": "d02ec9bdba256d414a7ebf5be6e2815551f102eead78a8db5dd4bcc56445d0de"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/metadatos.tex",
+      "bytes": 1003,
+      "sha256": "3cc3556b5b4f54a2c27dc68a0983b4a2db2041bbc37f8bc3c20b5dae889efb67"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/plantilla/caratula.tex",
+      "bytes": 2202,
+      "sha256": "ef58b41e359d9440023cbcaa82665f6830db181d825fdfb8647ee01eb9825511"
+    },
+    {
+      "ruta": "05-especificaciones/LaTeX/plantilla/estilo.tex",
+      "bytes": 4619,
+      "sha256": "6c1fb96cb16ecd86dd56a943d934a97e354a4f3b472e91a1ff63ba01b1b97c96"
+    },
+    {
+      "ruta": "06-presupuesto-y-cronograma/Presupuesto_y_planificacion_R02.xlsx",
+      "bytes": 9100,
+      "sha256": "888155b82901f26f638f3b2c55ceea863244ed7eb9a413abf4fa0609e3d0795c"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/anclajes_conflictos_cartograficos.csv",
+      "bytes": 17335,
+      "sha256": "b283e4626e32229dd6304793744c17792befb1f2412adfeba527a0b7d9cfc23b"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/CONTINUIDAD_IA.md",
+      "bytes": 5771,
+      "sha256": "532a42201f52dfc24606ac2f8240272dbc670259c850cea581b5b4201d029338"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/cuestionario_autoevaluacion.csv",
+      "bytes": 7000,
+      "sha256": "d082998613c6a8d6d89003faf61f676edbe09912f50b432e40fe3a1a3f2b72ed"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Cuestionario_autoevaluacion.md",
+      "bytes": 7641,
+      "sha256": "ffefaca3009e4d597054c13336de5f917f7997fc7fb3bef8b6f0d4cfa4df0be3"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Cuestionario_autoevaluacion.pdf",
+      "bytes": 53050,
+      "sha256": "1f7ea0d79afaa9ffd8719bcc850c6b15207c302c18f4567168e4f327595e3f82"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Evaluacion_tecnica_LP_R02.md",
+      "bytes": 7072,
+      "sha256": "d66e6194b41741a29d3a04ebc6d15841d9cc786d6ff07b520f018e9006f4883a"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/Evaluacion_tecnica_LP_R02.pdf",
+      "bytes": 52523,
+      "sha256": "3cb4704c04ef1ce5079a129a0784ecc067f73719b3d8feecdf600207ef33595a"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/LECTURA_REFERENCIAS.md",
+      "bytes": 3058,
+      "sha256": "e08a27005ad5ccee783472091d13645a05b87b26d2bf90d90608c9dbb4ea8853"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/OBSERVACIONES_REPOSITORIO.md",
+      "bytes": 2125,
+      "sha256": "381191118c05fbc405aa85934b6eee77ab7bfbc71caca523b686ee6f902124e0"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/PLANEACION.md",
+      "bytes": 1478,
+      "sha256": "2f134aab5d5dbe68b05357d58319a07760f2cfe5766b8cc348f9bda6b279b611"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/reproducibilidad.json",
+      "bytes": 522,
+      "sha256": "9d3d58c030095dfa47f2d6029ae32666a86e66291a8c9ae8a16e2fe361c1edf0"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/revision-visual-laminas.png",
+      "bytes": 317029,
+      "sha256": "02bd6657dcbdc53c2365cd6f6a0a27530d78be001c3815703ac57dbfbdea0a65"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/REVISION_PRESENTACION_P01.md",
+      "bytes": 1669,
+      "sha256": "0ebb7b9d4fab372b6afcc0e2f15b8b562bc29d415a94e02e3153ab43f44f1cb6"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/validacion-presentacion-p01.json",
+      "bytes": 724,
+      "sha256": "a4fb7dd6c1c7386a77eee8e015a4f85483c7c801b3b94bcfc6cb7323b544129a"
+    },
+    {
+      "ruta": "07-evaluacion-y-pendientes/VALIDACION.md",
+      "bytes": 1601,
+      "sha256": "48b4d89cdda05670c4093684ec1fa4fa65c8c7a4cb6ab7014a75ff390804022d"
+    },
+    {
+      "ruta": "08-recursos/codigo/cad_presentacion.py",
+      "bytes": 4852,
+      "sha256": "76c5d83252e9c13b92c58f1da9887b9cac025608927c495bc2427997a63a7699"
+    },
+    {
+      "ruta": "08-recursos/codigo/gis_presentacion.py",
+      "bytes": 9393,
+      "sha256": "f0c00750f8cf93804f972597b94d8b2ffc654862c1933e4d7b09be4e5e76ecc0"
+    },
+    {
+      "ruta": "08-recursos/codigo/herramientas/lineas_primarias/__init__.py",
+      "bytes": 82,
+      "sha256": "b32045ba0f07c967b7d4898dbddaa2a5967df2960cbc0e5329686b3a3d20e576"
+    },
+    {
+      "ruta": "08-recursos/codigo/herramientas/lineas_primarias/mecanica.py",
+      "bytes": 1970,
+      "sha256": "84a193c2007003cc347ec53e478d9d07b6b014a1984988f60e6cb11992720659"
+    },
+    {
+      "ruta": "08-recursos/codigo/herramientas/lineas_primarias/revision.py",
+      "bytes": 8957,
+      "sha256": "7a4bf3129e1423181e8f3ccd0088be661eae73cd9fe325f257f648af5920e20a"
+    },
+    {
+      "ruta": "08-recursos/codigo/herramientas/lineas_primarias/tests/__init__.py",
+      "bytes": 47,
+      "sha256": "c7c9d5c40f95ae511cc14e87e2c05dea4e90450c9da1230b97629384e933f768"
+    },
+    {
+      "ruta": "08-recursos/codigo/herramientas/lineas_primarias/tests/test_mecanica.py",
+      "bytes": 1076,
+      "sha256": "9b7787f92a17539a201d1d656d5ff05b32f2ef71aadba3738a2008663f651340"
+    },
+    {
+      "ruta": "08-recursos/codigo/herramientas/lineas_primarias/tests/test_revision.py",
+      "bytes": 2957,
+      "sha256": "eed9d3040a2e471bbb08892f6eaefd8dfe9e3a33837a1b590446d35e7ff69412"
+    },
+    {
+      "ruta": "08-recursos/codigo/presentacion_aquiles.py",
+      "bytes": 19415,
+      "sha256": "8199a632ed95b175f56073ab82e1c1ce82c725bf165105e6c994f556729fcfa3"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/AGENTS.md",
+      "bytes": 1337,
+      "sha256": "29ac87de909677bafc4bc7d15feb1fabab34f786365251824d5ba4dd5ddb044f"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r01/casas-originales.geojson",
+      "bytes": 196630,
+      "sha256": "e4a020f662842a8a5c7dae1df45c83e856653a813bcb5160516ad36846cdebbf"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r01/curvas-dem.geojson",
+      "bytes": 1108608,
+      "sha256": "2e6ecd2d58d95698fa981fda391685f159b461458e878cb0750af76f616c4bfb"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r01/referencias-osm.geojson",
+      "bytes": 385648,
+      "sha256": "9fb61985f9f6a420e0f7eb0817d778986fa090299c7c275f825900dae6461d1c"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r01/resultados.json",
+      "bytes": 1066771,
+      "sha256": "11b00b299050081deb5affbcbcb82650cee945fe6bc7b56a3fcfc1b8ee8f175e"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r02/fuentes.json",
+      "bytes": 5569,
+      "sha256": "419ce4de9068c8bf765a814fd36829aa1d4c7d549d0dfca6375688b24b05db6d"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r02/geometria-base.json",
+      "bytes": 636167,
+      "sha256": "659470296d4c1ad82b24ac678d272ac3f5ec1955182d703e88312cd9ce16cb09"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r02/parametros.json",
+      "bytes": 7414,
+      "sha256": "43261f4dc94db26af04db769f0b33f044029b2225ebcc6371387456cb55812ca"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/datos/lp-r02/registro-parametros.csv",
+      "bytes": 4762,
+      "sha256": "392ea512b98c7766de57c90446796e9a2b1178c5ad6662dddb7f3ebd17b9bb41"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/BITACORA.md",
+      "bytes": 2346,
+      "sha256": "609a81732f71b14e218dd81263dcf4b243b848965ed7896e16ca0875761d3e22"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/CONTINUIDAD_IA.md",
+      "bytes": 5771,
+      "sha256": "532a42201f52dfc24606ac2f8240272dbc670259c850cea581b5b4201d029338"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/entorno.json",
+      "bytes": 510,
+      "sha256": "1aa7abed9d4c0833a15800e349e0682c310d0edc125d9ed5fbda02791e9d336a"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/Biblioteca_CAD_DGE_Peru_contenido.json",
+      "bytes": 18177,
+      "sha256": "7e671c2ee63a7521c693842df209161f6d0632711a7315e1a65ba0aaff57f0d5"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/capachica-dxf-inspeccion.json",
+      "bytes": 1242,
+      "sha256": "ebf3b2253027c3eea8293ed95c7e37a23b0eb71ad139c88f6aec93421cb9c159"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/capachica_zip/README_AUTOCAD_LP.md",
+      "bytes": 1524,
+      "sha256": "5f6e63faa9751e6f07a814f024a5d9632a272fe179caabbf2206b5c7ffb4c828"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/inventario-repositorio.csv",
+      "bytes": 167686,
+      "sha256": "5e5bd80bb91721811876bc3858849f7fbeb76eed25f35915fd222bf506101589"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/paginas-referencias.json",
+      "bytes": 759,
+      "sha256": "6619503a7b0bc0e9fe4346df6f77bfff80b5bdcb0a42c3c4157a5486e08bb368"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/Paquete_LP_Limbani_Huancasayani_R01_contenido.json",
+      "bytes": 12928,
+      "sha256": "bcf79dc5368cba4e837a040d17817774cb3d49dc2aa08476d1358f862d26544a"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/planos_autocad_linea_primaria_capachica_contenido.json",
+      "bytes": 835,
+      "sha256": "45ee74767436229124155c2a15083bd28f8f6f32ac305704d940aa3ed31a8854"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/inventarios/zips_revisados.json",
+      "bytes": 1136,
+      "sha256": "c067614378d8f7f76a522dc32b1ae05f46380545d34fcf7f0af4301164908908"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/LECTURA_REFERENCIAS.md",
+      "bytes": 3058,
+      "sha256": "e08a27005ad5ccee783472091d13645a05b87b26d2bf90d90608c9dbb4ea8853"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/OBSERVACIONES_REPOSITORIO.md",
+      "bytes": 2125,
+      "sha256": "381191118c05fbc405aa85934b6eee77ab7bfbc71caca523b686ee6f902124e0"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/PLANEACION.md",
+      "bytes": 1478,
+      "sha256": "2f134aab5d5dbe68b05357d58319a07760f2cfe5766b8cc348f9bda6b279b611"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/README_LP_R01_antecedente.md",
+      "bytes": 6197,
+      "sha256": "5e6fc9ec1c0e02fd78b7b5d296d9e12c8c44b9798bfab0c3cc72ac2ecb2cbe11"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/reproducibilidad.json",
+      "bytes": 522,
+      "sha256": "9d3d58c030095dfa47f2d6029ae32666a86e66291a8c9ae8a16e2fe361c1edf0"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/documentacion/lp-r02/VALIDACION.md",
+      "bytes": 1601,
+      "sha256": "48b4d89cdda05670c4093684ec1fa4fa65c8c7a4cb6ab7014a75ff390804022d"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/proyecto.yaml",
+      "bytes": 1544,
+      "sha256": "a197f5b2478ea8c582e31936af3b995bb87e2c8e46e0b63db64468bbb166dc8a"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/requirements-lp-r02.txt",
+      "bytes": 232,
+      "sha256": "927a0702718f9b727db2fb1b619696fb16579b580e9770cf4daacebc07472897"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/scripts/lp_r02/analizar.py",
+      "bytes": 17717,
+      "sha256": "70e75de8c12f02a43e8c2c58035321e4c0e3da3e56a3bb9b2aebf6587d4e0001"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/scripts/lp_r02/complementos.py",
+      "bytes": 17663,
+      "sha256": "aa8b49b0bba4e9653c7940e569c8f66950a9ea0f90f9eeee5b6c62ab92b2d802"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/scripts/lp_r02/construir.py",
+      "bytes": 2530,
+      "sha256": "7d67bfcb179d74192f5c279c48e95dca1f54b546be75f21a4cd223fdc5f92e23"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/scripts/lp_r02/documentar.py",
+      "bytes": 34756,
+      "sha256": "e430550f59edebc625f4ed6edbae401ed7194aff76ad9e2f78eed6a8d1de9439"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/scripts/lp_r02/planos.py",
+      "bytes": 23490,
+      "sha256": "324062958d30f0b75828fc325d1d211bb08d3a46aa5b92c72672e0023bb67437"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/scripts/lp_r02/prosa.py",
+      "bytes": 6275,
+      "sha256": "0cac80604eada864f885300f43065586b1d1894969b8626cc5985b1cf493254c"
+    },
+    {
+      "ruta": "08-recursos/codigo/proyecto/scripts/lp_r02/verificar.py",
+      "bytes": 7508,
+      "sha256": "b8ff8eb21832089cedb1f13a1b07d1693fa49614728f9c6f83f759c9e92dbe23"
+    },
+    {
+      "ruta": "08-recursos/codigo/README.md",
+      "bytes": 958,
+      "sha256": "428c9550afda65c6abec9175cc544d1269879b450b6c2063c28f265bd57eafcc"
+    },
+    {
+      "ruta": "08-recursos/codigo/restaurar.py",
+      "bytes": 976,
+      "sha256": "de389d094fcbf437615ef46e5402bdf1adac2b075f878a68d1ce40e9cabbb3cc"
+    },
+    {
+      "ruta": "08-recursos/documentacion/BITACORA.md",
+      "bytes": 2346,
+      "sha256": "609a81732f71b14e218dd81263dcf4b243b848965ed7896e16ca0875761d3e22"
+    },
+    {
+      "ruta": "08-recursos/documentacion/CONTINUIDAD_IA.md",
+      "bytes": 5771,
+      "sha256": "532a42201f52dfc24606ac2f8240272dbc670259c850cea581b5b4201d029338"
+    },
+    {
+      "ruta": "08-recursos/documentacion/entorno.json",
+      "bytes": 510,
+      "sha256": "1aa7abed9d4c0833a15800e349e0682c310d0edc125d9ed5fbda02791e9d336a"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/Biblioteca_CAD_DGE_Peru_contenido.json",
+      "bytes": 18177,
+      "sha256": "7e671c2ee63a7521c693842df209161f6d0632711a7315e1a65ba0aaff57f0d5"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/capachica-dxf-inspeccion.json",
+      "bytes": 1242,
+      "sha256": "ebf3b2253027c3eea8293ed95c7e37a23b0eb71ad139c88f6aec93421cb9c159"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/capachica_zip/README_AUTOCAD_LP.md",
+      "bytes": 1524,
+      "sha256": "5f6e63faa9751e6f07a814f024a5d9632a272fe179caabbf2206b5c7ffb4c828"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/inventario-repositorio.csv",
+      "bytes": 167686,
+      "sha256": "5e5bd80bb91721811876bc3858849f7fbeb76eed25f35915fd222bf506101589"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/paginas-referencias.json",
+      "bytes": 759,
+      "sha256": "6619503a7b0bc0e9fe4346df6f77bfff80b5bdcb0a42c3c4157a5486e08bb368"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/Paquete_LP_Limbani_Huancasayani_R01_contenido.json",
+      "bytes": 12928,
+      "sha256": "bcf79dc5368cba4e837a040d17817774cb3d49dc2aa08476d1358f862d26544a"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/planos_autocad_linea_primaria_capachica_contenido.json",
+      "bytes": 835,
+      "sha256": "45ee74767436229124155c2a15083bd28f8f6f32ac305704d940aa3ed31a8854"
+    },
+    {
+      "ruta": "08-recursos/documentacion/inventarios/zips_revisados.json",
+      "bytes": 1136,
+      "sha256": "c067614378d8f7f76a522dc32b1ae05f46380545d34fcf7f0af4301164908908"
+    },
+    {
+      "ruta": "08-recursos/documentacion/LECTURA_REFERENCIAS.md",
+      "bytes": 3058,
+      "sha256": "e08a27005ad5ccee783472091d13645a05b87b26d2bf90d90608c9dbb4ea8853"
+    },
+    {
+      "ruta": "08-recursos/documentacion/OBSERVACIONES_REPOSITORIO.md",
+      "bytes": 2125,
+      "sha256": "381191118c05fbc405aa85934b6eee77ab7bfbc71caca523b686ee6f902124e0"
+    },
+    {
+      "ruta": "08-recursos/documentacion/PLANEACION.md",
+      "bytes": 1478,
+      "sha256": "2f134aab5d5dbe68b05357d58319a07760f2cfe5766b8cc348f9bda6b279b611"
+    },
+    {
+      "ruta": "08-recursos/documentacion/README_LP_R01_antecedente.md",
+      "bytes": 6197,
+      "sha256": "5e6fc9ec1c0e02fd78b7b5d296d9e12c8c44b9798bfab0c3cc72ac2ecb2cbe11"
+    },
+    {
+      "ruta": "08-recursos/documentacion/reproducibilidad.json",
+      "bytes": 522,
+      "sha256": "9d3d58c030095dfa47f2d6029ae32666a86e66291a8c9ae8a16e2fe361c1edf0"
+    },
+    {
+      "ruta": "08-recursos/documentacion/VALIDACION.md",
+      "bytes": 1601,
+      "sha256": "48b4d89cdda05670c4093684ec1fa4fa65c8c7a4cb6ab7014a75ff390804022d"
+    },
+    {
+      "ruta": "08-recursos/documentos-movil-originales/Cuestionario_autoevaluacion.docx",
+      "bytes": 40620,
+      "sha256": "1980fdc472046203d64d200ce87955ac63997317a92554df3998c00f31a2299b"
+    },
+    {
+      "ruta": "08-recursos/documentos-movil-originales/Especificaciones_y_montaje_R02.docx",
+      "bytes": 37925,
+      "sha256": "49f9b10c2524d54c3d6a5e5e605ef24196121ed725ed4e6f1facf66476925b39"
+    },
+    {
+      "ruta": "08-recursos/documentos-movil-originales/Evaluacion_tecnica_LP_R02.docx",
+      "bytes": 40470,
+      "sha256": "07c67ccd75ff670d757ad3408d805c917f4e40fb56aecd13dab0cdc31d260d51"
+    },
+    {
+      "ruta": "08-recursos/documentos-movil-originales/Expediente_revisado_LP_R02.docx",
+      "bytes": 48925,
+      "sha256": "25a9613f96bb02afc67a595927e6b918add2262741b7e311e4f371ec484d6b72"
+    },
+    {
+      "ruta": "08-recursos/documentos-movil-originales/Memoria_calculo_explicita_LP_R02.docx",
+      "bytes": 44231,
+      "sha256": "91db68473b0914ebf83be74deb34aac83d8cf92908ac504f64e830a628f78d7e"
+    },
+    {
+      "ruta": "08-recursos/documentos-movil-originales/README.md",
+      "bytes": 257,
+      "sha256": "7a99e76bd9ef24e9501bbf0ef5b4dda89b0dcd9eccac60cf3d84833e546504a3"
+    },
+    {
+      "ruta": "08-recursos/fuentes.json",
+      "bytes": 6216,
+      "sha256": "d268237503b7c325c848266a3b0cccf43770a6520ee5081079cc83d9ce6ac064"
+    },
+    {
+      "ruta": "08-recursos/geometria-base.json",
+      "bytes": 636167,
+      "sha256": "659470296d4c1ad82b24ac678d272ac3f5ec1955182d703e88312cd9ce16cb09"
+    },
+    {
+      "ruta": "08-recursos/LEER_RECURSOS.md",
+      "bytes": 816,
+      "sha256": "2db5bc70b0b258abb1e5dbd1db1b07ecbdefa8aaecbb64722ccab12cb42f9607"
+    },
+    {
+      "ruta": "08-recursos/parametros.json",
+      "bytes": 7414,
+      "sha256": "43261f4dc94db26af04db769f0b33f044029b2225ebcc6371387456cb55812ca"
+    },
+    {
+      "ruta": "08-recursos/pdf/cne_suministro_2011.pdf",
+      "bytes": 2217275,
+      "sha256": "930e88a3b09d7317b605ce857ee18152783496d864f8c28712854a424a71ca2c"
+    },
+    {
+      "ruta": "08-recursos/pdf/dia-hospital_lircay.pdf",
+      "bytes": 40011385,
+      "sha256": "a98b82f19dabb57184066fd12a39d8bc646f00531a4d210f912cdcf57a58bf32"
+    },
+    {
+      "ruta": "08-recursos/pdf/dia_choclococha.pdf",
+      "bytes": 3927409,
+      "sha256": "9aa6a0c3475591d52c35dfb920937bb281c012562361ba03eae4cc55537f70e8"
+    },
+    {
+      "ruta": "08-recursos/pdf/dia_tinyacclla_pachachaca.pdf",
+      "bytes": 698698,
+      "sha256": "bc86da76a3940b33c232d31cfe887bf3a9d22c8cbf5cd9f750cb92bd4fab81fe"
+    },
+    {
+      "ruta": "08-recursos/pdf/plano_trazo_tablachaca.pdf",
+      "bytes": 8016661,
+      "sha256": "bd0f2bb142dd0062539fb4e1eef7f79a12a045a86c6bb7fcb60541b6811644a5"
+    },
+    {
+      "ruta": "08-recursos/pdf/poste_seace_13_400.pdf",
+      "bytes": 209944,
+      "sha256": "d62fdec484c421d8001ac2caa1da1b8a941791c1ccfbc1d7863c9e1424ab87a8"
+    },
+    {
+      "ruta": "08-recursos/pdf/rd018_2003.pdf",
+      "bytes": 400996,
+      "sha256": "934da5fe6351b9cc5a5f8868a938f046b872d57b8e96c9baebb6508fffb809b8"
+    },
+    {
+      "ruta": "08-recursos/pdf/rd023-2003-EM-DGE.pdf",
+      "bytes": 3363313,
+      "sha256": "3ac796fdeb8835e7ca5df6a9911fd82a5186555fc1ad803a0827832742a61655"
+    },
+    {
+      "ruta": "08-recursos/pdf/rd024-2003-EM.pdf",
+      "bytes": 23748563,
+      "sha256": "c9f34553923f56ff2d7ba0437fa30e9b4159490935bcc5eb7d7cd1842ba78ef8"
+    },
+    {
+      "ruta": "08-recursos/pdf/seace_carhuaz_contrato_091_2024.pdf",
+      "bytes": 511644,
+      "sha256": "cd71ff62036fa1dd0870d82fd2c8bcae9efc8bcc3034f70b545cd253f03525e7"
+    },
+    {
+      "ruta": "08-recursos/pdf/seace_ubinas_contrato_023_2021.pdf",
+      "bytes": 891976,
+      "sha256": "889f5ad743a3761e2a6c68524bdcf32bf8cea70fcb40fc0c694d9cc510fba835"
+    },
+    {
+      "ruta": "08-recursos/pdf/tdr_electropuno_lp.pdf",
+      "bytes": 1223145,
+      "sha256": "50ef37491f22fbbcd66a23af68156c622850aa3e776cb9d59c1e79901507afdd"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/electro puno.jpeg",
+      "bytes": 197116,
+      "sha256": "b9be5a39c0531964eccab73e2569e88a9a68d2ed7d763c4eed581a9ca3bfda52"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/README.md",
+      "bytes": 3127,
+      "sha256": "270e37308398b9c1d277cdee5fd93bb53d62135045014515b9f9d194c2f6ce1b"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.24.56.jpeg",
+      "bytes": 133046,
+      "sha256": "451033b21b11f552dcd7e4d64901fb07e1025066c16d04ead0efcec6758807f2"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.24.58.jpeg",
+      "bytes": 130941,
+      "sha256": "4622e99eb9b03ba0b886a0f849b7593c163b515503a76cd34e302bc0cd1aeed2"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.12.jpeg",
+      "bytes": 134447,
+      "sha256": "0979978b9c8199c2862ae0eae6027f16eb7a5a29b65334dfda009201609fd001"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.17 (1).jpeg",
+      "bytes": 121581,
+      "sha256": "f776beee0971e444deff96f5acd97c76b87d63e2fc667005401a82566ead9419"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.17.jpeg",
+      "bytes": 142749,
+      "sha256": "9a1bdc67ffb16eee8fd0737890f9396a884ba1242ec5e6acfad5c1c5d989c522"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.25.jpeg",
+      "bytes": 111484,
+      "sha256": "6810a3b74a1e38ca8064d80077d5483cadd1cd53d1646602e5ccc94ac2c02f57"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.26.jpeg",
+      "bytes": 146560,
+      "sha256": "1508cded5a72419db249d292066230c87c40dea2f294937865d92658481dbf29"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.47 (1).jpeg",
+      "bytes": 88163,
+      "sha256": "538407317ab9505c14762eead9fae7aef20be473907e4bd17c10b27f339b96f5"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.47.jpeg",
+      "bytes": 129023,
+      "sha256": "9f85491576f72c3ebc4a428eed26467789fb73b3962ba3df49fdea8e66598965"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.48.jpeg",
+      "bytes": 99010,
+      "sha256": "4ffc421b8b78f776aee7566eda889c126a1c869235e44e4f1a827e1d407c0b02"
+    },
+    {
+      "ruta": "08-recursos/recuperados/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.49.jpeg",
+      "bytes": 118469,
+      "sha256": "face4239e97ddc917200242463baa01f512511e5c761d86faadfcfb4df5de86b"
+    },
+    {
+      "ruta": "08-recursos/recuperados/inventario-completo-81-archivos.json",
+      "bytes": 18034,
+      "sha256": "822d924d165fa7d762dff49bee375bc7bcf8d3c27975b9b4289300f51b8e1e5a"
+    },
+    {
+      "ruta": "08-recursos/recuperados/README.md",
+      "bytes": 515,
+      "sha256": "55f5c580f2eb08a1f11f858a86e3f1ccb25f39931838459a78d7540fa004c2c8"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/aspectos-generales/INDICEGENERAL.doc",
+      "bytes": 44032,
+      "sha256": "c90a3128820529a3a01f5df9d2947df2e06eb83b045da9da311be9043d209d85"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/aspectos-generales/INDICEGENERAL.pdf",
+      "bytes": 74270,
+      "sha256": "6bfff6bd28188204885e438012be38af7640b49fa410b716ce73e87f04747de6"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/aspectos-generales/RESUMEN ejecutivo.pdf",
+      "bytes": 148305,
+      "sha256": "eb67c9a79dcf763a110ef488653b516e10f0b819bc1991cc79c966e814216133"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/aspectos-generales/RESUMEN.doc",
+      "bytes": 35328,
+      "sha256": "06ee6214480100840f28a383093ff3e5adfff8da860f0c761d4d7449e031bcf7"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-i-memoria/MEMORIA.pdf",
+      "bytes": 421933,
+      "sha256": "d59f945b21f487b68f2443c1a22e0c276e05809d9759a39a27657db595c62d07"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm",
+      "bytes": 1023191,
+      "sha256": "11c61470585dd73b78fec6c080f4c9ad1b90b8c9e3b6d3ee215fcc0a5623b8e5"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm.pdf",
+      "bytes": 10044,
+      "sha256": "fd17e014422efc42fb3f80dfd1e42af760bab3256fcc031f1b19353bed60d4f2"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/calculo termomagnetico.pdf",
+      "bytes": 40052,
+      "sha256": "046eb4d6085d0040a0df9e38022722cddb1768027f5639f4ba1262be6b4cebd8"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICO.doc",
+      "bytes": 325120,
+      "sha256": "290b051f7cfcc58069a01c3a6d882a28f678b76dca8eb73b0c533a11f04354de"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICO.pdf",
+      "bytes": 873567,
+      "sha256": "761864859c279adf000c5f96015c1746b0c64d1f7898dcc7ffe5d7ba6ed980f4"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICOCONDUCTORES 35.xls.pdf",
+      "bytes": 14647,
+      "sha256": "f5478a3ac1fc788272f4d1c88be36117032c10784f0c64306fc644c8da630c33"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULORETENIDA.xls.pdf",
+      "bytes": 29807,
+      "sha256": "363442795dc3ab0c64f19eaba1277568a287724318d36d4f244d6940f8701337"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOSELECTRICOS.doc",
+      "bytes": 326656,
+      "sha256": "02b873c546eb87f4afbeef14261cc582321b5aab614ab640b44b30d03388d2dc"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOSELECTRICOS.pdf",
+      "bytes": 889607,
+      "sha256": "325d158d1134b28b60aca82e25cffae24e4cdfb52cd26c1ea6d3dfcff8aa3446"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CIMENTACIONPOSTES.xls",
+      "bytes": 50688,
+      "sha256": "227078056d257d5636ea82351c7bc010555c5d2d83480accb397df7a9a5ff55a"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/CIMENTACIONPOSTES.xls.pdf",
+      "bytes": 22717,
+      "sha256": "9b466cab79c89887241f88e02c037e1aa90d6d96045ca159ff8fc7037cba9b58"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-ii-calculos/COORDINACION DE PROTECCION.xlsx.pdf",
+      "bytes": 78975,
+      "sha256": "dedf925b0cf8fb087f80c24743f2d707e56db40ecd0503212e4c5c26cded2552"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.doc",
+      "bytes": 928256,
+      "sha256": "bfac9d8c2248d5b1211bab9f6aa65c4a2e78d14c60913f99c939a0b5f2acc1d1"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.pdf",
+      "bytes": 1634064,
+      "sha256": "24ee8a54464aa612b3116924e9e780788bcf41ce2f191b1623cee45d84d06f27"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-iv-montaje/MONTAJE.doc",
+      "bytes": 59392,
+      "sha256": "b2a667627beb160010a04fdccf044adfdd5f544c1985bb71b81a7c105214f875"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-iv-montaje/MONTAJE.pdf",
+      "bytes": 192363,
+      "sha256": "9e2c1586e4d5eb5dd405ff7cd7142fcfc63d5acc5887888dedbb481668adf620"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev1.xlsx",
+      "bytes": 3606024,
+      "sha256": "c6b7d7e412b61875cbeb69de28dc4365a932e9a993d68d647ba87cfb11c29627"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev1.xlsx.pdf",
+      "bytes": 80815,
+      "sha256": "7f343b76ec22e391f5e46639b16a1be6885d55d7bdadb59ebfb28f6e43ff0194"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev2.xlsx",
+      "bytes": 3602427,
+      "sha256": "3b46c700619e8e337d88b43e8edeb30837b3682851916c4f8f2efcca028f2444"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vi-metrados/Planilla RP.pdf",
+      "bytes": 29693,
+      "sha256": "fe34ad31189d108d1ff8199e5464b4c645f0fc2d9fc17de5d10ad88fffe2003e"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/DETALLE 3_TS.pdf",
+      "bytes": 146561,
+      "sha256": "072d74a0585d6864bd4f71d863c249673101c553c9c576a175290dfdfa8d9375"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 1-Modelo.pdf",
+      "bytes": 153747,
+      "sha256": "7ef742b187f66f2daefc1c2bf7ce33a22f9869f22fc411d89e6fdc6fb6f86485"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 10-Modelo.pdf",
+      "bytes": 133541,
+      "sha256": "f770d06af5deaf80b8931be6cc16bc072258691f4b139968221d3ff3ced8c5da"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 11-Modelo.pdf",
+      "bytes": 197783,
+      "sha256": "ef7884843aaab1674c6f8de641d193403fb07fcd2aa33b5afe7c049c105c5189"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 12-Modelo.pdf",
+      "bytes": 138846,
+      "sha256": "628dac567ce0f7d083cd8caab58110d89e00f33845deba3b515a6e561313e71b"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 13-Modelo.pdf",
+      "bytes": 155511,
+      "sha256": "b6ab4e6bedb3d6a4dd8ca3f9e6b127cbe109ec15b8b13c602a4d32c1add84297"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 14-Modelo.pdf",
+      "bytes": 150011,
+      "sha256": "2d7926a77451b0c02866b7467a42c36f199678a528b2ca4d5d72daed1e9def6f"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 15-Modelo.pdf",
+      "bytes": 185740,
+      "sha256": "157d3fbaedede3f832620dc80413ed0890a9f610f4310f355bc7720f9b9c6cb0"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 2-Modelo.pdf",
+      "bytes": 212339,
+      "sha256": "967d90ab27fd57b02a0cc7597b372f8989f852c689ad7dc951c8b13e45725181"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 3-Modelo.pdf",
+      "bytes": 159575,
+      "sha256": "201a98cd7b6e7830a38b2bc1831afa150c4b7a4108ba49c3f4dd9fe5a6e1be1c"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 4-Modelo.pdf",
+      "bytes": 148521,
+      "sha256": "8306062038016d5a01ee8e1831d1d35b9155d9d18244e028de3245fd785d7aae"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 5-Modelo.pdf",
+      "bytes": 151916,
+      "sha256": "78fd8571b7bb8d6865d36b3acb707da25678ceab99359d41712db202b8738f90"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 6-Modelo.pdf",
+      "bytes": 159381,
+      "sha256": "8c5868d88e755f34dc5db7ae1ba783807057cec7790e364747eb79db627d75c8"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 7-Modelo.pdf",
+      "bytes": 149877,
+      "sha256": "e53e8726e8ef58fdd5f4e750d24d0ea9c36365a9e84d0c1307b891f1359aba83"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 8-Modelo.pdf",
+      "bytes": 183401,
+      "sha256": "a7c1c39ecee5dec8a6ac4b6790b724ed53f0d33aa44665025c14d19e55f09fbc"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 9-Modelo.pdf",
+      "bytes": 188334,
+      "sha256": "dc205963a9f6d8dc7a560aeb492e832edf41c982affc0169c700e57713fffe07"
+    },
+    {
+      "ruta": "08-recursos/recuperados/red-primaria-aricato-phara/README.md",
+      "bytes": 12051,
+      "sha256": "f0aef0bf942b7a9f1260246b97909416098be036dc36dd9b82821cef6e0028e5"
+    },
+    {
+      "ruta": "08-recursos/registro-parametros.csv",
+      "bytes": 4762,
+      "sha256": "392ea512b98c7766de57c90446796e9a2b1178c5ad6662dddb7f3ebd17b9bb41"
+    },
+    {
+      "ruta": "09-armados-referencia/catalogo-cad.json",
+      "bytes": 16546,
+      "sha256": "11b83830fbc913449fa840fc02f172b31c4c62d1ce9fcbb1e90dea0ff18006a8"
+    },
+    {
+      "ruta": "09-armados-referencia/README.md",
+      "bytes": 795,
+      "sha256": "630c5684cce4c2234f0477afcc9f35a4a2658e186c81bceca425f7e97b1d1d2c"
+    },
+    {
+      "ruta": "09-armados-referencia/Referencia_documental_DGE.pdf",
+      "bytes": 5552698,
+      "sha256": "8764a717bf70e3ae7dba90f8b0f7f815e320eec6e293da4298b6f61686831b14"
+    },
+    {
+      "ruta": "LEER_PRIMERO.md",
+      "bytes": 3648,
+      "sha256": "24fb1da7c08f996c34ea8c5aa539ff31ad5785f1b2880b9816982231fee72cfb"
+    },
+    {
+      "ruta": "validacion.json",
+      "bytes": 4205,
+      "sha256": "0dec8f0a90ac38b8b6bf656848b956f5f15f8af6bbe8e7f5ad3eb6c4f69b6575"
+    }
+  ]
+}

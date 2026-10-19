@@ -1,0 +1,22 @@
+% Geometría y ornamentación de la carátula del expediente de vivienda de Aquiles.
+\begin{titlepage}\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+ \fill[modelblue!80!black] ([xshift=.92in,yshift=-.28in]current page.north west) rectangle ([xshift=1.08in,yshift=.28in]current page.south west);
+ \draw[modelblue!80!black,line width=.7pt] ([xshift=1.10in,yshift=.28in]current page.south west) .. controls +(.10in,2.15in) and +(-.85in,-1.65in) .. ([xshift=2.55in,yshift=3.15in]current page.south west);
+ \draw[green!45!black,line width=1pt] ([xshift=1.05in,yshift=.28in]current page.south west) .. controls +(.35in,2in) and +(-.95in,-1.55in) .. ([xshift=2.20in,yshift=3.85in]current page.south west);
+ \draw[green!55!black,line width=1pt] ([xshift=1in,yshift=.28in]current page.south west) .. controls +(.20in,1.75in) and +(-.85in,-1.45in) .. ([xshift=1.70in,yshift=4.25in]current page.south west);
+ \draw[modelblue!75,line width=.55pt] ([xshift=1in,yshift=.28in]current page.south west) .. controls +(.15in,1.50in) and +(-.80in,-1.35in) .. ([xshift=2.45in,yshift=2in]current page.south west);
+\end{tikzpicture}
+\vspace*{-.4in}\noindent\hspace*{1.20in}\begin{minipage}{5.20in}\centering
+{\fontsize{13}{16}\selectfont\bfseries UNIVERSIDAD NACIONAL DEL ALTIPLANO\par}
+{\fontsize{10}{12}\selectfont\bfseries FACULTAD DE INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS\par}
+{\fontsize{10}{12}\selectfont\bfseries ESCUELA PROFESIONAL DE INGENIERÍA MECÁNICA ELÉCTRICA\par}
+\vspace{.20in}\includegraphics[height=1in]{\LogoDocumento}\par
+\vspace{.20in}{\fontsize{12}{15}\selectfont\bfseries CURSO: \CursoCaratula\par}
+\vspace{.30in}{\fontsize{14}{17}\selectfont\bfseries\color{modelblue!80!black}\TituloCaratula\par}
+\vspace{.10in}{\fontsize{11}{13}\selectfont\bfseries\UbicacionCaratula\par}
+\vspace{.35in}{\fontsize{13}{16}\selectfont\bfseries\TipoDocumentoCaratula\par}
+\vspace{.30in}\begin{flushleft}\fontsize{10}{13}\selectfont\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{>{\bfseries}p{1.8in}p{3.05in}}\FichaCaratula\end{tabular}\end{flushleft}
+\vfill{\fontsize{10}{12}\selectfont PUNO -- PERÚ\par}{\fontsize{9}{11}\selectfont 2026\par}
+\end{minipage}\end{titlepage}

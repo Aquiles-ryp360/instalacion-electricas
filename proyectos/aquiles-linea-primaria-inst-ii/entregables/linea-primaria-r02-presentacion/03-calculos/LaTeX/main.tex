@@ -1,0 +1,12 @@
+\documentclass[12pt,letterpaper]{report}
+\input{metadatos}\input{plantilla/estilo}
+\renewcommand{\thesection}{\arabic{section}.}\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\begin{document}\hypersetup{pageanchor=false}\pagenumbering{gobble}\input{plantilla/caratula}
+\clearpage\hypersetup{pageanchor=true}\pagenumbering{arabic}\tableofcontents\clearpage
+\chapter*{CÁLCULOS JUSTIFICATIVOS}\addcontentsline{toc}{chapter}{CÁLCULOS JUSTIFICATIVOS}
+
+
+\input{capitulos/01-3-demanda-horizonte-y-suficiencia-de-generaci-n}
+\input{capitulos/02-4-memoria-de-c-lculo-el-ctrico-expl-cita}
+\input{capitulos/03-5-memoria-de-c-lculo-mec-nico-expl-cita}
+\end{document}

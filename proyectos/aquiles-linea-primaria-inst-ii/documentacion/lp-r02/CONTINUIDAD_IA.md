@@ -63,3 +63,9 @@ Los enlaces activos del manifiesto apuntan a `revisiones/lp-r02`, que se version
 ## Publicación en GitHub
 
 El contenido técnico se publicó y verificó en `main` y `revision/lp-r02-auditoria-2026-10-18`, commit `67a0bada7bc7831e8aef54b762512e3126eb0ac1`. La sesión GitHub CLI quedó autenticada con escritura. Consultar `SINCRONIZACION_PC.md` y `publicacion-github.json` para la evidencia de sincronización. La publicación conserva el estado académico con observaciones; no añade aprobación de ingeniería.
+
+## Continuación en PC: presentación P01
+
+La presentación P01 se registra en `PRESENTACION_P01.md` y `proyecto.yaml`, sin modificar los resultados técnicos LP-R02. La entrega está en `entregables/linea-primaria-r02-presentacion/`. Incluye expediente integrado con el formato de vivienda Aquiles, capítulos editables, DWG nativo guardado y reabierto con AutoCAD 2027 y QGIS 3.44.15 portable verificado. Las afirmaciones anteriores de «sólo DXF» y «sin QGIS» describen la generación móvil, conservada en `revisiones/lp-r02`, no esta continuación.
+
+El ZIP P01 completo se adjunta a la versión GitHub `lp-r02-p01-20261018` por superar 100 MiB. Mantener la copia móvil con su manifiesto y las fuentes recuperadas. El diseño sigue con sus observaciones abiertas; no cambiar la tensión ni trasladar el dimensionamiento del curso de Centrales Hidroeléctricas por haber mejorado la presentación.

@@ -1,0 +1,44 @@
+# Cuestionario de autoevaluación técnica · LP-R02
+
+LP-R02 · 18/10/2026 · Diseño académico revisable
+
+Cada pregunta se responde con evidencia o con eldato que falta. No se asigna una nota global que oculte observaciones de diseño abiertas.
+
+| Nº / pregunta | Respuesta y estado | Evidencia |
+| --- | --- | --- |
+| 1. ¿Qué curso y tema se están evaluando? | Instalaciones Eléctricas II; línea primaria de una terna sin ramales. Grifo y minicentral tienen expedientes independientes. [Definido; rúbrica pendiente] | proyecto.yaml / docs/curso |
+| 2. ¿La línea es primaria o transmisión de alta tensión? | Se trata como línea primaria de media tensión de transporte local. No se adopta una clasificación de alta tensión por el verbo transmitir. [Definido para estudio] | Memoria1 |
+| 3. ¿Cuál es el origen de energía? | MCH aislada según manifiestoR01. Confirmar con el usuario/placas antes de cambiar aElectroPuno. [Pendiente físico] | Memoria1 |
+| 4. ¿A cuánto sale realmente la subestación? | No hay placa verificada.10 kV es hipótesis de compatibilidad.22.9 kV es alternativa, no dato de salida. [Dato requerido] | Memoria4 / parametros |
+| 5. ¿Por qué comparar22.9 y no llamar22 a ambos? | Son valores nominales distintos. Se calculan20,22,22.9 por separado; los equipos deben corresponder a la tensión elegida. [Calculado; decisión pendiente] | comparacion_tensiones.csv |
+| 6. ¿Cuánto llega si salen exactamente10 kV enMT? | Con cargaPQ de estudio y sólo línea llegan9.8797 kV. No confundir con la frontera de generador+TX. [Calculado bajo hipótesis] | origen_MT_fijo.csv |
+| 7. ¿La toma+5% está confirmada? | No. Es elevación efectiva ideal; falta relación real, sentido de toma, AVR y máximo en vacío. [Dato requerido] | Memoria4.3 |
+| 8. ¿Se necesita otro elevador en mitad de la línea? | No se ha justificado con el modelo. Evaluar primero origen, TX, AVR y demanda; añadir equipo sin comparación económica no es decisión sustentada. [Decisión condicionada] | Memoria4.4 |
+| 9. ¿Hay potencia paraHuancasayani yLimbani? | Los escenarios150/200 kW yreservas0/25/50 kW muestran déficits posibles. No hay potencia firme de estiaje comprobada. [Pendiente de recurso] | balance_fuente.csv |
+| 10. ¿Las viviendas equivalen aabonados actuales? | No; se usan como usuarios potenciales proyectados. Categoría y servicios no tienen padrón verificado. [Hipótesis identificada] | demanda.csv |
+| 11. ¿Las pérdidas incluyentransformadores? | Se tabulan por separado pérdidas de línea, P0, Pcu deT1/T2 y auxiliares. Se comprueba balanceP/Q. [Calculado bajo hipótesis] | resultados.json |
+| 12. ¿La energía anual viene de mediciones? | No; curva sintética8760 h. No dar retorno económico sin curva de carga yprecio real. [Hipótesis identificada] | energia.csv |
+| 13. ¿13 m/400 daN equivale a400 kg colgados? | No; es carga transversal equivalente. En el ejemplo tipo, momento de servicio43.8kNm; capacidad axial pendiente. [Aclarado] | Memoria5.1 / fichaSEACE |
+| 14. ¿Qué distancia soporta un poste de13 m? | Depende de tracción, clima, ángulo, altura, terreno y capacidad. El ejemplo de vano plano no aprueba el corredor real. [Calculado de estudio] | vanos_limite_ejemplo.csv |
+| 15. ¿Se consideró sólo elpeso del cable? | No; hay peso, tracción, hielo, viento, desnivel yángulo con dirección ysigno. Peso propio del poste requiere ficha. [Calculado; capacidad pendiente] | fuerzas_por_apoyo.csv |
+| 16. ¿Aisladores rígidos permiten un H único porcantón? | Paraesta revisión se resuelve cada vano independiente. Confirmar tipo real; sihay cadenas móviles se requiere modelo compatible. [Hipótesis explícita] | motor / Memoria5.3 |
+| 17. ¿Se sumó eldesnivel siempre comopeso? | No; se conservan fuerzas con signo. Hay46apoyos con carga ascendente enalgún estado. [Calculado] | postes.csv |
+| 18. ¿Lasretenciones propuestas yaestán aprobadas? | No;16cambios y160retenidas ideales totales son una propuesta por revisar con armadosCAC, predios ysuelo. [Propuesta revisable] | postes / retenidas.csv |
+| 19. ¿La resistencia600 daN es deunfabricante contratado? | No; se requiere certificado, punto de ensayo, sección crítica ycapacidadN-M. [Dato requerido] | registro-parametros.csv |
+| 20. ¿Se verificó compresión yflexión simultánea? | Se calculan demandas exteriores, pero nohay capacidad axial ni curvaN-M. No se emite aprobación de postes. [Dato requerido] | postes.csv |
+| 21. ¿La retenida elimina automáticamente el momento? | El modelo ideal neutraliza la componente de cuerda. Rigidez, pretensión, fijaciones ycimientos pueden cambiar el reparto. [Hipótesis explícita] | Memoria5.4 |
+| 22. ¿Los vientos se revisaron en todas direcciones? | Se muestrean24azimuts cada15 grados bajo estados con viento; no es optimización angular continua. [Calculado con límite] | fuerzas_por_apoyo.csv |
+| 23. ¿ElDEM valida alturas ycruces? | No; sólo permite un perfil de gabinete. Se requiere topografía real de las fases yobstáculos, incluso si la separación modelada supera7.5 m. [Campo requerido] | Memoria5.8 / perfiles |
+| 24. ¿Cómo se resuelven giros mayores90°? | P003/P035/P057 quedan identificados: replantear o diseñar armado especial, sin atribuir equivalencia a unarmadoPIN. [Observación abierta] | planilla de apoyos |
+| 25. ¿Los bloques de cimentación están calculados? | No; faltan suelo, geotecnia, anclaje ycurvaN-M. Se dejan vacíos volúmenes ydimensiones definitivos. [Dato requerido] | civiles_pendientes.csv |
+| 26. ¿La puesta atierra acredita25 ohm oseguridad? | No; faltan Wenner, corrientes/tiempos, fajas ypaso/contacto. No basta dibujar una malla. [Dato requerido] | Memoria4.5 |
+| 27. ¿Puede copiarse uncutout delSEIN? | No; una MCH débil puede tenerfalla sostenida menorque la carga. Faltan curvasAVR/decremento ycoordinación. [Estudio requerido] | cortocircuito.csv |
+| 28. ¿Se conservan longitudes reales enmetrado? | Sí; terna=3xΣcatenariaEDS, puentes provisionales separados, reserva3% identificada. [Trazable de estudio] | metrado_detallado.csv |
+| 29. ¿Cada armado tienetodos suspernos? | No; conteo funcional porposte. El despiece final depende dearmadoCAC verificado. [Detalle requerido] | Especificaciones |
+| 30. ¿Hay precio actualcotizado? | No; plantilla tiene precios vacíos yantecedenteR01 estimado separado. [Cotización requerida] | Presupuesto.xlsx |
+| 31. ¿Se revisaron proyectos deSEACE? | Sí; contratosUbinas33 kV/Carhuaz13.2 kV y ficha13/400. No se obtuvoETOcompleto deesos contratos. Planos comparables adicionales deSINIA. [Fuente delimitada] | 08-recursos |
+| 32. ¿Todos los archivos del repositorio están auditados técnicamente? | Se inventarió el repositorio; revisión detallada dirigida aLimbani, motores, normas yejemplos pertinentes. No se certificaron todos los proyectos ajenos. [Alcance delimitado] | inventario-repositorio.csv |
+| 33. ¿LosPDF yCAD derivan delmismo dibujo? | Sí; PDF renderizados de laspresentaciones delDXF guardado, con modeloUTM yatributos. [Verificar automáticamente yvisual] | indice-planos / validacion |
+| 34. ¿OtraIA puede reproducir sinWindows? | Sí; constructorPython conentradas portables. No se presume disponibilidad deAutoCAD, QGIS ni originales locales de Windows. [Reproducible condependencias] | CONTINUIDAD_IA.md |
+| 35. ¿Se comprobaron los nuevos anclajes contra cartografía? | 1 posiciones o segmentos presentan alertas frente a casas/cauces. Los puntos ideales con conflicto requieren replanteo; ausencia de conflicto no acredita predio libre. [Observación abierta] | anclajes_conflictos_cartograficos.csv |
+

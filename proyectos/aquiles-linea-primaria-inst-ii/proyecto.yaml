@@ -21,7 +21,8 @@ originales_locales: fuentes/local/lp-r01/antecedente
 revision_previa: LP-R01
 geometria_canonica: datos/lp-r02/geometria-base.json
 paquete_revision: revisiones/lp-r02
-cad_dxf_activo: revisiones/lp-r02/04-planos/LP_Limbani_Huancasayani_R02.dxf
+cad_dxf_activo: entregables/linea-primaria-r02-presentacion/04-planos/LP_Limbani_Huancasayani_R02.dxf
+cad_dwg_activo: entregables/linea-primaria-r02-presentacion/04-planos/LP_Limbani_Huancasayani_R02.dwg
 tension_confirmada_kv: null
 tension_alternativas_kv:
 - 10
@@ -36,3 +37,15 @@ verificador: scripts/lp_r02/verificar.py
 paquete_zip: revisiones/Limbani_Huancasayani_LP_R02.zip
 guia_pc: revisiones/README.md
 salida_regenerable: ../../build/aquiles-linea-primaria-inst-ii/lp-r02
+presentacion:
+  revision: P01
+  fecha: 2026-10-18
+  base_tecnica: LP-R02
+  resultados_tecnicos_modificados: false
+  carpeta: entregables/linea-primaria-r02-presentacion
+  expediente_integrado: entregables/linea-primaria-r02-presentacion/00-expediente-integrado/Expediente_integral_Linea_Primaria_LP_R02_P01.pdf
+  plantilla: ../../recursos/plantillas/expediente-aquiles
+  qgis: entregables/linea-primaria-r02-presentacion/04-planos/QGIS/Linea_Primaria_LP_R02.qgz
+  zip_url: https://github.com/gaelrenzo/instalacion-electricas/releases/download/lp-r02-p01-20261018/Proyecto_Final_Linea_Primaria_Limbani_Huancasayani_LP_R02_P01.zip
+  registro: documentacion/lp-r02/PRESENTACION_P01.md
+  aprobacion_ingenieria: false

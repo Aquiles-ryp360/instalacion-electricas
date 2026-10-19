@@ -1,0 +1,412 @@
+{
+  "origen": "https://github.com/gaelrenzo/instalacion-electricas",
+  "commit_fuentes": "85fcb7ec05e24612ed8d47a9ab4a62f1b8697407",
+  "criterio": "Conservar estos archivos y blobs originales al publicar LP-R02; referencias, no entradas del calculo R02",
+  "archivos": [
+    {
+      "ruta": "referencias/guias-originales/README.md",
+      "git_blob_sha1": "4c55d387ce106ac3d34192833effd33cb99227e0",
+      "bytes": 2501
+    },
+    {
+      "ruta": "referencias/guias-originales/cad-vivienda-renzo/AVANCE_DEL_PLANO_ELECTRICO1.dwg",
+      "git_blob_sha1": "c5f4a2ed1e34887c02cc4e28dcc3f4f5a83e8e4b",
+      "bytes": 224204
+    },
+    {
+      "ruta": "referencias/guias-originales/cad-vivienda-renzo/README.md",
+      "git_blob_sha1": "096f501e9f1aa04ddcb2144e8d889f7bbc08392e",
+      "bytes": 564
+    },
+    {
+      "ruta": "referencias/guias-originales/catastro-juliaca/136252v10379207_planocatastraldejuliaca.zip",
+      "git_blob_sha1": "a960bbdf469ddee9c0cd6feb324304af18aebb57",
+      "bytes": 12776593
+    },
+    {
+      "ruta": "referencias/guias-originales/catastro-juliaca/README.md",
+      "git_blob_sha1": "cbd85dc3073aacffbc55b36d0438970c0f2ac6c0",
+      "bytes": 564
+    },
+    {
+      "ruta": "referencias/guias-originales/comparaciones/COMPARACION.md",
+      "git_blob_sha1": "fd848eea8f39e438f8a4a08b876d388d7c9d9bba",
+      "bytes": 4820
+    },
+    {
+      "ruta": "referencias/guias-originales/comparaciones/VERIFICACION.md",
+      "git_blob_sha1": "eac1825a34683f57314847fa2188388f5a4be559",
+      "bytes": 1963
+    },
+    {
+      "ruta": "referencias/guias-originales/comparaciones/comparacion-comprimidos.json",
+      "git_blob_sha1": "c2a3daa78de8735f33e60a964dcce7a2947e8c49",
+      "bytes": 187003
+    },
+    {
+      "ruta": "referencias/guias-originales/comparaciones/decisiones-materiales.json",
+      "git_blob_sha1": "5a8d2ec74261c56ec5da2ecb3823394b50d2f506",
+      "bytes": 94390
+    },
+    {
+      "ruta": "referencias/guias-originales/comparaciones/inventario-recuperado.json",
+      "git_blob_sha1": "70daea7bbf7ed3cb4667c5d0d6d5cbb582b50734",
+      "bytes": 60581
+    },
+    {
+      "ruta": "referencias/guias-originales/comparaciones/revision-hojas-calculo.json",
+      "git_blob_sha1": "7aea4bc8963762326e517b51c6ede417be81c95f",
+      "bytes": 6916
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/Anexo/simulacion dialux.rar",
+      "git_blob_sha1": "8920b3ca47ce88ded571c6559a35242fd0b9e9f7",
+      "bytes": 76416197
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/Metrado Electricas/METRADO DE INSTACONES ELECTRICAS-UNAP.xlsx",
+      "git_blob_sha1": "dfef96dae95a2d8864ea8fe67c7db6c89d9f0782",
+      "bytes": 97289
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/Metrado Electricas/RESUMEN DE METRADO.xlsx",
+      "git_blob_sha1": "f33e05cfe107f58fb6cf19c4e39f1c6758f9259c",
+      "bytes": 32606
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/README.md",
+      "git_blob_sha1": "291a555318687aa25b3551e52b1505877577d621",
+      "bytes": 4023
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/calculos justificativos/CALCULOS - CIRCUITOS Y TABLERO FRI.xlsx",
+      "git_blob_sha1": "80bb560216d6153bc87c6f384b0304bdf856a5a5",
+      "bytes": 1006923
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/especificaciones tecnicas/especificaciones tecnicas.docx",
+      "git_blob_sha1": "1047d22bfc1cfc67db16ee4e6cba6b928f0969cb",
+      "bytes": 1969122
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/especificaciones tecnicas/especificaciones tecnicas.pdf",
+      "git_blob_sha1": "72597d044cad0ce7ea8a2030e49ab034942dd884",
+      "bytes": 1970646
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/memoria descriptiva/memoria descriptiva l.pdf",
+      "git_blob_sha1": "9a25c024c259468de94628608d9e45418a270f61",
+      "bytes": 1288096
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/memoria descriptiva/memoria descriptiva.docx",
+      "git_blob_sha1": "9f2edd26cca3118ca4415eecbae12ae7cbbf01f3",
+      "bytes": 1150275
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_ALIMENTACION/DWG/IE_ALIMETACIÓN.dwg",
+      "git_blob_sha1": "0161d69f0118b6955773fcd17f0d0d29ae6380a5",
+      "bytes": 42935421
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_DETALLES/DWG/IE_ DETALLES.dwg",
+      "git_blob_sha1": "3313ea6cdd7e020da217f495863fd873de5a25bd",
+      "bytes": 2889658
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_DIAGRMA UNIFILAR/I.E.DIAGRAMA UNIFILAR.dwg",
+      "git_blob_sha1": "988117128b5c918ba364e6509ee21939bd65ddf0",
+      "bytes": 1009612
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_ILUMINACION EXTERIOR/DWG/I_E.EXTERIOR.dwg",
+      "git_blob_sha1": "1e5afe00b75cfc0a3dd1aef5bb2e95906800cac2",
+      "bytes": 27389210
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_ILUMINACIÓN/DWG/I_E.ILUMINACION INTERIOR.dwg",
+      "git_blob_sha1": "a0193cc07188fe71989cb0778a058e53f6f76655",
+      "bytes": 27878615
+    },
+    {
+      "ruta": "referencias/guias-originales/dvd-instalaciones-electricas/planimetria/IE_TOMACORRIENTES/DWG/I_E.TOMACORRINTES.dwg",
+      "git_blob_sha1": "8ffe09a2494c35953869dc385691e44d3616833d",
+      "bytes": 42743073
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/README.md",
+      "git_blob_sha1": "1c2bda37a8a12b922ae4841e584b211f00f15a11",
+      "bytes": 3107
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.24.56.jpeg",
+      "git_blob_sha1": "2a67c14a3918d17ff57adba740fcdf08de521265",
+      "bytes": 133046
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.24.58.jpeg",
+      "git_blob_sha1": "a50f1b977324fec4f3b54a938a9eba7ac3d171ff",
+      "bytes": 130941
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.12.jpeg",
+      "git_blob_sha1": "9f486a3a09959bf592401e546b8f12bc0a77af6d",
+      "bytes": 134447
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.17 (1).jpeg",
+      "git_blob_sha1": "9f54f96a88c4ed11ef5f8b1c1c676a1080972a6d",
+      "bytes": 121581
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.17.jpeg",
+      "git_blob_sha1": "53d3fdf90451c0a1eb394e71fdfa505ca0a11cf8",
+      "bytes": 142749
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.25.jpeg",
+      "git_blob_sha1": "6a5aee5f0de6d13b7501d12fc98699df9a2d34f5",
+      "bytes": 111484
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.26.jpeg",
+      "git_blob_sha1": "cbe14160ff69b3771c1a15d00bfef3da46c54031",
+      "bytes": 146560
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.47 (1).jpeg",
+      "git_blob_sha1": "d488cd80613683a7368b29a3392f740ffa32b8da",
+      "bytes": 88163
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.47.jpeg",
+      "git_blob_sha1": "86b4627e0dcc91cf290fbf71e9dc7605ad3a31d3",
+      "bytes": 129023
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.48.jpeg",
+      "git_blob_sha1": "902abbcc5b8d3bac854dda82aab2429fff7300c8",
+      "bytes": 99010
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/WhatsApp Image 2026-05-22 at 11.25.49.jpeg",
+      "git_blob_sha1": "2ac6ed604162881a230d674aebff2aa9d71b9775",
+      "bytes": 118469
+    },
+    {
+      "ruta": "referencias/guias-originales/formatos-electro-puno-clase/electro puno.jpeg",
+      "git_blob_sha1": "69d158a499a22bca480fd00c5048e7b8ef3b8975",
+      "bytes": 197116
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/README.md",
+      "git_blob_sha1": "504913fc005627522869d7df12f8a640f9bd84ea",
+      "bytes": 11960
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/INDICEGENERAL.doc",
+      "git_blob_sha1": "2f71736c3e4ff2da67ca63b84af3100abb759e43",
+      "bytes": 44032
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/INDICEGENERAL.pdf",
+      "git_blob_sha1": "012d831ae80765ec288ffce26825405d0ba916ed",
+      "bytes": 74270
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/RESUMEN ejecutivo.pdf",
+      "git_blob_sha1": "7507e9647b3bd5778f487a1f333068f1f7ff4976",
+      "bytes": 148305
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/aspectos-generales/RESUMEN.doc",
+      "git_blob_sha1": "bbde01f4da567eb12c9331220638f1d2c7b4bb2c",
+      "bytes": 35328
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-i-memoria/MEMORIA.pdf",
+      "git_blob_sha1": "4aeb1c3dc4ee348a7de65929635bd570cdad1e50",
+      "bytes": 421933
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm",
+      "git_blob_sha1": "6126b6ee3e0000e8877588ed3b77252c98f3022d",
+      "bytes": 1023191
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULO DE MAXIMA DEMANDA - PHARAok.xlsm.pdf",
+      "git_blob_sha1": "72552d5ee486420b34e171863734279d50aff9a6",
+      "bytes": 10044
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICO.doc",
+      "git_blob_sha1": "dee525d3a365b0fac8062c6cf0f2301e800738e9",
+      "bytes": 325120
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICO.pdf",
+      "git_blob_sha1": "19091e8f30a44962e263f9b66059709321275d6d",
+      "bytes": 873567
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOMECANICOCONDUCTORES 35.xls.pdf",
+      "git_blob_sha1": "8d49e0cf5941a30ea7d945489493518b7a68ac0d",
+      "bytes": 14647
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULORETENIDA.xls.pdf",
+      "git_blob_sha1": "2a93cf7b7b9dce664df453ad3c72a2d6da570ef0",
+      "bytes": 29807
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOSELECTRICOS.doc",
+      "git_blob_sha1": "affa864cb30a64ea84048024326f13e854d2f340",
+      "bytes": 326656
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CALCULOSELECTRICOS.pdf",
+      "git_blob_sha1": "6d56d036f2d848015f5c37392baace019f46f8d6",
+      "bytes": 889607
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CIMENTACIONPOSTES.xls",
+      "git_blob_sha1": "3edad936c3b72882d1b7d897596b9b7c551fa4a9",
+      "bytes": 50688
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/CIMENTACIONPOSTES.xls.pdf",
+      "git_blob_sha1": "1e85905cb99702845d512592a2598b5e5d60b625",
+      "bytes": 22717
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/COORDINACION DE PROTECCION.xlsx.pdf",
+      "git_blob_sha1": "ab0a59462a6b3079204b9f489baa4ef2a2896c31",
+      "bytes": 78975
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-ii-calculos/calculo termomagnetico.pdf",
+      "git_blob_sha1": "3c07c2863a6a9fb6436ece75193b6698cbdbcd32",
+      "bytes": 40052
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.doc",
+      "git_blob_sha1": "1a4fe8149e100365a85655f5d050f9f22386bcf1",
+      "bytes": 928256
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iii-especificaciones/ESPECIFICACIONESTECNICASMATERIALES.pdf",
+      "git_blob_sha1": "537ba6f6f591858da727df613eed214ed54fac8a",
+      "bytes": 1634064
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iv-montaje/MONTAJE.doc",
+      "git_blob_sha1": "ead19e83c2da28ea1f828058a8de43ecb51da17a",
+      "bytes": 59392
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-iv-montaje/MONTAJE.pdf",
+      "git_blob_sha1": "19dcff24c53b6e5d1ab8ed925ff286527dfea05b",
+      "bytes": 192363
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev1.xlsx",
+      "git_blob_sha1": "854b48c0d3095ac14cc052fc4f1606e06d3e1c07",
+      "bytes": 3606024
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev1.xlsx.pdf",
+      "git_blob_sha1": "e06da4b3a6e361f30ab8946fd61f6e916c74106e",
+      "bytes": 80815
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Metrado_Rev2.xlsx",
+      "git_blob_sha1": "7dc11333f984973d528bf2e7690190157ac762f9",
+      "bytes": 3602427
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vi-metrados/Planilla RP.pdf",
+      "git_blob_sha1": "ba3b65c629f32e5e5045dc932184491e22699a4e",
+      "bytes": 29693
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/DETALLE 3_TS.pdf",
+      "git_blob_sha1": "f58c26cd34bec843faa9a7d63c99aded914b79fe",
+      "bytes": 146561
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 1-Modelo.pdf",
+      "git_blob_sha1": "f701b7d90ffbaacd39a4d7fab93105c676e7bf1f",
+      "bytes": 153747
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 10-Modelo.pdf",
+      "git_blob_sha1": "b2d52bba2136c5581f3943e76da1f15f019c74bf",
+      "bytes": 133541
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 11-Modelo.pdf",
+      "git_blob_sha1": "5a2020d2693048862e8f65ea3bd2b6975be8d3ee",
+      "bytes": 197783
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 12-Modelo.pdf",
+      "git_blob_sha1": "03513ca56830b3e2cb544180bd74c36a3afe6c8e",
+      "bytes": 138846
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 13-Modelo.pdf",
+      "git_blob_sha1": "3c3fbf8a9fada7b09811cac87e46ac007dbd947e",
+      "bytes": 155511
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 14-Modelo.pdf",
+      "git_blob_sha1": "a9e02666840ab5fcfe71040dae92dea622e844f7",
+      "bytes": 150011
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 15-Modelo.pdf",
+      "git_blob_sha1": "a3e448496418f1aae0886c3afb53716be56589d1",
+      "bytes": 185740
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 2-Modelo.pdf",
+      "git_blob_sha1": "351ba00a0f7f9e6f7b1c31b6a48b976c6866f5ad",
+      "bytes": 212339
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 3-Modelo.pdf",
+      "git_blob_sha1": "d0609dc10d56cd3bf20da0490d7d33e1f66c7b77",
+      "bytes": 159575
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 4-Modelo.pdf",
+      "git_blob_sha1": "0d4895f63f5ef675fd84dd577bf688ad180d4cdd",
+      "bytes": 148521
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 5-Modelo.pdf",
+      "git_blob_sha1": "c27d06fb963aa9314181e4c481c5331e4a3ab546",
+      "bytes": 151916
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 6-Modelo.pdf",
+      "git_blob_sha1": "3366fcaae3e45794446b349ba2a9e77409ee1c4d",
+      "bytes": 159381
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 7-Modelo.pdf",
+      "git_blob_sha1": "4ed40406851e11b2b4a4e4849119c5374c2c7416",
+      "bytes": 149877
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 8-Modelo.pdf",
+      "git_blob_sha1": "90bae4d8a6865e9b7195460ca172ad51149e4f17",
+      "bytes": 183401
+    },
+    {
+      "ruta": "referencias/guias-originales/red-primaria-aricato-phara/capitulo-vii-planos/LAMINA 9-Modelo.pdf",
+      "git_blob_sha1": "912e96d5eb811e2ef5dc6d9e3e16b36fbc6c8b41",
+      "bytes": 188334
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "archivo": "dia-hospital_lircay.pdf",
+    "paginas": 199,
+    "paginas_con_termino": [],
+    "pagina_vista": 187,
+    "dimension_pt": [
+      0.0,
+      0.0,
+      595.0,
+      842.0
+    ],
+    "otras_paginas_revisadas": [
+      186,
+      187,
+      193,
+      194,
+      195
+    ]
+  },
+  {
+    "archivo": "plano_trazo_tablachaca.pdf",
+    "paginas": 6,
+    "paginas_con_termino": [
+      3
+    ],
+    "pagina_vista": 3,
+    "dimension_pt": [
+      0.0,
+      0.0,
+      2384.0,
+      1684.0
+    ]
+  },
+  {
+    "archivo": "dia_choclococha.pdf",
+    "paginas": 152,
+    "paginas_con_termino": [
+      2,
+      33
+    ],
+    "pagina_vista": 33,
+    "dimension_pt": [
+      0.0,
+      0.0,
+      595.4400024414062,
+      841.9199829101562
+    ]
+  }
+]
