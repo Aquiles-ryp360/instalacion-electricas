@@ -1,0 +1,77 @@
+{
+  "revision": "LP-R03-229KV",
+  "postes": 111,
+  "cantidades_M01": {
+    "CAC-T": 2,
+    "CAC-S": 30,
+    "CAC-R": 38,
+    "CAC-A": 41
+  },
+  "incidencias": [
+    {
+      "poste": "P003",
+      "clase": "CAC-R",
+      "angulo": 92.5941336908405,
+      "observaciones": [
+        "Giro >90: revisar trazado y esfuerzo especial"
+      ]
+    },
+    {
+      "poste": "P013",
+      "clase": "CAC-R",
+      "angulo": 68.61190048695444,
+      "observaciones": [
+        "Angulo >60: verificar soporte/cadena para la desviacion"
+      ]
+    },
+    {
+      "poste": "P019",
+      "clase": "CAC-A",
+      "angulo": 26.82531156611587,
+      "observaciones": [
+        "Anclaje R02-P019-2 interfiere con cartografia"
+      ]
+    },
+    {
+      "poste": "P035",
+      "clase": "CAC-R",
+      "angulo": 152.53486967090092,
+      "observaciones": [
+        "Giro >90: revisar trazado y esfuerzo especial"
+      ]
+    },
+    {
+      "poste": "P048",
+      "clase": "CAC-R",
+      "angulo": 76.90429591155747,
+      "observaciones": [
+        "Angulo >60: verificar soporte/cadena para la desviacion"
+      ]
+    },
+    {
+      "poste": "P049",
+      "clase": "CAC-R",
+      "angulo": 65.38242312597399,
+      "observaciones": [
+        "Angulo >60: verificar soporte/cadena para la desviacion"
+      ]
+    },
+    {
+      "poste": "P057",
+      "clase": "CAC-R",
+      "angulo": 102.70650938822992,
+      "observaciones": [
+        "Giro >90: revisar trazado y esfuerzo especial"
+      ]
+    },
+    {
+      "poste": "P093",
+      "clase": "CAC-R",
+      "angulo": 71.00855049408871,
+      "observaciones": [
+        "Angulo >60: verificar soporte/cadena para la desviacion"
+      ]
+    }
+  ],
+  "estado": "Matriz basada en M01; no geometria de fabricacion; requiere detalle de armado CAC 22.9 kV, estudio mecanico y CNE."
+}
