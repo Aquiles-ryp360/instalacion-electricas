@@ -32,6 +32,19 @@ Para recompilar el expediente técnico completo con todos sus planos:
 python proyectos/renzo-linea-primaria-capachica-llachon/scripts/compilar_expediente_completo.py
 ```
 
+## Plano de planta con imagen satelital georreferenciada
+
+[`scripts/generar_planta_satelital.py`](scripts/generar_planta_satelital.py) genera una lámina A3 con imagen satelital ESRI World Imagery (~2.3 m/px en zoom 16) reproyectada a UTM 19S, sobre la cual inserta las 40 PC (referencias GIS GISEM) como bloques `POSTE_CAC_PLANTA`, más 27 PN como círculos y 44 CV como cruces OSM. Las PC/PN/CV son referencias de gabinete pendientes de verificación en campo; **no** son postes aprobados. El expediente PDF integra la lámina satelital y la lámina simbólica de planta.
+
+Salidas en `build/renzo-linea-primaria-capachica-llachon/planta_satelital/` (sin sobrescritura): DXF A3 georreferenciado con IMAGE + INSERTs, PNG + PGW/PRJ del mosaico, JPEG de planta, dos PDFs A3 y expediente PDF de 10 páginas, más `reporte_planta_satelital.json` con SHA-256 y conteos. Requiere `pyproj`, `Pillow`, `numpy`, `ezdxf`, `pypdf`, `reportlab`.
+
+```powershell
+python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_planta_satelital.py
+python proyectos/renzo-linea-primaria-capachica-llachon/scripts/generar_planta_satelital.py --zoom 15 --salida <dir>
+```
+
+Las teselas JPEG se cachean en `tiles_satelitales/` con manifiesto SHA-256; re-ejecuciones reutilizan la caché sin volver a descargar. Pruebas offline: `tests/test_planta_satelital.py`.
+
 ## Revisión activa 3: conciliación y preparación del diseño
 
 La [conciliación de ejes](documentacion/CONCILIACION_CORREDORES_REV3.md) distingue la diferencia publicada de **105,482 m** del KML frente al GIS, las tres brechas que suman **65,077 m** y los **40,405 m** que resultan solo de restar cifras redondeadas. Esa resta no identifica un tramo faltante. Las fuentes originales siguen inalteradas.
