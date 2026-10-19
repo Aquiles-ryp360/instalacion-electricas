@@ -31,6 +31,7 @@ VOL7 = Path("Expediente Tecnico") / "VOL. VII PLANOS Y LAMINAS DE DETALLE"
 EPIME = "PLANOS PRINCIPALES - FORMATO EPIME (REV. 8)"
 COMPLEMENTARIOS = "PLANOS COMPLEMENTARIOS (MOTOR)"
 ZIP = ROOT / "expediente" / "EXPEDIENTE_LP229_CAPACHICA_LLACHON.zip"
+PDF_UNICO = ROOT / "expediente" / "EXPEDIENTE_LP229_CAPACHICA_LLACHON_COMPLETO.pdf"
 # ponytail: Word, ODA y rmtree fallan con rutas de más de 259 caracteres; la salida del motor y el
 # armado del paquete van a rutas cortas fijas fuera del repositorio (regenerables, como build/).
 SALIDA = Path.home() / "EXP_LP" / "s"
@@ -107,6 +108,85 @@ def empaquetar(salida: Path) -> Path:
     return build / RAIZ
 
 
+VOLS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI"]
+
+
+def _xlsx_a_pdf(xlsx: list[Path], dst: Path) -> dict[Path, Path]:
+    """Excel sin PDF en el paquete -> PDF con Microsoft Excel (como el parche del motor)."""
+    import win32com.client
+    out = {}
+    x = win32com.client.DispatchEx("Excel.Application"); x.Visible = False; x.DisplayAlerts = False
+    try:
+        for f in xlsx:
+            out[f] = dst / f"{len(out):02d}.pdf"
+            wb = x.Workbooks.Open(str(f), ReadOnly=True); wb.ExportAsFixedFormat(0, str(out[f])); wb.Close(False)
+    finally:
+        x.Quit()
+    return out
+
+
+def _dxf_a_pdf_a3(dxf: Path, dst: Path) -> Path:
+    """Plano en coordenadas UTM sin PDF -> una hoja A3 ajustada (S/E)."""
+    import ezdxf
+    from ezdxf.addons.drawing import Frontend, RenderContext, layout, pymupdf
+    from ezdxf.addons.drawing.config import BackgroundPolicy, Configuration
+    doc = ezdxf.readfile(dxf)
+    be = pymupdf.PyMuPdfBackend()
+    Frontend(RenderContext(doc), be, config=Configuration(background_policy=BackgroundPolicy.WHITE)).draw_layout(doc.modelspace())
+    dst.write_bytes(be.get_pdf_bytes(layout.Page(420, 297, layout.Units.mm, margins=layout.Margins.all(10))))
+    return dst
+
+
+def pdf_unico(raiz: Path, out: Path) -> int:
+    """Todo el expediente en un PDF con marcadores: carátula, separador + documentos de cada volumen,
+    planos (EPIME primero) e informe de verificación al final. Devuelve el número de páginas."""
+    import fitz
+    et = raiz / "Expediente Tecnico"
+    dirs = {v: next(d for d in et.iterdir() if d.name.startswith(f"VOL. {v} ")) for v in VOLS}
+    v7 = dirs["VII"]
+    tmp = Path(tempfile.mkdtemp())
+    sin_pdf = [f for f in et.rglob("*.xlsx") if not any(p.stem == f.stem for p in et.rglob("*.pdf"))]
+    extra = _xlsx_a_pdf(sin_pdf, tmp)
+    geo = next((v7 / "COORDENADAS Y PLANO GEORREFERENCIADO").glob("*.dxf"))
+    extra[geo] = _dxf_a_pdf_a3(geo, tmp / "geo.pdf")
+
+    def docs(v):
+        d = dirs[v]
+        if v == "VI":
+            return [next(d.glob("*.pdf"))] + sorted((d / "ANEXOS" / "PDF").glob("*.pdf"))
+        if v == "VII":
+            return ([next((v7 / EPIME).glob("*.pdf"))] + sorted((v7 / "LAMINAS DE DETALLE" / "PDF").glob("*.pdf"))
+                    + sorted((v7 / COMPLEMENTARIOS / "PDF").glob("*.pdf")) + [geo]
+                    + [f for f in sin_pdf if f.parent.name.startswith("COORDENADAS")])
+        if v == "IV":   # suministro antes que montaje, como en el índice
+            return sorted(d.glob("*.pdf"), key=lambda p: "MONTAJE" in p.name)
+        return sorted(d.glob("*.pdf")) + [f for f in sin_pdf if f.parent == d]
+
+    car = fitz.open(next((raiz / "CARATULA Y SEPARADORES").glob("*.pdf")))
+    sep = {}
+    for i, p in enumerate(car):
+        m = re.search(r"VOLUMEN (\w+)\s", p.get_text())
+        if i > 2 and m and m.group(1) in VOLS:
+            sep[m.group(1)] = i
+    pdf, toc = fitz.open(), []
+    pdf.insert_pdf(car, from_page=0, to_page=2)
+    toc.append([1, "Carátula y contenido", 1])
+    for v in VOLS:
+        toc.append([1, dirs[v].name, len(pdf) + 1])
+        if v in sep:
+            pdf.insert_pdf(car, from_page=sep[v], to_page=sep[v])
+        for f in docs(v):
+            toc.append([2, f.stem, len(pdf) + 1])
+            pdf.insert_pdf(fitz.open(extra.get(f, f)))
+    toc.append([1, "Informe de generación y verificación", len(pdf) + 1])
+    pdf.insert_pdf(fitz.open(next(raiz.glob("00 INFORME*.pdf"))))
+    pdf.set_toc(toc)
+    pdf.set_metadata({"title": "Expediente técnico LP 22,9 kV Capachica–Llachón (Rev. 8)",
+                      "author": "Renzo Gabriel Mamani Galindo", "subject": "Revisor: Leonidas Vilca Callata"})
+    pdf.save(out, garbage=4, deflate=True)
+    return len(pdf)
+
+
 def verificar(raiz: Path) -> list[str]:
     """Rutas del paquete que aún dicen «Por designar» (Word, Excel, DXF)."""
     pat = re.compile(rb"(?i)por designar")
@@ -134,6 +214,7 @@ def main():
     raiz = empaquetar(a.salida)
     malos = verificar(raiz)
     print(f"{ZIP} ({ZIP.stat().st_size // 1024} KB)")
+    print(f"{PDF_UNICO} ({pdf_unico(raiz, PDF_UNICO)} páginas, {PDF_UNICO.stat().st_size // 1024} KB)")
     if malos:
         sys.exit("Con «Por designar»: " + ", ".join(malos))
 

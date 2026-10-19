@@ -9,6 +9,7 @@ Autor: Renzo Gabriel Mamani Galindo · Revisor: Leonidas Vilca Callata.
 | Necesito… | Archivo |
 |---|---|
 | El expediente técnico completo (11 volúmenes) | [`expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON.zip`](expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON.zip) · [resumen y supuestos](documentacion/EXPEDIENTE_LP229.md) |
+| Todo el proyecto en un solo PDF (233 páginas, con marcadores) | [`expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON_COMPLETO.pdf`](expediente/EXPEDIENTE_LP229_CAPACHICA_LLACHON_COMPLETO.pdf) |
 | Los planos en AutoCAD | [`plans/LP_REV8.dwg`](plans/LP_REV8.dwg) (23 láminas A3) · [guía de AutoCAD](documentacion/GUIA_AUTOCAD_EDITABLES.md) |
 | Los planos en PDF | [`plans/LP_REV8.pdf`](plans/LP_REV8.pdf) |
 | Las láminas de armados | [`plans/armados_lp229/`](plans/armados_lp229/) (14 láminas, DWG/DXF/PDF) |
